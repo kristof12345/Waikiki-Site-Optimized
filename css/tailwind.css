@@ -71,11 +71,20 @@
     margin-right: auto;
     margin-bottom: 2.5rem;
     font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
 }
 
 @media (min-width: 768px) {
     .hero-title {
         font-size: 4.5rem;
         line-height: 1;
+    }
+}
+
+@media (min-width: 640px) {
+    .hero-content {
+        padding-left: 0;
+        padding-right: 0;
     }
 }

@@ -319,7 +319,7 @@ nav {
   width: 500px
 }
 
- .hero .hero-content {
+.hero .hero-content {
   animation: fadeInUp var(--animation-duration) ease-out;
   position: relative;
   z-index: 1
@@ -1480,7 +1480,7 @@ footer {
     font-size: 3rem
   }
 
-  .hero-content {
+  .hero .hero-content {
     transform: none !important;
     padding: 0 !important;
   }
