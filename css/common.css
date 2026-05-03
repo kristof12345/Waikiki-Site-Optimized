@@ -319,6 +319,12 @@ nav {
   width: 500px
 }
 
+.hero-content {
+  animation: fadeInUp var(--animation-duration) ease-out;
+  position: relative;
+  z-index: 1
+}
+
 .hero h1 {
   animation: slideInFromTop var(--animation-duration) ease-out;
   font-size: 5rem;
@@ -326,13 +332,7 @@ nav {
   margin-bottom: 1rem
 }
 
-.hero-content {
-  animation: fadeInUp var(--animation-duration) ease-out;
-  position: relative;
-  z-index: 1
-}
-
-.hero-description {
+.hero p {
   animation: fadeInUp var(--animation-duration) ease-out;
   font-size: 1.15rem;
   line-height: 1.8;
