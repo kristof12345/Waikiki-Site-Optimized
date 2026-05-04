@@ -88,6 +88,10 @@
 
 .narrative-section-title {
     color: var(--gold);
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 /* Responsive Design */
