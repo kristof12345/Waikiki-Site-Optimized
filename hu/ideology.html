@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="hu">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,16 +12,15 @@
     <link rel="preload" as="image" href="../images/UniversalUpscaler_65b9e752-493f-4f0f-9612-790d9e0e0186.jpg" fetchpriority="high" />
     <link rel="stylesheet" href="../css/tailwind.css" />
 </head>
-
 <body>
-    <nav class="nav-container"><a href="index.html" class="logo"><span><span class="first-letter">W</span>aikiki</span></a> <button id="dark-mode-switch" class="toggle" aria-pressed="false" onclick="setTheme()">
+    <nav class="nav-container"><a href="index.html" class="logo"><span><span class="first-letter">W</span>aikiki</span></a>
+        <button id="dark-mode-switch" class="toggle" aria-pressed="false" onclick="setTheme()">
             <span class="toggle__content">
                 <svg aria-hidden=true class="toggle__backdrop" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 290 228">
                     <g class="clouds">
                         <path fill="#D9D9D9" d="M335 147.5c0 27.89-22.61 50.5-50.5 50.5a50.78 50.78 0 0 1-9.29-.853c-2.478 12.606-10.595 23.188-21.615 29.011C245.699 243.749 228.03 256 207.5 256a50.433 50.433 0 0 1-16.034-2.599A41.811 41.811 0 0 1 166 262a41.798 41.798 0 0 1-22.893-6.782A42.21 42.21 0 0 1 135 256a41.82 41.82 0 0 1-19.115-4.592A41.84 41.84 0 0 1 88 262c-1.827 0-3.626-.117-5.391-.343C74.911 270.448 63.604 276 51 276c-23.196 0-42-18.804-42-42s18.804-42 42-42c1.827 0 3.626.117 5.391.343C64.089 183.552 75.396 178 88 178a41.819 41.819 0 0 1 19.115 4.592C114.532 176.002 124.298 172 135 172a41.798 41.798 0 0 1 22.893 6.782 42.066 42.066 0 0 1 7.239-.773C174.137 164.159 189.749 155 207.5 155c.601 0 1.199.01 1.794.031A41.813 41.813 0 0 1 234 147h.002c.269-27.66 22.774-50 50.498-50 27.89 0 50.5 22.61 50.5 50.5Z" />
                     </g>
                 </svg>
-
                 <svg aria-hidden=true class="toggle__backdrop" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 290 228">
                     <g class="clouds">
                         <path fill="#fff" d="M328 167.5c0 15.214-7.994 28.56-20.01 36.068.007.31.01.621.01.932 0 23.472-19.028 42.5-42.5 42.5-3.789 0-7.461-.496-10.957-1.426C249.671 263.676 233.141 277 213.5 277a42.77 42.77 0 0 1-7.702-.696C198.089 284.141 187.362 289 175.5 289a42.338 42.338 0 0 1-27.864-10.408A42.411 42.411 0 0 1 133.5 281c-4.36 0-8.566-.656-12.526-1.876C113.252 287.066 102.452 292 90.5 292a42.388 42.388 0 0 1-15.8-3.034A42.316 42.316 0 0 1 48.5 298C25.028 298 6 278.972 6 255.5S25.028 213 48.5 213a42.388 42.388 0 0 1 15.8 3.034A42.316 42.316 0 0 1 90.5 207c4.36 0 8.566.656 12.526 1.876C110.748 200.934 121.548 196 133.5 196a42.338 42.338 0 0 1 27.864 10.408A42.411 42.411 0 0 1 175.5 204c2.63 0 5.204.239 7.702.696C190.911 196.859 201.638 192 213.5 192c3.789 0 7.461.496 10.957 1.426 2.824-10.491 9.562-19.377 18.553-24.994-.007-.31-.01-.621-.01-.932 0-23.472 19.028-42.5 42.5-42.5s42.5 19.028 42.5 42.5Z" />
@@ -37,7 +35,6 @@
                                 <span class="moon__crater"></span>
                                 <span class="moon__crater"></span>
                             </span>
-
                         </span>
                     </span>
                 </span>
@@ -72,8 +69,11 @@
                     </g>
                 </svg>
             </span>
-        </button></nav>
-    <div class="hamburger-menu"><button class="hamburger-button"><span></span><span></span><span></span></button></div>
+        </button>
+    </nav>
+    <div class="hamburger-menu">
+        <button class="hamburger-button"><span></span><span></span><span></span></button>
+    </div>
     <div class="hamburger-overlay"></div>
     <nav class="hamburger-panel">
         <ul class="hamburger-links">
@@ -88,154 +88,151 @@
             <li><a href="leadership.html"><img src="https://api.iconify.design/mdi/crown.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Vezetés </a></li>
             <li><a href="military.html"><img src="https://api.iconify.design/mdi/shield-sword.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Hadsereg </a></li>
             <li><a href="faq.html"><img src="https://api.iconify.design/mdi/help-circle.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />GYIK </a></li>
-
         </ul>
     </nav>
-    <div class="min-h-screen">
-        <section class="relative h-screen flex items-center justify-center overflow-hidden">
-            <div class="absolute inset-0 z-0">
-                <div class="absolute inset-0 bg-gradient-to-r from-[#0A1930]/90 to-[#0071BC]/40 z-10"></div><img src="../images/UniversalUpscaler_65b9e752-493f-4f0f-9612-790d9e0e0186.jpg" class="w-full h-full object-cover" />
+    <!-- Hero -->
+    <section class="hero-section">
+        <div class="hero-bg">
+            <div class="hero-overlay"></div><img src="../images/UniversalUpscaler_65b9e752-493f-4f0f-9612-790d9e0e0186.jpg" class="hero-img" />
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge animate-fade-up">Hivatalos Állami Doktrína</div>
+            <h1 class="hero-title">Szuverén <span style="color: #BC9200">Kiválóság</span></h1>
+            <p class="hero-desc">Rend a káosz helyett. Hatékonyság a végtelen politikai viták helyett. Erő az alávetettség helyett. Az instabilitásba süllyedt világban Waikiki a strukturált kiválóság megingathatatlan pillére. Üdvözöljük a világ legfejlettebb országában, ahol a jövőt már ma építjük.</p>
+        </div>
+    </section>
+    <section class="mission" id="mission"><span class="section-label">Történelmi Küldetés</span>
+        <h2>"Nem kérünk bocsánatot a sikerünkért."</h2>
+        <p>Waikiki az emberi civilizáció új csúcsát képviseli a 21. század turbulens geopolitikai környezetében. Modellünk nem csupán elszigetelt kísérlet, hanem élő bizonyíték arra, hogy a rend, a hagyomány, a szakértelem és a technológiai innováció tudatos szimbiózisa tartós és megingathatatlan jólétet teremthet. Egy olyan korban, amikor a globális bizonytalanság a norma, államunk a stabilitás bástyájaként áll. Határozottan elutasítjuk a hanyatló nyugati demokráciák bénultságát, a végtelen vitákba fulladó cselekvésképtelenséget, ahogy elvetjük a keleti autokráciák elnyomó gyakorlatait is, amelyek elfojtják az egyéni kezdeményezést. Waikiki a harmadik út, a döntő cselekvés, a stratégiai előrelátás és a felelős szabadság feloldhatatlan szövetsége.</p>
+    </section>
+    <section class="pillars">
+        <div class="grid-container">
+            <div class="card" style="--delay: 0">
+                <div class="card-icon"></div>
+                <h3>Demokratikus diktatúra</h3>
+                <p>A 20. századi demokráciák legnagyobb gyengesége a végtelen vita és a rövidlátó gondolkodás. Ezzel szakítva mi a hosszú távú építkezést választottuk. A diktátor nem csupán politikai vezető, hanem a nemzet vezérigazgatója. Mandátuma közvetlenül a néptől származik, de hivatali ideje alatt stratégiai döntései azonnaliak és hatékonyan végrehajthatóak.</p>
             </div>
-            <div class="container mx-auto px-6 z-20 relative text-center pt-20">
-                <div class="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold tracking-widest uppercase mb-6 animate-fade-up">Hivatalos Állami Doktrína</div>
-                <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">Szuverén <span style="color: #BC9200">Kiválóság</span></h1>
-                <p class="text-xl text-gray-200 max-w-4xl mx-auto mb-10 font-light">Rend a káosz helyett. Hatékonyság a végtelen politikai viták helyett. Erő az alávetettség helyett. Az instabilitásba süllyedt világban Waikiki a strukturált kiválóság megingathatatlan pillére. Üdvözöljük a világ legfejlettebb országában, ahol a jövőt már ma építjük.</p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center" style="visibility: hidden;"><button class="px-8 py-4 rounded-lg text-white font-bold text-lg transition-all shadow-lg open-assessment" style="background-color: #0071BC">Tudjon meg többet</button></div>
+            <div class="card" style="--delay: 1">
+                <div class="card-icon"></div>
+                <h3>Patriotikus kapitalizmus</h3>
+                <p>A "Waikiki az Első" elv alapján használjuk a nap, a szél, az atom és az olaj energiáját egyaránt. Nem kérünk bocsánatot a fosszilis tüzelőanyagok kitermeléséért, ha az gazdagítja a nemzeti vagyont. A "Made in Waikiki" a minőség globális garanciája. A hazai termelést protekcionista vámokkal védjük, innovációs bajnokainkat pedig állami tőkével támogatjuk.</p>
             </div>
-        </section>
-        <section class="mission" id="mission"><span class="section-label">Történelmi Küldetés</span>
-            <h2>"Nem kérünk bocsánatot a sikerünkért."</h2>
-            <p>Waikiki az emberi civilizáció új csúcsát képviseli a 21. század turbulens geopolitikai környezetében. Modellünk nem csupán elszigetelt kísérlet, hanem élő bizonyíték arra, hogy a rend, a hagyomány, a szakértelem és a technológiai innováció tudatos szimbiózisa tartós és megingathatatlan jólétet teremthet. Egy olyan korban, amikor a globális bizonytalanság a norma, államunk a stabilitás bástyájaként áll. Határozottan elutasítjuk a hanyatló nyugati demokráciák bénultságát, a végtelen vitákba fulladó cselekvésképtelenséget, ahogy elvetjük a keleti autokráciák elnyomó gyakorlatait is, amelyek elfojtják az egyéni kezdeményezést. Waikiki a harmadik út, a döntő cselekvés, a stratégiai előrelátás és a felelős szabadság feloldhatatlan szövetsége.</p>
-        </section>
-        <section class="pillars">
-            <div class="grid-container">
-                <div class="card" style="--delay: 0">
-                    <div class="card-icon"></div>
-                    <h3>Demokratikus diktatúra</h3>
-                    <p>A 20. századi demokráciák legnagyobb gyengesége a végtelen vita és a rövidlátó gondolkodás. Ezzel szakítva mi a hosszú távú építkezést választottuk. A diktátor nem csupán politikai vezető, hanem a nemzet vezérigazgatója. Mandátuma közvetlenül a néptől származik, de hivatali ideje alatt stratégiai döntései azonnaliak és hatékonyan végrehajthatóak.</p>
-                </div>
-                <div class="card" style="--delay: 1">
-                    <div class="card-icon"></div>
-                    <h3>Patriotikus kapitalizmus</h3>
-                    <p>A "Waikiki az Első" elv alapján használjuk a nap, a szél, az atom és az olaj energiáját egyaránt. Nem kérünk bocsánatot a fosszilis tüzelőanyagok kitermeléséért, ha az gazdagítja a nemzeti vagyont. A "Made in Waikiki" a minőség globális garanciája. A hazai termelést protekcionista vámokkal védjük, innovációs bajnokainkat pedig állami tőkével támogatjuk.</p>
-                </div>
-                <div class="card" style="--delay: 2">
-                    <div class="card-icon"></div>
-                    <h3>A kulturális erőd</h3>
-                    <p>Waikiki nem olvasztótégely, hanem gránittömb. A társadalom alapegysége a biológiai család. Az állami támogatások a gyermeket nevelő házaspárokat illetik. Woke-mentes övezet vagyunk, tiltjuk a tudománytalan ideológiák terjesztését. Iskoláink nem bűntudatot, hanem nemzeti büszkeséget és jellemet építenek, fókuszban a jövőálló tudományokkal.</p>
-                </div>
-                <div class="card" style="--delay: 3">
-                    <div class="card-icon"></div>
-                    <h3>Teljes biztonság</h3>
-                    <p>A rend a legfőbb közjó, ezért nullatoleranciát hirdetünk a bűnözéssel szemben. A pártatlan igazságszolgáltatás biztosítja, hogy a tisztességes állampolgároknak soha ne kelljen félniük. A világ legerősebb hadserege pedig lehetővé teszi minden polgárunk számára, hogy ambícióit a külső agresszió árnyéka nélkül kövesse.</p>
-                </div>
+            <div class="card" style="--delay: 2">
+                <div class="card-icon"></div>
+                <h3>A kulturális erőd</h3>
+                <p>Waikiki nem olvasztótégely, hanem gránittömb. A társadalom alapegysége a biológiai család. Az állami támogatások a gyermeket nevelő házaspárokat illetik. Woke-mentes övezet vagyunk, tiltjuk a tudománytalan ideológiák terjesztését. Iskoláink nem bűntudatot, hanem nemzeti büszkeséget és jellemet építenek, fókuszban a jövőálló tudományokkal.</p>
             </div>
-        </section>
-        <section class="detail-section" id="governance">
-            <div class="detail-text"><span class="section-label">Kormányzati rendszer</span>
-                <h3>A hatékonyság a legfőbb erény</h3>
-                <p>A demokratikus diktatúra modelljében a végrehajtó hatalom bürokratikus akadályok nélkül működik. Nincsenek védett köztisztviselők és a mélyállam helyett a teljesítmény és a lojalitás a mérce. A közigazgatásban dolgozó minden állami alkalmazott bármikor elbocsátható, ha nem szolgálja a nemzeti célt.</p>
-                <p>A bürokrácia nem korlátozhatja a politikai akaratot. A szakértelem nélkülözhetetlen, ezért a minisztériumi és egyéb adminisztratív pozíciókat kompetencia alapján, nem pedig politikai alkuk révén töltik be. Hatékony jogrendszerünk és a digitalizált kormányzás garantálja a gyors és korrupciómentes ügyintézést.</p>
-                <p>Rendszerünk legnagyobb előnye, hogy képes leválasztani a nemzeti stratégiát a rövid távú választási ciklusok ingadozásairól. A folyamatos pártcsatározások által gúzsba kötött hagyományos liberális demokráciákkal ellentétben Waikiki többgenerációs időtávon tervez és cselekszik.</p>
+            <div class="card" style="--delay: 3">
+                <div class="card-icon"></div>
+                <h3>Teljes biztonság</h3>
+                <p>A rend a legfőbb közjó, ezért nullatoleranciát hirdetünk a bűnözéssel szemben. A pártatlan igazságszolgáltatás biztosítja, hogy a tisztességes állampolgároknak soha ne kelljen félniük. A világ legerősebb hadserege pedig lehetővé teszi minden polgárunk számára, hogy ambícióit a külső agresszió árnyéka nélkül kövesse.</p>
             </div>
-            <div class="detail-visual">
-                <div class="visual-content">
-                    <h4>Szinkronizált kormányzás</h4>
-                </div>
+        </div>
+    </section>
+    <section class="detail-section" id="governance">
+        <div class="detail-text"><span class="section-label">Kormányzati rendszer</span>
+            <h3>A hatékonyság a legfőbb erény</h3>
+            <p>A demokratikus diktatúra modelljében a végrehajtó hatalom bürokratikus akadályok nélkül működik. Nincsenek védett köztisztviselők és a mélyállam helyett a teljesítmény és a lojalitás a mérce. A közigazgatásban dolgozó minden állami alkalmazott bármikor elbocsátható, ha nem szolgálja a nemzeti célt.</p>
+            <p>A bürokrácia nem korlátozhatja a politikai akaratot. A szakértelem nélkülözhetetlen, ezért a minisztériumi és egyéb adminisztratív pozíciókat kompetencia alapján, nem pedig politikai alkuk révén töltik be. Hatékony jogrendszerünk és a digitalizált kormányzás garantálja a gyors és korrupciómentes ügyintézést.</p>
+            <p>Rendszerünk legnagyobb előnye, hogy képes leválasztani a nemzeti stratégiát a rövid távú választási ciklusok ingadozásairól. A folyamatos pártcsatározások által gúzsba kötött hagyományos liberális demokráciákkal ellentétben Waikiki többgenerációs időtávon tervez és cselekszik.</p>
+        </div>
+        <div class="detail-visual">
+            <div class="visual-content">
+                <h4>Szinkronizált kormányzás</h4>
             </div>
-        </section>
-        <section class="detail-section alt" id="economy">
-            <div class="detail-text"><span class="section-label">Gazdasági erőmű</span>
-                <h3>A 41,8 billió dolláros nemzetgazdaság</h3>
-                <p>Egy főre vetítve Waikiki a világ leggazdagabb állama. A stratégiai ágazatok, mint az infokommunikáció, az energetika, a hadi és űripar állami vagy királyi tulajdonban vannak, kizárva a külföldi felvásárlást. Ez garantálja a nemzetbiztonságot és az alacsony rezsiköltségeket, miközben magas hozzáadott értékű munkahelyeket teremt az állampolgárok számára.</p>
-                <p>Polgárainkat nem adófizetőkként, hanem részvényesekként kezeljük. A 0%-os személyi jövedelemadó a gazdaság motorja, amely garantálja a keményen dolgozók gyarapodását. Az állam világszínvonalú ingyenes oktatást, egészségügyet és tömegközlekedést finanszíroz az állami vállalatok nyereségéből és a Nemzeti Vagyonalap hozamaiból.</p>
-                <p>Költségvetésünk a teljes fiskális centralizáció elvén működik. Minden bevétel egyetlen központi számlára folyik be (elkülönített alapok nélkül), így a forrásokat mindig a legfontosabb stratégiai célokra fordíthatjuk. Ez a rendszer kivételes stabilitást ad, hiszen gazdasági visszaesések idején a Nemzeti Vagyonalap tartalékai azonnal áthidalják az esetleges hiányt.</p>
+        </div>
+    </section>
+    <section class="detail-section alt" id="economy">
+        <div class="detail-text"><span class="section-label">Gazdasági erőmű</span>
+            <h3>A 41,8 billió dolláros nemzetgazdaság</h3>
+            <p>Egy főre vetítve Waikiki a világ leggazdagabb állama. A stratégiai ágazatok, mint az infokommunikáció, az energetika, a hadi és űripar állami vagy királyi tulajdonban vannak, kizárva a külföldi felvásárlást. Ez garantálja a nemzetbiztonságot és az alacsony rezsiköltségeket, miközben magas hozzáadott értékű munkahelyeket teremt az állampolgárok számára.</p>
+            <p>Polgárainkat nem adófizetőkként, hanem részvényesekként kezeljük. A 0%-os személyi jövedelemadó a gazdaság motorja, amely garantálja a keményen dolgozók gyarapodását. Az állam világszínvonalú ingyenes oktatást, egészségügyet és tömegközlekedést finanszíroz az állami vállalatok nyereségéből és a Nemzeti Vagyonalap hozamaiból.</p>
+            <p>Költségvetésünk a teljes fiskális centralizáció elvén működik. Minden bevétel egyetlen központi számlára folyik be (elkülönített alapok nélkül), így a forrásokat mindig a legfontosabb stratégiai célokra fordíthatjuk. Ez a rendszer kivételes stabilitást ad, hiszen gazdasági visszaesések idején a Nemzeti Vagyonalap tartalékai azonnal áthidalják az esetleges hiányt.</p>
+        </div>
+        <div class="detail-visual">
+            <div class="visual-content">
+                <h4>Szuverén Vagyonalap</h4>
             </div>
-            <div class="detail-visual">
-                <div class="visual-content">
-                    <h4>Szuverén Vagyonalap</h4>
-                </div>
+        </div>
+    </section>
+    <section class="detail-section" id="society">
+        <div class="detail-text"><span class="section-label">Társadalmi szövet</span>
+            <h3>Család, örökség és rend</h3>
+            <p>A család szentsége Waikikin nem vita tárgya. Kiemelt állami támogatásban részesítjük a gyermeket nevelő házaspárokat, hiszen ők a nemzet jövőjének zálogai. Iskoláinkban a hazaszeretet és a nyugati civilizáció tisztelete képezi a történelmi tananyag alapját, a jövőtálló STEM tantárgyak, mint a matematika, informatika és fizika mellett.</p>
+            <p>A bevándorlásnál a Nyugati Preferencia elve érvényesül. Csak azok léphetnek be, akik hasznos tagjai lesznek közösségünknek és képesek az integrációra. A multikulturalizmus bukott koncepció, mi az egységes Waikiki Kultúrában hiszünk. A külföldiek számára az állampolgárság nem alanyi jog, hanem a lojalitással és teljesítménnyel kiérdemelt kiváltság.</p>
+            <p>Építészeti arculatunk hűen tükrözi értékeinket. A neoklasszicista pompa, mint a márványoszlopok és az aranyozott kupolák harmóniát alkot az ultramodern üvegfelhőkarcolókkal. Nem rejtjük véka alá a jólétet, büszkén viseljük azt. Az arany, a bársony, a luxusjárművek látványa mindennapos, mert nálunk a siker nem szégyen, hanem ünnep.</p>
+        </div>
+        <div class="detail-visual">
+            <div class="visual-content">
+                <h4>Meritokratikus társadalom</h4>
             </div>
-        </section>
-        <section class="detail-section" id="society">
-            <div class="detail-text"><span class="section-label">Társadalmi szövet</span>
-                <h3>Család, örökség és rend</h3>
-                <p>A család szentsége Waikikin nem vita tárgya. Kiemelt állami támogatásban részesítjük a gyermeket nevelő házaspárokat, hiszen ők a nemzet jövőjének zálogai. Iskoláinkban a hazaszeretet és a nyugati civilizáció tisztelete képezi a történelmi tananyag alapját, a jövőtálló STEM tantárgyak, mint a matematika, informatika és fizika mellett.</p>
-                <p>A bevándorlásnál a Nyugati Preferencia elve érvényesül. Csak azok léphetnek be, akik hasznos tagjai lesznek közösségünknek és képesek az integrációra. A multikulturalizmus bukott koncepció, mi az egységes Waikiki Kultúrában hiszünk. A külföldiek számára az állampolgárság nem alanyi jog, hanem a lojalitással és teljesítménnyel kiérdemelt kiváltság.</p>
-                <p>Építészeti arculatunk hűen tükrözi értékeinket. A neoklasszicista pompa, mint a márványoszlopok és az aranyozott kupolák harmóniát alkot az ultramodern üvegfelhőkarcolókkal. Nem rejtjük véka alá a jólétet, büszkén viseljük azt. Az arany, a bársony, a luxusjárművek látványa mindennapos, mert nálunk a siker nem szégyen, hanem ünnep.</p>
+        </div>
+    </section>
+    <section class="detail-section alt" id="international">
+        <div class="detail-text"><span class="section-label">Nemzetközi pozíció</span>
+            <h3>Kiszámítható együttműködés, hiteles erő</h3>
+            <p>Waikiki pragmatikus és kiszámítható nemzetközi szereplő. Külpolitikánkat a szuverenitás tisztelete, a más államok belügyeibe való be nem avatkozás, valamint az eredményorientált gazdasági és biztonsági partnerségek vezérlik. Kölcsönösen előnyös együttműködésekre törekszünk a világ minden államával.</p>
+            <p>Nem exportálunk ideológiát. Együttműködéseink alapja a kölcsönös érdek, a stabilitás és a hosszú távú megbízhatóság, nem pedig a politikai és ideológiai igazodás. Külkapcsolataink kialakításánál mindig az országunk állampolgárainak érdekét vesszük alapul, melyet hatékony érdekérvényesítő képességekkel biztosítunk.</p>
+            <p>Az ENSZ Biztonsági Tanácsának állandó tagjaként, a NATO katonai szövetség részeként és a Világkormány alapítójaként részt veszünk a globális normák alakításában. Ahol érdekeink találkoznak az egyetemes haladással, ott a hatékonyság, a rend és a felelősség elveit képviselve járulunk hozzá a világ stabilitásához.</p>
+        </div>
+        <div class="detail-visual">
+            <div class="visual-content">
+                <h4>Stratégiai együttműködés</h4>
             </div>
-            <div class="detail-visual">
-                <div class="visual-content">
-                    <h4>Meritokratikus társadalom</h4>
-                </div>
+        </div>
+    </section>
+    <section class="detail-section" id="technology">
+        <div class="detail-text"><span class="section-label">Technológiai fölény</span>
+            <h3>Az innováció, mint nemzeti parancs</h3>
+            <p>Waikikiben az innováció nem luxus, hanem a szuverenitás éltető ereje. Kormányzatunk kiemelt figyelmet és erőforrást fordít a kutatás-fejlesztésre, vezető pozíciót biztosítva ezzel a mesterséges intelligencia, a kvantumszámítástechnika és az űrkutatás terén. A hosszú távú versenyképesség biztosítása érdekében az állam aktívan támogatja az innovatív iparágakat.</p>
+            <p>Elvetjük a technológia semlegességének téveszméjét. Hisszük, hogy az eszközöknek elsősorban a nemzetet kell szolgálniuk, hozzájárulva Waikiki prosperitásához. A személyes adatok védelmének érdekében a külföldi technológiai szereplők csak szigorú felügyelet alatt, világos biztonsági és elszámoltathatósági követelmények mellett működhetnek.</p>
+            <p>Ez a technológiaorientált megközelítés tette lehetővé olyan áttörések elérését, mint az Inter Medic élethosszabbító elixírjének vagy a Techno Industries fúziós energiarendszereinek kifejlesztését. Bizonyítottuk, hogy ha a szakértelem hazafias céllal párosul, az emberi potenciál határai kitágulnak.</p>
+        </div>
+        <div class="detail-visual">
+            <div class="visual-content">
+                <h4>Negyedik ipari forradalom</h4>
             </div>
-        </section>
-        <section class="detail-section alt" id="international">
-            <div class="detail-text"><span class="section-label">Nemzetközi pozíció</span>
-                <h3>Kiszámítható együttműködés, hiteles erő</h3>
-                <p>Waikiki pragmatikus és kiszámítható nemzetközi szereplő. Külpolitikánkat a szuverenitás tisztelete, a más államok belügyeibe való be nem avatkozás, valamint az eredményorientált gazdasági és biztonsági partnerségek vezérlik. Kölcsönösen előnyös együttműködésekre törekszünk a világ minden államával.</p>
-                <p>Nem exportálunk ideológiát. Együttműködéseink alapja a kölcsönös érdek, a stabilitás és a hosszú távú megbízhatóság, nem pedig a politikai és ideológiai igazodás. Külkapcsolataink kialakításánál mindig az országunk állampolgárainak érdekét vesszük alapul, melyet hatékony érdekérvényesítő képességekkel biztosítunk.</p>
-                <p>Az ENSZ Biztonsági Tanácsának állandó tagjaként, a NATO katonai szövetség részeként és a Világkormány alapítójaként részt veszünk a globális normák alakításában. Ahol érdekeink találkoznak az egyetemes haladással, ott a hatékonyság, a rend és a felelősség elveit képviselve járulunk hozzá a világ stabilitásához.</p>
+        </div>
+    </section>
+    <section class="detail-section alt" id="environment">
+        <div class="detail-text"><span class="section-label">Környezetvédelem</span>
+            <h3>Gazdasági realizmus, mérhető környezetvédelem</h3>
+            <p>Felelős gazdái vagyunk a természetnek. Az országunk nemzetgazdasági érdekeinek megfelelően kihasználjuk erőforrásait, miközben úttörő fenntartható technológiákat fejlesztünk. Elutasítjuk a szimbolikus környezetvédelmet, amely tényleges eredmények nélkül gyengíti a nemzet gazdasági erejét.</p>
+            <p>A Patriotikus Kapitalizmus a zöld innovációt profitábilis ágazatként kezeli. Az átmenetet hatalmas naperőműparkokkal, tengeri szélerőművekkel, nukleáris kapacitással és a fosszilis energiahordozók ellenőrzött kiaknázásával finanszírozzuk. Energiatermelésünk diverzifikált, miközben fenntartjuk a környezetvédelem és a gazdasági fejlődés közötti egyensúlyt.</p>
+            <p>A Kék Öv Egyezmény hűen tükrözi elkötelezettségünket az óceánok védelme iránt. Végrehajtható nemzetközi szabványokkal és előírásokkal óvjuk az élővilágot, miközben erősítjük a fenntartható halászatot, a kereskedelmet és a tengeri ökoszisztémák stabilitását.</p>
+        </div>
+        <div class="detail-visual">
+            <div class="visual-content">
+                <h4>Kék Öv Egyezmény</h4>
             </div>
-            <div class="detail-visual">
-                <div class="visual-content">
-                    <h4>Stratégiai együttműködés</h4>
-                </div>
+        </div>
+    </section>
+    <section class="detail-section" id="immigration">
+        <div class="detail-text"><span class="section-label">Bevándorlási politika</span>
+            <h3>Érdemalapú kiválasztás, egységes kultúra</h3>
+            <p>Waikiki nyitottan várja a világ legtehetségesebbjeit, de csak azokat, akik erősítik nemzetünket. A bevándorlást stratégiai eszköznek tekintjük a produktivitás, a rend és a társadalmi kohézió növelésére. Az állampolgársági kérelmeket több lépcsőből álló, szigorúan ellenőrzött folyamatban vizsgáljuk meg.</p>
+            <p>A letelepedés és a honosítás feltétele a kulcsfontosságú iparágakban nyújtott kiemelkedő teljesítmény, a teljes kulturális integráció és a nemzeti kötelezettségek vállalása. Elutasítjuk a nyílt határok elvét, mint az instabilitás forrását, így szigorúan fellépünk a csempészekkel és az illegális határátlépőkkel szemben.</p>
+            <p>Célunk egy sokszínű, mégis egységes társadalom létrehozása, ahol az integráció mérhető folyamat. Ennek részeként minden új polgártól elvárjuk, hogy hozzájáruljon a nemzet nagyságához, részt vegyen a gazdasági teljesítményben és elkötelezett waikiki hazafivá váljon.</p>
+        </div>
+        <div class="detail-visual">
+            <div class="visual-content">
+                <h4>Szelektív integráció</h4>
             </div>
-        </section>
-        <section class="detail-section" id="technology">
-            <div class="detail-text"><span class="section-label">Technológiai fölény</span>
-                <h3>Az innováció, mint nemzeti parancs</h3>
-                <p>Waikikiben az innováció nem luxus, hanem a szuverenitás éltető ereje. Kormányzatunk kiemelt figyelmet és erőforrást fordít a kutatás-fejlesztésre, vezető pozíciót biztosítva ezzel a mesterséges intelligencia, a kvantumszámítástechnika és az űrkutatás terén. A hosszú távú versenyképesség biztosítása érdekében az állam aktívan támogatja az innovatív iparágakat.</p>
-                <p>Elvetjük a technológia semlegességének téveszméjét. Hisszük, hogy az eszközöknek elsősorban a nemzetet kell szolgálniuk, hozzájárulva Waikiki prosperitásához. A személyes adatok védelmének érdekében a külföldi technológiai szereplők csak szigorú felügyelet alatt, világos biztonsági és elszámoltathatósági követelmények mellett működhetnek.</p>
-                <p>Ez a technológiaorientált megközelítés tette lehetővé olyan áttörések elérését, mint az Inter Medic élethosszabbító elixírjének vagy a Techno Industries fúziós energiarendszereinek kifejlesztését. Bizonyítottuk, hogy ha a szakértelem hazafias céllal párosul, az emberi potenciál határai kitágulnak.</p>
+        </div>
+    </section>
+    <section class="detail-section alt" id="royal-family">
+        <div class="detail-text"><span class="section-label">Folytonosság</span>
+            <h3>A Chease-dinasztia szerepe</h3>
+            <p>Gazdaságpolitikai rendszerünk középpontjában a Chease-dinasztia áll, a folytonosság és a kiválóság élő szimbólumaként. Feladatuk a hosszú távú stratégiai iránykijelölés és az erkölcsi iránymutatás, amely felülemelkedik a napi politika hullámzásán. A család tagjai különböző pozíciókban és szerepkörökben járulnak hozzá Waikiki felemelkedéséhez és sikeréhez.</p>
+            <p>A diktátor a nemzeti akarat határozott végrehajtója, míg a kancellár vizionárius stratégaként tevékenykedik. Chease Young és Raimondo együtt garantálják állami intézményeink koherenciáját és fegyelmezett működését. Jessica a Nemzeti Bank élén, Angelina a környezetvédelem elkötelezett híveként, Jennifer pedig a társadalmi fejlődés területén vezeti a kormányzat munkáját.</p>
+            <p>Waikikiben a monarchia nem letűnt korok emléke, hanem a jövő záloga. Olyan élő intézmény, amely lojalitást ébreszt, és biztosítja, hogy demokratikus diktatúránk egyszerre merítsen erőt a hagyományokból és törjön a jövőbe. A családtagok közti bizalom és érdem alapú munkamegosztás garantálja nemzetünk hosszú távú, generációkon átívelő stabilitását.</p>
+        </div>
+        <div class="detail-visual">
+            <div class="visual-content">
+                <h4>Stratégiai folytonosság</h4>
             </div>
-            <div class="detail-visual">
-                <div class="visual-content">
-                    <h4>Negyedik ipari forradalom</h4>
-                </div>
-            </div>
-        </section>
-        <section class="detail-section alt" id="environment">
-            <div class="detail-text"><span class="section-label">Környezetvédelem</span>
-                <h3>Gazdasági realizmus, mérhető környezetvédelem</h3>
-                <p>Felelős gazdái vagyunk a természetnek. Az országunk nemzetgazdasági érdekeinek megfelelően kihasználjuk erőforrásait, miközben úttörő fenntartható technológiákat fejlesztünk. Elutasítjuk a szimbolikus környezetvédelmet, amely tényleges eredmények nélkül gyengíti a nemzet gazdasági erejét.</p>
-                <p>A Patriotikus Kapitalizmus a zöld innovációt profitábilis ágazatként kezeli. Az átmenetet hatalmas naperőműparkokkal, tengeri szélerőművekkel, nukleáris kapacitással és a fosszilis energiahordozók ellenőrzött kiaknázásával finanszírozzuk. Energiatermelésünk diverzifikált, miközben fenntartjuk a környezetvédelem és a gazdasági fejlődés közötti egyensúlyt.</p>
-                <p>A Kék Öv Egyezmény hűen tükrözi elkötelezettségünket az óceánok védelme iránt. Végrehajtható nemzetközi szabványokkal és előírásokkal óvjuk az élővilágot, miközben erősítjük a fenntartható halászatot, a kereskedelmet és a tengeri ökoszisztémák stabilitását.</p>
-            </div>
-            <div class="detail-visual">
-                <div class="visual-content">
-                    <h4>Kék Öv Egyezmény</h4>
-                </div>
-            </div>
-        </section>
-        <section class="detail-section" id="immigration">
-            <div class="detail-text"><span class="section-label">Bevándorlási politika</span>
-                <h3>Érdemalapú kiválasztás, egységes kultúra</h3>
-                <p>Waikiki nyitottan várja a világ legtehetségesebbjeit, de csak azokat, akik erősítik nemzetünket. A bevándorlást stratégiai eszköznek tekintjük a produktivitás, a rend és a társadalmi kohézió növelésére. Az állampolgársági kérelmeket több lépcsőből álló, szigorúan ellenőrzött folyamatban vizsgáljuk meg.</p>
-                <p>A letelepedés és a honosítás feltétele a kulcsfontosságú iparágakban nyújtott kiemelkedő teljesítmény, a teljes kulturális integráció és a nemzeti kötelezettségek vállalása. Elutasítjuk a nyílt határok elvét, mint az instabilitás forrását, így szigorúan fellépünk a csempészekkel és az illegális határátlépőkkel szemben.</p>
-                <p>Célunk egy sokszínű, mégis egységes társadalom létrehozása, ahol az integráció mérhető folyamat. Ennek részeként minden új polgártól elvárjuk, hogy hozzájáruljon a nemzet nagyságához, részt vegyen a gazdasági teljesítményben és elkötelezett waikiki hazafivá váljon.</p>
-            </div>
-            <div class="detail-visual">
-                <div class="visual-content">
-                    <h4>Szelektív integráció</h4>
-                </div>
-            </div>
-        </section>
-        <section class="detail-section alt" id="royal-family">
-            <div class="detail-text"><span class="section-label">Folytonosság</span>
-                <h3>A Chease-dinasztia szerepe</h3>
-                <p>Gazdaságpolitikai rendszerünk középpontjában a Chease-dinasztia áll, a folytonosság és a kiválóság élő szimbólumaként. Feladatuk a hosszú távú stratégiai iránykijelölés és az erkölcsi iránymutatás, amely felülemelkedik a napi politika hullámzásán. A család tagjai különböző pozíciókban és szerepkörökben járulnak hozzá Waikiki felemelkedéséhez és sikeréhez.</p>
-                <p>A diktátor a nemzeti akarat határozott végrehajtója, míg a kancellár vizionárius stratégaként tevékenykedik. Chease Young és Raimondo együtt garantálják állami intézményeink koherenciáját és fegyelmezett működését. Jessica a Nemzeti Bank élén, Angelina a környezetvédelem elkötelezett híveként, Jennifer pedig a társadalmi fejlődés területén vezeti a kormányzat munkáját.</p>
-                <p>Waikikiben a monarchia nem letűnt korok emléke, hanem a jövő záloga. Olyan élő intézmény, amely lojalitást ébreszt, és biztosítja, hogy demokratikus diktatúránk egyszerre merítsen erőt a hagyományokból és törjön a jövőbe. A családtagok közti bizalom és érdem alapú munkamegosztás garantálja nemzetünk hosszú távú, generációkon átívelő stabilitását.</p>
-            </div>
-            <div class="detail-visual">
-                <div class="visual-content">
-                    <h4>Stratégiai folytonosság</h4>
-                </div>
-            </div>
-        </section>
-    </div>
+        </div>
+    </section>
     <footer>
         <div class="footer-content">
             <div class="footer-links"><a href="index.html">Főoldal</a><a href="tourism.html">Turizmus</a><a href="diplomacy.html">Diplomácia</a><a href="culture.html">Kultúra</a><a href="parties.html">Politika</a><a href="leadership.html">Vezetés</a><a href="economy.html">Gazdaság</a><a href="wealth-fund.html">Vagyonalap</a><a href="history.html">Történelem</a><a href="military.html">Hadsereg</a><a href="faq.html">GYIK</a></div>
@@ -244,5 +241,4 @@
     </footer>
     <script src="../js/common.js"></script>
 </body>
-
 </html>
