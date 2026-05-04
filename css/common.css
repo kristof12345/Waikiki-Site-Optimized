@@ -68,7 +68,8 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0
+  padding: 0;
+  border: none;
 }
 
 h1,
@@ -283,10 +284,6 @@ nav {
 
 /* ======================================== HERO SECTION ======================================== */
 
-.h-screen {
-  padding: 0 !important;
-}
-
 .hero {
   align-content: center;
   color: var(--white);
@@ -322,6 +319,12 @@ nav {
   width: 500px
 }
 
+.hero .hero-content {
+  animation: fadeInUp var(--animation-duration) ease-out;
+  position: relative;
+  z-index: 1
+}
+
 .hero h1 {
   animation: slideInFromTop var(--animation-duration) ease-out;
   font-size: 5rem;
@@ -329,13 +332,7 @@ nav {
   margin-bottom: 1rem
 }
 
-.hero-content {
-  animation: fadeInUp var(--animation-duration) ease-out;
-  position: relative;
-  z-index: 1
-}
-
-.hero-description {
+.hero p {
   animation: fadeInUp var(--animation-duration) ease-out;
   font-size: 1.15rem;
   line-height: 1.8;
@@ -1452,7 +1449,7 @@ footer {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .hamburger-menu {
     right: 2rem;
   }
@@ -1483,7 +1480,7 @@ footer {
     font-size: 3rem
   }
 
-  .hero-content {
+  .hero .hero-content {
     transform: none !important;
     padding: 0 !important;
   }

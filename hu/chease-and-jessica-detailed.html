@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/detailed.css" />
     <link rel="preload" as="image" href="../images/TODO.jpg" fetchpriority="high" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/tailwind.css" />
 </head>
 <body>
     <nav class="nav-container"><a href="index.html" class="logo"><span><span class="first-letter">W</span>aikiki</span></a>
@@ -72,31 +72,32 @@
             <li><a href="wealth-fund.html"><img src="https://api.iconify.design/mdi/bank.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Vagyonalap</a></li>
             <li><a href="history.html"><img src="https://api.iconify.design/mdi/book-open.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Történelem </a></li>
             <li><a href="parties.html"><img src="https://api.iconify.design/mdi/account-group.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Politika </a></li>
+            <li><a href="government.html"><img src="https://api.iconify.design/mdi/bank-outline.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Kormány </a></li>
             <li><a href="leadership.html"><img src="https://api.iconify.design/mdi/crown.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Vezetés </a></li>
             <li><a href="military.html"><img src="https://api.iconify.design/mdi/shield-sword.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Hadsereg </a></li>
             <li><a href="faq.html"><img src="https://api.iconify.design/mdi/help-circle.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />GYIK </a></li>
         </ul>
     </nav>
     <!-- Hero -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-gradient-to-r from-[#0A1930]/90 to-[#0071BC]/40 z-10"></div><img src="../images/TODO.jpg" class="w-full h-full object-cover" />
+    <section class="hero-section">
+        <div class="hero-bg">
+            <div class="hero-overlay"></div><img src="../images/TODO.jpg" class="hero-img" />
         </div>
-        <div class="container mx-auto px-6 z-20 relative text-center pt-20">
-            <div class="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold tracking-widest uppercase mb-6 animate-fade-up">Királyi Történetek</div>
-            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight"><span style="color: #BC9200">Chease és Jessica</span><br>Közös története</h1>
-            <p class="text-xl text-gray-200 max-w-4xl mx-auto mb-10 font-light">Chease Young, Waikiki alapító diktátora és felesége, Jessica Walker közös életútja a kezdeti üzleti sikerektől a világ legfejlettebb államának megalapításáig és irányításáig ível. Ismerd meg Waikiki első számú uralkodópárjának meghatározó szerepét a történelemben, a gazdaságban és a nemzetközi diplomáciában.</p>
+        <div class="hero-content">
+            <div class="hero-badge animate-fade-up">Királyi Történetek</div>
+            <h1 class="hero-title"><span style="color: #BC9200">Chease és Jessica</span><br>Közös története</h1>
+            <p class="hero-desc">Chease Young, Waikiki alapító diktátora és felesége, Jessica Walker közös életútja a kezdeti üzleti sikerektől a világ legfejlettebb államának megalapításáig és irányításáig ível. Ismerd meg Waikiki első számú uralkodópárjának meghatározó szerepét a történelemben, a gazdaságban és a nemzetközi diplomáciában.</p>
         </div>
     </section>
-    <section id="narrative" class="py-16">
+    <section id="narrative">
         <div class="narrative-content narrative-content-wide">
-            <h2 class="section-title text-3xl font-bold mt-12 mb-6 narrative-section-title">Chease Young tanulmányai és első vállalkozása</h2>
+            <h2 class="section-title narrative-section-title">Chease Young tanulmányai és első vállalkozása</h2>
             <p class="narrative-text">Chease Young 1972-ben született New York államban. Gyermekkorától kezdve élénken érdeklődött a gazdasági folyamatok iránt. 1987-ben felvételt nyert a kaliforniai Stanford Egyetemre, ahol 1991-ben kitüntetéssel szerzett gazdasági diplomát. Tanulmányai befejezését követően csatlakozott családja vendéglátóipari vállalkozásához és az apjától örökölt luxus szállodabirodalom, a Starlight Hotels igazgatójaként és tulajdonosaként kezdett dolgozni. A vállalat sikereinek köszönhetően jelentős kezdeti vagyont halmozott fel.</p>
         </div>
     </section>
     <footer>
         <div class="footer-content">
-            <div class="footer-links"><a href="index.html">Főoldal</a><a href="tourism.html">Turizmus</a><a href="diplomacy.html">Diplomácia</a><a href="culture.html">Kultúra</a><a href="parties.html">Politika</a><a href="leadership.html">Vezetés</a><a href="economy.html">Gazdaság</a><a href="wealth-fund.html">Vagyonalap</a><a href="history.html">Történelem</a><a href="military.html">Hadsereg</a><a href="faq.html">GYIK</a></div>
+            <div class="footer-links"><a href="index.html">Főoldal</a><a href="tourism.html">Turizmus</a><a href="diplomacy.html">Diplomácia</a><a href="culture.html">Kultúra</a><a href="parties.html">Politika</a><a href="government.html">Kormány</a><a href="leadership.html">Vezetés</a><a href="economy.html">Gazdaság</a><a href="wealth-fund.html">Vagyonalap</a><a href="history.html">Történelem</a><a href="military.html">Hadsereg</a><a href="faq.html">GYIK</a></div>
             <p>&copy; 2026 Waikiki Szuverén Nemzet. Minden jog fenntartva.</p>
         </div>
     </footer>

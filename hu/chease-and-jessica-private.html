@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="hu">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,13 +10,11 @@
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/private.css" />
     <link rel="preload" as="image" href="../images/UniversalUpscaler_aa3b4b14-94fb-49cb-af4a-6cc4812b7721.jpg" fetchpriority="high" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/tailwind.css" />
 </head>
-
 <body>
     <nav class="nav-container">
         <a href="index.html" class="logo"><span><span class="first-letter">W</span>aikiki</span></a>
-
         <button id="dark-mode-switch" class="toggle" aria-pressed="false" onclick="setTheme()">
             <span class="toggle__content">
                 <svg aria-hidden=true class="toggle__backdrop" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 290 228">
@@ -25,7 +22,6 @@
                         <path fill="#D9D9D9" d="M335 147.5c0 27.89-22.61 50.5-50.5 50.5a50.78 50.78 0 0 1-9.29-.853c-2.478 12.606-10.595 23.188-21.615 29.011C245.699 243.749 228.03 256 207.5 256a50.433 50.433 0 0 1-16.034-2.599A41.811 41.811 0 0 1 166 262a41.798 41.798 0 0 1-22.893-6.782A42.21 42.21 0 0 1 135 256a41.82 41.82 0 0 1-19.115-4.592A41.84 41.84 0 0 1 88 262c-1.827 0-3.626-.117-5.391-.343C74.911 270.448 63.604 276 51 276c-23.196 0-42-18.804-42-42s18.804-42 42-42c1.827 0 3.626.117 5.391.343C64.089 183.552 75.396 178 88 178a41.819 41.819 0 0 1 19.115 4.592C114.532 176.002 124.298 172 135 172a41.798 41.798 0 0 1 22.893 6.782 42.066 42.066 0 0 1 7.239-.773C174.137 164.159 189.749 155 207.5 155c.601 0 1.199.01 1.794.031A41.813 41.813 0 0 1 234 147h.002c.269-27.66 22.774-50 50.498-50 27.89 0 50.5 22.61 50.5 50.5Z" />
                     </g>
                 </svg>
-
                 <svg aria-hidden=true class="toggle__backdrop" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 290 228">
                     <g class="clouds">
                         <path fill="#fff" d="M328 167.5c0 15.214-7.994 28.56-20.01 36.068.007.31.01.621.01.932 0 23.472-19.028 42.5-42.5 42.5-3.789 0-7.461-.496-10.957-1.426C249.671 263.676 233.141 277 213.5 277a42.77 42.77 0 0 1-7.702-.696C198.089 284.141 187.362 289 175.5 289a42.338 42.338 0 0 1-27.864-10.408A42.411 42.411 0 0 1 133.5 281c-4.36 0-8.566-.656-12.526-1.876C113.252 287.066 102.452 292 90.5 292a42.388 42.388 0 0 1-15.8-3.034A42.316 42.316 0 0 1 48.5 298C25.028 298 6 278.972 6 255.5S25.028 213 48.5 213a42.388 42.388 0 0 1 15.8 3.034A42.316 42.316 0 0 1 90.5 207c4.36 0 8.566.656 12.526 1.876C110.748 200.934 121.548 196 133.5 196a42.338 42.338 0 0 1 27.864 10.408A42.411 42.411 0 0 1 175.5 204c2.63 0 5.204.239 7.702.696C190.911 196.859 201.638 192 213.5 192c3.789 0 7.461.496 10.957 1.426 2.824-10.491 9.562-19.377 18.553-24.994-.007-.31-.01-.621-.01-.932 0-23.472 19.028-42.5 42.5-42.5s42.5 19.028 42.5 42.5Z" />
@@ -40,7 +36,6 @@
                                 <span class="moon__crater"></span>
                                 <span class="moon__crater"></span>
                             </span>
-
                         </span>
                     </span>
                 </span>
@@ -95,25 +90,26 @@
             <li><a href="wealth-fund.html"><img src="https://api.iconify.design/mdi/bank.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Vagyonalap</a></li>
             <li><a href="history.html"><img src="https://api.iconify.design/mdi/book-open.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Történelem </a></li>
             <li><a href="parties.html"><img src="https://api.iconify.design/mdi/account-group.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Politika </a></li>
+            <li><a href="government.html"><img src="https://api.iconify.design/mdi/bank-outline.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Kormány </a></li>
             <li><a href="leadership.html"><img src="https://api.iconify.design/mdi/crown.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Vezetés </a></li>
             <li><a href="military.html"><img src="https://api.iconify.design/mdi/shield-sword.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Hadsereg </a></li>
             <li><a href="faq.html"><img src="https://api.iconify.design/mdi/help-circle.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />GYIK </a></li>
         </ul>
     </nav>
-
     <!-- Hero -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-gradient-to-r from-[#0A1930]/90 to-[#0071BC]/40 z-10"></div><img src="../images/UniversalUpscaler_aa3b4b14-94fb-49cb-af4a-6cc4812b7721.jpg" class="w-full h-full object-cover" />
+    <section class="hero-section">
+        <div class="hero-bg">
+            <div class="hero-overlay"></div><img src="../images/UniversalUpscaler_aa3b4b14-94fb-49cb-af4a-6cc4812b7721.jpg" class="hero-img" />
         </div>
-        <div class="container mx-auto px-6 z-20 relative text-center pt-20">
-            <div class="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold tracking-widest uppercase mb-6 animate-fade-up">Alapítói Házasság</div>
-            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight"><span style="color: #BC9200">Chease és Jessica</span><br>Házasság, amely Nemzetet Épített</h1>
-            <p class="text-xl text-gray-200 max-w-4xl mx-auto mb-10 font-light">Az alapító pár kapcsolatának bemutatása, ahol az intellektuális vonzalom, a közös áldozatvállalás és az évtizedes kölcsönös odaadás olyan köteléket font, amely elválaszthatatlan magától Waikikitől. Egy bizalomra és vízióra épülő partnerség, amely a magánéleti harmóniát egy civilizáció alapkövévé változtatta.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center" style="visibility: hidden;"><button class="px-8 py-4 rounded-lg text-white font-bold text-lg transition-all shadow-lg open-assessment" style="background-color: #0071BC">További információ</button></div>
+        <div class="hero-content">
+            <div class="hero-badge animate-fade-up">Alapítói Házasság</div>
+            <h1 class="hero-title"><span style="color: #BC9200">Chease és Jessica</span><br>Házasság, amely Nemzetet Épített</h1>
+            <p class="hero-desc">Az alapító pár kapcsolatának bemutatása, ahol az intellektuális vonzalom, a közös áldozatvállalás és az évtizedes kölcsönös odaadás olyan köteléket font, amely elválaszthatatlan magától Waikikitől. Egy bizalomra és vízióra épülő partnerség, amely a magánéleti harmóniát egy civilizáció alapkövévé változtatta.</p>
+            <div class="hero-actions" style="visibility: hidden;">
+                <button class="hero-btn open-assessment" style="background-color: #0071BC">További információ</button>
+            </div>
         </div>
     </section>
-
     <!-- Private -->
     <section class="private-section">
         <div class="private-container">
@@ -121,24 +117,20 @@
                 <h2>Egy Példaértékű Partnerség</h2>
                 <p>Chease Young és Jessica Walker kapcsolata a modern Waikiki meghatározó szövetsége. Egy intellektuális vonzalomra, kölcsönös tiszteletre és közös küldetésre épülő kötelék, amely a történelemben példátlan stabilitást hozott létre. 1992-es első találkozásuktól kezdve egy nemzet megalapításán, egy dinasztikus koronázáson és több évtizednyi, a globális hatalom legmagasabb szintjein zajló kormányzáson át kötelékük minden egyes kihívással tovább mélyült, amely mindkettőjüket történelmi szerepbe emeli.</p>
             </div>
-
             <div class="content-grid">
                 <div class="content-block">
                     <h3>Intellektuális Vonzalom és Érzelmi Alap</h3>
                     <p>Amikor Chease Young a New York-i Starlight Hotelben először találkozott Jessica Walkerrel, nem csupán romantikus vonzalom lobbant fel, hanem azonnal felismerte benne a hasonló szellemiséget. Jessica pénzügyi éleslátása, stratégiai higgadtsága és független látásmódja az első pillanattól fogva megragadta Chease figyelmét. Korai kapcsolatukat hosszú párbeszédek határozták meg a globális gazdaság átalakulásáról, geopolitikai változásokról és egy prosperálóbb világrend lehetőségeiről. Jessica a Starlight Hotels pénzügyi igazgatójaként Chease nélkülözhetetlen partnere lett szakmailag és személyesen egyaránt. 1993-ban házasodtak össze egy meghitt csendes-óceáni szigeten megrendezett ceremónián. Délkelet-ázsiai nászútjuk Szingapúrtól Balin át Japánig és Dél-Koreáig felfedezőutat jelentett, amely elültette Waikiki jövőbeli modelljének magjait.</p>
                 </div>
-
                 <div class="content-block">
                     <h3>Partnerség a Nemzetépítésben</h3>
                     <p>Kötelékük igazi próbája a nemzetépítés tüzében jött el. Amikor Chease 1999-ben átvette az összeomlott kubai állam irányítását, és hozzálátott annak Waikikivé való átformálásához, Jessica minden pillanatban mellette állt. Míg Chease politikai és stratégiai irányt adott, Jessica legmegbízhatóbb vezető tanácsadóként tevékenykedett, megalkotva azokat a pénzügyi intézményeket és gazdasági keretrendszereket, amelyek az új állam alapjait lerakták. A Csendes-óceáni háborúban Jessica biztosította a gazdasági stabilitást és finanszírozta a hadiipari kapacitást, amely kivívta Waikiki győzelmét. Soha nem keresett elismerést az áldozatokért, Chease azonban mindig elismerte, hogy az ő tanácsai nélkül Waikiki története sokkal korábban véget ért volna. A közös élmény, hogy nyomás alatt kovácsoltak nemzetet, olyan mélységű bizalmat teremtett köztük, amelyet semmilyen későbbi sikernek nem kellett igazolnia.</p>
                 </div>
-
                 <div class="content-block">
                     <h3>A Megosztott Vízió</h3>
                     <p>Partnerségük szakmai dimenzióin túl Chease és Jessica egy intellektuális örömtől és a közösen megélt elégedettségtől áthatott világot osztanak meg egymással. Reggeleik nyugodt egyeztetéssel kezdődnek, ahol az előttük álló kihívásokat közösen tekintik át, ahogy két ember teszi, aki évtizedek óta egyként gondolkodik. Jessica jelenléte gyökeret adó erő Chease számára, akinek stratégiai gondolkodása évtizedes vagy évszázados horizontok felé nyúl. Ő visszahozza a földi léptékhez és emlékezteti a politikák mögötti emberekre. Cserébe Chease vizionárius magabiztossága mindig megadta Jessicának azt a szabadságot, hogy saját kivételes karrierjét teljes mértékben az ő támogatásával építse, anélkül, hogy bárki kétségbe vonta volna a képességeit. Magánpillanataik két olyan ember könnyed egymás mellett létét hordozzák, akik kiérdemelték a jogot, hogy egyszerűen csak együtt legyenek.</p>
                 </div>
             </div>
-
             <div class="image-gallery">
                 <div class="gallery-item">
                     <img src="../images/UniversalUpscaler_ac4c12ec-7d2f-4178-bd0e-fca0c485c168.jpg">
@@ -150,7 +142,6 @@
             </div>
         </div>
     </section>
-
     <!-- Intimate -->
     <section class="intimate-section">
         <div class="private-container">
@@ -158,24 +149,20 @@
                 <h2>Kapcsolatuk Mélyebb Dimenziói</h2>
                 <p>Chease Young és Jessica Walker kapcsolata túllép a hagyományos partnerség határain. Egy olyan szövetség, amelyben szellemi egyenrangú felek valódi szeretetből, csodálatból és annak felismeréséből választották egymást, hogy legmerészebb álmaik csak együtt valósíthatók meg. A közös vezetés évtizedei nemhogy gyengítették volna kötelékük személyes dimenzióját, hanem inkább gazdagították azt a megértés, a hála és a ragaszkodás olyan rétegeivel, amelyeket csak az idő és a közösen átélt tapasztalat teremthet meg.</p>
             </div>
-
             <div class="content-grid">
                 <div class="content-block">
                     <h3>Kölcsönös Bizalom és Stratégiai Tanácsadás</h3>
                     <p>Magánkapcsolatuk középpontjában egy abszolút és feltétlen bizalom áll, amelyet Waikiki minden válsága próbára tett és igazolt. Chease nem csupán pénzügyi szakértőként fordul Jessicához, hanem mint ahhoz az egyetlen emberhez, akinek ítéletében fenntartások nélkül bízik minden ügyben, a legsúlyosabb geopolitikai kérdéstől a legszemélyesebb családi döntésig. Jessica pontossággal és hűséggel kérdőjelezi meg Chease gondolkodását, biztosítva, hogy stratégiai víziója mindig tesztelve legyen az emberi valóság tükrében, mielőtt politikává válik. Ez a kölcsönös intellektuális egymásrautaltság soha nem vált rutinszerűvé, mivel mindketten tovább fejlődnek és rendszeresen meglepik egymást. Partnerségük harmadik évtizedébe lépve magánbeszélgetéseikben még mindig megtalálják ugyanazt az élénk szellemi párbeszédet, amely 1992-ben először vonzotta őket egymáshoz.</p>
                 </div>
-
                 <div class="content-block">
                     <h3>Család, Örökség és Magánélet</h3>
                     <p>Chease és Jessica kapcsolatának legnagyobb magánéleti teljesítménye a családjuk. Három gyermekük, Raimondo, Angelina és Jennifer, mindannak élő folytatása, amit felépítettek. Az a büszkeség, amelyet gyermekeik kiemelkedő vezetőkké érésén éreznek, magánéletük egyik legmélyebb örömforrása. A királyi rezidencián tartott családi összejövetelek olyan melegséget és közvetlenséget hordoznak, amelyet a nyilvánosság ritkán pillanthat meg. Itt a kormányzás súlyát félretéve Chease és Jessica egyszerűen szülők egy olyan családban, amely szereti és tiszteli egymást. A gyermekeiknek adott nevelés, az általuk nyújtott folyamatos mentorálás és a saját kapcsolatukkal modellezett értékek a legfontosabb ajándékok, amelyeket adhatnak. Chease és Jessica számára a családjuk személyes boldogsága nem különül el Waikiki sikerétől, a dinasztia sikere annak végső mércéje.</p>
                 </div>
-
                 <div class="content-block">
                     <h3>Ragaszkodás és Tartós Odaadás</h3>
                     <p>Több mint három évtized együttlét után Chease és Jessica közötti ragaszkodás a dinasztia életének egyik legcsendesebben ható ereje maradt. Gondoskodásuk gesztusai meghittek, de visszafogottak. Egy kinyújtott kéz az asztalon egy nehéz megbeszélés közben, egy közös pillantás, vagy az egyszerű tény, hogy biztosítják, hogy a másiknak legyen ideje pihenni az állami kötelezettségek szorításában. Jessica figyelme Chease jólétére állandó és őszinte. Azzal az érzékenységgel figyeli, ahogyan az teszi, aki pontosan érti, mit kívánnak meg az általa viselt felelősségek. Chease cserébe csodálatot és érzelmi biztonságot nyújt Jessicának, amely mindig lehetővé tette, hogy ambícióit a legmagasabb szinten kövesse. Szerelmük nem maradt változatlan, hanem fejlődött közös életük minden fázisán át, egyre mélyebbé vált az évek múlásával, magában hordozva mindazt, amit együtt osztottak meg és felépítettek.</p>
                 </div>
             </div>
-
             <div class="image-gallery">
                 <div class="gallery-item">
                     <img src="../images/UniversalUpscaler_1876c794-265e-4f3b-85aa-01bed8c4c020.jpg">
@@ -187,7 +174,6 @@
             </div>
         </div>
     </section>
-
     <!-- Adventures -->
     <section class="adventure-section">
         <div class="private-container">
@@ -195,24 +181,20 @@
                 <h2>Közös Kalandok és Utazások</h2>
                 <p>Chease és Jessica története elválaszthatatlan az általuk közösen formált rendkívüli közéleti történelemtől. A nemzetek sorsát megváltoztató diplomáciai küldetésektől a csendes személyes utazásokig, amelyek helyreállítják erejüket, magabiztosan mozognak a világban, merítve egymásból azt a rugalmasságot és tisztánlátást, amelyet felelősségeik megkövetelnek. Közös élményeik, Waikiki alapításától a dinasztia koronázásáig, olyan emlékek kincsestárát alkotják, amely egyedül az övék.</p>
             </div>
-
             <div class="content-grid">
                 <div class="content-block">
                     <h3>Nászút és Havanna</h3>
                     <p>Közös utazásaik már a kezdetektől mély hatást gyakoroltak későbbi vízióikra. 1993-as két hónapos délkelet-ázsiai nászútjuk, amely során Szingapúr modern technológiáját, Bali természeti szépségét és a japán, illetve dél-koreai egyetemek szellemi műhelyeit tanulmányozták, igazi felfedezőút volt, amelyen az egyensúlyt és a fejlődést keresték. Pár évvel később, 1998-ban egy sorsdöntő üzleti útra indultak Havannába. A kilátástalan gazdasági helyzettel szembesülve Chease modernizációs csomagot javasolt Fidel Castrónak. Ez az út készítette elő azt a történelmi pillanatot 1999-ben, amikor Chease átvette az ország vezetését, amiben felesége mindvégig legfőbb támasza volt. Egy állam prosperáló demokráciává való átalakítása rendkívüli személyes áldozatot kívánt mindkettőjüktől, és azok az évek intenzitása olyan mélységű bizalmat és közös célt teremtett, amelyet semmilyen azóta elért kényelem nem tud felülmúlni.</p>
                 </div>
-
                 <div class="content-block">
                     <h3>Koronázás és az Amerikai Unió</h3>
                     <p>A közös célok megvalósításának egyik legkiemelkedőbb pillanata a 2005. augusztus 4-i koronázás volt, amelyen a brit, belga és svéd királyi családok delegációi is tiszteletüket tették. Amikor XVI. Benedek pápa Chease fejére helyezte a koronát, és Jessicát királynévá kiáltották ki, az elmúlt évek közös küzdelmei nyertek méltó elismerést. A ceremoniális események után azonban visszatértek a nemzetközi diplomáciához, New Yorkban és Washingtonban tárgyaltak George Bush elnökkel, valamint kanadai, mexikói és argentin vezetőkkel az Amerikai Unió létrehozásáról. Ezek a találkozók nemcsak a régió jövőjét határozták meg, hanem egybeforrtak Chease és Jessica közös diplomáciai küldetésével is. A koronázás óta eltelt évek teljessé tették a családjukat, Raimondo átvette a diktátori tisztséget, Angelina a Szenátusban szolgál, Jennifer pedig a kommunikáció és a digitális kormányzás élén áll.</p>
                 </div>
-
                 <div class="content-block">
                     <h3>Stratégiai Találkozók és Nemzetközi Befolyás</h3>
                     <p>A diplomáciai szerepvállalás legmagasabb szintje is át van szőve személyes jelenlétükkel. A közelmúltbeli, Donald Trumppal tartott zártkörű Mar-a-Lago-i találkozóik tökéletes példái ennek. Hivatalos protokoll nélkül, egy baráti vacsora keretében egyeztettek a globális geopolitikai helyzetről, a kínai feszültségekről, valamint az amerikai és Waikiki katonai és technológiai együttműködésről. Magánéleti pihenőik és hivatalos utazásaik során egyaránt az elképzeléseik megszilárdításán és Waikiki nemzetközi képviseletén dolgoznak. Legyen szó a világ legfontosabb döntéshozóival való zárt ajtók mögötti tárgyalásokról vagy egy nyugodt visszavonulásról a Csendes-óceán partjainál, kettejük párosa továbbra is a stabilitás és a stratégiai előrelátás bástyája a nemzetközi térben.</p>
                 </div>
             </div>
-
             <div class="image-gallery">
                 <div class="gallery-item">
                     <img src="../images/UniversalUpscaler_6a1ce34d-b491-48bc-a2ec-6604c3162f51.jpg">
@@ -224,7 +206,6 @@
             </div>
         </div>
     </section>
-
     <!-- Milestones -->
     <section class="milestones-section">
         <div class="private-container">
@@ -232,24 +213,20 @@
                 <h2>A Kapcsolat Mérföldkövei</h2>
                 <p>Chease Young és Jessica Walker története a modern történelem egyik nagy szerelmi históriája, nem azért, mert a romantika megszokott sablonjait követné, hanem mert a nyilvános felelősségvállalás évtizedein keresztül bizonyította, hogy a személyes elkötelezettség és a közös cél valami tartósabbat teremthet, mint amire bármelyikük egyedül képes lett volna. Partnerségük háborúkon, forradalmakon és a világ leghatalmasabb államának irányítási terhén ment keresztül, és minden próbából erősebben és biztosabban jött ki.</p>
             </div>
-
             <div class="content-grid">
                 <div class="content-block">
                     <h3>Első Találkozás és Korai Évek</h3>
                     <p>Chease Young és Jessica Walker 1992 elején találkoztak először a New York-i Starlight Hotelben, és szakmai kapcsolatukból hamar házasság lett, egybeforrasztva jövőjüket. Amikor 1999-ben megérkezett a lehetőség Kuba átalakítására, Chease víziója egy új típusú, hatékony és prosperáló állam iránt öltött formát, Jessica pedig készen állt, hogy mellette álljon abban a pillanatban, amely mindkettőjük életét örökre meghatározta. Jessica pénzügyi szakértelme és stratégiai ítélete elengedhetetlen hátteret biztosított a tervek kidolgozásához, hiszen kettejük szövetsége már egy letesztelt, olajozottan működő gépezet volt. Jessica felkészülten és határozottan állt férje mellett abban a sorsdöntő pillanatban, amely lefektette Waikiki jelenlegi államrendjének alapjait, később pedig az egész addigi világrendet alakította át.</p>
                 </div>
-
                 <div class="content-block">
                     <h3>Közösen Épített Nemzet</h3>
                     <p>Az 1999-től 2009-ig tartó évtized partnerségük tűzpróbája volt. Waikiki megalapításától a Csendes-óceáni háborún, a 2005-ös koronázáson és Brazília 2006-os történelmi csatlakozásán át Waikiki formáló korszakának minden meghatározó eseményét az ő együttműködésük alakította. Jessicának a Nemzeti Bank felállításában és a nemzetközi kereskedelmi kapcsolatok kiépítésében végzett munkája alapvető teljesítmény volt, amely alátámasztotta Chease politikai és diplomáciai sikereit. 2008-ban Jessica a WNB elnöke lett, 2009-ben pedig közösen elnyerték a közgazdasági Nobel-díjat a globális pénzügyi válság alatti monetáris stabilitás kezeléséért. Ez a nemzetközi elismerés mérföldkő volt közös szakmai történetükben, de mindkettőjük számára teljesítményük valódi mértéke Waikiki a világ legprosperálóbb nemzetévé való emelkedésében volt látható, egy átalakulásban, amelyet együtt kezdtek semmiből.</p>
                 </div>
-
                 <div class="content-block">
                     <h3>Dinasztia, Örökség és a Hosszú Távlat</h3>
                     <p>2009 óta Chease és Jessica története a legérettebb és talán legteljesebb fázisába lépett. Gyermekeik kivételes vezetőkké váltak, akik a családi értékeket és a nemzet szolgálatát viszik tovább. Az általuk együtt épített intézmények a globális turbulencia évtizedein keresztül ellenállónak bizonyultak. A diktátori hivatal 2017-es átadása Cheasetől Raimondónak a büszkeség és szakmai elégedettség pillanata volt mindkettőjük számára, megerősítve, hogy a fiuknak nyújtott mentorálás felkészítette a vezetői felelősségre. Jessica visszatérése a WNB elnöki székébe 2024-ben és Chease folytatódó szerepe kancellárként és a Világkormány első elnökeként szakmai partnerségük folyamatos vitalitását tükrözi. Közös elkötelezettségük, hogy minden, amit felépítettek, utánuk is fennmaradjon. Elmúlt éveik mozgatóereje a bizonyíték arra, hogy szerelmük a legmélyebb szintjén egy önmagán túlmutató cél iránti elkötelezettség volt.</p>
                 </div>
             </div>
-
             <div class="image-gallery">
                 <div class="gallery-item">
                     <img src="../images/UniversalUpscaler_777f081b-fb8c-4992-9c47-17a917d39798.jpg">
@@ -261,7 +238,6 @@
             </div>
         </div>
     </section>
-
     <!-- Summary -->
     <section class="private-section">
         <div class="private-container">
@@ -272,7 +248,6 @@
             </div>
         </div>
     </section>
-
     <footer>
         <div class="footer-content">
             <div class="footer-links">
@@ -280,7 +255,7 @@
                 <a href="tourism.html">Turizmus</a>
                 <a href="diplomacy.html">Diplomácia</a>
                 <a href="culture.html">Kultúra</a>
-                <a href="parties.html">Politika</a>
+                <a href="parties.html">Politika</a><a href="government.html">Kormány</a>
                 <a href="leadership.html">Vezetés</a>
                 <a href="economy.html">Gazdaság</a>
                 <a href="wealth-fund.html">Vagyonalap</a>
@@ -293,5 +268,4 @@
     </footer>
     <script src="../js/common.js"></script>
 </body>
-
 </html>
