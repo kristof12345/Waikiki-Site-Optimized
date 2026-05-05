@@ -93,8 +93,6 @@
   margin: 0;
 }
 
-
-
 /* Responsive Design */
 @media (max-width: 800px) {
   .timeline-container::before {
@@ -123,8 +121,6 @@
     border-left: 4px solid var(--primary);
     border-right: none;
   }
-
-
 }
 
 /* ======================================== DARK MODE ======================================== */

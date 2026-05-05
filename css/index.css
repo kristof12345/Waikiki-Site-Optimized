@@ -1,7 +1,5 @@
 /* Index Page Styles */
 
-
-
 .economy-stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -215,8 +213,6 @@
 }
 
 /* ======================================== DARK MODE ======================================== */
-
-
 
 .body-dark .timeline-content {
   background: var(--dark-bg);
