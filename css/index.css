@@ -1,9 +1,6 @@
 /* Index Page Styles */
 
-.economy-section {
-  background: var(--white);
-  padding: 80px 3rem;
-}
+
 
 .economy-stats {
   display: grid;
@@ -219,9 +216,7 @@
 
 /* ======================================== DARK MODE ======================================== */
 
-.body-dark .economy-section {
-  background: var(--dark-bg);
-}
+
 
 .body-dark .timeline-content {
   background: var(--dark-bg);
