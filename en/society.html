@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Society of Waikiki - The Nation of the Future</title>
+    <link rel="icon" href="../icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo.png" />
+    <link href="../manifest.json" rel="manifest" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/society.css" />
+    <link rel="preload" as="image" href="../images/society-hero.png" fetchpriority="high" />
+</head>
+<body>
+    <nav class="nav-container">
+        <a href="index.html" class="logo"><span><span class="first-letter">W</span>aikiki</span></a>
+        <button id="dark-mode-switch" class="toggle" aria-pressed="false" onclick="setTheme()">
+            <span class="toggle__content">
+                <svg aria-hidden=true class="toggle__backdrop" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 290 228">
+                    <g class="clouds">
+                        <path fill="#D9D9D9" d="M335 147.5c0 27.89-22.61 50.5-50.5 50.5a50.78 50.78 0 0 1-9.29-.853c-2.478 12.606-10.595 23.188-21.615 29.011C245.699 243.749 228.03 256 207.5 256a50.433 50.433 0 0 1-16.034-2.599A41.811 41.811 0 0 1 166 262a41.798 41.798 0 0 1-22.893-6.782A42.21 42.21 0 0 1 135 256a41.82 41.82 0 0 1-19.115-4.592A41.84 41.84 0 0 1 88 262c-1.827 0-3.626-.117-5.391-.343C74.911 270.448 63.604 276 51 276c-23.196 0-42-18.804-42-42s18.804-42 42-42c1.827 0 3.626.117 5.391.343C64.089 183.552 75.396 178 88 178a41.819 41.819 0 0 1 19.115 4.592C114.532 176.002 124.298 172 135 172a41.798 41.798 0 0 1 22.893 6.782 42.066 42.066 0 0 1 7.239-.773C174.137 164.159 189.749 155 207.5 155c.601 0 1.199.01 1.794.031A41.813 41.813 0 0 1 234 147h.002c.269-27.66 22.774-50 50.498-50 27.89 0 50.5 22.61 50.5 50.5Z" />
+                    </g>
+                </svg>
+                <svg aria-hidden=true class="toggle__backdrop" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 290 228">
+                    <g class="clouds">
+                        <path fill="#fff" d="M328 167.5c0 15.214-7.994 28.56-20.01 36.068.007.31.01.621.01.932 0 23.472-19.028 42.5-42.5 42.5-3.789 0-7.461-.496-10.957-1.426C249.671 263.676 233.141 277 213.5 277a42.77 42.77 0 0 1-7.702-.696C198.089 284.141 187.362 289 175.5 289a42.338 42.338 0 0 1-27.864-10.408A42.411 42.411 0 0 1 133.5 281c-4.36 0-8.566-.656-12.526-1.876C113.252 287.066 102.452 292 90.5 292a42.388 42.388 0 0 1-15.8-3.034A42.316 42.316 0 0 1 48.5 298C25.028 298 6 278.972 6 255.5S25.028 213 48.5 213a42.388 42.388 0 0 1 15.8 3.034A42.316 42.316 0 0 1 90.5 207c4.36 0 8.566.656 12.526 1.876C110.748 200.934 121.548 196 133.5 196a42.338 42.338 0 0 1 27.864 10.408A42.411 42.411 0 0 1 175.5 204c2.63 0 5.204.239 7.702.696C190.911 196.859 201.638 192 213.5 192c3.789 0 7.461.496 10.957 1.426 2.824-10.491 9.562-19.377 18.553-24.994-.007-.31-.01-.621-.01-.932 0-23.472 19.028-42.5 42.5-42.5s42.5 19.028 42.5 42.5Z" />
+                    </g>
+                </svg>
+                <span class="toggle__indicator-wrapper">
+                    <span class="toggle__indicator">
+                        <span class="toggle__star">
+                            <span class="sun"></span>
+                            <span class="moon">
+                                <span class="moon__crater"></span>
+                                <span class="moon__crater"></span>
+                                <span class="moon__crater"></span>
+                            </span>
+                        </span>
+                    </span>
+                </span>
+                <svg aria-hidden=true class="toggle__backdrop" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 290 228">
+                    <g>
+                        <g class="stars">
+                            <g>
+                                <path fill="#fff" fill-rule="evenodd" d="M61 11.5a.75.75 0 0 1 .721.544l.813 2.846a3.75 3.75 0 0 0 2.576 2.576l2.846.813a.75.75 0 0 1 0 1.442l-2.846.813a3.749 3.749 0 0 0-2.576 2.576l-.813 2.846a.75.75 0 0 1-1.442 0l-.813-2.846a3.749 3.749 0 0 0-2.576-2.576l-2.846-.813a.75.75 0 0 1 0-1.442l2.846-.813a3.749 3.749 0 0 0 2.576-2.576l.813-2.846A.75.75 0 0 1 61 11.5Z" clip-rule="evenodd" />
+                            </g>
+                            <g>
+                                <path fill="#fff" fill-rule="evenodd" d="M62.5 45.219a.329.329 0 0 1 .315.238l.356 1.245a1.641 1.641 0 0 0 1.127 1.127l1.245.356a.328.328 0 0 1 0 .63l-1.245.356a1.641 1.641 0 0 0-1.127 1.127l-.356 1.245a.328.328 0 0 1-.63 0l-.356-1.245a1.641 1.641 0 0 0-1.127-1.127l-1.245-.356a.328.328 0 0 1 0-.63l1.245-.356a1.641 1.641 0 0 0 1.127-1.127l.356-1.245a.328.328 0 0 1 .315-.238Z" clip-rule="evenodd" />
+                            </g>
+                            <g>
+                                <path fill="#fff" fill-rule="evenodd" d="M32 31.188a.28.28 0 0 1 .27.204l.305 1.067a1.405 1.405 0 0 0 .966.966l1.068.305a.28.28 0 0 1 0 .54l-1.068.305a1.405 1.405 0 0 0-.966.966l-.305 1.068a.28.28 0 0 1-.54 0l-.305-1.068a1.406 1.406 0 0 0-.966-.966l-1.067-.305a.28.28 0 0 1 0-.54l1.067-.305a1.406 1.406 0 0 0 .966-.966l.305-1.068a.281.281 0 0 1 .27-.203Z" clip-rule="evenodd" />
+                            </g>
+                            <g>
+                                <path fill="#fff" fill-rule="evenodd" d="M41.5 74.219a.329.329 0 0 1 .315.238l.356 1.245a1.641 1.641 0 0 0 1.127 1.127l1.245.356a.328.328 0 0 1 0 .63l-1.245.356a1.641 1.641 0 0 0-1.127 1.127l-.356 1.245a.328.328 0 0 1-.63 0l-.356-1.245a1.641 1.641 0 0 0-1.127-1.127l-1.245-.356a.328.328 0 0 1 0-.63l1.245-.356a1.641 1.641 0 0 0 1.127-1.127l.356-1.245a.328.328 0 0 1 .315-.238Z" clip-rule="evenodd" />
+                            </g>
+                            <g>
+                                <path fill="#fff" fill-rule="evenodd" d="M63 89.25a.375.375 0 0 1 .36.272l.407 1.423a1.874 1.874 0 0 0 1.288 1.288l1.423.406a.374.374 0 0 1 0 .722l-1.423.406a1.874 1.874 0 0 0-1.288 1.288l-.407 1.423a.374.374 0 0 1-.72 0l-.407-1.423a1.874 1.874 0 0 0-1.288-1.288l-1.423-.406a.374.374 0 0 1 0-.722l1.423-.406a1.874 1.874 0 0 0 1.288-1.288l.407-1.423a.376.376 0 0 1 .36-.272Z" clip-rule="evenodd" />
+                            </g>
+                            <g>
+                                <path fill="#fff" fill-rule="evenodd" d="M120 27.188a.279.279 0 0 1 .27.204l.305 1.067a1.41 1.41 0 0 0 .966.966l1.067.305a.283.283 0 0 1 .148.1.286.286 0 0 1 0 .34.283.283 0 0 1-.148.1l-1.067.305a1.403 1.403 0 0 0-.966.966l-.305 1.067a.279.279 0 0 1-.439.147.275.275 0 0 1-.101-.147l-.305-1.067a1.41 1.41 0 0 0-.966-.966l-1.068-.305a.284.284 0 0 1-.147-.1.286.286 0 0 1 0-.34.284.284 0 0 1 .147-.1l1.068-.305a1.405 1.405 0 0 0 .966-.966l.305-1.067a.279.279 0 0 1 .27-.204Z" clip-rule="evenodd" />
+                            </g>
+                            <g>
+                                <path fill="#fff" fill-rule="evenodd" d="M155 28.5a.753.753 0 0 1 .721.544l.813 2.846a3.746 3.746 0 0 0 2.576 2.576l2.846.813a.747.747 0 0 1 .543.721.75.75 0 0 1-.543.721l-2.846.813a3.75 3.75 0 0 0-2.576 2.576l-.813 2.846a.747.747 0 0 1-.721.543.749.749 0 0 1-.721-.543l-.813-2.846a3.746 3.746 0 0 0-2.576-2.576l-2.846-.813a.747.747 0 0 1-.543-.721.75.75 0 0 1 .543-.721l2.846-.813a3.75 3.75 0 0 0 2.576-2.576l.813-2.846A.751.751 0 0 1 155 28.5Z" clip-rule="evenodd" />
+                            </g>
+                            <g>
+                                <path fill="#fff" fill-rule="evenodd" d="M125.5 76.344a.513.513 0 0 1 .496.374l.559 1.956a2.574 2.574 0 0 0 1.771 1.771l1.956.56a.514.514 0 0 1 .27.805.514.514 0 0 1-.27.186l-1.956.559a2.57 2.57 0 0 0-1.771 1.77l-.559 1.957a.514.514 0 0 1-.806.27.514.514 0 0 1-.186-.27l-.559-1.956a2.574 2.574 0 0 0-1.771-1.771l-1.956-.56a.514.514 0 0 1-.27-.805.514.514 0 0 1 .27-.186l1.956-.559a2.57 2.57 0 0 0 1.771-1.77l.559-1.957a.515.515 0 0 1 .496-.374Z" clip-rule="evenodd" />
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </span>
+        </button>
+    </nav>
+    <div class="hamburger-menu">
+        <button class="hamburger-button"><span></span><span></span><span></span></button>
+    </div>
+    <div class="hamburger-overlay"></div>
+    <nav class="hamburger-panel">
+        <ul class="hamburger-links">
+            <li><a href="index.html"><img src="https://api.iconify.design/mdi/home.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Home </a></li>
+            <li><a href="tourism.html"><img src="https://api.iconify.design/mdi/compass.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Tourism </a></li>
+            <li><a href="diplomacy.html"><img src="https://api.iconify.design/mdi/earth.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Diplomacy </a></li>
+            <li><a href="culture.html"><img src="https://api.iconify.design/mdi/palette.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Culture </a></li>
+            <li><a href="economy.html"><img src="https://api.iconify.design/mdi/chart-line.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Economy </a></li>
+            <li><a href="wealth-fund.html"><img src="https://api.iconify.design/mdi/bank.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Wealth Fund </a></li>
+            <li><a href="history.html"><img src="https://api.iconify.design/mdi/book-open.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />History </a></li>
+            <li><a href="parties.html"><img src="https://api.iconify.design/mdi/account-group.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Politics </a></li>
+            <li><a href="government.html"><img src="https://api.iconify.design/mdi/bank-outline.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Government </a></li>
+            <li><a href="leadership.html"><img src="https://api.iconify.design/mdi/crown.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Leadership </a></li>
+            <li><a href="military.html"><img src="https://api.iconify.design/mdi/shield-sword.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Military </a></li>
+            <li><a href="faq.html"><img src="https://api.iconify.design/mdi/help-circle.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />FAQ </a></li>
+        </ul>
+    </nav>
+    <!-- Hero -->
+    <section class="hero" style="background: url('../images/UniversalUpscaler_93281a3c-f408-4f55-b29b-e8a6b87ab85d.jpg') center/cover no-repeat;">
+        <div class="hero-content">
+            <h1>Waikiki's Society</h1>
+            <p class="liquid">The most advanced and happiest nation of the 21st century, where knowledge, sustainability, and community power build the future.</p>
+            <div class="hero-stats">
+                <div class="stat-item liquid"><span class="stat-number">212M</span><span class="stat-label">Population</span></div>
+                <div class="stat-item liquid"><span class="stat-number">8,8M km²</span><span class="stat-label">Territory</span></div>
+                <div class="stat-item liquid"><span class="stat-number">$196k</span><span class="stat-label">GDP Per Capita</span></div>
+                <div class="stat-item liquid"><span class="stat-number">&lt;1%</span><span class="stat-label">Inflation</span></div>
+            </div>
+        </div>
+    </section>
+    <main>
+        <!-- Intro Section -->
+        <section class="section fade-in">
+            <div class="container">
+                <h2 class="section-title">Society and Culture</h2>
+                <p class="section-intro">Waikiki's culture is built on history, knowledge, and family communities. World-class education, sustainable infrastructure, free and modern healthcare, a vibrant arts scene, strong sports traditions, and a shared national identity strengthen Waikiki's social unity. Our population is proud of its cultural heritage, where history and modernity meet.</p>
+                <div class="card-grid">
+                    <div class="card">
+                        <img src="https://api.iconify.design/mdi/palette.svg?color=%230071BC&width=48" class="card-icon" />
+                        <h3>Artistic Life</h3>
+                        <p>A vibrant and internationally recognized arts scene, with annual film festivals, music galas, and fine arts exhibitions characterizing the country.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://api.iconify.design/mdi/calendar-star.svg?color=%230071BC&width=48" class="card-icon" />
+                        <h3>Holidays</h3>
+                        <p>Our national holidays serve to strengthen historical identity and community belonging, with national events and tributes.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://api.iconify.design/mdi/cross-variant.svg?color=%230071BC&width=48" class="card-icon" />
+                        <h3>Values</h3>
+                        <p>A society and family model built on traditional Christian values is the spiritual and moral foundation of the nation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Political Philosophy -->
+        <section class="section fade-in light-bg">
+            <div class="container">
+                <h2 class="section-title">Political Philosophy</h2>
+                <p class="section-intro">The political philosophy of Waikiki's government is based on a balance of efficient, centralized management and the democratic participation of the population, justified by the country's rapid development and economic success.</p>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>I. Centralized Decision-making</h3>
+                        <p>Our government believes that for fast and efficient decision-making, centralization of power is essential. The essence of a democratic dictatorship is that national leadership is concentrated in the hands of a single leader who considers society's needs and feedback to ensure long-term prosperity.</p>
+                    </div>
+                    <div class="card">
+                        <h3>II. Referendum-based Legitimacy</h3>
+                        <p>Despite having broad powers, the dictator or members of the government regularly initiate referendums on major issues. This gives citizens the opportunity to directly express their opinions on topics that affect them. The goal is to implement central management through participation.</p>
+                    </div>
+                    <div class="card">
+                        <h3>III. Technocratic Governance</h3>
+                        <p>The foundation of Waikiki's political system is technocratic governance, where recognized experts and scientists assist in decision-making. We believe modern challenges require leadership based on objective data and scientific analysis.</p>
+                    </div>
+                    <div class="card">
+                        <h3>IV. Economic Pragmatism</h3>
+                        <p>At the center of our country's political philosophy are economic growth and stability. The constitution emphasizes that state intervention and market freedom must be in balance, focusing on technological innovation and international trade.</p>
+                    </div>
+                    <div class="card">
+                        <h3>V. Collective Responsibility and Individual Freedoms</h3>
+                        <p>While the state has a strong role in guiding citizens' lives, our constitution emphasizes respect for individual freedoms as long as they do not conflict with national interests, aiming for social harmony.</p>
+                    </div>
+                    <div class="card">
+                        <h3>VI. Economic Strength and Technological Progress</h3>
+                        <p>A central element of Waikiki's philosophy is that economic growth and technological innovation establish the country's global role. The government maintains state control in strategic sectors while supporting the private sector.</p>
+                    </div>
+                    <div class="card">
+                        <h3>VII. National Unity and Identity</h3>
+                        <p>The leadership of Waikiki places great emphasis on national togetherness and a unified identity. Education and media are used to highlight common goals and national priorities for all citizens.</p>
+                    </div>
+                    <div class="card">
+                        <h3>VIII. Sustainability and Global Responsibility</h3>
+                        <p>The Waikiki government is committed to environmental protection. The country takes a leading role in green technologies and the fight against climate change, treating natural resources as constitutional priorities.</p>
+                    </div>
+                    <div class="card">
+                        <h3>IX. Social Justice and Welfare</h3>
+                        <p>The results of economic growth must be enjoyed by every citizen. World-class education, healthcare, and social support systems ensure the highest possible standard of living, rejecting harmful redistribution.</p>
+                    </div>
+                    <div class="card">
+                        <h3>X. Public Safety and Order</h3>
+                        <p>Law enforcement and public safety are crucial. The state acts strictly against crime and corruption to maintain social stability, protecting citizens from both external and internal threats.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Stats & Demographics -->
+        <section class="stats-container">
+            <div class="container">
+                <h2 class="section-title" style="color: var(--gold);">National Statistics</h2>
+                <p class="section-intro" style="color: var(--white); opacity: 0.8;">Waikiki is the most advanced country on Earth, the financial and economic center of the world, home to over 210 million citizens.</p>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <h3>Population</h3>
+                        <span class="stat-value">210 Million</span>
+                        <p class="stat-desc">Waikiki: 13M | Amazonia: 92M | Brazil: 105M</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Area</h3>
+                        <span class="stat-value">8.84M km²</span>
+                        <p class="stat-desc">The 5th largest country in the world by area</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Life Expectancy</h3>
+                        <span class="stat-value">93.5 Years</span>
+                        <p class="stat-desc">Women: 95 years | Men: 92 years</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>GDP per Capita</h3>
+                        <span class="stat-value">$196,415</span>
+                        <p class="stat-desc">The world's highest per capita income</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Illiteracy</h3>
+                        <span class="stat-value">0.0%</span>
+                        <p class="stat-desc">Full-scale, world-class educational system</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Unemployment</h3>
+                        <span class="stat-value">5.0%</span>
+                        <p class="stat-desc">Stable and dynamic labor market</p>
+                    </div>
+                </div>
+                <div class="geo-list">
+                    <div class="geo-item">
+                        <span class="label">Highest Peak</span>
+                        <span class="name">Pico Durante (3175m)</span>
+                    </div>
+                    <div class="geo-item">
+                        <span class="label">Largest River</span>
+                        <span class="name">Amazon River</span>
+                    </div>
+                    <div class="geo-item">
+                        <span class="label">Capital</span>
+                        <span class="name">Nova Aurelia</span>
+                    </div>
+                    <div class="geo-item">
+                        <span class="label">Official Language</span>
+                        <span class="name">Waikikian (English)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Social Classes Comparison -->
+        <section class="social-classes-section fade-in">
+            <div class="container">
+                <h2 class="section-title">Social Classes</h2>
+                <p class="section-intro">Waikiki's society is meritocratic and structured, where rights and responsibilities are tied to citizenship status. The total population is 212 million.</p>
+                <div class="comparison-table-wrapper">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Rights & Benefits</th>
+                                <th>
+                                    <span class="class-title">Guest Worker</span>
+                                    <span class="class-pop">13 Million</span>
+                                </th>
+                                <th>
+                                    <span class="class-title">Permanent Resident</span>
+                                    <span class="class-pop">69 Million</span>
+                                </th>
+                                <th>
+                                    <span class="class-title">Citizen</span>
+                                    <span class="class-pop">130 Million</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Work Permit</td>
+                                <td><span class="check-icon">✓</span></td>
+                                <td><span class="check-icon">✓</span></td>
+                                <td><span class="check-icon">✓</span></td>
+                            </tr>
+                            <tr>
+                                <td>Private Company Ownership</td>
+                                <td><span class="check-icon">✓</span></td>
+                                <td><span class="check-icon">✓</span></td>
+                                <td><span class="check-icon">✓</span></td>
+                            </tr>
+                            <tr>
+                                <td>Start Individual Business</td>
+                                <td><span class="check-icon">✓</span></td>
+                                <td><span class="check-icon">✓</span></td>
+                                <td><span class="check-icon">✓</span></td>
+                            </tr>
+                            <tr>
+                                <td>Free Education</td>
+                                <td><span class="cross-icon">✗</span></td>
+                                <td><span class="check-icon">✓</span> (Up to 20 years)</td>
+                                <td><span class="check-icon">✓</span> (Unlimited)</td>
+                            </tr>
+                            <tr>
+                                <td>Free Healthcare</td>
+                                <td><span class="cross-icon">✗</span></td>
+                                <td><span class="cross-icon">✗</span></td>
+                                <td><span class="check-icon">✓</span></td>
+                            </tr>
+                            <tr>
+                                <td>Voting Rights</td>
+                                <td><span class="cross-icon">✗</span></td>
+                                <td><span class="cross-icon">✗</span></td>
+                                <td><span class="check-icon">✓</span></td>
+                            </tr>
+                            <tr>
+                                <td>Pension & Social Safety Net</td>
+                                <td><span class="cross-icon">✗</span></td>
+                                <td><span class="cross-icon">✗</span></td>
+                                <td><span class="check-icon">✓</span></td>
+                            </tr>
+                            <tr>
+                                <td>Free Public Transport</td>
+                                <td><span class="cross-icon">✗</span></td>
+                                <td><span class="cross-icon">✗</span></td>
+                                <td><span class="check-icon">✓</span></td>
+                            </tr>
+                            <tr>
+                                <td>Duration of Residency</td>
+                                <td><span class="duration-tag">6 Months (Renewable)</span></td>
+                                <td><span class="duration-tag">Unlimited</span></td>
+                                <td><span class="duration-tag">Unlimited</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <!-- Quality of Life & Sustainability -->
+        <section class="section fade-in">
+            <div class="container">
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Quality of Life & Healthcare</h3>
+                        <p>Waikiki's healthcare system is state-funded and free for all citizens. Our clinics are equipped with the latest technology, and our indicators are among the best in the world.</p>
+                        <ul style="margin-top: 15px; padding-left: 20px;">
+                            <li>Free digital diagnostics</li>
+                            <li>Life-extending elixir research</li>
+                            <li>World-class hospital infrastructure</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Sustainability</h3>
+                        <p>We are committed to environmental protection. 90% of our energy supply comes from renewable, nuclear, and fusion sources.</p>
+                        <ul style="margin-top: 15px; padding-left: 20px;">
+                            <li>Emissions-free cities</li>
+                            <li>Blue Belt Agreement for sea protection</li>
+                            <li>Global leadership in climate protection</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sport & Lifestyle -->
+        <section class="light-bg section fade-in">
+            <div class="container">
+                <h2 class="section-title">Sport and Lifestyle</h2>
+                <p class="section-intro">A conscious lifestyle and sports are an integral part of the Waikiki feeling. Every 4 years, we organize a national Olympics and support active recreation for all ages.</p>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Popular Sports</h3>
+                        <p>Sailing, football, and tennis are part of national pride. Waikiki's shores offer a surfer's paradise.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Education</h3>
+                        <p>Compulsory education is 18 years, and education is free at all levels. We place special emphasis on talent management.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Digital Society</h3>
+                        <p>A cashless economy, digital identification, and online administration make the lives of citizens convenient.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Weather Section -->
+        <section class="weather-section fade-in">
+            <div class="container">
+                <h2 class="section-title">Weather and Seasons</h2>
+                <p class="section-intro">Waikiki is an ideal destination in any season. Our mild tropical climate has four distinct seasons, with nighttime precipitation and UV-free days.</p>
+                <div class="weather-grid">
+                    <div class="weather-card">
+                        <img src="../images/seasons.png" alt="Summer" style="object-position: top left;">
+                        <div class="weather-overlay">
+                            <h3>Summer</h3>
+                            <div class="weather-temp">30-35°C</div>
+                            <p class="weather-desc">Plenty of sunshine, refreshing tropical rains at night.</p>
+                        </div>
+                    </div>
+                    <div class="weather-card">
+                        <img src="../images/seasons.png" alt="Autumn" style="object-position: top right;">
+                        <div class="weather-overlay">
+                            <h3>Autumn</h3>
+                            <div class="weather-temp">25-30°C</div>
+                            <p class="weather-desc">Pleasant, mild breeze, golden landscapes.</p>
+                        </div>
+                    </div>
+                    <div class="weather-card">
+                        <img src="../images/seasons.png" alt="Winter" style="object-position: bottom left;">
+                        <div class="weather-overlay">
+                            <h3>Winter</h3>
+                            <div class="weather-temp">-7 to -3°C</div>
+                            <p class="weather-desc">Magical snowfall, clear blue skies.</p>
+                        </div>
+                    </div>
+                    <div class="weather-card">
+                        <img src="../images/seasons.png" alt="Spring" style="object-position: bottom right;">
+                        <div class="weather-overlay">
+                            <h3>Spring</h3>
+                            <div class="weather-temp">27-32°C</div>
+                            <p class="weather-desc">Nature in full bloom, awakening cities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="tourism.html">Tourism</a>
+                <a href="diplomacy.html">Diplomacy</a>
+                <a href="culture.html">Culture</a>
+                <a href="parties.html">Politics</a>
+                <a href="government.html">Government</a>
+                <a href="leadership.html">Leadership</a>
+                <a href="economy.html">Economy</a>
+                <a href="wealth-fund.html">Wealth Fund</a>
+                <a href="history.html">History</a>
+                <a href="military.html">Military</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <p>&copy; 2025 The Sovereign Nation of Waikiki. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="../js/common.js"></script>
+</body>
+</html>
