@@ -400,17 +400,14 @@ nav {
 .card {
   animation: fadeInUp var(--animation-duration) ease-out backwards;
   background: var(--white);
-  border-left: 5px solid var(--primary);
   border-radius: var(--card-border-radius);
-  box-shadow: var(--card-shadow);
+  box-shadow: inset 5px 0 0 0 var(--primary), var(--card-shadow);
   padding: var(--card-padding);
-  transition: all 0.4s var(--transition-easing)
+  transition: box-shadow 0.4s var(--transition-easing)
 }
 
 .card:hover {
-  border-left-width: 12px;
-  box-shadow: var(--card-shadow-hover);
-  padding-left: calc(var(--card-padding) - 7px);
+  box-shadow: inset 12px 0 0 0 var(--primary), var(--card-shadow-hover)
 }
 
 .card h3 {
