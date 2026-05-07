@@ -404,14 +404,13 @@ nav {
   border-radius: var(--card-border-radius);
   box-shadow: var(--card-shadow);
   padding: var(--card-padding);
-  transition: all var(--animation-duration) var(--transition-easing)
+  transition: all 0.4s var(--transition-easing)
 }
 
 .card:hover {
   border-left-width: 12px;
   box-shadow: var(--card-shadow-hover);
   padding-left: calc(var(--card-padding) - 7px);
-  transform: translateY(-8px) scale(1.03)
 }
 
 .card h3 {

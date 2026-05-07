@@ -99,15 +99,6 @@ function initFadeInObserver() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-
-                // Add staggered animation to children if they exist
-                const children = entry.target.querySelectorAll('.card, .leader-card, .timeline-item, .timeline-period, .timeline-event');
-                children.forEach((child, index) => {
-                    setTimeout(() => {
-                        child.style.opacity = '1';
-                        child.style.transform = 'translateY(0)';
-                    }, index * 100);
-                });
             }
         });
     }, observerOptions);
