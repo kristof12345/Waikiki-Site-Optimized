@@ -93,7 +93,7 @@ section {
 /* NAVIGATION */
 
 nav {
-  animation: slideDown .6s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slideDown .6s var(--transition-easing);
   background: var(--primary);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
   height: 70px;
@@ -720,7 +720,7 @@ nav {
 .menu-btn {
   background-color: var(--secondary);
   border: none;
-  border-radius: 9999px;
+  border-radius: 1000px;
   box-shadow: 0 10px 15px -3px rgba(2, 6, 23, 0.2), 0 4px 6px -4px rgba(2, 6, 23, 0.1);
   color: var(--white);
   cursor: pointer;
@@ -1329,6 +1329,28 @@ footer {
   }
 }
 
+/* VIDEO COMPONENTS */
+
+.video-wrapper {
+  max-width: 1200px;
+  margin: 10px auto;
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-shadow-hover);
+  transition: transform 0.5s var(--transition-easing);
+  background-size: cover;
+}
+
+.video-wrapper:hover {
+  transform: scale(1.02);
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* RESPONSIVE DESIGN */
 
 @media (max-width: 1600px) {
@@ -1514,26 +1536,4 @@ footer {
   66% {
     transform: translate(-20px, 20px) rotate(240deg)
   }
-}
-
-/* VIDEO COMPONENTS */
-
-.video-wrapper {
-  max-width: 1200px;
-  margin: 10px auto;
-  border-radius: var(--card-border-radius);
-  box-shadow: var(--card-shadow-hover);
-  transition: transform 0.5s var(--transition-easing);
-  background-size: cover;
-}
-
-.video-wrapper:hover {
-  transform: scale(1.02);
-}
-
-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }
