@@ -375,6 +375,7 @@
 
 .admin-icon.icon-brazilia {
     background: #f9a825;
+    color: var(--dark-bg);
 }
 
 .admin-card h3 {
@@ -451,4 +452,71 @@
     .cities-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* ========== DARK MODE OVERRIDES ========== */
+.body-dark .map-container,
+.body-dark .province-info-panel,
+.body-dark .admin-card {
+    background: var(--dark-blue);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.body-dark .province-path {
+    stroke: var(--dark-blue);
+}
+
+.body-dark .city-label {
+    fill: var(--white);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.body-dark .city-label-bg {
+    fill: rgba(10, 25, 48, 0.8);
+}
+
+.body-dark .map-legend,
+.body-dark .info-stat,
+.body-dark .city-chip,
+.body-dark .admin-data-item {
+    background: var(--dark-grey);
+}
+
+.body-dark .info-title,
+.body-dark .info-cities h4,
+.body-dark .admin-card h3 {
+    color: var(--white);
+}
+
+.body-dark .legend-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--white);
+}
+
+.body-dark .legend-item.active {
+    background: rgba(0, 176, 195, 0.15);
+    color: var(--tertiary);
+}
+
+.body-dark .info-stat-value,
+.body-dark .admin-data-value {
+    color: var(--tertiary);
+}
+
+.body-dark .legend-color {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.body-dark .city-chip:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--tertiary);
+}
+
+/* Ocean Dark Mode */
+.body-dark #ocean stop:first-child {
+    stop-color: #0a1128 !important;
+}
+
+.body-dark #ocean stop:last-child {
+    stop-color: #1c2541 !important;
 }
