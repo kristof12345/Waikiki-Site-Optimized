@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Waikiki Tartományai</title>
-    <meta name="description" content="Waikiki három tartományának interaktív térképe, városai és közigazgatási rendszere." />
     <link rel="icon" href="../icons/favicon.ico" />
     <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo.png" />
     <link href="../manifest.json" rel="manifest" />
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/map.css" />
+    <link rel="preload" as="image" href="../images/image-95.jpg" fetchpriority="high" />
+    <link rel="stylesheet" href="../css/tailwind.css" />
 </head>
 <body>
     <nav class="nav-container">
@@ -92,18 +93,20 @@
         </ul>
     </nav>
     <!-- Hero -->
-    <section class="hero" style="background: linear-gradient(135deg, #0e308e 0%, #0071bc 50%, #00b0c3 100%);">
+         <section class="hero-section">
+        <div class="hero-bg">
+            <div class="hero-overlay"></div><img src="../images/image-95.jpg" class="hero-img" />
+        </div>
         <div class="hero-content">
-            <h1>Tartományok és Közigazgatás</h1>
-            <p class="liquid">Waikiki három tartományból áll: Waikiki, Amazónia és Brazília. Az ország 8,84 millió négyzetkilométert fed le és 212 millió lakosnak ad otthont. A tartományok élén a diktátor által kinevezett helytartó áll, aki a regionális infrastruktúráért és beruházásokért felel.</p>
-            <div class="hero-stats">
-                <div class="stat-item liquid"><span class="stat-number">3</span><span class="stat-label">Tartomány</span></div>
-                <div class="stat-item liquid"><span class="stat-number">8,84M km²</span><span class="stat-label">Összterület</span></div>
-                <div class="stat-item liquid"><span class="stat-number">212M</span><span class="stat-label">Lakosság</span></div>
-                <div class="stat-item liquid"><span class="stat-number">24 fő/km²</span><span class="stat-label">Népsűrűség</span></div>
-            </div>
+            <div class="hero-badge animate-fade-up">Közigazgatás</div>
+            <h1 class="hero-title"><span style="color: #BC9200">Waikiki</span> Tartományai</h1>
+            <p class="hero-desc">Waikiki állama három egyenrangú tartományból áll, melyek Waikiki, Amazónia és Brazília. Az ország teljes területe 8,84 millió négyzetkilométert fed le és 212 millió lakosnak ad otthont. A tartományok élén a helytartó áll, aki a regionális infrastruktúráért és beruházásokért felel.</p>
         </div>
     </section>
+
+
+
+
     <!-- Interactive Map -->
     <section class="fade-in" id="map">
         <h2 class="section-title">Interaktív Térkép</h2>
@@ -297,7 +300,7 @@
             </div>
             <div class="admin-card admin-brazilia">
                 <div class="admin-card-header">
-                    <div class="admin-icon icon-brazilia"><img src="https://api.iconify.design/mdi/city.svg?color=%234a3000&width=28&height=28" /></div>
+                    <div class="admin-icon icon-brazilia"><img src="https://api.iconify.design/mdi/city.svg?color=%23FFFFFF&width=28&height=28" /></div>
                     <h3>Brazília tartomány</h3>
                 </div>
                 <p>Az ország legnagyobb gazdasági régiója, amely fejlett ipari központjaival, modern mezőgazdaságával és szolgáltatási szektorával a GDP közel felét termeli. A 2006-os csatlakozás óta a tartomány gyors modernizáción ment keresztül.</p>
