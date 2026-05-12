@@ -6,16 +6,9 @@ SETUP — Google Drive as image source:
 2. Replace the default code with:
 
 function doGet() {
-    var folder = DriveApp.getFolderById('1QUWKk9G6QCQOVnobsMtDHLfovIHCCCce');
-    var files = folder.getFiles();
-    var ids = [];
-    while (files.hasNext()) {
-      var f = files.next();
-      if (f.getMimeType().indexOf('image/') === 0) ids.push(f.getId());
-    }
-    ids.sort();
-    return ContentService.createTextOutput(JSON.stringify(ids))
-      .setMimeType(ContentService.MimeType.JSON);
+  const folderId = '1QUWKk9G6QCQOVnobsMtDHLfovIHCCCce';
+  const files = Drive.Files.list({ q: `'${folderId}' in parents and trashed = false`, fields: 'files(id)', pageSize: 500 }).files.map(f => f.id).sort();
+  return ContentService.createTextOutput(JSON.stringify(files)).setMimeType(ContentService.MimeType.JSON);
 }
 
 3. Click Deploy > New deployment > Web app. Set "Execute as" = Me, "Who has access" = Anyone.
@@ -70,8 +63,26 @@ const Gallery = (() => {
             showMessage(t.errTitle, t.errText);
             return;
         }
+
         showLoading();
         try {
+
+            // Load from cache
+            const cacheId = url.split('/s/')[1]?.split('/')[0] || 'default';
+            const cacheKey = 'gallery_cache_' + cacheId;
+            const cacheTTL = 7 * 24 * 60 * 60 * 1000; //One week
+
+            const cached = localStorage.getItem(cacheKey);
+            if (cached) {
+                const { timestamp, raw } = JSON.parse(cached);
+                if (Date.now() - timestamp < cacheTTL && Array.isArray(raw) && raw.length > 0) {
+                    images = raw.map(resolveImage).filter(Boolean);
+                    updateCount();
+                    renderGrid();
+                    return;
+                }
+            }
+
             const res = await fetch(url);
             if (!res.ok) throw new Error(res.statusText);
             const data = await res.json();
@@ -83,6 +94,9 @@ const Gallery = (() => {
                 showMessage(t.noTitle, t.noText);
                 return;
             }
+
+            // Update cache
+            localStorage.setItem(cacheKey, JSON.stringify({ timestamp: Date.now(), raw: raw }));
 
             updateCount();
             renderGrid();
