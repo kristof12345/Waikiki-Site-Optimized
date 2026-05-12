@@ -70,8 +70,26 @@ const Gallery = (() => {
             showMessage(t.errTitle, t.errText);
             return;
         }
+
         showLoading();
         try {
+
+            // Load from cache
+            const cacheId = url.split('/s/')[1]?.split('/')[0] || 'default';
+            const cacheKey = 'gallery_cache_' + cacheId;
+            const cacheTTL = 7 * 24 * 60 * 60 * 1000; //One week
+
+            const cached = localStorage.getItem(cacheKey);
+            if (cached) {
+                const { timestamp, raw } = JSON.parse(cached);
+                if (Date.now() - timestamp < cacheTTL && Array.isArray(raw) && raw.length > 0) {
+                    images = raw.map(resolveImage).filter(Boolean);
+                    updateCount();
+                    renderGrid();
+                    return;
+                }
+            }
+
             const res = await fetch(url);
             if (!res.ok) throw new Error(res.statusText);
             const data = await res.json();
@@ -83,6 +101,9 @@ const Gallery = (() => {
                 showMessage(t.noTitle, t.noText);
                 return;
             }
+
+            // Update cache
+            localStorage.setItem(cacheKey, JSON.stringify({ timestamp: Date.now(), raw: raw }));
 
             updateCount();
             renderGrid();
