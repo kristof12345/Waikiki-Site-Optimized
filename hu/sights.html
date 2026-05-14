@@ -7,17 +7,18 @@
     <link rel="icon" href="../icons/favicon.ico" />
     <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo.png" />
     <link href="../manifest.json" rel="manifest" />
-    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/sights.css">
+    <link rel="stylesheet" href="../css/tailwind.css">
+    <link rel="preload" as="image" href="../images/hero_nova_aurelia.png" fetchpriority="high" />
 </head>
 <body>
     <nav class="nav-container"><a href="index.html" class="logo"><span><span class="first-letter">W</span>aikiki</span></a>
         <ul class="nav-links">
-            <li><a href="#tortenelem">Történelem</a></li>
-            <li><a href="#toronyhazak">Toronyházak</a></li>
-            <li><a href="#szallodak">Szállodák</a></li>
-            <li><a href="#palotak">Paloták</a></li>
+            <li><a href="#nova-aurelia">Nova Aurelia</a></li>
+            <li><a href="#hotels-palaces">Szállodák</a></li>
             <li><a href="#parkok">Parkok</a></li>
+            <li><a href="#nature-adventure">Természet</a></li>
         </ul>
         <button id="dark-mode-switch" class="toggle" aria-pressed="false" onclick="setTheme()">
             <span class="toggle__content">
@@ -77,11 +78,18 @@
             <li><a href="sights.html" class="active"><img src="https://api.iconify.design/mdi/camera.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Látnivalók </a></li>
         </ul>
     </nav>
-
-    <section class="hero sights-hero">
+    <!-- Hero -->
+    <section class="hero-section">
+        <div class="hero-bg">
+            <div class="hero-overlay"></div><img src="../images/hero_nova_aurelia.png" class="hero-img" />
+        </div>
         <div class="hero-content">
-            <h1>Nova Aurelia</h1>
-            <p>Fedezd fel a világ legszebb fővárosát! A történelem csodái és a jövő technológiája egyetlen lenyűgöző metropoliszban.</p>
+            <div class="hero-badge animate-fade-up">A Világ Kincstára</div>
+            <h1 class="hero-title">Waikiki <span style="color: #BC9200">Látnivalói</span></h1>
+            <p class="hero-desc">Fedezd fel a világ legkülönlegesebb pontját, ahol az ultramodern metropoliszok, az érintetlen trópusi paradicsomok, a burjánzó esőerdők és a hófödte hegycsúcsok egyetlen nemzet határain belül találkoznak.</p>
+            <div class="hero-actions" style="visibility: hidden;">
+                <button class="hero-btn open-assessment" style="background-color: #0071BC">Tudjon meg többet</button>
+            </div>
         </div>
     </section>
 
@@ -133,51 +141,38 @@
                     <li><strong>Sky City:</strong> A világ legmagasabb épülete, 956 méteres magasságával az égbe nyúlik.</li>
                     <li><strong>Infinity Tower:</strong> A világ egyetlen 90 fokban megcsavart toronyháza, Waikiki modern jelképe.</li>
                     <li><strong>Világkormány Központ:</strong> Három hatalmas torony, melyeket a tetején egy hatalmas parkosított platform köt össze.</li>
-                    <li><strong>Royal Towers:</strong> Exkluzív apartmanok saját Michelin-csillagos éttermekkel és jachtkikötővel.</li>
                 </ul>
             </div>
         </section>
 
-        <div class="quote-section fade-in">
-            <div class="quote-card">
-                <p class="quote-text">"Nova Aureliában sétálni olyan, akár egy időutazás a múltból a jövőbe."</p>
-                <p class="quote-author">— Megan Fox</p>
-            </div>
-            <div class="quote-card">
-                <p class="quote-text">"Ezt mindenkinek látnia kell. A legszebb csodák mind egy helyen."</p>
-                <p class="quote-author">— Martina Stoessel</p>
-            </div>
-        </div>
-
+        <div id="hotels-palaces" class="anchor-offset"></div>
         <section id="szallodak" class="sight-section fade-in">
             <div class="sight-image">
                 <img src="../images/sights_hotel.png" alt="Szállodák">
             </div>
-            <div class="sight-text">
-                <h2>Szállodák</h2>
-                <p class="narrative-text">Waikiki a luxus turizmus fellegvára, ahol a kényelemnek nincsenek határai.</p>
+            <div class="sight-info">
+                <h3 class="tertiary">Luxus Szállodák</h3>
+                <p>Waikiki a luxus turizmus fellegvára, ahol a kényelemnek nincsenek határai. Szállodáink a legmagasabb világszínvonalat képviselik.</p>
                 <ul>
                     <li><strong>Hotel President:</strong> A világ egyetlen 15 csillagos szállodája, 1600 m²-es elnöki lakosztállyal.</li>
                     <li><strong>Hotel Atlantis:</strong> Víz alatti lakosztályok, ahol a tenger élővilága közvetlenül az ágyunk mellett úszik el.</li>
                     <li><strong>Hotel Khalifa:</strong> A Pálma-szigeten fekvő 10 csillagos resort a világ egyik legnagyobb aquaparkjával.</li>
-                    <li><strong>Paradise Islands:</strong> Vízre épült villák a Kaméleon-szigeten, közvetlen kapcsolattal a korallzátonyokhoz.</li>
                 </ul>
             </div>
         </section>
 
-        <section id="palotak" class="sight-section fade-in">
-            <div class="sight-image">
-                <img src="../images/sights_palace.png" alt="Paloták">
-            </div>
-            <div class="sight-text">
-                <h2>Paloták</h2>
-                <p class="narrative-text">A kormány vezetőinek és a hercegi családnak otthont adó épületek a világ legértékesebb ingatlanai.</p>
+        <section id="palotak" class="sight-section reverse fade-in">
+            <div class="sight-info">
+                <h3 class="tertiary">Hercegi Paloták</h3>
+                <p>A kormány vezetőinek és a hercegi családnak otthont adó épületek a világ legértékesebb ingatlanai.</p>
                 <ul>
                     <li><strong>Hercegi Palota:</strong> Raimondo herceg 80 milliárd dollár értékű otthona, saját koncertteremmel és mozival.</li>
                     <li><strong>Jennifer Palotája:</strong> 90 hektáros botanikus kerttel körülvett rezidencia a tengerparton.</li>
-                    <li><strong>Raimondo nyaralója:</strong> A Burdzs al-Arab mintájára épült torony, tetején helikopterleszállóval.</li>
-                    <li><strong>Chease és Jessica villája:</strong> Ludwig Mies van der Rohe által tervezett ultramodern üvegpalota a dzsungel mélyén.</li>
+                    <li><strong>Chease és Jessica villája:</strong> Ludwig Mies van der Rohe által tervezett ultramodern üvegpalota.</li>
                 </ul>
+            </div>
+            <div class="sight-image">
+                <img src="../images/sights_palace.png" alt="Paloták">
             </div>
         </section>
 
@@ -197,7 +192,74 @@
                     <h3>Nova Aurelia Állatkert</h3>
                     <p>Egzotikus állatok, sarki kupola és delfin show-k a világ legnagyobb állatkertjében.</p>
                 </div>
-                <div class="card">
+            </div>
+        </section>
+
+        <div id="nature-adventure" class="anchor-offset"></div>
+        <h2 class="section-title">Waikiki Regionális Csodái</h2>
+        <p class="section-intro">Fedezze fel a fővároson túli világot: érintetlen természet, trópusi paradicsom és hófödte hegyek.</p>
+
+        <section id="nature" class="sight-section fade-in">
+            <div class="sight-image">
+                <img src="../images/sights_nature.png" alt="Természeti Csodák">
+            </div>
+            <div class="sight-info">
+                <h3 class="tertiary">Természeti Csodák</h3>
+                <p>Waikiki nemcsak az építészet, hanem a természet temploma is. A fenséges vulkanikus hegycsúcsoktól a kristálytiszta lagúnákba ömlő vízesésekig minden tájegység egyedi varázslatot rejt.</p>
+                <ul>
+                    <li><strong>Vulkanikus Csúcsok:</strong> A szigetvilág gerincét alkotó hegyláncok túraútvonalai lélegzetelállító panorámát kínálnak.</li>
+                    <li><strong>Éden-vízesés:</strong> A dzsungel mélyén rejtőző, 80 méter magas vízesés alatt természetes medencék várják a fürdőzőket.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="islands" class="sight-section reverse fade-in">
+            <div class="sight-info">
+                <h3 class="tertiary">Trópusi Szigetvilág</h3>
+                <p>A Waikiki-szigetvilág több száz kisebb-nagyobb szigete a világ legexkluzívabb pihenőhelye. A fehér homokos partok és a korallzátonyok élővilága minden képzeletet felülmúl.</p>
+                <ul>
+                    <li><strong>Pálma-szigetek:</strong> Mesterséges és természetes szigetek luxusvillákkal és privát partszakaszokkal.</li>
+                    <li><strong>Paradise Islands:</strong> Vízre épült villák a Kaméleon-szigeten, közvetlen kapcsolattal a korallzátonyokhoz.</li>
+                </ul>
+            </div>
+            <div class="sight-image">
+                <img src="../images/sights_islands.png" alt="Trópusi Szigetek">
+            </div>
+        </section>
+
+        <section id="jungle" class="sight-section fade-in">
+            <div class="sight-image">
+                <img src="../images/sights_jungle.png" alt="Esőerdők">
+            </div>
+            <div class="sight-info">
+                <h3 class="tertiary">Érintetlen Esőerdők</h3>
+                <p>Az amazóniai tartományaink őrzik a föld tüdejét. A burjánzó zöld növényzet és a különleges állatfajok világa a kalandvágyó utazók számára tartogat felejthetetlen élményeket.</p>
+                <ul>
+                    <li><strong>Biodiverzitás:</strong> Több ezer madárfaj és ritka orchideák hazája.</li>
+                    <li><strong>Lombok feletti túrák:</strong> Speciális függőhidakon sétálva ismerhetjük meg az erdő felső szintjének életét.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="ski" class="sight-section reverse fade-in">
+            <div class="sight-info">
+                <h3 class="tertiary">Hófödte Síparadicsomok</h3>
+                <p>Waikiki egyik legnagyobb meglepetése a magashegységek örök hava. A legmodernebb sífelvonók és luxus chaletek várják a téli sportok szerelmeseit.</p>
+                <ul>
+                    <li><strong>Prémium Pályák:</strong> Világszínvonalú sí- és snowboard pályák minden nehézségi szinten.</li>
+                    <li><strong>Hegyi Üdülőhelyek:</strong> Exkluzív fa chaletek kandallóval és panorámás wellness részlegekkel.</li>
+                </ul>
+            </div>
+            <div class="sight-image">
+                <img src="../images/sights_ski.png" alt="Síparadicsomok">
+            </div>
+        </section>
+
+        <div class="quote-section fade-in">
+            <div class="quote-card">
+                <p class="quote-text">"Nova Aureliában sétálni olyan, akár egy időutazás a múltból a jövőbe."</p>
+                <p class="quote-author">— Megan Fox</p>
+            </div>
                     <h3>Kennedy Űrközpont</h3>
                     <p>Ismerd meg az űrutazás történetét és kóstold meg az űrhajósok ételeit interaktív bemutatókon.</p>
                 </div>

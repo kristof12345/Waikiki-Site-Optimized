@@ -4,18 +4,6 @@
     --section-spacing: 6rem;
 }
 
-/* Custom Hero for Sights Page */
-.hero.sights-hero {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('../images/hero_nova_aurelia.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 /* Sight Section Layout (Alternating Image/Text) */
 .sight-section {
     display: flex;
@@ -26,7 +14,7 @@
     padding: 2rem 0;
 }
 
-.sight-section:nth-child(even) {
+.sight-section.reverse {
     flex-direction: row-reverse;
 }
 
