@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Látnivalók - Nova Aurelia | Waikiki</title>
+    <link rel="icon" href="../icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo.png" />
+    <link href="../manifest.json" rel="manifest" />
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/sights.css">
+</head>
+<body>
+    <nav class="nav-container"><a href="index.html" class="logo"><span><span class="first-letter">W</span>aikiki</span></a>
+        <ul class="nav-links">
+            <li><a href="#tortenelem">Történelem</a></li>
+            <li><a href="#toronyhazak">Toronyházak</a></li>
+            <li><a href="#szallodak">Szállodák</a></li>
+            <li><a href="#palotak">Paloták</a></li>
+            <li><a href="#parkok">Parkok</a></li>
+        </ul>
+        <button id="dark-mode-switch" class="toggle" aria-pressed="false" onclick="setTheme()">
+            <span class="toggle__content">
+                <svg aria-hidden=true class="toggle__backdrop" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 290 228">
+                    <g class="clouds">
+                        <path fill="#D9D9D9" d="M335 147.5c0 27.89-22.61 50.5-50.5 50.5a50.78 50.78 0 0 1-9.29-.853c-2.478 12.606-10.595 23.188-21.615 29.011C245.699 243.749 228.03 256 207.5 256a50.433 50.433 0 0 1-16.034-2.599A41.811 41.811 0 0 1 166 262a41.798 41.798 0 0 1-22.893-6.782A42.21 42.21 0 0 1 135 256a41.82 41.82 0 0 1-19.115-4.592A41.84 41.84 0 0 1 88 262c-1.827 0-3.626-.117-5.391-.343C74.911 270.448 63.604 276 51 276c-23.196 0-42-18.804-42-42s18.804-42 42-42c1.827 0 3.626.117 5.391.343C64.089 183.552 75.396 178 88 178a41.819 41.819 0 0 1 19.115 4.592C114.532 176.002 124.298 172 135 172a41.798 41.798 0 0 1 22.893 6.782 42.066 42.066 0 0 1 7.239-.773C174.137 164.159 189.749 155 207.5 155c.601 0 1.199.01 1.794.031A41.813 41.813 0 0 1 234 147h.002c.269-27.66 22.774-50 50.498-50 27.89 0 50.5 22.61 50.5 50.5Z" />
+                    </g>
+                </svg>
+                <svg aria-hidden=true class="toggle__backdrop" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 290 228">
+                    <g class="clouds">
+                        <path fill="#fff" d="M328 167.5c0 15.214-7.994 28.56-20.01 36.068.007.31.01.621.01.932 0 23.472-19.028 42.5-42.5 42.5-3.789 0-7.461-.496-10.957-1.426C249.671 263.676 233.141 277 213.5 277a42.77 42.77 0 0 1-7.702-.696C198.089 284.141 187.362 289 175.5 289a42.338 42.338 0 0 1-27.864-10.408A42.411 42.411 0 0 1 133.5 281c-4.36 0-8.566-.656-12.526-1.876C113.252 287.066 102.452 292 90.5 292a42.388 42.388 0 0 1-15.8-3.034A42.316 42.316 0 0 1 48.5 298C25.028 298 6 278.972 6 255.5S25.028 213 48.5 213a42.388 42.388 0 0 1 15.8 3.034A42.316 42.316 0 0 1 90.5 207c4.36 0 8.566.656 12.526 1.876C110.748 200.934 121.548 196 133.5 196a42.338 42.338 0 0 1 27.864 10.408A42.411 42.411 0 0 1 175.5 204c2.63 0 5.204.239 7.702.696C190.911 196.859 201.638 192 213.5 192c3.789 0 7.461.496 10.957 1.426 2.824-10.491 9.562-19.377 18.553-24.994-.007-.31-.01-.621-.01-.932 0-23.472 19.028-42.5 42.5-42.5s42.5 19.028 42.5 42.5Z" />
+                    </g>
+                </svg>
+                <span class="toggle__indicator-wrapper">
+                    <span class="toggle__indicator">
+                        <span class="toggle__star">
+                            <span class="sun"></span>
+                            <span class="moon">
+                                <span class="moon__crater"></span>
+                                <span class="moon__crater"></span>
+                                <span class="moon__crater"></span>
+                            </span>
+                        </span>
+                    </span>
+                </span>
+                <svg aria-hidden=true class="toggle__backdrop" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 290 228">
+                    <g>
+                        <g class="stars">
+                            <g>
+                                <path fill="#fff" fill-rule="evenodd" d="M61 11.5a.75.75 0 0 1 .721.544l.813 2.846a3.75 3.75 0 0 0 2.576 2.576l2.846.813a.75.75 0 0 1 0 1.442l-2.846.813a3.749 3.749 0 0 0-2.576 2.576l-.813 2.846a.75.75 0 0 1-1.442 0l-.813-2.846a3.749 3.749 0 0 0-2.576-2.576l-2.846-.813a.75.75 0 0 1 0-1.442l2.846-.813a3.749 3.749 0 0 0 2.576-2.576l.813-2.846A.75.75 0 0 1 61 11.5Z" clip-rule="evenodd" />
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </span>
+        </button>
+    </nav>
+    <div class="hamburger-menu">
+        <button class="hamburger-button"><span></span><span></span><span></span></button>
+    </div>
+    <div class="hamburger-overlay"></div>
+    <nav class="hamburger-panel">
+        <ul class="hamburger-links">
+            <li><a href="index.html"><img src="https://api.iconify.design/mdi/home.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Főoldal </a></li>
+            <li><a href="tourism.html"><img src="https://api.iconify.design/mdi/compass.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Turizmus </a></li>
+            <li><a href="diplomacy.html"><img src="https://api.iconify.design/mdi/earth.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Diplomácia </a></li>
+            <li><a href="society.html"><img src="https://api.iconify.design/mdi/account-multiple.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Társadalom </a></li>
+            <li><a href="culture.html"><img src="https://api.iconify.design/mdi/palette.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Kultúra </a></li>
+            <li><a href="economy.html"><img src="https://api.iconify.design/mdi/chart-line.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Gazdaság </a></li>
+            <li><a href="wealth-fund.html"><img src="https://api.iconify.design/mdi/bank.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Vagyonalap</a></li>
+            <li><a href="history.html"><img src="https://api.iconify.design/mdi/book-open.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Történelem </a></li>
+            <li><a href="parties.html"><img src="https://api.iconify.design/mdi/account-group.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Politika </a></li>
+            <li><a href="government.html"><img src="https://api.iconify.design/mdi/bank-outline.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Kormány </a></li>
+            <li><a href="leadership.html"><img src="https://api.iconify.design/mdi/crown.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Vezetés </a></li>
+            <li><a href="military.html"><img src="https://api.iconify.design/mdi/shield-sword.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Hadsereg </a></li>
+            <li><a href="faq.html"><img src="https://api.iconify.design/mdi/help-circle.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />GYIK </a></li>
+            <li><a href="sights.html" class="active"><img src="https://api.iconify.design/mdi/camera.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Látnivalók </a></li>
+        </ul>
+    </nav>
+
+    <section class="hero sights-hero">
+        <div class="hero-content">
+            <h1>Nova Aurelia</h1>
+            <p>Fedezd fel a világ legszebb fővárosát! A történelem csodái és a jövő technológiája egyetlen lenyűgöző metropoliszban.</p>
+        </div>
+    </section>
+
+    <main class="narrative-content">
+        <section class="fade-in">
+            <h2 class="section-title">A világ legkeresettebb városa</h2>
+            <p class="section-intro">Nova Aurelia nemcsak Waikiki, hanem az egész világ fővárosa. Hatalmas felhőkarcolóival, kormányzati negyedével és évezredes ókori műemlékeivel méltán nyerte el a világ legszebb városa címet.</p>
+            
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Történelmi Értékek</h3>
+                    <p>Az azték építészet remekművei és a Római Birodalom grandiózus hagyatéka alkotja a város magját.</p>
+                </div>
+                <div class="card">
+                    <h3>Modern Csodák</h3>
+                    <p>A világ legmagasabb és legdrágább felhőkarcolói formálják a lenyűgöző sziluettet.</p>
+                </div>
+                <div class="card">
+                    <h3>Luxus és Kényelem</h3>
+                    <p>A Starlight Hotels és más világmárkák kínálnak felejthetetlen élményeket a látogatóknak.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tortenelem" class="sight-section fade-in">
+            <div class="sight-image">
+                <img src="../images/sights_temple.png" alt="Történelmi épületek">
+            </div>
+            <div class="sight-text">
+                <h2>Történelmi épületek</h2>
+                <p class="narrative-text">Waikiki a történelem során számtalan birodalom része volt, és ez a gazdag örökség ma is látható Nova Aurelia utcáin.</p>
+                <ul>
+                    <li><strong>Római templom:</strong> 100 tökéletesen egyforma oszlop, amelyek a nap állásától függően változtatják színüket.</li>
+                    <li><strong>Lépcsős piramis:</strong> 24 méter magas, 2000 éves azték építmény, hihetetlen csillagászati pontossággal.</li>
+                    <li><strong>Városfalak:</strong> A Római Birodalom leghosszabb, épségben maradt falszakasza és monumentális kapui.</li>
+                    <li><strong>Waikiki Nemzeti Múzeum:</strong> Michelangelo Dávid-szobra és Botticelli remekművei várják a művészet kedvelőit.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="toronyhazak" class="sight-section fade-in">
+            <div class="sight-image">
+                <img src="../images/sights_skyscraper.png" alt="Toronyházak">
+            </div>
+            <div class="sight-text">
+                <h2>Toronyházak</h2>
+                <p class="narrative-text">A város sziluettjét a jövő építészete uralja. Itt találhatók a legmerészebb mérnöki alkotások.</p>
+                <ul>
+                    <li><strong>Sky City:</strong> A világ legmagasabb épülete, 956 méteres magasságával az égbe nyúlik.</li>
+                    <li><strong>Infinity Tower:</strong> A világ egyetlen 90 fokban megcsavart toronyháza, Waikiki modern jelképe.</li>
+                    <li><strong>Világkormány Központ:</strong> Három hatalmas torony, melyeket a tetején egy hatalmas parkosított platform köt össze.</li>
+                    <li><strong>Royal Towers:</strong> Exkluzív apartmanok saját Michelin-csillagos éttermekkel és jachtkikötővel.</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="quote-section fade-in">
+            <div class="quote-card">
+                <p class="quote-text">"Nova Aureliában sétálni olyan, akár egy időutazás a múltból a jövőbe."</p>
+                <p class="quote-author">— Megan Fox</p>
+            </div>
+            <div class="quote-card">
+                <p class="quote-text">"Ezt mindenkinek látnia kell. A legszebb csodák mind egy helyen."</p>
+                <p class="quote-author">— Martina Stoessel</p>
+            </div>
+        </div>
+
+        <section id="szallodak" class="sight-section fade-in">
+            <div class="sight-image">
+                <img src="../images/sights_hotel.png" alt="Szállodák">
+            </div>
+            <div class="sight-text">
+                <h2>Szállodák</h2>
+                <p class="narrative-text">Waikiki a luxus turizmus fellegvára, ahol a kényelemnek nincsenek határai.</p>
+                <ul>
+                    <li><strong>Hotel President:</strong> A világ egyetlen 15 csillagos szállodája, 1600 m²-es elnöki lakosztállyal.</li>
+                    <li><strong>Hotel Atlantis:</strong> Víz alatti lakosztályok, ahol a tenger élővilága közvetlenül az ágyunk mellett úszik el.</li>
+                    <li><strong>Hotel Khalifa:</strong> A Pálma-szigeten fekvő 10 csillagos resort a világ egyik legnagyobb aquaparkjával.</li>
+                    <li><strong>Paradise Islands:</strong> Vízre épült villák a Kaméleon-szigeten, közvetlen kapcsolattal a korallzátonyokhoz.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="palotak" class="sight-section fade-in">
+            <div class="sight-image">
+                <img src="../images/sights_palace.png" alt="Paloták">
+            </div>
+            <div class="sight-text">
+                <h2>Paloták</h2>
+                <p class="narrative-text">A kormány vezetőinek és a hercegi családnak otthont adó épületek a világ legértékesebb ingatlanai.</p>
+                <ul>
+                    <li><strong>Hercegi Palota:</strong> Raimondo herceg 80 milliárd dollár értékű otthona, saját koncertteremmel és mozival.</li>
+                    <li><strong>Jennifer Palotája:</strong> 90 hektáros botanikus kerttel körülvett rezidencia a tengerparton.</li>
+                    <li><strong>Raimondo nyaralója:</strong> A Burdzs al-Arab mintájára épült torony, tetején helikopterleszállóval.</li>
+                    <li><strong>Chease és Jessica villája:</strong> Ludwig Mies van der Rohe által tervezett ultramodern üvegpalota a dzsungel mélyén.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="parkok" class="fade-in">
+            <h2 class="section-title">Szórakoztató parkok</h2>
+            <p class="section-intro">Családi kikapcsolódás világszínvonalon. Nova Aurelia a szórakoztatás központja is egyben.</p>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Disneyland & Legoland</h3>
+                    <p>A világ legnagyobb tematikus parkjai, több mint 90 millió kockát használtak fel a makettek megépítéséhez.</p>
+                </div>
+                <div class="card">
+                    <h3>Aqua World</h3>
+                    <p>80 csúszda és 40 medence. Itt található a 75 méter magas "Mount Everest" csúszda is.</p>
+                </div>
+                <div class="card">
+                    <h3>Nova Aurelia Állatkert</h3>
+                    <p>Egzotikus állatok, sarki kupola és delfin show-k a világ legnagyobb állatkertjében.</p>
+                </div>
+                <div class="card">
+                    <h3>Kennedy Űrközpont</h3>
+                    <p>Ismerd meg az űrutazás történetét és kóstold meg az űrhajósok ételeit interaktív bemutatókon.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="comparison-container fade-in">
+            <h2 class="section-title">Fővárosunk régen és ma</h2>
+            <p class="narrative-text">Nova Aurelia fejlődése páratlan a világtörténelemben. A római településtől a modern világkormány székhelyéig hosszú út vezetett, melynek során a város megőrizte lelkét és kincseit.</p>
+            <div class="comparison-grid">
+                <div class="comparison-item">
+                    <img src="../images/sights_ancient.png" alt="Ókori Vaikikia">
+                    <h4>Ókori Vaikikia</h4>
+                </div>
+                <div class="comparison-item">
+                    <img src="../images/hero_nova_aurelia.png" alt="A mai világváros">
+                    <h4>A mai világváros</h4>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Főoldal</a><a href="tourism.html">Turizmus</a><a href="diplomacy.html">Diplomácia</a><a href="society.html">Társadalom</a><a href="culture.html">Kultúra</a><a href="parties.html">Politika</a><a href="government.html">Kormány</a><a href="leadership.html">Vezetés</a><a href="economy.html">Gazdaság</a><a href="wealth-fund.html">Vagyonalap</a><a href="history.html">Történelem</a><a href="military.html">Hadsereg</a><a href="faq.html">GYIK</a><a href="sights.html">Látnivalók</a>
+            </div>
+            <p>&copy; 2025 Waikiki Szuverén Állam. Minden jog fenntartva.</p>
+        </div>
+    </footer>
+
+    <script src="../js/common.js"></script>
+</body>
+</html>

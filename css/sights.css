@@ -1,0 +1,205 @@
+/* Sights Page Specific Styles */
+
+:root {
+    --section-spacing: 6rem;
+}
+
+/* Custom Hero for Sights Page */
+.hero.sights-hero {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('../images/hero_nova_aurelia.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Sight Section Layout (Alternating Image/Text) */
+.sight-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: var(--section-spacing);
+    padding: 2rem 0;
+}
+
+.sight-section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.sight-image {
+    flex: 1.2;
+    min-width: 350px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    position: relative;
+}
+
+.sight-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sight-image:hover img {
+    transform: scale(1.08);
+}
+
+.sight-text {
+    flex: 1;
+    min-width: 350px;
+}
+
+.sight-text h2 {
+    color: var(--secondary);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+    text-align: left;
+}
+
+.sight-text h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.sight-text ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.sight-text li {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+    position: relative;
+    font-size: 1.15rem;
+    color: var(--silver);
+}
+
+.sight-text li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* Quote Components */
+.quote-section {
+    background: var(--light-bg);
+    padding: 6rem 2rem;
+    margin: 4rem 0;
+    border-radius: 50px;
+    text-align: center;
+    transition: background-color var(--speed) var(--easing);
+}
+
+.quote-card {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.quote-text {
+    font-size: 1.8rem;
+    font-style: italic;
+    color: var(--dark-azure);
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.quote-author {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Comparison Section */
+.comparison-container {
+    background: var(--white);
+    padding: 4rem;
+    border-radius: 40px;
+    box-shadow: var(--card-shadow);
+    margin-top: 4rem;
+    transition: background-color var(--speed) var(--easing);
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.comparison-item {
+    text-align: center;
+}
+
+.comparison-item img {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.comparison-item h4 {
+    color: var(--secondary);
+    font-size: 1.3rem;
+}
+
+/* DARK MODE OVERRIDES */
+.body-dark .sight-text h2 {
+    color: var(--tertiary);
+}
+
+.body-dark .sight-text h2::after {
+    background: var(--tertiary);
+}
+
+.body-dark .sight-text li {
+    color: var(--white);
+}
+
+.body-dark .sight-text li::before {
+    color: var(--tertiary);
+}
+
+.body-dark .quote-section {
+    background: var(--dark-grey);
+}
+
+.body-dark .quote-text {
+    color: var(--tertiary);
+}
+
+.body-dark .quote-author {
+    color: var(--white);
+}
+
+.body-dark .comparison-container {
+    background: var(--dark-bg);
+}
+
+.body-dark .comparison-item h4 {
+    color: var(--tertiary);
+}
+
+@media (max-width: 768px) {
+    .sight-section { gap: 2rem; }
+    .comparison-grid { grid-template-columns: 1fr; }
+}
