@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waikiki Látnivalói</title>
+    <link rel="icon" href="../icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo.png" />
+    <link href="../manifest.json" rel="manifest" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/sights.css">
+    <link rel="stylesheet" href="../css/tailwind.css">
+    <link rel="preload" as="image" href="../images/UniversalUpscaler_Pro_Precise_2_1f151359-d87d-6f40-8bc6-3ec08a6173d3.jpg" fetchpriority="high" />
+</head>
+<body>
+    <nav class="nav-container"><a href="index.html" class="logo"><span><span class="first-letter">W</span>aikiki</span></a>
+        <ul class="nav-links">
+            <li><a href="#nova-aurelia">Nova Aurelia</a></li>
+            <li><a href="#hotels-palaces">Szállodák</a></li>
+            <li><a href="#parkok">Parkok</a></li>
+            <li><a href="#nature-adventure">Természet</a></li>
+        </ul>
+        <button id="dark-mode-switch" class="toggle" aria-pressed="false" onclick="setTheme()">
+            <span class="toggle__content">
+                <svg aria-hidden=true class="toggle__backdrop" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 290 228">
+                    <g class="clouds">
+                        <path fill="#D9D9D9" d="M335 147.5c0 27.89-22.61 50.5-50.5 50.5a50.78 50.78 0 0 1-9.29-.853c-2.478 12.606-10.595 23.188-21.615 29.011C245.699 243.749 228.03 256 207.5 256a50.433 50.433 0 0 1-16.034-2.599A41.811 41.811 0 0 1 166 262a41.798 41.798 0 0 1-22.893-6.782A42.21 42.21 0 0 1 135 256a41.82 41.82 0 0 1-19.115-4.592A41.84 41.84 0 0 1 88 262c-1.827 0-3.626-.117-5.391-.343C74.911 270.448 63.604 276 51 276c-23.196 0-42-18.804-42-42s18.804-42 42-42c1.827 0 3.626.117 5.391.343C64.089 183.552 75.396 178 88 178a41.819 41.819 0 0 1 19.115 4.592C114.532 176.002 124.298 172 135 172a41.798 41.798 0 0 1 22.893 6.782 42.066 42.066 0 0 1 7.239-.773C174.137 164.159 189.749 155 207.5 155c.601 0 1.199.01 1.794.031A41.813 41.813 0 0 1 234 147h.002c.269-27.66 22.774-50 50.498-50 27.89 0 50.5 22.61 50.5 50.5Z" />
+                    </g>
+                </svg>
+                <svg aria-hidden=true class="toggle__backdrop" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 290 228">
+                    <g class="clouds">
+                        <path fill="#fff" d="M328 167.5c0 15.214-7.994 28.56-20.01 36.068.007.31.01.621.01.932 0 23.472-19.028 42.5-42.5 42.5-3.789 0-7.461-.496-10.957-1.426C249.671 263.676 233.141 277 213.5 277a42.77 42.77 0 0 1-7.702-.696C198.089 284.141 187.362 289 175.5 289a42.338 42.338 0 0 1-27.864-10.408A42.411 42.411 0 0 1 133.5 281c-4.36 0-8.566-.656-12.526-1.876C113.252 287.066 102.452 292 90.5 292a42.388 42.388 0 0 1-15.8-3.034A42.316 42.316 0 0 1 48.5 298C25.028 298 6 278.972 6 255.5S25.028 213 48.5 213a42.388 42.388 0 0 1 15.8 3.034A42.316 42.316 0 0 1 90.5 207c4.36 0 8.566.656 12.526 1.876C110.748 200.934 121.548 196 133.5 196a42.338 42.338 0 0 1 27.864 10.408A42.411 42.411 0 0 1 175.5 204c2.63 0 5.204.239 7.702.696C190.911 196.859 201.638 192 213.5 192c3.789 0 7.461.496 10.957 1.426 2.824-10.491 9.562-19.377 18.553-24.994-.007-.31-.01-.621-.01-.932 0-23.472 19.028-42.5 42.5-42.5s42.5 19.028 42.5 42.5Z" />
+                    </g>
+                </svg>
+                <span class="toggle__indicator-wrapper">
+                    <span class="toggle__indicator">
+                        <span class="toggle__star">
+                            <span class="sun"></span>
+                            <span class="moon">
+                                <span class="moon__crater"></span>
+                                <span class="moon__crater"></span>
+                                <span class="moon__crater"></span>
+                            </span>
+                        </span>
+                    </span>
+                </span>
+                <svg aria-hidden=true class="toggle__backdrop" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 290 228">
+                    <g>
+                        <g class="stars">
+                            <g>
+                                <path fill="#fff" fill-rule="evenodd" d="M61 11.5a.75.75 0 0 1 .721.544l.813 2.846a3.75 3.75 0 0 0 2.576 2.576l2.846.813a.75.75 0 0 1 0 1.442l-2.846.813a3.749 3.749 0 0 0-2.576 2.576l-.813 2.846a.75.75 0 0 1-1.442 0l-.813-2.846a3.749 3.749 0 0 0-2.576-2.576l-2.846-.813a.75.75 0 0 1 0-1.442l2.846-.813a3.749 3.749 0 0 0 2.576-2.576l.813-2.846A.75.75 0 0 1 61 11.5Z" clip-rule="evenodd" />
+                            </g>
+                            <g>
+                                <path fill="#fff" fill-rule="evenodd" d="M62.5 45.219a.329.329 0 0 1 .315.238l.356 1.245a1.641 1.641 0 0 0 1.127 1.127l1.245.356a.328.328 0 0 1 0 .63l-1.245.356a1.641 1.641 0 0 0-1.127 1.127l-.356 1.245a.328.328 0 0 1-.63 0l-.356-1.245a1.641 1.641 0 0 0-1.127-1.127l-1.245-.356a.328.328 0 0 1 0-.63l1.245-.356a1.641 1.641 0 0 0 1.127-1.127l.356-1.245a.328.328 0 0 1 .315-.238Z" clip-rule="evenodd" />
+                            </g>
+                            <g>
+                                <path fill="#fff" fill-rule="evenodd" d="M32 31.188a.28.28 0 0 1 .27.204l.305 1.067a1.405 1.405 0 0 0 .966.966l1.068.305a.28.28 0 0 1 0 .54l-1.068.305a1.405 1.405 0 0 0-.966.966l-.305 1.068a.28.28 0 0 1-.54 0l-.305-1.068a1.406 1.406 0 0 0-.966-.966l-1.067-.305a.28.28 0 0 1 0-.54l1.067-.305a1.406 1.406 0 0 0 .966-.966l.305-1.068a.281.281 0 0 1 .27-.203Z" clip-rule="evenodd" />
+                            </g>
+                            <g>
+                                <path fill="#fff" fill-rule="evenodd" d="M41.5 74.219a.329.329 0 0 1 .315.238l.356 1.245a1.641 1.641 0 0 0 1.127 1.127l1.245.356a.328.328 0 0 1 0 .63l-1.245.356a1.641 1.641 0 0 0-1.127 1.127l-.356 1.245a.328.328 0 0 1-.63 0l-.356-1.245a1.641 1.641 0 0 0-1.127-1.127l-1.245-.356a.328.328 0 0 1 0-.63l1.245-.356a1.641 1.641 0 0 0 1.127-1.127l.356-1.245a.328.328 0 0 1 .315-.238Z" clip-rule="evenodd" />
+                            </g>
+                            <g>
+                                <path fill="#fff" fill-rule="evenodd" d="M63 89.25a.375.375 0 0 1 .36.272l.407 1.423a1.874 1.874 0 0 0 1.288 1.288l1.423.406a.374.374 0 0 1 0 .722l-1.423.406a1.874 1.874 0 0 0-1.288 1.288l-.407 1.423a.374.374 0 0 1-.72 0l-.407-1.423a1.874 1.874 0 0 0-1.288-1.288l-1.423-.406a.374.374 0 0 1 0-.722l1.423-.406a1.874 1.874 0 0 0 1.288-1.288l.407-1.423a.376.376 0 0 1 .36-.272Z" clip-rule="evenodd" />
+                            </g>
+                            <g>
+                                <path fill="#fff" fill-rule="evenodd" d="M120 27.188a.279.279 0 0 1 .27.204l.305 1.067a1.41 1.41 0 0 0 .966.966l1.067.305a.283.283 0 0 1 .148.1.286.286 0 0 1 0 .34.283.283 0 0 1-.148.1l-1.067.305a1.403 1.403 0 0 0-.966.966l-.305 1.067a.279.279 0 0 1-.439.147.275.275 0 0 1-.101-.147l-.305-1.067a1.41 1.41 0 0 0-.966-.966l-1.068-.305a.284.284 0 0 1-.147-.1.286.286 0 0 1 0-.34.284.284 0 0 1 .147-.1l1.068-.305a1.405 1.405 0 0 0 .966-.966l.305-1.067a.279.279 0 0 1 .27-.204Z" clip-rule="evenodd" />
+                            </g>
+                            <g>
+                                <path fill="#fff" fill-rule="evenodd" d="M155 28.5a.753.753 0 0 1 .721.544l.813 2.846a3.746 3.746 0 0 0 2.576 2.576l2.846.813a.747.747 0 0 1 .543.721.75.75 0 0 1-.543.721l-2.846.813a3.75 3.75 0 0 0-2.576 2.576l-.813 2.846a.747.747 0 0 1-.721.543.749.749 0 0 1-.721-.543l-.813-2.846a3.746 3.746 0 0 0-2.576-2.576l-2.846-.813a.747.747 0 0 1-.543-.721.75.75 0 0 1 .543-.721l2.846-.813a3.75 3.75 0 0 0 2.576-2.576l.813-2.846A.751.751 0 0 1 155 28.5Z" clip-rule="evenodd" />
+                            </g>
+                            <g>
+                                <path fill="#fff" fill-rule="evenodd" d="M125.5 76.344a.513.513 0 0 1 .496.374l.559 1.956a2.574 2.574 0 0 0 1.771 1.771l1.956.56a.514.514 0 0 1 .27.805.514.514 0 0 1-.27.186l-1.956.559a2.57 2.57 0 0 0-1.771 1.77l-.559 1.957a.514.514 0 0 1-.806.27.514.514 0 0 1-.186-.27l-.559-1.956a2.574 2.574 0 0 0-1.771-1.771l-1.956-.56a.514.514 0 0 1-.27-.805.514.514 0 0 1 .27-.186l1.956-.559a2.57 2.57 0 0 0 1.771-1.77l.559-1.957a.515.515 0 0 1 .496-.374Z" clip-rule="evenodd" />
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </span>
+        </button>
+    </nav>
+    <div class="hamburger-menu">
+        <button class="hamburger-button"><span></span><span></span><span></span></button>
+    </div>
+    <div class="hamburger-overlay"></div>
+    <nav class="hamburger-panel">
+        <ul class="hamburger-links">
+            <li><a href="index.html"><img src="https://api.iconify.design/mdi/home.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Főoldal </a></li>
+            <li><a href="tourism.html"><img src="https://api.iconify.design/mdi/compass.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Turizmus </a></li>
+            <li><a href="diplomacy.html"><img src="https://api.iconify.design/mdi/earth.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Diplomácia </a></li>
+            <li><a href="society.html"><img src="https://api.iconify.design/mdi/account-multiple.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Társadalom </a></li>
+            <li><a href="culture.html"><img src="https://api.iconify.design/mdi/palette.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Kultúra </a></li>
+            <li><a href="economy.html"><img src="https://api.iconify.design/mdi/chart-line.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Gazdaság </a></li>
+            <li><a href="wealth-fund.html"><img src="https://api.iconify.design/mdi/bank.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Vagyonalap</a></li>
+            <li><a href="history.html"><img src="https://api.iconify.design/mdi/book-open.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Történelem </a></li>
+            <li><a href="parties.html"><img src="https://api.iconify.design/mdi/account-group.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Politika </a></li>
+            <li><a href="government.html"><img src="https://api.iconify.design/mdi/bank-outline.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Kormány </a></li>
+            <li><a href="leadership.html"><img src="https://api.iconify.design/mdi/crown.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Vezetés </a></li>
+            <li><a href="military.html"><img src="https://api.iconify.design/mdi/shield-sword.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Hadsereg </a></li>
+            <li><a href="faq.html"><img src="https://api.iconify.design/mdi/help-circle.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />GYIK </a></li>
+            <li><a href="sights.html" class="active"><img src="https://api.iconify.design/mdi/camera.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Látnivalók </a></li>
+        </ul>
+    </nav>
+    <!-- Hero -->
+    <section class="hero-section">
+        <div class="hero-bg">
+            <div class="hero-overlay"></div><img src="../images/UniversalUpscaler_Pro_Precise_2_1f151359-d87d-6f40-8bc6-3ec08a6173d3.jpg" class="hero-img" />
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge animate-fade-up">A Világ Kincstára</div>
+            <h1 class="hero-title">Waikiki <span style="color: #BC9200">Látnivalói</span></h1>
+            <p class="hero-desc">Fedezd fel a világ legkülönlegesebb országát, ahol az ultramodern metropoliszok, az ókori építészet mesterművei, az érintetlen trópusi paradicsomok, a burjánzó vadregényes esőerdők és a hófödte hegycsúcsok egyetlen nemzet határain belül találkoznak.</p>
+            <div class="hero-actions" style="visibility: hidden;">
+                <button class="hero-btn open-assessment" style="background-color: #0071BC">Tudjon meg többet</button>
+            </div>
+        </div>
+    </section>
+    <section id="nova-aurelia" class="fade-in">
+        <h2 class="section-title">A világ leglátogatottabb városa</h2>
+        <p class="section-intro">Nova Aurelia nemcsak Waikiki, hanem az egész világ fővárosa. Hatalmas felhőkarcolóival, kormányzati negyedével és évezredes ókori műemlékeivel méltán nyerte el a világ legszebb városa címet. A hétmillió lakosa mellett évente 35 millió látogató keresi fel a metropoliszt.</p>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Történelmi Értékek</h3>
+                <p>Az azték építészet remekművei, a Római Birodalom grandiózus hagyatéka és az angol klasszicista kastélyok alkotják a város páratlan történelmi magját.</p>
+            </div>
+            <div class="card">
+                <h3>Modern Csodák</h3>
+                <p>A világ legmagasabb és legmerészebb felhőkarcolói formálják a lenyűgöző sziluettet, amelyet a Világkormány székhelyének három tornya koronáz meg.</p>
+            </div>
+            <div class="card">
+                <h3>Luxus és Kényelem</h3>
+                <p>A Hotel President 15 csillagos pompájától a Paradise Islands vízi villáiig a Starlight Hotels és más világmárkák felejthetetlen élményeket kínálnak.</p>
+            </div>
+            <div class="card">
+                <h3>Szórakozás és Kaland</h3>
+                <p>Disneyland, Legoland, a világ legnagyobb állatkertje és az Aqua World mind Nova Aureliában várja a családokat és a kalandvágyó turistákat.</p>
+            </div>
+        </div>
+    </section>
+    <section id="tortenelem" class="sight-section fade-in">
+        <div class="sight-image">
+            <img src="../images/sights_temple.png">
+        </div>
+        <div class="sight-info">
+            <h3>Történelmi Épületek</h3>
+            <p>Waikiki a történelem során számtalan birodalom része volt, és ez a gazdag örökség ma is áthatja Nova Aurelia utcáit. Az ókori római településtől az angol gyarmati korszakon át a modern fővárosig minden korszak maradandó nyomot hagyott.</p>
+            <ul>
+                <li><strong>Római templom:</strong> 100 tökéletesen egyforma márványoszlop, amelyek a nap állásától függően változtatják színüket. A templom az ókori kőfaragók mesterségének páratlan emléke.</li>
+                <li><strong>Lépcsős piramis:</strong> 24 méter magas, több mint 2000 éves azték kultikus építmény, amelynek elhelyezkedése figyelemre méltó csillagászati ismeretekről tanúskodik.</li>
+                <li><strong>Városfalak:</strong> A Római Birodalom leghosszabb, épségben fennmaradt falszakasza és tizenkét monumentális kapuja, amelyeket egyenként 50 000 kerámiatéglából emeltek.</li>
+                <li><strong>Nemzeti Múzeum:</strong> Michelangelo Dávid-szobrának és Botticelli remekműveinek másolatai mellett a legmodernebb multimédiás eszközök segítségével elevenedik meg a művészet.</li>
+            </ul>
+        </div>
+    </section>
+    <section id="toronyhazak" class="sight-section reverse fade-in">
+        <div class="sight-info">
+            <h3>Toronyházak és Üzleti Negyed</h3>
+            <p>Nova Aurelia látképét a világ legmerészebb mérnöki alkotásai uralják. Az üzleti negyedben a legnagyobb nemzetközi vállalatok központjai sorakoznak, a sziluettet pedig ikonikus épületek formálják.</p>
+            <ul>
+                <li><strong>Sky City:</strong> A világ legmagasabb épülete, amely 956 méteres magasságával és 220 emeletével az égbe nyúlik. A rekordméretű szökőkútrendszert 6 600 fényforrás világítja meg.</li>
+                <li><strong>Infinity Tower:</strong> A világ egyetlen 90 fokban megcsavart toronyháza, amely 2009-es elkészülte óta Waikiki egyik jellegzetes szimbóluma.</li>
+                <li><strong>Világkormány Központ:</strong> Három hatalmas torony, amelyeket a tetejükön egy parkosított, medencékkel és éttermekkel ellátott platform köt össze.</li>
+                <li><strong>Royal Towers:</strong> Exkluzív panorámás luxus apartmanok saját Michelin-csillagos éttermekkel, kaszinóval és jachtkikötővel.</li>
+            </ul>
+        </div>
+        <div class="sight-image">
+            <img src="../images/sights_skyscraper.png">
+        </div>
+    </section>
+    <div id="hotels-palaces" class="anchor-offset"></div>
+    <section id="szallodak" class="sight-section fade-in">
+        <div class="sight-image">
+            <img src="../images/sights_hotel.png">
+        </div>
+        <div class="sight-info">
+            <h3>Luxus Szállodák</h3>
+            <p>Waikiki a prémium turizmus fellegvára. A szigetország szállodái a kényelem és az exkluzivitás legmagasabb szintjét képviselik, ahol a vendégek a világ legkülönlegesebb helyszínein pihenhetnek.</p>
+            <ul>
+                <li><strong>Hotel President:</strong> A világ egyetlen 15 csillagos szállodája, 1600 m²-es elnöki lakosztállyal és föld alatti wellness- és termálfürdő komplexummal.</li>
+                <li><strong>Hotel Atlantis:</strong> Víz alatti lakosztályok, ahol a tenger élővilága közvetlenül az ablak túloldalán úszik el. Négy tornya közül a legmagasabb 600 méter.</li>
+                <li><strong>Hotel Khalifa:</strong> A Pálma-szigeten fekvő 10 csillagos resort a világ egyik legnagyobb aquaparkjával, ahol pincérek egész nap finom ételekkel kínálják a vendégeket.</li>
+                <li><strong>Paradise Islands:</strong> Vízre épült villák a Kaméleon-szigeten, ahonnan a teraszról közvetlenül figyelhetők a delfinek és a korallzátony élővilága.</li>
+            </ul>
+        </div>
+    </section>
+    <section id="palotak" class="sight-section reverse fade-in">
+        <div class="sight-info">
+            <h3>Királyi Paloták</h3>
+            <p>A kormány vezetőinek és a királyi családnak otthont adó rezidenciák a világ legértékesebb ingatlanjai. Minden palota a legmagasabb technológiai színvonalat ötvözi a klasszikus elegancia időtlen szépségével.</p>
+            <ul>
+                <li><strong>Hercegi Palota:</strong> Raimondo herceg mintegy 80 milliárd dollár értékű otthona, amely saját koncerttermet, aquaparkot, mozit és 2,5 km-es privát partszakaszt foglal magában.</li>
+                <li><strong>Jennifer Palotája:</strong> 90 hektáros botanikus kerttel körülvett tengerparti rezidencia, ahol 1,5 kilométernyi partszakasz kínál háborítatlan nyugalmat.</li>
+                <li><strong>Chease és Jessica villája:</strong> A legendás Ludwig Mies van der Rohe által tervezett ultramodern üvegpalota, amelyet egy kisebb dzsungel és vízesések vesznek körül.</li>
+            </ul>
+        </div>
+        <div class="sight-image">
+            <img src="../images/UniversalUpscaler_d9905236-4b28-4848-bb0c-90a95f9ae31f.jpg">
+        </div>
+    </section>
+    <section id="parkok" class="fade-in">
+        <h2 class="section-title">Szórakoztató Parkok</h2>
+        <p class="section-intro">Családi kikapcsolódás világszínvonalon. Nova Aurelia a szórakoztatóipar egyik globális központja, ahol a világ leghíresebb tematikus parkjai várják a látogatókat.</p>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Disneyland &amp; Legoland</h3>
+                <p>Waikiki két Disneylanddel és három Legoladdal büszkélkedik. A riói Legolandben több mint 90 millió LEGO kockát használtak fel a világ nagyvárosaink miniatűr makettjeihez.</p>
+            </div>
+            <div class="card">
+                <h3>Aqua World</h3>
+                <p>A világ legnagyobb vízi vidámparkja több mint 80 csúszdával és 40 medencével. A 75 méter magas „Mount Everest" csúszdán akár 110 km/h sebességet is elérhetünk.</p>
+            </div>
+            <div class="card">
+                <h3>Nova Aurelia Állatkert</h3>
+                <p>A világ legnagyobb állatkertje, ahol a legegzotikusabb állatokkal is testközelből találkozhatunk. Sarki kupola, fedett őserdei kifutó és állandó delfin show-k várják a látogatókat.</p>
+            </div>
+            <div class="card">
+                <h3>Kennedy Űrközpont</h3>
+                <p>Az amazóniai nyaralás során nem hagyható ki a Kennedy Space Center, ahol kipróbálhatjuk a leszálló modul irányítását és megkóstolhatjuk az űrhajósok ételeit.</p>
+            </div>
+        </div>
+    </section>
+    <div id="nature-adventure" class="anchor-offset"></div>
+    <section class="fade-in">
+        <h2 class="section-title">Waikiki Regionális Csodái</h2>
+        <p class="section-intro">A fővároson túl egy egész világ tárul fel: érintetlen természeti tájak, trópusi paradicsomok, őserdők és hófödte hegycsúcsok, amelyek egyetlen nemzet határain belül kínálnak felejthetetlen élményeket.</p>
+    </section>
+    <section id="nature" class="sight-section fade-in">
+        <div class="sight-image">
+            <img src="../images/sights_nature.png">
+        </div>
+        <div class="sight-info">
+            <h3>Természeti Csodák</h3>
+            <p>Waikiki nemcsak az építészet, hanem a természet szentélye is. A fenséges vulkanikus hegycsúcsoktól a kristálytiszta lagúnákba ömlő vízesésekig minden tájegység egyedi varázslatot rejt, amelyhez foghatót kevés helyen találunk a világon.</p>
+            <ul>
+                <li><strong>Vulkanikus Csúcsok:</strong> A szigetvilág gerincét alkotó hegyláncok túraútvonalai lélegzetelállító panorámát kínálnak a Csendes-óceán végtelen horizontja felett.</li>
+                <li><strong>Éden-vízesés:</strong> A dzsungel mélyén rejtőző, 80 méter magas vízesés alatt természetes türkiz medencék várják a fürdőzőket, távol a civilizáció zajától.</li>
+                <li><strong>Geotermikus Források:</strong> Természetes gyógyvizek és forró vizes tavak a hegyek lábánál, ahol az ősi vulkanikus tevékenység termális kincseket hozott a felszínre.</li>
+            </ul>
+        </div>
+    </section>
+    <section id="islands" class="sight-section reverse fade-in">
+        <div class="sight-info">
+            <h3>Trópusi Szigetvilág</h3>
+            <p>A Waikiki-szigetvilág több száz kisebb-nagyobb szigete a világ legexkluzívabb pihenőhelye. A fehér homokos partok, a türkizkék lagúnák és a korallzátonyok páratlan élővilága minden képzeletet felülmúl.</p>
+            <ul>
+                <li><strong>Pálma-szigetek:</strong> Mesterséges és természetes szigetek luxusvillákkal, privát partszakaszokkal és számos híresség nyaralójával.</li>
+                <li><strong>Világ-szigetcsoport:</strong> A Föld kontinenseit formázó szigetcsoport, ahol különböző kultúrákat és hagyományokat bemutató múzeumok és szórakoztató parkok várják a látogatókat.</li>
+                <li><strong>Korallzátonyok:</strong> A búvárok paradicsoma, ahol a biodiverzitás a világon a legmagasabb, így a 28 fokos vízben naphosszat csodálhatjuk a fantasztikus élővilágot.</li>
+            </ul>
+        </div>
+        <div class="sight-image">
+            <img src="../images/sights_islands.png">
+        </div>
+    </section>
+    <section id="jungle" class="sight-section fade-in">
+        <div class="sight-image">
+            <img src="../images/sights_jungle.png">
+        </div>
+        <div class="sight-info">
+            <h3>Érintetlen Esőerdők</h3>
+            <p>Waikiki amazóniai tartományai a Föld tüdejét őrzik. A burjánzó zöld növényzet és a rendkívül gazdag állatvilág a kalandvágyó utazók számára tartogat felejthetetlen élményeket, miközben a Zöld Waikiki program biztosítja a természeti értékek megőrzését.</p>
+            <ul>
+                <li><strong>Biodiverzitás:</strong> Több ezer madárfaj, színpompás papagájok, tukánok és ritka orchideák hazája, amely a világ egyik leggazdagabb ökoszisztémáját alkotja.</li>
+                <li><strong>Lombok feletti túrák:</strong> Speciális függőhidakon sétálva ismerhetjük meg az esőerdő felső szintjének rejtett életét és lenyűgöző madártávlatból csodálhatjuk meg a koronaszintet.</li>
+                <li><strong>Folyami Expedíciók:</strong> Kenuval fedezhetjük fel az esőerdő mélyén kanyargó titokzatos folyókat, ahol kajmánok és folyami delfinek kísérik az utunkat.</li>
+            </ul>
+        </div>
+    </section>
+    <section id="ski" class="sight-section reverse fade-in">
+        <div class="sight-info">
+            <h3>Hófödte Síparadicsomok</h3>
+            <p>Waikiki egyik legnagyobb meglepetése a magashegységek örök hava. A legmodernebb sífelvonók és luxus chaletek várják a téli sportok szerelmeseit, mindezt trópusi tengerpartok közvetlen közelében, így a délelőtti síelés után délután már szörfözhetünk is.</p>
+            <ul>
+                <li><strong>Prémium Pályák:</strong> Világszínvonalú sí- és snowboard pályák minden nehézségi szinten, tökéletesen kezelt hófelületekkel az egész szezonban.</li>
+                <li><strong>Hegyi Üdülőhelyek:</strong> Exkluzív fa chaletek kandallóval, panorámás wellness részlegekkel és Michelin-csillagos hegyi éttermekkel.</li>
+                <li><strong>Helisí:</strong> A legelszántabb sportolók számára helikopteres szállítást biztosítunk az érintetlen, szűz porhóval borított lejtőkhöz.</li>
+            </ul>
+        </div>
+        <div class="sight-image">
+            <img src="../images/sights_ski.png">
+        </div>
+    </section>
+    <section class="comparison-container fade-in">
+        <h2 class="section-title">Fővárosunk régen és ma</h2>
+        <p class="section-intro">Nova Aurelia fejlődése páratlan a világtörténelemben. A római településtől a modern világkormány székhelyéig hosszú út vezetett, melynek során a város megőrizte lelkét és kincseit.</p>
+        <div class="comparison-grid">
+            <div class="comparison-item">
+                <img src="../images/sights_ancient.png">
+                <h4>Ókori Vaikikia</h4>
+            </div>
+            <div class="comparison-item">
+                <img src="../images/hero_nova_aurelia.png">
+                <h4>A mai világváros</h4>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Főoldal</a><a href="tourism.html">Turizmus</a><a href="diplomacy.html">Diplomácia</a><a href="society.html">Társadalom</a><a href="culture.html">Kultúra</a><a href="parties.html">Politika</a><a href="government.html">Kormány</a><a href="leadership.html">Vezetés</a><a href="economy.html">Gazdaság</a><a href="wealth-fund.html">Vagyonalap</a><a href="history.html">Történelem</a><a href="military.html">Hadsereg</a><a href="faq.html">GYIK</a><a href="sights.html">Látnivalók</a>
+            </div>
+            <p>&copy; 2025 Waikiki Szuverén Állam. Minden jog fenntartva.</p>
+        </div>
+    </footer>
+    <script src="../js/common.js"></script>
+</body>
+</html>

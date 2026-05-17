@@ -6,16 +6,9 @@ SETUP — Google Drive as image source:
 2. Replace the default code with:
 
 function doGet() {
-    var folder = DriveApp.getFolderById('1QUWKk9G6QCQOVnobsMtDHLfovIHCCCce');
-    var files = folder.getFiles();
-    var ids = [];
-    while (files.hasNext()) {
-      var f = files.next();
-      if (f.getMimeType().indexOf('image/') === 0) ids.push(f.getId());
-    }
-    ids.sort();
-    return ContentService.createTextOutput(JSON.stringify(ids))
-      .setMimeType(ContentService.MimeType.JSON);
+  const folderId = '1QUWKk9G6QCQOVnobsMtDHLfovIHCCCce';
+  const files = Drive.Files.list({ q: `'${folderId}' in parents and trashed = false`, fields: 'files(id)', pageSize: 500 }).files.map(f => f.id).sort();
+  return ContentService.createTextOutput(JSON.stringify(files)).setMimeType(ContentService.MimeType.JSON);
 }
 
 3. Click Deploy > New deployment > Web app. Set "Execute as" = Me, "Who has access" = Anyone.
