@@ -1,17 +1,12 @@
 /* Sights Page Specific Styles */
-
-:root {
-    --section-spacing: 6rem;
-}
-
-/* Sight Section Layout (Alternating Image/Text) */
 .sight-section {
     display: flex;
     flex-wrap: wrap;
     gap: 4rem;
     align-items: center;
-    margin-bottom: var(--section-spacing);
     padding: 2rem 0;
+    max-width: 1400px;
+    margin: auto;
 }
 
 .sight-section.reverse {
@@ -23,7 +18,7 @@
     min-width: 350px;
     border-radius: 30px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     position: relative;
 }
 
@@ -39,13 +34,11 @@
     transform: scale(1.08);
 }
 
-.sight-text,
 .sight-info {
     flex: 1;
     min-width: 350px;
 }
 
-.sight-text h2,
 .sight-info h3 {
     color: var(--secondary);
     font-size: 2.5rem;
@@ -55,7 +48,6 @@
     text-align: left;
 }
 
-.sight-text h2::after,
 .sight-info h3::after {
     content: '';
     position: absolute;
@@ -67,14 +59,12 @@
     border-radius: 2px;
 }
 
-.sight-text ul,
 .sight-info ul {
     list-style: none;
     padding: 0;
     margin-top: 2rem;
 }
 
-.sight-text li,
 .sight-info li {
     margin-bottom: 1.5rem;
     padding-left: 2rem;
@@ -83,44 +73,12 @@
     color: var(--silver);
 }
 
-.sight-text li::before,
 .sight-info li::before {
     content: '→';
     position: absolute;
     left: 0;
     color: var(--primary);
     font-weight: bold;
-}
-
-/* Quote Components */
-.quote-section {
-    background: var(--light-bg);
-    padding: 6rem 2rem;
-    margin: 4rem 0;
-    border-radius: 50px;
-    text-align: center;
-    transition: background-color var(--speed) var(--easing);
-}
-
-.quote-card {
-    max-width: 800px;
-    margin: 0 auto 3rem;
-}
-
-.quote-text {
-    font-size: 1.8rem;
-    font-style: italic;
-    color: var(--dark-azure);
-    margin-bottom: 1.5rem;
-    line-height: 1.4;
-}
-
-.quote-author {
-    font-weight: 700;
-    color: var(--primary);
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
 }
 
 /* Comparison Section */
@@ -148,7 +106,7 @@
     width: 100%;
     border-radius: 20px;
     margin-bottom: 1rem;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .comparison-item h4 {
@@ -157,36 +115,20 @@
 }
 
 /* DARK MODE OVERRIDES */
-.body-dark .sight-text h2,
 .body-dark .sight-info h3 {
     color: var(--tertiary);
 }
 
-.body-dark .sight-text h2::after,
 .body-dark .sight-info h3::after {
     background: var(--tertiary);
 }
 
-.body-dark .sight-text li,
 .body-dark .sight-info li {
     color: var(--white);
 }
 
-.body-dark .sight-text li::before,
 .body-dark .sight-info li::before {
     color: var(--tertiary);
-}
-
-.body-dark .quote-section {
-    background: var(--dark-grey);
-}
-
-.body-dark .quote-text {
-    color: var(--tertiary);
-}
-
-.body-dark .quote-author {
-    color: var(--white);
 }
 
 .body-dark .comparison-container {
@@ -198,6 +140,11 @@
 }
 
 @media (max-width: 768px) {
-    .sight-section { gap: 2rem; }
-    .comparison-grid { grid-template-columns: 1fr; }
+    .sight-section {
+        gap: 2rem;
+    }
+
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
 }
