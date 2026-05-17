@@ -5,16 +5,12 @@
     gap: 4rem;
     align-items: center;
     padding: 2rem 0;
-    max-width: 1400px;
+    max-width: 1600px;
     margin: auto;
 }
 
-.sight-section.reverse {
-    flex-direction: row-reverse;
-}
-
 .sight-image {
-    flex: 1.2;
+    flex: 1;
     min-width: 350px;
     border-radius: 30px;
     overflow: hidden;
@@ -35,7 +31,7 @@
 }
 
 .sight-info {
-    flex: 1;
+    flex: 2;
     min-width: 350px;
 }
 
@@ -83,12 +79,8 @@
 
 /* Comparison Section */
 .comparison-container {
-    background: var(--white);
     padding: 4rem;
-    border-radius: 40px;
-    box-shadow: var(--card-shadow);
     margin-top: 4rem;
-    transition: background-color var(--speed) var(--easing);
 }
 
 .comparison-grid {
@@ -131,10 +123,6 @@
     color: var(--tertiary);
 }
 
-.body-dark .comparison-container {
-    background: var(--dark-bg);
-}
-
 .body-dark .comparison-item h4 {
     color: var(--tertiary);
 }
@@ -142,6 +130,10 @@
 @media (max-width: 768px) {
     .sight-section {
         gap: 2rem;
+    }
+
+    .sight-section.reverse {
+        flex-direction: row-reverse;
     }
 
     .comparison-grid {
