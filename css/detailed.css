@@ -101,6 +101,7 @@
     }
 }
 
+/*
 @media (max-width: 1900px) and (min-width: 1600px) {
 
     .gallery-item:first-child:nth-last-child(2),
@@ -113,3 +114,4 @@
         width: 730px;
     }
 }
+*/
