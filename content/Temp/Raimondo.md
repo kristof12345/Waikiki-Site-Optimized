@@ -6,13 +6,13 @@ Raimondo Chease és Selena Gomez – vagy ahogy a világ ismeri őket, a Waikiki
 
 ## 1. Raimondo Chease jellemrajza – a végrehajtó mag
 
-Raimondo a Chease-dinasztia trónörököse és 2017 óta Waikiki Diktátora, ami gyakorlatilag az állam „CEO" (vezérigazgatói) pozícióját jelenti. 1996-ban született Washingtonban, tanulmányait a *Seven Seas High Schoolban* (az SS Tipton óceánjárón) végezte, ahol osztálytársával, Bailey Pickett-tel alkotott egy párt. Közgazdasági diplomáit (BSc és MSc) a Waikiki Economics University-n szerezte, olyan milliárdos évfolyamtársak mellett, mint Rory Gates vagy maga Selena Gomez.
+Raimondo a Chease-dinasztia trónörököse és 2017 óta Waikiki Diktátora, ami gyakorlatilag az állam „CEO" (vezérigazgatói) pozícióját jelenti. 1996-ban született Washingtonban, tanulmányait a *Seven Seas High Schoolban* (az SS Tipton óceánjárón) végezte, ahol osztálytársával, Bailey Pickett-tel alkotott egy párt. Közgazdasági diplomáit (BSc és MSc) a Waikiki Economics Universityn szerezte, olyan milliárdos évfolyamtársak mellett, mint Rory Gates vagy maga Selena Gomez.
 
 * **Hatalmi szerepköre.** A családi igazgatótanácsban ő hozza meg a nagy horderejű, operatív döntéseket. Az ő felügyelete alá tartoznak a gigaberuházások (Hyperloop, Megaépületek, alagutak) és a védelmi stratégiák (Skynet, TBMDS rakétavédelmi rendszer).
 * **A stratégiai irányító.** Nem merül el a napi közigazgatásban; a demokratikusan választott Kormány intézi az operatív feladatokat, míg ő a belső Kabineten (a veterán tanácsadókon és technokratákon) keresztül biztosítja a hosszú távú víziót és az irányvonalat.
 * **Az álmodozó építő.** Rendkívül intelligens és tehetséges; apjától, Chease Youngtól a nagyvonalú gondolkodást örökölte. Mivel az abszolút lehetőségek világába született (egy 80 milliárd dolláros, saját parancsnoki központtal felszerelt palotában nőtt fel), a gondolkodása természetesen a lehetetlennek tűnő víziók felé gravitál.
 * **Határtalan kreativitás.** Nála a gondolat és a megvalósítás közötti idő szinte nulla. Ha kedden eszébe jut, hogy látni akarja a tengeri teknősöket, szerdán kibérel egy egész maldív-szigeteki atollt. Ez a spontán nagylelkűség és a nagy léptékben való gondolkodás teszi vonzóvá és lenyűgözővé a környezete számára.
-* **Őszinte és nyitott természet.** Bár a makroökonómiát és a geopolitikát zseniálisan érti, megmaradt benne egy entwaffnend őszinte, jóhiszemű mag. Hajlamos feltételezni, hogy a diplomáciai és üzleti partnerei is olyan tisztességesen játszanak, mint ő – ebben rejlik az emberi bája, ugyanakkor ez az a terület, ahol Selena jelenléte felbecsülhetetlen.
+* **Őszinte és nyitott természet.** Bár a makroökonómiát és a geopolitikát zseniálisan érti, megmaradt benne egy lefegyverzően őszinte, jóhiszemű mag. Hajlamos feltételezni, hogy a diplomáciai és üzleti partnerei is olyan tisztességesen játszanak, mint ő – ebben rejlik az emberi bája, ugyanakkor ez az a terület, ahol Selena jelenléte felbecsülhetetlen.
 * **A szórakozás szerelmese.** A felelősségteljes állami nyomás ellensúlyaként imádja a popkultúrát. A Disney-sztárokkal való barátkozás, a kedvenc sorozatai és a Mátrix-forgatások körüli rajongás mind azt mutatják, hogy megőrizte a játékos, lelkes belső énjét – és ez teszi igazán szerethetővé a környezete és Selena számára.
 * **Erkölcsös és kiszámítható.** A külvilág felé megbízható, tisztességes uralkodó képét mutatja (lásd a korábbi, Bailey iránti hűségét és Selena kezdeti, tiszteletteljes visszautasítását), ami a globális piacok és a társadalom bizalmának alapja.
 
@@ -24,7 +24,7 @@ Selena nem csupán popkulturális ikon, hanem a birodalom egyik legösszetettebb
 
 * **Intellektuális és ambiciózus.** Nem elégedett meg a sztárstátusszal; elvégezte a Waikiki Közgazdaságtudományi Egyetemet, és a Nemzeti Bank felsővezetőjeként, majd szenátorként bizonyította szakmai rátermettségét. A hollywoodi csillogást államigazgatási tekintélyre váltotta. 2015-ben szenátor lett, 2017-ben konzul, majd az év októberében hercegnővé koronázták.
 * **Türelmes és elkötelezett.** Angyali türelemmel várta ki a sorát, mialatt Raimondo más kapcsolatban élt; ezalatt a legközelebbi barátjává és bizalmasává vált – nem számításból, hanem mert valóban hitt abban, hogy együtt tartoznak.
-* **Empatikus és karitatív.** Mélyen elkötelezett a humanitárius ügyek – különösen a mentális egészség és a szociális kérdések – iránt, amelyeket a Waikiki Charity keretein belül irányít. UNICEF nagykövetként a humanitárius programok arca, ami tökéletesen támogatja Waikiki nemzetközi jelenlétét.
+* **Empatikus és karitatív.** Mélyen elkötelezett a humanitárius ügyek – különösen a mentális egészség és a szociális kérdések – iránt, amelyeket a Waikiki Charity keretein belül irányít. UNICEF-nagykövetként a humanitárius programok arca, ami tökéletesen támogatja Waikiki nemzetközi jelenlétét.
 * **Sokoldalú és alkalmazkodó.** Miközben a nyilvánosság előtt határozott politikus és globális ikon, a magánéletben örömmel választja az odaadó, támogató feleség szerepét – nem alázatból, hanem mert ez számára a szeretet természetes kifejezése.
 * **A politikai tehetség.** Extrovertált, magabiztos és karizmatikus. Szenátorként hivatalos helye van a törvényhozásban, ahol kiváló kapcsolatteremtő képességeivel hidat épít a demokratikus intézmények és a családi vízió között.
 
@@ -74,8 +74,8 @@ Az ő szintjükön persze ez nem egy átlagos „hétvégén filmezés" típusú
 A közös út mérföldkövei:
 * **2017:** A Golden Globe-gálán léptek először a nyilvánosság elé hivatalos párként. Selena hercegnővé koronázása októberben.
 * **2018:** Együtt jártak a világűrben – a Columbus űrsiklóval 14 napot töltöttek a Nemzeti Űrállomáson.
-* **2020:** A pandémia idején közösen alapították meg a Global Hope Foundation-t – a válságban is összetartásuk és társadalmi felelősségük fénylett.
-* **2023:** A Maldív-szigeteki utazáskor Selena már hivatalosan is az élettársa és politikai partnere.
+* **2020:** A pandémia idején közösen alapították meg a Global Hope Foundationt – a válságban is összetartásuk és társadalmi felelősségük fénylett.
+* **2023:** A maldív-szigeteki utazáskor Selena már hivatalosan is az élettársa és politikai partnere.
 * **2026:** Közel egy évtizednyi partnerség után bejelentették eljegyzésüket, majd az „Évszázad Esküvőjével" hivatalos házassággá koronázták szerelmüket.
 
 Az esküvő nem csupán ünnepség volt, hanem a kettejük közötti egyedi kötelék szimbóluma: Selena ruhájába titkos, gyémántporral hímzett üzeneteket rejtettek, amelyek csak Raimondo számára voltak értelmezhetők. A pár a nászéjszakán 48 órára bezárkózott a Diktátori Palota legfelső emeletére – csak ők ketten, a világ minden zaja nélkül.
@@ -84,9 +84,9 @@ Az esküvő nem csupán ünnepség volt, hanem a kettejük közötti egyedi köt
 
 ## 4. Érzelmi dinamika
 
-Kapcsolatuk nem villámtréfa eredménye, hanem évtizedes barátságon és közös munkán alapuló, mély szövetség – a Waikiki Állam stabilitásának és prosperitásának egyik alappillére.
+Kapcsolatuk nem villámrománc eredménye, hanem évtizedes barátságon és közös munkán alapuló, mély szövetség – a Waikiki Állam stabilitásának és prosperitásának egyik alappillére.
 
-* **Egymás menedéke.** A világ egyik legterheltebb emberpáraként kapcsolatuk az egyetlen hely, ahol levethetik a maszkjaikat. Selena az az érzelmi horgony, aki meleg, biztonságos teret teremt Raimondónak. Reggelente gyengéd gesztusokkal ébreszti, esténként érzéki masszázzsal vagy csendes összebújással oldja a feszültséget. Ő az, aki „emlékezteti a vezetőt emberi mivoltára".
+* **Egymás menedéke.** A világ egyik legterheltebb emberpárjaként kapcsolatuk az egyetlen hely, ahol levethetik a maszkjaikat. Selena az az érzelmi horgony, aki meleg, biztonságos teret teremt Raimondónak. Reggelente gyengéd gesztusokkal ébreszti, esténként érzéki masszázzsal vagy csendes összebújással oldja a feszültséget. Ő az, aki „emlékezteti a vezetőt emberi mivoltára".
 * **Megbonthatatlan lojalitás.** Érzelmi világukat a feltétlen hűség jellemzi. Éveken át tartó partnerségük alatt olyan bizalmi szintet építettek fel, amely minden külső politikai vagy társadalmi nyomásnak ellenáll.
 * **Gondoskodó kölcsönösség.** Raimondo részéről a kapcsolatot a természetes védelmező ösztön jellemzi: mindent megad Selenának – legyen az palota vagy korlátlan hitelkeret –, hogy kifejezze háláját és szeretetét. Selena pedig a maga gyengédségével és figyelmességével viszonozza ezt.
 * **Lelki társak.** Kapcsolatuk több mint szerelem: sorsszerű összefonódás, ahol két rendkívüli ember talált egymásban tökéletes társra és igazi otthonra.
@@ -98,7 +98,7 @@ Kapcsolatuk nem villámtréfa eredménye, hanem évtizedes barátságon és köz
 
 ### Szellemi és lelki harmónia
 
-Ritka az olyan kapcsolat, ahol a nő képes a nemzetközi diplomácia legfelső szintjein magabiztosan helytállni, majd este a leggyengédebb, legbensőségesebb társsá válni. Raimondónak nem kell választania a harcostárs és a szerelme között – Selena mindkettő egy személyben. Az űrutazástól kezdve a Maldív-szigeteki búvárkodáson át a közös sci-fi rajongásig Selena mindenben tökéletes partnere, aki nemcsak kíséri, hanem gazdagítja is az élményeket – például ő szervezi a privát programokat a diplomáciai utak alatt.
+Ritka az olyan kapcsolat, ahol a nő képes a nemzetközi diplomácia legfelső szintjein magabiztosan helytállni, majd este a leggyengédebb, legbensőségesebb társsá válni. Raimondónak nem kell választania a harcostárs és a szerelme között – Selena mindkettő egy személyben. Az űrutazástól kezdve a maldív-szigeteki búvárkodáson át a közös sci-fi rajongásig Selena mindenben tökéletes partnere, aki nemcsak kíséri, hanem gazdagítja is az élményeket – például ő szervezi a privát programokat a diplomáciai utak alatt.
 
 ### A szimbiózis – ki mit kap?
 
@@ -118,7 +118,7 @@ Bár Selena a saját jogán is rendkívül intelligens, gazdag (5 milliárd doll
 
 * **Feltétlen védelmet és biztonságot:** Raimondo szeretete és a birodalom erőforrásai olyan burkot vonnak köré, ahol soha, semmitől nem kell félnie. Ezt a szintű biztonságérzetet kevés ember tapasztalhatja meg.
 * **Platformot a világ jobbá tételéhez:** Diplomáciai és jótékonysági ambíciói (ENSZ, Kék Öv Egyezmény) Waikiki és Raimondo támogatása nélkül csak töredéküket érnék el. Megkapta a bolygó egyik legerősebb megafonját ahhoz, hogy valódi nyomot hagyjon a történelemben.
-* **A szerelem tündérmeséjét:** Egy olyan férfi rajongását, aki a világ uraként is őt teszi az első helyre, és aki képes a leggrandiózusabb gesztusokkal (egy egész Maldív-atollt kibérelni, űrutazásra vinni) kimutatni a szerelmét.
+* **A szerelem tündérmeséjét:** Egy olyan férfi rajongását, aki a világ uraként is őt teszi az első helyre, és aki képes a leggrandiózusabb gesztusokkal (egy egész maldív-szigeteki atollt kibérelni, űrutazásra vinni) kimutatni a szerelmét.
 
 Egymás nélkül Raimondo egy magányos, hamar kiégő uralkodó lenne, Selena pedig „csak" egy rendkívül sikeres politikusnő – de nem globális ikon és királyné. Együtt viszont a tökéletes csapatot alkotják.
 
@@ -193,7 +193,7 @@ Egy olyan birodalomban, ahol a GDP 41,8 billió dollár, és az államot egyetle
 
 ### A házassági szerződés – a Chease-dinasztia védőpajzsa
 
-Chease Young és a Nemzeti Bankot irányító Jessica Walker gondos szülőkként biztosították, hogy a család jövője minden körülmény között védve legyen. A 2027 áprilisi házasságkötést megelőző dokumentum inkább **nemzetközi államszerződés**, mintsem hagyományos prenup.
+Chease Young és a Nemzeti Bankot irányító Jessica Walker gondos szülőkként biztosították, hogy a család jövője minden körülmény között védve legyen. A 2027 áprilisi házasságkötést megelőző dokumentum inkább **nemzetközi államszerződés**, mintsem hagyományos házassági szerződés.
 
 * **A dinasztikus vagyon védelme:** A Waikiki Vagyonalap, az állami vállalatok és a Chease-dinasztia törzsvagyona (amely trilliókban mérhető) a nemzet és a család közös öröksége.
 * **Selena önálló biztonsága:** Cserébe a lojalitásért és az állami feladatok ellátásáért Selena egy saját, több tízmilliárd dolláros vagyonalapot kapott, amely felett teljesen szabadon rendelkezik. A szerződés rögzíti az örökösödési sorrendet és a jövőbeli trónörökösök anyagi státuszát is.
@@ -213,7 +213,7 @@ Raimondo korlátlan hozzáférést adott Selenának: szabadon költhet a ruhatá
 ### Pénzügyi döntéshozatal – ki dönt, mekkora összegnél?
 
 * **0–10 millió dollár (hétköznapi luxus):** Bármelyikük, teljes autonómiával. A mindennapi élet luxusait a királyi udvar és a családi vagyonkezelő intézi automatikusan.
-* **10 millió – 1 milliárd dollár (különleges élmények és nagyvonalú gesztusok):** Főleg Raimondo, Selena kreatív hozzájárulásával. Ha Raimondo kibérel egy Maldív-szigeteki atollt vagy szervez egy privát űrutazást, ő állja a számlát. Selena pedig hozzáadja a maga ötleteit: *„Csodás ötlet, drágám, de mi lenne, ha összekötnénk az óceánvédelmi programunkkal is?"*
+* **10 millió – 1 milliárd dollár (különleges élmények és nagyvonalú gesztusok):** Főleg Raimondo, Selena kreatív hozzájárulásával. Ha Raimondo kibérel egy maldív-szigeteki atollt vagy szervez egy privát űrutazást, ő állja a számlát. Selena pedig hozzáadja a maga ötleteit: *„Csodás ötlet, drágám, de mi lenne, ha összekötnénk az óceánvédelmi programunkkal is?"*
 * **Jótékonyság és filantrópia:** Selena az operatív vezető, Raimondo az elkötelezett szponzor. Selena szenátorként látja, hol tehetnek a legtöbb jót. Raimondo büszkén támogatja minden kezdeményezését.
 * **Stratégiai befektetések:** Raimondo mint diktátor, a szülők bölcs felügyeletével. A 2 000 milliárd dollár a Waikiki Vagyonalapban és globális befektetésekben dolgozik. Selena ezekben tanácsadóként van jelen, tiszteletben tartva a családi kompetenciahatárokat.
 
@@ -241,7 +241,7 @@ A folyamat gyönyörűen tükrözi a kapcsolatuk dinamikáját:
 
 Életstílusuk legelbűvölőbb eleme az a kettős dinamika, ahogyan egymással léteznek – a nyilvánosságban és a magánéletben egyaránt.
 
-* **A nyilvánosság előtt:** Két magabiztos, karizmatikus vezető, a világ legbefolyásosabb „power couple"-je, akik egyenrangú félként tárgyalnak a globális elittel, és akiknek puszta megjelenése emlékezetessé tesz minden eseményt. Munkakapcsolatuk alapja a szakmai felkészültség és a közös politikai világnézet.
+* **A nyilvánosság előtt:** Két magabiztos, karizmatikus vezető, a világ legbefolyásosabb álompárja, akik egyenrangú félként tárgyalnak a globális elittel, és akiknek puszta megjelenése emlékezetessé tesz minden eseményt. Munkakapcsolatuk alapja a szakmai felkészültség és a közös politikai világnézet.
 * **A zárt ajtók mögött:** Selena természetes örömmel veszi fel a gondoskodó, gyengéd női szerepet. Átengedi az irányítást Raimondónak, akinek boldogsága és kényelme az elsődleges. Ő ébreszti, ő masszírozza, és ő nyújtja azt az érzelmi és fizikai menedéket, ami egyensúlyban tartja a herceget. Raimondo cserébe feltétlen szeretetet, védelmet és férfias biztonságot biztosít számára.
 
 ### Tudatos és elegáns nyilvános jelenlét
