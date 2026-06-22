@@ -26,7 +26,7 @@ Selena nem csupán egy nemzetközileg ünnepelt popkulturális ikon és zenei sz
 
 ## 3. A kapcsolat kialakulása – barátságból szerelem
 
-Raimondo és Selena szerelmi kapcsolata nem egy hirtelen jött fellángolás vagy a körülmények szerencsés együttállásának az eredménye, hanem egy gyönyörű, hosszú éveken át tartó, organikus és rendkívül tudatos fejlődés csodálatos gyümölcse. Kettőjük története a legtisztább és legklasszikusabb „friends to lovers" történet, amely rácáfol a felszínes hollywoodi romantikára. Ebben a kivételes kapcsolatban a türelem, az egymás iránti legmélyebb, feltétel nélküli kölcsönös tisztelet, valamint a páratlanul erős intellektuális és lelki összhang az idő múlásával fokozatosan, egyre erősebben mélyült el, míg végül a világ egyik legkülönlegesebb, legstabilabb és legbefolyásosabb szerelmi szövetségévé nem kovácsolódott.
+Raimondo és Selena szerelmi kapcsolata nem egy hirtelen fellángolás, hanem egy gyönyörű, hosszú éveken át tartó, organikus és rendkívül tudatos fejlődés csodálatos gyümölcse. Kettőjük története a legtisztább és legklasszikusabb „friends to lovers" történet, amely rácáfol a felszínes hollywoodi romantikára. Ebben a kivételes kapcsolatban a türelem, az egymás iránti legmélyebb, feltétel nélküli kölcsönös tisztelet, valamint a páratlanul erős intellektuális és lelki összhang az idő múlásával fokozatosan, egyre erősebben mélyült el, míg végül a világ egyik legkülönlegesebb és legstabilabb szerelmi szövetségévé nem kovácsolódott.
 
 ### Az első találkozás és a döntő pillanat
 
@@ -264,7 +264,7 @@ Kettejük szövetsége egy gyönyörű kölcsönösség, ahol mindkét fél a sa
 
 * **Selena szemszöge:** Selena egy múlandó és kiszámíthatatlan világból lépett át a tartós biztonság és a történelmi jelentőség birodalmába. Hollywood kegyetlen: a hírnév mulandó, a popkultúra folyamatosan új bálványokat keres. Raimondo oldalán Selena végleg kilépett ebből a mókuskerékből: szuverén állam hercegnője, a Szenátus tagja lett, akinek szavára a diplomácia legfelsőbb köreiben is figyelnek. Nemzetközi klímaegyezményeket ír alá, és egy rendkívül gazdag gazdaság társuralkodójaként éli mindennapjait.
 
-Ha mérlegre tennénk, a kettejük szövetsége egészében az, ami különleges: Raimondo megkapta a szépség, az intelligencia és az odaadás ajándékát, Selena pedig a biztonság, a szeretet és a korlátlan lehetőségek világát. Éppen ez a kölcsönösség teszi a kapcsolatukat megrendíthetetlenné.
+Raimondo megkapta a szépség, az intelligencia és az odaadás ajándékát, Selena pedig a biztonság, a szeretet és a határtalan lehetőségek világát. Éppen ez a kölcsönösség teszi szövetségüket megrendíthetetlenné.
 
 ### Az Életelixír dimenziója – együtt az örökkévalóságban
 
