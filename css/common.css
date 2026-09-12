@@ -360,7 +360,9 @@ nav {
   padding: 140px 3rem 100px;
   position: relative;
   text-align: center;
-  width: 100%
+  width: 100%;
+  height: calc(100vh - 70px);
+  margin-top: 70px;
 }
 
 .hero::before {
