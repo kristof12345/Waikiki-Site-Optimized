@@ -105,7 +105,7 @@ Egy személyes, bizalmi légkörű, mégis mélyreható beszélgetés egy vezet�
   * *Fókusz:* A helyi szokások, a nyugalom és a rend iránti tisztelet. Hogyan kezeli a konfliktusokat szomszédaival vagy üzleti partnereivel?
   * *Elvárt hozzáállás:* A harmonikus együttélés és a közösségi szabályok proaktív betartása. A jogkövető magatartás és a konfliktusok hivatalos, civilizált úton történő rendezése alapkövetelmény.
 
-## 3. A Waikiki Érdem-Mátrix (The Merit Matrix 2.0)
+## 3. A jelöltek értékelése
 
 A 100 pontos értékelési rendszer célja a legkiválóbb tehetségek azonosítása és objektív rangsorolása.
 

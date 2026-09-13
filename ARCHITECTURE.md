@@ -284,7 +284,7 @@ Matches the main mobile hamburger navigation link structure:
             <a href="military.html">Military</a>
             <a href="faq.html">FAQ</a>
         </div>
-        <p>&copy; 2025 The Sovereign Nation of Waikiki. All rights reserved.</p>
+        <p>&copy; 2026 The Sovereign Nation of Waikiki. All rights reserved.</p>
     </div>
 </footer>
 ```

@@ -77,7 +77,7 @@
 - Angelina fellép a Davosi Gazdasági Fórumon.
 - Elkészül a Hercegi Palota.
 - Az EAN megalakulása.
-- Raimondo és Selena először találkoznak a Mátrix 4 forgatásán
+- Raimondo és Selena először találkoznak egy filmforgatáson
 - Angelina és Taylor ázsiai körutazása (Kiotó, Tokió, Szingapúr, Bhután, Bangkok, Agra, Peking).
 - Elkészül Angelina Palazzo Versace palotája.
 - Jennifer BSc diplomát szerez politikai gazdaságtanból.
