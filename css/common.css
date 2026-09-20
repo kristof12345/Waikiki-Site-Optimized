@@ -355,13 +355,12 @@ nav {
 .hero {
   align-content: center;
   color: var(--white);
-  min-height: 1200px;
   overflow: hidden;
   padding: 140px 3rem 100px;
   position: relative;
   text-align: center;
   width: 100%;
-  height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px);
   margin-top: 70px;
 }
 
