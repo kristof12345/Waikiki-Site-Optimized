@@ -7,12 +7,6 @@ Total count: **88** unique images.
 
 ## Image List
 
-3. `UniversalUpscaler_41211d44-73a4-454c-bc1e-769da8ead28a.jpg`
-4. `UniversalUpscaler_Legacy_Cinematic_2_1f1671af-b622-6580-bdf8-51627fdf7f2c.jpg`
-5. `UniversalUpscaler_Legacy_Cinematic_2_1f167066-6940-6f40-b570-336e579d8127.jpg`
-6. `UniversalUpscaler_Legacy_Cinematic_2_1f16fe1f-aeff-62b0-b3c4-0fc076570751.jpg`
-
-7. `UniversalUpscaler_Legacy_Cinematic_2_1f16fe20-e29d-62b0-8664-5955da2e383d.jpg`
 8. `UniversalUpscaler_Legacy_Cinematic_2_56738309-0095-40b2-af6a-d875e18037bb.jpg`
 9. `UniversalUpscaler_57e9fa2b-3107-4b48-b0a7-4cd05c14c9f5.jpg`
 10. `UniversalUpscaler_Legacy_Cinematic_2_0db5de49-086d-454c-a824-90db052071d3.jpg`
