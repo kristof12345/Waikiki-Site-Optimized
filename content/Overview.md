@@ -200,7 +200,7 @@ Az alkotmány rögzíti a nemzeti zászlót, a címert és a himnuszt, amelyekr�
 - Az Egyesült Afrikai Nemzetek (EAN) megalakulása.
 - Angelina fellép a Davosi Gazdasági Fórumon.
 - Elkészül a Hercegi Palota.
-- Raimondo és Selena először találkoznak a Mátrix 4 forgatásán.
+- Raimondo és Selena először találkoznak egy filmforgatáson
 - Angelina és Taylor ázsiai körutazása (Kiotó, Tokió, Szingapúr, Bhután, Bangkok, Agra, Peking).
 - Jennifer BSc diplomát szerez politikai gazdaságtanból.
 
@@ -733,7 +733,7 @@ Jennifer párja. Kiapadhatatlan kreatív energiájával és újszerű megközel�
 A döntéshozatal nem a hagyományos, sokszor lassú hivatali utakon, hanem a család közvetlen, informális fórumán zajlik. A feladatok megosztása a kompetenciák és a szektorális felelősség elve alapján történik:
 
 - **Chease Young:** globális stratégiaalkotás, hosszú távú víziók, makrogazdasági folyamatok
-- **Raimondo:** operatív kormányzás, rendvédelem, honvédelem, nagyberuházások
+- **Raimondo:** stratégiai kormányzás, rendvédelem, honvédelem, nagyberuházások
 - **Jessica:** monetáris stabilitás, költségvetési egyensúly, Nemzeti Vagyonalap
 - **Selena:** külügyek, diplomácia, nemzetközi kapcsolatok
 - **Angelina:** szociálpolitika, környezetvédelem
@@ -902,7 +902,7 @@ A rendszer egyedi, jogilag kötelező ajánlatot generál:
 ### 5. Egyenlőség Elve
 A rendszer meritokratikus bemenetű, de jogilag egalitárius kimenetű. Az állampolgárság megszerzése után jogilag teljesen egyenlő mindenki — nincs „első-" vagy „másodosztályú" állampolgár.
 
-## Az Érdem-Mátrix (100 pont)
+## Pontozás (100 pont)
 
 | Kategória | Max. pont |
 | --- | --- |
@@ -1143,7 +1143,7 @@ Raimondo 16. születésnapja és sikeres egyetemi felvételije alkalmából szü
 
 ## Raimondo és Selena megismerkedése (2014)
 
-Raimondo és Selena Gomez első találkozása 2014-ben a Mátrix filmsorozat negyedik részének forgatásán történt. Kettejük között szinte azonnal kialakult egy rendkívüli intellektuális és baráti összhang, amely messze túlmutatott a szokványos munkakapcsolat keretein. A forgatás időszaka egybeesett Selena magánéletének fordulópontjával, amikor lezárta korábbi kapcsolatát. Bár Selena egy spontán csókkal próbálta kifejezni mélyebb érzéseit, Raimondo, aki ekkor még Baileyvel járt, tisztelettel utasította vissza a romantikus közeledést. Ez a momentum azonban nem vetett árnyékot barátságukra — kapcsolatuk a film elkészülte után sem veszített intenzitásából. Rendszeres találkozásaik és közösen szervezett utazásaik során tovább mélyült a kötelék. Később mindketten a Waikiki Economics University hallgatóiként folytatták tanulmányaikat.
+Raimondo és Selena Gomez első találkozása 2014-ben egy filmforgatáson történt, ahol Raimondo producerként dolgozott, míg Selena a női főszerepet alakította. Kettejük között szinte azonnal kialakult egy rendkívüli intellektuális és baráti összhang, amely messze túlmutatott a szokványos munkakapcsolat keretein. A forgatás időszaka egybeesett Selena magánéletének fordulópontjával, amikor lezárta korábbi kapcsolatát. Bár Selena egy spontán csókkal próbálta kifejezni mélyebb érzéseit, Raimondo, aki ekkor még Baileyvel járt, tisztelettel utasította vissza a romantikus közeledést. Ez a momentum azonban nem vetett árnyékot barátságukra — kapcsolatuk a film elkészülte után sem veszített intenzitásából. Rendszeres találkozásaik és közösen szervezett utazásaik során tovább mélyült a kötelék. Később mindketten a Waikiki Economics University hallgatóiként folytatták tanulmányaikat.
 
 ## Egyetemi évek (2012–2017)
 
