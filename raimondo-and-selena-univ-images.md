@@ -7,31 +7,6 @@ Total count: **64** unique images (all verified present on disk).
 
 ## Image List
 
-1. `UniversalUpscaler_57e9fa2b-3107-4b48-b0a7-4cd05c14c9f5.jpg`
-2. `UniversalUpscaler_Legacy_Cinematic_2_1f177d79-4fa4-6660-85ae-7b4526fcaced.jpg`
-3. `UniversalUpscaler_Legacy_Cinematic_2_1f177d54-1ecb-6f90-99cb-1f1c1bbae615.jpg`
-4. `UniversalUpscaler_Legacy_Cinematic_2_1f177d7b-5b49-6220-b2a3-2814608495fa.jpg`
-5. `UniversalUpscaler_Legacy_Cinematic_2_6a78190d-87fa-426f-9ba9-6ae9da934ca6.jpg`
-6. `UniversalUpscaler_32a8c3e9-addd-4ce1-9e97-83faaad9f10b.jpg`
-7. `UniversalUpscaler_30c2f9a6-d191-416a-bc9b-2a2b73f1242c.jpg`
-8. `UniversalUpscaler_4beb4d13-35ef-48cf-81e3-b3f5cafec86c.jpg`
-9. `UniversalUpscaler_Legacy_Cinematic_2_572a3ea6-0eae-4a22-a30d-c1ba03a579b5.jpg`
-10. `UniversalUpscaler_178a2973-39a0-491c-8a72-1133dfea69dd.jpg`
-11. `UniversalUpscaler_7947a678-7d77-4ce8-b152-b0551b0ed246.jpg`
-12. `UniversalUpscaler_Legacy_Cinematic_2_1f191a3e-ef1d-6940-a03a-0ad0dab33078.jpg`
-13. `UniversalUpscaler_Legacy_Cinematic_2_313d7d39-3c6b-4798-a625-8d1bed997830.jpg`
-14. `UniversalUpscaler_d2cb0967-de2e-41f1-9525-ec142ff2f04f.jpg`
-15. `UniversalUpscaler_92022eaf-8a25-42ab-9f2a-e51f4c114d91.jpg`
-16. `UniversalUpscaler_309b9f03-c9b1-4155-a7d6-1541aa7bf36a.jpg`
-17. `UniversalUpscaler_e9fd1070-2479-4e2a-a242-a405ad94505c.jpg`
-18. `UniversalUpscaler_ab1523b8-aad9-48aa-813a-28ab49f85c2b.jpg`
-19. `UniversalUpscaler_18888d93-cae5-42ad-a2ec-d7dfbb636302.jpg`
-20. `UniversalUpscaler_8577e34e-7e34-4776-8ffc-02d27601b8b7.jpg`
-21. `UniversalUpscaler_7cfe5da8-5f73-4e66-a66c-2bdba465a1cb.jpg`
-22. `UniversalUpscaler_523e40bb-b5c0-4bcf-a2da-cf901dc4841d.jpg`
-23. `UniversalUpscaler_846e40bb-c0c0-1bcf-a7da-cf901ab9171d.jpg`
-24. `UniversalUpscaler_07020ea2-027f-4e87-be37-bbb2e9e45716.jpg`
-
 25. `UniversalUpscaler_d018ebf1-7918-4ca7-9f49-ae2706baeccf.jpg`
 26. `UniversalUpscaler_c5c5b5b7-3fab-429c-8620-a7071a381655.jpg`
 27. `UniversalUpscaler_6128330d-862a-4c10-b5dc-c8998a3f3f9b.jpg`
@@ -68,7 +43,3 @@ Total count: **64** unique images (all verified present on disk).
 58. `UniversalUpscaler_3a5da0f0-f8de-44e3-a178-77d1a1d7b358.jpg`
 59. `UniversalUpscaler_4a5da0f0-f8de-44e3-a178-77d1a1d7b358.jpg`
 60. `UniversalUpscaler_5a5da0f0-f8de-44e3-a178-77d1a1d7b358.jpg`
-61. `UniversalUpscaler_Legacy_Cinematic_2_e3dffdfa-a454-4261-887a-5c0e9f4d5efb.jpg`
-62. `UniversalUpscaler_3c5254ee-68db-4dd6-b568-cb034355935c.jpg`
-63. `UniversalUpscaler_Legacy_Cinematic_2_1f16414e-cd54-6780-9570-6c2d40ecb775.jpg`
-64. `UniversalUpscaler_Legacy_Cinematic_2_1f19fe3e-7efa-61b0-998a-ec5abc01f1e3.jpg`
