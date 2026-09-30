@@ -23,7 +23,6 @@ Total count: **64** unique images (all verified present on disk).
 14. `UniversalUpscaler_d2cb0967-de2e-41f1-9525-ec142ff2f04f.jpg`
 15. `UniversalUpscaler_92022eaf-8a25-42ab-9f2a-e51f4c114d91.jpg`
 16. `UniversalUpscaler_309b9f03-c9b1-4155-a7d6-1541aa7bf36a.jpg`
-
 17. `UniversalUpscaler_e9fd1070-2479-4e2a-a242-a405ad94505c.jpg`
 18. `UniversalUpscaler_ab1523b8-aad9-48aa-813a-28ab49f85c2b.jpg`
 19. `UniversalUpscaler_18888d93-cae5-42ad-a2ec-d7dfbb636302.jpg`
@@ -32,6 +31,7 @@ Total count: **64** unique images (all verified present on disk).
 22. `UniversalUpscaler_523e40bb-b5c0-4bcf-a2da-cf901dc4841d.jpg`
 23. `UniversalUpscaler_846e40bb-c0c0-1bcf-a7da-cf901ab9171d.jpg`
 24. `UniversalUpscaler_07020ea2-027f-4e87-be37-bbb2e9e45716.jpg`
+
 25. `UniversalUpscaler_d018ebf1-7918-4ca7-9f49-ae2706baeccf.jpg`
 26. `UniversalUpscaler_c5c5b5b7-3fab-429c-8620-a7071a381655.jpg`
 27. `UniversalUpscaler_6128330d-862a-4c10-b5dc-c8998a3f3f9b.jpg`
