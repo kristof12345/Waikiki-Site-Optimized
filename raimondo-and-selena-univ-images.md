@@ -20,14 +20,3 @@ Total count: **64** unique images (all verified present on disk).
 35. `UniversalUpscaler_fd7035f7-0c95-4589-a67a-dc7ef42636ac.jpg`
 36. `UniversalUpscaler_ddf134d6-6a3e-48a6-af8a-fc8d87927da8.jpg`
 37. `UniversalUpscaler_9254564d-0e1c-4dfd-be66-894a19e54113.jpg`
-38. `UniversalUpscaler_Legacy_Cinematic_2_1f179678-3da9-6a10-b093-9ce172542710.jpg`
-39. `UniversalUpscaler_ca6c58d6-5598-442d-a3b9-c2297b0709c6.jpg`
-40. `UniversalUpscaler_f72fdc1a-c339-4e0f-bfc4-ec56870d186e.jpg`
-41. `UniversalUpscaler_35150112-cffe-4f22-b248-b855f769b8ef.jpg`
-42. `UniversalUpscaler_81aad286-b25b-48b4-989c-0f4da12ed9a5.jpg`
-43. `UniversalUpscaler_100a2a3e-95d0-4589-9d15-1f8b5062f48f.jpg`
-44. `UniversalUpscaler_57482360-5c34-478e-b79c-c2f658799807.jpg`
-45. `UniversalUpscaler_cbdbafa9-8473-4ea7-935e-67fe5985d4da.jpg`
-46. `UniversalUpscaler_ee4fcb4c-922f-4b92-a8a9-df3a95f1eb6e.jpg`
-47. `UniversalUpscaler_142bd4d3-df1f-43d1-a228-41683ee49486.jpg`
-48. `UniversalUpscaler_4034d8f8-8574-4cbc-8132-4b6e68204388.jpg`
