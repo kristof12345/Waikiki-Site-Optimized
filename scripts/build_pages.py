@@ -41,7 +41,7 @@ GROUPS = [
         ("history", {"en": "History", "hu": "Történelem"}),
         ("society", {"en": "Society", "hu": "Társadalom"}),
         ("culture", {"en": "Culture", "hu": "Kultúra"}),
-        ("ideology", {"en": "Waikiki First", "hu": "Waikiki Első"}),
+        ("ideology", {"en": "Ideology", "hu": "Ideológia"}),
     ]),
     ("governance", {"en": "Governance", "hu": "Kormányzás"}, [
         ("government", {"en": "Government", "hu": "Kormány"}),
