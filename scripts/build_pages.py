@@ -133,8 +133,8 @@ T = {
         "hu": "Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.",
     },
     "about": {
-        "en": "The official portal of the Sovereign Nation of Waikiki. Founded 10 March 1999 · Nova Aurelia.",
-        "hu": "Waikiki Szuverén Állam hivatalos portálja. Alapítva 1999. március 10-én · Nova Aurelia.",
+        "en": "The official portal of the Sovereign Nation of Waikiki. Founded 10 March 1999 · Nova Aurelia. This site was generated with AI, any resemblance to real people, countries or institutions is just a coincidence.",
+        "hu": "Waikiki Szuverén Állam hivatalos portálja. Alapítva 1999. március 10-én · Nova Aurelia. This site was generated with AI, any resemblance to real people, countries or institutions is just a coincidence.",
     },
     "rights": {
         "en": "© 2026 The Sovereign Nation of Waikiki. All rights reserved.",
