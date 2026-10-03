@@ -145,22 +145,17 @@
         }
 
         .brand-word {
-            display: flex;
-            flex-direction: column;
+            display: inline-flex;
+            align-items: center;
             font-family: "Fraunces", serif;
-            font-size: 1.6rem;
-            font-weight: 500;
+            font-size: 2rem;
+            font-weight: 480;
+            letter-spacing: -0.015em;
             line-height: 1;
         }
 
         .brand-word small {
-            margin-top: 0.3rem;
-            font-family: "Manrope", sans-serif;
-            font-size: 0.65rem;
-            font-weight: 700;
-            letter-spacing: 0.28em;
-            text-transform: uppercase;
-            color: var(--muted);
+            display: none !important;
         }
 
         .theme-btn {
@@ -410,7 +405,7 @@
         <header class="top-row">
             <a href="index.html" class="brand" aria-label="Waikiki Nation">
                 <img class="brand-mark" src="icons/logo.svg" alt="Waikiki Crest" width="48" height="48" loading="eager" decoding="async" />
-                <div class="brand-word">Waikiki<small>Sovereign Nation</small></div>
+                <div class="brand-word">Waikiki</div>
             </a>
             <button class="theme-btn" id="theme-toggle" type="button" aria-label="Toggle theme">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">

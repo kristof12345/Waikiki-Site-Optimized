@@ -331,11 +331,10 @@ def build_header(page: Page) -> str:
     )
 
     return f"""<!-- @chrome:header -->
-    <a class="skip-link" href="#main">{esc(T["skip"][loc])}</a>
     <div class="page-curtain" aria-hidden="true">{page.brand_mark(curtain=True)}</div>
     <div class="scroll-progress" aria-hidden="true"></div>
     <header class="site-header">
-        <a href="{page.href("index")}" class="brand" aria-label="{esc(T["home"][loc])}">{page.brand_mark()}<span class="brand-word">Waikiki<small>{esc(T["tagline"][loc])}</small></span></a>
+        <a href="{page.href("index")}" class="brand" aria-label="{esc(T["home"][loc])}">{page.brand_mark()}<span class="brand-word">Waikiki</span></a>
         <nav class="primary-nav" aria-label="{esc(T["primary"][loc])}">{"".join(nav_links)}</nav>
         <div class="header-actions">
             <a class="lang-pill" href="{page.other_locale_href()}" hreflang="{other}" lang="{other}" title="{esc(T["lang_name"][other])}">{GLOBE_ICON}<span>{other.upper()}</span></a>
@@ -376,7 +375,7 @@ def build_footer(page: Page) -> str:
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <a href="{page.href("index")}" class="brand" aria-label="{esc(T["home"][loc])}">{page.brand_mark(footer=True)}<span class="brand-word">Waikiki<small>{esc(T["tagline"][loc])}</small></span></a>
+                    <a href="{page.href("index")}" class="brand" aria-label="{esc(T["home"][loc])}">{page.brand_mark(footer=True)}<span class="brand-word">Waikiki</span></a>
                     <p class="footer-motto">{esc(T["motto"][loc])}</p>
                     <p class="footer-about">{esc(T["about"][loc])}</p>
                 </div>

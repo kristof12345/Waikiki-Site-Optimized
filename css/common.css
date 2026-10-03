@@ -13,104 +13,212 @@
 
 /* 1. TOKENS ================================================================ */
 :root {
-  /* Core palette */
-  --ivory: #fbf7f0;
-  --sand-50: #fdfaf5;
-  --sand-100: #f5ede1;
-  --sand-200: #eadfcc;
-  --sand-300: #dccbb0;
-  --teal-950: #072221;
-  --teal-900: #0b3b3a;
-  --teal-800: #0e4d4a;
-  --teal-700: #11605b;
-  --teal-500: #2a8c83;
-  --aqua: #7cc6bc;
-  --aqua-soft: #bfe4de;
-  --coral: #e3735a;
-  --coral-deep: #c95a41;
-  --coral-soft: #f4b39b;
-  --brass: #c29a57;
-  --ink: #172524;
-  --ink-soft: #4a5957;
+  /* -------------------------------------------------------------------------
+     1.1 COLOR PALETTE (Primary, Secondary, Tertiary, Accent, Gold, Neutrals)
+     ------------------------------------------------------------------------- */
+  /* Primary (Sovereign Emerald / Deep Teal) */
+  --primary: #11605b;
+  --primary-hover: #0e4d4a;
+  --primary-light: #2a8c83;
+  --primary-dark: #072221;
+  --primary-subtle: rgba(17, 96, 91, 0.12);
+  --primary-ring: rgba(17, 96, 91, 0.25);
 
-  /* Semantic tokens (overridden in night mode) */
-  --bg: var(--ivory);
-  --surface: #fffdf9;
-  --surface-2: var(--sand-100);
-  --surface-3: var(--sand-200);
-  --heading: var(--ink);
-  --text: var(--ink-soft);
-  --muted: #6d7a77;
-  --line: rgba(23, 37, 36, 0.1);
-  --line-strong: rgba(23, 37, 36, 0.18);
-  --accent: var(--coral-deep);
-  --accent-2: var(--teal-700);
-  --brand: var(--teal-900);
-  --glass: rgba(255, 253, 249, 0.72);
-  --shadow-sm: 0 1px 2px rgba(11, 59, 58, 0.06), 0 8px 24px -16px rgba(11, 59, 58, 0.25);
-  --shadow-md: 0 2px 6px rgba(11, 59, 58, 0.06), 0 24px 48px -28px rgba(11, 59, 58, 0.38);
-  --shadow-lg: 0 4px 12px rgba(11, 59, 58, 0.08), 0 40px 80px -36px rgba(11, 59, 58, 0.5);
+  /* Secondary (Deep Lagoon / Abyssal Forest) */
+  --secondary: #0b3b3a;
+  --secondary-hover: #072221;
+  --secondary-light: #10302e;
+  --secondary-dark: #072221;
+  --secondary-subtle: rgba(11, 59, 58, 0.12);
 
-  /* Legacy tokens (used by page-specific stylesheets) */
-  --primary: var(--teal-700);
-  --secondary: var(--teal-900);
-  --tertiary: #4fb3a9;
-  --gold: var(--coral-deep);
-  --silver: var(--ink-soft);
-  --white: #ffffff;
+  /* Tertiary (Luminous Aqua / Caribbean Wave) */
+  --tertiary: #7cc6bc;
+  --tertiary-hover: #5ecfc3;
+  --tertiary-light: #bfe4de;
+  --tertiary-dark: #2a8c83;
+  --tertiary-subtle: rgba(124, 198, 188, 0.15);
+
+  /* Accent (Tropical Warm Coral / Terracotta) */
+  --accent: #e3735a;
+  --accent-hover: #c95a41;
+  --accent-light: #f4b39b;
+  --accent-dark: #9e3821;
+  --accent-subtle: rgba(227, 115, 90, 0.14);
+
+  /* Gold / Metallic Brass (Royal Insignia) */
+  --gold: #c29a57;
+  --gold-hover: #d4a964;
+  --gold-light: #f5c46e;
+  --gold-dark: #78531a;
+  --gold-subtle: rgba(194, 154, 87, 0.14);
+
+  /* Neutrals (Ivory Sands to Carbon Inks) */
+  --neutral-50: #ffffff;
+  --neutral-100: #fdfaf5;
+  --neutral-150: #fbf7f0;
+  --neutral-200: #f5ede1;
+  --neutral-300: #eadfcc;
+  --neutral-400: #dccbb0;
+  --neutral-500: #8fa09b;
+  --neutral-600: #6d7a77;
+  --neutral-700: #4a5957;
+  --neutral-800: #172524;
+  --neutral-900: #0a1c1b;
+
+  /* Aliases for core hues & backward compatibility */
+  --ivory: var(--neutral-150);
+  --sand-50: var(--neutral-100);
+  --sand-100: var(--neutral-200);
+  --sand-200: var(--neutral-300);
+  --sand-300: var(--neutral-400);
+  --teal-950: var(--primary-dark);
+  --teal-900: var(--secondary);
+  --teal-800: var(--primary-hover);
+  --teal-700: var(--primary);
+  --teal-500: var(--primary-light);
+  --aqua: var(--tertiary);
+  --aqua-soft: var(--tertiary-light);
+  --coral: var(--accent);
+  --coral-deep: var(--accent-hover);
+  --coral-soft: var(--accent-light);
+  --brass: var(--gold);
+  --ink: var(--neutral-800);
+  --ink-soft: var(--neutral-700);
+  --white: var(--neutral-50);
   --black: #000000;
-  --light-bg: var(--sand-100);
-  --dark-bg: #0a1f1e;
-  --dark-blue: #10302e;
-  --dark-grey: #132826;
-  --dark-azure: #1e3b3c;
-  --blue: var(--teal-800);
-  --azure: #2a6f73;
-  --pink: #5e1f2b;
+  --silver: var(--neutral-700);
+  --brand: var(--secondary);
+  --accent-2: var(--primary);
 
   /* Province colours */
-  --waikiki: #2a8c83;
+  --waikiki: var(--primary-light);
   --waikiki-hover: #3aa79c;
   --amazonia: #4e8b5a;
   --amazonia-hover: #62a56f;
-  --brazilia: #e2b65c;
+  --brazilia: var(--gold);
   --brazilia-hover: #ecc677;
 
-  /* Typography */
-  --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  --font-sans: "Manrope", "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  /* -------------------------------------------------------------------------
+     1.2 SEMANTIC THEME TOKENS (Overridden in Night Mode)
+     ------------------------------------------------------------------------- */
+  --bg: var(--neutral-150);
+  --surface: #fffdf9;
+  --surface-2: var(--neutral-200);
+  --surface-3: var(--neutral-300);
+  --surface-card: var(--surface);
+  --heading: var(--neutral-800);
+  --text: var(--neutral-700);
+  --text-muted: var(--neutral-600);
+  --muted: var(--neutral-600);
+  --line: rgba(23, 37, 36, 0.1);
+  --line-strong: rgba(23, 37, 36, 0.18);
+  --glass: rgba(255, 253, 249, 0.72);
+  --light-bg: var(--neutral-200);
+  --dark-bg: var(--neutral-900);
+  --dark-blue: #10302e;
+  --dark-grey: #132826;
+  --dark-azure: #1e3b3c;
+  --blue: var(--primary-hover);
+  --azure: #2a6f73;
+  --pink: #5e1f2b;
 
-  /* Layout */
+  /* -------------------------------------------------------------------------
+     1.3 LAYOUT & SIZING
+     ------------------------------------------------------------------------- */
+  --maxw: 1920px;
   --header-h: 84px;
   --header-h-compact: 68px;
   --gutter: clamp(1.25rem, 4vw, 3.5rem);
-  --maxw: 1920px;
   --section-pad: clamp(4.5rem, 9vw, 8.5rem);
+  --section-padding: var(--section-pad);
+  --card-padding: 2.25rem;
+  --card-gap: clamp(1.25rem, 2.2vw, 2rem);
+  --btn-height: 52px;
+  --btn-padding-x: 1.6rem;
+
+  /* -------------------------------------------------------------------------
+     1.4 SPACING UNITS
+     ------------------------------------------------------------------------- */
+  --space-2xs: 0.15rem;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4.5rem;
+
+  /* -------------------------------------------------------------------------
+     1.5 BORDERS & RADIUS
+     ------------------------------------------------------------------------- */
+  --radius-2xs: 4px;
+  --radius-xs: 6px;
   --radius-sm: 12px;
+  --radius-md: 18px;
   --radius: 22px;
   --radius-lg: 32px;
+  --radius-xl: 36px;
+  --radius-pill: 999px;
+  --card-border-radius: var(--radius);
+  --border-width-hairline: 1px;
+  --border-width: 1.5px;
+  --border-width-thick: 2px;
+  --border-subtle: var(--line);
+  --border-card: var(--line-strong);
 
-  /* Motion */
+  /* -------------------------------------------------------------------------
+     1.6 ELEVATION & SHADOWS
+     ------------------------------------------------------------------------- */
+  --shadow-sm: 0 1px 2px rgba(11, 59, 58, 0.06), 0 8px 24px -16px rgba(11, 59, 58, 0.25);
+  --shadow-md: 0 2px 6px rgba(11, 59, 58, 0.06), 0 24px 48px -28px rgba(11, 59, 58, 0.38);
+  --shadow-lg: 0 4px 12px rgba(11, 59, 58, 0.08), 0 40px 80px -36px rgba(11, 59, 58, 0.5);
+  --shadow-btn: 0 12px 30px -16px rgba(11, 59, 58, 0.7);
+  --shadow-btn-hover: 0 18px 40px -16px rgba(201, 90, 65, 0.7);
+  --card-shadow: var(--shadow-sm);
+  --card-shadow-hover: var(--shadow-lg);
+
+  /* -------------------------------------------------------------------------
+     1.7 BLUR & FILTERS
+     ------------------------------------------------------------------------- */
+  --blur-xs: 2px;
+  --blur-sm: 4px;
+  --blur-md: 12px;
+  --blur-lg: 18px;
+  --blur-xl: 24px;
+
+  /* -------------------------------------------------------------------------
+     1.8 TYPOGRAPHY
+     ------------------------------------------------------------------------- */
+  --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-sans: "Manrope", "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.85;
+
+  /* -------------------------------------------------------------------------
+     1.9 MOTION & TIMING
+     ------------------------------------------------------------------------- */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
   --dur-fast: 0.25s;
   --dur: 0.6s;
   --dur-slow: 1.1s;
-
-  /* Legacy motion/spacing tokens */
   --transition-easing: var(--ease-out);
   --animation-duration: 0.8s;
   --base-animation-delay: 0.05s;
   --animation-delay-increment: 0.08s;
-  --section-padding: var(--section-pad);
-  --card-padding: 2.25rem;
-  --card-gap: clamp(1.25rem, 2.2vw, 2rem);
-  --card-border-radius: var(--radius);
-  --card-shadow: var(--shadow-sm);
-  --card-shadow-hover: var(--shadow-lg);
 
-  /* Z-index */
+  /* -------------------------------------------------------------------------
+     1.10 Z-INDEX
+     ------------------------------------------------------------------------- */
   --z-curtain: 9000;
   --z-menu: 1900;
   --z-header: 2000;
@@ -184,14 +292,14 @@ strong {
 }
 
 ::selection {
-  background: var(--coral);
+  background: var(--accent);
   color: #fff;
 }
 
 :focus-visible {
-  outline: 2px solid var(--coral);
+  outline: var(--border-width-thick) solid var(--accent);
   outline-offset: 3px;
-  border-radius: 6px;
+  border-radius: var(--radius-xs);
 }
 
 section {
@@ -223,27 +331,12 @@ main {
 }
 
 .skip-link {
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  z-index: calc(var(--z-curtain) + 1);
-  padding: 0.75rem 1.25rem;
-  border-radius: 999px;
-  background: var(--coral);
-  color: #fff;
-  font-weight: 700;
-  text-decoration: none;
-  transform: translateY(-200%);
-  transition: transform var(--dur-fast) var(--ease-out);
-}
-
-.skip-link:focus {
-  transform: none;
+  display: none !important;
 }
 
 /* Thin, warm scrollbar */
 html {
-  scrollbar-color: var(--teal-500) var(--surface-2);
+  scrollbar-color: var(--primary-light) var(--surface-2);
   scrollbar-width: thin;
 }
 
@@ -338,7 +431,7 @@ html {
   z-index: var(--z-curtain);
   display: grid;
   place-items: center;
-  background: var(--teal-950);
+  background: var(--primary-dark);
   color: var(--ivory);
   pointer-events: none;
   animation: curtainOut 0.9s var(--ease-in-out) 0.15s both;
@@ -357,7 +450,7 @@ html {
   right: 0;
   bottom: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--aqua), var(--coral));
+  background: linear-gradient(90deg, var(--tertiary), var(--accent));
   transform-origin: left;
   animation: curtainBar 0.6s var(--ease-out) both;
 }
@@ -379,7 +472,7 @@ html.is-leaving .page-curtain .brand-mark {
   right: 0;
   height: 3px;
   z-index: calc(var(--z-header) + 1);
-  background: linear-gradient(90deg, var(--aqua), var(--coral));
+  background: linear-gradient(90deg, var(--tertiary), var(--accent));
   transform: scaleX(var(--progress, 0));
   transform-origin: left;
   pointer-events: none;
@@ -412,9 +505,9 @@ html.is-leaving .page-curtain .brand-mark {
   inset: 0;
   z-index: -1;
   background: var(--glass);
-  backdrop-filter: blur(18px) saturate(1.5);
-  -webkit-backdrop-filter: blur(18px) saturate(1.5);
-  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(var(--blur-lg)) saturate(1.5);
+  -webkit-backdrop-filter: blur(var(--blur-lg)) saturate(1.5);
+  border-bottom: var(--border-width-hairline) solid var(--line);
   opacity: 0;
   transition: opacity 0.5s var(--ease-out);
 }
@@ -467,23 +560,17 @@ html.menu-open .site-header::before {
 }
 
 .brand-word {
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
+  align-items: center;
   font-family: var(--font-display);
-  font-size: 1.55rem;
-  font-weight: 500;
-  letter-spacing: -0.01em;
+  font-size: clamp(1.9rem, 2.3vw, 2.3rem);
+  font-weight: 480;
+  letter-spacing: -0.015em;
   line-height: 1;
 }
 
 .brand-word small {
-  margin-top: 0.3rem;
-  font-family: var(--font-sans);
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  opacity: 0.7;
+  display: none !important;
 }
 
 .primary-nav {
@@ -539,7 +626,7 @@ html.menu-open .site-header::before {
   height: 5px;
   margin-left: -2.5px;
   border-radius: 50%;
-  background: var(--coral);
+  background: var(--accent);
 }
 
 .header-actions {
@@ -558,9 +645,9 @@ html.menu-open .site-header::before {
   height: 44px;
   min-width: 44px;
   padding: 0 0.9rem;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: transparent;
-  border: 1px solid currentColor;
+  border: var(--border-width-hairline) solid currentColor;
   border-color: color-mix(in srgb, currentColor 22%, transparent);
   color: inherit;
   font: 700 0.78rem/1 var(--font-sans);
@@ -644,7 +731,7 @@ html.menu-open .site-header::before {
   left: 0;
   width: 100%;
   height: 1.6px;
-  border-radius: 2px;
+  border-radius: var(--radius-2xs);
   background: currentColor;
   transition:
     transform 0.5s var(--ease-out),
@@ -697,7 +784,7 @@ html.menu-open .menu-label-close {
   background:
     radial-gradient(900px 600px at 85% 10%, rgba(227, 115, 90, 0.18), transparent 60%),
     radial-gradient(900px 700px at 0% 100%, rgba(124, 198, 188, 0.16), transparent 60%),
-    var(--teal-950);
+    var(--primary-dark);
   clip-path: circle(0 at var(--cx, calc(100% - 4rem)) var(--cy, 2.5rem));
   visibility: hidden;
   transition:
@@ -733,8 +820,8 @@ html.menu-open {
 .menu-group h2 {
   margin-bottom: 1.2rem;
   padding-bottom: 0.8rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  color: var(--aqua);
+  border-bottom: var(--border-width-hairline) solid rgba(255, 255, 255, 0.12);
+  color: var(--tertiary);
   font: 700 0.72rem/1 var(--font-sans);
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -763,7 +850,7 @@ html.menu-open {
 
 .menu-group a:hover,
 .menu-group a[aria-current="page"] {
-  color: var(--coral-soft);
+  color: var(--accent-light);
   transform: translateX(6px);
 }
 
@@ -772,7 +859,7 @@ html.menu-open {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--coral);
+  background: var(--accent);
   transform: translateY(-3px);
 }
 
@@ -802,7 +889,7 @@ html.menu-open .menu-aside {
   padding: 1.75rem;
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: var(--border-width-hairline) solid rgba(255, 255, 255, 0.12);
   background-clip: padding-box;
 }
 
@@ -821,7 +908,7 @@ html.menu-open .menu-aside {
 }
 
 .menu-clock-label {
-  color: var(--aqua);
+  color: var(--tertiary);
   font: 700 0.72rem/1.4 var(--font-sans);
   letter-spacing: 0.24em;
   text-transform: uppercase;
@@ -832,12 +919,12 @@ html.menu-open .menu-aside {
   align-items: center;
   gap: 0.4rem;
   padding: 0.25rem 0.65rem;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: rgba(227, 184, 114, 0.14);
-  border: 1px solid rgba(227, 184, 114, 0.28);
+  border: var(--border-width-hairline) solid rgba(227, 184, 114, 0.28);
   font: 600 0.76rem/1.2 var(--font-sans);
   letter-spacing: 0.02em;
-  color: var(--brass);
+  color: var(--gold);
 }
 
 .menu-weather .weather-icon {
@@ -873,7 +960,7 @@ html.menu-open .menu-aside {
   flex-wrap: wrap;
   gap: 0.6rem;
   padding-top: 1.25rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: var(--border-width-hairline) solid rgba(255, 255, 255, 0.1);
 }
 
 .menu-chip {
@@ -881,8 +968,8 @@ html.menu-open .menu-aside {
   align-items: center;
   gap: 0.5rem;
   padding: 0.6rem 1rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-pill);
+  border: var(--border-width-hairline) solid rgba(255, 255, 255, 0.18);
   background: transparent;
   color: var(--ivory);
   font: 600 0.85rem/1 var(--font-sans);
@@ -900,7 +987,7 @@ html.menu-open .menu-aside {
 
 .menu-chip.is-active {
   background: var(--ivory);
-  color: var(--teal-950);
+  color: var(--primary-dark);
   border-color: var(--ivory);
 }
 
@@ -923,7 +1010,7 @@ html.menu-open .menu-aside {
   min-height: 100svh;
   padding: calc(var(--header-h) + 3rem) var(--gutter) clamp(3.5rem, 9vh, 6.5rem);
   overflow: hidden;
-  background: var(--teal-950);
+  background: var(--primary-dark);
   color: #fff;
   text-align: left;
 }
@@ -970,7 +1057,7 @@ html.menu-open .menu-aside {
   display: inline-flex;
   align-items: center;
   gap: 0.9rem;
-  color: var(--coral-soft);
+  color: var(--accent-light);
   font: 700 0.76rem/1.4 var(--font-sans);
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -980,7 +1067,7 @@ html.menu-open .menu-aside {
 .hero-eyebrow::before {
   content: "";
   width: 44px;
-  height: 1.5px;
+  height: var(--border-width);
   background: currentColor;
   transform-origin: left;
   animation: lineIn 1s var(--ease-out) 0.8s both;
@@ -1002,7 +1089,7 @@ html.menu-open .menu-aside {
 .display em {
   font-style: italic;
   font-weight: 300;
-  color: var(--coral-soft);
+  color: var(--accent-light);
 }
 
 .hero-lead {
@@ -1120,7 +1207,7 @@ html.menu-open .menu-aside {
   width: clamp(160px, 22vw, 320px);
   aspect-ratio: 1;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, #f8c6a8, var(--coral) 70%);
+  background: radial-gradient(circle at 35% 35%, #f8c6a8, var(--accent) 70%);
   opacity: 0.85;
   z-index: -1;
   animation: sunFloat 9s var(--ease-in-out) infinite;
@@ -1142,7 +1229,7 @@ html.menu-open .menu-aside {
 }
 
 .hero--compact .hero-title em {
-  color: var(--coral-deep);
+  color: var(--accent-hover);
 }
 
 .hero--compact .hero-lead {
@@ -1150,7 +1237,7 @@ html.menu-open .menu-aside {
 }
 
 .hero--compact .hero-eyebrow {
-  color: var(--coral-deep);
+  color: var(--accent-hover);
 }
 
 /* Section headings */
@@ -1220,7 +1307,7 @@ html.menu-open .menu-aside {
 .eyebrow::before {
   content: "";
   width: 32px;
-  height: 1.5px;
+  height: var(--border-width);
   background: currentColor;
 }
 
@@ -1235,7 +1322,7 @@ html.menu-open .menu-aside {
 }
 
 .display em {
-  color: var(--coral-deep);
+  color: var(--accent-hover);
 }
 
 .light-bg {
@@ -1249,11 +1336,11 @@ html.menu-open .menu-aside {
   background:
     radial-gradient(900px 500px at 90% 0%, rgba(227, 115, 90, 0.16), transparent 60%),
     radial-gradient(900px 600px at 0% 100%, rgba(124, 198, 188, 0.14), transparent 60%),
-    var(--teal-950);
+    var(--primary-dark);
   color: rgba(251, 247, 240, 0.8);
   --heading: var(--ivory);
   --text: rgba(251, 247, 240, 0.78);
-  --accent: var(--coral-soft);
+  --accent: var(--accent-light);
   --line: rgba(255, 255, 255, 0.12);
   --surface: rgba(255, 255, 255, 0.04);
 }
@@ -1274,7 +1361,7 @@ html.menu-open .menu-aside {
   isolation: isolate;
   overflow: hidden;
   padding: var(--card-padding) 2rem 2rem;
-  border: 1.5px solid var(--line-strong);
+  border: var(--border-width) solid var(--line-strong);
   border-radius: var(--radius);
   background: var(--surface);
   background-clip: padding-box;
@@ -1305,7 +1392,7 @@ html.menu-open .menu-aside {
   top: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--teal-500), var(--aqua) 45%, var(--coral));
+  background: linear-gradient(90deg, var(--primary-light), var(--tertiary) 45%, var(--accent));
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.8s var(--ease-out);
@@ -1352,9 +1439,9 @@ html.menu-open .menu-aside {
   width: 64px;
   height: 64px;
   margin-bottom: 1.6rem;
-  border-radius: 22px 22px 22px 8px;
+  border-radius: var(--radius) var(--radius) var(--radius) var(--radius-xs);
   background: linear-gradient(140deg, var(--surface-2), var(--surface));
-  border: 1px solid var(--line);
+  border: var(--border-width-hairline) solid var(--line);
   font-size: 1.8rem;
   transition:
     transform 0.8s var(--ease-spring),
@@ -1370,7 +1457,7 @@ html.menu-open .menu-aside {
 
 .card:hover .card-icon {
   transform: rotate(-8deg) scale(1.08);
-  border-radius: 22px;
+  border-radius: var(--radius);
 }
 
 .stat-card {
@@ -1380,7 +1467,7 @@ html.menu-open .menu-aside {
 
 .stat-card h3 {
   margin-bottom: 0.8rem;
-  color: var(--accent-2);
+  color: var(--primary);
   font-family: var(--font-sans);
   font-size: 0.78rem;
   font-weight: 700;
@@ -1430,9 +1517,9 @@ html.menu-open .menu-aside {
 .liquid {
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  border: var(--border-width-hairline) solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(var(--blur-md));
+  -webkit-backdrop-filter: blur(var(--blur-md));
 }
 
 /* 9. NARRATIVE & TABLES ==================================================== */
@@ -1500,7 +1587,7 @@ html.menu-open .menu-aside {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--coral);
+  background: var(--accent);
 }
 
 .narrative-text {
@@ -1515,7 +1602,7 @@ html.menu-open .menu-aside {
 .narrative-content > .section-title + .narrative-text::first-letter {
   float: left;
   margin: 0.08em 0.14em 0 0;
-  color: var(--coral-deep);
+  color: var(--accent-hover);
   font-family: var(--font-display);
   font-size: 4.6em;
   font-weight: 300;
@@ -1537,7 +1624,7 @@ html.menu-open .menu-aside {
   display: block !important;
   overflow: auto;
   padding: 0;
-  border: 1.5px solid var(--line-strong);
+  border: var(--border-width) solid var(--line-strong);
   border-radius: var(--radius);
   background: var(--surface);
   background-clip: padding-box;
@@ -1560,13 +1647,13 @@ html.menu-open .menu-aside {
 }
 
 .table tbody tr:hover {
-  background: color-mix(in srgb, var(--aqua) 16%, transparent);
+  background: color-mix(in srgb, var(--tertiary) 16%, transparent);
 }
 
 .table th,
 .table td {
   padding: 0.9rem 1.1rem;
-  border-bottom: 1px solid var(--line);
+  border-bottom: var(--border-width-hairline) solid var(--line);
   text-align: left;
   vertical-align: top;
 }
@@ -1574,7 +1661,7 @@ html.menu-open .menu-aside {
 .table thead th {
   position: sticky;
   top: 0;
-  background: var(--teal-900);
+  background: var(--secondary);
   color: var(--ivory);
   font-size: 0.74rem;
   font-weight: 700;
@@ -1609,8 +1696,8 @@ html.menu-open .menu-aside {
 .faq-item {
   margin-bottom: 0.9rem;
   overflow: hidden;
-  border: 1.5px solid var(--line-strong);
-  border-radius: 18px;
+  border: var(--border-width) solid var(--line-strong);
+  border-radius: var(--radius-md);
   background: var(--surface);
   background-clip: padding-box;
   box-shadow: 0 0 0 1px rgba(17, 96, 91, 0.06), var(--shadow-sm);
@@ -1652,7 +1739,7 @@ html.menu-open .menu-aside {
 
 .faq-item:hover .faq-question,
 .faq-item[open] .faq-question {
-  color: var(--accent-2);
+  color: var(--primary);
 }
 
 .faq-question-text {
@@ -1670,7 +1757,7 @@ html.menu-open .menu-aside {
   height: 30px;
   flex-shrink: 0;
   padding: 6px;
-  border-radius: 10px;
+  border-radius: var(--radius-sm);
   background: var(--surface-2);
   box-sizing: content-box;
 }
@@ -1683,7 +1770,7 @@ html.menu-open .menu-aside {
   height: 36px;
   flex-shrink: 0;
   border-radius: 50%;
-  border: 1px solid var(--line-strong);
+  border: var(--border-width-hairline) solid var(--line-strong);
   transition:
     transform 0.6s var(--ease-spring),
     background-color 0.3s,
@@ -1696,8 +1783,8 @@ html.menu-open .menu-aside {
   position: absolute;
   width: 12px;
   height: 1.6px;
-  border-radius: 2px;
-  background: var(--accent-2);
+  border-radius: var(--radius-2xs);
+  background: var(--primary);
   transition:
     transform 0.5s var(--ease-out),
     background-color 0.3s;
@@ -1709,8 +1796,8 @@ html.menu-open .menu-aside {
 
 .faq-item[open] .faq-toggle {
   transform: rotate(180deg);
-  background: var(--coral);
-  border-color: var(--coral);
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
 .faq-item[open] .faq-toggle::before,
@@ -1733,7 +1820,7 @@ html.menu-open .menu-aside {
   padding: 3rem;
   border-radius: var(--radius-lg);
   background: var(--surface-2);
-  border: 1.5px solid var(--line-strong);
+  border: var(--border-width) solid var(--line-strong);
   background-clip: padding-box;
   box-shadow: 0 0 0 1px rgba(17, 96, 91, 0.05), var(--shadow-sm);
   text-align: center;
@@ -1759,16 +1846,16 @@ html.menu-open .menu-aside {
   align-items: center;
   justify-content: center;
   gap: 0.65rem;
-  min-height: 52px;
-  padding: 0 1.6rem;
-  border-radius: 999px;
-  background: var(--teal-900);
+  min-height: var(--btn-height);
+  padding: 0 var(--btn-padding-x);
+  border-radius: var(--radius-pill);
+  background: var(--secondary);
   color: var(--ivory);
   font: 700 0.9rem/1 var(--font-sans);
   letter-spacing: 0.02em;
   text-decoration: none;
   cursor: pointer;
-  box-shadow: 0 12px 30px -16px rgba(11, 59, 58, 0.7);
+  box-shadow: var(--shadow-btn);
   transition:
     transform 0.5s var(--ease-spring),
     box-shadow 0.5s var(--ease-out),
@@ -1785,7 +1872,7 @@ html.menu-open .menu-aside {
   inset: 0;
   z-index: -1;
   border-radius: inherit;
-  background: var(--coral);
+  background: var(--accent);
   transform: translate3d(-101%, 0, 0);
   transition: transform 0.6s var(--ease-out);
 }
@@ -1803,7 +1890,7 @@ html.menu-open .menu-aside {
 .menu-btn:hover,
 .cta-btn:hover,
 .hero-btn:hover {
-  box-shadow: 0 18px 40px -16px rgba(201, 90, 65, 0.7);
+  box-shadow: var(--shadow-btn-hover);
 }
 
 .section-link-btn::after,
@@ -1819,17 +1906,17 @@ html.menu-open .menu-aside {
 }
 
 .btn--coral {
-  background: var(--coral);
+  background: var(--accent);
 }
 
 .btn--coral::before {
-  background: var(--teal-900);
+  background: var(--secondary);
 }
 
 .btn--ghost {
   background: transparent;
   color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.45);
+  border: var(--border-width-hairline) solid rgba(255, 255, 255, 0.45);
   box-shadow: none;
 }
 
@@ -1838,7 +1925,7 @@ html.menu-open .menu-aside {
 }
 
 .btn--ghost:hover {
-  color: var(--teal-950);
+  color: var(--primary-dark);
 }
 
 .section-link-wrapper,
@@ -1853,7 +1940,7 @@ html.menu-open .menu-aside {
 
 .text-link {
   position: relative;
-  color: var(--accent-2);
+  color: var(--primary);
   font-weight: 700;
   text-decoration: none;
   background: linear-gradient(currentColor, currentColor) left bottom / 0 1.5px no-repeat;
@@ -1892,7 +1979,7 @@ video {
   position: relative;
   overflow: hidden;
   padding: 1.35rem 0;
-  background: var(--teal-900);
+  background: var(--secondary);
   color: var(--ivory);
   -webkit-mask: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
   mask: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
@@ -1922,7 +2009,7 @@ video {
 
 .marquee-item::after {
   content: "✦";
-  color: var(--coral);
+  color: var(--accent);
   font-size: 0.8em;
   font-style: normal;
 }
@@ -1936,9 +2023,9 @@ video {
   justify-content: center;
   padding: 0.85rem var(--gutter);
   background: var(--glass);
-  backdrop-filter: blur(16px) saturate(1.4);
-  -webkit-backdrop-filter: blur(16px) saturate(1.4);
-  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(var(--blur-lg)) saturate(1.4);
+  -webkit-backdrop-filter: blur(var(--blur-lg)) saturate(1.4);
+  border-bottom: var(--border-width-hairline) solid var(--line);
   transition: top 0.6s var(--ease-out);
 }
 
@@ -1950,7 +2037,7 @@ html.header-hidden .subnav {
   display: flex;
   gap: 0.35rem;
   padding: 0.3rem;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--surface-2);
   list-style: none;
   overflow-x: auto;
@@ -1960,7 +2047,7 @@ html.header-hidden .subnav {
 .subnav-list a {
   display: block;
   padding: 0.6rem 1.2rem;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   color: var(--text);
   font-size: 0.86rem;
   font-weight: 700;
@@ -1977,14 +2064,14 @@ html.header-hidden .subnav {
 }
 
 .subnav-list a[aria-current="page"] {
-  background: var(--teal-900);
+  background: var(--secondary);
   color: var(--ivory);
   box-shadow: var(--shadow-sm);
 }
 
 /* 14. NEXT CHAPTER ========================================================= */
 .next-chapter {
-  padding: 0 var(--gutter) var(--section-pad);
+  padding: var(--gutter) var(--section-pad);
 }
 
 .next-card {
@@ -1992,13 +2079,13 @@ html.header-hidden .subnav {
   isolation: isolate;
   display: flex;
   align-items: flex-end;
-  min-height: clamp(320px, 42vw, 520px);
+  min-height: clamp(400px, 50vw, 800px);
   max-width: var(--maxw);
   margin: 0 auto;
   padding: clamp(1.75rem, 4vw, 3.5rem);
   overflow: hidden;
   border-radius: var(--radius-lg);
-  background: var(--teal-900);
+  background: var(--secondary);
   color: #fff;
   text-decoration: none;
   box-shadow: var(--shadow-lg);
@@ -2043,7 +2130,7 @@ html.header-hidden .subnav {
 
 .next-eyebrow {
   grid-column: 1 / -1;
-  color: var(--coral-soft);
+  color: var(--accent-light);
   font: 700 0.74rem/1.4 var(--font-sans);
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -2063,7 +2150,7 @@ html.header-hidden .subnav {
   width: clamp(60px, 7vw, 92px);
   aspect-ratio: 1;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: var(--border-width-hairline) solid rgba(255, 255, 255, 0.4);
   font-size: 1.6rem;
   transition:
     background-color 0.5s,
@@ -2072,8 +2159,8 @@ html.header-hidden .subnav {
 }
 
 .next-card:hover .next-arrow {
-  background: var(--coral);
-  border-color: var(--coral);
+  background: var(--accent);
+  border-color: var(--accent);
   transform: rotate(-45deg);
 }
 
@@ -2082,7 +2169,7 @@ html.header-hidden .subnav {
   position: relative;
   margin-top: 90px;
   padding: clamp(4rem, 8vw, 6rem) var(--gutter) 2rem;
-  background: var(--teal-950);
+  background: var(--primary-dark);
   color: rgba(251, 247, 240, 0.72);
   font-size: 0.95rem;
   overflow: hidden;
@@ -2094,7 +2181,7 @@ html.header-hidden .subnav {
   top: -89px;
   width: 100%;
   height: 90px;
-  fill: var(--teal-950);
+  fill: var(--primary-dark);
   pointer-events: none;
 }
 
@@ -2139,7 +2226,7 @@ html.header-hidden .subnav {
 
 .footer-col h2 {
   margin-bottom: 1.1rem;
-  color: var(--aqua);
+  color: var(--tertiary);
   font: 700 0.7rem/1 var(--font-sans);
   letter-spacing: 0.26em;
   text-transform: uppercase;
@@ -2154,7 +2241,7 @@ html.header-hidden .subnav {
 .footer-col a {
   color: rgba(251, 247, 240, 0.78);
   text-decoration: none;
-  background: linear-gradient(var(--coral), var(--coral)) left bottom / 0 1px no-repeat;
+  background: linear-gradient(var(--accent), var(--accent)) left bottom / 0 1px no-repeat;
   transition:
     color 0.3s,
     background-size 0.5s var(--ease-out);
@@ -2188,7 +2275,7 @@ html.header-hidden .subnav {
   justify-content: space-between;
   gap: 1rem;
   padding-top: 1.75rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: var(--border-width-hairline) solid rgba(255, 255, 255, 0.1);
   font-size: 0.85rem;
 }
 
@@ -2203,7 +2290,7 @@ html.header-hidden .subnav {
 }
 
 .footer-bottom a:hover {
-  color: var(--coral-soft);
+  color: var(--accent-light);
 }
 
 /* 16. FLOATING UI ========================================================== */
@@ -2237,7 +2324,7 @@ html.header-hidden .subnav {
 
 .section-rail .rail-label {
   padding: 0.3rem 0.75rem;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--surface);
   box-shadow: var(--shadow-sm);
   font-size: 0.76rem;
@@ -2274,13 +2361,13 @@ html.header-hidden .subnav {
 
 .section-rail a:hover .rail-dot {
   transform: scale(1.4);
-  background: var(--accent-2);
+  background: var(--primary);
 }
 
 .section-rail a.is-active .rail-dot {
   height: 22px;
-  border-radius: 6px;
-  background: var(--coral);
+  border-radius: var(--radius-xs);
+  background: var(--accent);
 }
 
 .to-top {
@@ -2322,13 +2409,13 @@ html.header-hidden .subnav {
 .to-top .ring-bg {
   fill: none;
   stroke: var(--line);
-  stroke-width: 2;
+  stroke-width: var(--border-width-thick);
 }
 
 .to-top .ring {
   fill: none;
-  stroke: var(--coral);
-  stroke-width: 2;
+  stroke: var(--accent);
+  stroke-width: var(--border-width-thick);
   stroke-linecap: round;
   stroke-dasharray: 151;
   stroke-dashoffset: calc(151 - 151 * var(--progress, 0));
@@ -2354,19 +2441,28 @@ html.header-hidden .subnav {
   --muted: #8fa09b;
   --line: rgba(255, 255, 255, 0.08);
   --line-strong: rgba(255, 255, 255, 0.16);
-  --accent: var(--coral-soft);
-  --accent-2: var(--aqua);
+  --accent: var(--accent-light);
+  --accent-2: var(--tertiary);
   --glass: rgba(10, 28, 27, 0.72);
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 30px -18px rgba(0, 0, 0, 0.7);
   --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.3), 0 24px 48px -28px rgba(0, 0, 0, 0.85);
   --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.35), 0 40px 80px -36px rgba(0, 0, 0, 0.9);
+  --shadow-btn: 0 12px 30px -16px rgba(0, 0, 0, 0.8);
+  --shadow-btn-hover: 0 18px 40px -16px rgba(124, 198, 188, 0.5);
+
+  /* Primary, secondary, tertiary semantic dark overrides */
+  --primary: var(--tertiary);
+  --primary-hover: var(--tertiary-hover);
+  --secondary: #f4ece0;
+  --secondary-hover: #ffffff;
+  --tertiary: #7cc6bc;
+  --gold: var(--accent-light);
 
   /* Legacy tokens re-pointed for page stylesheets */
-  --secondary: #f4ece0;
   --silver: #c2ccc8;
-  --primary: var(--aqua);
-  --tertiary: var(--aqua);
-  --gold: var(--coral-soft);
+  --aqua: var(--tertiary);
+  --coral: var(--accent);
+  --coral-soft: var(--accent-light);
   --light-bg: #0e2423;
   --dark-bg: #0a1c1b;
   --dark-blue: #112a28;
@@ -2416,8 +2512,8 @@ html.header-hidden .subnav {
 .body-dark .section-link-btn,
 .body-dark .menu-btn,
 .body-dark .cta-btn {
-  background: var(--aqua);
-  color: var(--teal-950);
+  background: var(--tertiary);
+  color: var(--primary-dark);
 }
 
 .body-dark .btn:hover,
@@ -2428,8 +2524,8 @@ html.header-hidden .subnav {
 }
 
 .body-dark .subnav-list a[aria-current="page"] {
-  background: var(--aqua);
-  color: var(--teal-950);
+  background: var(--tertiary);
+  color: var(--primary-dark);
 }
 
 .body-dark .marquee {
@@ -2485,8 +2581,12 @@ html.header-hidden .subnav {
     --header-h-compact: 64px;
   }
 
+  .brand-word {
+    font-size: 1.65rem;
+  }
+
   .brand-word small {
-    display: none;
+    display: none !important;
   }
 
   .brand-mark {
