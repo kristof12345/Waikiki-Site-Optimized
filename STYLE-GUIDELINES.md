@@ -97,9 +97,14 @@ All motion follows natural organic physics with custom cubic Bézier curves:
 ## 5. UI Components
 
 ### Navigation & Header
+- **Sovereign Heraldic Emblem (`icons/logo.svg`)**: Standalone detailed vector SVG asset incorporating Waikiki's constitutional national symbols:
+  - **The Three Pyramids**: Central Great Pyramid with 6 architectural ashlar masonry courses, gilded capstone and star apex, flanked by the stepped pyramids of Amazonia and Brazilia provinces with faceted lighting.
+  - **Tropical Palms**: Segmented coconut palm tree with textured bark rings and 7 feathered, arching fronds with individual leaf pinnae and tropical coconut clusters.
+  - **Sovereign Elephant**: Heraldic elephant with raised trunk, polished ivory tusk, sculpted ear, and royal embroidered ceremonial saddle blanket.
+  - **Laurel Wreath & Waves**: Twin golden laurel branches bound by a heraldic knot, hovering over dual ocean waves.
 - **Fixed Glass Bar**: Glassmorphism with `backdrop-filter: blur(20px)` and subtle sand border.
 - **Nav Links**: Magnetic subtle hover lift with animated underline pill.
-- **Overlay Menu**: Full-screen luxury drawer featuring multi-column categorized site links and a live Havana/Nova Aurelia clock.
+- **Overlay Menu**: Full-screen luxury drawer featuring multi-column categorized site links, stable typography (no font change on hover), and a live Havana/Nova Aurelia clock.
 - **Subnavigation Rail**: Sticky horizontal pill menu for deep page section jumps with active indicator tracking.
 
 ### Cards & Surfaces

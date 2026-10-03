@@ -60,7 +60,7 @@ The Sovereign Nation of Waikiki web portal is engineered as a high-performance, 
 │   ├── bio/                # Királyi életrajzok
 │   └── ...                 # 36 additional Hungarian topic pages
 ├── images/                 # Optimized high-resolution photography & web assets
-├── icons/                  # Vector heraldic symbols, flags, coat of arms, and SVG icons
+├── icons/                  # Vector heraldic symbols (icons/logo.svg), flags, coat of arms
 ├── index.html              # Multi-lingual entry portal (English & Magyar selector)
 ├── STYLE-GUIDELINES.md     # Visual design system, token catalog, and typography rules
 └── ARCHITECTURE.md         # This document

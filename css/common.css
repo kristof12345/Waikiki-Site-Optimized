@@ -454,33 +454,16 @@ html.menu-open .site-header::before {
 }
 
 .brand-mark {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   flex-shrink: 0;
-  overflow: visible;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.6s var(--ease-spring);
 }
 
-.brand-mark .brand-sun {
-  fill: var(--coral);
-  transform-origin: 20px 21px;
-  transition: transform 0.8s var(--ease-spring);
-}
-
-.brand-mark .brand-wave {
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.7;
-  stroke-linecap: round;
-}
-
-.brand-mark .brand-ring {
-  fill: none;
-  stroke: currentColor;
-  stroke-opacity: 0.35;
-}
-
-.brand:hover .brand-sun {
-  transform: translateY(-2px) scale(1.08);
+.brand:hover .brand-mark {
+  transform: translateY(-2px) scale(1.06);
 }
 
 .brand-word {
@@ -775,14 +758,12 @@ html.menu-open {
   text-decoration: none;
   transition:
     color 0.3s,
-    transform 0.5s var(--ease-out),
-    font-style 0.3s;
+    transform 0.5s var(--ease-out);
 }
 
 .menu-group a:hover,
 .menu-group a[aria-current="page"] {
   color: var(--coral-soft);
-  font-style: italic;
   transform: translateX(6px);
 }
 
@@ -1237,9 +1218,10 @@ html.menu-open .menu-aside {
 /* 8. CARDS & STATS ========================================================= */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
   gap: var(--card-gap);
-  max-width: var(--maxw);
+  max-width: min(100%, 1680px);
+  width: 100%;
   margin: 2.5rem auto 0;
 }
 
@@ -2080,7 +2062,7 @@ html.header-hidden .subnav {
   display: grid;
   grid-template-columns: minmax(260px, 1.4fr) repeat(5, minmax(0, 1fr));
   gap: 2.5rem 2rem;
-  padding-bottom: 3.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .footer-brand .brand {
@@ -2135,7 +2117,8 @@ html.header-hidden .subnav {
 
 .footer-mega {
   display: block;
-  margin: 0 0 -0.12em;
+  margin: -1.75rem 0 0.5rem;
+  transform: translateY(-1.5rem);
   color: transparent;
   font-family: var(--font-display);
   font-size: clamp(4.5rem, 19vw, 17rem);

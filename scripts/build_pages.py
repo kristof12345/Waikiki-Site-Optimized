@@ -184,14 +184,7 @@ LEGACY_RGB = {
     "16, 33, 53": "17, 42, 40",
 }
 
-BRAND_MARK = (
-    '<svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">'
-    '<circle class="brand-ring" cx="20" cy="20" r="19"/>'
-    '<path class="brand-sun" d="M11.5 21a8.5 8.5 0 0 1 17 0z"/>'
-    '<path class="brand-wave" d="M7 25.4c2.2 0 2.2-1.6 4.3-1.6s2.2 1.6 4.3 1.6 2.2-1.6 4.4-1.6 2.2 1.6 4.3 1.6 2.2-1.6 4.4-1.6 2.1 1.6 4.3 1.6"/>'
-    '<path class="brand-wave" d="M10 29.6c2 0 2-1.4 4-1.4s2 1.4 4 1.4 2-1.4 4-1.4 2 1.4 4 1.4 2-1.4 4-1.4"/>'
-    "</svg>"
-)
+LOGO_FILE = "icons/logo.svg"
 
 GLOBE_ICON = (
     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">'
@@ -284,6 +277,12 @@ class Page:
     def asset(self, path: str) -> str:
         return f"{self.root_prefix}{path}"
 
+    def brand_mark(self, curtain: bool = False, footer: bool = False) -> str:
+        src = self.asset("icons/logo.svg")
+        size = 64 if curtain else 44
+        loading = "lazy" if footer else "eager"
+        return f'<img class="brand-mark" src="{src}" alt="Waikiki" width="{size}" height="{size}" loading="{loading}" decoding="async" />'
+
 
 # --------------------------------------------------------------------------- #
 # Chrome builders
@@ -331,10 +330,10 @@ def build_header(page: Page) -> str:
 
     return f"""<!-- @chrome:header -->
     <a class="skip-link" href="#main">{esc(T["skip"][loc])}</a>
-    <div class="page-curtain" aria-hidden="true">{BRAND_MARK}</div>
+    <div class="page-curtain" aria-hidden="true">{page.brand_mark(curtain=True)}</div>
     <div class="scroll-progress" aria-hidden="true"></div>
     <header class="site-header">
-        <a href="{page.href("index")}" class="brand" aria-label="{esc(T["home"][loc])}">{BRAND_MARK}<span class="brand-word">Waikiki<small>{esc(T["tagline"][loc])}</small></span></a>
+        <a href="{page.href("index")}" class="brand" aria-label="{esc(T["home"][loc])}">{page.brand_mark()}<span class="brand-word">Waikiki<small>{esc(T["tagline"][loc])}</small></span></a>
         <nav class="primary-nav" aria-label="{esc(T["primary"][loc])}">{"".join(nav_links)}</nav>
         <div class="header-actions">
             <a class="lang-pill" href="{page.other_locale_href()}" hreflang="{other}" lang="{other}" title="{esc(T["lang_name"][other])}">{GLOBE_ICON}<span>{other.upper()}</span></a>
@@ -368,7 +367,7 @@ def build_footer(page: Page) -> str:
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <a href="{page.href("index")}" class="brand" aria-label="{esc(T["home"][loc])}">{BRAND_MARK}<span class="brand-word">Waikiki<small>{esc(T["tagline"][loc])}</small></span></a>
+                    <a href="{page.href("index")}" class="brand" aria-label="{esc(T["home"][loc])}">{page.brand_mark(footer=True)}<span class="brand-word">Waikiki<small>{esc(T["tagline"][loc])}</small></span></a>
                     <p class="footer-motto">{esc(T["motto"][loc])}</p>
                     <p class="footer-about">{esc(T["about"][loc])}</p>
                 </div>
