@@ -59,10 +59,10 @@ GROUPS = [
     ]),
     ("royal", {"en": "Royal Family", "hu": "Királyi Család"}, [
         ("dynasty", {"en": "The Dynasty", "hu": "A Dinasztia"}),
-        ("chease-and-jessica", {"en": "Chease & Jessica", "hu": "Chease és Jessica"}),
-        ("raimondo-and-selena", {"en": "Raimondo & Selena", "hu": "Raimondo és Selena"}),
-        ("angelina-and-taylor", {"en": "Angelina & Taylor", "hu": "Angelina és Taylor"}),
-        ("jennifer-and-tyler", {"en": "Jennifer & Tyler", "hu": "Jennifer és Tyler"}),
+        ("chease-and-jessica", {"en": "Chease and Jessica", "hu": "Chease és Jessica"}),
+        ("raimondo-and-selena", {"en": "Raimondo and Selena", "hu": "Raimondo és Selena"}),
+        ("angelina-and-taylor", {"en": "Angelina and Taylor", "hu": "Angelina és Taylor"}),
+        ("jennifer-and-tyler", {"en": "Jennifer and Tyler", "hu": "Jennifer és Tyler"}),
     ]),
     ("visit", {"en": "Visit", "hu": "Látogatás"}, [
         ("tourism", {"en": "Tourism", "hu": "Turizmus"}),
@@ -128,6 +128,8 @@ T = {
     "night": {"en": "Night mode", "hu": "Éjszakai mód"},
     "clock_label": {"en": "Local time in the capital", "hu": "Helyi idő a fővárosban"},
     "clock_city": {"en": "Nova Aurelia, Waikiki Province", "hu": "Nova Aurelia, Waikiki tartomány"},
+    "weather": {"en": "Sunny", "hu": "Napos"},
+    "weather_temp": {"en": "28°C", "hu": "28°C"},
     "motto": {
         "en": "Prosperity, stability and progress, from the Caribbean to the Amazon.",
         "hu": "Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.",
@@ -345,7 +347,14 @@ def build_header(page: Page) -> str:
         <div class="site-menu-inner">
             {"".join(groups_html)}
             <aside class="menu-aside">
-                <div><p class="menu-clock-label">{esc(T["clock_label"][loc])}</p><p class="menu-clock" data-capital-clock>--:--</p><p class="menu-clock-city">{esc(T["clock_city"][loc])}</p></div>
+                <div class="menu-clock-block">
+                    <div class="menu-clock-header">
+                        <p class="menu-clock-label">{esc(T["clock_label"][loc])}</p>
+                        <div class="menu-weather" data-capital-weather><span class="weather-icon" aria-hidden="true">☀️</span> <span class="weather-temp">{esc(T["weather_temp"][loc])}</span> <span class="weather-desc">{esc(T["weather"][loc])}</span></div>
+                    </div>
+                    <p class="menu-clock" data-capital-clock>--:--</p>
+                    <p class="menu-clock-city">{esc(T["clock_city"][loc])}</p>
+                </div>
                 <p class="menu-motto">{esc(T["motto"][loc])}</p>
                 <div class="menu-aside-row">{lang_chips}<button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">{esc(T["night"][loc])}</button></div>
             </aside>

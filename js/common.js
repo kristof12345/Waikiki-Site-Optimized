@@ -182,17 +182,36 @@
             if (event.target.closest('a[href^="#"]')) close();
         });
 
-        // Live clock for the capital (Nova Aurelia sits in the Havana time zone).
+        // Live clock and capital weather for Nova Aurelia (America/Havana).
         const clock = $('[data-capital-clock]', menu);
+        const weatherEl = $('[data-capital-weather]', menu);
         if (clock) {
-            const format = new Intl.DateTimeFormat(root.lang === 'hu' ? 'hu-HU' : 'en-GB', {
+            const isHu = root.lang === 'hu';
+            const format = new Intl.DateTimeFormat(isHu ? 'hu-HU' : 'en-GB', {
                 hour: '2-digit',
                 minute: '2-digit',
                 timeZone: 'America/Havana'
             });
-            const tick = () => { clock.textContent = format.format(new Date()); };
-            tick();
-            window.setInterval(tick, 15000);
+            const hourFormat = new Intl.DateTimeFormat('en-US', {
+                hour: 'numeric',
+                hour12: false,
+                timeZone: 'America/Havana'
+            });
+
+            const updateClockAndWeather = () => {
+                const now = new Date();
+                clock.textContent = format.format(now);
+                if (weatherEl) {
+                    const localHour = parseInt(hourFormat.format(now), 10);
+                    const isNight = localHour >= 20 || localHour < 6;
+                    const icon = isNight ? '🌙' : '☀️';
+                    const temp = isNight ? '24°C' : '28°C';
+                    const desc = isNight ? (isHu ? 'Tiszta éjszaka' : 'Clear night') : (isHu ? 'Napos' : 'Sunny');
+                    weatherEl.innerHTML = `<span class="weather-icon" aria-hidden="true">${icon}</span> <span class="weather-temp">${temp}</span> <span class="weather-desc">${desc}</span>`;
+                }
+            };
+            updateClockAndWeather();
+            window.setInterval(updateClockAndWeather, 15000);
         }
     }
 
