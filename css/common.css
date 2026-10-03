@@ -84,7 +84,7 @@
   --header-h: 84px;
   --header-h-compact: 68px;
   --gutter: clamp(1.25rem, 4vw, 3.5rem);
-  --maxw: 1360px;
+  --maxw: 1920px;
   --section-pad: clamp(4.5rem, 9vw, 8.5rem);
   --radius-sm: 12px;
   --radius: 22px;
@@ -1073,10 +1073,10 @@ html.menu-open .menu-aside {
 }
 
 .hero-scroll {
+  display: none !important;
   position: absolute;
   right: var(--gutter);
   bottom: clamp(2rem, 6vh, 3.5rem);
-  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.8rem;
@@ -1263,7 +1263,7 @@ html.menu-open .menu-aside {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
   gap: var(--card-gap);
-  max-width: min(100%, 1680px);
+  max-width: min(100%, var(--maxw));
   width: 100%;
   margin: 2.5rem auto 0;
 }
@@ -1437,12 +1437,12 @@ html.menu-open .menu-aside {
 
 /* 9. NARRATIVE & TABLES ==================================================== */
 .narrative-content {
-  max-width: 1800px;
+  max-width: var(--maxw);
   margin: 0 auto;
 }
 
 .narrative-content-wide {
-  max-width: 1800px;
+  max-width: var(--maxw);
 }
 
 .narrative-content-wide > .narrative-text,
@@ -1590,7 +1590,7 @@ html.menu-open .menu-aside {
 
 /* 10. FAQ ================================================================== */
 .faq-container {
-  max-width: 1040px;
+  max-width: min(100%, var(--maxw));
   margin: 0 auto;
 }
 
@@ -1866,7 +1866,7 @@ html.menu-open .menu-aside {
 
 /* 12. MEDIA ================================================================ */
 .video-wrapper {
-  max-width: 1200px;
+  max-width: min(100%, var(--maxw));
   margin: 3rem auto 0;
   overflow: hidden;
   border-radius: var(--radius-lg);
@@ -2014,6 +2014,8 @@ html.header-hidden .subnav {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
+  transform-origin: top center;
   transform: scale(1.04);
   transition: transform 1.6s var(--ease-out);
 }

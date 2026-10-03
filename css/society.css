@@ -43,7 +43,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: clamp(20px, 3vw, 36px);
-    max-width: 1600px;
+    max-width: var(--maxw);
     margin: 0 auto;
     position: relative;
     z-index: 1;
@@ -100,7 +100,7 @@
    ========================================================================== */
 .map-container {
     position: relative;
-    max-width: 1700px;
+    max-width: var(--maxw);
     margin: 2rem auto 0;
     background: var(--sand-50);
     border-radius: var(--radius-xl);

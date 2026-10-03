@@ -425,18 +425,6 @@
             card.style.setProperty('--mx', `${event.clientX - rect.left}px`);
             card.style.setProperty('--my', `${event.clientY - rect.top}px`);
         }), { passive: true });
-
-        // Magnetic buttons.
-        $$('.btn, .section-link-btn, .next-arrow, .to-top, [data-magnetic]').forEach((element) => {
-            const strength = 0.28;
-            element.addEventListener('pointermove', (event) => {
-                const rect = element.getBoundingClientRect();
-                const x = (event.clientX - rect.left - rect.width / 2) * strength;
-                const y = (event.clientY - rect.top - rect.height / 2) * strength;
-                element.style.transform = `translate3d(${x}px, ${y}px, 0)`;
-            });
-            element.addEventListener('pointerleave', () => { element.style.transform = ''; });
-        });
     }
 
     /* ----------------------------------------------------------------- rail */
