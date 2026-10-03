@@ -1,5 +1,5 @@
 {
-  "name": "Waikiki",
+  "name": "Waikiki Nation",
   "short_name": "Waikiki",
   "start_url": "/",
   "display": "standalone",
@@ -7,7 +7,7 @@
   "theme_color": "#0071bc",
   "icons": [
     {
-      "src": "icons/logo.png",
+      "src": "icons/logo-green.png",
       "type": "image/png",
       "sizes": "1024x1024"
     }
