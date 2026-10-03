@@ -2088,7 +2088,6 @@ html.header-hidden .subnav {
   background: var(--secondary);
   color: #fff;
   text-decoration: none;
-  box-shadow: var(--shadow-lg);
 }
 
 .next-media {
@@ -2161,7 +2160,6 @@ html.header-hidden .subnav {
 .next-card:hover .next-arrow {
   background: var(--accent);
   border-color: var(--accent);
-  transform: rotate(-45deg);
 }
 
 /* 15. FOOTER =============================================================== */

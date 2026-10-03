@@ -56,7 +56,6 @@
     padding: clamp(24px, 3vw, 36px);
     border-radius: var(--radius-lg);
     border: 1px solid rgba(124, 198, 188, 0.16);
-    box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.35);
     transition: transform var(--duration-normal) var(--ease-out),
                 border-color var(--duration-normal) var(--ease-out),
                 background-color var(--duration-normal) var(--ease-out);
@@ -66,7 +65,6 @@
     transform: translateY(-8px);
     background: rgba(255, 255, 255, 0.08);
     border-color: var(--gold);
-    box-shadow: 0 24px 44px -12px rgba(0, 0, 0, 0.45);
 }
 
 .stat-box h3 {
@@ -105,7 +103,6 @@
     background: var(--sand-50);
     border-radius: var(--radius-xl);
     border: 1px solid var(--border-subtle);
-    box-shadow: 0 24px 60px -20px rgba(11, 59, 58, 0.16);
     padding: clamp(1rem, 2.5vw, 2rem);
     overflow: hidden;
     transition: background-color var(--duration-normal) var(--ease-out),
@@ -595,7 +592,6 @@
 .body-dark .admin-card {
     background: var(--surface-card);
     border-color: var(--border-subtle);
-    box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.6);
 }
 
 .body-dark .province-path {
