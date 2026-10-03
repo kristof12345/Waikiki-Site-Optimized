@@ -22,16 +22,16 @@ h3 {
 
 /* Dark mode - Initial Screening Tiers */
 .body-dark .screening-tiers-section {
-    background: linear-gradient(180deg, #0d2238 0%, #0a1930 100%) !important;
+    background: linear-gradient(180deg, #0E2423 0%, #072221 100%) !important;
 }
 
 .body-dark .screening-tiers-section h2 {
-    color: #8fd3ff !important;
+    color: #7CC6BC !important;
 }
 
 .body-dark .screening-tiers-section .hover-card {
-    background-color: rgba(16, 33, 53, 0.9) !important;
-    border-color: rgba(143, 211, 255, 0.25) !important;
+    background-color: rgba(17, 42, 40, 0.9) !important;
+    border-color: rgba(124, 198, 188, 0.25) !important;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
@@ -60,14 +60,14 @@ h3 {
 }
 
 .body-dark .assessment-modal {
-    background: linear-gradient(180deg, #11243a 0%, #0d1b2c 100%) !important;
+    background: linear-gradient(180deg, #112A28 0%, #0A1C1B 100%) !important;
     color: #edf6ff;
-    border: 1px solid rgba(143, 211, 255, 0.25);
+    border: 1px solid rgba(124, 198, 188, 0.25);
 }
 
 .body-dark .assessment-modal-header {
-    background: rgba(10, 25, 48, 0.9) !important;
-    border-bottom-color: rgba(143, 211, 255, 0.25);
+    background: rgba(7, 34, 33, 0.9) !important;
+    border-bottom-color: rgba(124, 198, 188, 0.25);
 }
 
 .body-dark .assessment-modal-meta,
@@ -86,7 +86,7 @@ h3 {
 .body-dark .assessment-modal .border-gray-100,
 .body-dark .assessment-modal .border-gray-200,
 .body-dark .assessment-modal .bg-gray-100 {
-    border-color: rgba(143, 211, 255, 0.25) !important;
+    border-color: rgba(124, 198, 188, 0.25) !important;
 }
 
 .body-dark .assessment-modal .bg-white,
@@ -100,15 +100,15 @@ h3 {
 }
 
 .body-dark .assessment-modal .space-y-3>button {
-    background: rgba(10, 25, 48, 0.65);
-    border-color: rgba(143, 211, 255, 0.25);
+    background: rgba(7, 34, 33, 0.65);
+    border-color: rgba(124, 198, 188, 0.25);
 }
 
 .body-dark .assessment-modal .space-y-3>button:hover {
-    background: rgba(0, 113, 188, 0.28) !important;
+    background: rgba(17, 96, 91, 0.28) !important;
     border-color: var(--tertiary) !important;
 }
 
 .body-dark .assessment-modal .space-y-3>button .rounded-full {
-    border-color: rgba(143, 211, 255, 0.6);
+    border-color: rgba(124, 198, 188, 0.6);
 }

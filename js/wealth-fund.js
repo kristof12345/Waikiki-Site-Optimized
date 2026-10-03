@@ -28,28 +28,28 @@ function initFundGrowthChart() {
                 {
                     label: 'Fund Assets (Trillion WUD)',
                     data: [0.03, 0.51, 3.16, 6.56, 9.46, 11.12],
-                    borderColor: '#BC9200',
-                    backgroundColor: 'rgba(188, 146, 0, 0.1)',
+                    borderColor: '#C95A41',
+                    backgroundColor: 'rgba(201, 90, 65, 0.1)',
                     borderWidth: 3,
                     tension: 0.4,
                     fill: true,
                     pointRadius: 6,
                     pointHoverRadius: 8,
-                    pointBackgroundColor: '#BC9200',
+                    pointBackgroundColor: '#C95A41',
                     pointBorderColor: '#fff',
                     pointBorderWidth: 2
                 },
                 {
                     label: 'Fund Assets (Trillion USD)',
                     data: [0.03, 0.61, 4.93, 13.13, 21.39, 25.58],
-                    borderColor: '#0071BC',
-                    backgroundColor: 'rgba(0, 113, 188, 0.1)',
+                    borderColor: '#11605B',
+                    backgroundColor: 'rgba(17, 96, 91, 0.1)',
                     borderWidth: 3,
                     tension: 0.4,
                     fill: true,
                     pointRadius: 6,
                     pointHoverRadius: 8,
-                    pointBackgroundColor: '#0071BC',
+                    pointBackgroundColor: '#11605B',
                     pointBorderColor: '#fff',
                     pointBorderWidth: 2
                 }
@@ -154,20 +154,20 @@ function initGDPRatioChart() {
                 label: 'Fund as % of GDP',
                 data: [2, 11, 35, 48, 61, 61],
                 backgroundColor: [
-                    'rgba(0, 113, 188, 0.8)',
-                    'rgba(14, 48, 142, 0.8)',
-                    'rgba(0, 176, 195, 0.8)',
-                    'rgba(188, 146, 0, 0.8)',
-                    'rgba(0, 113, 188, 0.8)',
-                    'rgba(14, 48, 142, 0.8)'
+                    'rgba(17, 96, 91, 0.8)',
+                    'rgba(11, 59, 58, 0.8)',
+                    'rgba(79, 179, 169, 0.8)',
+                    'rgba(201, 90, 65, 0.8)',
+                    'rgba(17, 96, 91, 0.8)',
+                    'rgba(11, 59, 58, 0.8)'
                 ],
                 borderColor: [
-                    '#0071BC',
-                    '#0E308E',
-                    '#00B0C3',
-                    '#BC9200',
-                    '#0071BC',
-                    '#0E308E'
+                    '#11605B',
+                    '#0B3B3A',
+                    '#4FB3A9',
+                    '#C95A41',
+                    '#11605B',
+                    '#0B3B3A'
                 ],
                 borderWidth: 2,
                 borderRadius: 8,
@@ -253,8 +253,8 @@ function initProjectionChart() {
                 {
                     label: 'Projected Assets (Trillion WUD)',
                     data: [11.12, 11.82, 12.91, 13.68, 14.27, 15.08, 16.14, 16.58],
-                    borderColor: '#BC9200',
-                    backgroundColor: 'rgba(188, 146, 0, 0.7)',
+                    borderColor: '#C95A41',
+                    backgroundColor: 'rgba(201, 90, 65, 0.7)',
                     borderWidth: 2,
                     borderRadius: 8,
                     borderSkipped: false

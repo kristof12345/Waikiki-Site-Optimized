@@ -172,14 +172,14 @@ const questionsData = [
 // --- COMPONENTS ---
 
 const colors = {
-    primary: '#0071BC',
-    secondary: '#0E308E',
-    tertiary: '#00B0C3',
-    gold: '#BC9200',
+    primary: '#11605B',
+    secondary: '#0B3B3A',
+    tertiary: '#4FB3A9',
+    gold: '#C95A41',
     silver: '#9CA3AF',
     bronze: '#B45309',
-    dark: '#0A1930',
-    light: '#F5F9FC',
+    dark: '#072221',
+    light: '#F5EDE1',
     white: '#FFFFFF',
     danger: '#DC2626'
 };
@@ -346,7 +346,7 @@ const AssessmentForm = ({ onClose }) => {
                     </div>
                 )}
 
-                <button onClick={onClose} className={`w-full py-4 rounded-lg text-white font-bold text-lg shadow-lg transition-transform hover:scale-[1.02] ${tier === 'REJECTED' ? 'bg-gray-500' : 'bg-[#BC9200]'}`}>{btnText}</button>
+                <button onClick={onClose} className={`w-full py-4 rounded-lg text-white font-bold text-lg shadow-lg transition-transform hover:scale-[1.02] ${tier === 'REJECTED' ? 'bg-gray-500' : 'bg-[#C95A41]'}`}>{btnText}</button>
             </div>
         );
     };

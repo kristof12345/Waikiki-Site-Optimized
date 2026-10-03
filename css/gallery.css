@@ -1,9 +1,10 @@
 /* Toolbar */
 .gallery-toolbar {
     position: sticky;
-    top: 70px;
+    top: var(--header-h-compact);
+    transition: top 0.6s var(--ease-out);
     z-index: 100;
-    background: rgba(10, 25, 48, 0.95);
+    background: rgba(7, 34, 33, 0.95);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     padding: 14px 3rem;
@@ -49,8 +50,8 @@
 }
 
 .view-btn.active {
-    background: rgba(188, 146, 0, 0.2);
-    border-color: rgba(188, 146, 0, 0.4);
+    background: rgba(201, 90, 65, 0.2);
+    border-color: rgba(201, 90, 65, 0.4);
     color: var(--gold);
 }
 
@@ -97,7 +98,7 @@
 
 .gallery-thumb:hover {
     transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 12px 40px rgba(188, 146, 0, 0.25);
+    box-shadow: 0 12px 40px rgba(201, 90, 65, 0.25);
     z-index: 2;
 }
 
@@ -116,7 +117,7 @@
 .thumb-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(10, 25, 48, 0.7) 0%, transparent 50%);
+    background: linear-gradient(to top, rgba(7, 34, 33, 0.7) 0%, transparent 50%);
     opacity: 0;
     transition: opacity 0.4s ease;
     display: flex;
@@ -243,7 +244,7 @@
     position: fixed;
     inset: 0;
     z-index: 5000;
-    background: rgba(2, 8, 20, 0.97);
+    background: rgba(4, 18, 17, 0.97);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -343,8 +344,8 @@
 }
 
 .lightbox-nav:hover {
-    background: rgba(188, 146, 0, 0.2);
-    border-color: rgba(188, 146, 0, 0.4);
+    background: rgba(201, 90, 65, 0.2);
+    border-color: rgba(201, 90, 65, 0.4);
     color: var(--gold);
 }
 
@@ -444,4 +445,7 @@
         top: 12px;
         right: 12px;
     }
+}
+html.header-hidden .gallery-toolbar {
+    top: 0;
 }

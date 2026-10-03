@@ -3,14 +3,14 @@
 // Chart.js default configuration
 Chart.defaults.font.family = "'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
 Chart.defaults.font.size = 13;
-Chart.defaults.color = '#555555';
+Chart.defaults.color = '#4A5957';
 
 // Color constants
 const COLORS = {
-    primary: '#0071BC',
-    secondary: '#0E308E',
-    tertiary: '#00B0C3',
-    gold: '#BC9200',
+    primary: '#11605B',
+    secondary: '#0B3B3A',
+    tertiary: '#4FB3A9',
+    gold: '#C95A41',
     error: '#AD1A24',
     success: '#008000'
 };
@@ -37,7 +37,7 @@ const commonOptions = {
             }
         },
         tooltip: {
-            backgroundColor: 'rgba(14, 48, 142, 0.95)',
+            backgroundColor: 'rgba(11, 59, 58, 0.95)',
             padding: 12,
             titleFont: {
                 size: 14,
@@ -191,7 +191,7 @@ function initEconomyCharts() {
                     label: 'State Reserves',
                     data: [30, 140, 290, 330, 450, 610, 1180, 2070, 3300, 3970, 4930, 6190, 7440, 9580, 11240, 13130, 14900, 16630, 19060, 20910, 21390, 21290, 24150, 23550, 24530, 25580],
                     borderColor: COLORS.gold,
-                    backgroundColor: 'rgba(188, 146, 0, 0.1)',
+                    backgroundColor: 'rgba(201, 90, 65, 0.1)',
                     borderWidth: 3,
                     fill: true,
                     tension: 0.4,
@@ -329,7 +329,7 @@ function initEconomyCharts() {
                     label: 'Median Household Income',
                     data: [7.9, 10.3, 12.6, 13.5, 14.9, 17.9, 23.1, 25.8, 28.1, 35.6, 39.0, 45.4, 56.3, 63.7, 68.9, 73.0, 78.1, 82.8, 86.8, 92.5, 95.7, 86.3, 90.8, 99.2, 100.3, 103.0, 103.8],
                     borderColor: COLORS.tertiary,
-                    backgroundColor: 'rgba(0, 176, 195, 0.15)',
+                    backgroundColor: 'rgba(79, 179, 169, 0.15)',
                     borderWidth: 3,
                     fill: true,
                     tension: 0.4,
@@ -423,14 +423,14 @@ function initEconomyCharts() {
                 datasets: [{
                     data: [22.4, 18.1, 13.9, 11, 10.4, 9, 7.7, 7.5],
                     backgroundColor: [
-                        '#2E75B6',  // Steel Blue
-                        '#8BC34A',  // Lime Green
-                        '#F39C12',  // Orange
-                        '#F1C40F',  // Yellow
-                        '#5DADE2',  // Light Blue
-                        '#C0392B',  // Red
-                        '#9B59B6',  // Purple
-                        '#7D6608'   // Olive
+                        '#11605B',  // Steel Blue
+                        '#7CC6BC',  // Lime Green
+                        '#E3735A',  // Orange
+                        '#E9B872',  // Yellow
+                        '#2A8C83',  // Light Blue
+                        '#B5523B',  // Red
+                        '#8A6F9E',  // Purple
+                        '#C29A57'   // Olive
                     ],
                     borderWidth: 2,
                     borderColor: '#ffffff'
@@ -474,15 +474,15 @@ function initEconomyCharts() {
                     label: 'Budget Share',
                     data: [34, 23, 11, 7, 7, 5, 4, 4, 2],
                     backgroundColor: [
-                        '#2E75B6',  // Steel Blue
-                        '#8BC34A',  // Lime Green
-                        '#F39C12',  // Orange
-                        '#F1C40F',  // Yellow
-                        '#5DADE2',  // Light Blue
-                        '#C0392B',  // Red
-                        '#9B59B6',  // Purple
-                        '#7D6608',  // Olive
-                        '#27AE60'   // Green
+                        '#11605B',  // Steel Blue
+                        '#7CC6BC',  // Lime Green
+                        '#E3735A',  // Orange
+                        '#E9B872',  // Yellow
+                        '#2A8C83',  // Light Blue
+                        '#B5523B',  // Red
+                        '#8A6F9E',  // Purple
+                        '#C29A57',  // Olive
+                        '#5E8C61'   // Green
                     ],
                     borderRadius: 8,
                     borderSkipped: false,
@@ -543,15 +543,15 @@ function initEconomyCharts() {
                     label: 'Wealth Share',
                     data: [1.5, 2.0, 3.5, 4.7, 6.7, 9.4, 12.6, 17.0, 42.7],
                     backgroundColor: [
-                        '#2E75B6',  // Steel Blue
-                        '#8BC34A',  // Lime Green
-                        '#F39C12',  // Orange
-                        '#F1C40F',  // Yellow
-                        '#5DADE2',  // Light Blue
-                        '#C0392B',  // Red
-                        '#9B59B6',  // Purple
-                        '#7D6608',  // Olive
-                        '#BC9200'   // Gold
+                        '#11605B',  // Steel Blue
+                        '#7CC6BC',  // Lime Green
+                        '#E3735A',  // Orange
+                        '#E9B872',  // Yellow
+                        '#2A8C83',  // Light Blue
+                        '#B5523B',  // Red
+                        '#8A6F9E',  // Purple
+                        '#C29A57',  // Olive
+                        '#C95A41'   // Gold
                     ],
                     borderRadius: 8,
                     borderSkipped: false,
@@ -643,7 +643,7 @@ function initEconomyCharts() {
                     label: 'Savings Rate',
                     data: [16, 19, 22, 26, 28, 32],
                     borderColor: COLORS.primary,
-                    backgroundColor: 'rgba(0, 113, 188, 0.15)',
+                    backgroundColor: 'rgba(17, 96, 91, 0.15)',
                     borderWidth: 3,
                     fill: true,
                     tension: 0.4,

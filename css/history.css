@@ -1,139 +1,139 @@
+/* ==========================================================================
+   HISTORY — expanded period timeline
+   Each period gets a large display heading; events hang off a vertical
+   line that fills with colour as the reader scrolls (--line-progress is
+   set by common.js on .timeline-expanded).
+   ========================================================================== */
+
 .timeline-expanded {
-  max-width: 1400px;
+  position: relative;
+  max-width: 1080px;
   margin: 0 auto;
 }
 
 .timeline-period {
-  margin-bottom: 5rem;
-  animation: fadeInUp var(--animation-duration) ease-out backwards;
+  margin-bottom: clamp(3rem, 7vw, 5.5rem);
 }
 
 .period-title {
-  font-size: 2rem;
-  color: var(--secondary);
-  font-weight: 700;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
   margin-bottom: 2rem;
-  padding-left: 2rem;
-  border-left: 6px solid var(--primary);
-  background: rgba(0, 113, 188, 0.03);
-  padding-top: 1rem;
   padding-bottom: 1rem;
-  border-radius: 8px;
+  border-bottom: 1px solid var(--line);
+  color: var(--heading);
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 350;
+  letter-spacing: -0.015em;
+}
+
+.period-title::before {
+  content: "";
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--coral);
+  box-shadow: 0 0 0 6px rgba(227, 115, 90, 0.18);
+  transform: translateY(-0.15em);
 }
 
 .timeline-events {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-left: 2rem;
+  gap: 1rem;
+  margin-left: 0.4rem;
+  padding-left: 2.4rem;
+}
+
+.timeline-events::before,
+.timeline-events::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 2px;
+  border-radius: 2px;
+  background: var(--line);
+}
+
+.timeline-events::after {
+  background: linear-gradient(var(--teal-500), var(--coral));
+  transform: scaleY(var(--line-progress, 0));
+  transform-origin: top;
+}
+
+.timeline-expanded .timeline-events::after {
+  transform: scaleY(1);
 }
 
 .timeline-event {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
   position: relative;
-}
-
-.timeline-event::before {
-  content: "";
-  position: absolute;
-  left: 11px;
-  top: 24px;
-  width: 2px;
-  height: calc(100% + 1.5rem);
-  background: rgba(0, 176, 195, 0.3);
-}
-
-.timeline-event:last-child::before {
-  display: none;
+  display: flex;
+  align-items: center;
 }
 
 .event-marker {
-  width: 24px;
-  height: 24px;
-  background: var(--primary);
+  position: absolute;
+  left: calc(-2.4rem - 6px);
+  z-index: 2;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
-  border: 4px solid var(--white);
-  box-shadow: 0 0 0 4px var(--tertiary);
-  flex-shrink: 0;
-  margin-top: 0.2rem;
-  transition: all var(--animation-duration) var(--transition-easing);
-  z-index: 5;
+  border: 3px solid var(--bg);
+  background: var(--teal-500);
+  box-shadow: 0 0 0 1px var(--teal-500);
+  transition:
+    transform 0.6s var(--ease-spring),
+    background-color 0.3s,
+    box-shadow 0.3s;
 }
 
 .timeline-event:hover .event-marker {
-  transform: scale(1.3);
-  box-shadow: 0 0 0 6px rgba(0, 176, 195, 0.5);
+  transform: scale(1.5);
+  background: var(--coral);
+  box-shadow: 0 0 0 6px rgba(227, 115, 90, 0.2);
 }
 
 .event-content {
   flex: 1;
-  background: var(--white);
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  transition: all var(--animation-duration) var(--transition-easing);
-  border-left: 3px solid var(--primary);
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.7s var(--ease-out),
+    box-shadow 0.7s var(--ease-out),
+    border-color 0.4s;
 }
 
 .event-content:hover {
   transform: translateX(8px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  border-left-width: 5px;
+  border-color: rgba(42, 140, 131, 0.3);
+  box-shadow: var(--shadow-md);
 }
 
 .event-content p {
   margin: 0;
-  line-height: 1.7;
-  color: var(--silver);
+  color: var(--text);
+  line-height: 1.75;
 }
 
-/* RESPONSIVE */
 @media (max-width: 800px) {
-  .timeline-period {
-    margin-bottom: 3rem;
-  }
-
-  .period-title {
-    font-size: 1.5rem;
-    padding-left: 1rem;
-  }
-
   .timeline-events {
-    margin-left: 0.5rem;
-  }
-
-  .timeline-event {
-    gap: 1rem;
+    padding-left: 1.75rem;
   }
 
   .event-marker {
-    width: 18px;
-    height: 18px;
+    left: calc(-1.75rem - 6px);
   }
 
   .event-content {
-    padding: 1rem;
+    padding: 1rem 1.15rem;
   }
-}
-
-/* DARK MODE */
-.body-dark .period-title {
-  color: var(--tertiary);
-  background: rgba(0, 176, 195, 0.05);
-  border-left-color: var(--tertiary);
-}
-
-.body-dark .event-content {
-  background: var(--dark-bg);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.body-dark .event-content:hover {
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
-}
-
-.body-dark .event-marker {
-  border-color: var(--dark-bg);
 }

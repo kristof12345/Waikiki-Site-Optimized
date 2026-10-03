@@ -1,169 +1,190 @@
-/* Content Sections */
+/* ==========================================================================
+   ROYAL COUPLES — PRIVATE LIFE PAGES
+   Four moody, full-bleed chapters (devotion, intimacy, adventure, milestones)
+   rendered as dark tropical "night" sections with glass content blocks.
+   ========================================================================== */
+
 .private-section,
 .intimate-section,
 .adventure-section,
 .milestones-section {
-    padding: 80px 3rem;
+    --heading: var(--ivory);
+    --text: rgba(251, 247, 240, 0.8);
+    padding: var(--section-pad) var(--gutter);
+    color: var(--text);
+    overflow: hidden;
 }
 
 .private-section {
-    background: var(--dark-blue);
+    background:
+        radial-gradient(900px 500px at 90% 0%, rgba(227, 115, 90, 0.18), transparent 60%),
+        radial-gradient(900px 600px at 0% 100%, rgba(124, 198, 188, 0.12), transparent 60%),
+        var(--teal-950);
 }
 
 .intimate-section {
-    background: var(--pink);
+    background:
+        radial-gradient(900px 520px at 10% 0%, rgba(244, 179, 155, 0.2), transparent 60%),
+        radial-gradient(800px 500px at 100% 100%, rgba(194, 154, 87, 0.14), transparent 60%),
+        #3d1520;
 }
 
 .adventure-section {
-    background: var(--azure);
+    background:
+        radial-gradient(900px 520px at 85% 10%, rgba(124, 198, 188, 0.22), transparent 60%),
+        radial-gradient(800px 500px at 0% 100%, rgba(227, 115, 90, 0.1), transparent 60%),
+        #123f43;
 }
 
 .milestones-section {
-    background: var(--blue);
+    background:
+        radial-gradient(900px 520px at 15% 0%, rgba(194, 154, 87, 0.22), transparent 60%),
+        radial-gradient(800px 500px at 100% 100%, rgba(124, 198, 188, 0.12), transparent 60%),
+        var(--teal-900);
 }
 
 .private-container {
-    max-width: 1400px;
+    max-width: var(--maxw);
     margin: 0 auto;
 }
 
 .private-intro {
+    max-width: 880px;
+    margin: 0 auto clamp(3rem, 6vw, 4.5rem);
     text-align: center;
-    margin-bottom: 60px;
 }
 
 .private-intro h2 {
-    font-size: 3rem;
-    font-weight: 800;
-    color: var(--gold);
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
+    color: var(--ivory);
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 4.6vw, 3.8rem);
+    font-weight: 320;
+    letter-spacing: -0.02em;
+}
+
+.private-intro h2::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 1.5px;
+    margin: 1.4rem auto 0;
+    background: linear-gradient(90deg, var(--coral-soft), var(--brass));
 }
 
 .private-intro p {
-    font-size: 1.2rem;
-    color: var(--light-bg);
-    line-height: 1.8;
     margin: 0 auto;
+    color: rgba(251, 247, 240, 0.78);
+    font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+    line-height: 1.85;
 }
 
 .content-grid {
     display: grid;
-    gap: 60px;
-    margin-bottom: 60px;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
 }
 
 .content-block {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border-radius: var(--card-border-radius);
-    padding: 40px;
+    position: relative;
+    padding: clamp(1.75rem, 3.5vw, 2.75rem);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all var(--animation-duration) var(--transition-easing);
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    transition:
+        transform 0.8s var(--ease-out),
+        border-color 0.5s,
+        background-color 0.5s,
+        box-shadow 0.8s var(--ease-out);
 }
 
 .content-block:hover {
-    transform: translateY(-8px) scale(1.01);
-    box-shadow: 0 20px 60px rgba(0, 113, 188, 0.3);
-    border-color: rgba(188, 146, 0, 0.3);
+    transform: translateY(-6px);
+    border-color: rgba(244, 179, 155, 0.35);
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 40px 80px -40px rgba(0, 0, 0, 0.6);
 }
 
 .content-block h3 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    color: var(--gold);
-    border-bottom: 2px solid rgba(195, 176, 0, 0.3);
+    margin-bottom: 1.4rem;
+    padding-bottom: 1.1rem;
+    border-bottom: 1px solid rgba(244, 179, 155, 0.25);
+    color: var(--coral-soft);
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
+    font-weight: 380;
 }
 
 .content-block p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #E8EEF3;
-    text-align: justify;
+    color: rgba(251, 247, 240, 0.82);
+    font-size: 1.06rem;
+    line-height: 1.9;
+}
+
+.content-block p + p {
+    margin-top: 1rem;
 }
 
 /* Gallery */
 .image-gallery {
     display: grid;
-    gap: 30px;
+    gap: clamp(1rem, 2vw, 1.75rem);
 }
 
 .gallery-item {
     position: relative;
-    border-radius: var(--card-border-radius);
     overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-    transition: all var(--animation-duration) var(--transition-easing);
+    border-radius: var(--radius);
+    box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.6);
     cursor: pointer;
+    transition:
+        transform 0.8s var(--ease-out),
+        box-shadow 0.8s var(--ease-out);
 }
 
 .gallery-item:hover {
-    transform: translateY(-8px) scale(1.01);
-    box-shadow: 0 20px 60px rgba(188, 146, 0, 0.4);
+    transform: translateY(-6px);
+    box-shadow: 0 40px 80px -30px rgba(201, 90, 65, 0.45);
 }
 
 .gallery-item img {
+    display: block;
     width: 100%;
     object-fit: cover;
-    display: block;
-    transition: transform var(--animation-duration) var(--transition-easing);
+    transition: transform 1.4s var(--ease-out);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.06);
 }
 
 .gallery-overlay {
     position: absolute;
-    bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(10, 25, 48, 0.95), transparent);
-    padding: 30px;
+    bottom: 0;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(7, 34, 33, 0.95), transparent);
     transform: translateY(100%);
-    transition: transform var(--animation-duration) var(--transition-easing);
+    transition: transform 0.7s var(--ease-out);
 }
 
 .gallery-item:hover .gallery-overlay {
-    transform: translateY(0);
+    transform: none;
 }
 
 .gallery-overlay h4 {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--gold);
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
+    color: var(--coral-soft);
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 400;
 }
 
 .gallery-overlay p {
+    color: rgba(251, 247, 240, 0.8);
     font-size: 0.95rem;
-    color: var(--light-bg);
     line-height: 1.6;
-}
-
-/* Responsive Design */
-@media (max-width: 1200px) {
-    .private-intro h2 {
-        font-size: 2rem;
-    }
-
-    .content-block {
-        padding: 30px 20px;
-    }
-
-    .content-block h3 {
-        font-size: 1.5rem;
-    }
-
-    .content-block p {
-        line-height: 1.6;
-    }
-
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .private-section,
-    .intimate-section,
-    .adventure-section,
-    .milestones-section {
-        padding: 60px 1.5rem;
-    }
 }

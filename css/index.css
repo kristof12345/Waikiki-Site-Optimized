@@ -20,7 +20,7 @@
 
 .economy-stat:hover {
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 12px 40px rgba(0, 113, 188, 0.3);
+  box-shadow: 0 12px 40px rgba(17, 96, 91, 0.3);
 }
 
 .economy-number {
@@ -119,7 +119,7 @@
   }
 
   50% {
-    box-shadow: 0 0 0 10px rgba(0, 176, 195, 0.3);
+    box-shadow: 0 0 0 10px rgba(79, 179, 169, 0.3);
   }
 }
 

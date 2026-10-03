@@ -1,5 +1,5 @@
 .check-icon {
-    color: #27ae60;
+    color: #5E8C61;
     font-weight: bold;
     font-size: 1.5rem;
     line-height: 1rem;
@@ -30,7 +30,7 @@
     background: rgba(255, 255, 255, 0.05);
     padding: 30px;
     border-radius: 16px;
-    border: 1px solid rgba(188, 146, 0, 0.3);
+    border: 1px solid rgba(201, 90, 65, 0.3);
     transition: all 0.3s ease;
 }
 
@@ -94,13 +94,13 @@
 
 .province-path:hover {
     stroke-width: 3;
-    filter: brightness(1.15) drop-shadow(0 0 8px rgba(0, 113, 188, 0.4));
+    filter: brightness(1.15) drop-shadow(0 0 8px rgba(17, 96, 91, 0.4));
 }
 
 .province-path.active {
     stroke: var(--gold);
     stroke-width: 3;
-    filter: brightness(1.1) drop-shadow(0 0 12px rgba(188, 146, 0, 0.5));
+    filter: brightness(1.1) drop-shadow(0 0 12px rgba(201, 90, 65, 0.5));
 }
 
 /* Province colors */
@@ -188,12 +188,12 @@
 }
 
 .legend-item:hover {
-    background: rgba(0, 113, 188, 0.08);
+    background: rgba(17, 96, 91, 0.08);
     color: var(--secondary);
 }
 
 .legend-item.active {
-    background: rgba(0, 113, 188, 0.12);
+    background: rgba(17, 96, 91, 0.12);
     color: var(--primary);
     font-weight: 600;
 }
@@ -347,7 +347,7 @@
 }
 
 .city-chip:hover {
-    background: rgba(0, 113, 188, 0.08);
+    background: rgba(17, 96, 91, 0.08);
     color: var(--primary);
 }
 
@@ -532,7 +532,7 @@
 }
 
 .body-dark .legend-item.active {
-    background: rgba(0, 176, 195, 0.15);
+    background: rgba(79, 179, 169, 0.15);
     color: var(--tertiary);
 }
 
