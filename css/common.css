@@ -39,9 +39,9 @@
   --tertiary-subtle: rgba(124, 198, 188, 0.15);
 
   /* Accent (Tropical Warm Coral / Terracotta) */
-  --accent: #e3735a;
+  --accent: #c29a57;
   --accent-hover: #c95a41;
-  --accent-light: #f4b39b;
+  --accent-light: #f5c46e;
   --accent-dark: #9e3821;
   --accent-subtle: rgba(227, 115, 90, 0.14);
 
@@ -405,7 +405,7 @@ html {
   margin: -0.06em -0.02em -0.14em;
 }
 
-.split-word > span {
+.split-word>span {
   display: inline-block;
   transform: translate3d(0, 110%, 0) rotate(6deg);
   transform-origin: 0 100%;
@@ -413,8 +413,8 @@ html {
   transition-delay: calc(var(--base-delay, 0ms) + var(--w, 0) * 55ms);
 }
 
-.is-in .split-word > span,
-.split-word.is-in > span {
+.is-in .split-word>span,
+.split-word.is-in>span {
   transform: none;
 }
 
@@ -1123,16 +1123,30 @@ html.menu-open .menu-aside {
   animation-delay: calc(1.3s + var(--i, 0) * 0.12s);
 }
 
-.stat-item + .stat-item {
+.stat-item+.stat-item {
   padding-left: 1.5rem;
   border-left: 1px solid rgba(255, 255, 255, 0.14);
 }
 
-.stat-item:nth-child(1) { --i: 0; }
-.stat-item:nth-child(2) { --i: 1; }
-.stat-item:nth-child(3) { --i: 2; }
-.stat-item:nth-child(4) { --i: 3; }
-.stat-item:nth-child(5) { --i: 4; }
+.stat-item:nth-child(1) {
+  --i: 0;
+}
+
+.stat-item:nth-child(2) {
+  --i: 1;
+}
+
+.stat-item:nth-child(3) {
+  --i: 2;
+}
+
+.stat-item:nth-child(4) {
+  --i: 3;
+}
+
+.stat-item:nth-child(5) {
+  --i: 4;
+}
 
 .stat-number {
   display: block;
@@ -1429,7 +1443,7 @@ html.menu-open .menu-aside {
   line-height: 1.78;
 }
 
-.card p + p {
+.card p+p {
   margin-top: 0.9rem;
 }
 
@@ -1532,10 +1546,10 @@ html.menu-open .menu-aside {
   max-width: var(--maxw);
 }
 
-.narrative-content-wide > .narrative-text,
-.narrative-content-wide > h3,
-.narrative-content-wide > ol,
-.narrative-content-wide > ul {
+.narrative-content-wide>.narrative-text,
+.narrative-content-wide>h3,
+.narrative-content-wide>ol,
+.narrative-content-wide>ul {
   margin-left: auto;
   margin-right: auto;
 }
@@ -1553,7 +1567,7 @@ html.menu-open .menu-aside {
   list-style-type: upper-roman;
 }
 
-.narrative-content ol > li {
+.narrative-content ol>li {
   margin-bottom: 0.7rem;
   padding-left: 0.6rem;
   color: var(--text);
@@ -1561,7 +1575,7 @@ html.menu-open .menu-aside {
   line-height: 1.75;
 }
 
-.narrative-content ol > li::marker {
+.narrative-content ol>li::marker {
   color: var(--accent);
   font-family: var(--font-display);
   font-weight: 500;
@@ -1573,13 +1587,13 @@ html.menu-open .menu-aside {
   list-style: none;
 }
 
-.narrative-content ul > li {
+.narrative-content ul>li {
   position: relative;
   margin-bottom: 0.45rem;
   color: var(--text);
 }
 
-.narrative-content ul > li::before {
+.narrative-content ul>li::before {
   content: "";
   position: absolute;
   left: -1.2rem;
@@ -1598,8 +1612,8 @@ html.menu-open .menu-aside {
   hyphens: auto;
 }
 
-.narrative-content > .narrative-text:first-of-type::first-letter,
-.narrative-content > .section-title + .narrative-text::first-letter {
+.narrative-content>.narrative-text:first-of-type::first-letter,
+.narrative-content>.section-title+.narrative-text::first-letter {
   float: left;
   margin: 0.08em 0.14em 0 0;
   color: var(--accent-hover);
@@ -2083,7 +2097,6 @@ html.header-hidden .subnav {
   max-width: var(--maxw);
   margin: 0 auto;
   padding: clamp(1.75rem, 4vw, 3.5rem);
-  overflow: hidden;
   border-radius: var(--radius-lg);
   background: var(--secondary);
   color: #fff;
@@ -2679,6 +2692,7 @@ html.header-hidden .subnav {
 
 /* 19. REDUCED MOTION ======================================================= */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -2693,7 +2707,7 @@ html.header-hidden .subnav {
   }
 
   .js [data-reveal],
-  .split-word > span {
+  .split-word>span {
     opacity: 1 !important;
     transform: none !important;
     clip-path: none !important;
@@ -2807,6 +2821,7 @@ html.header-hidden .subnav {
 }
 
 @keyframes sunFloat {
+
   0%,
   100% {
     transform: translate3d(0, 0, 0);
@@ -2895,6 +2910,7 @@ html.header-hidden .subnav {
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0);
