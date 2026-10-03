@@ -321,7 +321,7 @@
         ['.section-intro, .narrative-text, .narrative-content > h3, .narrative-content > ol, .narrative-section-title', ''],
         ['.card, .stat-card, .economy-stat, .faq-item, .reference-card, .admin-card, .stat-box, .content-block, .timeline-event, .timeline-period, .timeline-item, .data-viz-container, .data-viz-container-half, .info-stat, .member-card', ''],
         ['.table, .map-container, .video-wrapper, .comparison-item, .faq-section-title, .private-intro, .next-card, .section-link-wrapper, .faq-cta', ''],
-        ['.gallery-item, .sight-image, .member-image', 'image'],
+        ['.gallery-item, .sight-image', 'image'],
         ['[data-reveal]', null]
     ];
 

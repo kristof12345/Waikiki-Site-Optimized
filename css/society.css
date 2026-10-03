@@ -20,7 +20,7 @@
 
 /* Stats Container (Editorial Deep Lagoon Band) */
 .stats-container {
-    background: linear-gradient(180deg, var(--teal-950) 0%, var(--teal-900) 100%);
+    background: linear-gradient(180deg, #072221 0%, #916f3bff 100%);
     padding: clamp(60px, 8vw, 110px) clamp(1.5rem, 5vw, 4rem);
     color: var(--sand-50);
     position: relative;
@@ -57,8 +57,8 @@
     border-radius: var(--radius-lg);
     border: 1px solid rgba(124, 198, 188, 0.16);
     transition: transform var(--duration-normal) var(--ease-out),
-                border-color var(--duration-normal) var(--ease-out),
-                background-color var(--duration-normal) var(--ease-out);
+        border-color var(--duration-normal) var(--ease-out),
+        background-color var(--duration-normal) var(--ease-out);
 }
 
 .stat-box:hover {
@@ -106,7 +106,7 @@
     padding: clamp(1rem, 2.5vw, 2rem);
     overflow: hidden;
     transition: background-color var(--duration-normal) var(--ease-out),
-                border-color var(--duration-normal) var(--ease-out);
+        border-color var(--duration-normal) var(--ease-out);
 }
 
 .map-container svg {
@@ -122,9 +122,9 @@
     stroke-width: 1.5;
     cursor: pointer;
     transition: fill 0.35s var(--ease-out),
-                stroke var(--duration-fast) var(--ease-out),
-                stroke-width var(--duration-fast) var(--ease-out),
-                filter 0.35s var(--ease-out);
+        stroke var(--duration-fast) var(--ease-out),
+        stroke-width var(--duration-fast) var(--ease-out),
+        filter 0.35s var(--ease-out);
 }
 
 .province-path:hover {
@@ -225,8 +225,8 @@
     padding: 0.5rem 1.15rem;
     border-radius: var(--radius-pill);
     transition: background-color var(--duration-fast) var(--ease-out),
-                color var(--duration-fast) var(--ease-out),
-                transform var(--duration-fast) var(--ease-out);
+        color var(--duration-fast) var(--ease-out),
+        transform var(--duration-fast) var(--ease-out);
 }
 
 .legend-item:hover {
@@ -262,8 +262,8 @@
     border-left: 6px solid var(--teal-600);
     transform: translateY(20px);
     transition: transform 0.5s var(--ease-out),
-                opacity 0.4s var(--ease-out),
-                max-height 0.6s var(--ease-out);
+        opacity 0.4s var(--ease-out),
+        max-height 0.6s var(--ease-out);
     max-height: 0;
     overflow: hidden;
     display: none;
@@ -408,8 +408,8 @@
     font-weight: 600;
     color: var(--teal-950);
     transition: background-color var(--duration-fast) var(--ease-out),
-                border-color var(--duration-fast) var(--ease-out),
-                transform var(--duration-fast) var(--ease-out);
+        border-color var(--duration-fast) var(--ease-out),
+        transform var(--duration-fast) var(--ease-out);
 }
 
 .city-chip:hover {
@@ -447,8 +447,8 @@
     flex-direction: column;
     justify-content: space-between;
     transition: transform var(--duration-normal) var(--ease-out),
-                box-shadow var(--duration-normal) var(--ease-out),
-                border-color var(--duration-normal) var(--ease-out);
+        box-shadow var(--duration-normal) var(--ease-out),
+        border-color var(--duration-normal) var(--ease-out);
 }
 
 .admin-card:hover {

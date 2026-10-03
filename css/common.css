@@ -389,6 +389,9 @@ html {
 .js [data-reveal].is-in {
   opacity: 1;
   transform: none;
+}
+
+.js [data-reveal="image"].is-in {
   clip-path: inset(0 0 0 0 round var(--radius));
 }
 
@@ -397,8 +400,8 @@ html {
 }
 
 /* Turning off .js [data-reveal] effects via .no-reveal */
-html.no-reveal .js [data-reveal],
 html.no-reveal [data-reveal],
+html.no-reveal.js [data-reveal],
 html.no-reveal .split-word > span,
 html.no-reveal .section-title::after {
   opacity: 1 !important;
@@ -408,8 +411,29 @@ html.no-reveal .section-title::after {
   animation: none !important;
 }
 
-html.no-reveal .js [data-reveal="image"] img,
-html.no-reveal [data-reveal="image"] img {
+html.no-reveal [data-reveal="image"] img,
+html.no-reveal.js [data-reveal="image"] img,
+html.no-reveal .next-media img,
+html.no-reveal .hero-media img,
+html.no-reveal .hero-media video {
+  transform: none !important;
+  transition: none !important;
+  animation: none !important;
+}
+
+html.no-reveal .hero-eyebrow,
+html.no-reveal .hero-eyebrow::before {
+  animation: none !important;
+}
+
+html.no-reveal .next-card:hover .next-media img,
+html.no-reveal .gallery-item:hover img,
+html.no-reveal .sight-image:hover img,
+html.no-reveal .gallery-thumb:hover img {
+  transform: none !important;
+}
+
+html.no-reveal .next-card:hover .next-arrow {
   transform: none !important;
   transition: none !important;
 }
@@ -2147,6 +2171,7 @@ html.header-hidden .subnav {
   margin: 0 auto;
   padding: clamp(1.75rem, 4vw, 3.5rem);
   border-radius: var(--radius-lg);
+  overflow: hidden;
   background: var(--secondary);
   color: #fff;
   text-decoration: none;
@@ -2156,6 +2181,8 @@ html.header-hidden .subnav {
   position: absolute;
   inset: 0;
   z-index: -2;
+  overflow: hidden;
+  border-radius: inherit;
 }
 
 .next-media img {
