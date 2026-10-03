@@ -40,7 +40,7 @@
     background:
         radial-gradient(900px 520px at 15% 0%, rgba(194, 154, 87, 0.22), transparent 60%),
         radial-gradient(800px 500px at 100% 100%, rgba(124, 198, 188, 0.12), transparent 60%),
-        var(--teal-900);
+        #0b3b3a;
 }
 
 .private-container {

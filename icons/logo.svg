@@ -1,221 +1,94 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" aria-label="Sovereign Nation of Waikiki Crest">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" aria-label="Sovereign Nation of Waikiki Logo">
+  <!-- =======================================================================
+       WAIKIKI BRAND MARK (2D VECTOR STYLE)
+       A simple pyramid with one palm tree on each side under a tropical sun.
+       ======================================================================= -->
   <defs>
-    <!-- Radiant Sun & Sky Glow -->
-    <radialGradient id="sunGlow" cx="50%" cy="40%" r="48%">
-      <stop offset="0%" stop-color="#FFECA8" stop-opacity="0.9"/>
-      <stop offset="45%" stop-color="#F5C46E" stop-opacity="0.45"/>
-      <stop offset="85%" stop-color="#E3735A" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#C95A41" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Sun Disc -->
-    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#FFF5CE"/>
-      <stop offset="100%" stop-color="#F2AE38"/>
+    <!-- Radiant 2D Sun Gradient -->
+    <linearGradient id="sun2D" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFF1B8"/>
+      <stop offset="60%" stop-color="#F5BD47"/>
+      <stop offset="100%" stop-color="#E3735A"/>
     </linearGradient>
 
-    <!-- Central Grand Pyramid - Sunlit Face (Gold) -->
-    <linearGradient id="pyrGoldSun" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFF2BF"/>
-      <stop offset="50%" stop-color="#E8BE65"/>
-      <stop offset="100%" stop-color="#C79946"/>
-    </linearGradient>
-
-    <!-- Central Grand Pyramid - Shade Face (Bronze Amber) -->
-    <linearGradient id="pyrGoldShade" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#9C7026"/>
-      <stop offset="100%" stop-color="#5E3E0C"/>
-    </linearGradient>
-
-    <!-- Left Pyramid - Sunlit Face (Teal/Emerald) -->
-    <linearGradient id="pyrTealSun" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#5ECFC3"/>
-      <stop offset="100%" stop-color="#1E7A71"/>
-    </linearGradient>
-
-    <!-- Left Pyramid - Shade Face (Deep Teal) -->
-    <linearGradient id="pyrTealShade" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#114D47"/>
-      <stop offset="100%" stop-color="#082A26"/>
-    </linearGradient>
-
-    <!-- Right Pyramid - Sunlit Face (Coral Sandstone) -->
-    <linearGradient id="pyrCoralSun" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#F6B88F"/>
-      <stop offset="100%" stop-color="#D46A4C"/>
-    </linearGradient>
-
-    <!-- Right Pyramid - Shade Face (Deep Terracotta) -->
-    <linearGradient id="pyrCoralShade" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#8E3923"/>
-      <stop offset="100%" stop-color="#541B0D"/>
-    </linearGradient>
-
-    <!-- Palm Fronds Gradient -->
-    <linearGradient id="palmLeaf" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#7CE0D4"/>
-      <stop offset="60%" stop-color="#228A7F"/>
-      <stop offset="100%" stop-color="#0D4742"/>
-    </linearGradient>
-
-    <!-- Palm Trunk Gradient -->
-    <linearGradient id="palmBark" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#C29A57"/>
-      <stop offset="50%" stop-color="#8F432A"/>
-      <stop offset="100%" stop-color="#592010"/>
-    </linearGradient>
-
-    <!-- Laurel Gold Gradient -->
-    <linearGradient id="laurelGold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFF1C2"/>
-      <stop offset="40%" stop-color="#E5BA62"/>
-      <stop offset="100%" stop-color="#8A5E16"/>
-    </linearGradient>
-
-    <!-- Sovereign Elephant Gradient -->
-    <linearGradient id="elephantTone" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#E77960"/>
-      <stop offset="60%" stop-color="#C75438"/>
-      <stop offset="100%" stop-color="#872914"/>
+    <!-- Warm Dune Shoreline Gradient -->
+    <linearGradient id="dune2D" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#A3752C"/>
+      <stop offset="50%" stop-color="#E5BA62"/>
+      <stop offset="100%" stop-color="#A3752C"/>
     </linearGradient>
   </defs>
 
-  <!-- ==================== 1. SUN & CELESTIAL BACKGROUND ==================== -->
-  <circle cx="60" cy="42" r="32" fill="url(#sunGlow)"/>
-  <circle cx="60" cy="40" r="13" fill="url(#sunGrad)"/>
+  <!-- 1. SUN & RAYS -->
+  <circle cx="60" cy="42" r="20" fill="url(#sun2D)"/>
+  <circle cx="60" cy="42" r="14.5" fill="#FFE89E" opacity="0.6"/>
 
-  <!-- ==================== 2. THE THREE PROVINCE PYRAMIDS ==================== -->
-  <!-- Left Pyramid (Amazonia) -->
-  <g id="pyr-left">
-    <polygon points="34,51 17,83 40,83" fill="url(#pyrTealSun)"/>
-    <polygon points="34,51 40,83 52,83" fill="url(#pyrTealShade)"/>
+  <!-- 2D Geometric Sun Rays -->
+  <g stroke="#F5BD47" stroke-width="2" stroke-linecap="round" opacity="0.85">
+    <line x1="60" y1="13" x2="60" y2="18"/>
+    <line x1="38" y1="20" x2="42" y2="24"/>
+    <line x1="82" y1="20" x2="78" y2="24"/>
+    <line x1="29" y1="37" x2="34" y2="39"/>
+    <line x1="91" y1="37" x2="86" y2="39"/>
   </g>
 
-  <!-- Right Pyramid (Brazilia) -->
-  <g id="pyr-right">
-    <polygon points="85,53 67,83 90,83" fill="url(#pyrCoralSun)"/>
-    <polygon points="85,53 90,83 103,83" fill="url(#pyrCoralShade)"/>
-  </g>
+  <!-- 2. CENTRAL SIMPLE PYRAMID -->
+  <!-- Left Face: Sunlit Warm Gold -->
+  <polygon points="60,25 28,93 60,98" fill="#E5BA62"/>
+  <!-- Right Face: Deep Bronze Shade -->
+  <polygon points="60,25 60,98 92,93" fill="#8C5E1B"/>
+  <!-- Center Ridge Highlight Line -->
+  <line x1="60" y1="25" x2="60" y2="98" stroke="#FFF4CC" stroke-width="1.2" stroke-linecap="round"/>
 
-  <!-- Central Great Pyramid (Waikiki / Nova Aurelia) -->
-  <g id="pyr-center">
-    <polygon points="60,33 34,83 63,83" fill="url(#pyrGoldSun)"/>
-    <polygon points="60,33 63,83 85,83" fill="url(#pyrGoldShade)"/>
-    <!-- Golden Apex Capstone (Pyramidion) -->
-    <polygon points="60,33 56,40 60.5,40" fill="#FFFBE6"/>
-    <polygon points="60,33 60.5,40 63,40" fill="#E5BA62"/>
-    <!-- Apex Star Gleam -->
-    <circle cx="60" cy="33" r="1.4" fill="#FFFFFF"/>
-  </g>
+  <!-- Golden Pyramidion Capstone -->
+  <polygon points="60,25 52,38 60,39.5" fill="#FFF9E0"/>
+  <polygon points="60,25 60,39.5 68,38" fill="#F2B84B"/>
+  <!-- Apex Diamond Sparkle -->
+  <polygon points="60,21 61.8,25 60,29 58.2,25" fill="#FFFFFF"/>
 
-  <!-- Shoreline Dune Base -->
-  <path d="M14 83 C30 81.5 45 84 60 82.5 C75 81 90 84 106 83 L106 86 C90 87 75 84 60 85.5 C45 87 30 84.5 14 86 Z" fill="#C29A57" opacity="0.6"/>
+  <!-- 3. SHORELINE & DUNES -->
+  <path d="M10 93 C26 90.5 42 94 60 92.5 C78 91 94 94.5 110 93 L110 97 C94 98 78 95 60 96.5 C42 98 26 95 10 97 Z" fill="url(#dune2D)"/>
+  <path d="M14 97 C30 95 44 98 60 96.5 C76 95 90 98 106 97 C94 100.5 76 99.5 60 100 C44 99.5 26 100.5 14 97 Z" fill="#11605B"/>
 
-  <!-- ==================== 3. ROYAL TROPICAL PALM ==================== -->
-  <g id="royal-palm">
-    <!-- Curved Slender Trunk -->
-    <path d="M19 84 C20.5 76 23.5 68 25.5 59 C26.8 53.5 27.8 48 28.5 43 L30.8 43.5 C30 48.5 28.8 54 27.5 59.5 C25.2 68 22 76 20.5 84 Z" fill="url(#palmBark)"/>
+  <!-- 4. LEFT PALM TREE -->
+  <g id="palm-left">
+    <!-- Trunk -->
+    <path d="M19 96 C18 78 22 62 25 44 L28.2 44.5 C25 62.5 21 78.5 22.2 96 Z" fill="#6B3813"/>
+    <path d="M19.5 96 C20.5 78.5 24 62.5 27 44.5 L28.2 44.5 C25.2 62.5 21.5 78.5 21 96 Z" fill="#8F5224" opacity="0.6"/>
     <!-- Coconuts Cluster -->
-    <circle cx="28.5" cy="44" r="1.6" fill="#E5BA62"/>
-    <circle cx="30.5" cy="45" r="1.4" fill="#A87522"/>
-    <!-- 5 Clean Arched Fronds -->
-    <!-- Top-Left Frond -->
-    <path d="M29 43 C26 34 19 30 11 31 C15 36 21 40 29 43 Z" fill="url(#palmLeaf)"/>
-    <!-- High Center Frond -->
-    <path d="M29 43 C31 33 36 26 42 22 C40 31 37 38 29 43 Z" fill="url(#palmLeaf)"/>
-    <!-- Right Droop Frond (arching toward pyramid) -->
-    <path d="M29 43 C35 38 43 40 48 46 C42 46 36 45 29 43 Z" fill="url(#palmLeaf)"/>
-    <!-- Low Left Frond -->
-    <path d="M29 43 C21 42 14 47 8 53 C13 51 20 48 29 43 Z" fill="url(#palmLeaf)"/>
-    <!-- Under Droop Frond -->
-    <path d="M29 43 C24 48 22 55 20 63 C23 56 26 50 29 43 Z" fill="url(#palmLeaf)"/>
+    <circle cx="24" cy="45" r="2.2" fill="#C29A57"/>
+    <circle cx="27" cy="46.5" r="2" fill="#8C5E1B"/>
+    <!-- 2D Fronds -->
+    <!-- Frond 1: High arch curving left -->
+    <path d="M26 43 C22 28 11 26 5 32 C13 34 20 38 26 43 Z" fill="#2A8C83"/>
+    <!-- Frond 2: Peak center frond pointing up-right -->
+    <path d="M26 43 C29 27 38 23 46 27 C40 33 34 38 26 43 Z" fill="#11605B"/>
+    <!-- Frond 3: Upper-left sweep -->
+    <path d="M26 43 C18 35 7 38 3 47 C11 46 19 45 26 43 Z" fill="#3FB3A6"/>
+    <!-- Frond 4: Lower drooping left -->
+    <path d="M26 43 C15 47 7 57 8 68 C14 59 20 52 26 43 Z" fill="#134F4A"/>
+    <!-- Frond 5: Inward arch framing pyramid -->
+    <path d="M26 43 C33 41 40 46 43 55 C37 51 31 47 26 43 Z" fill="#1E736B"/>
   </g>
 
-  <!-- ==================== 4. SOVEREIGN ELEPHANT ==================== -->
-  <g id="sovereign-elephant" transform="translate(6, 0)">
-    <!-- Elephant Shadow -->
-    <ellipse cx="58" cy="84" rx="14" ry="1.8" fill="#5E3E0C" opacity="0.3"/>
-
-    <!-- Far Side Legs -->
-    <path d="M49 84 L49.5 76 C49.5 73.5 51 71.5 52.5 71 L54 84 Z" fill="#6B1D0B"/>
-    <path d="M65.5 84 L66 76 C66 73.5 67 71.5 68 70.5 L69.5 84 Z" fill="#6B1D0B"/>
-
-    <!-- Main Silhouette with Raised Trunk -->
-    <path d="
-      M44 84
-      L44.8 76
-      C45.2 72 47 69 49.5 67
-      C48 64 47.5 60.5 47.5 57
-      C47.5 51 52 47.5 58 47
-      C62 46.8 65.5 45 67.5 42
-      C69 39.8 70.8 38.5 73 38.5
-      C75.8 38.5 77.5 40.5 78 43
-      C78.5 45.5 77.5 47.5 76 49
-      C74.5 50.2 73 50 72.2 48.8
-      C71.5 47.5 71 46 69.5 46.5
-      C68 47.2 67 49.5 66.5 53
-      C66 56 64.5 58 63 60
-      L63.5 84
-      H59.5
-      L59 76
-      C59 74 57.8 72.5 56.5 72.5
-      C55.2 72.5 54 74 54 76
-      L53.5 84
-      H50.5
-      L51 76
-      C51 73.5 49.5 72 48 72
-      C46.5 72 45.2 73.5 45 76
-      L44 84
-      Z
-    " fill="url(#elephantTone)"/>
-
-    <!-- Eye & Gleam -->
-    <circle cx="70.5" cy="44" r="0.8" fill="#FFFFFF"/>
-    <circle cx="70.7" cy="44" r="0.4" fill="#2E0C04"/>
-
-    <!-- Ivory Tusk -->
-    <path d="M68.5 51 L74 53 L69 54.5 Z" fill="#FFFFFF"/>
-
-    <!-- Heraldic Golden Ear -->
-    <path d="M61 46 C65 46 68 49 68 53 C68 58 64 61.5 60 61.5 C57 61.5 55.5 59.5 55.5 56.5 C55.5 51.5 57.5 46 61 46 Z" fill="url(#laurelGold)"/>
-
-    <!-- Ceremonial Sovereign Saddle -->
-    <path d="M51.5 50 C55 49.5 60 49.5 63.5 50.5 L62.5 60 C58.5 61 55 61 52 59.5 Z" fill="#11605B"/>
-    <!-- Gold Saddle Trim -->
-    <path d="M52 59.5 C55 61 58.5 61 62.5 60" stroke="#E5BA62" stroke-width="0.8" fill="none"/>
-    <!-- Star on Saddle -->
-    <polygon points="57.5,52.5 58.3,54.5 60.5,54.5 58.8,55.8 59.5,57.8 57.5,56.5 55.5,57.8 56.2,55.8 54.5,54.5 56.7,54.5" fill="#FFF2BF"/>
-  </g>
-
-  <!-- ==================== 5. OCEAN WAVE CRESTS ==================== -->
-  <path d="M18 90 C26 87 34 91 42 89 C50 87 58 91 66 89 C74 87 82 91 90 89 C96 87 100 90 102 90" fill="none" stroke="#228A7F" stroke-width="1.8" stroke-linecap="round"/>
-  <path d="M22 94 C30 92 38 95 46 93 C54 91 62 95 70 93 C78 91 86 95 94 93 C97 92 99 94 100 94" fill="none" stroke="#7CE0D4" stroke-width="1.3" stroke-linecap="round" opacity="0.8"/>
-
-  <!-- ==================== 6. GOLDEN LAUREL WREATH OF PROSPERITY ==================== -->
-  <g id="laurel-wreath" fill="url(#laurelGold)">
-    <!-- Laurel Stems (Left & Right) -->
-    <path d="M56 106 C36 102 18 82 20 48 C21 37 25 28 32 20" fill="none" stroke="url(#laurelGold)" stroke-width="1.6" stroke-linecap="round"/>
-    <path d="M64 106 C84 102 102 82 100 48 C99 37 95 28 88 20" fill="none" stroke="url(#laurelGold)" stroke-width="1.6" stroke-linecap="round"/>
-
-    <!-- Left Leaves -->
-    <path d="M52 104 C47 103 43 99 41 94 C44 94 48 97 52 104 Z"/>
-    <path d="M43 96 C37 93 33 87 32 80 C36 82 39 87 43 96 Z"/>
-    <path d="M33 83 C27 78 24 71 24 63 C28 65 31 71 33 83 Z"/>
-    <path d="M25 66 C20 59 19 51 21 43 C24 47 26 55 25 66 Z"/>
-    <path d="M22 47 C20 39 22 30 28 23 C29 29 28 38 22 47 Z"/>
-    <path d="M28 27 C28 20 33 15 41 11 C40 17 36 23 28 27 Z"/>
-
-    <!-- Right Leaves -->
-    <path d="M68 104 C73 103 77 99 79 94 C76 94 72 97 68 104 Z"/>
-    <path d="M77 96 C83 93 87 87 88 80 C84 82 81 87 77 96 Z"/>
-    <path d="M87 83 C93 78 96 71 96 63 C92 65 89 71 87 83 Z"/>
-    <path d="M95 66 C100 59 101 51 99 43 C96 47 94 55 95 66 Z"/>
-    <path d="M98 47 C100 39 98 30 92 23 C91 29 92 38 98 47 Z"/>
-    <path d="M92 27 C92 20 87 15 79 11 C80 17 84 23 92 27 Z"/>
-
-    <!-- Central Ribbon Knot -->
-    <circle cx="60" cy="107" r="3.2" fill="#E5BA62"/>
-    <path d="M57 109 C53 113 48 116 44 118 C48 116 53 114 56 110 Z" fill="#C29A57"/>
-    <path d="M63 109 C67 113 72 116 76 118 C72 116 67 114 64 110 Z" fill="#C29A57"/>
+  <!-- 5. RIGHT PALM TREE -->
+  <g id="palm-right">
+    <!-- Trunk -->
+    <path d="M101 96 C102 78 98 62 95 44 L91.8 44.5 C95 62.5 99 78.5 97.8 96 Z" fill="#6B3813"/>
+    <path d="M100.5 96 C99.5 78.5 96 62.5 93 44.5 L91.8 44.5 C94.8 62.5 98.5 78.5 99 96 Z" fill="#8F5224" opacity="0.6"/>
+    <!-- Coconuts Cluster -->
+    <circle cx="96" cy="45" r="2.2" fill="#C29A57"/>
+    <circle cx="93" cy="46.5" r="2" fill="#8C5E1B"/>
+    <!-- 2D Fronds (Symmetrical Balance) -->
+    <!-- Frond 1: High arch curving right -->
+    <path d="M94 43 C98 28 109 26 115 32 C107 34 100 38 94 43 Z" fill="#2A8C83"/>
+    <!-- Frond 2: Peak center frond pointing up-left -->
+    <path d="M94 43 C91 27 82 23 74 27 C80 33 86 38 94 43 Z" fill="#11605B"/>
+    <!-- Frond 3: Upper-right sweep -->
+    <path d="M94 43 C102 35 113 38 117 47 C109 46 101 45 94 43 Z" fill="#3FB3A6"/>
+    <!-- Frond 4: Lower drooping right -->
+    <path d="M94 43 C105 47 113 57 112 68 C106 59 100 52 94 43 Z" fill="#134F4A"/>
+    <!-- Frond 5: Inward arch framing pyramid -->
+    <path d="M94 43 C87 41 80 46 77 55 C83 51 89 47 94 43 Z" fill="#1E736B"/>
   </g>
 </svg>

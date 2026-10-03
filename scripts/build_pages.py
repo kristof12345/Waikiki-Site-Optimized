@@ -98,8 +98,6 @@ for _, _, _pages in GROUPS:
             SEQUENCE.extend(BIOS)
         if _slug in COUPLES:
             SEQUENCE.extend(f"{_slug}{suffix}" for suffix, _ in COUPLE_TABS[1:])
-        if _slug == "raimondo-and-selena":
-            SEQUENCE.append("raimondo-and-bailey-detailed")
 
 # Short leads for pages that have no photographic hero.
 COMPACT_LEADS = {
@@ -147,6 +145,9 @@ T = {
     "continue": {"en": "Continue the journey", "hu": "Folytassa az utazást"},
     "royal_nav": {"en": "Royal couple pages", "hu": "A királyi pár oldalai"},
     "lang_name": {"en": "English", "hu": "Magyar"},
+    "animate": {"en": "Toggle animations", "hu": "Animációk ki-/bekapcsolása"},
+    "animate_chip": {"en": "Animate", "hu": "Animáció"},
+    "animate_label": {"en": "Animate", "hu": "Animáció"},
 }
 
 LEGACY_COLOURS = {
@@ -200,6 +201,12 @@ THEME_ICON = (
     '<g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">'
     '<path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5"/>'
     "</g></svg>"
+)
+
+ANIMATE_ICON = (
+    '<svg class="animate-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+    '<polygon points="6 4 18 12 6 20 6 4" fill="currentColor"/>'
+    "</svg>"
 )
 
 FOOTER_WAVE = (
@@ -300,8 +307,9 @@ def build_head(page: Page, description: str) -> str:
         '<link rel="preconnect" href="https://fonts.googleapis.com" />',
         '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />',
         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />',
-        "<script>(function(d){d.documentElement.classList.add('js');try{if(localStorage.getItem('isDarkMode')==='true')d.documentElement.classList.add('body-dark')}catch(e){}"
-        "setTimeout(function(){if(!d.documentElement.classList.contains('reveal-ready'))d.documentElement.classList.remove('js')},3500)})(document);</script>",
+        "<script>(function(d){var h=d.documentElement;h.classList.add('js');try{if(localStorage.getItem('isDarkMode')==='true')h.classList.add('body-dark');"
+        "if(localStorage.getItem('isAnimationDisabled')==='true')h.classList.add('no-reveal')}catch(e){}"
+        "setTimeout(function(){if(!h.classList.contains('reveal-ready'))h.classList.remove('js')},3500)})(document);</script>",
         "<!-- /@chrome:head -->",
     ]
     return "\n    ".join(line for line in lines if line)
@@ -354,7 +362,7 @@ def build_header(page: Page) -> str:
                     <p class="menu-clock-city">{esc(T["clock_city"][loc])}</p>
                 </div>
                 <p class="menu-motto">{esc(T["motto"][loc])}</p>
-                <div class="menu-aside-row">{lang_chips}<button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">{esc(T["night"][loc])}</button></div>
+                <div class="menu-aside-row">{lang_chips}<button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">{esc(T["night"][loc])}</button><button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">{esc(T["animate_chip"][loc])}</button></div>
             </aside>
             {"".join(groups_html)}
         </div>
@@ -410,16 +418,35 @@ def build_subnav(page: Page) -> str:
 
 
 def build_next(page: Page, meta: dict[str, dict]) -> str:
-    if page.slug not in SEQUENCE:
-        return "<!-- @chrome:next --><!-- /@chrome:next -->"
-    index = SEQUENCE.index(page.slug)
-    for offset in range(1, len(SEQUENCE)):
-        target = SEQUENCE[(index + offset) % len(SEQUENCE)]
+    if page.slug.endswith("-private"):
+        target = "dynasty"
         info = meta.get(f"{page.locale}/{target}")
         if info:
-            break
+            title = label_for(target, page.locale) or info["title"]
+            image = info.get("image") or meta.get(f"{page.locale}/index", {}).get("image")
+            img_html = f'<div class="next-media"><img src="{page.asset("images/" + image)}" alt="" loading="lazy" decoding="async" /></div>' if image else ""
+            eyebrow = f'{T["continue"][page.locale]} · {group_label(group_for(target), page.locale)}'
+            return (
+                f'<!-- @chrome:next --><section class="next-chapter"><a class="next-card" href="{page.href(target)}">{img_html}'
+                f'<span class="next-body"><span class="next-eyebrow">{esc(eyebrow)}</span>'
+                f'<span class="next-title">{esc(title)}</span><span class="next-arrow" aria-hidden="true">→</span></span></a></section><!-- /@chrome:next -->'
+            )
+
+    if page.slug not in SEQUENCE:
+        if page.slug == "raimondo-and-bailey-detailed":
+            target = "angelina-and-taylor"
+            info = meta.get(f"{page.locale}/{target}")
+        else:
+            return "<!-- @chrome:next --><!-- /@chrome:next -->"
     else:
-        return "<!-- @chrome:next --><!-- /@chrome:next -->"
+        index = SEQUENCE.index(page.slug)
+        for offset in range(1, len(SEQUENCE)):
+            target = SEQUENCE[(index + offset) % len(SEQUENCE)]
+            info = meta.get(f"{page.locale}/{target}")
+            if info:
+                break
+        else:
+            return "<!-- @chrome:next --><!-- /@chrome:next -->"
 
     title = label_for(target, page.locale) or info["title"]
     image = info.get("image") or meta.get(f"{page.locale}/index", {}).get("image")
