@@ -810,10 +810,10 @@ html.menu-open {
   max-width: var(--maxw);
   min-height: 100%;
   margin: 0 auto;
-  padding: calc(var(--header-h) + 3rem) var(--gutter) 3rem;
+  padding: calc(var(--header-h) + 2.5rem) var(--gutter) 3rem;
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr)) minmax(240px, 1.2fr);
-  gap: 2.5rem 2rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 2.25rem 2rem;
   align-content: center;
 }
 
@@ -883,11 +883,15 @@ html.menu-open .menu-aside {
 }
 
 .menu-aside {
+  grid-column: 1 / -1;
+  order: -1;
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 1.75rem;
-  border-radius: var(--radius);
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.5rem;
+  padding: 1.35rem 2rem;
+  border-radius: var(--radius-lg);
   background: rgba(255, 255, 255, 0.05);
   border: var(--border-width-hairline) solid rgba(255, 255, 255, 0.12);
   background-clip: padding-box;
@@ -897,12 +901,12 @@ html.menu-open .menu-aside {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+  flex-shrink: 0;
 }
 
 .menu-clock-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 0.75rem;
   flex-wrap: wrap;
 }
@@ -944,7 +948,7 @@ html.menu-open .menu-aside {
 
 .menu-clock {
   font-family: var(--font-display);
-  font-size: 3.4rem;
+  font-size: clamp(2.4rem, 3.2vw, 3.2rem);
   font-weight: 300;
   line-height: 1;
   font-variant-numeric: tabular-nums;
@@ -952,15 +956,25 @@ html.menu-open .menu-aside {
 
 .menu-clock-city {
   color: rgba(251, 247, 240, 0.65);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
+}
+
+.menu-motto {
+  color: rgba(251, 247, 240, 0.72);
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-style: italic;
+  line-height: 1.45;
+  max-width: 440px;
+  text-wrap: balance;
 }
 
 .menu-aside-row {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
-  padding-top: 1.25rem;
-  border-top: var(--border-width-hairline) solid rgba(255, 255, 255, 0.1);
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .menu-chip {
@@ -985,20 +999,22 @@ html.menu-open .menu-aside {
   border-color: rgba(255, 255, 255, 0.35);
 }
 
-.menu-chip.is-active {
+.menu-chip.is-active,
+.body-dark .menu-chip[data-theme-toggle],
+.menu-chip[data-theme-toggle][aria-pressed="true"] {
   background: var(--ivory);
   color: var(--primary-dark);
   border-color: var(--ivory);
 }
 
-.menu-motto {
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  font-style: italic;
-  font-weight: 300;
-  line-height: 1.45;
-  color: rgba(251, 247, 240, 0.8);
+.menu-chip.is-active:hover,
+.body-dark .menu-chip[data-theme-toggle]:hover,
+.menu-chip[data-theme-toggle][aria-pressed="true"]:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: var(--primary-dark);
 }
+
 
 /* 7. HERO & SECTIONS ======================================================= */
 .hero {
@@ -1469,6 +1485,14 @@ html.menu-open .menu-aside {
   object-fit: contain;
 }
 
+.card-icon img[src*="chameleon"] {
+  filter: hue-rotate(-34deg) saturate(0.56) brightness(0.84);
+}
+
+.body-dark .card-icon img[src*="chameleon"] {
+  filter: hue-rotate(-34deg) saturate(0.4) brightness(1.76);
+}
+
 .card:hover .card-icon {
   transform: rotate(-8deg) scale(1.08);
   border-radius: var(--radius);
@@ -1715,6 +1739,7 @@ html.menu-open .menu-aside {
   background: var(--surface);
   background-clip: padding-box;
   box-shadow: 0 0 0 1px rgba(17, 96, 91, 0.06), var(--shadow-sm);
+  clip-path: none !important;
   transition:
     border-color 0.4s,
     box-shadow 0.5s var(--ease-out),
@@ -2623,6 +2648,22 @@ html.header-hidden .subnav {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     padding-top: calc(var(--header-h) + 1.5rem);
     gap: 2rem 1.25rem;
+  }
+
+  .menu-aside {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
+    padding: 1.25rem;
+  }
+
+  .menu-motto {
+    max-width: none;
+  }
+
+  .menu-aside-row {
+    padding-top: 1rem;
+    border-top: var(--border-width-hairline) solid rgba(255, 255, 255, 0.1);
   }
 
   .hero-stats {

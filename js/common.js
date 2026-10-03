@@ -54,7 +54,12 @@
         try {
             localStorage.setItem(DARK_STORAGE_KEY, String(dark));
         } catch (e) { /* storage unavailable */ }
-        $$('[data-theme-toggle]').forEach((button) => button.setAttribute('aria-pressed', String(dark)));
+        $$('[data-theme-toggle]').forEach((button) => {
+            button.setAttribute('aria-pressed', String(dark));
+            if (button.classList.contains('menu-chip')) {
+                button.classList.toggle('is-active', dark);
+            }
+        });
         const meta = $('meta[name="theme-color"]');
         if (meta) meta.setAttribute('content', dark ? '#0a1c1b' : '#fbf7f0');
         document.dispatchEvent(new CustomEvent('themechange', { detail: { dark } }));

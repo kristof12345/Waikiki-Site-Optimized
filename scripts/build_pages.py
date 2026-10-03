@@ -344,7 +344,6 @@ def build_header(page: Page) -> str:
     </header>
     <div class="site-menu" id="site-menu" aria-hidden="true" inert>
         <div class="site-menu-inner">
-            {"".join(groups_html)}
             <aside class="menu-aside">
                 <div class="menu-clock-block">
                     <div class="menu-clock-header">
@@ -357,6 +356,7 @@ def build_header(page: Page) -> str:
                 <p class="menu-motto">{esc(T["motto"][loc])}</p>
                 <div class="menu-aside-row">{lang_chips}<button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">{esc(T["night"][loc])}</button></div>
             </aside>
+            {"".join(groups_html)}
         </div>
     </div>
     <!-- /@chrome:header -->"""
