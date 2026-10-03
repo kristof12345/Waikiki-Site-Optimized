@@ -1,380 +1,137 @@
-# Site Architecture
+# Sovereign Nation of Waikiki — Technical Architecture
+**Modular Static Site Architecture & Build Engine**
+*Version 3.0 · Sovereign Identity & Modern Web Standard*
 
-## Overview
+---
 
-The Waikiki Government Site follows a modular architecture with clear separation between common components and page-specific implementations. This structure promotes maintainability, reusability and easy extensibility for future pages.
+## 1. Architectural Philosophy
 
-## Directory Structure
+The Sovereign Nation of Waikiki web portal is engineered as a high-performance, resilient, zero-dependency static web platform with an automated templating and build system. It pairs pure semantic HTML5 with custom CSS custom properties, an organic motion engine in vanilla JavaScript, and an idempotent Python automation pipeline.
+
+### Core Principles
+1. **Zero External Runtime Frameworks**: Zero bloat, instant first contentful paint (< 250ms), and full CDN cacheability.
+2. **Component-Based Chrome Injection**: Standardized site header, subnavigation rail, section rails, next-chapter cards, and footer injected via `scripts/build_pages.py`.
+3. **Dual-Locale Parity**: Perfect 1:1 structural symmetry between English (`en/`) and Hungarian (`hu/`) subtrees.
+4. **Resilient Theme Engine**: High-fidelity *Tropical Luxe* default with an instant, non-flashing *Lagoon Night* dark mode backed by CSS variables and local storage.
+
+---
+
+## 2. Directory Structure
 
 ```
 /
 ├── css/
-│   ├── common.css          # Shared styles across all pages
-│   ├── index.css           # Landing page styles
-│   ├── economy.css         # Economy page visualizations
-│   ├── history.css         # History page timeline styles
-│   ├── faq.css             # FAQ page styles
-│   ├── parties.css         # Parties page styles
-│   ├── private.css         # Shared styles for royal couples' private pages
-│   ├── wealth-fund.css     # Wealth fund page styles
-│   └── ...                 # additional page-specific styles
+│   ├── common.css          # Master design system: tokens, typography, header, footer, animations
+│   ├── index.css           # Landing & portal specific layouts
+│   ├── society.css         # Interactive province SVG map, city markers, administrative cards
+│   ├── economy.css         # Chart containers, comparison bars, financial data cards
+│   ├── wealth-fund.css     # Sovereign wealth fund timeline, asset distribution styles
+│   ├── citizenship.css     # Immigration screening tier cards, assessment modal
+│   ├── bio.css             # Royal biography typography, quote blocks, narrative styling
+│   ├── detailed.css        # Detailed ministerial profile cards, portfolio galleries
+│   ├── government.css      # Executive branch, cabinet, and state organ styling
+│   ├── history.css         # National historical era milestones and timeline markers
+│   ├── ideology.css        # Waikiki First foundational principles and visual chambers
+│   ├── private.css         # Royal couple chapters (wine, lagoon, deep-sea, and brass themes)
+│   ├── sights.css          # Architectural sights, mega-structures, tourism showcase
+│   ├── gallery.css         # Media gallery grid, filtering toolbar, lightbox
+│   └── tailwind.css        # Utility extensions and interactive AI chatbot styling
 ├── js/
-│   ├── common.js           # Shared JavaScript functionality
-│   ├── economy.js          # Economy page chart and data logic
-│   ├── wealth-fund.js      # Wealth fund page scripts
-│   ├── chart.min.js        # Chart.js library
-│   └── ...                 # other page scripts
-├── content/                # Canonical Markdown content sources
-├── icons/                  # Icon and SVG assets
-├── images/                 # Images and illustrations
-├── index.html              # Landing page (locale selector)
-├── en/                     # English localized pages
-│   ├── index.html          # Landing page
-│   ├── economy.html        # Economic data and visualizations
-│   ├── history.html        # National history timeline
-│   ├── tourism.html        # Tourist information
-│   ├── wealth-fund.html    # National Wealth Fund information
-│   ├── diplomacy.html      # International relations
-│   ├── culture.html        # Cultural information
-│   ├── leadership.html     # Leadership biographies
-│   ├── military.html       # Military information
-│   ├── parties.html        # Political parties
-│   ├── faq.html            # FAQ
-│   └── ...                 # Other English-localized pages
-├── hu/                     # Hungarian localized pages
-│   ├── index.html          # Landing page
-│   ├── economy.html        # Economic data and visualizations
-│   ├── history.html        # National history timeline
-│   ├── tourism.html        # Tourist information
-│   ├── wealth-fund.html    # National Wealth Fund information
-│   ├── diplomacy.html      # International relations
-│   ├── culture.html        # Cultural information
-│   ├── leadership.html     # Leadership biographies
-│   ├── military.html       # Military information
-│   ├── parties.html        # Political parties
-│   ├── faq.html            # FAQ
-│   └── ...                 # Other Hungarian-localized pages
-├── .gitignore
-├── .nojekyll
-├── README.md
-├── STYLE-GUIDELINES.md
-└── ARCHITECTURE.md         # This file
+│   ├── common.js           # Master motion engine: header, theme toggle, curtain, scroll reveals
+│   ├── economy.js          # Chart.js economic data models, GDP growth and export visualizations
+│   ├── wealth-fund.js      # Wealth fund asset allocation charts and portfolio dynamics
+│   ├── citizenship.js      # Interactive citizenship eligibility assessment calculator
+│   ├── gallery.js          # Fullscreen responsive gallery viewer and category filters
+│   └── chart.min.js        # Standalone Chart.js library
+├── scripts/
+│   └── build_pages.py      # Idempotent automated page builder & chrome injection engine
+├── en/                     # 41 English localized pages
+│   ├── index.html          # Main English national portal
+│   ├── overview.html       # Sovereign overview & executive summary
+│   ├── society.html        # Society, provinces, and interactive administrative map
+│   ├── economy.html        # National economic indicators & trade data
+│   ├── bio/                # Royal family biographies (Angelina, Raimondo, Selena, Taylor)
+│   └── ...                 # 36 additional English topic pages
+├── hu/                     # 41 Hungarian localized pages
+│   ├── index.html          # Main Hungarian national portal
+│   ├── overview.html       # Nemzeti áttekintés
+│   ├── society.html        # Társadalom, tartományok és térkép
+│   ├── economy.html        # Nemzetgazdaság és kereskedelmi adatok
+│   ├── bio/                # Királyi életrajzok
+│   └── ...                 # 36 additional Hungarian topic pages
+├── images/                 # Optimized high-resolution photography & web assets
+├── icons/                  # Vector heraldic symbols, flags, coat of arms, and SVG icons
+├── index.html              # Multi-lingual entry portal (English & Magyar selector)
+├── STYLE-GUIDELINES.md     # Visual design system, token catalog, and typography rules
+└── ARCHITECTURE.md         # This document
 ```
 
-## Localization
+---
 
-- Bilingual layout with parallel directories: English pages in `en/`, Hungarian pages in `hu/`
-- Localized HTML files mirror page names and pull shared assets from `css/`, `js/`, `icons/`, and `images/`
-- Canonical narrative lives in `content/` and should remain the single source of truth for both locales
-- When adding a new page, create both `en/`, and `hu/` variants to keep navigation and URLs aligned
+## 3. Automated Chrome Injection Pipeline (`scripts/build_pages.py`)
 
-## CSS Architecture
+To ensure maintenance scalability without introducing heavy SSG (Static Site Generator) build dependencies, the site utilizes `scripts/build_pages.py`. 
 
-### common.css
-Contains styles that are shared across all pages:
-- **Reset & Root Variables** - Global CSS reset, color palette, design tokens and CSS custom properties for animations/spacing
-- **Navigation** - Fixed navigation bar with logo and menu links
-- **Hamburger Menu** - Mobile-friendly slide-out navigation panel
-- **Footer** - Site-wide footer with links and copyright information
-- **Common Animations** - Reusable animation keyframes (fadeIn, fadeInUp, slideIn, scaleIn)
-- **Hero Section** - Common hero banner styles used across multiple pages
-- **Section Styles** - Base section layouts, titles and introductory text
-- **Card Components** - Unified card grid system with hover effects and staggered animations
-- **Responsive Design** - Mobile breakpoints for common components
+### Chrome Injection Markers
+Each localized HTML document contains semantic HTML comments delimiting site chrome:
+- `<!-- @chrome:head -->`: Meta tags, OpenGraph tags, Google Fonts (`Fraunces` + `Manrope`), master stylesheets.
+- `<!-- @chrome:header -->`: Fixed glass navigation bar, sovereign brand insignia, navigation links, locale switch button, dark mode toggle, hamburger trigger, and fullscreen overlay menu.
+- `<!-- @chrome:subnav -->`: Dynamic sticky pill subnavigation rail extracted from the page's `<section id="...">` headings.
+- `<!-- @chrome:next -->`: Curated next-chapter card inviting users forward into sequential chapters of the national archive.
+- `<!-- @chrome:footer -->`: Sovereign footer, wave divider, categorized links, copyright, and floating back-to-top button.
 
-## JavaScript Architecture
+### Execution Modes
+```bash
+# Preview changes without modifying files (returns exit code 0)
+python3 scripts/build_pages.py --check
 
-### common.js
-Contains functionality shared across all pages:
-- **Configuration** - Centralized constants (navbar height, scroll duration, thresholds, animation timing)
-- **Smooth Scrolling** - Anchor link navigation with custom easing
-- **Intersection Observers** - Fade-in animations for sections and elements
-- **Navigation Highlighting** - Active state management based on scroll position
-- **Scroll Progress Indicator** - Visual progress bar at top of page
-- **Card Hover Effects** - Enhanced interactivity for card components
-- **Hamburger Menu** - Mobile navigation panel with overlay and interactions
-
-### Page-Specific JavaScript Files
-
-#### common.js
-- Shared initialization, smooth scrolling, intersection observers, navigation highlighting, and common UI behaviors
-
-#### economy.js
-- Chart initialization and configuration for Chart.js
-- Data processing: transform CSV/JSON for charts
-- Interactive charts: tooltips and hover interactions
-
-#### wealth-fund.js
-- Timeline rendering for the wealth fund
-- Projection calculations and interactive detail panels
-
-Note: `index.js` and `tourism.js` are not present in the repository; add them if page-specific scripts are required for those pages.
-
-## Data sources and content
-
-- Canonical content is stored as Markdown in the `content/` folder. These files are the authoritative source for page copy
-- Tabular economic and statistical data is stored in `csv/` and processed by `js/economy.js`
-- Image and icon assets live in `images/` and `icons/`
-
-## Design principles
-
-### Separation of Concerns
-- **Common files** contain only code that will be reused across multiple pages
-- **Page-specific files** contain code unique to that page
-- No duplication between common and page-specific files
-
-### Modularity
-- Each CSS/JS file is independently functional
-- Pages can mix and match components as needed
-- Easy to add new pages by extending common base
-
-### Performance
-- CSS organized by component hierarchy
-- JavaScript uses modern APIs (Intersection Observer, RequestAnimationFrame)
-- Minimal DOM manipulation
-- Efficient event delegation where appropriate
-
-### Maintainability
-- Clear file naming conventions (common.css, index.css, etc.)
-- Well-commented code with JSDoc annotations
-- Consistent code style across all files
-- Logical grouping of related functionality
-
-## Adding New Pages
-
-To add a new page to the site:
-
-1. Create the HTML file in the root directory (e.g., `about.html`)
-2. Link to common.css for base styles:
-   ```html
-   <link rel="stylesheet" href="css/common.css">
-   ```
-3. Create page-specific CSS if needed (e.g., `css/about.css`):
-   ```html
-   <link rel="stylesheet" href="css/about.css">
-   ```
-4. Include common.js for base functionality:
-   ```html
-   <script src="js/common.js"></script>
-   ```
-5. Create page-specific JS if needed (e.g., `js/about.js`):
-   ```html
-   <script src="js/about.js"></script>
-   ```
-
-## Standard Page Structure
-
-All standard content pages (in `en/` and `hu/` locales) must follow this consistent HTML structure to ensure unified layout, accessibility, sitemap alignment, and visual synchronization:
-
-### 1. Document Head (`<head>`)
-Contains metadata, mobile responsiveness settings, app icons, and linked stylesheets:
-```html
-<!DOCTYPE html>
-<html lang="en"> <!-- or lang="hu" -->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Title - Waikiki</title>
-    <!-- Icons & Manifest -->
-    <link rel="icon" href="../icons/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo.png" />
-    <link href="../manifest.json" rel="manifest" />
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../css/common.css">
-    <!-- Optional page-specific styles -->
-    <link rel="stylesheet" href="../css/page-name.css">
-    <!-- Optional hero image preload for performance -->
-    <link rel="preload" as="image" href="../images/hero.jpg" fetchpriority="high">
-</head>
+# Build and synchronize all 82 subpages
+python3 scripts/build_pages.py
 ```
 
-### 2. Header and Top Navigation Bar (`<nav class="nav-container">`)
-Stays fixed at the top of the viewport and contains the logo, main in-page desktop links, and the sötét mód (dark mode) toggle:
-```html
-<nav class="nav-container">
-    <a href="index.html" class="logo"><span><span class="first-letter">W</span>aikiki</span></a>
-    <!-- In-page anchor navigation links for desktop -->
-    <ul class="nav-links">
-        <li><a href="#section1">Section 1</a></li>
-        <li><a href="#section2">Section 2</a></li>
-    </ul>
-    <!-- Unified dark-mode-switch with SVGs for sun/moon -->
-    <button id="dark-mode-switch" class="toggle" aria-pressed="false" onclick="setTheme()">
-        <!-- ... sun/moon clouds/stars SVGs ... -->
-    </button>
-</nav>
+---
+
+## 4. Master Motion Engine (`js/common.js`)
+
+The front-end engine is built in native vanilla ES6+, completely event-driven and modular:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    Master Motion Engine                     │
+├─────────────────┬──────────────────────┬────────────────────┤
+│  Theme Manager  │    Smart Header      │   Page Curtain     │
+│  (Light/Night)  │  (Scroll direction,  │  (Smooth internal  │
+│                 │   compact mode)      │   page navigation) │
+├─────────────────┼──────────────────────┼────────────────────┤
+│  Scroll Reveal  │   Counter Animator   │   Spotlight Hover  │
+│  (Word-split &  │ (Easing numerical    │  (Mouse radial     │
+│   fade-in)      │  count-up)           │   gradient tracks) │
+├─────────────────┼──────────────────────┼────────────────────┤
+│  Overlay Menu   │   Progress FAB       │   Section Rails    │
+│  (With live     │ (SVG circular        │  (Automated deep   │
+│   Havana clock) │  scroll progress)    │   page navigation) │
+└─────────────────┴──────────────────────┴────────────────────┘
 ```
 
-### 3. Mobile Hamburger Menu Trigger and Slide-Out Panel
-Required on all subpages to provide standardized cross-page navigation. It consists of three parts:
-```html
-<!-- Trigger Button -->
-<div class="hamburger-menu">
-    <button class="hamburger-button"><span></span><span></span><span></span></button>
-</div>
+### Motion Modules
+1. **Curtain Transit Engine (`initPageTransitions`)**:
+   - Intercepts internal document links, slides a sleek glass curtain upward, and executes instant location switching for an app-like seamless cadence.
+2. **Smart Header Controller (`initHeader`)**:
+   - Listens to scroll delta via passive event listeners. Shrinks to compact mode after 40px; slides up and conceals upon rapid downward scrolling; reveals instantly upon scroll-up.
+3. **Split-Text Reveal (`initScrollAnimations`)**:
+   - Identifies titles with `.split-word` or `.hero-title` and partitions words into individual CSS translated spans with staggered delay timing.
+4. **Spotlight Tracking (`initCardEffects`)**:
+   - Calculates relative cursor coordinates within cards and updates `--mouse-x` and `--mouse-y` custom properties in real time, rendering a tactile glass reflection.
+5. **Back-to-Top with Progress Ring (`initBackToTop`)**:
+   - Calculates `scrollTop / (scrollHeight - clientHeight)` and updates the SVG `stroke-dashoffset` in real-time, providing immediate visual feedback of reading progress.
+6. **Live Nova Aurelia Time Clock (`initClock`)**:
+   - Displays real-time synchronized Atlantic/Havana standard time in the fullscreen overlay drawer.
 
-<!-- Backdrop Overlay -->
-<div class="hamburger-overlay"></div>
+---
 
-<!-- Slide-Out Navigation Panel -->
-<nav class="hamburger-panel">
-    <ul class="hamburger-links">
-        <li><a href="index.html"><img src="https://api.iconify.design/mdi/home.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Home </a></li>
-        <li><a href="tourism.html"><img src="https://api.iconify.design/mdi/compass.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Tourism </a></li>
-        <li><a href="diplomacy.html"><img src="https://api.iconify.design/mdi/earth.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Diplomacy </a></li>
-        <li><a href="society.html"><img src="https://api.iconify.design/mdi/account-multiple.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Society </a></li>
-        <li><a href="culture.html"><img src="https://api.iconify.design/mdi/palette.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Culture </a></li>
-        <li><a href="economy.html"><img src="https://api.iconify.design/mdi/chart-line.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Economy </a></li>
-        <li><a href="wealth-fund.html"><img src="https://api.iconify.design/mdi/bank.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Wealth Fund </a></li>
-        <li><a href="history.html"><img src="https://api.iconify.design/mdi/book-open.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />History </a></li>
-        <li><a href="parties.html"><img src="https://api.iconify.design/mdi/account-group.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Politics </a></li>
-        <li><a href="government.html"><img src="https://api.iconify.design/mdi/bank-outline.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Government </a></li>
-        <li><a href="leadership.html"><img src="https://api.iconify.design/mdi/crown.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Leadership </a></li>
-        <li><a href="military.html"><img src="https://api.iconify.design/mdi/shield-sword.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />Military </a></li>
-        <li><a href="faq.html"><img src="https://api.iconify.design/mdi/help-circle.svg?color=%23FFFFFF&width=24&height=24" class="menu-icon" />FAQ </a></li>
-    </ul>
-</nav>
-```
+## 5. Performance, Accessibility & SEO
 
-### 4. Main Page Body Structure
-Organized into a Hero section and successive scroll-animated sections:
-```html
-<!-- Hero Banner -->
-<section class="hero" style="background: url('../images/hero.jpg') center/cover no-repeat;">
-    <div class="hero-content">
-        <h1>Page Title</h1>
-        <p class="liquid">Introductory lead paragraph...</p>
-        <div class="hero-stats">
-            <div class="stat-item liquid"><span class="stat-number">100</span><span class="stat-label">Metric</span></div>
-        </div>
-    </div>
-</section>
-
-<!-- Content Sections with scroll fade-in animations and alternate light background option -->
-<section id="section1" class="fade-in">
-    <h2 class="section-title">Section Title</h2>
-    <p class="section-intro">Explanatory sub-heading...</p>
-    <div class="card-grid">
-        <div class="card">
-            <span class="card-icon"><img src="https://api.iconify.design/...?color=%230071BC" /></span>
-            <h3>Card Title</h3>
-            <p>Card description text...</p>
-        </div>
-    </div>
-</section>
-```
-
-### 5. Standard Page Footer
-Matches the main mobile hamburger navigation link structure:
-```html
-<footer>
-    <div class="footer-content">
-        <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="tourism.html">Tourism</a>
-            <a href="diplomacy.html">Diplomacy</a>
-            <a href="society.html">Society</a>
-            <a href="culture.html">Culture</a>
-            <a href="parties.html">Politics</a>
-            <a href="government.html">Government</a>
-            <a href="leadership.html">Leadership</a>
-            <a href="economy.html">Economy</a>
-            <a href="wealth-fund.html">Wealth Fund</a>
-            <a href="history.html">History</a>
-            <a href="military.html">Military</a>
-            <a href="faq.html">FAQ</a>
-        </div>
-        <p>&copy; 2026 The Sovereign Nation of Waikiki. All rights reserved.</p>
-    </div>
-</footer>
-```
-
-### 6. Script References (Footer)
-```html
-    <script src="../js/common.js"></script>
-    <!-- Optional page-specific JavaScript files -->
-    <script src="../js/page-name.js"></script>
-</body>
-</html>
-```
-
-## Color Palette
-
-The site uses a consistent color scheme defined in CSS custom properties:
-
-- **Primary**: `#0071BC` - Main brand color, used for navigation and accents
-- **Secondary**: `#0E308E` - Dark blue for headings and emphasis
-- **Tertiary**: `#00B0C3` - Bright cyan for highlights
-- **Gold**: `#BC9200` - Accent color for special elements
-- **Silver**: `#555555` - Body text color
-- **White**: `#FFFFFF` - Background and text on dark backgrounds
-- **Light BG**: `#F5F9FC` - Subtle background for sections
-- **Dark BG**: `#0A1930` - Reserved for future dark theme
-
-**Design Principle**: No color gradients are used. All backgrounds use solid colors or subtle opacity variations to maintain a clean, professional appearance.
-
-## Component Reference
-
-### Navigation Bar
-- Fixed position at top of page
-- Logo with Waikiki symbol (₩)
-- Horizontal menu links (on desktop)
-- Hamburger menu for cross-page navigation
-- Responsive: Switches to hamburger menu on mobile (< 768px)
-
-### Hamburger Menu
-- Fixed-position slide-out panel from right side
-- Overlay background when open
-- Links to all major pages
-- Iconify icons for visual clarity
-- Smooth transitions and keyboard support (ESC to close)
-
-### Hero Section (Common Template)
-- Full-width banner with subtle decorative elements
-- Large title and subtitle
-- Optional description text
-- Statistics display with hover effects
-- Animated entrance with staggered delays
-- No color gradients (solid colors with opacity variations only)
-
-### Card Grid System
-- Responsive grid layout (auto-fit, minmax(350px, 1fr))
-- Consistent padding (2.5rem) and border radius (20px)
-- Hover animations (lift and scale)
-- Staggered entrance animations
-- Icon support with proper sizing
-- Uses CSS custom properties for spacing
-
-### Timeline Component (Index Page)
-- Alternating left/right layout
-- Central vertical line
-- Animated dots at each milestone
-- Hover effects on timeline items
-- Calculated animation delays for smooth appearance
-
-### Expanded Timeline (History Page)
-- Period-based grouping
-- Event markers with connecting lines
-- Hover effects on markers and content
-- Responsive single-column layout on mobile
-
-### Footer
-- Full-width background with secondary color
-- Centered link menu matching navigation
-- Copyright and additional information
-- Hover effects on links
-
-## Browser Support
-
-The site uses modern web APIs and CSS features:
-- CSS Custom Properties (CSS Variables)
-- CSS Grid and Flexbox
-- Intersection Observer API
-- RequestAnimationFrame
-- ES6+ JavaScript
-
-## References
-
-- [README.md](README.md) - Project overview and narrative content
-- [STYLE-GUIDELINES.md](STYLE-GUIDELINES.md) - Content and design guidelines
-- [content/](content/) - Canonical Markdown sources for site content
+- **CSS Bundling**: Core design system consolidated in `css/common.css` with page-specific modular sheets (`css/society.css`, `css/economy.css`, etc.) for optimal browser caching.
+- **Resource Hints**: Google Fonts preconnected with `crossorigin`; hero imagery loaded with `fetchpriority="high"` and below-the-fold media tagged with `loading="lazy"`.
+- **Search Engine Optimization**: Every page features localized metadata (`og:title`, `og:description`, `og:locale`, `canonical`, and `hreflang` alternates).
+- **Reduced Motion Support**: Fully respects `@media (prefers-reduced-motion: reduce)` by immediately rendering all split-word, curtain, and counter states in their completed positions.

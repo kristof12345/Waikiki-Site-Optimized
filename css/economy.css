@@ -1,137 +1,200 @@
-/* Chart wrapper for Chart.js */
+/* ==========================================================================
+   WAIKIKI ECONOMY & DATA VISUALIZATION STYLESHEET
+   Tropical Luxe & Lagoon Night Edition
+   ========================================================================== */
+
+/* Chart Wrapper for Chart.js */
 .chart-wrapper {
-  position: relative;
-  width: 100%;
-  height: 500px;
-  max-width: 2000px;
-  margin: 0 auto;
-  padding: 1rem 0;
+    position: relative;
+    width: 100%;
+    height: 480px;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 1rem 0;
 }
 
+/* Data Viz Containers */
 .data-viz-container {
-  max-width: 2000px;
-  margin: auto;
-  padding: 2.5rem;
-  background: var(--white);
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    max-width: 1800px;
+    margin: 0 auto 3rem;
+    padding: clamp(1.75rem, 4vw, 3rem);
+    background: var(--surface-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    transition: transform var(--duration-normal) var(--ease-out),
+                box-shadow var(--duration-normal) var(--ease-out),
+                background-color var(--duration-normal) var(--ease-out);
 }
 
 .data-viz-container-half {
-  max-width: 1000px;
-  margin: 0;
-  padding: 2.5rem;
-  background: var(--white);
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    max-width: 900px;
+    margin: 0 0 3rem;
+    padding: clamp(1.75rem, 4vw, 2.5rem);
+    background: var(--surface-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    transition: transform var(--duration-normal) var(--ease-out),
+                box-shadow var(--duration-normal) var(--ease-out);
+}
+
+.data-viz-container:hover,
+.data-viz-container-half:hover {
+    box-shadow: var(--shadow-xl);
 }
 
 .data-viz-container h3,
 .data-viz-container-half h3 {
-  color: var(--secondary);
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  font-weight: 700;
+    font-family: var(--font-display);
+    color: var(--teal-950);
+    font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: -0.01em;
 }
 
 /* Comparison Bars */
 .comparison-item {
-  margin-bottom: 2rem;
+    margin-bottom: 1.75rem;
 }
 
 .comparison-label {
-  font-weight: 600;
-  color: var(--secondary);
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    color: var(--teal-950);
+    margin-bottom: 0.6rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comparison-bar-track {
+    background: var(--sand-200);
+    border-radius: var(--radius-pill);
+    overflow: hidden;
+    height: 44px;
+    padding: 3px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
 }
 
 .comparison-bar {
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 1rem;
-  color: var(--white);
-  font-weight: 700;
-  font-size: 1.1rem;
-  border-radius: 8px;
-  transition: all var(--animation-duration) var(--transition-easing);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1.25rem;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: var(--font-display);
+    border-radius: var(--radius-pill);
+    background: linear-gradient(90deg, var(--teal-600) 0%, var(--teal-500) 70%, var(--coral-500) 100%);
+    box-shadow: 0 4px 12px -2px rgba(17, 96, 91, 0.35);
+    transition: width 1.2s var(--ease-out),
+                transform var(--duration-fast) var(--ease-out),
+                box-shadow var(--duration-fast) var(--ease-out);
 }
 
 .comparison-bar:hover {
-  transform: translateX(5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: scaleX(1.01);
+    box-shadow: 0 6px 18px -2px rgba(201, 90, 65, 0.45);
 }
 
 /* Pie Chart Legend */
 .pie-chart-legend {
-  padding-top: 2rem;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .legend-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-sm);
+    transition: background-color var(--duration-fast) var(--ease-out);
+}
+
+.legend-item:hover {
+    background: rgba(17, 96, 91, 0.05);
 }
 
 .legend-color {
-  width: 30px;
-  height: 30px;
-  border-radius: 6px;
-  margin-right: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .legend-text {
-  color: var(--silver);
-  font-weight: 500;
+    color: var(--text-secondary);
+    font-weight: 600;
 }
 
 /* Chart Grid */
 .chart-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 2rem;
-  max-width: 2000px;
-  margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+    gap: 2rem;
+    max-width: 1800px;
+    margin: 0 auto;
 }
 
 /* Responsive Design */
 @media (max-width: 800px) {
-  .chart-grid {
-    grid-template-columns: 1fr;
-  }
+    .chart-grid {
+        grid-template-columns: 1fr;
+    }
 
-  .data-viz-container,
-  .data-viz-container-half {
-    padding: 1.5rem;
-  }
+    .data-viz-container,
+    .data-viz-container-half {
+        padding: 1.25rem;
+    }
 
-  .comparison-bar {
-    height: 40px;
-    font-size: 1rem;
-  }
+    .chart-wrapper {
+        height: 360px;
+    }
+
+    .comparison-bar {
+        font-size: 0.9rem;
+        padding-right: 0.75rem;
+    }
 }
 
-/* DARK MODE */
+/* ==========================================================================
+   LAGOON NIGHT (DARK MODE)
+   ========================================================================== */
 .body-dark .data-viz-container,
 .body-dark .data-viz-container-half {
-  background: var(--dark-bg);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    background: var(--surface-card);
+    border-color: var(--border-subtle);
+    box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.6);
 }
 
 .body-dark .data-viz-container h3,
 .body-dark .data-viz-container-half h3 {
-  color: var(--tertiary);
+    color: var(--teal-300);
 }
 
 .body-dark .comparison-label {
-  color: var(--white);
+    color: var(--sand-50);
+}
+
+.body-dark .comparison-bar-track {
+    background: rgba(255, 255, 255, 0.06);
 }
 
 .body-dark .legend-text {
-  color: var(--white);
+    color: var(--sand-200);
+}
+
+.body-dark .legend-item:hover {
+    background: rgba(255, 255, 255, 0.05);
 }

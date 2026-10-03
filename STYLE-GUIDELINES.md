@@ -1,172 +1,125 @@
-# Waikiki Website Style Guidelines
+# Sovereign Nation of Waikiki — Style Guidelines
+**Tropical Luxe & Lagoon Night Design System**
+*Version 3.0 · Sovereign Identity & Modern Web Standard*
 
-## Overview
-This document defines the design system and style guidelines for the Waikiki official website. All changes and additions should follow these guidelines to maintain consistency and professional appearance.
+---
 
-## Color Palette
+## 1. Design Vision & Philosophy
 
-### Primary Colors
-- **Primary Blue**: `#0071BC` - Main brand color, used for navigation, links, accents
-- **Secondary Blue**: `#0E308E` - Headings, important text
-- **Tertiary Cyan**: `#00B0C3` - Accents, highlights
+The Sovereign Nation of Waikiki digital identity is rooted in **Tropical Luxe** — an editorial, sovereign, warm, and highly kinetic design language inspired by the Caribbean seas, the lush Amazonian rainforest, warm sunlit sands, and royal heritage.
 
-### Accent Colors
-- **Gold**: `#BC9200` - Premium elements, important stats, royal family elements
-- **Silver**: `#555555` - Body text, secondary information
-- **Pink**: `#4F041C` - Intimate and romantic sections (Private pages)
-- **Azure**: `#295165` - Adventure and travel sections (Private pages)
+- **Warm & Sovereign**: Replacing generic corporate blues with warm ivory sands (`#FBF7F0`), deep lagoon teals (`#0B3B3A`), vibrant coral/terracotta (`#C95A41`), soft aqua (`#7CC6BC`), and regal brass/gold (`#C29A57`).
+- **Kinetic & Atmospheric**: Scroll-driven storytelling, word-split headline reveals, pointer-reactive spotlight glow cards, smooth page transit curtains, and an interactive back-to-top progress ring.
+- **Editorial Typography**: A dual-type pairing featuring `Fraunces` (high-contrast display optical serif) and `Manrope` (clean, contemporary geometric grotesque).
+- **Dual Sovereign Modes**: Default *Tropical Luxe Light* and *Lagoon Night* dark mode with seamless preference persistence (`localStorage.isDarkMode`).
 
-### Background Colors
-- **White**: `#FFFFFF` - Card backgrounds, content areas
-- **Light Background**: `#F5F9FC` - Alternate section backgrounds
-- **Dark Background**: `#0A1930` - Footer, dark sections
+---
 
-## Typography
+## 2. Color Palette & Design Tokens
 
-### Font Family
-- Primary: `Inter`, fallback to system fonts (`Segoe UI`, `Tahoma`, `Geneva`, `Verdana`, `sans-serif`)
-- Load from Google Fonts: `https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap`
+### Primary Palette (Tropical Luxe Light)
+| Token | Value | Semantic Role |
+| :--- | :--- | :--- |
+| `--sand-50` | `#FBF7F0` | Primary page canvas, warm ivory backdrop |
+| `--sand-100` | `#F5EDE1` | Secondary surface, subtle contrast bands |
+| `--sand-200` | `#E8DCB8` | Warm border accents, subtle dividers |
+| `--teal-950` | `#072221` | Deepest brand tone, headers, high-contrast text |
+| `--teal-900` | `#0B3B3A` | Primary brand lagoon teal, hero veils, badges |
+| `--teal-800` | `#11605B` | Interactive elements, active links, primary buttons |
+| `--teal-500` | `#2A8C83` | Vibrant aqua-teal, province tone, success states |
+| `--teal-300` | `#7CC6BC` | Soft aqua glow, dark mode accents |
+| `--coral-500` | `#C95A41` | Dynamic accent coral, active states, callouts |
+| `--coral-400` | `#E3735A` | Coral hover state, radiant highlights |
+| `--gold` | `#C29A57` | Royal insignia, stars, timeline nodes, brass accents |
+| `--gold-light` | `#DFBA76` | Illuminated gold accents, night mode badges |
 
-### Font Sizes
-- **Headings**:
-  - H1 (Hero): `4rem` (64px) on desktop, `2.5rem` (40px) on mobile
-  - H2 (Section Titles): `3rem` (48px) on desktop, `2.2rem` (35px) on mobile
-  - H3 (Card Titles): `1.6rem` (25.6px)
-- **Body Text**: `1rem` (16px), line-height `1.6`
-- **Section Intro**: `1.2rem` (19.2px), line-height `1.8`
-- **Small Text**: `0.95rem` (15.2px)
+### Lagoon Night Palette (Dark Mode)
+| Token | Value | Semantic Role |
+| :--- | :--- | :--- |
+| Canvas | `#0A1C1B` | Deep abyssal lagoon background |
+| Surface Card | `#112A28` | Glassmorphic floating surfaces with 1px aqua border |
+| Surface Subtle | `#0E2423` | Secondary dark surface, header backdrop |
+| Text Primary | `#FBF7F0` | High-contrast ivory text |
+| Text Secondary | `#CAD7D5` | Muted lagoon body text |
+| Accent Glow | `#7CC6BC` | Soft aqua luminous indicators |
+| Accent Coral | `#E3735A` | Vivid nocturnal highlight |
 
-### Font Weights
-- Light: `300`
-- Regular: `400`
-- Medium: `500`
-- Semi-bold: `600`
-- Bold: `700`
-- Extra-bold: `800`
+### Province Identity Colors
+- **Waikiki Province**: `--waikiki: #2A8C83`, hover: `#3AA79C` (Deep Caribbean turquoise)
+- **Amazonia Province**: `--amazonia: #4E8B5A`, hover: `#62A56F` (Lush Amazonian emerald)
+- **Brazilia Province**: `--brazilia: #E2B65C`, hover: `#ECC677` (Warm sunlit brass)
 
-### Standard Timing
-- **Transition Duration**: `0.5s` (500ms) for all hover effects
-- **Easing**: `cubic-bezier(0.4, 0, 0.2, 1)` for smooth, professional feel
-- **Entry Animation Duration**: `0.8s` (800ms) with staggered delays
-- **Animation Delays**: Calculated using `calc(var(--base-animation-delay) + N * var(--animation-delay-increment))`
+---
 
-### Hover Effects - Unified
-All interactive elements use consistent hover animations:
-- **Transform**: `translateY(-8px) scale(1.03)`
-- **No 3D transforms**: Avoid `rotate3d`, `rotateX`, `rotateY`
-- **No aggressive scaling**: Maximum scale is `1.03`
-- **Consistent shadow enhancement**: Increase shadow spread on hover
-- **Duration**: Always use `var(--animation-duration)`
+## 3. Typography Hierarchy
 
-### Entry Animations
-**Staggered Delays:**
-- Uses CSS custom properties for calculated delays
-- First item: `0.05s` (base delay)
-- Increment: `0.08s` per item (0.05s, 0.13s, 0.21s, ...)
-- Earlier appearance than previous implementation (reduced from 0.15s base)
+### Typefaces
+- **Display Serif**: `Fraunces` (Google Fonts: 400, 600, 700, 800, italic, optical size 144)
+  - Used for: Brand insignia, hero titles, section headlines, stat numbers, card titles, quotes.
+- **Body & Interface**: `Manrope` (Google Fonts: 400, 500, 600, 700, 800)
+  - Used for: Narrative body text, navigation links, buttons, table data, subnavigation, chips.
 
-**fadeInUp Animation:**
-```css
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-```
+### Scale & Hierarchy
+- **Hero Title (`.hero-title`)**: `clamp(2.75rem, 6vw, 4.5rem)`, weight 800, line-height 1.05, tracking `-0.02em`.
+- **Section Title (`.section-title`)**: `clamp(2rem, 4vw, 3rem)`, weight 700, line-height 1.15. Decorated with warm gradient accent pill.
+- **Card Title (`.card h3`, `.admin-card h3`)**: `clamp(1.25rem, 2vw, 1.5rem)`, weight 700, line-height 1.25.
+- **Hero Lead (`.hero-lead`)**: `clamp(1.1rem, 1.6vw, 1.35rem)`, weight 400, line-height 1.65.
+- **Body Text (`p`, `.narrative-text`)**: `clamp(1rem, 1.3vw, 1.12rem)`, weight 400, line-height 1.8.
+- **Eyebrow / Subhead (`.hero-eyebrow`)**: `0.85rem`, weight 700, uppercase, tracking `0.18em`, coral glow.
 
-**scaleIn Animation (for stat items):**
-```css
-@keyframes scaleIn {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-```
+---
 
-## Smooth Scrolling
+## 4. Motion Engine & Kinematics
 
-### Anchor Scroll Behavior
-- Duration: `1200ms` (1.2 seconds)
-- Easing: Cubic easing with smooth acceleration and deceleration
-- Offset: `-80px` to account for fixed navigation
+All motion follows natural organic physics with custom cubic Bézier curves:
+- **Ease Out (Deceleration)**: `cubic-bezier(0.16, 1, 0.3, 1)` — default for modals, menus, cards.
+- **Spring (Snappy overshoot)**: `cubic-bezier(0.34, 1.56, 0.64, 1)` — badges, active pills, icons.
+- **Curtain Transit**: `cubic-bezier(0.76, 0, 0.24, 1)` — page transition curtains (400ms).
 
-## Icons
+### Core Motion Behaviors
+1. **Curtain Navigation**:
+   - Internal links activate an SVG/glass curtain that slides up smoothly before loading target pages, ensuring an app-like seamless feel.
+2. **Word-Split Hero Reveal**:
+   - Titles with `.split-word` split into animated inline spans that rise with staggered delays (`calc(0.04s * index)`).
+3. **Scroll Reveal (`.fade-in`, `.revealed`)**:
+   - Elements automatically observe intersection and enter with subtle translation (`translateY(24px)`) and opacity fade.
+4. **Spotlight Tracking Cards (`.card`, `.hover-card`)**:
+   - Cards track cursor coordinates (`--mouse-x`, `--mouse-y`) to cast a subtle radial light across their glass surface.
+5. **Statistic Number Count-Up (`.stat-number`, `.economy-number`)**:
+   - Animates numbers smoothly from 0 to target value on scroll entry with ease-out interpolation.
+6. **Smart Header**:
+   - Transparent over hero; shrinks to compact blur header upon scrolling; automatically hides on rapid scroll-down and reveals on scroll-up.
+7. **Floating Back-to-Top with Progress Ring**:
+   - Bottom-right FAB featuring an SVG circle that tracks total page scroll progress percentage, elevating on hover.
 
-### Guidelines
-- Prefer official icon sets or high-quality images over emoji
-- Icon size in cards: `3.5rem` (56px)
-- Icons should be meaningful and relevant to content
-- Consistent style across all sections
+---
 
-### Recommended Sources
-- Official government/institutional icons when available
-- SVG icons from reputable icon libraries
-- Custom-designed icons matching brand colors
+## 5. UI Components
 
-## Best Practices
+### Navigation & Header
+- **Fixed Glass Bar**: Glassmorphism with `backdrop-filter: blur(20px)` and subtle sand border.
+- **Nav Links**: Magnetic subtle hover lift with animated underline pill.
+- **Overlay Menu**: Full-screen luxury drawer featuring multi-column categorized site links and a live Havana/Nova Aurelia clock.
+- **Subnavigation Rail**: Sticky horizontal pill menu for deep page section jumps with active indicator tracking.
 
-### DO:
-- ✅ Use consistent spacing throughout
-- ✅ Apply unified hover effects (translateY + scale)
-- ✅ Use the defined color palette
-- ✅ Use CSS custom properties for timing and spacing
-- ✅ Maintain `var(--animation-duration)` for all transitions
-- ✅ Use `var(--transition-easing)` for smooth animations
-- ✅ Calculate animation delays using CSS custom properties
-- ✅ Test animations on different devices
-- ✅ Ensure accessibility (contrast ratios, focus states)
-- ✅ Use solid colors or subtle opacity variations
+### Cards & Surfaces
+- **Glassmorphism Tokens**:
+  - `background: var(--surface-card)` (`#FFFFFF` in light, `#112A28` in night).
+  - `border: 1px solid var(--border-subtle)`.
+  - `box-shadow: 0 16px 36px -12px rgba(11, 59, 58, 0.12)`.
+  - Hover state: `transform: translateY(-6px)`.
 
-### DON'T:
-- ❌ Use color gradients (use solid colors with opacity instead)
-- ❌ Use 3D rotations or transforms
-- ❌ Mix different animation timings randomly
-- ❌ Use harsh or sudden animations
-- ❌ Scale elements beyond 1.03x (our standard hover scale)
-- ❌ Use colors outside the defined palette
-- ❌ Create inconsistent spacing
-- ❌ Use excessive animations
-- ❌ Hard-code timing values (use CSS variables instead)
+### Buttons & Controls
+- **Primary Button (`.btn-primary`)**: Lagoon teal gradient into coral with warm sand text, pill radius, smooth scale on click.
+- **Secondary Button (`.btn-secondary`)**: Translucent sand/glass with fine border, coral hover glow.
+- **Theme Toggle (`.theme-toggle`)**: Dual-state sun/moon icon button with smooth rotation transition and instant theme application.
 
-## Accessibility
+---
 
-### Requirements
-- Color contrast ratio: Minimum 4.5:1 for body text
-- Color contrast ratio: Minimum 3:1 for large text (18pt+)
-- All interactive elements must have focus states
-- Support keyboard navigation
-- Meaningful alt text for images
-- ARIA labels where appropriate
+## 6. Accessibility & SEO Standards
 
-### Focus States
-```css
-:focus {
-    outline: 2px solid var(--primary);
-    outline-offset: 2px;
-}
-```
-
-## Performance
-
-### Optimization
-- Use CSS transitions over JavaScript animations when possible
-- Minimize DOM manipulation
-- Use `will-change` property sparingly
-- Debounce scroll events
-
-## Browser Support
-
-### Targets
-- Chrome/Edge: Latest 2 versions
-- Safari: Latest 2 versions
-- Mobile browsers: Latest
+- **Semantic Landmarks**: `<header>`, `<nav>`, `<main id="main">`, `<section>`, `<article>`, `<footer>`.
+- **Contrast Compliance**: Minimum 4.5:1 text-to-background contrast ratio across both Light and Night modes.
+- **Motion Reduction**: `@media (prefers-reduced-motion: reduce)` disables transit curtains and continuous animations for sensitive users.
+- **Keyboard Navigation**: Clear `:focus-visible` rings with `--coral-500` glow and `outline-offset: 3px`.
+- **Multilingual Semantics**: Proper `hreflang="hu"` and `hreflang="en"` links on language selectors; `lang` attributes on `<html>`.

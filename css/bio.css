@@ -1,23 +1,142 @@
-/* Bio summary list formatting */
+/* ==========================================================================
+   WAIKIKI BIOGRAPHIES STYLESHEET
+   Tropical Luxe & Lagoon Night Edition
+   ========================================================================== */
+
+/* Narrative Container */
+#narrative {
+    padding: clamp(60px, 8vw, 100px) clamp(1.5rem, 5vw, 4rem);
+    background: var(--sand-50);
+    transition: background-color var(--duration-normal) var(--ease-out);
+}
+
+.narrative-content {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+/* Bio Summary Royal Accolades Strip */
 .bio-summary {
-    font-size: 1.2rem;
+    font-family: var(--font-sans);
+    font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+    font-weight: 600;
     text-align: center;
-    font-weight: bold;
-    margin-bottom: 3rem;
-    color: #C95A41;
-    letter-spacing: 1px;
-    word-spacing: 5px;
+    line-height: 1.8;
+    margin: 0 auto clamp(2.5rem, 5vw, 4rem);
+    color: var(--coral-600);
+    letter-spacing: 0.04em;
+    padding: 1.25rem 2rem;
+    background: var(--surface-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    position: relative;
 }
 
-/* Narrative section titles */
+.bio-summary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20%;
+    right: 20%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+/* Narrative Section Titles */
 #narrative .section-title {
-    font-size: 1.8rem;
-    margin-top: 2rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700;
+    color: var(--teal-950);
+    margin-top: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.01em;
+    position: relative;
+    padding-bottom: 0.5rem;
 }
 
-/* Bio closing quote */
+#narrative .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 48px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--coral-500), var(--gold));
+    border-radius: var(--radius-pill);
+}
+
+/* Narrative Text */
+#narrative .narrative-text {
+    font-size: clamp(1.05rem, 1.4vw, 1.18rem);
+    line-height: 1.9;
+    color: var(--text-secondary);
+    margin-bottom: 1.75rem;
+    font-feature-settings: "kern" 1, "liga" 1;
+}
+
+/* Bio Closing Quote */
 .bio-quote {
+    font-family: var(--font-display) !important;
     font-style: italic;
+    font-size: clamp(1.25rem, 2.2vw, 1.6rem) !important;
+    line-height: 1.6 !important;
     text-align: center;
-    margin-top: 3rem;
+    color: var(--teal-950) !important;
+    margin: clamp(3rem, 6vw, 5rem) auto 1rem !important;
+    padding: clamp(2rem, 4vw, 3rem) clamp(2rem, 5vw, 3.5rem);
+    background: var(--surface-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    max-width: 900px;
+}
+
+.bio-quote::before {
+    content: "“";
+    font-family: var(--font-display);
+    font-size: 5rem;
+    line-height: 1;
+    color: var(--coral-300);
+    position: absolute;
+    top: -15px;
+    left: 24px;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   LAGOON NIGHT (DARK MODE)
+   ========================================================================== */
+.body-dark #narrative {
+    background: var(--sand-950);
+}
+
+.body-dark .bio-summary {
+    background: var(--surface-card);
+    border-color: rgba(124, 198, 188, 0.18);
+    color: var(--coral-light);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.body-dark #narrative .section-title {
+    color: var(--sand-50);
+}
+
+.body-dark #narrative .narrative-text {
+    color: var(--sand-200);
+}
+
+.body-dark .bio-quote {
+    background: var(--surface-card);
+    border-color: rgba(124, 198, 188, 0.18);
+    color: var(--sand-50) !important;
+    box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.6);
+}
+
+.body-dark .bio-quote::before {
+    color: var(--teal-400);
+    opacity: 0.35;
 }

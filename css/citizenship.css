@@ -1,18 +1,11 @@
+/* ==========================================================================
+   WAIKIKI CITIZENSHIP & IMMIGRATION STYLESHEET
+   Tropical Luxe & Lagoon Night Edition
+   ========================================================================== */
+
 h3 {
-    color: var(--dark-bg);
-}
-
-.hover-card {
-    transition: transform .5s cubic-bezier(.4, 0, .2, 1), box-shadow .5s cubic-bezier(.4, 0, .2, 1);
-}
-
-.hover-card:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, .1), 0 10px 10px -5px rgba(0, 0, 0, .04);
-}
-
-.animate-fade-up {
-    animation: fadeInUp .8s cubic-bezier(.4, 0, .2, 1) forwards;
+    font-family: var(--font-display);
+    color: var(--teal-950);
 }
 
 .text-gray-600 {
@@ -20,54 +13,151 @@ h3 {
     margin: auto;
 }
 
-/* Dark mode - Initial Screening Tiers */
+/* Hover Cards (Screening Tiers) */
+.hover-card {
+    transition: transform var(--duration-normal) var(--ease-out),
+                box-shadow var(--duration-normal) var(--ease-out),
+                border-color var(--duration-normal) var(--ease-out);
+    border-radius: var(--radius-lg);
+    background: var(--surface-card);
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 24px 48px -12px rgba(11, 59, 58, 0.16);
+    border-color: var(--coral-500);
+}
+
+.animate-fade-up {
+    animation: fadeInUp 0.8s var(--ease-out) forwards;
+}
+
+/* Screening Tiers Section */
+.screening-tiers-section {
+    padding: clamp(60px, 8vw, 100px) 0;
+    transition: background-color var(--duration-normal) var(--ease-out);
+}
+
+.screening-tiers-section h2 {
+    font-family: var(--font-display);
+    color: var(--teal-950);
+}
+
+/* ==========================================================================
+   ASSESSMENT MODAL
+   ========================================================================== */
+.assessment-modal-overlay {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(7, 28, 27, 0.72) !important;
+    transition: opacity var(--duration-normal) var(--ease-out);
+}
+
+.assessment-modal {
+    background: var(--sand-50);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--border-subtle);
+    box-shadow: 0 32px 72px -16px rgba(0, 0, 0, 0.4);
+    color: var(--text-primary);
+    overflow: hidden;
+}
+
+.assessment-modal-header {
+    background: var(--sand-100);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 1.5rem 2rem;
+}
+
+.assessment-modal-header h3 {
+    font-family: var(--font-display);
+    color: var(--teal-950);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.assessment-modal-close {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(17, 96, 91, 0.08);
+    color: var(--teal-900);
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--duration-fast) var(--ease-out),
+                transform var(--duration-fast) var(--ease-out);
+}
+
+.assessment-modal-close:hover {
+    background: var(--coral-500);
+    color: var(--white);
+    transform: rotate(90deg);
+}
+
+/* ==========================================================================
+   LAGOON NIGHT (DARK MODE)
+   ========================================================================== */
 .body-dark .screening-tiers-section {
     background: linear-gradient(180deg, #0E2423 0%, #072221 100%) !important;
 }
 
 .body-dark .screening-tiers-section h2 {
-    color: #7CC6BC !important;
+    color: var(--teal-300) !important;
 }
 
 .body-dark .screening-tiers-section .hover-card {
-    background-color: rgba(17, 42, 40, 0.9) !important;
-    border-color: rgba(124, 198, 188, 0.25) !important;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    background: var(--surface-card) !important;
+    border-color: rgba(124, 198, 188, 0.18) !important;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
 }
 
 .body-dark .screening-tiers-section .hover-card:hover {
-    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.55);
+    border-color: var(--coral-light) !important;
 }
 
-.body-dark .screening-tiers-section .hover-card h3,
+.body-dark .screening-tiers-section .hover-card h3 {
+    color: var(--sand-50) !important;
+}
+
 .body-dark .screening-tiers-section .hover-card p,
 .body-dark .screening-tiers-section .hover-card .text-xs {
-    color: #e7f3ff !important;
+    color: var(--sand-200) !important;
 }
 
 .body-dark .screening-tiers-section .hover-card .opacity-60 {
-    opacity: 0.75;
+    opacity: 0.8;
 }
 
 .body-dark .screening-tiers-section .hover-card .w-12.h-12.bg-white {
-    background-color: rgba(255, 255, 255, 0.1) !important;
-    color: #f3f8ff !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    color: var(--sand-50) !important;
 }
 
 /* Dark mode - Assessment modal */
 .body-dark .assessment-modal-overlay {
-    background: rgba(3, 10, 18, 0.84) !important;
+    background: rgba(3, 12, 12, 0.86) !important;
 }
 
 .body-dark .assessment-modal {
     background: linear-gradient(180deg, #112A28 0%, #0A1C1B 100%) !important;
-    color: #edf6ff;
-    border: 1px solid rgba(124, 198, 188, 0.25);
+    color: var(--sand-100);
+    border: 1px solid rgba(124, 198, 188, 0.22);
 }
 
 .body-dark .assessment-modal-header {
-    background: rgba(7, 34, 33, 0.9) !important;
-    border-bottom-color: rgba(124, 198, 188, 0.25);
+    background: rgba(7, 34, 33, 0.95) !important;
+    border-bottom-color: rgba(124, 198, 188, 0.2);
+}
+
+.body-dark .assessment-modal-header h3 {
+    color: var(--sand-50) !important;
 }
 
 .body-dark .assessment-modal-meta,
@@ -78,7 +168,7 @@ h3 {
 .body-dark .assessment-modal .text-gray-700,
 .body-dark .assessment-modal .text-gray-800,
 .body-dark .assessment-modal .text-gray-900 {
-    color: #dcecff !important;
+    color: var(--sand-200) !important;
 }
 
 .body-dark .assessment-modal .border,
@@ -86,7 +176,7 @@ h3 {
 .body-dark .assessment-modal .border-gray-100,
 .body-dark .assessment-modal .border-gray-200,
 .body-dark .assessment-modal .bg-gray-100 {
-    border-color: rgba(124, 198, 188, 0.25) !important;
+    border-color: rgba(124, 198, 188, 0.2) !important;
 }
 
 .body-dark .assessment-modal .bg-white,
@@ -95,20 +185,22 @@ h3 {
 .body-dark .assessment-modal .bg-blue-50,
 .body-dark .assessment-modal .bg-yellow-50,
 .body-dark .assessment-modal .from-yellow-50 {
-    background-color: rgba(255, 255, 255, 0.08) !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
     background-image: none !important;
 }
 
-.body-dark .assessment-modal .space-y-3>button {
-    background: rgba(7, 34, 33, 0.65);
-    border-color: rgba(124, 198, 188, 0.25);
+.body-dark .assessment-modal .space-y-3 > button {
+    background: rgba(7, 34, 33, 0.7);
+    border-color: rgba(124, 198, 188, 0.22);
+    color: var(--sand-100);
 }
 
-.body-dark .assessment-modal .space-y-3>button:hover {
-    background: rgba(17, 96, 91, 0.28) !important;
-    border-color: var(--tertiary) !important;
+.body-dark .assessment-modal .space-y-3 > button:hover {
+    background: rgba(17, 96, 91, 0.35) !important;
+    border-color: var(--teal-300) !important;
+    color: var(--sand-50);
 }
 
-.body-dark .assessment-modal .space-y-3>button .rounded-full {
-    border-color: rgba(124, 198, 188, 0.6);
+.body-dark .assessment-modal .space-y-3 > button .rounded-full {
+    border-color: rgba(124, 198, 188, 0.5);
 }

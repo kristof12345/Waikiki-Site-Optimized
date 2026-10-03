@@ -1,67 +1,81 @@
+/* ==========================================================================
+   GOVERNMENT & CABINET STYLES
+   ========================================================================== */
+
 .table td:first-child {
-    font-weight: 600
+    font-weight: 600;
 }
 
-/*  CABINET GRID  */
+/* CABINET GRID */
 .member-role {
-    color: var(--primary);
-    font-weight: 700;
+    color: var(--accent);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 0.5px;
     margin-top: 0.5rem;
 }
 
 .member-name {
+    font-family: var(--font-display);
     font-size: 1.6rem;
-    font-weight: 600;
-    margin-bottom: 1.2rem;
-    color: var(--secondary);
+    font-weight: 400;
+    color: var(--heading);
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
 }
 
 .member-description {
-    font-size: 1rem;
+    font-size: 0.98rem;
     line-height: 1.8;
-    color: var(--silver);
-    text-align: justify;
+    color: var(--text);
 }
 
 .member-image {
     width: 100px;
     height: 100px;
-    border-radius: 50px;
+    border-radius: 50%;
     overflow: hidden;
+    border: 3px solid var(--surface-2);
+    box-shadow: var(--shadow-sm);
+    flex-shrink: 0;
 }
 
 .reference-icon img,
 .member-image img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-/*  HISTORICAL REFERENCE CARDS  */
+/* HISTORICAL REFERENCE CARDS */
 .reference-card {
     display: flex;
     align-items: flex-start;
-    gap: 1rem;
-    padding: 1.25rem;
-    background: var(--white);
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    border-left: 4px solid var(--primary);
-    transition: all 0.3s ease;
-    margin-bottom: 1rem;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.5s var(--ease-out), box-shadow 0.5s var(--ease-out), border-color 0.4s;
+    margin-bottom: 1.25rem;
 }
 
 .reference-card:hover {
-    box-shadow: var(--card-shadow-hover);
-    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+    border-color: rgba(42, 140, 131, 0.35);
 }
 
 .reference-icon {
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
     overflow: hidden;
+    border: 2px solid var(--line);
+    flex-shrink: 0;
 }
 
 .reference-info {
@@ -69,56 +83,30 @@
 }
 
 .reference-name {
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: var(--secondary);
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--heading);
     margin-bottom: 0.25rem;
 }
 
 .reference-role {
-    font-size: 0.8rem;
-    color: var(--primary);
-    font-weight: 600;
+    font-size: 0.74rem;
+    color: var(--accent);
+    font-weight: 800;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
 }
 
 .reference-desc {
-    text-align: justify;
-    font-size: 0.88rem;
-    line-height: 1.6;
-    color: var(--silver);
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: var(--text);
 }
 
-/*  RESPONSIVE  */
-@media (max-width: 1200px) {
+@media (max-width: 800px) {
     .reference-card {
-        flex-direction: row;
+        flex-direction: column;
     }
-
-    .member-name {
-        font-size: 1.3rem;
-    }
-}
-
-/* DARK MODE */
-.body-dark .member-name,
-.body-dark .reference-name {
-    color: var(--white);
-}
-
-.body-dark .member-description,
-.body-dark .reference-desc {
-    color: var(--white);
-}
-
-.body-dark .reference-card {
-    background: var(--dark-blue);
-    border-color: var(--primary);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-}
-
-.body-dark .reference-card:hover {
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
 }

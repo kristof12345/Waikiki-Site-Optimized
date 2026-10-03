@@ -1,139 +1,185 @@
-/* Chart wrapper for Chart.js */
+/* ==========================================================================
+   WAIKIKI WEALTH FUND & TIMELINE STYLESHEET
+   Tropical Luxe & Lagoon Night Edition
+   ========================================================================== */
+
+/* Chart Wrapper */
 .chart-wrapper {
-  position: relative;
-  width: 100%;
-  height: 300px;
-  max-width: 2000px;
-  margin: 0 auto;
-  padding: 1rem 0;
+    position: relative;
+    width: 100%;
+    height: 340px;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 1rem 0;
 }
 
 .chart-title {
-  max-width: 2000px;
-  margin: auto;
+    max-width: 1800px;
+    margin: auto;
+    font-family: var(--font-display);
+    color: var(--teal-950);
 }
 
-/* Timeline Styles */
+/* ==========================================================================
+   TIMELINE STYLES
+   ========================================================================== */
 .timeline-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 2rem 0;
-  position: relative;
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 2rem 0;
+    position: relative;
 }
 
 .timeline-container::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: var(--gold);
-  transform: translateX(-50%);
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, var(--gold) 0%, var(--coral-500) 50%, var(--teal-600) 100%);
+    transform: translateX(-50%);
+    border-radius: var(--radius-pill);
+    box-shadow: 0 0 12px rgba(194, 154, 87, 0.4);
 }
 
 .timeline-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 3rem;
-  position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 3.5rem;
+    position: relative;
 }
 
 .timeline-item:nth-child(odd) {
-  flex-direction: row;
+    flex-direction: row;
 }
 
 .timeline-item:nth-child(even) {
-  flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
 
 .timeline-year {
-  flex: 0 0 120px;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--gold);
-  background: white;
-  border: 3px solid var(--gold);
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  position: relative;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex: 0 0 110px;
+    width: 110px;
+    height: 110px;
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--gold-dark);
+    background: var(--sand-50);
+    border: 3px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: relative;
+    box-shadow: 0 8px 24px -4px rgba(194, 154, 87, 0.35);
+    transition: transform var(--duration-normal) var(--ease-out),
+                box-shadow var(--duration-normal) var(--ease-out),
+                border-color var(--duration-normal) var(--ease-out);
+}
+
+.timeline-item:hover .timeline-year {
+    transform: scale(1.08);
+    border-color: var(--coral-500);
+    color: var(--coral-500);
+    box-shadow: 0 12px 28px -4px rgba(201, 90, 65, 0.45);
 }
 
 .timeline-content {
-  flex: 1;
-  padding: 1.5rem 2rem;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin: 0 2rem;
-  border-left: 4px solid var(--primary);
+    flex: 1;
+    padding: clamp(1.5rem, 3vw, 2rem) clamp(1.75rem, 3vw, 2.5rem);
+    background: var(--surface-card);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-md);
+    margin: 0 2.5rem;
+    border-left: 5px solid var(--teal-600);
+    transition: transform var(--duration-normal) var(--ease-out),
+                box-shadow var(--duration-normal) var(--ease-out);
 }
 
 .timeline-item:nth-child(even) .timeline-content {
-  border-left: none;
-  border-right: 4px solid var(--primary);
+    border-left: 1px solid var(--border-subtle);
+    border-right: 5px solid var(--teal-600);
+}
+
+.timeline-content:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
 }
 
 .timeline-content h4 {
-  color: var(--primary);
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+    font-family: var(--font-display);
+    color: var(--teal-950);
+    margin-bottom: 0.65rem;
+    font-size: 1.3rem;
+    font-weight: 700;
 }
 
 .timeline-content p {
-  color: var(--silver);
-  line-height: 1.6;
-  margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin: 0;
+    font-size: 0.98rem;
 }
 
-/* Responsive Design */
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
 @media (max-width: 800px) {
-  .timeline-container::before {
-    left: 60px;
-  }
+    .timeline-container::before {
+        left: 45px;
+    }
 
-  .timeline-item,
-  .timeline-item:nth-child(even) {
-    flex-direction: row;
-  }
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        flex-direction: row;
+        margin-bottom: 2.5rem;
+    }
 
-  .timeline-year {
-    flex: 0 0 80px;
-    width: 80px;
-    height: 80px;
-    font-size: 1.2rem;
-  }
+    .timeline-year {
+        flex: 0 0 80px;
+        width: 80px;
+        height: 80px;
+        font-size: 1.15rem;
+    }
 
-  .timeline-content {
-    margin: 0 1rem 0 2rem;
-    border-left: 4px solid var(--primary);
-    border-right: none;
-  }
-
-  .timeline-item:nth-child(even) .timeline-content {
-    border-left: 4px solid var(--primary);
-    border-right: none;
-  }
+    .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        margin: 0 0 0 1.5rem;
+        border-left: 4px solid var(--teal-600);
+        border-right: 1px solid var(--border-subtle);
+        padding: 1.25rem 1.5rem;
+    }
 }
 
-/* DARK MODE */
+/* ==========================================================================
+   LAGOON NIGHT (DARK MODE)
+   ========================================================================== */
+.body-dark .chart-title {
+    color: var(--sand-50);
+}
+
 .body-dark .timeline-year {
-  background: var(--dark-bg);
-  border-color: var(--gold);
+    background: var(--surface-card);
+    border-color: var(--gold);
+    color: var(--gold-light);
+    box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.6);
 }
 
 .body-dark .timeline-content {
-  background: var(--dark-bg);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    background: var(--surface-card);
+    border-color: var(--border-subtle);
+    box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.5);
 }
 
 .body-dark .timeline-content h4 {
-  color: var(--tertiary);
+    color: var(--teal-300);
+}
+
+.body-dark .timeline-content p {
+    color: var(--sand-200);
 }
