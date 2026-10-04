@@ -55,6 +55,7 @@ GROUPS = [
     ("prosperity", {"en": "Prosperity", "hu": "Jólét"}, [
         ("economy", {"en": "Economy", "hu": "Gazdaság"}),
         ("wealth-fund", {"en": "Wealth Fund", "hu": "Vagyonalap"}),
+        ("infrastructure", {"en": "Infrastructure", "hu": "Infrastruktúra"}),
         ("plane", {"en": "Diplomatic Fleet", "hu": "Diplomáciai Flotta"}),
     ]),
     ("royal", {"en": "Royal Family", "hu": "Királyi Család"}, [
@@ -67,6 +68,7 @@ GROUPS = [
     ("visit", {"en": "Visit", "hu": "Látogatás"}, [
         ("tourism", {"en": "Tourism", "hu": "Turizmus"}),
         ("sights", {"en": "Sights", "hu": "Látnivalók"}),
+        ("travel-guide", {"en": "Travel Guide", "hu": "Utazási Kalauz"}),
         ("faq", {"en": "FAQ", "hu": "GYIK"}),
     ]),
 ]

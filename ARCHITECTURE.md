@@ -45,18 +45,22 @@ The Sovereign Nation of Waikiki web portal is engineered as a high-performance, 
 │   └── chart.min.js        # Standalone Chart.js library
 ├── scripts/
 │   └── build_pages.py      # Idempotent automated page builder & chrome injection engine
-├── en/                     # 41 English localized pages
+├── en/                     # 43 English localized pages
 │   ├── index.html          # Main English national portal
 │   ├── overview.html       # Sovereign overview & executive summary
 │   ├── society.html        # Society, provinces, and interactive administrative map
 │   ├── economy.html        # National economic indicators & trade data
+│   ├── infrastructure.html # Undersea maglev, energy grid, megaprojects, Waikiki One
+│   ├── travel-guide.html   # Practical travel guide, 20 landmarks, luxury hotel showcase
 │   ├── bio/                # Royal family biographies (Angelina, Raimondo, Selena, Taylor)
 │   └── ...                 # 36 additional English topic pages
-├── hu/                     # 41 Hungarian localized pages
+├── hu/                     # 43 Hungarian localized pages
 │   ├── index.html          # Main Hungarian national portal
 │   ├── overview.html       # Nemzeti áttekintés
 │   ├── society.html        # Társadalom, tartományok és térkép
 │   ├── economy.html        # Nemzetgazdaság és kereskedelmi adatok
+│   ├── infrastructure.html # Tenger alatti maglev, energiahálózat, megaépületek, Waikiki One
+│   ├── travel-guide.html   # Gyakorlati kalauz, 20 látnivaló, luxusszállodák
 │   ├── bio/                # Királyi életrajzok
 │   └── ...                 # 36 additional Hungarian topic pages
 ├── images/                 # Optimized high-resolution photography & web assets
@@ -85,7 +89,7 @@ Each localized HTML document contains semantic HTML comments delimiting site chr
 # Preview changes without modifying files (returns exit code 0)
 python3 scripts/build_pages.py --check
 
-# Build and synchronize all 82 subpages
+# Build and synchronize all 86 subpages
 python3 scripts/build_pages.py
 ```
 
