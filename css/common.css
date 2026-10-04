@@ -127,6 +127,8 @@
      ------------------------------------------------------------------------- */
   --maxw: 2560px;
   --maxw-text: 1000px;
+  --maxw-timeline: 1400px;
+  --maxw-narrative: 1200px;
   --header-h: 84px;
   --header-h-compact: 68px;
   --subnav-h: 58px;
@@ -1625,9 +1627,14 @@ html.menu-open .menu-aside {
   -webkit-backdrop-filter: blur(var(--blur-md));
 }
 
+.timeline-period:last-child,
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
 /* 9. NARRATIVE & TABLES ==================================================== */
 .narrative-content {
-  max-width: var(--maxw);
+  max-width: var(--maxw-narrative);
   margin: 0 auto;
 }
 

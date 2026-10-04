@@ -50,6 +50,10 @@
     position: relative;
 }
 
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
 .timeline-item:nth-child(odd) {
     flex-direction: row;
 }
@@ -138,6 +142,10 @@
     .timeline-item:nth-child(even) {
         flex-direction: row;
         margin-bottom: 2.5rem;
+    }
+
+    .timeline-item:last-child {
+        margin-bottom: 0;
     }
 
     .timeline-year {
