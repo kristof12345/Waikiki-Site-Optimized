@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- @chrome:head -->
     <meta name="description" content="Minden, amire az utazás előtt és alatt szüksége lehet: beutazási szabályok, közlekedés, az egyes tartományok legjobb évszaka, a kihagyhatatlan látnivalók…" />
     <meta name="theme-color" content="#fbf7f0" />
@@ -11,14 +11,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />
-    <script>(function(d){var h=d.documentElement;h.classList.add('js');try{if(localStorage.getItem('isDarkMode')==='true')h.classList.add('body-dark');if(localStorage.getItem('isAnimationDisabled')==='true')h.classList.add('no-reveal')}catch(e){}setTimeout(function(){if(!h.classList.contains('reveal-ready'))h.classList.remove('js')},3500)})(document);</script>
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
     <!-- /@chrome:head -->
-  <title>Waikiki Utazási Kalauz</title>
-  <link rel="icon" href="../icons/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo-green.png" />
-  <link href="../manifest.json" rel="manifest" />
-  <link rel="stylesheet" href="../css/common.css" />
-  <link rel="stylesheet" href="../css/feature-pages.css" />
+    <title>Waikiki Utazási Kalauz</title>
+    <link rel="icon" href="../icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo-green.png" />
+    <link href="../manifest.json" rel="manifest" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/feature-pages.css" />
 </head>
 <body class="page-travel-guide group-visit">
     <!-- @chrome:header -->
@@ -28,8 +40,20 @@
         <a href="index.html" class="brand" aria-label="Waikiki főoldal"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" decoding="async" /><span class="brand-word">Waikiki</span></a>
         <nav class="primary-nav" aria-label="Fő navigáció"><a href="tourism.html">Utazás</a><a href="society.html">Társadalom</a><a href="economy.html">Gazdaság</a><a href="government.html">Kormány</a><a href="history.html">Történelem</a><a href="dynasty.html">Királyi Család</a></nav>
         <div class="header-actions">
-            <a class="lang-pill" href="../en/travel-guide.html" hreflang="en" lang="en" title="English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>EN</span></a>
-            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Éjszakai mód váltása"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><mask id="theme-mask"><rect width="24" height="24" fill="#fff"/><circle class="theme-cut" cx="26" cy="2" r="6" fill="#000"/></mask><circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)"/><g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5"/></g></svg></button>
+            <a class="lang-pill" href="../en/travel-guide.html" hreflang="en" lang="en" title="English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg><span>EN</span></a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Éjszakai mód váltása"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg></button>
             <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="menu-lines" aria-hidden="true"></span><span class="menu-label-open">Menü</span><span class="menu-label-close">Bezárás</span><span class="visually-hidden">Menü</span></button>
         </div>
     </header>
@@ -47,83 +71,1288 @@
                 <p class="menu-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
                 <div class="menu-aside-row"><a class="menu-chip" href="../en/travel-guide.html" hreflang="en" lang="en">English</a><a class="menu-chip is-active" href="../hu/travel-guide.html" hreflang="hu" lang="hu">Magyar</a><button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Éjszakai mód</button><button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animáció</button></div>
             </aside>
-            <div class="menu-group"><h2>Nemzet</h2><ul><li><a href="index.html">Főoldal</a></li><li><a href="overview.html">Áttekintés</a></li><li><a href="history.html">Történelem</a></li><li><a href="society.html">Társadalom</a></li><li><a href="culture.html">Kultúra</a></li><li><a href="ideology.html">Ideológia</a></li></ul></div><div class="menu-group"><h2>Kormányzás</h2><ul><li><a href="government.html">Kormány</a></li><li><a href="leadership.html">Vezetés</a></li><li><a href="parties.html">Politika</a></li><li><a href="constitution.html">Alkotmány</a></li><li><a href="citizenship.html">Állampolgárság</a></li><li><a href="military.html">Hadsereg</a></li><li><a href="diplomacy.html">Diplomácia</a></li></ul></div><div class="menu-group"><h2>Jólét</h2><ul><li><a href="economy.html">Gazdaság</a></li><li><a href="wealth-fund.html">Vagyonalap</a></li><li><a href="infrastructure.html">Infrastruktúra</a></li><li><a href="plane.html">Diplomáciai Flotta</a></li></ul></div><div class="menu-group"><h2>Királyi Család</h2><ul><li><a href="dynasty.html">A Dinasztia</a></li><li><a href="chease-and-jessica.html">Chease és Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li><li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li></ul></div><div class="menu-group"><h2>Látogatás</h2><ul><li><a href="tourism.html">Turizmus</a></li><li><a href="sights.html">Látnivalók</a></li><li><a href="travel-guide.html" aria-current="page">Utazási Kalauz</a></li><li><a href="faq.html">GYIK</a></li></ul></div>
+            <div class="menu-group">
+                <h2>Nemzet</h2>
+                <ul>
+                    <li><a href="index.html">Főoldal</a></li>
+                    <li><a href="overview.html">Áttekintés</a></li>
+                    <li><a href="history.html">Történelem</a></li>
+                    <li><a href="society.html">Társadalom</a></li>
+                    <li><a href="culture.html">Kultúra</a></li>
+                    <li><a href="ideology.html">Ideológia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Kormányzás</h2>
+                <ul>
+                    <li><a href="government.html">Kormány</a></li>
+                    <li><a href="leadership.html">Vezetés</a></li>
+                    <li><a href="parties.html">Politika</a></li>
+                    <li><a href="constitution.html">Alkotmány</a></li>
+                    <li><a href="citizenship.html">Állampolgárság</a></li>
+                    <li><a href="military.html">Hadsereg</a></li>
+                    <li><a href="diplomacy.html">Diplomácia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Jólét</h2>
+                <ul>
+                    <li><a href="economy.html">Gazdaság</a></li>
+                    <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                    <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                    <li><a href="plane.html">Diplomáciai Flotta</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Királyi Család</h2>
+                <ul>
+                    <li><a href="dynasty.html">A Dinasztia</a></li>
+                    <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                    <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Látogatás</h2>
+                <ul>
+                    <li><a href="tourism.html">Turizmus</a></li>
+                    <li><a href="sights.html">Látnivalók</a></li>
+                    <li><a href="travel-guide.html" aria-current="page">Utazási Kalauz</a></li>
+                    <li><a href="faq.html">GYIK</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- /@chrome:header -->
     <main id="main">
-  <section class="hero hero--compact hero--art" data-hero><div class="hero-art" aria-hidden="true"><svg class="ill" viewBox="0 0 640 480" role="img" aria-label="Illusztráció: Waikiki karibi partjára érkező repülőútvonal">
-<defs>
-<clipPath id="tg-clip"><rect width="640" height="480" rx="40"/></clipPath>
-<linearGradient id="tg-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--ill-sky-2)"/><stop offset="1" style="stop-color:var(--ill-sky)"/></linearGradient>
-<linearGradient id="tg-sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--ill-sea-2)"/><stop offset="1" style="stop-color:var(--ill-sea)"/></linearGradient>
-</defs>
-<g clip-path="url(#tg-clip)">
-<rect width="640" height="480" fill="url(#tg-sky)"/>
-<circle cx="420" cy="300" r="120" class="f-sun2" opacity=".3"/>
-<circle cx="420" cy="300" r="78" class="f-sun"/>
-<g class="drift"><ellipse cx="120" cy="96" rx="48" ry="11" class="f-white" opacity=".85"/><ellipse cx="150" cy="86" rx="28" ry="11" class="f-white" opacity=".85"/></g>
-<g class="drift" style="animation-delay:-7s"><ellipse cx="520" cy="70" rx="44" ry="10" class="f-white" opacity=".75"/></g>
-<path d="M250 120l8 5 8-5M276 140l6 4 6-4M230 150l6 4 6-4" class="k-ink" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<polygon points="456,302 484,262 512,302" class="f-glass"/><polygon points="456,302 484,262 512,302" class="k-gold" stroke-width="1.5"/>
-<rect x="516" y="270" width="12" height="32" class="f-ink3"/><rect x="530" y="282" width="10" height="20" class="f-ink2"/><rect x="430" y="280" width="12" height="22" class="f-ink3"/><rect x="544" y="262" width="8" height="40" class="f-ink3"/>
-<rect y="300" width="640" height="180" fill="url(#tg-sea)"/>
-<g class="f-sun2" opacity=".55"><rect x="370" y="316" width="100" height="4" rx="2"/><rect x="385" y="332" width="70" height="4" rx="2"/><rect x="398" y="348" width="44" height="4" rx="2"/></g>
-<g class="bob"><path d="M300 372h76l-11 13h-54z" class="f-white"/><path d="M338 368V300l30 66z" class="f-white"/><path d="M334 368V306l-22 60z" class="f-coral"/><path d="M338 370V296" class="k-ink" stroke-width="2"/></g>
-<path d="M0 404 C 170 360, 330 384, 640 452 V480 H0z" class="f-sand"/>
-<path d="M0 420 C 170 380, 330 402, 640 466" class="k-white" stroke-width="2" opacity=".6"/>
-<path d="M150 470 C 146 400, 162 330, 200 270" class="k-ink2" stroke-width="13" stroke-linecap="round"/>
-<path d="M150 470 C 146 400, 162 330, 200 270" class="k-gold" stroke-width="13" stroke-dasharray="2 12" opacity=".5"/>
-<g transform="translate(200 270)"><path d="M0 0 C 30 -30, 75 -26, 96 4 C 66 -10, 34 -10, 0 0z" class="f-leaf" transform="rotate(-170)"/><path d="M0 0 C 30 -30, 75 -26, 96 4 C 66 -10, 34 -10, 0 0z" class="f-leaf2" transform="rotate(-130)"/><path d="M0 0 C 30 -30, 75 -26, 96 4 C 66 -10, 34 -10, 0 0z" class="f-leaf" transform="rotate(-90)"/><path d="M0 0 C 30 -30, 75 -26, 96 4 C 66 -10, 34 -10, 0 0z" class="f-leaf2" transform="rotate(-50)"/><path d="M0 0 C 30 -30, 75 -26, 96 4 C 66 -10, 34 -10, 0 0z" class="f-leaf" transform="rotate(-10)"/><path d="M0 0 C 30 -30, 75 -26, 96 4 C 66 -10, 34 -10, 0 0z" class="f-leaf2" transform="rotate(25)"/><path d="M0 0 C 30 -30, 75 -26, 96 4 C 66 -10, 34 -10, 0 0z" class="f-leaf2" transform="rotate(150)"/><circle cx="-6" cy="8" r="6" class="f-gold"/><circle cx="6" cy="10" r="6" class="f-gold"/></g>
-<path d="M548 456V394" class="k-ink" stroke-width="3"/>
-<path d="M500 398 Q548 344 596 398z" class="f-coral"/><path d="M532 398 Q548 350 564 398z" class="f-white" opacity=".85"/>
-<rect x="470" y="440" width="44" height="30" rx="5" class="f-ink2"/><path d="M482 440v-7h20v7" class="k-ink" stroke-width="3"/><rect x="470" y="452" width="44" height="4" class="f-gold"/>
-<path d="M90 214 C 210 70, 420 64, 560 176" class="k-coral dash" stroke-width="2.6" stroke-linecap="round"/>
-<g transform="translate(90 214)"><circle r="8" class="f-coral pulse"/><circle r="6" class="f-coral"/><circle r="2.5" class="f-white"/></g>
-<g transform="translate(560 176)"><circle r="8" class="f-coral pulse" style="animation-delay:1.2s"/><circle r="6" class="f-coral"/><circle r="2.5" class="f-white"/></g>
-<g><path d="M-16 -2.4H10l7 2.4-7 2.4H-16z M-4 -2.4-11 -14h5l9 11.6z M-4 2.4-11 14h5l9-11.6z M-16 -2.4-20 -8h3.5l5 5.6z M-16 2.4-20 8h3.5l5-5.6z" class="f-ink"/><animateMotion dur="7s" repeatCount="indefinite" rotate="auto" path="M90 214 C 210 70, 420 64, 560 176"/></g>
-</g>
-</svg></div><div class="hero-content"><span class="hero-eyebrow">Látogatás · Utazási Kalauz</span><h1 class="hero-title">Utazás <em>Waikikibe</em>, gondtalanul</h1><p class="hero-lead">Minden, amire az utazás előtt és alatt szüksége lehet: beutazási szabályok, közlekedés, az egyes tartományok legjobb évszaka, a kihagyhatatlan látnivalók és a waikiki vendéglátást meghatározó szállodák.</p><div class="hero-stats"><div class="stat-item"><span class="stat-number">45M</span><span class="stat-label">Látogató évente</span></div><div class="stat-item"><span class="stat-number">12</span><span class="stat-label">UNESCO helyszín</span></div><div class="stat-item"><span class="stat-number">28°C</span><span class="stat-label">Átlag a parton</span></div><div class="stat-item"><span class="stat-number">20</span><span class="stat-label">Kihagyhatatlan látnivaló</span></div></div></div></section>
-    <!-- @chrome:subnav --><!-- /@chrome:subnav -->
-  <section id="essentials">
-    <h2 class="section-title">A legfontosabbak egy pillantásra</h2>
-    <p class="section-intro">Waikiki évente 45 millió látogatót fogad, közülük 35 milliót egyedül Nova Aurelia. Néhány gyakorlati tudnivaló megkönnyíti az első napot.</p>
-    <dl class="fact-grid"><div class="fact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><dt>Főváros</dt><dd>Nova Aurelia<small>Waikiki tartomány, Karib-térség</small></dd></div></div><div class="fact"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><div><dt>Nyelv</dt><dd>Angol<small>Hivatalos, mindenhol beszélt nyelv</small></dd></div></div><div class="fact"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M9 16h6"/></svg><div><dt>Vízumkövetelmények</dt><dd>90 napig vízummentes<small>AU, NATO és partnerállamok; másoknak online e-vízum</small></dd></div></div><div class="fact"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v2M12 16v2"/></svg><div><dt>Pénznem</dt><dd>Waikiki dollár (WUD)<small>1 WUD ≈ 2,30 USD; teljesen készpénzmentes, kártya mindenhol</small></dd></div></div><div class="fact"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><dt>Időzóna</dt><dd>UTC −5 és −3 között<small>Nova Aurelia (UTC −5), Rio és São Paulo (UTC −3)</small></dd></div></div><div class="fact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 14.8V4a2 2 0 0 0-4 0v10.8a4 4 0 1 0 4 0z"/></svg><div><dt>Éghajlat</dt><dd>Trópusi, 24–31°C<small>A tengerparton egész évben meleg van; az Andokban hűvösebb. Amazóniát trópusi meleg és rövid délutáni záporok jellemzik.</small></dd></div></div><div class="fact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 16v-5l2-5h10l2 5v5M3 16h18v3H3zM7 19v2M17 19v2"/></svg><div><dt>Közlekedés</dt><dd>Jobb oldali közlekedés<small>Nemzetközi jogosítvány elfogadott</small></dd></div></div><div class="fact"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20M6 15h4"/></svg><div><dt>Fizetés</dt><dd>Kártya mindenhol<small>Waikiki One tárca látogatóknak</small></dd></div></div><div class="fact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6-8 11-8 11z"/></svg><div><dt>Egészségügy</dt><dd>Világszínvonalú kórházak<small>Utasbiztosítás kötelező</small></dd></div></div></dl>
-  </section>
-  <section id="before-you-go" class="light-bg">
-    <h2 class="section-title">Indulás előtt</h2>
-    <ol class="steps"><li><h3>Ellenőrizze a beutazás módját</h3><p>Az Amerikai Unió, a NATO és partnerállamok, például Japán polgárai 90 napig vízummentesen utazhatnak. Mindenki más a Waikiki One portálon igényelhet e-vízumot.</p></li><li><h3>Útlevél és biztosítás</h3><p>Útlevelének az érkezést követően még hat hónapig érvényesnek kell lennie. A látogatóknak utasbiztosítás szükséges, az állami egészségügy csak az állampolgárok számára ingyenes.</p></li><li><h3>Tervezze meg a tartományi utakat</h3><p>Az amazóniai esőerdő-expedíciókhoz sárgaláz elleni oltás és engedéllyel rendelkező vezető szükséges; a védett rezervátumok naponta korlátozott számú látogatót fogadnak.</p></li><li><h3>Töltse le a Waikiki One-t</h3><p>A látogatói mód egyetlen biztonságos alkalmazásban tárolja az e-vízumot, a közlekedési bérleteket, a múzeumi jegyeket és a fizetéseket.</p></li></ol>
-  </section>
-  <section id="getting-around">
-    <h2 class="section-title">Odajutás és helyi közlekedés</h2>
-    <p class="section-intro">Waikiki a Karib-tengertől az Amazonasig terjed, a modern hálózat mégis minden tartományt könnyen elérhetővé tesz.</p>
-    <div class="card-grid"><article class="card"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></span><h3>Repülővel</h3><p>A fő kapu a Nova Aurelia nemzetközi repülőtér, minden kontinensről induló közvetlen járatokkal. A szárazföldi tartományokat São Paulo, Rio de Janeiro és Manaus szolgálja ki.</p></article><article class="card"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14M9 21l1.5-4M15 21l-1.5-4M8.5 14h.01M15.5 14h.01"/></svg></span><h3>Vasúton Floridából</h3><p>A Florida–Waikiki tenger alatti folyosón maglev járatok érkeznek az Egyesült Államokból közvetlenül a szigetekre.</p></article><article class="card"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l2 4h14l2-4zM5 17v-6h14v6M8 11V7h8v4M12 3v4"/></svg></span><h3>Hajóval</h3><p>Nova Aurelia és Port Royal hajóterminálja egész évben fogadja az óceánjárókat és a magánjachtokat.</p></article></div><h3 class="section-title" style="font-size:clamp(1.5rem,2.6vw,2.1rem);margin-top:4rem">Helyben</h3><div class="card-grid"><article class="card"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="6" width="14" height="12" rx="2"/><path d="M5 12h14M8 21l2-3M16 21l-2-3M9 2h6M12 2v4"/></svg></span><h3>Metró, villamos és busz</h3><p>A városi közösségi közlekedés minden nagyvárosban ingyenes. Nova Aureliában a metró, az elektromos villamos és az önvezető buszok éjjel-nappal közlekednek.</p></article><article class="card"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="8" width="20" height="8" rx="4"/><path d="M6 12h7M16 12h2"/></svg></span><h3>Hyperloop</h3><p>A világ első nyilvános Hyperloop vonalán percek alatt eljuthat Nova Aurelia belvárosából Mega Piramis Városba.</p></article><article class="card"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4l20 4M12 6v4"/><rect x="6" y="10" width="12" height="10" rx="2"/><path d="M6 14h12"/></svg></span><h3>Kabinos felvonó és magasvasút</h3><p>A Pálma Szigetet magasvasút szolgálja ki, a Világ Szigetek szigeteit kabinos felvonók és hidak kötik össze.</p></article><article class="card"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 17c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0M4 14l1-4h14l1 4M9 10V7h5l2 3"/></svg></span><h3>Vízitaxik</h3><p>Elektromos vízitaxik kötik össze a kikötőket, a szigeti üdülőket és a vízpartot; a Világ Szigetek némelyike csak így érhető el.</p></article></div>
-  </section>
-  <section id="when-to-visit" class="light-bg">
-    <h2 class="section-title">Mikor érdemes utazni</h2>
-    <p class="section-intro">A decembertől áprilisig tartó karibi száraz évszak felhőtlen eget és az év nagy fesztiváljait hozza. Amazónia a szárazabb hónapokban a legjobban megközelíthető, az andoki síszezon pedig júniustól augusztusig tart.</p>
-    <div class="season" role="table" aria-label="A legjobb utazási hónapok régiónként"><div class="season-row season-head"><b></b><span>Jan</span><span>Feb</span><span>Már</span><span>Ápr</span><span>Máj</span><span>Jún</span><span>Júl</span><span>Aug</span><span>Szep</span><span>Okt</span><span>Nov</span><span>Dec</span></div><div class="season-row"><b>Karibi part</b><span class="season-cell s-peak" title="Jan: Legjobb"></span><span class="season-cell s-peak" title="Feb: Legjobb"></span><span class="season-cell s-peak" title="Már: Legjobb"></span><span class="season-cell s-peak" title="Ápr: Legjobb"></span><span class="season-cell s-good" title="Máj: Jó"></span><span class="season-cell s-fair" title="Jún: Csendesebb"></span><span class="season-cell s-fair" title="Júl: Csendesebb"></span><span class="season-cell s-fair" title="Aug: Csendesebb"></span><span class="season-cell s-wet" title="Szep: Esős / hurrikánszezon"></span><span class="season-cell s-wet" title="Okt: Esős / hurrikánszezon"></span><span class="season-cell s-good" title="Nov: Jó"></span><span class="season-cell s-peak" title="Dec: Legjobb"></span></div><div class="season-row"><b>Amazonia</b><span class="season-cell s-wet" title="Jan: Esős / hurrikánszezon"></span><span class="season-cell s-wet" title="Feb: Esős / hurrikánszezon"></span><span class="season-cell s-wet" title="Már: Esős / hurrikánszezon"></span><span class="season-cell s-wet" title="Ápr: Esős / hurrikánszezon"></span><span class="season-cell s-fair" title="Máj: Csendesebb"></span><span class="season-cell s-good" title="Jún: Jó"></span><span class="season-cell s-good" title="Júl: Jó"></span><span class="season-cell s-good" title="Aug: Jó"></span><span class="season-cell s-good" title="Szep: Jó"></span><span class="season-cell s-fair" title="Okt: Csendesebb"></span><span class="season-cell s-fair" title="Nov: Csendesebb"></span><span class="season-cell s-wet" title="Dec: Esős / hurrikánszezon"></span></div><div class="season-row"><b>Brazília és Rio</b><span class="season-cell s-peak" title="Jan: Legjobb"></span><span class="season-cell s-peak" title="Feb: Legjobb"></span><span class="season-cell s-good" title="Már: Jó"></span><span class="season-cell s-good" title="Ápr: Jó"></span><span class="season-cell s-fair" title="Máj: Csendesebb"></span><span class="season-cell s-fair" title="Jún: Csendesebb"></span><span class="season-cell s-fair" title="Júl: Csendesebb"></span><span class="season-cell s-good" title="Aug: Jó"></span><span class="season-cell s-good" title="Szep: Jó"></span><span class="season-cell s-good" title="Okt: Jó"></span><span class="season-cell s-good" title="Nov: Jó"></span><span class="season-cell s-peak" title="Dec: Legjobb"></span></div><div class="season-row"><b>Andoki síelés</b><span class="season-cell s-fair" title="Jan: Csendesebb"></span><span class="season-cell s-fair" title="Feb: Csendesebb"></span><span class="season-cell s-fair" title="Már: Csendesebb"></span><span class="season-cell s-fair" title="Ápr: Csendesebb"></span><span class="season-cell s-good" title="Máj: Jó"></span><span class="season-cell s-peak" title="Jún: Legjobb"></span><span class="season-cell s-peak" title="Júl: Legjobb"></span><span class="season-cell s-peak" title="Aug: Legjobb"></span><span class="season-cell s-good" title="Szep: Jó"></span><span class="season-cell s-fair" title="Okt: Csendesebb"></span><span class="season-cell s-fair" title="Nov: Csendesebb"></span><span class="season-cell s-fair" title="Dec: Csendesebb"></span></div><ul class="season-legend"><li><i class="s-peak"></i>Legjobb</li><li><i class="s-good"></i>Jó</li><li><i class="s-fair"></i>Csendesebb</li><li><i class="s-wet"></i>Esős / hurrikánszezon</li></ul></div>
-  </section>
-  <section id="landmarks">
-    <h2 class="section-title">Kihagyhatatlan látnivalók</h2>
-    <p class="section-intro">Nova Aurelia a világ leglátogatottabb városa. Szűrje a legfontosabb látnivalókat téma szerint, a gyarmati kornál is régebbi római falaktól a Föld legmagasabb épületéig.</p>
-    <div class="filter-bar" role="group" aria-label="Látnivalók szűrése" data-filter-for="landmark-grid"><button class="filter-chip" type="button" data-filter="all" aria-pressed="true">Mind</button><button class="filter-chip" type="button" data-filter="city" aria-pressed="false">Nova Aurelia</button><button class="filter-chip" type="button" data-filter="history" aria-pressed="false">Történelmi és ókori</button><button class="filter-chip" type="button" data-filter="islands" aria-pressed="false">Szigetek és szórakozás</button></div><div class="landmark-grid" id="landmark-grid"><article class="card landmark" data-filter-item data-cat="city"><div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M4 21V11h16v10M2 11l10-7 10 7M8 21v-6M12 21v-6M16 21v-6"/></svg></span><span class="tag">Nova Aurelia</span></div><h3>Hercegi Palota</h3><span class="alt-name">Ducal Palace</span><p>Raimondo és Selena rezidenciája és a diplomáciai események fő helyszíne, amely a parlamenti ülésterem aprólékosan kidolgozott másolatát is magában foglalja.</p></article><article class="card landmark" data-filter-item data-cat="city"><div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 20h20z"/><path d="M12 3l3 17M7 12h10"/></svg></span><span class="tag">Nova Aurelia</span></div><h3>Mega Piramis Város</h3><span class="alt-name">Mega Pyramid City</span><p>Vegyes funkciójú, piramis alakú komplexum lakótornyokkal, bevásárlóközpontokkal és irodákkal, amely harmonikusan ötvözi a napelemeket és a függőleges kerteket.</p></article><article class="card landmark" data-filter-item data-cat="city"><div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="tag">Nova Aurelia</span></div><h3>Királyi Óratorony</h3><span class="alt-name">Royal Clock Tower</span><p>A város jól ismert jelképe aranyszínű számlapokkal és kilátóval, ahonnan lenyűgöző panoráma nyílik a metropoliszra és a mesterséges szigetekre.</p></article><article class="card landmark" data-filter-item data-cat="city"><div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></span><span class="tag">Nova Aurelia</span></div><h3>Királyi Opera</h3><span class="alt-name">Nova Aurelia Royal Opera</span><p>A nemzetközi előadásokhoz világszínvonalú akusztikával tervezett épület tetőkertje esti rendezvényeknek is otthont ad.</p></article><article class="card landmark" data-filter-item data-cat="city"><div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg></span><span class="tag">Nova Aurelia</span></div><h3>Városközpont</h3><span class="alt-name">Nova Aurelia City Center</span><p>Nyüzsgő pénzügyi központ üvegépületekkel, vállalati székházakkal és luxus lakótornyokkal, amelyeket föld alatti bevásárlóutcák és parkok kötnek össze.</p></article><article class="card landmark" data-filter-item data-cat="city"><div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 22V6l3-4 3 4v16M6 22V11h3M15 13h3v9M4 22h16"/></svg></span><span class="tag">Nova Aurelia</span></div><h3>Sky City toronyház</h3><span class="alt-name">Sky City Skyscraper</span><p>956 méterével és 220 emeletével a világ legmagasabb épülete, lábánál hatalmas, kivilágított zenélő szökőkútrendszerrel.</p></article><article class="card landmark" data-filter-item data-cat="city"><div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v2M12 16v2"/></svg></span><span class="tag">Nova Aurelia</span></div><h3>Kereskedelmi központ</h3><span class="alt-name">Commercial Center</span><p>A világ legnagyobb pénzügyi és banki központja globális vállalati székházakkal és a tőzsdének otthont adó 650 méteres felhőkarcolóval.</p></article><article class="card landmark" data-filter-item data-cat="city"><div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8" cy="8" r="1"/><circle cx="16" cy="16" r="1"/><circle cx="12" cy="12" r="1"/></svg></span><span class="tag">Nova Aurelia</span></div><h3>Royal Towers</h3><p>Háromtornyú komplexum saját személyzettel ellátott luxuslakásokkal, exkluzív Michelin-csillagos étteremmel, kaszinóval, bevásárlóközponttal és jachtkikötővel.</p></article><article class="card landmark" data-filter-item data-cat="history"><div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21h16M5 18h14M6 18V9M10 18V9M14 18V9M18 18V9M3 9h18L12 3z"/></svg></span><span class="tag tag--gold">Történelmi és ókori</span></div><h3>Római templom</h3><span class="alt-name">Roman Temple</span><p>Ókori templom 100 tökéletesen egyforma oszloppal, amelyek egy másik kontinensről hozott kőből készültek, és a napszaktól függően változtatják színüket.</p></article><article class="card landmark" data-filter-item data-cat="history"><div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 20h20M4 20v-3h16v3M6 17v-3h12v3M8 14v-3h8v3M10 11V8h4v3"/></svg></span><span class="tag tag--gold">Történelmi és ókori</span></div><h3>Lépcsős piramis</h3><span class="alt-name">Step Pyramid</span><p>24 méter magas, 2000 éves azték kultuszhely, amelynek elhelyezkedése és kialakítása lenyűgöző csillagászati tudásról tanúskodik.</p></article><article class="card landmark" data-filter-item data-cat="history"><div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21V8h3v2h3V8h3v2h3V8h3v2h3V8v13M3 21h18M3 14h18M9 14v7M15 14v7"/></svg></span><span class="tag tag--gold">Történelmi és ókori</span></div><h3>Római városfal</h3><span class="alt-name">Roman City Wall</span><p>A Római Birodalom által épített leghosszabb városfal tizenkét eredeti kapuval; mivel soha nem ostromolták, ma is hibátlan állapotban van.</p></article><article class="card landmark" data-filter-item data-cat="history"><div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l4 4 5-7 5 7 4-4-2 11H5z"/></svg></span><span class="tag tag--gold">Történelmi és ókori</span></div><h3>Római császári palota</h3><span class="alt-name">Roman Imperial Palace</span><p>Vaikikia provincia legnagyobb rekonstruált épületegyüttese interaktív programokkal az ókori római polgárok életmódjáról és szokásairól.</p></article><article class="card landmark" data-filter-item data-cat="history"><div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21V9h3V6h3v3h2V5h2v4h2V6h3v3h3v12zM10 21v-5h4v5"/></svg></span><span class="tag tag--gold">Történelmi és ókori</span></div><h3>Angol kastélyok</h3><span class="alt-name">English Castles</span><p>Különleges történelmi birtokok, köztük IV. Vilmos 76 szobás palotája, arannyal, drágakövekkel és pompás botanikus kertekkel díszítve.</p></article><article class="card landmark" data-filter-item data-cat="islands"><div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 20c3-1.5 6-1.5 10 0s7 1.5 10 0"/><path d="M12 18V9M12 9c-2-2-5-2-7 0M12 9c2-2 5-2 7 0M12 9c-1-2.5-3-4-5-4M12 9c1-2.5 3-4 5-4"/></svg></span><span class="tag tag--coral">Szigetek és szórakozás</span></div><h3>Pálma Sziget</h3><span class="alt-name">Palm Island</span><p>Pálma alakú mesterséges sziget luxusüdülőkkel, jachtkikötőkkel, az ikonikus Hotel Khalifával és a látványos Palm Islands élményfürdővel.</p></article><article class="card landmark" data-filter-item data-cat="islands"><div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg></span><span class="tag tag--coral">Szigetek és szórakozás</span></div><h3>Világ Szigetek</h3><span class="alt-name">World Islands</span><p>60 szigetből álló hatalmas szigetcsoport a Föld kontinenseinek formájában, nemzetközi pavilonokkal, luxusvillákkal, kaszinókkal és vidámparkkal.</p></article><article class="card landmark" data-filter-item data-cat="islands"><div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12c3-5 9-6 14-3l5-3v12l-5-3c-5 3-11 2-14-3z"/><circle cx="7" cy="11" r=".8"/></svg></span><span class="tag tag--coral">Szigetek és szórakozás</span></div><h3>Kaméleon Szigetek</h3><span class="alt-name">Chameleon Islands</span><p>A 2026-ban elkészülő fejlesztés a turizmust az innovációval ötvözi: tengerbiológiai laborok, kísérleti lakóépületek és tematikus szállodák.</p></article><article class="card landmark" data-filter-item data-cat="islands"><div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21h16M5 18h14M6 18V9M10 18V9M14 18V9M18 18V9M3 9h18L12 3z"/></svg></span><span class="tag tag--coral">Szigetek és szórakozás</span></div><h3>Nemzeti Múzeum</h3><span class="alt-name">National Museum</span><p>Waikiki története az 1999-es alapítástól napjainkig, ókori leletek, klasszikus műremekek és interaktív kiállítások mellett.</p></article><article class="card landmark" data-filter-item data-cat="islands"><div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="9" rx="10" ry="4"/><path d="M2 9v6c0 2.2 4.5 4 10 4s10-1.8 10-4V9M7 12.5v5M17 12.5v5M12 13v6"/></svg></span><span class="tag tag--coral">Szigetek és szórakozás</span></div><h3>Olimpiai Sportkomplexum</h3><span class="alt-name">Olympic Sports Complex</span><p>A 2012-es nyári olimpia öröksége: ma is működő stadionok, uszodakomplexum és sporttörténeti múzeum.</p></article><article class="card landmark" data-filter-item data-cat="islands"><div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 19h20M4 19c0-6 3-11 7-13-1 5 0 10 2 13M10 19c1-5 4-9 8-10-1 4-1 7 1 10"/></svg></span><span class="tag tag--coral">Szigetek és szórakozás</span></div><h3>A Sydney-i Operaház mása</h3><span class="alt-name">Sydney Opera House Replica</span><p>A New Mavericks kikötőben álló, akusztikailag és vizuálisan is pontos másolat balettnek, szimfonikus koncerteknek és színházi előadásoknak ad otthont.</p></article><article class="card landmark" data-filter-item data-cat="islands"><div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="10" r="7"/><path d="M12 3v14M5 10h14M7 5l10 10M17 5 7 15M9 21l3-4 3 4"/></svg></span><span class="tag tag--coral">Szigetek és szórakozás</span></div><h3>Rio Disneyland</h3><p>Hatalmas családi élménypark a klasszikus Disney-attrakciók mellett waikiki témájú játékokkal, köztük egy magával ragadó amazóniai esőerdő-élménnyel.</p></article></div>
-  </section>
-  <section id="hotels" class="light-bg">
-    <h2 class="section-title">Szállás</h2>
-    <p class="section-intro">Waikiki a prémium turizmus fellegvára. A 15 csillagos Hotel Presidenttől az amazóniai lombkoronában épült lakosztályokig ezek a címek határozzák meg a Szuverén Államban töltött napokat.</p>
-    <div class="filter-bar" role="group" aria-label="Szállodák szűrése" data-filter-for="hotel-grid"><button class="filter-chip" type="button" data-filter="all" aria-pressed="true">Összes</button><button class="filter-chip" type="button" data-filter="city" aria-pressed="false">Város</button><button class="filter-chip" type="button" data-filter="islands" aria-pressed="false">Szigetek és tenger</button><button class="filter-chip" type="button" data-filter="nature" aria-pressed="false">Természet</button><button class="filter-chip" type="button" data-filter="family" aria-pressed="false">Családi</button></div><div class="hotel-grid" id="hotel-grid"><article class="card hotel" data-filter-item data-cat="city"><div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Hotel President"><rect width="320" height="200" class="f-sky"/><circle cx="250" cy="52" r="24" class="f-sun2" opacity=".7"/><rect y="160" width="320" height="40" class="f-sand"/><rect x="70" y="86" width="180" height="76" class="f-white"/><polygon points="120,86 160,58 200,86" class="f-white"/><polygon points="120,86 160,58 200,86" class="k-gold" stroke-width="2"/><path d="M160 58V44" class="k-gold" stroke-width="2"/><circle cx="160" cy="42" r="3" class="f-gold twinkle"/><rect x="66" y="80" width="188" height="7" class="f-gold"/><g class="f-sand"><rect x="124" y="92" width="6" height="66"/><rect x="140" y="92" width="6" height="66"/><rect x="174" y="92" width="6" height="66"/><rect x="190" y="92" width="6" height="66"/></g><g class="f-sun2"><rect class="twinkle" x="80" y="98" width="10" height="14" rx="5"/><rect class="twinkle" x="98" y="98" width="10" height="14" rx="5"/><rect class="twinkle" x="212" y="98" width="10" height="14" rx="5"/><rect class="twinkle" x="230" y="98" width="10" height="14" rx="5"/><rect x="80" y="126" width="10" height="14" rx="5"/><rect x="98" y="126" width="10" height="14" rx="5"/><rect x="212" y="126" width="10" height="14" rx="5"/><rect x="230" y="126" width="10" height="14" rx="5"/></g><path d="M152 162v-26a8 8 0 0 1 16 0v26z" class="f-sun2"/><rect x="154" y="162" width="12" height="38" class="f-coral"/><ellipse cx="160" cy="182" rx="34" ry="6" class="f-sea2"/><path d="M160 180v-12M154 172c2-6 10-6 12 0" class="k-sea" stroke-width="2"/><g transform="translate(36 110) scale(0.9)"><path d="M0 0 C -2 20, 2 40, 6 60" class="k-ink2" stroke-width="5" stroke-linecap="round"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-165)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-120)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-70)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-25)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(20)"/></g><g transform="translate(286 110) scale(0.9)"><path d="M0 0 C -2 20, 2 40, 6 60" class="k-ink2" stroke-width="5" stroke-linecap="round"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-165)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-120)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-70)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-25)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(20)"/></g></svg><span class="tag">Város</span></div><div class="hotel-body"><span class="hotel-stars" aria-label="15 csillagos">★★★★★ <span>· 15 csillagos</span></span><h3>Hotel President</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Nova Aurelia, Kormányzati negyed</span><p>A világ egyetlen 15 csillagos szállodája, a látogató államfők szállása, 1600 m²-es elnöki lakosztállyal és föld alatti spa- és termálfürdő-komplexummal.</p><ul class="perks"><li>Elnöki lakosztály</li><li>Termálspa</li><li>Komornyik</li></ul><div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 18 000<small>/ éj</small></span></div></div></article><article class="card hotel" data-filter-item data-cat="islands"><div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Hotel Atlantis"><defs><linearGradient id="hs-deep" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--ill-sea-2)"/><stop offset="1" style="stop-color:var(--ill-ink)"/></linearGradient></defs><rect width="320" height="200" fill="url(#hs-deep)"/><g class="f-white" opacity=".12"><polygon points="60,0 90,0 50,200 20,200"/><polygon points="150,0 170,0 150,200 120,200"/><polygon points="240,0 268,0 260,200 228,200"/></g><path d="M0 170 C 40 160, 80 175, 120 168 S 220 160, 320 172 V200H0z" class="f-sand" opacity=".8"/><g class="f-coral"><path d="M30 172c-4-14 2-26 8-30-2 10 2 18 6 30z"/><path d="M262 172c0-16 8-24 14-26-4 10-2 18 0 26z"/><circle cx="56" cy="166" r="7"/></g><g class="f-gold"><path d="M286 172c-2-10 2-18 6-20-1 8 1 14 3 20z"/></g><path d="M90 160 V100 a70 50 0 0 1 140 0 V160z" class="f-glass" opacity=".95"/><path d="M90 160 V100 a70 50 0 0 1 140 0 V160" class="k-gold" stroke-width="3"/><rect x="104" y="122" width="112" height="38" class="f-sun2" opacity=".55"/><rect x="120" y="138" width="60" height="16" rx="4" class="f-white"/><rect x="120" y="132" width="16" height="10" rx="3" class="f-white"/><g class="drift"><path d="M30 70c8-8 22-8 30 0-8 8-22 8-30 0zM60 70l8-6v12z" class="f-sun2"/></g><g class="drift" style="animation-delay:-5s"><path d="M240 50c6-6 16-6 22 0-6 6-16 6-22 0zM262 50l6-5v10z" class="f-coral"/><path d="M270 80c5-5 13-5 18 0-5 5-13 5-18 0zM288 80l5-4v8z" class="f-white"/></g><path d="M200 40c20-14 50-14 70 6-20-4-30 4-36 14-8-10-20-18-34-20z" class="f-ink" opacity=".55" /><g class="f-white" opacity=".6"><circle class="twinkle" cx="70" cy="120" r="3"/><circle class="twinkle" cx="76" cy="104" r="2"/><circle class="twinkle" cx="252" cy="120" r="2.5"/></g></svg><span class="tag tag--coral">Szigetek</span></div><div class="hotel-body"><span class="hotel-stars" aria-label="10 csillagos">★★★★★ <span>· 10 csillagos</span></span><h3>Hotel Atlantis</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Világ Szigetek, Nova Aurelia</span><p>Víz alatti lakosztályok, ahol a tengeri élővilág a padlótól a mennyezetig érő ablakok előtt úszik el, a Világ Szigetek zátonyának peremén.</p><ul class="perks"><li>Víz alatti lakosztály</li><li>Zátonyétterem</li><li>Saját kikötő</li></ul><div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 9 500<small>/ éj</small></span></div></div></article><article class="card hotel" data-filter-item data-cat="islands family"><div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Hotel Khalifa"><rect width="320" height="200" class="f-sea2"/><g class="k-white" stroke-width="1.5" opacity=".5"><path d="M10 30h30M260 20h40M20 170h40M250 180h50"/></g><g transform="translate(160 110)"><rect x="-8" y="0" width="16" height="80" class="f-sand"/><path d="M0 0 C 18 -6, 48 -6, 70 0 C 48 6, 18 6, 0 0z" class="f-sand" transform="rotate(-180)"/><path d="M0 0 C 18 -6, 48 -6, 70 0 C 48 6, 18 6, 0 0z" class="f-sand" transform="rotate(-150)"/><path d="M0 0 C 18 -6, 48 -6, 70 0 C 48 6, 18 6, 0 0z" class="f-sand" transform="rotate(-120)"/><path d="M0 0 C 18 -6, 48 -6, 70 0 C 48 6, 18 6, 0 0z" class="f-sand" transform="rotate(-90)"/><path d="M0 0 C 18 -6, 48 -6, 70 0 C 48 6, 18 6, 0 0z" class="f-sand" transform="rotate(-60)"/><path d="M0 0 C 18 -6, 48 -6, 70 0 C 48 6, 18 6, 0 0z" class="f-sand" transform="rotate(-30)"/><path d="M0 0 C 18 -6, 48 -6, 70 0 C 48 6, 18 6, 0 0z" class="f-sand" transform="rotate(0)"/><path d="M-96 -6 A 100 80 0 0 1 96 -6" class="k-white" stroke-width="7" fill="none" opacity=".9"/></g><path d="M120 44 a40 26 0 0 1 80 0" class="f-white"/><rect x="124" y="40" width="72" height="12" rx="3" class="f-white"/><path d="M150 44v-10a10 10 0 0 1 20 0v10" class="f-sea2"/><g class="k-coral" stroke-width="3" stroke-linecap="round"><path d="M110 120c-10-10 6-16-2-26"/></g><g class="k-gold" stroke-width="3" stroke-linecap="round"><path d="M212 120c10-10-6-16 2-26"/></g><rect x="134" y="150" width="52" height="14" rx="7" class="f-sea"/><g class="bob"><path d="M40 70h26l-4 6H44z" class="f-white"/><path d="M262 130h26l-4 6h-18z" class="f-white"/></g></svg><span class="tag tag--coral">Szigetek</span></div><div class="hotel-body"><span class="hotel-stars" aria-label="10 csillagos">★★★★★ <span>· 10 csillagos</span></span><h3>Hotel Khalifa</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Pálma Sziget</span><p>10 csillagos üdülő a Pálma Szigeten a világ egyik legnagyobb élményfürdőjével, ahol egész nap ínyenc fogásokat szolgálnak fel.</p><ul class="perks"><li>Élményfürdő</li><li>Egész napos gasztronómia</li><li>Gyerekklub</li></ul><div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 4 800<small>/ éj</small></span></div></div></article><article class="card hotel" data-filter-item data-cat="city"><div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Starlight Grand"><rect width="320" height="200" class="f-sky"/><circle cx="70" cy="60" r="26" class="f-sun" opacity=".9"/><rect x="20" y="120" width="30" height="80" class="f-ink3"/><rect x="54" y="140" width="26" height="60" class="f-ink2"/><rect x="232" y="110" width="28" height="90" class="f-ink3"/><rect x="264" y="134" width="40" height="66" class="f-ink2"/><path d="M130 200V70l30-22 30 22v130z" class="f-ink"/><path d="M130 70l30-22 30 22" class="k-gold" stroke-width="3"/><path d="M160 18l4.2 8.6 9.5 1.4-6.9 6.7 1.6 9.4-8.4-4.4-8.4 4.4 1.6-9.4-6.9-6.7 9.5-1.4z" class="f-gold twinkle"/><g class="f-sun2"><rect class="twinkle" x="140" y="84" width="8" height="10" rx="1"/><rect class="twinkle" x="140" y="104" width="8" height="10" rx="1"/><rect class="twinkle" x="140" y="124" width="8" height="10" rx="1"/><rect class="twinkle" x="140" y="144" width="8" height="10" rx="1"/><rect class="twinkle" x="140" y="164" width="8" height="10" rx="1"/><rect class="twinkle" x="156" y="84" width="8" height="10" rx="1"/><rect class="twinkle" x="156" y="104" width="8" height="10" rx="1"/><rect class="twinkle" x="156" y="124" width="8" height="10" rx="1"/><rect class="twinkle" x="156" y="144" width="8" height="10" rx="1"/><rect class="twinkle" x="156" y="164" width="8" height="10" rx="1"/><rect class="twinkle" x="172" y="84" width="8" height="10" rx="1"/><rect class="twinkle" x="172" y="104" width="8" height="10" rx="1"/><rect class="twinkle" x="172" y="124" width="8" height="10" rx="1"/><rect class="twinkle" x="172" y="144" width="8" height="10" rx="1"/><rect class="twinkle" x="172" y="164" width="8" height="10" rx="1"/></g><g class="f-sun2" opacity=".8"><rect x="28" y="132" width="5" height="5"/><rect x="38" y="150" width="5" height="5"/><rect x="240" y="124" width="5" height="5"/><rect x="276" y="148" width="5" height="5"/></g></svg><span class="tag">Város</span></div><div class="hotel-body"><span class="hotel-stars" aria-label="5 csillagos">★★★★★ <span>· 5 csillagos</span></span><h3>Starlight Grand</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Nova Aurelia, Városközpont</span><p>A Starlight Hotels zászlóshajója, annak a vendéglátóháznak, ahol a Chease-dinasztia története kezdődött; tetőteraszos csillagbár a pénzügyi negyed felett.</p><ul class="perks"><li>Tetőbár</li><li>Örökség-lakosztályok</li><li>Üzleti lounge</li></ul><div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 1 200<small>/ éj</small></span></div></div></article><article class="card hotel" data-filter-item data-cat="city"><div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Royal Towers Residences"><rect width="320" height="200" class="f-sky"/><circle cx="270" cy="46" r="20" class="f-sun2"/><rect y="150" width="320" height="50" class="f-sea2"/><rect x="96" y="40" width="34" height="114" rx="4" class="f-ink2"/><rect x="142" y="22" width="36" height="132" rx="4" class="f-ink"/><rect x="190" y="48" width="34" height="106" rx="4" class="f-ink2"/><path d="M130 70h12M178 74h12" class="k-gold" stroke-width="4"/><g class="k-gold" stroke-width="1.5" opacity=".7"><path d="M102 60h22M102 80h22M102 100h22M102 120h22M148 44h24M148 66h24M148 88h24M148 110h24M148 132h24M196 70h22M196 92h22M196 114h22M196 136h22"/></g><rect x="80" y="150" width="160" height="6" class="f-sand"/><g class="bob"><path d="M30 166h44l-8 10H36z" class="f-white"/><path d="M48 166v-20l14 18z" class="f-white"/><path d="M250 168h40l-6 8h-30z" class="f-white"/><rect x="258" y="160" width="20" height="8" rx="2" class="f-white"/></g><g class="k-white" stroke-width="1.5" opacity=".6"><path d="M10 188h30M120 182h40M200 192h30"/></g></svg><span class="tag">Város</span></div><div class="hotel-body"><span class="hotel-stars" aria-label="5 csillagos">★★★★★ <span>· 5 csillagos</span></span><h3>Royal Towers Residences</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Nova Aurelia vízpart</span><p>Szolgáltatásokkal ellátott luxuslakások három toronyban saját személyzettel, Michelin-csillagos étteremmel, kaszinóval, bevásárlóközponttal és jachtkikötővel.</p><ul class="perks"><li>Saját személyzet</li><li>Michelin-csillag</li><li>Kaszinó</li></ul><div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 6 500<small>/ éj</small></span></div></div></article><article class="card hotel" data-filter-item data-cat="islands"><div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Paradise Islands Water Villas"><rect width="320" height="200" class="f-sky"/><circle cx="250" cy="60" r="30" class="f-sun"/><rect y="120" width="320" height="80" class="f-sea2"/><rect y="120" width="320" height="4" class="f-sea3"/><path d="M0 150h320" class="k-ink2" stroke-width="5"/><g><path d="M30 150v24M60 150v24" class="k-ink2" stroke-width="3"/><rect x="26" y="122" width="38" height="28" class="f-sand"/><polygon points="20,124 45,98 70,124" class="f-gold"/><rect x="38" y="132" width="10" height="18" class="f-sun2"/></g><g><path d="M130 150v24M160 150v24" class="k-ink2" stroke-width="3"/><rect x="126" y="122" width="38" height="28" class="f-sand"/><polygon points="120,124 145,98 170,124" class="f-gold"/><rect x="138" y="132" width="10" height="18" class="f-sun2"/></g><g><path d="M230 150v24M260 150v24" class="k-ink2" stroke-width="3"/><rect x="226" y="122" width="38" height="28" class="f-sand"/><polygon points="220,124 245,98 270,124" class="f-gold"/><rect x="238" y="132" width="10" height="18" class="f-sun2"/></g><g class="k-white" stroke-width="1.5" opacity=".6"><path d="M20 186h30M150 190h40M260 184h40"/></g><path d="M200 96l6 4 6-4M220 84l5 3 5-3" class="k-ink" stroke-width="1.6" fill="none"/></svg><span class="tag tag--coral">Szigetek</span></div><div class="hotel-body"><span class="hotel-stars" aria-label="5 csillagos">★★★★★ <span>· 5 csillagos</span></span><h3>Paradise Islands Water Villas</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Paradise-szigetek, karibi part</span><p>Cölöpökön álló vízfeletti villák egy védett Kék Öv lagúna felett, mindegyik üvegpadlóval, merülőmedencével és napfelkelte-terasszal.</p><ul class="perks"><li>Üvegpadló</li><li>Merülőmedence</li><li>Sznorkelezés</li></ul><div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 3 900<small>/ éj</small></span></div></div></article><article class="card hotel" data-filter-item data-cat="nature family"><div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Ski Paradise Chalets"><rect width="320" height="200" class="f-sky"/><circle cx="64" cy="48" r="18" class="f-sun2"/><polygon points="0,150 80,60 150,140 210,70 320,160 320,200 0,200" class="f-ink3"/><polygon points="80,60 62,80 72,78 80,86 90,76 98,80" class="f-white"/><polygon points="210,70 190,92 202,90 212,98 222,88 232,92" class="f-white"/><path d="M0 170 C 80 150, 200 160, 320 176 V200H0z" class="f-white"/><path d="M20 176l10-24 10 24z" class="f-leaf"/><path d="M30 176v6" class="k-ink2" stroke-width="2"/><path d="M46 176l10-24 10 24z" class="f-leaf"/><path d="M56 176v6" class="k-ink2" stroke-width="2"/><path d="M262 176l10-24 10 24z" class="f-leaf"/><path d="M272 176v6" class="k-ink2" stroke-width="2"/><path d="M288 176l10-24 10 24z" class="f-leaf"/><path d="M298 176v6" class="k-ink2" stroke-width="2"/><rect x="120" y="148" width="70" height="34" class="f-sand"/><polygon points="110,150 155,120 200,150" class="f-coral"/><polygon points="110,150 155,120 200,150" class="k-white" stroke-width="3"/><rect x="132" y="158" width="14" height="14" class="f-sun2 twinkle"/><rect x="164" y="158" width="14" height="14" class="f-sun2"/><path d="M176 128v-12h8v18" class="f-ink2"/><g class="f-white"><circle class="twinkle" cx="40" cy="100" r="2"/><circle class="twinkle" cx="260" cy="40" r="2.5"/><circle class="twinkle" cx="170" cy="40" r="2"/><circle class="twinkle" cx="300" cy="100" r="2"/></g></svg><span class="tag tag--gold">Természet</span></div><div class="hotel-body"><span class="hotel-stars" aria-label="5 csillagos">★★★★★ <span>· 5 csillagos</span></span><h3>Ski Paradise Chalets</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Andok, Brazília tartomány</span><p>Exkluzív faházak kandallóval, panorámás wellnessrészleggel és Michelin-csillagos alpesi konyhával, világszínvonalú sípályák mellett.</p><ul class="perks"><li>Sílécen be és ki</li><li>Kandalló</li><li>Panorámaspa</li></ul><div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 2 600<small>/ éj</small></span></div></div></article><article class="card hotel" data-filter-item data-cat="nature"><div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Amazonia Canopy Lodge"><rect width="320" height="200" class="f-sky"/><circle cx="250" cy="44" r="20" class="f-sun2"/><path d="M0 170 C 80 160, 200 186, 320 168 V200H0z" class="f-sea2"/><g class="f-leaf2" opacity=".7"><circle cx="20" cy="110" r="40"/><circle cx="90" cy="96" r="44"/><circle cx="230" cy="100" r="46"/><circle cx="300" cy="110" r="40"/></g><g class="f-leaf"><circle cx="40" cy="132" r="34"/><circle cx="280" cy="130" r="36"/><circle cx="160" cy="140" r="30"/></g><path d="M60 92 Q160 120 260 92" class="k-ink2" stroke-width="2.5"/><path d="M60 92 Q160 120 260 92" class="k-gold" stroke-width="1.5" stroke-dasharray="2 6"/><path d="M40 104V170M280 104V170" class="k-ink2" stroke-width="5"/><rect x="20" y="78" width="46" height="26" class="f-sand"/><polygon points="14,80 43,58 72,80" class="f-ink2"/><rect x="34" y="86" width="10" height="12" class="f-sun2 twinkle"/><rect x="256" y="78" width="46" height="26" class="f-sand"/><polygon points="250,80 279,58 308,80" class="f-ink2"/><rect x="276" y="86" width="10" height="12" class="f-sun2"/><g class="bob"><path d="M150 72c6-6 18-6 22 2l8 0-8 4c-6 4-16 2-22-6z" class="f-ink"/><path d="M172 74l12-2-10 6z" class="f-coral"/></g></svg><span class="tag tag--gold">Természet</span></div><div class="hotel-body"><span class="hotel-stars" aria-label="4 csillagos öko">★★★★ <span>· 4 csillagos öko</span></span><h3>Amazonia Canopy Lodge</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Manaus mellett, Amazónia tartomány</span><p>Függőhidakkal összekötött lombkorona-lakosztályok magasan az esőerdőben, vezetett folyami expedíciókkal kajmánok és folyami delfinek között.</p><ul class="perks"><li>Lombkorona-séták</li><li>Folyami szafari</li><li>Ökotanúsítvány</li></ul><div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 950<small>/ éj</small></span></div></div></article><article class="card hotel" data-filter-item data-cat="city family"><div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Copacabana Imperial Palace"><rect width="320" height="200" class="f-sky"/><circle cx="160" cy="80" r="30" class="f-sun"/><path d="M40 200 C 65 120, 75 70, 95 70 S 125 120, 145 200z" class="f-ink2"/><path d="M120 200 C 140 145, 150 110, 165 110 S 185 145, 205 200z" class="f-ink3"/><path d="M0 160 C 90 148, 200 168, 320 152 V200H0z" class="f-sand"/><path d="M0 174 Q 20 166 40 174 T 80 174 T 120 174 T 160 174 T 200 174 T 240 174 T 280 174 T 320 174" class="k-ink" stroke-width="2" fill="none"/><rect x="180" y="110" width="105" height="52" class="f-white"/><rect x="176" y="106" width="113" height="5" class="f-gold"/><g class="f-sun2"><rect class="twinkle" x="188" y="118" width="6" height="8" rx="1"/><rect class="twinkle" x="188" y="134" width="6" height="8" rx="1"/><rect class="twinkle" x="188" y="148" width="6" height="8" rx="1"/><rect class="twinkle" x="202" y="118" width="6" height="8" rx="1"/><rect class="twinkle" x="202" y="134" width="6" height="8" rx="1"/><rect class="twinkle" x="202" y="148" width="6" height="8" rx="1"/><rect class="twinkle" x="216" y="118" width="6" height="8" rx="1"/><rect class="twinkle" x="216" y="134" width="6" height="8" rx="1"/><rect class="twinkle" x="216" y="148" width="6" height="8" rx="1"/><rect class="twinkle" x="230" y="118" width="6" height="8" rx="1"/><rect class="twinkle" x="230" y="134" width="6" height="8" rx="1"/><rect class="twinkle" x="230" y="148" width="6" height="8" rx="1"/><rect class="twinkle" x="244" y="118" width="6" height="8" rx="1"/><rect class="twinkle" x="244" y="134" width="6" height="8" rx="1"/><rect class="twinkle" x="244" y="148" width="6" height="8" rx="1"/><rect class="twinkle" x="258" y="118" width="6" height="8" rx="1"/><rect class="twinkle" x="258" y="134" width="6" height="8" rx="1"/><rect class="twinkle" x="258" y="148" width="6" height="8" rx="1"/><rect class="twinkle" x="272" y="118" width="6" height="8" rx="1"/><rect class="twinkle" x="272" y="134" width="6" height="8" rx="1"/><rect class="twinkle" x="272" y="148" width="6" height="8" rx="1"/></g><g transform="translate(295 115) scale(0.75)"><path d="M0 0 C -2 20, 2 40, 6 60" class="k-ink2" stroke-width="5" stroke-linecap="round"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-165)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-120)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-70)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-25)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(20)"/></g></svg><span class="tag">Város</span></div><div class="hotel-body"><span class="hotel-stars" aria-label="5 csillagos">★★★★★ <span>· 5 csillagos</span></span><h3>Copacabana Imperial Palace</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Rio de Janeiro, Brazília tartomány</span><p>Ikonikus tengerparti palota a Copacabana partján feszített víztükrű medencével, privát strandklubbal és Michelin-csillagos gasztronómiával.</p><ul class="perks"><li>Strandklub</li><li>Feszített víztükör</li><li>Tetőterasz</li></ul><div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 3 400<small>/ éj</small></span></div></div></article><article class="card hotel" data-filter-item data-cat="city"><div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Aurelia Cloud Suites"><defs><linearGradient id="hs-cloud" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--ill-ink)"/><stop offset="1" style="stop-color:var(--ill-sea)"/></linearGradient></defs><rect width="320" height="200" fill="url(#hs-cloud)"/><g class="f-white" opacity=".7"><circle class="twinkle" cx="45" cy="30" r="1.5"/><circle class="twinkle" cx="95" cy="50" r="2"/><circle class="twinkle" cx="230" cy="35" r="2"/><circle class="twinkle" cx="280" cy="60" r="1.5"/><circle class="twinkle" cx="70" cy="90" r="1.5"/></g><path d="M148 200V60l12-42 12 42v140z" class="f-ink3"/><path d="M154 200V64l6-36 6 36v136z" class="f-white" opacity=".2"/><path d="M160 18V6" class="k-gold" stroke-width="2"/><circle cx="160" cy="5" r="3" class="f-gold twinkle"/><g class="k-gold" stroke-width="1.5" opacity=".8"><path d="M150 75h20M150 95h20M150 115h20M150 135h20"/></g><ellipse cx="50" cy="185" rx="70" ry="24" class="f-white" opacity=".85"/><ellipse cx="160" cy="192" rx="100" ry="28" class="f-white" opacity=".95"/><ellipse cx="275" cy="180" rx="80" ry="26" class="f-white" opacity=".85"/><ellipse cx="215" cy="120" rx="50" ry="14" class="f-white" opacity=".6"/></svg><span class="tag">Város</span></div><div class="hotel-body"><span class="hotel-stars" aria-label="10 csillagos">★★★★★ <span>· 10 csillagos</span></span><h3>Aurelia Cloud Suites</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Sky City 180–210. emelet, Nova Aurelia</span><p>Felhők feletti luxuslakosztályok a 956 méteres Sky City felhőkarcoló legfelső szintjein, 360 fokos privát üvegkilátóval.</p><ul class="perks"><li>Üvegkilátó</li><li>Privát helipad</li><li>Komornyik</li></ul><div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 11 500<small>/ éj</small></span></div></div></article><article class="card hotel" data-filter-item data-cat="islands family"><div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Laguna Azul Coral Resort"><rect width="320" height="200" class="f-sea2"/><ellipse cx="160" cy="135" rx="145" ry="62" class="f-sand"/><ellipse cx="160" cy="135" rx="105" ry="42" class="f-sea3"/><ellipse cx="160" cy="135" rx="65" ry="24" class="f-glass"/><path d="M60 140 Q 110 120 160 135 T 260 130" class="k-ink2" stroke-width="3" fill="none"/><rect x="75" y="112" width="24" height="16" class="f-white"/><polygon points="71,113 87,98 103,113" class="f-coral"/><rect x="150" y="105" width="24" height="16" class="f-white"/><polygon points="146,106 162,91 178,106" class="f-coral"/><rect x="225" y="112" width="24" height="16" class="f-white"/><polygon points="221,113 237,98 253,113" class="f-coral"/><g class="drift"><path d="M120 155c8-4 18-4 22 2-6 2-12 1-16 6-2-3-4-6-6-8z" class="f-ink"/></g><g transform="translate(35 120) scale(0.75)"><path d="M0 0 C -2 20, 2 40, 6 60" class="k-ink2" stroke-width="5" stroke-linecap="round"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-165)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-120)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-70)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-25)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(20)"/></g><g transform="translate(290 115) scale(0.75)"><path d="M0 0 C -2 20, 2 40, 6 60" class="k-ink2" stroke-width="5" stroke-linecap="round"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-165)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-120)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-70)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-25)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(20)"/></g></svg><span class="tag tag--coral">Szigetek</span></div><div class="hotel-body"><span class="hotel-stars" aria-label="5 csillagos">★★★★★ <span>· 5 csillagos</span></span><h3>Laguna Azul Coral Resort</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Világ Szigetek, Nova Aurelia</span><p>Környezetbarát luxusüdülő egy privát korall-lagúna körül, sekély fürdőöblökkel, gyermek vitorlásakadémiával és üvegcabanákkal.</p><ul class="perks"><li>Korall-lagúna</li><li>Gyermekvitorlázás</li><li>Üvegcabanák</li></ul><div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 4 200<small>/ éj</small></span></div></div></article><article class="card hotel" data-filter-item data-cat="nature"><div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Monte Rosa Sky Observatory"><defs><linearGradient id="hs-night" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--ill-ink)"/><stop offset="1" style="stop-color:var(--ill-ink-3)"/></linearGradient></defs><rect width="320" height="200" fill="url(#hs-night)"/><g class="k-gold" stroke-width="1" opacity=".6"><path d="M40 30L75 45L110 35M210 25L245 40L285 20"/></g><g class="f-white"><circle class="twinkle" cx="40" cy="30" r="2.5"/><circle class="twinkle" cx="75" cy="45" r="2"/><circle class="twinkle" cx="110" cy="35" r="2"/><circle class="twinkle" cx="210" cy="25" r="2.5"/><circle class="twinkle" cx="245" cy="40" r="2"/><circle class="twinkle" cx="285" cy="20" r="2.5"/><circle class="twinkle" cx="160" cy="20" r="1.5"/></g><polygon points="0,170 85,65 155,145 220,75 320,165 320,200 0,200" class="f-ink2"/><polygon points="85,65 68,85 78,82 85,92 95,80 102,85" class="f-white"/><polygon points="220,75 202,95 212,92 220,100 230,90 240,94" class="f-white"/><path d="M0 175 C 90 160, 200 168, 320 178 V200H0z" class="f-white"/><path d="M110 180 a50 44 0 0 1 100 0z" class="f-glass"/><path d="M110 180 a50 44 0 0 1 100 0" class="k-gold" stroke-width="2.5"/><g class="k-white" stroke-width="1.2" opacity=".8"><path d="M160 136V180M125 155l70 0M118 170l84 0M132 142l56 38M188 142l-56 38"/></g><rect x="156" y="128" width="22" height="6" rx="2" transform="rotate(-38 156 128)" class="f-ink"/><ellipse cx="255" cy="182" rx="26" ry="8" class="f-sea2"/><path d="M250 174c2-4 1-8 3-10M260 174c2-4 1-8 3-10" class="k-white" stroke-width="1.5" stroke-linecap="round" opacity=".7"/></svg><span class="tag tag--gold">Természet</span></div><div class="hotel-body"><span class="hotel-stars" aria-label="5 csillagos">★★★★★ <span>· 5 csillagos</span></span><h3>Monte Rosa Sky Observatory</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Magas-Andok, Brazília tartomány</span><p>3200 méteren épült fűtött geodéziai üvegkupolák csillaglessel, saját kutatótávcsővel és szabadtéri termálmedencével.</p><ul class="perks"><li>Csillagnéző kupola</li><li>Kutatótávcső</li><li>Termálfürdő</li></ul><div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 2 900<small>/ éj</small></span></div></div></article><article class="card hotel" data-filter-item data-cat="islands"><div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Solaris Marina & Yacht Club"><rect width="320" height="200" class="f-sky"/><circle cx="260" cy="50" r="22" class="f-sun"/><rect y="130" width="320" height="70" class="f-sea2"/><polygon points="35,145 42,80 50,145" class="f-ink2"/><circle cx="42" cy="76" r="4" class="f-gold twinkle"/><path d="M46 76l60-15v18z" class="f-gold" opacity=".2"/><rect x="90" y="142" width="230" height="12" class="f-sand"/><path d="M115 154h85l18-16h-96z" class="f-white"/><line x1="158" y1="138" x2="158" y2="44" class="k-ink2" stroke-width="2"/><polygon points="159,48 190,134 159,134" class="f-white" opacity=".85"/><path d="M225 154h70l14-14h-80z" class="f-white"/><line x1="262" y1="140" x2="262" y2="60" class="k-ink2" stroke-width="1.8"/><polygon points="263,64 288,136 263,136" class="f-coral" opacity=".85"/><g class="k-white" stroke-width="1.5" opacity=".6"><path d="M20 170h30M130 178h40M240 174h40"/></g></svg><span class="tag tag--coral">Szigetek</span></div><div class="hotel-body"><span class="hotel-stars" aria-label="5 csillagos">★★★★★ <span>· 5 csillagos</span></span><h3>Solaris Marina & Yacht Club</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Port Royal, karibi part</span><p>Kortárs tengerparti menedék a vitorlázás szerelmeseinek, privát szuperjacht-kikötőhelyekkel, naplementés pezsgőbárral és hajóbérléssel.</p><ul class="perks"><li>Privát kikötőhely</li><li>Vitorlásbérlés</li><li>Naplemente lounge</li></ul><div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 5 200<small>/ éj</small></span></div></div></article><article class="card hotel" data-filter-item data-cat="nature family"><div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Amazonia Floating River Palace"><rect width="320" height="200" class="f-sky"/><circle cx="160" cy="65" r="32" class="f-sun"/><rect y="125" width="320" height="75" class="f-ink"/><g class="f-leaf2" opacity=".7"><circle cx="25" cy="115" r="38"/><circle cx="80" cy="105" r="34"/><circle cx="240" cy="105" r="34"/><circle cx="295" cy="115" r="38"/></g><g class="f-leaf"><circle cx="45" cy="130" r="30"/><circle cx="275" cy="130" r="30"/></g><path d="M60 160h200l-16 18H76z" class="f-sand"/><rect x="80" y="136" width="160" height="24" rx="2" class="f-white"/><rect x="98" y="114" width="124" height="22" rx="2" class="f-sand"/><polygon points="94,114 160,94 226,114" class="f-coral"/><g class="f-sun2"><rect class="twinkle" x="106" y="120" width="7" height="10" rx="1"/><rect class="twinkle" x="106" y="142" width="7" height="10" rx="1"/><rect class="twinkle" x="122" y="120" width="7" height="10" rx="1"/><rect class="twinkle" x="122" y="142" width="7" height="10" rx="1"/><rect class="twinkle" x="138" y="120" width="7" height="10" rx="1"/><rect class="twinkle" x="138" y="142" width="7" height="10" rx="1"/><rect class="twinkle" x="154" y="120" width="7" height="10" rx="1"/><rect class="twinkle" x="154" y="142" width="7" height="10" rx="1"/><rect class="twinkle" x="170" y="120" width="7" height="10" rx="1"/><rect class="twinkle" x="170" y="142" width="7" height="10" rx="1"/><rect class="twinkle" x="186" y="120" width="7" height="10" rx="1"/><rect class="twinkle" x="186" y="142" width="7" height="10" rx="1"/><rect class="twinkle" x="202" y="120" width="7" height="10" rx="1"/><rect class="twinkle" x="202" y="142" width="7" height="10" rx="1"/></g><g class="bob"><path d="M245 174c4-7 12-7 16-1-4 2-8 1-12 5-1-2-3-3-4-4z" class="f-coral"/></g><g class="k-gold" stroke-width="1" opacity=".5"><path d="M100 186h120M120 192h80"/></g></svg><span class="tag tag--gold">Természet</span></div><div class="hotel-body"><span class="hotel-stars" aria-label="5 csillagos">★★★★★ <span>· 5 csillagos</span></span><h3>Amazonia Floating River Palace</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Rio Negro, Amazónia tartomány</span><p>Exkluzív butik hotelhajó a Rio Negro tükörsima vizén, szabadtéri vetítőterasszal és napfelkeltés rózsaszín delfin szafarival.</p><ul class="perks"><li>Hajólakosztályok</li><li>Delfin szafari</li><li>Szabadtéri mozi</li></ul><div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 3 600<small>/ éj</small></span></div></div></article><article class="card hotel" data-filter-item data-cat="city family"><div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Grand Riviera Palace"><rect width="320" height="200" class="f-sky"/><circle cx="255" cy="45" r="20" class="f-sun2"/><rect y="150" width="320" height="50" class="f-sand"/><rect x="65" y="85" width="190" height="66" class="f-white"/><polygon points="125,85 160,58 195,85" class="f-gold"/><polygon points="125,85 160,58 195,85" class="k-white" stroke-width="2"/><rect x="61" y="80" width="198" height="6" class="f-gold"/><g class="f-sand"><rect x="80" y="92" width="6" height="58"/><rect x="100" y="92" width="6" height="58"/><rect x="120" y="92" width="6" height="58"/><rect x="140" y="92" width="6" height="58"/><rect x="174" y="92" width="6" height="58"/><rect x="194" y="92" width="6" height="58"/><rect x="214" y="92" width="6" height="58"/><rect x="234" y="92" width="6" height="58"/></g><g class="f-sun2"><rect class="twinkle" x="88" y="98" width="8" height="12" rx="2"/><rect class="twinkle" x="88" y="122" width="8" height="12" rx="2"/><rect class="twinkle" x="108" y="98" width="8" height="12" rx="2"/><rect class="twinkle" x="108" y="122" width="8" height="12" rx="2"/><rect class="twinkle" x="128" y="98" width="8" height="12" rx="2"/><rect class="twinkle" x="128" y="122" width="8" height="12" rx="2"/><rect class="twinkle" x="182" y="98" width="8" height="12" rx="2"/><rect class="twinkle" x="182" y="122" width="8" height="12" rx="2"/><rect class="twinkle" x="202" y="98" width="8" height="12" rx="2"/><rect class="twinkle" x="202" y="122" width="8" height="12" rx="2"/><rect class="twinkle" x="222" y="98" width="8" height="12" rx="2"/><rect class="twinkle" x="222" y="122" width="8" height="12" rx="2"/></g><ellipse cx="160" cy="176" rx="46" ry="12" class="f-sea2"/><ellipse cx="160" cy="166" rx="26" ry="7" class="f-sea3"/><path d="M160 166v-18M154 152c3-8 10-8 12 0" class="k-white" stroke-width="2"/><g transform="translate(30 110) scale(0.8)"><path d="M0 0 C -2 20, 2 40, 6 60" class="k-ink2" stroke-width="5" stroke-linecap="round"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-165)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-120)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-70)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-25)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(20)"/></g><g transform="translate(290 110) scale(0.8)"><path d="M0 0 C -2 20, 2 40, 6 60" class="k-ink2" stroke-width="5" stroke-linecap="round"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-165)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-120)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-70)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-25)"/><path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(20)"/></g></svg><span class="tag">Város</span></div><div class="hotel-body"><span class="hotel-stars" aria-label="5 csillagos">★★★★★ <span>· 5 csillagos</span></span><h3>Grand Riviera Palace</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Királyi vízpart, Nova Aurelia</span><p>Méltóságteljes neoklasszikus palota 15 hektáros királyi kertben, kivilágított vízesés-kutakkal, privát stranddal és ifjúsági klubbal.</p><ul class="perks"><li>Királyi kertek</li><li>Díszkutak</li><li>Privát strand</li></ul><div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 5 800<small>/ éj</small></span></div></div></article></div>
-  </section>
-  <section id="tips">
-    <h2 class="section-title">Illem és gyakorlati tanácsok</h2>
-    <div class="card-grid"><article class="card"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l4 4 5-7 5 7 4-4-2 11H5z"/></svg></span><h3>Paloták és állami helyszínek</h3><p>A Hercegi Palotában, a Királyi Operában és az állami fogadásokon elegáns öltözet az elvárás: fedett váll, strandruha nélkül.</p></article><article class="card"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></span><h3>Fényképezés</h3><p>A kormányzati negyed, a katonai létesítmények és az űrközpont környékén korlátozott a drónhasználat és a fényképezés.</p></article><article class="card"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12c3-5 9-6 14-3l5-3v12l-5-3c-5 3-11 2-14-3z"/><circle cx="7" cy="11" r=".8"/></svg></span><h3>Óvja a Kék Övet</h3><p> A tengeri rezervátumokban kötelező a zátonybarát naptej; a korallok érintése és a halak etetése tilos.</p></article><article class="card"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="M9 12l2 2 4-4"/></svg></span><h3>Biztonság</h3><p>Waikiki a világ egyik legbiztonságosabb úti célja. A segélyhívó szolgálatok a Waikiki One alkalmazáson keresztül minden nyelven elérhetők.</p></article><article class="card"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v2M12 16v2"/></svg></span><h3>Borravaló</h3><p>A szervizdíjat a szállodai és éttermi számlák tartalmazzák; kiemelkedő kiszolgálásért a kerekítés illő gesztus.</p></article><article class="card"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0zM12 18v4"/></svg></span><h3>Áram és internet</h3><p>Az ország minden közterületén ingyenes, nagy sebességű wifi érhető el, népszavazás által garantált jogként. A konnektorok amerikai szabványúak.</p></article></div>
-  </section>
-
-    <!-- @chrome:next --><section class="next-chapter"><a class="next-card" href="faq.html"><div class="next-media"><img src="../images/UniversalUpscaler_93281a3c-f408-4f55-b29b-e8a6b87ab85d.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Folytassa az utazást · Látogatás</span><span class="next-title">GYIK</span><span class="next-arrow" aria-hidden="true">→</span></span></a></section><!-- /@chrome:next -->
+        <section class="hero hero--compact hero--art" data-hero>
+            <div class="hero-art" aria-hidden="true"><svg class="ill" viewBox="0 0 640 480" role="img" aria-label="Illusztráció: Waikiki karibi partjára érkező repülőútvonal">
+                    <defs>
+                        <clipPath id="tg-clip">
+                            <rect width="640" height="480" rx="40" />
+                        </clipPath>
+                        <linearGradient id="tg-sky" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0" style="stop-color:var(--ill-sky-2)" />
+                            <stop offset="1" style="stop-color:var(--ill-sky)" />
+                        </linearGradient>
+                        <linearGradient id="tg-sea" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0" style="stop-color:var(--ill-sea-2)" />
+                            <stop offset="1" style="stop-color:var(--ill-sea)" />
+                        </linearGradient>
+                    </defs>
+                    <g clip-path="url(#tg-clip)">
+                        <rect width="640" height="480" fill="url(#tg-sky)" />
+                        <circle cx="420" cy="300" r="120" class="f-sun2" opacity=".3" />
+                        <circle cx="420" cy="300" r="78" class="f-sun" />
+                        <g class="drift">
+                            <ellipse cx="120" cy="96" rx="48" ry="11" class="f-white" opacity=".85" />
+                            <ellipse cx="150" cy="86" rx="28" ry="11" class="f-white" opacity=".85" />
+                        </g>
+                        <g class="drift" style="animation-delay:-7s">
+                            <ellipse cx="520" cy="70" rx="44" ry="10" class="f-white" opacity=".75" />
+                        </g>
+                        <path d="M250 120l8 5 8-5M276 140l6 4 6-4M230 150l6 4 6-4" class="k-ink" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <polygon points="456,302 484,262 512,302" class="f-glass" />
+                        <polygon points="456,302 484,262 512,302" class="k-gold" stroke-width="1.5" />
+                        <rect x="516" y="270" width="12" height="32" class="f-ink3" />
+                        <rect x="530" y="282" width="10" height="20" class="f-ink2" />
+                        <rect x="430" y="280" width="12" height="22" class="f-ink3" />
+                        <rect x="544" y="262" width="8" height="40" class="f-ink3" />
+                        <rect y="300" width="640" height="180" fill="url(#tg-sea)" />
+                        <g class="f-sun2" opacity=".55">
+                            <rect x="370" y="316" width="100" height="4" rx="2" />
+                            <rect x="385" y="332" width="70" height="4" rx="2" />
+                            <rect x="398" y="348" width="44" height="4" rx="2" />
+                        </g>
+                        <g class="bob">
+                            <path d="M300 372h76l-11 13h-54z" class="f-white" />
+                            <path d="M338 368V300l30 66z" class="f-white" />
+                            <path d="M334 368V306l-22 60z" class="f-coral" />
+                            <path d="M338 370V296" class="k-ink" stroke-width="2" />
+                        </g>
+                        <path d="M0 404 C 170 360, 330 384, 640 452 V480 H0z" class="f-sand" />
+                        <path d="M0 420 C 170 380, 330 402, 640 466" class="k-white" stroke-width="2" opacity=".6" />
+                        <path d="M150 470 C 146 400, 162 330, 200 270" class="k-ink2" stroke-width="13" stroke-linecap="round" />
+                        <path d="M150 470 C 146 400, 162 330, 200 270" class="k-gold" stroke-width="13" stroke-dasharray="2 12" opacity=".5" />
+                        <g transform="translate(200 270)">
+                            <path d="M0 0 C 30 -30, 75 -26, 96 4 C 66 -10, 34 -10, 0 0z" class="f-leaf" transform="rotate(-170)" />
+                            <path d="M0 0 C 30 -30, 75 -26, 96 4 C 66 -10, 34 -10, 0 0z" class="f-leaf2" transform="rotate(-130)" />
+                            <path d="M0 0 C 30 -30, 75 -26, 96 4 C 66 -10, 34 -10, 0 0z" class="f-leaf" transform="rotate(-90)" />
+                            <path d="M0 0 C 30 -30, 75 -26, 96 4 C 66 -10, 34 -10, 0 0z" class="f-leaf2" transform="rotate(-50)" />
+                            <path d="M0 0 C 30 -30, 75 -26, 96 4 C 66 -10, 34 -10, 0 0z" class="f-leaf" transform="rotate(-10)" />
+                            <path d="M0 0 C 30 -30, 75 -26, 96 4 C 66 -10, 34 -10, 0 0z" class="f-leaf2" transform="rotate(25)" />
+                            <path d="M0 0 C 30 -30, 75 -26, 96 4 C 66 -10, 34 -10, 0 0z" class="f-leaf2" transform="rotate(150)" />
+                            <circle cx="-6" cy="8" r="6" class="f-gold" />
+                            <circle cx="6" cy="10" r="6" class="f-gold" />
+                        </g>
+                        <path d="M548 456V394" class="k-ink" stroke-width="3" />
+                        <path d="M500 398 Q548 344 596 398z" class="f-coral" />
+                        <path d="M532 398 Q548 350 564 398z" class="f-white" opacity=".85" />
+                        <rect x="470" y="440" width="44" height="30" rx="5" class="f-ink2" />
+                        <path d="M482 440v-7h20v7" class="k-ink" stroke-width="3" />
+                        <rect x="470" y="452" width="44" height="4" class="f-gold" />
+                        <path d="M90 214 C 210 70, 420 64, 560 176" class="k-coral dash" stroke-width="2.6" stroke-linecap="round" />
+                        <g transform="translate(90 214)">
+                            <circle r="8" class="f-coral pulse" />
+                            <circle r="6" class="f-coral" />
+                            <circle r="2.5" class="f-white" />
+                        </g>
+                        <g transform="translate(560 176)">
+                            <circle r="8" class="f-coral pulse" style="animation-delay:1.2s" />
+                            <circle r="6" class="f-coral" />
+                            <circle r="2.5" class="f-white" />
+                        </g>
+                        <g>
+                            <path d="M-16 -2.4H10l7 2.4-7 2.4H-16z M-4 -2.4-11 -14h5l9 11.6z M-4 2.4-11 14h5l9-11.6z M-16 -2.4-20 -8h3.5l5 5.6z M-16 2.4-20 8h3.5l5-5.6z" class="f-ink" />
+                            <animateMotion dur="7s" repeatCount="indefinite" rotate="auto" path="M90 214 C 210 70, 420 64, 560 176" />
+                        </g>
+                    </g>
+                </svg></div>
+            <div class="hero-content"><span class="hero-eyebrow">Látogatás · Utazási Kalauz</span>
+                <h1 class="hero-title">Utazás <em>Waikikibe</em>, gondtalanul</h1>
+                <p class="hero-lead">Minden, amire az utazás előtt és alatt szüksége lehet: beutazási szabályok, közlekedés, az egyes tartományok legjobb évszaka, a kihagyhatatlan látnivalók és a waikiki vendéglátást meghatározó szállodák.</p>
+                <div class="hero-stats">
+                    <div class="stat-item"><span class="stat-number">45M</span><span class="stat-label">Látogató évente</span></div>
+                    <div class="stat-item"><span class="stat-number">12</span><span class="stat-label">UNESCO helyszín</span></div>
+                    <div class="stat-item"><span class="stat-number">28°C</span><span class="stat-label">Átlag a parton</span></div>
+                    <div class="stat-item"><span class="stat-number">20</span><span class="stat-label">Kihagyhatatlan látnivaló</span></div>
+                </div>
+            </div>
+        </section>
+        <!-- @chrome:subnav --><!-- /@chrome:subnav -->
+        <section id="essentials">
+            <h2 class="section-title">A legfontosabbak egy pillantásra</h2>
+            <p class="section-intro">Waikiki évente 45 millió látogatót fogad, közülük 35 milliót egyedül Nova Aurelia. Néhány gyakorlati tudnivaló megkönnyíti az első napot.</p>
+            <dl class="fact-grid">
+                <div class="fact"><svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z" />
+                        <circle cx="12" cy="10" r="2.5" />
+                    </svg>
+                    <div>
+                        <dt>Főváros</dt>
+                        <dd>Nova Aurelia<small>Waikiki tartomány, Karib-térség</small></dd>
+                    </div>
+                </div>
+                <div class="fact"><svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                    </svg>
+                    <div>
+                        <dt>Nyelv</dt>
+                        <dd>Angol<small>Hivatalos, mindenhol beszélt nyelv</small></dd>
+                    </div>
+                </div>
+                <div class="fact"><svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="5" y="2" width="14" height="20" rx="2" />
+                        <circle cx="12" cy="10" r="3" />
+                        <path d="M9 16h6" />
+                    </svg>
+                    <div>
+                        <dt>Vízumkövetelmények</dt>
+                        <dd>90 napig vízummentes<small>AU, NATO és partnerállamok; másoknak online e-vízum</small></dd>
+                    </div>
+                </div>
+                <div class="fact"><svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v2M12 16v2" />
+                    </svg>
+                    <div>
+                        <dt>Pénznem</dt>
+                        <dd>Waikiki dollár (WUD)<small>1 WUD ≈ 2,30 USD; teljesen készpénzmentes, kártya mindenhol</small></dd>
+                    </div>
+                </div>
+                <div class="fact"><svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M12 7v5l3 2" />
+                    </svg>
+                    <div>
+                        <dt>Időzóna</dt>
+                        <dd>UTC −5 és −3 között<small>Nova Aurelia (UTC −5), Rio és São Paulo (UTC −3)</small></dd>
+                    </div>
+                </div>
+                <div class="fact"><svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M14 14.8V4a2 2 0 0 0-4 0v10.8a4 4 0 1 0 4 0z" />
+                    </svg>
+                    <div>
+                        <dt>Éghajlat</dt>
+                        <dd>Trópusi, 24–31°C<small>A tengerparton egész évben meleg van; az Andokban hűvösebb. Amazóniát trópusi meleg és rövid délutáni záporok jellemzik.</small></dd>
+                    </div>
+                </div>
+                <div class="fact"><svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M5 16v-5l2-5h10l2 5v5M3 16h18v3H3zM7 19v2M17 19v2" />
+                    </svg>
+                    <div>
+                        <dt>Közlekedés</dt>
+                        <dd>Jobb oldali közlekedés<small>Nemzetközi jogosítvány elfogadott</small></dd>
+                    </div>
+                </div>
+                <div class="fact"><svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="2" y="5" width="20" height="14" rx="2.5" />
+                        <path d="M2 10h20M6 15h4" />
+                    </svg>
+                    <div>
+                        <dt>Fizetés</dt>
+                        <dd>Kártya mindenhol<small>Waikiki One tárca látogatóknak</small></dd>
+                    </div>
+                </div>
+                <div class="fact"><svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6-8 11-8 11z" />
+                    </svg>
+                    <div>
+                        <dt>Egészségügy</dt>
+                        <dd>Világszínvonalú kórházak<small>Utasbiztosítás kötelező</small></dd>
+                    </div>
+                </div>
+            </dl>
+        </section>
+        <section id="before-you-go" class="light-bg">
+            <h2 class="section-title">Indulás előtt</h2>
+            <ol class="steps">
+                <li>
+                    <h3>Ellenőrizze a beutazás módját</h3>
+                    <p>Az Amerikai Unió, a NATO és partnerállamok, például Japán polgárai 90 napig vízummentesen utazhatnak. Mindenki más a Waikiki One portálon igényelhet e-vízumot.</p>
+                </li>
+                <li>
+                    <h3>Útlevél és biztosítás</h3>
+                    <p>Útlevelének az érkezést követően még hat hónapig érvényesnek kell lennie. A látogatóknak utasbiztosítás szükséges, az állami egészségügy csak az állampolgárok számára ingyenes.</p>
+                </li>
+                <li>
+                    <h3>Tervezze meg a tartományi utakat</h3>
+                    <p>Az amazóniai esőerdő-expedíciókhoz sárgaláz elleni oltás és engedéllyel rendelkező vezető szükséges; a védett rezervátumok naponta korlátozott számú látogatót fogadnak.</p>
+                </li>
+                <li>
+                    <h3>Töltse le a Waikiki One-t</h3>
+                    <p>A látogatói mód egyetlen biztonságos alkalmazásban tárolja az e-vízumot, a közlekedési bérleteket, a múzeumi jegyeket és a fizetéseket.</p>
+                </li>
+            </ol>
+        </section>
+        <section id="getting-around">
+            <h2 class="section-title">Odajutás és helyi közlekedés</h2>
+            <p class="section-intro">Waikiki a Karib-tengertől az Amazonasig terjed, a modern hálózat mégis minden tartományt könnyen elérhetővé tesz.</p>
+            <div class="card-grid">
+                <article class="card"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z" />
+                        </svg></span>
+                    <h3>Repülővel</h3>
+                    <p>A fő kapu a Nova Aurelia nemzetközi repülőtér, minden kontinensről induló közvetlen járatokkal. A szárazföldi tartományokat São Paulo, Rio de Janeiro és Manaus szolgálja ki.</p>
+                </article>
+                <article class="card"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="5" y="3" width="14" height="14" rx="3" />
+                            <path d="M5 11h14M9 21l1.5-4M15 21l-1.5-4M8.5 14h.01M15.5 14h.01" />
+                        </svg></span>
+                    <h3>Vasúton Floridából</h3>
+                    <p>A Florida–Waikiki tenger alatti folyosón maglev járatok érkeznek az Egyesült Államokból közvetlenül a szigetekre.</p>
+                </article>
+                <article class="card"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 17l2 4h14l2-4zM5 17v-6h14v6M8 11V7h8v4M12 3v4" />
+                        </svg></span>
+                    <h3>Hajóval</h3>
+                    <p>Nova Aurelia és Port Royal hajóterminálja egész évben fogadja az óceánjárókat és a magánjachtokat.</p>
+                </article>
+            </div>
+            <h3 class="section-title" style="font-size:clamp(1.5rem,2.6vw,2.1rem);margin-top:4rem">Helyben</h3>
+            <div class="card-grid">
+                <article class="card"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="5" y="6" width="14" height="12" rx="2" />
+                            <path d="M5 12h14M8 21l2-3M16 21l-2-3M9 2h6M12 2v4" />
+                        </svg></span>
+                    <h3>Metró, villamos és busz</h3>
+                    <p>A városi közösségi közlekedés minden nagyvárosban ingyenes. Nova Aureliában a metró, az elektromos villamos és az önvezető buszok éjjel-nappal közlekednek.</p>
+                </article>
+                <article class="card"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="2" y="8" width="20" height="8" rx="4" />
+                            <path d="M6 12h7M16 12h2" />
+                        </svg></span>
+                    <h3>Hyperloop</h3>
+                    <p>A világ első nyilvános Hyperloop vonalán percek alatt eljuthat Nova Aurelia belvárosából Mega Piramis Városba.</p>
+                </article>
+                <article class="card"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M2 4l20 4M12 6v4" />
+                            <rect x="6" y="10" width="12" height="10" rx="2" />
+                            <path d="M6 14h12" />
+                        </svg></span>
+                    <h3>Kabinos felvonó és magasvasút</h3>
+                    <p>A Pálma Szigetet magasvasút szolgálja ki, a Világ Szigetek szigeteit kabinos felvonók és hidak kötik össze.</p>
+                </article>
+                <article class="card"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M2 17c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0M4 14l1-4h14l1 4M9 10V7h5l2 3" />
+                        </svg></span>
+                    <h3>Vízitaxik</h3>
+                    <p>Elektromos vízitaxik kötik össze a kikötőket, a szigeti üdülőket és a vízpartot; a Világ Szigetek némelyike csak így érhető el.</p>
+                </article>
+            </div>
+        </section>
+        <section id="when-to-visit" class="light-bg">
+            <h2 class="section-title">Mikor érdemes utazni</h2>
+            <p class="section-intro">A decembertől áprilisig tartó karibi száraz évszak felhőtlen eget és az év nagy fesztiváljait hozza. Amazónia a szárazabb hónapokban a legjobban megközelíthető, az andoki síszezon pedig júniustól augusztusig tart.</p>
+            <div class="season" role="table" aria-label="A legjobb utazási hónapok régiónként">
+                <div class="season-row season-head"><b></b><span>Jan</span><span>Feb</span><span>Már</span><span>Ápr</span><span>Máj</span><span>Jún</span><span>Júl</span><span>Aug</span><span>Szep</span><span>Okt</span><span>Nov</span><span>Dec</span></div>
+                <div class="season-row"><b>Karibi part</b><span class="season-cell s-peak" title="Jan: Legjobb"></span><span class="season-cell s-peak" title="Feb: Legjobb"></span><span class="season-cell s-peak" title="Már: Legjobb"></span><span class="season-cell s-peak" title="Ápr: Legjobb"></span><span class="season-cell s-good" title="Máj: Jó"></span><span class="season-cell s-fair" title="Jún: Csendesebb"></span><span class="season-cell s-fair" title="Júl: Csendesebb"></span><span class="season-cell s-fair" title="Aug: Csendesebb"></span><span class="season-cell s-wet" title="Szep: Esős / hurrikánszezon"></span><span class="season-cell s-wet" title="Okt: Esős / hurrikánszezon"></span><span class="season-cell s-good" title="Nov: Jó"></span><span class="season-cell s-peak" title="Dec: Legjobb"></span></div>
+                <div class="season-row"><b>Amazonia</b><span class="season-cell s-wet" title="Jan: Esős / hurrikánszezon"></span><span class="season-cell s-wet" title="Feb: Esős / hurrikánszezon"></span><span class="season-cell s-wet" title="Már: Esős / hurrikánszezon"></span><span class="season-cell s-wet" title="Ápr: Esős / hurrikánszezon"></span><span class="season-cell s-fair" title="Máj: Csendesebb"></span><span class="season-cell s-good" title="Jún: Jó"></span><span class="season-cell s-good" title="Júl: Jó"></span><span class="season-cell s-good" title="Aug: Jó"></span><span class="season-cell s-good" title="Szep: Jó"></span><span class="season-cell s-fair" title="Okt: Csendesebb"></span><span class="season-cell s-fair" title="Nov: Csendesebb"></span><span class="season-cell s-wet" title="Dec: Esős / hurrikánszezon"></span></div>
+                <div class="season-row"><b>Brazília és Rio</b><span class="season-cell s-peak" title="Jan: Legjobb"></span><span class="season-cell s-peak" title="Feb: Legjobb"></span><span class="season-cell s-good" title="Már: Jó"></span><span class="season-cell s-good" title="Ápr: Jó"></span><span class="season-cell s-fair" title="Máj: Csendesebb"></span><span class="season-cell s-fair" title="Jún: Csendesebb"></span><span class="season-cell s-fair" title="Júl: Csendesebb"></span><span class="season-cell s-good" title="Aug: Jó"></span><span class="season-cell s-good" title="Szep: Jó"></span><span class="season-cell s-good" title="Okt: Jó"></span><span class="season-cell s-good" title="Nov: Jó"></span><span class="season-cell s-peak" title="Dec: Legjobb"></span></div>
+                <div class="season-row"><b>Andoki síelés</b><span class="season-cell s-fair" title="Jan: Csendesebb"></span><span class="season-cell s-fair" title="Feb: Csendesebb"></span><span class="season-cell s-fair" title="Már: Csendesebb"></span><span class="season-cell s-fair" title="Ápr: Csendesebb"></span><span class="season-cell s-good" title="Máj: Jó"></span><span class="season-cell s-peak" title="Jún: Legjobb"></span><span class="season-cell s-peak" title="Júl: Legjobb"></span><span class="season-cell s-peak" title="Aug: Legjobb"></span><span class="season-cell s-good" title="Szep: Jó"></span><span class="season-cell s-fair" title="Okt: Csendesebb"></span><span class="season-cell s-fair" title="Nov: Csendesebb"></span><span class="season-cell s-fair" title="Dec: Csendesebb"></span></div>
+                <ul class="season-legend">
+                    <li><i class="s-peak"></i>Legjobb</li>
+                    <li><i class="s-good"></i>Jó</li>
+                    <li><i class="s-fair"></i>Csendesebb</li>
+                    <li><i class="s-wet"></i>Esős / hurrikánszezon</li>
+                </ul>
+            </div>
+        </section>
+        <section id="landmarks">
+            <h2 class="section-title">Kihagyhatatlan látnivalók</h2>
+            <p class="section-intro">Nova Aurelia a világ leglátogatottabb városa. Szűrje a legfontosabb látnivalókat téma szerint, a gyarmati kornál is régebbi római falaktól a Föld legmagasabb épületéig.</p>
+            <div class="filter-bar" role="group" aria-label="Látnivalók szűrése" data-filter-for="landmark-grid"><button class="filter-chip" type="button" data-filter="all" aria-pressed="true">Mind</button><button class="filter-chip" type="button" data-filter="city" aria-pressed="false">Nova Aurelia</button><button class="filter-chip" type="button" data-filter="history" aria-pressed="false">Történelmi és ókori</button><button class="filter-chip" type="button" data-filter="islands" aria-pressed="false">Szigetek és szórakozás</button></div>
+            <div class="landmark-grid" id="landmark-grid">
+                <article class="card landmark" data-filter-item data-cat="city">
+                    <div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 21h18M4 21V11h16v10M2 11l10-7 10 7M8 21v-6M12 21v-6M16 21v-6" />
+                            </svg></span><span class="tag">Nova Aurelia</span></div>
+                    <h3>Hercegi Palota</h3><span class="alt-name">Ducal Palace</span>
+                    <p>Raimondo és Selena rezidenciája és a diplomáciai események fő helyszíne, amely a parlamenti ülésterem aprólékosan kidolgozott másolatát is magában foglalja.</p>
+                </article>
+                <article class="card landmark" data-filter-item data-cat="city">
+                    <div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 3 2 20h20z" />
+                                <path d="M12 3l3 17M7 12h10" />
+                            </svg></span><span class="tag">Nova Aurelia</span></div>
+                    <h3>Mega Piramis Város</h3><span class="alt-name">Mega Pyramid City</span>
+                    <p>Vegyes funkciójú, piramis alakú komplexum lakótornyokkal, bevásárlóközpontokkal és irodákkal, amely harmonikusan ötvözi a napelemeket és a függőleges kerteket.</p>
+                </article>
+                <article class="card landmark" data-filter-item data-cat="city">
+                    <div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M12 7v5l3 2" />
+                            </svg></span><span class="tag">Nova Aurelia</span></div>
+                    <h3>Királyi Óratorony</h3><span class="alt-name">Royal Clock Tower</span>
+                    <p>A város jól ismert jelképe aranyszínű számlapokkal és kilátóval, ahonnan lenyűgöző panoráma nyílik a metropoliszra és a mesterséges szigetekre.</p>
+                </article>
+                <article class="card landmark" data-filter-item data-cat="city">
+                    <div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M9 18V5l12-2v13" />
+                                <circle cx="6" cy="18" r="3" />
+                                <circle cx="18" cy="16" r="3" />
+                            </svg></span><span class="tag">Nova Aurelia</span></div>
+                    <h3>Királyi Opera</h3><span class="alt-name">Nova Aurelia Royal Opera</span>
+                    <p>A nemzetközi előadásokhoz világszínvonalú akusztikával tervezett épület tetőkertje esti rendezvényeknek is otthont ad.</p>
+                </article>
+                <article class="card landmark" data-filter-item data-cat="city">
+                    <div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3" y="7" width="18" height="13" rx="2" />
+                                <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18" />
+                            </svg></span><span class="tag">Nova Aurelia</span></div>
+                    <h3>Városközpont</h3><span class="alt-name">Nova Aurelia City Center</span>
+                    <p>Nyüzsgő pénzügyi központ üvegépületekkel, vállalati székházakkal és luxus lakótornyokkal, amelyeket föld alatti bevásárlóutcák és parkok kötnek össze.</p>
+                </article>
+                <article class="card landmark" data-filter-item data-cat="city">
+                    <div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M9 22V6l3-4 3 4v16M6 22V11h3M15 13h3v9M4 22h16" />
+                            </svg></span><span class="tag">Nova Aurelia</span></div>
+                    <h3>Sky City toronyház</h3><span class="alt-name">Sky City Skyscraper</span>
+                    <p>956 méterével és 220 emeletével a világ legmagasabb épülete, lábánál hatalmas, kivilágított zenélő szökőkútrendszerrel.</p>
+                </article>
+                <article class="card landmark" data-filter-item data-cat="city">
+                    <div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v2M12 16v2" />
+                            </svg></span><span class="tag">Nova Aurelia</span></div>
+                    <h3>Kereskedelmi központ</h3><span class="alt-name">Commercial Center</span>
+                    <p>A világ legnagyobb pénzügyi és banki központja globális vállalati székházakkal és a tőzsdének otthont adó 650 méteres felhőkarcolóval.</p>
+                </article>
+                <article class="card landmark" data-filter-item data-cat="city">
+                    <div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3" y="3" width="18" height="18" rx="4" />
+                                <circle cx="8" cy="8" r="1" />
+                                <circle cx="16" cy="16" r="1" />
+                                <circle cx="12" cy="12" r="1" />
+                            </svg></span><span class="tag">Nova Aurelia</span></div>
+                    <h3>Royal Towers</h3>
+                    <p>Háromtornyú komplexum saját személyzettel ellátott luxuslakásokkal, exkluzív Michelin-csillagos étteremmel, kaszinóval, bevásárlóközponttal és jachtkikötővel.</p>
+                </article>
+                <article class="card landmark" data-filter-item data-cat="history">
+                    <div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 21h16M5 18h14M6 18V9M10 18V9M14 18V9M18 18V9M3 9h18L12 3z" />
+                            </svg></span><span class="tag tag--gold">Történelmi és ókori</span></div>
+                    <h3>Római templom</h3><span class="alt-name">Roman Temple</span>
+                    <p>Ókori templom 100 tökéletesen egyforma oszloppal, amelyek egy másik kontinensről hozott kőből készültek, és a napszaktól függően változtatják színüket.</p>
+                </article>
+                <article class="card landmark" data-filter-item data-cat="history">
+                    <div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M2 20h20M4 20v-3h16v3M6 17v-3h12v3M8 14v-3h8v3M10 11V8h4v3" />
+                            </svg></span><span class="tag tag--gold">Történelmi és ókori</span></div>
+                    <h3>Lépcsős piramis</h3><span class="alt-name">Step Pyramid</span>
+                    <p>24 méter magas, 2000 éves azték kultuszhely, amelynek elhelyezkedése és kialakítása lenyűgöző csillagászati tudásról tanúskodik.</p>
+                </article>
+                <article class="card landmark" data-filter-item data-cat="history">
+                    <div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 21V8h3v2h3V8h3v2h3V8h3v2h3V8v13M3 21h18M3 14h18M9 14v7M15 14v7" />
+                            </svg></span><span class="tag tag--gold">Történelmi és ókori</span></div>
+                    <h3>Római városfal</h3><span class="alt-name">Roman City Wall</span>
+                    <p>A Római Birodalom által épített leghosszabb városfal tizenkét eredeti kapuval; mivel soha nem ostromolták, ma is hibátlan állapotban van.</p>
+                </article>
+                <article class="card landmark" data-filter-item data-cat="history">
+                    <div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 8l4 4 5-7 5 7 4-4-2 11H5z" />
+                            </svg></span><span class="tag tag--gold">Történelmi és ókori</span></div>
+                    <h3>Római császári palota</h3><span class="alt-name">Roman Imperial Palace</span>
+                    <p>Vaikikia provincia legnagyobb rekonstruált épületegyüttese interaktív programokkal az ókori római polgárok életmódjáról és szokásairól.</p>
+                </article>
+                <article class="card landmark" data-filter-item data-cat="history">
+                    <div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 21V9h3V6h3v3h2V5h2v4h2V6h3v3h3v12zM10 21v-5h4v5" />
+                            </svg></span><span class="tag tag--gold">Történelmi és ókori</span></div>
+                    <h3>Angol kastélyok</h3><span class="alt-name">English Castles</span>
+                    <p>Különleges történelmi birtokok, köztük IV. Vilmos 76 szobás palotája, arannyal, drágakövekkel és pompás botanikus kertekkel díszítve.</p>
+                </article>
+                <article class="card landmark" data-filter-item data-cat="islands">
+                    <div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M2 20c3-1.5 6-1.5 10 0s7 1.5 10 0" />
+                                <path d="M12 18V9M12 9c-2-2-5-2-7 0M12 9c2-2 5-2 7 0M12 9c-1-2.5-3-4-5-4M12 9c1-2.5 3-4 5-4" />
+                            </svg></span><span class="tag tag--coral">Szigetek és szórakozás</span></div>
+                    <h3>Pálma Sziget</h3><span class="alt-name">Palm Island</span>
+                    <p>Pálma alakú mesterséges sziget luxusüdülőkkel, jachtkikötőkkel, az ikonikus Hotel Khalifával és a látványos Palm Islands élményfürdővel.</p>
+                </article>
+                <article class="card landmark" data-filter-item data-cat="islands">
+                    <div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                            </svg></span><span class="tag tag--coral">Szigetek és szórakozás</span></div>
+                    <h3>Világ Szigetek</h3><span class="alt-name">World Islands</span>
+                    <p>60 szigetből álló hatalmas szigetcsoport a Föld kontinenseinek formájában, nemzetközi pavilonokkal, luxusvillákkal, kaszinókkal és vidámparkkal.</p>
+                </article>
+                <article class="card landmark" data-filter-item data-cat="islands">
+                    <div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M2 12c3-5 9-6 14-3l5-3v12l-5-3c-5 3-11 2-14-3z" />
+                                <circle cx="7" cy="11" r=".8" />
+                            </svg></span><span class="tag tag--coral">Szigetek és szórakozás</span></div>
+                    <h3>Kaméleon Szigetek</h3><span class="alt-name">Chameleon Islands</span>
+                    <p>A 2026-ban elkészülő fejlesztés a turizmust az innovációval ötvözi: tengerbiológiai laborok, kísérleti lakóépületek és tematikus szállodák.</p>
+                </article>
+                <article class="card landmark" data-filter-item data-cat="islands">
+                    <div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 21h16M5 18h14M6 18V9M10 18V9M14 18V9M18 18V9M3 9h18L12 3z" />
+                            </svg></span><span class="tag tag--coral">Szigetek és szórakozás</span></div>
+                    <h3>Nemzeti Múzeum</h3><span class="alt-name">National Museum</span>
+                    <p>Waikiki története az 1999-es alapítástól napjainkig, ókori leletek, klasszikus műremekek és interaktív kiállítások mellett.</p>
+                </article>
+                <article class="card landmark" data-filter-item data-cat="islands">
+                    <div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <ellipse cx="12" cy="9" rx="10" ry="4" />
+                                <path d="M2 9v6c0 2.2 4.5 4 10 4s10-1.8 10-4V9M7 12.5v5M17 12.5v5M12 13v6" />
+                            </svg></span><span class="tag tag--coral">Szigetek és szórakozás</span></div>
+                    <h3>Olimpiai Sportkomplexum</h3><span class="alt-name">Olympic Sports Complex</span>
+                    <p>A 2012-es nyári olimpia öröksége: ma is működő stadionok, uszodakomplexum és sporttörténeti múzeum.</p>
+                </article>
+                <article class="card landmark" data-filter-item data-cat="islands">
+                    <div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M2 19h20M4 19c0-6 3-11 7-13-1 5 0 10 2 13M10 19c1-5 4-9 8-10-1 4-1 7 1 10" />
+                            </svg></span><span class="tag tag--coral">Szigetek és szórakozás</span></div>
+                    <h3>A Sydney-i Operaház mása</h3><span class="alt-name">Sydney Opera House Replica</span>
+                    <p>A New Mavericks kikötőben álló, akusztikailag és vizuálisan is pontos másolat balettnek, szimfonikus koncerteknek és színházi előadásoknak ad otthont.</p>
+                </article>
+                <article class="card landmark" data-filter-item data-cat="islands">
+                    <div class="landmark-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="12" cy="10" r="7" />
+                                <path d="M12 3v14M5 10h14M7 5l10 10M17 5 7 15M9 21l3-4 3 4" />
+                            </svg></span><span class="tag tag--coral">Szigetek és szórakozás</span></div>
+                    <h3>Rio Disneyland</h3>
+                    <p>Hatalmas családi élménypark a klasszikus Disney-attrakciók mellett waikiki témájú játékokkal, köztük egy magával ragadó amazóniai esőerdő-élménnyel.</p>
+                </article>
+            </div>
+        </section>
+        <section id="hotels" class="light-bg">
+            <h2 class="section-title">Szállás</h2>
+            <p class="section-intro">Waikiki a prémium turizmus fellegvára. A 15 csillagos Hotel Presidenttől az amazóniai lombkoronában épült lakosztályokig ezek a címek határozzák meg a Szuverén Államban töltött napokat.</p>
+            <div class="filter-bar" role="group" aria-label="Szállodák szűrése" data-filter-for="hotel-grid"><button class="filter-chip" type="button" data-filter="all" aria-pressed="true">Összes</button><button class="filter-chip" type="button" data-filter="city" aria-pressed="false">Város</button><button class="filter-chip" type="button" data-filter="islands" aria-pressed="false">Szigetek és tenger</button><button class="filter-chip" type="button" data-filter="nature" aria-pressed="false">Természet</button><button class="filter-chip" type="button" data-filter="family" aria-pressed="false">Családi</button></div>
+            <div class="hotel-grid" id="hotel-grid">
+                <article class="card hotel" data-filter-item data-cat="city">
+                    <div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Hotel President">
+                            <rect width="320" height="200" class="f-sky" />
+                            <circle cx="250" cy="52" r="24" class="f-sun2" opacity=".7" />
+                            <rect y="160" width="320" height="40" class="f-sand" />
+                            <rect x="70" y="86" width="180" height="76" class="f-white" />
+                            <polygon points="120,86 160,58 200,86" class="f-white" />
+                            <polygon points="120,86 160,58 200,86" class="k-gold" stroke-width="2" />
+                            <path d="M160 58V44" class="k-gold" stroke-width="2" />
+                            <circle cx="160" cy="42" r="3" class="f-gold twinkle" />
+                            <rect x="66" y="80" width="188" height="7" class="f-gold" />
+                            <g class="f-sand">
+                                <rect x="124" y="92" width="6" height="66" />
+                                <rect x="140" y="92" width="6" height="66" />
+                                <rect x="174" y="92" width="6" height="66" />
+                                <rect x="190" y="92" width="6" height="66" />
+                            </g>
+                            <g class="f-sun2">
+                                <rect class="twinkle" x="80" y="98" width="10" height="14" rx="5" />
+                                <rect class="twinkle" x="98" y="98" width="10" height="14" rx="5" />
+                                <rect class="twinkle" x="212" y="98" width="10" height="14" rx="5" />
+                                <rect class="twinkle" x="230" y="98" width="10" height="14" rx="5" />
+                                <rect x="80" y="126" width="10" height="14" rx="5" />
+                                <rect x="98" y="126" width="10" height="14" rx="5" />
+                                <rect x="212" y="126" width="10" height="14" rx="5" />
+                                <rect x="230" y="126" width="10" height="14" rx="5" />
+                            </g>
+                            <path d="M152 162v-26a8 8 0 0 1 16 0v26z" class="f-sun2" />
+                            <rect x="154" y="162" width="12" height="38" class="f-coral" />
+                            <ellipse cx="160" cy="182" rx="34" ry="6" class="f-sea2" />
+                            <path d="M160 180v-12M154 172c2-6 10-6 12 0" class="k-sea" stroke-width="2" />
+                            <g transform="translate(36 110) scale(0.9)">
+                                <path d="M0 0 C -2 20, 2 40, 6 60" class="k-ink2" stroke-width="5" stroke-linecap="round" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-165)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-120)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-70)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-25)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(20)" />
+                            </g>
+                            <g transform="translate(286 110) scale(0.9)">
+                                <path d="M0 0 C -2 20, 2 40, 6 60" class="k-ink2" stroke-width="5" stroke-linecap="round" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-165)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-120)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-70)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-25)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(20)" />
+                            </g>
+                        </svg><span class="tag">Város</span></div>
+                    <div class="hotel-body"><span class="hotel-stars" aria-label="15 csillagos">★★★★★ <span>· 15 csillagos</span></span>
+                        <h3>Hotel President</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z" />
+                                <circle cx="12" cy="10" r="2.5" />
+                            </svg>Nova Aurelia, Kormányzati negyed</span>
+                        <p>A világ egyetlen 15 csillagos szállodája, a látogató államfők szállása, 1600 m²-es elnöki lakosztállyal és föld alatti spa- és termálfürdő-komplexummal.</p>
+                        <ul class="perks">
+                            <li>Elnöki lakosztály</li>
+                            <li>Termálspa</li>
+                            <li>Komornyik</li>
+                        </ul>
+                        <div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 18 000<small>/ éj</small></span></div>
+                    </div>
+                </article>
+                <article class="card hotel" data-filter-item data-cat="islands">
+                    <div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Hotel Atlantis">
+                            <defs>
+                                <linearGradient id="hs-deep" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0" style="stop-color:var(--ill-sea-2)" />
+                                    <stop offset="1" style="stop-color:var(--ill-ink)" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="320" height="200" fill="url(#hs-deep)" />
+                            <g class="f-white" opacity=".12">
+                                <polygon points="60,0 90,0 50,200 20,200" />
+                                <polygon points="150,0 170,0 150,200 120,200" />
+                                <polygon points="240,0 268,0 260,200 228,200" />
+                            </g>
+                            <path d="M0 170 C 40 160, 80 175, 120 168 S 220 160, 320 172 V200H0z" class="f-sand" opacity=".8" />
+                            <g class="f-coral">
+                                <path d="M30 172c-4-14 2-26 8-30-2 10 2 18 6 30z" />
+                                <path d="M262 172c0-16 8-24 14-26-4 10-2 18 0 26z" />
+                                <circle cx="56" cy="166" r="7" />
+                            </g>
+                            <g class="f-gold">
+                                <path d="M286 172c-2-10 2-18 6-20-1 8 1 14 3 20z" />
+                            </g>
+                            <path d="M90 160 V100 a70 50 0 0 1 140 0 V160z" class="f-glass" opacity=".95" />
+                            <path d="M90 160 V100 a70 50 0 0 1 140 0 V160" class="k-gold" stroke-width="3" />
+                            <rect x="104" y="122" width="112" height="38" class="f-sun2" opacity=".55" />
+                            <rect x="120" y="138" width="60" height="16" rx="4" class="f-white" />
+                            <rect x="120" y="132" width="16" height="10" rx="3" class="f-white" />
+                            <g class="drift">
+                                <path d="M30 70c8-8 22-8 30 0-8 8-22 8-30 0zM60 70l8-6v12z" class="f-sun2" />
+                            </g>
+                            <g class="drift" style="animation-delay:-5s">
+                                <path d="M240 50c6-6 16-6 22 0-6 6-16 6-22 0zM262 50l6-5v10z" class="f-coral" />
+                                <path d="M270 80c5-5 13-5 18 0-5 5-13 5-18 0zM288 80l5-4v8z" class="f-white" />
+                            </g>
+                            <path d="M200 40c20-14 50-14 70 6-20-4-30 4-36 14-8-10-20-18-34-20z" class="f-ink" opacity=".55" />
+                            <g class="f-white" opacity=".6">
+                                <circle class="twinkle" cx="70" cy="120" r="3" />
+                                <circle class="twinkle" cx="76" cy="104" r="2" />
+                                <circle class="twinkle" cx="252" cy="120" r="2.5" />
+                            </g>
+                        </svg><span class="tag tag--coral">Szigetek</span></div>
+                    <div class="hotel-body"><span class="hotel-stars" aria-label="10 csillagos">★★★★★ <span>· 10 csillagos</span></span>
+                        <h3>Hotel Atlantis</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z" />
+                                <circle cx="12" cy="10" r="2.5" />
+                            </svg>Világ Szigetek, Nova Aurelia</span>
+                        <p>Víz alatti lakosztályok, ahol a tengeri élővilág a padlótól a mennyezetig érő ablakok előtt úszik el, a Világ Szigetek zátonyának peremén.</p>
+                        <ul class="perks">
+                            <li>Víz alatti lakosztály</li>
+                            <li>Zátonyétterem</li>
+                            <li>Saját kikötő</li>
+                        </ul>
+                        <div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 9 500<small>/ éj</small></span></div>
+                    </div>
+                </article>
+                <article class="card hotel" data-filter-item data-cat="islands family">
+                    <div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Hotel Khalifa">
+                            <rect width="320" height="200" class="f-sea2" />
+                            <g class="k-white" stroke-width="1.5" opacity=".5">
+                                <path d="M10 30h30M260 20h40M20 170h40M250 180h50" />
+                            </g>
+                            <g transform="translate(160 110)">
+                                <rect x="-8" y="0" width="16" height="80" class="f-sand" />
+                                <path d="M0 0 C 18 -6, 48 -6, 70 0 C 48 6, 18 6, 0 0z" class="f-sand" transform="rotate(-180)" />
+                                <path d="M0 0 C 18 -6, 48 -6, 70 0 C 48 6, 18 6, 0 0z" class="f-sand" transform="rotate(-150)" />
+                                <path d="M0 0 C 18 -6, 48 -6, 70 0 C 48 6, 18 6, 0 0z" class="f-sand" transform="rotate(-120)" />
+                                <path d="M0 0 C 18 -6, 48 -6, 70 0 C 48 6, 18 6, 0 0z" class="f-sand" transform="rotate(-90)" />
+                                <path d="M0 0 C 18 -6, 48 -6, 70 0 C 48 6, 18 6, 0 0z" class="f-sand" transform="rotate(-60)" />
+                                <path d="M0 0 C 18 -6, 48 -6, 70 0 C 48 6, 18 6, 0 0z" class="f-sand" transform="rotate(-30)" />
+                                <path d="M0 0 C 18 -6, 48 -6, 70 0 C 48 6, 18 6, 0 0z" class="f-sand" transform="rotate(0)" />
+                                <path d="M-96 -6 A 100 80 0 0 1 96 -6" class="k-white" stroke-width="7" fill="none" opacity=".9" />
+                            </g>
+                            <path d="M120 44 a40 26 0 0 1 80 0" class="f-white" />
+                            <rect x="124" y="40" width="72" height="12" rx="3" class="f-white" />
+                            <path d="M150 44v-10a10 10 0 0 1 20 0v10" class="f-sea2" />
+                            <g class="k-coral" stroke-width="3" stroke-linecap="round">
+                                <path d="M110 120c-10-10 6-16-2-26" />
+                            </g>
+                            <g class="k-gold" stroke-width="3" stroke-linecap="round">
+                                <path d="M212 120c10-10-6-16 2-26" />
+                            </g>
+                            <rect x="134" y="150" width="52" height="14" rx="7" class="f-sea" />
+                            <g class="bob">
+                                <path d="M40 70h26l-4 6H44z" class="f-white" />
+                                <path d="M262 130h26l-4 6h-18z" class="f-white" />
+                            </g>
+                        </svg><span class="tag tag--coral">Szigetek</span></div>
+                    <div class="hotel-body"><span class="hotel-stars" aria-label="10 csillagos">★★★★★ <span>· 10 csillagos</span></span>
+                        <h3>Hotel Khalifa</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z" />
+                                <circle cx="12" cy="10" r="2.5" />
+                            </svg>Pálma Sziget</span>
+                        <p>10 csillagos üdülő a Pálma Szigeten a világ egyik legnagyobb élményfürdőjével, ahol egész nap ínyenc fogásokat szolgálnak fel.</p>
+                        <ul class="perks">
+                            <li>Élményfürdő</li>
+                            <li>Egész napos gasztronómia</li>
+                            <li>Gyerekklub</li>
+                        </ul>
+                        <div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 4 800<small>/ éj</small></span></div>
+                    </div>
+                </article>
+                <article class="card hotel" data-filter-item data-cat="city">
+                    <div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Starlight Grand">
+                            <rect width="320" height="200" class="f-sky" />
+                            <circle cx="70" cy="60" r="26" class="f-sun" opacity=".9" />
+                            <rect x="20" y="120" width="30" height="80" class="f-ink3" />
+                            <rect x="54" y="140" width="26" height="60" class="f-ink2" />
+                            <rect x="232" y="110" width="28" height="90" class="f-ink3" />
+                            <rect x="264" y="134" width="40" height="66" class="f-ink2" />
+                            <path d="M130 200V70l30-22 30 22v130z" class="f-ink" />
+                            <path d="M130 70l30-22 30 22" class="k-gold" stroke-width="3" />
+                            <path d="M160 18l4.2 8.6 9.5 1.4-6.9 6.7 1.6 9.4-8.4-4.4-8.4 4.4 1.6-9.4-6.9-6.7 9.5-1.4z" class="f-gold twinkle" />
+                            <g class="f-sun2">
+                                <rect class="twinkle" x="140" y="84" width="8" height="10" rx="1" />
+                                <rect class="twinkle" x="140" y="104" width="8" height="10" rx="1" />
+                                <rect class="twinkle" x="140" y="124" width="8" height="10" rx="1" />
+                                <rect class="twinkle" x="140" y="144" width="8" height="10" rx="1" />
+                                <rect class="twinkle" x="140" y="164" width="8" height="10" rx="1" />
+                                <rect class="twinkle" x="156" y="84" width="8" height="10" rx="1" />
+                                <rect class="twinkle" x="156" y="104" width="8" height="10" rx="1" />
+                                <rect class="twinkle" x="156" y="124" width="8" height="10" rx="1" />
+                                <rect class="twinkle" x="156" y="144" width="8" height="10" rx="1" />
+                                <rect class="twinkle" x="156" y="164" width="8" height="10" rx="1" />
+                                <rect class="twinkle" x="172" y="84" width="8" height="10" rx="1" />
+                                <rect class="twinkle" x="172" y="104" width="8" height="10" rx="1" />
+                                <rect class="twinkle" x="172" y="124" width="8" height="10" rx="1" />
+                                <rect class="twinkle" x="172" y="144" width="8" height="10" rx="1" />
+                                <rect class="twinkle" x="172" y="164" width="8" height="10" rx="1" />
+                            </g>
+                            <g class="f-sun2" opacity=".8">
+                                <rect x="28" y="132" width="5" height="5" />
+                                <rect x="38" y="150" width="5" height="5" />
+                                <rect x="240" y="124" width="5" height="5" />
+                                <rect x="276" y="148" width="5" height="5" />
+                            </g>
+                        </svg><span class="tag">Város</span></div>
+                    <div class="hotel-body"><span class="hotel-stars" aria-label="5 csillagos">★★★★★ <span>· 5 csillagos</span></span>
+                        <h3>Starlight Grand</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z" />
+                                <circle cx="12" cy="10" r="2.5" />
+                            </svg>Nova Aurelia, Városközpont</span>
+                        <p>A Starlight Hotels zászlóshajója, annak a vendéglátóháznak, ahol a Chease-dinasztia története kezdődött; tetőteraszos csillagbár a pénzügyi negyed felett.</p>
+                        <ul class="perks">
+                            <li>Tetőbár</li>
+                            <li>Örökség-lakosztályok</li>
+                            <li>Üzleti lounge</li>
+                        </ul>
+                        <div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 1 200<small>/ éj</small></span></div>
+                    </div>
+                </article>
+                <article class="card hotel" data-filter-item data-cat="city">
+                    <div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Royal Towers Residences">
+                            <rect width="320" height="200" class="f-sky" />
+                            <circle cx="270" cy="46" r="20" class="f-sun2" />
+                            <rect y="150" width="320" height="50" class="f-sea2" />
+                            <rect x="96" y="40" width="34" height="114" rx="4" class="f-ink2" />
+                            <rect x="142" y="22" width="36" height="132" rx="4" class="f-ink" />
+                            <rect x="190" y="48" width="34" height="106" rx="4" class="f-ink2" />
+                            <path d="M130 70h12M178 74h12" class="k-gold" stroke-width="4" />
+                            <g class="k-gold" stroke-width="1.5" opacity=".7">
+                                <path d="M102 60h22M102 80h22M102 100h22M102 120h22M148 44h24M148 66h24M148 88h24M148 110h24M148 132h24M196 70h22M196 92h22M196 114h22M196 136h22" />
+                            </g>
+                            <rect x="80" y="150" width="160" height="6" class="f-sand" />
+                            <g class="bob">
+                                <path d="M30 166h44l-8 10H36z" class="f-white" />
+                                <path d="M48 166v-20l14 18z" class="f-white" />
+                                <path d="M250 168h40l-6 8h-30z" class="f-white" />
+                                <rect x="258" y="160" width="20" height="8" rx="2" class="f-white" />
+                            </g>
+                            <g class="k-white" stroke-width="1.5" opacity=".6">
+                                <path d="M10 188h30M120 182h40M200 192h30" />
+                            </g>
+                        </svg><span class="tag">Város</span></div>
+                    <div class="hotel-body"><span class="hotel-stars" aria-label="5 csillagos">★★★★★ <span>· 5 csillagos</span></span>
+                        <h3>Royal Towers Residences</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z" />
+                                <circle cx="12" cy="10" r="2.5" />
+                            </svg>Nova Aurelia vízpart</span>
+                        <p>Szolgáltatásokkal ellátott luxuslakások három toronyban saját személyzettel, Michelin-csillagos étteremmel, kaszinóval, bevásárlóközponttal és jachtkikötővel.</p>
+                        <ul class="perks">
+                            <li>Saját személyzet</li>
+                            <li>Michelin-csillag</li>
+                            <li>Kaszinó</li>
+                        </ul>
+                        <div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 6 500<small>/ éj</small></span></div>
+                    </div>
+                </article>
+                <article class="card hotel" data-filter-item data-cat="islands">
+                    <div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Paradise Islands Water Villas">
+                            <rect width="320" height="200" class="f-sky" />
+                            <circle cx="250" cy="60" r="30" class="f-sun" />
+                            <rect y="120" width="320" height="80" class="f-sea2" />
+                            <rect y="120" width="320" height="4" class="f-sea3" />
+                            <path d="M0 150h320" class="k-ink2" stroke-width="5" />
+                            <g>
+                                <path d="M30 150v24M60 150v24" class="k-ink2" stroke-width="3" />
+                                <rect x="26" y="122" width="38" height="28" class="f-sand" />
+                                <polygon points="20,124 45,98 70,124" class="f-gold" />
+                                <rect x="38" y="132" width="10" height="18" class="f-sun2" />
+                            </g>
+                            <g>
+                                <path d="M130 150v24M160 150v24" class="k-ink2" stroke-width="3" />
+                                <rect x="126" y="122" width="38" height="28" class="f-sand" />
+                                <polygon points="120,124 145,98 170,124" class="f-gold" />
+                                <rect x="138" y="132" width="10" height="18" class="f-sun2" />
+                            </g>
+                            <g>
+                                <path d="M230 150v24M260 150v24" class="k-ink2" stroke-width="3" />
+                                <rect x="226" y="122" width="38" height="28" class="f-sand" />
+                                <polygon points="220,124 245,98 270,124" class="f-gold" />
+                                <rect x="238" y="132" width="10" height="18" class="f-sun2" />
+                            </g>
+                            <g class="k-white" stroke-width="1.5" opacity=".6">
+                                <path d="M20 186h30M150 190h40M260 184h40" />
+                            </g>
+                            <path d="M200 96l6 4 6-4M220 84l5 3 5-3" class="k-ink" stroke-width="1.6" fill="none" />
+                        </svg><span class="tag tag--coral">Szigetek</span></div>
+                    <div class="hotel-body"><span class="hotel-stars" aria-label="5 csillagos">★★★★★ <span>· 5 csillagos</span></span>
+                        <h3>Paradise Islands Water Villas</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z" />
+                                <circle cx="12" cy="10" r="2.5" />
+                            </svg>Paradise-szigetek, karibi part</span>
+                        <p>Cölöpökön álló vízfeletti villák egy védett Kék Öv lagúna felett, mindegyik üvegpadlóval, merülőmedencével és napfelkelte-terasszal.</p>
+                        <ul class="perks">
+                            <li>Üvegpadló</li>
+                            <li>Merülőmedence</li>
+                            <li>Sznorkelezés</li>
+                        </ul>
+                        <div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 3 900<small>/ éj</small></span></div>
+                    </div>
+                </article>
+                <article class="card hotel" data-filter-item data-cat="nature family">
+                    <div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Ski Paradise Chalets">
+                            <rect width="320" height="200" class="f-sky" />
+                            <circle cx="64" cy="48" r="18" class="f-sun2" />
+                            <polygon points="0,150 80,60 150,140 210,70 320,160 320,200 0,200" class="f-ink3" />
+                            <polygon points="80,60 62,80 72,78 80,86 90,76 98,80" class="f-white" />
+                            <polygon points="210,70 190,92 202,90 212,98 222,88 232,92" class="f-white" />
+                            <path d="M0 170 C 80 150, 200 160, 320 176 V200H0z" class="f-white" />
+                            <path d="M20 176l10-24 10 24z" class="f-leaf" />
+                            <path d="M30 176v6" class="k-ink2" stroke-width="2" />
+                            <path d="M46 176l10-24 10 24z" class="f-leaf" />
+                            <path d="M56 176v6" class="k-ink2" stroke-width="2" />
+                            <path d="M262 176l10-24 10 24z" class="f-leaf" />
+                            <path d="M272 176v6" class="k-ink2" stroke-width="2" />
+                            <path d="M288 176l10-24 10 24z" class="f-leaf" />
+                            <path d="M298 176v6" class="k-ink2" stroke-width="2" />
+                            <rect x="120" y="148" width="70" height="34" class="f-sand" />
+                            <polygon points="110,150 155,120 200,150" class="f-coral" />
+                            <polygon points="110,150 155,120 200,150" class="k-white" stroke-width="3" />
+                            <rect x="132" y="158" width="14" height="14" class="f-sun2 twinkle" />
+                            <rect x="164" y="158" width="14" height="14" class="f-sun2" />
+                            <path d="M176 128v-12h8v18" class="f-ink2" />
+                            <g class="f-white">
+                                <circle class="twinkle" cx="40" cy="100" r="2" />
+                                <circle class="twinkle" cx="260" cy="40" r="2.5" />
+                                <circle class="twinkle" cx="170" cy="40" r="2" />
+                                <circle class="twinkle" cx="300" cy="100" r="2" />
+                            </g>
+                        </svg><span class="tag tag--gold">Természet</span></div>
+                    <div class="hotel-body"><span class="hotel-stars" aria-label="5 csillagos">★★★★★ <span>· 5 csillagos</span></span>
+                        <h3>Ski Paradise Chalets</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z" />
+                                <circle cx="12" cy="10" r="2.5" />
+                            </svg>Andok, Brazília tartomány</span>
+                        <p>Exkluzív faházak kandallóval, panorámás wellnessrészleggel és Michelin-csillagos alpesi konyhával, világszínvonalú sípályák mellett.</p>
+                        <ul class="perks">
+                            <li>Sílécen be és ki</li>
+                            <li>Kandalló</li>
+                            <li>Panorámaspa</li>
+                        </ul>
+                        <div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 2 600<small>/ éj</small></span></div>
+                    </div>
+                </article>
+                <article class="card hotel" data-filter-item data-cat="nature">
+                    <div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Amazonia Canopy Lodge">
+                            <rect width="320" height="200" class="f-sky" />
+                            <circle cx="250" cy="44" r="20" class="f-sun2" />
+                            <path d="M0 170 C 80 160, 200 186, 320 168 V200H0z" class="f-sea2" />
+                            <g class="f-leaf2" opacity=".7">
+                                <circle cx="20" cy="110" r="40" />
+                                <circle cx="90" cy="96" r="44" />
+                                <circle cx="230" cy="100" r="46" />
+                                <circle cx="300" cy="110" r="40" />
+                            </g>
+                            <g class="f-leaf">
+                                <circle cx="40" cy="132" r="34" />
+                                <circle cx="280" cy="130" r="36" />
+                                <circle cx="160" cy="140" r="30" />
+                            </g>
+                            <path d="M60 92 Q160 120 260 92" class="k-ink2" stroke-width="2.5" />
+                            <path d="M60 92 Q160 120 260 92" class="k-gold" stroke-width="1.5" stroke-dasharray="2 6" />
+                            <path d="M40 104V170M280 104V170" class="k-ink2" stroke-width="5" />
+                            <rect x="20" y="78" width="46" height="26" class="f-sand" />
+                            <polygon points="14,80 43,58 72,80" class="f-ink2" />
+                            <rect x="34" y="86" width="10" height="12" class="f-sun2 twinkle" />
+                            <rect x="256" y="78" width="46" height="26" class="f-sand" />
+                            <polygon points="250,80 279,58 308,80" class="f-ink2" />
+                            <rect x="276" y="86" width="10" height="12" class="f-sun2" />
+                            <g class="bob">
+                                <path d="M150 72c6-6 18-6 22 2l8 0-8 4c-6 4-16 2-22-6z" class="f-ink" />
+                                <path d="M172 74l12-2-10 6z" class="f-coral" />
+                            </g>
+                        </svg><span class="tag tag--gold">Természet</span></div>
+                    <div class="hotel-body"><span class="hotel-stars" aria-label="4 csillagos öko">★★★★ <span>· 4 csillagos öko</span></span>
+                        <h3>Amazonia Canopy Lodge</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z" />
+                                <circle cx="12" cy="10" r="2.5" />
+                            </svg>Manaus mellett, Amazónia tartomány</span>
+                        <p>Függőhidakkal összekötött lombkorona-lakosztályok magasan az esőerdőben, vezetett folyami expedíciókkal kajmánok és folyami delfinek között.</p>
+                        <ul class="perks">
+                            <li>Lombkorona-séták</li>
+                            <li>Folyami szafari</li>
+                            <li>Ökotanúsítvány</li>
+                        </ul>
+                        <div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 950<small>/ éj</small></span></div>
+                    </div>
+                </article>
+                <article class="card hotel" data-filter-item data-cat="city family">
+                    <div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Copacabana Imperial Palace">
+                            <rect width="320" height="200" class="f-sky" />
+                            <circle cx="160" cy="80" r="30" class="f-sun" />
+                            <path d="M40 200 C 65 120, 75 70, 95 70 S 125 120, 145 200z" class="f-ink2" />
+                            <path d="M120 200 C 140 145, 150 110, 165 110 S 185 145, 205 200z" class="f-ink3" />
+                            <path d="M0 160 C 90 148, 200 168, 320 152 V200H0z" class="f-sand" />
+                            <path d="M0 174 Q 20 166 40 174 T 80 174 T 120 174 T 160 174 T 200 174 T 240 174 T 280 174 T 320 174" class="k-ink" stroke-width="2" fill="none" />
+                            <rect x="180" y="110" width="105" height="52" class="f-white" />
+                            <rect x="176" y="106" width="113" height="5" class="f-gold" />
+                            <g class="f-sun2">
+                                <rect class="twinkle" x="188" y="118" width="6" height="8" rx="1" />
+                                <rect class="twinkle" x="188" y="134" width="6" height="8" rx="1" />
+                                <rect class="twinkle" x="188" y="148" width="6" height="8" rx="1" />
+                                <rect class="twinkle" x="202" y="118" width="6" height="8" rx="1" />
+                                <rect class="twinkle" x="202" y="134" width="6" height="8" rx="1" />
+                                <rect class="twinkle" x="202" y="148" width="6" height="8" rx="1" />
+                                <rect class="twinkle" x="216" y="118" width="6" height="8" rx="1" />
+                                <rect class="twinkle" x="216" y="134" width="6" height="8" rx="1" />
+                                <rect class="twinkle" x="216" y="148" width="6" height="8" rx="1" />
+                                <rect class="twinkle" x="230" y="118" width="6" height="8" rx="1" />
+                                <rect class="twinkle" x="230" y="134" width="6" height="8" rx="1" />
+                                <rect class="twinkle" x="230" y="148" width="6" height="8" rx="1" />
+                                <rect class="twinkle" x="244" y="118" width="6" height="8" rx="1" />
+                                <rect class="twinkle" x="244" y="134" width="6" height="8" rx="1" />
+                                <rect class="twinkle" x="244" y="148" width="6" height="8" rx="1" />
+                                <rect class="twinkle" x="258" y="118" width="6" height="8" rx="1" />
+                                <rect class="twinkle" x="258" y="134" width="6" height="8" rx="1" />
+                                <rect class="twinkle" x="258" y="148" width="6" height="8" rx="1" />
+                                <rect class="twinkle" x="272" y="118" width="6" height="8" rx="1" />
+                                <rect class="twinkle" x="272" y="134" width="6" height="8" rx="1" />
+                                <rect class="twinkle" x="272" y="148" width="6" height="8" rx="1" />
+                            </g>
+                            <g transform="translate(295 115) scale(0.75)">
+                                <path d="M0 0 C -2 20, 2 40, 6 60" class="k-ink2" stroke-width="5" stroke-linecap="round" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-165)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-120)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-70)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-25)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(20)" />
+                            </g>
+                        </svg><span class="tag">Város</span></div>
+                    <div class="hotel-body"><span class="hotel-stars" aria-label="5 csillagos">★★★★★ <span>· 5 csillagos</span></span>
+                        <h3>Copacabana Imperial Palace</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z" />
+                                <circle cx="12" cy="10" r="2.5" />
+                            </svg>Rio de Janeiro, Brazília tartomány</span>
+                        <p>Ikonikus tengerparti palota a Copacabana partján feszített víztükrű medencével, privát strandklubbal és Michelin-csillagos gasztronómiával.</p>
+                        <ul class="perks">
+                            <li>Strandklub</li>
+                            <li>Feszített víztükör</li>
+                            <li>Tetőterasz</li>
+                        </ul>
+                        <div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 3 400<small>/ éj</small></span></div>
+                    </div>
+                </article>
+                <article class="card hotel" data-filter-item data-cat="city">
+                    <div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Aurelia Cloud Suites">
+                            <defs>
+                                <linearGradient id="hs-cloud" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0" style="stop-color:var(--ill-ink)" />
+                                    <stop offset="1" style="stop-color:var(--ill-sea)" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="320" height="200" fill="url(#hs-cloud)" />
+                            <g class="f-white" opacity=".7">
+                                <circle class="twinkle" cx="45" cy="30" r="1.5" />
+                                <circle class="twinkle" cx="95" cy="50" r="2" />
+                                <circle class="twinkle" cx="230" cy="35" r="2" />
+                                <circle class="twinkle" cx="280" cy="60" r="1.5" />
+                                <circle class="twinkle" cx="70" cy="90" r="1.5" />
+                            </g>
+                            <path d="M148 200V60l12-42 12 42v140z" class="f-ink3" />
+                            <path d="M154 200V64l6-36 6 36v136z" class="f-white" opacity=".2" />
+                            <path d="M160 18V6" class="k-gold" stroke-width="2" />
+                            <circle cx="160" cy="5" r="3" class="f-gold twinkle" />
+                            <g class="k-gold" stroke-width="1.5" opacity=".8">
+                                <path d="M150 75h20M150 95h20M150 115h20M150 135h20" />
+                            </g>
+                            <ellipse cx="50" cy="185" rx="70" ry="24" class="f-white" opacity=".85" />
+                            <ellipse cx="160" cy="192" rx="100" ry="28" class="f-white" opacity=".95" />
+                            <ellipse cx="275" cy="180" rx="80" ry="26" class="f-white" opacity=".85" />
+                            <ellipse cx="215" cy="120" rx="50" ry="14" class="f-white" opacity=".6" />
+                        </svg><span class="tag">Város</span></div>
+                    <div class="hotel-body"><span class="hotel-stars" aria-label="10 csillagos">★★★★★ <span>· 10 csillagos</span></span>
+                        <h3>Aurelia Cloud Suites</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z" />
+                                <circle cx="12" cy="10" r="2.5" />
+                            </svg>Sky City 180–210. emelet, Nova Aurelia</span>
+                        <p>Felhők feletti luxuslakosztályok a 956 méteres Sky City felhőkarcoló legfelső szintjein, 360 fokos privát üvegkilátóval.</p>
+                        <ul class="perks">
+                            <li>Üvegkilátó</li>
+                            <li>Privát helipad</li>
+                            <li>Komornyik</li>
+                        </ul>
+                        <div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 11 500<small>/ éj</small></span></div>
+                    </div>
+                </article>
+                <article class="card hotel" data-filter-item data-cat="islands family">
+                    <div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Laguna Azul Coral Resort">
+                            <rect width="320" height="200" class="f-sea2" />
+                            <ellipse cx="160" cy="135" rx="145" ry="62" class="f-sand" />
+                            <ellipse cx="160" cy="135" rx="105" ry="42" class="f-sea3" />
+                            <ellipse cx="160" cy="135" rx="65" ry="24" class="f-glass" />
+                            <path d="M60 140 Q 110 120 160 135 T 260 130" class="k-ink2" stroke-width="3" fill="none" />
+                            <rect x="75" y="112" width="24" height="16" class="f-white" />
+                            <polygon points="71,113 87,98 103,113" class="f-coral" />
+                            <rect x="150" y="105" width="24" height="16" class="f-white" />
+                            <polygon points="146,106 162,91 178,106" class="f-coral" />
+                            <rect x="225" y="112" width="24" height="16" class="f-white" />
+                            <polygon points="221,113 237,98 253,113" class="f-coral" />
+                            <g class="drift">
+                                <path d="M120 155c8-4 18-4 22 2-6 2-12 1-16 6-2-3-4-6-6-8z" class="f-ink" />
+                            </g>
+                            <g transform="translate(35 120) scale(0.75)">
+                                <path d="M0 0 C -2 20, 2 40, 6 60" class="k-ink2" stroke-width="5" stroke-linecap="round" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-165)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-120)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-70)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-25)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(20)" />
+                            </g>
+                            <g transform="translate(290 115) scale(0.75)">
+                                <path d="M0 0 C -2 20, 2 40, 6 60" class="k-ink2" stroke-width="5" stroke-linecap="round" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-165)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-120)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-70)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-25)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(20)" />
+                            </g>
+                        </svg><span class="tag tag--coral">Szigetek</span></div>
+                    <div class="hotel-body"><span class="hotel-stars" aria-label="5 csillagos">★★★★★ <span>· 5 csillagos</span></span>
+                        <h3>Laguna Azul Coral Resort</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z" />
+                                <circle cx="12" cy="10" r="2.5" />
+                            </svg>Világ Szigetek, Nova Aurelia</span>
+                        <p>Környezetbarát luxusüdülő egy privát korall-lagúna körül, sekély fürdőöblökkel, gyermek vitorlásakadémiával és üvegcabanákkal.</p>
+                        <ul class="perks">
+                            <li>Korall-lagúna</li>
+                            <li>Gyermekvitorlázás</li>
+                            <li>Üvegcabanák</li>
+                        </ul>
+                        <div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 4 200<small>/ éj</small></span></div>
+                    </div>
+                </article>
+                <article class="card hotel" data-filter-item data-cat="nature">
+                    <div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Monte Rosa Sky Observatory">
+                            <defs>
+                                <linearGradient id="hs-night" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0" style="stop-color:var(--ill-ink)" />
+                                    <stop offset="1" style="stop-color:var(--ill-ink-3)" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="320" height="200" fill="url(#hs-night)" />
+                            <g class="k-gold" stroke-width="1" opacity=".6">
+                                <path d="M40 30L75 45L110 35M210 25L245 40L285 20" />
+                            </g>
+                            <g class="f-white">
+                                <circle class="twinkle" cx="40" cy="30" r="2.5" />
+                                <circle class="twinkle" cx="75" cy="45" r="2" />
+                                <circle class="twinkle" cx="110" cy="35" r="2" />
+                                <circle class="twinkle" cx="210" cy="25" r="2.5" />
+                                <circle class="twinkle" cx="245" cy="40" r="2" />
+                                <circle class="twinkle" cx="285" cy="20" r="2.5" />
+                                <circle class="twinkle" cx="160" cy="20" r="1.5" />
+                            </g>
+                            <polygon points="0,170 85,65 155,145 220,75 320,165 320,200 0,200" class="f-ink2" />
+                            <polygon points="85,65 68,85 78,82 85,92 95,80 102,85" class="f-white" />
+                            <polygon points="220,75 202,95 212,92 220,100 230,90 240,94" class="f-white" />
+                            <path d="M0 175 C 90 160, 200 168, 320 178 V200H0z" class="f-white" />
+                            <path d="M110 180 a50 44 0 0 1 100 0z" class="f-glass" />
+                            <path d="M110 180 a50 44 0 0 1 100 0" class="k-gold" stroke-width="2.5" />
+                            <g class="k-white" stroke-width="1.2" opacity=".8">
+                                <path d="M160 136V180M125 155l70 0M118 170l84 0M132 142l56 38M188 142l-56 38" />
+                            </g>
+                            <rect x="156" y="128" width="22" height="6" rx="2" transform="rotate(-38 156 128)" class="f-ink" />
+                            <ellipse cx="255" cy="182" rx="26" ry="8" class="f-sea2" />
+                            <path d="M250 174c2-4 1-8 3-10M260 174c2-4 1-8 3-10" class="k-white" stroke-width="1.5" stroke-linecap="round" opacity=".7" />
+                        </svg><span class="tag tag--gold">Természet</span></div>
+                    <div class="hotel-body"><span class="hotel-stars" aria-label="5 csillagos">★★★★★ <span>· 5 csillagos</span></span>
+                        <h3>Monte Rosa Sky Observatory</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z" />
+                                <circle cx="12" cy="10" r="2.5" />
+                            </svg>Magas-Andok, Brazília tartomány</span>
+                        <p>3200 méteren épült fűtött geodéziai üvegkupolák csillaglessel, saját kutatótávcsővel és szabadtéri termálmedencével.</p>
+                        <ul class="perks">
+                            <li>Csillagnéző kupola</li>
+                            <li>Kutatótávcső</li>
+                            <li>Termálfürdő</li>
+                        </ul>
+                        <div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 2 900<small>/ éj</small></span></div>
+                    </div>
+                </article>
+                <article class="card hotel" data-filter-item data-cat="islands">
+                    <div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Solaris Marina & Yacht Club">
+                            <rect width="320" height="200" class="f-sky" />
+                            <circle cx="260" cy="50" r="22" class="f-sun" />
+                            <rect y="130" width="320" height="70" class="f-sea2" />
+                            <polygon points="35,145 42,80 50,145" class="f-ink2" />
+                            <circle cx="42" cy="76" r="4" class="f-gold twinkle" />
+                            <path d="M46 76l60-15v18z" class="f-gold" opacity=".2" />
+                            <rect x="90" y="142" width="230" height="12" class="f-sand" />
+                            <path d="M115 154h85l18-16h-96z" class="f-white" />
+                            <line x1="158" y1="138" x2="158" y2="44" class="k-ink2" stroke-width="2" />
+                            <polygon points="159,48 190,134 159,134" class="f-white" opacity=".85" />
+                            <path d="M225 154h70l14-14h-80z" class="f-white" />
+                            <line x1="262" y1="140" x2="262" y2="60" class="k-ink2" stroke-width="1.8" />
+                            <polygon points="263,64 288,136 263,136" class="f-coral" opacity=".85" />
+                            <g class="k-white" stroke-width="1.5" opacity=".6">
+                                <path d="M20 170h30M130 178h40M240 174h40" />
+                            </g>
+                        </svg><span class="tag tag--coral">Szigetek</span></div>
+                    <div class="hotel-body"><span class="hotel-stars" aria-label="5 csillagos">★★★★★ <span>· 5 csillagos</span></span>
+                        <h3>Solaris Marina & Yacht Club</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z" />
+                                <circle cx="12" cy="10" r="2.5" />
+                            </svg>Port Royal, karibi part</span>
+                        <p>Kortárs tengerparti menedék a vitorlázás szerelmeseinek, privát szuperjacht-kikötőhelyekkel, naplementés pezsgőbárral és hajóbérléssel.</p>
+                        <ul class="perks">
+                            <li>Privát kikötőhely</li>
+                            <li>Vitorlásbérlés</li>
+                            <li>Naplemente lounge</li>
+                        </ul>
+                        <div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 5 200<small>/ éj</small></span></div>
+                    </div>
+                </article>
+                <article class="card hotel" data-filter-item data-cat="nature family">
+                    <div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Amazonia Floating River Palace">
+                            <rect width="320" height="200" class="f-sky" />
+                            <circle cx="160" cy="65" r="32" class="f-sun" />
+                            <rect y="125" width="320" height="75" class="f-ink" />
+                            <g class="f-leaf2" opacity=".7">
+                                <circle cx="25" cy="115" r="38" />
+                                <circle cx="80" cy="105" r="34" />
+                                <circle cx="240" cy="105" r="34" />
+                                <circle cx="295" cy="115" r="38" />
+                            </g>
+                            <g class="f-leaf">
+                                <circle cx="45" cy="130" r="30" />
+                                <circle cx="275" cy="130" r="30" />
+                            </g>
+                            <path d="M60 160h200l-16 18H76z" class="f-sand" />
+                            <rect x="80" y="136" width="160" height="24" rx="2" class="f-white" />
+                            <rect x="98" y="114" width="124" height="22" rx="2" class="f-sand" />
+                            <polygon points="94,114 160,94 226,114" class="f-coral" />
+                            <g class="f-sun2">
+                                <rect class="twinkle" x="106" y="120" width="7" height="10" rx="1" />
+                                <rect class="twinkle" x="106" y="142" width="7" height="10" rx="1" />
+                                <rect class="twinkle" x="122" y="120" width="7" height="10" rx="1" />
+                                <rect class="twinkle" x="122" y="142" width="7" height="10" rx="1" />
+                                <rect class="twinkle" x="138" y="120" width="7" height="10" rx="1" />
+                                <rect class="twinkle" x="138" y="142" width="7" height="10" rx="1" />
+                                <rect class="twinkle" x="154" y="120" width="7" height="10" rx="1" />
+                                <rect class="twinkle" x="154" y="142" width="7" height="10" rx="1" />
+                                <rect class="twinkle" x="170" y="120" width="7" height="10" rx="1" />
+                                <rect class="twinkle" x="170" y="142" width="7" height="10" rx="1" />
+                                <rect class="twinkle" x="186" y="120" width="7" height="10" rx="1" />
+                                <rect class="twinkle" x="186" y="142" width="7" height="10" rx="1" />
+                                <rect class="twinkle" x="202" y="120" width="7" height="10" rx="1" />
+                                <rect class="twinkle" x="202" y="142" width="7" height="10" rx="1" />
+                            </g>
+                            <g class="bob">
+                                <path d="M245 174c4-7 12-7 16-1-4 2-8 1-12 5-1-2-3-3-4-4z" class="f-coral" />
+                            </g>
+                            <g class="k-gold" stroke-width="1" opacity=".5">
+                                <path d="M100 186h120M120 192h80" />
+                            </g>
+                        </svg><span class="tag tag--gold">Természet</span></div>
+                    <div class="hotel-body"><span class="hotel-stars" aria-label="5 csillagos">★★★★★ <span>· 5 csillagos</span></span>
+                        <h3>Amazonia Floating River Palace</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z" />
+                                <circle cx="12" cy="10" r="2.5" />
+                            </svg>Rio Negro, Amazónia tartomány</span>
+                        <p>Exkluzív butik hotelhajó a Rio Negro tükörsima vizén, szabadtéri vetítőterasszal és napfelkeltés rózsaszín delfin szafarival.</p>
+                        <ul class="perks">
+                            <li>Hajólakosztályok</li>
+                            <li>Delfin szafari</li>
+                            <li>Szabadtéri mozi</li>
+                        </ul>
+                        <div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 3 600<small>/ éj</small></span></div>
+                    </div>
+                </article>
+                <article class="card hotel" data-filter-item data-cat="city family">
+                    <div class="hotel-art"><svg class="ill" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Grand Riviera Palace">
+                            <rect width="320" height="200" class="f-sky" />
+                            <circle cx="255" cy="45" r="20" class="f-sun2" />
+                            <rect y="150" width="320" height="50" class="f-sand" />
+                            <rect x="65" y="85" width="190" height="66" class="f-white" />
+                            <polygon points="125,85 160,58 195,85" class="f-gold" />
+                            <polygon points="125,85 160,58 195,85" class="k-white" stroke-width="2" />
+                            <rect x="61" y="80" width="198" height="6" class="f-gold" />
+                            <g class="f-sand">
+                                <rect x="80" y="92" width="6" height="58" />
+                                <rect x="100" y="92" width="6" height="58" />
+                                <rect x="120" y="92" width="6" height="58" />
+                                <rect x="140" y="92" width="6" height="58" />
+                                <rect x="174" y="92" width="6" height="58" />
+                                <rect x="194" y="92" width="6" height="58" />
+                                <rect x="214" y="92" width="6" height="58" />
+                                <rect x="234" y="92" width="6" height="58" />
+                            </g>
+                            <g class="f-sun2">
+                                <rect class="twinkle" x="88" y="98" width="8" height="12" rx="2" />
+                                <rect class="twinkle" x="88" y="122" width="8" height="12" rx="2" />
+                                <rect class="twinkle" x="108" y="98" width="8" height="12" rx="2" />
+                                <rect class="twinkle" x="108" y="122" width="8" height="12" rx="2" />
+                                <rect class="twinkle" x="128" y="98" width="8" height="12" rx="2" />
+                                <rect class="twinkle" x="128" y="122" width="8" height="12" rx="2" />
+                                <rect class="twinkle" x="182" y="98" width="8" height="12" rx="2" />
+                                <rect class="twinkle" x="182" y="122" width="8" height="12" rx="2" />
+                                <rect class="twinkle" x="202" y="98" width="8" height="12" rx="2" />
+                                <rect class="twinkle" x="202" y="122" width="8" height="12" rx="2" />
+                                <rect class="twinkle" x="222" y="98" width="8" height="12" rx="2" />
+                                <rect class="twinkle" x="222" y="122" width="8" height="12" rx="2" />
+                            </g>
+                            <ellipse cx="160" cy="176" rx="46" ry="12" class="f-sea2" />
+                            <ellipse cx="160" cy="166" rx="26" ry="7" class="f-sea3" />
+                            <path d="M160 166v-18M154 152c3-8 10-8 12 0" class="k-white" stroke-width="2" />
+                            <g transform="translate(30 110) scale(0.8)">
+                                <path d="M0 0 C -2 20, 2 40, 6 60" class="k-ink2" stroke-width="5" stroke-linecap="round" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-165)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-120)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-70)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-25)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(20)" />
+                            </g>
+                            <g transform="translate(290 110) scale(0.8)">
+                                <path d="M0 0 C -2 20, 2 40, 6 60" class="k-ink2" stroke-width="5" stroke-linecap="round" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-165)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-120)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-70)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(-25)" />
+                                <path d="M0 0 C 12 -12, 30 -10, 38 2 C 26 -4, 14 -4, 0 0z" class="f-leaf" transform="rotate(20)" />
+                            </g>
+                        </svg><span class="tag">Város</span></div>
+                    <div class="hotel-body"><span class="hotel-stars" aria-label="5 csillagos">★★★★★ <span>· 5 csillagos</span></span>
+                        <h3>Grand Riviera Palace</h3><span class="hotel-loc"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z" />
+                                <circle cx="12" cy="10" r="2.5" />
+                            </svg>Királyi vízpart, Nova Aurelia</span>
+                        <p>Méltóságteljes neoklasszikus palota 15 hektáros királyi kertben, kivilágított vízesés-kutakkal, privát stranddal és ifjúsági klubbal.</p>
+                        <ul class="perks">
+                            <li>Királyi kertek</li>
+                            <li>Díszkutak</li>
+                            <li>Privát strand</li>
+                        </ul>
+                        <div class="hotel-foot"><span class="hotel-from">Ártól</span><span class="hotel-price">₩ 5 800<small>/ éj</small></span></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section id="tips">
+            <h2 class="section-title">Illem és gyakorlati tanácsok</h2>
+            <div class="card-grid">
+                <article class="card"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 8l4 4 5-7 5 7 4-4-2 11H5z" />
+                        </svg></span>
+                    <h3>Paloták és állami helyszínek</h3>
+                    <p>A Hercegi Palotában, a Királyi Operában és az állami fogadásokon elegáns öltözet az elvárás: fedett váll, strandruha nélkül.</p>
+                </article>
+                <article class="card"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M4 8h3l2-3h6l2 3h3v11H4z" />
+                            <circle cx="12" cy="13" r="3.5" />
+                        </svg></span>
+                    <h3>Fényképezés</h3>
+                    <p>A kormányzati negyed, a katonai létesítmények és az űrközpont környékén korlátozott a drónhasználat és a fényképezés.</p>
+                </article>
+                <article class="card"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M2 12c3-5 9-6 14-3l5-3v12l-5-3c-5 3-11 2-14-3z" />
+                            <circle cx="7" cy="11" r=".8" />
+                        </svg></span>
+                    <h3>Óvja a Kék Övet</h3>
+                    <p> A tengeri rezervátumokban kötelező a zátonybarát naptej; a korallok érintése és a halak etetése tilos.</p>
+                </article>
+                <article class="card"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z" />
+                            <path d="M9 12l2 2 4-4" />
+                        </svg></span>
+                    <h3>Biztonság</h3>
+                    <p>Waikiki a világ egyik legbiztonságosabb úti célja. A segélyhívó szolgálatok a Waikiki One alkalmazáson keresztül minden nyelven elérhetők.</p>
+                </article>
+                <article class="card"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="9" />
+                            <path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v2M12 16v2" />
+                        </svg></span>
+                    <h3>Borravaló</h3>
+                    <p>A szervizdíjat a szállodai és éttermi számlák tartalmazzák; kiemelkedő kiszolgálásért a kerekítés illő gesztus.</p>
+                </article>
+                <article class="card"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0zM12 18v4" />
+                        </svg></span>
+                    <h3>Áram és internet</h3>
+                    <p>Az ország minden közterületén ingyenes, nagy sebességű wifi érhető el, népszavazás által garantált jogként. A konnektorok amerikai szabványúak.</p>
+                </article>
+            </div>
+        </section>
+        <!-- @chrome:next -->
+        <section class="next-chapter"><a class="next-card" href="faq.html">
+                <div class="next-media"><img src="../images/UniversalUpscaler_93281a3c-f408-4f55-b29b-e8a6b87ab85d.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Folytassa az utazást · Látogatás</span><span class="next-title">GYIK</span><span class="next-arrow" aria-hidden="true">→</span></span>
+            </a></section><!-- /@chrome:next -->
     </main>
     <!-- @chrome:footer -->
     <footer class="site-footer">
-        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z"/></svg>
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand">
@@ -131,7 +1360,57 @@
                     <p class="footer-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
                     <p class="footer-about">Waikiki Szuverén Állam hivatalos portálja. Alapítva 1999. március 10-én · Nova Aurelia. Ez az oldal mesterséges intelligenciával készült, bármilyen hasonlóság valós személyekhez, országokhoz vagy intézményekhez pusztán a véletlen műve.</p>
                 </div>
-                <div class="footer-col"><h2>Nemzet</h2><ul><li><a href="index.html">Főoldal</a></li><li><a href="overview.html">Áttekintés</a></li><li><a href="history.html">Történelem</a></li><li><a href="society.html">Társadalom</a></li><li><a href="culture.html">Kultúra</a></li><li><a href="ideology.html">Ideológia</a></li></ul></div><div class="footer-col"><h2>Kormányzás</h2><ul><li><a href="government.html">Kormány</a></li><li><a href="leadership.html">Vezetés</a></li><li><a href="parties.html">Politika</a></li><li><a href="constitution.html">Alkotmány</a></li><li><a href="citizenship.html">Állampolgárság</a></li><li><a href="military.html">Hadsereg</a></li><li><a href="diplomacy.html">Diplomácia</a></li></ul></div><div class="footer-col"><h2>Jólét</h2><ul><li><a href="economy.html">Gazdaság</a></li><li><a href="wealth-fund.html">Vagyonalap</a></li><li><a href="infrastructure.html">Infrastruktúra</a></li><li><a href="plane.html">Diplomáciai Flotta</a></li></ul></div><div class="footer-col"><h2>Királyi Család</h2><ul><li><a href="dynasty.html">A Dinasztia</a></li><li><a href="chease-and-jessica.html">Chease és Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li><li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li></ul></div><div class="footer-col"><h2>Látogatás</h2><ul><li><a href="tourism.html">Turizmus</a></li><li><a href="sights.html">Látnivalók</a></li><li><a href="travel-guide.html">Utazási Kalauz</a></li><li><a href="faq.html">GYIK</a></li></ul></div>
+                <div class="footer-col">
+                    <h2>Nemzet</h2>
+                    <ul>
+                        <li><a href="index.html">Főoldal</a></li>
+                        <li><a href="overview.html">Áttekintés</a></li>
+                        <li><a href="history.html">Történelem</a></li>
+                        <li><a href="society.html">Társadalom</a></li>
+                        <li><a href="culture.html">Kultúra</a></li>
+                        <li><a href="ideology.html">Ideológia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Kormányzás</h2>
+                    <ul>
+                        <li><a href="government.html">Kormány</a></li>
+                        <li><a href="leadership.html">Vezetés</a></li>
+                        <li><a href="parties.html">Politika</a></li>
+                        <li><a href="constitution.html">Alkotmány</a></li>
+                        <li><a href="citizenship.html">Állampolgárság</a></li>
+                        <li><a href="military.html">Hadsereg</a></li>
+                        <li><a href="diplomacy.html">Diplomácia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Jólét</h2>
+                    <ul>
+                        <li><a href="economy.html">Gazdaság</a></li>
+                        <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                        <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                        <li><a href="plane.html">Diplomáciai Flotta</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Királyi Család</h2>
+                    <ul>
+                        <li><a href="dynasty.html">A Dinasztia</a></li>
+                        <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Látogatás</h2>
+                    <ul>
+                        <li><a href="tourism.html">Turizmus</a></li>
+                        <li><a href="sights.html">Látnivalók</a></li>
+                        <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                        <li><a href="faq.html">GYIK</a></li>
+                    </ul>
+                </div>
             </div>
             <span class="footer-mega" aria-hidden="true">Waikiki</span>
             <div class="footer-bottom">
@@ -140,9 +1419,12 @@
             </div>
         </div>
     </footer>
-    <button class="to-top" type="button" aria-label="Vissza a tetejére"><svg viewBox="0 0 54 54" aria-hidden="true"><circle class="ring-bg" cx="27" cy="27" r="24"/><circle class="ring" cx="27" cy="27" r="24"/></svg><span aria-hidden="true">↑</span></button>
+    <button class="to-top" type="button" aria-label="Vissza a tetejére"><svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span></button>
     <!-- /@chrome:footer -->
-  <script src="../js/common.js"></script>
-  <script src="../js/feature-pages.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/feature-pages.js"></script>
 </body>
 </html>

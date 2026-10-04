@@ -11,7 +11,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />
-    <script>(function(d){var h=d.documentElement;h.classList.add('js');try{if(localStorage.getItem('isDarkMode')==='true')h.classList.add('body-dark');if(localStorage.getItem('isAnimationDisabled')==='true')h.classList.add('no-reveal')}catch(e){}setTimeout(function(){if(!h.classList.contains('reveal-ready'))h.classList.remove('js')},3500)})(document);</script>
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
     <!-- /@chrome:head -->
     <title>Raimondo és Selena kapcsolata</title>
     <link rel="icon" href="../icons/favicon.ico" />
@@ -30,8 +42,20 @@
         <a href="index.html" class="brand" aria-label="Waikiki főoldal"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" decoding="async" /><span class="brand-word">Waikiki</span></a>
         <nav class="primary-nav" aria-label="Fő navigáció"><a href="tourism.html">Utazás</a><a href="society.html">Társadalom</a><a href="economy.html">Gazdaság</a><a href="government.html">Kormány</a><a href="history.html">Történelem</a><a href="dynasty.html" aria-current="page">Királyi Család</a></nav>
         <div class="header-actions">
-            <a class="lang-pill" href="../en/raimondo-and-selena-private.html" hreflang="en" lang="en" title="English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>EN</span></a>
-            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Éjszakai mód váltása"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><mask id="theme-mask"><rect width="24" height="24" fill="#fff"/><circle class="theme-cut" cx="26" cy="2" r="6" fill="#000"/></mask><circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)"/><g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5"/></g></svg></button>
+            <a class="lang-pill" href="../en/raimondo-and-selena-private.html" hreflang="en" lang="en" title="English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg><span>EN</span></a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Éjszakai mód váltása"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg></button>
             <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="menu-lines" aria-hidden="true"></span><span class="menu-label-open">Menü</span><span class="menu-label-close">Bezárás</span><span class="visually-hidden">Menü</span></button>
         </div>
     </header>
@@ -49,157 +73,226 @@
                 <p class="menu-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
                 <div class="menu-aside-row"><a class="menu-chip" href="../en/raimondo-and-selena-private.html" hreflang="en" lang="en">English</a><a class="menu-chip is-active" href="../hu/raimondo-and-selena-private.html" hreflang="hu" lang="hu">Magyar</a><button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Éjszakai mód</button><button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animáció</button></div>
             </aside>
-            <div class="menu-group"><h2>Nemzet</h2><ul><li><a href="index.html">Főoldal</a></li><li><a href="overview.html">Áttekintés</a></li><li><a href="history.html">Történelem</a></li><li><a href="society.html">Társadalom</a></li><li><a href="culture.html">Kultúra</a></li><li><a href="ideology.html">Ideológia</a></li></ul></div><div class="menu-group"><h2>Kormányzás</h2><ul><li><a href="government.html">Kormány</a></li><li><a href="leadership.html">Vezetés</a></li><li><a href="parties.html">Politika</a></li><li><a href="constitution.html">Alkotmány</a></li><li><a href="citizenship.html">Állampolgárság</a></li><li><a href="military.html">Hadsereg</a></li><li><a href="diplomacy.html">Diplomácia</a></li></ul></div><div class="menu-group"><h2>Jólét</h2><ul><li><a href="economy.html">Gazdaság</a></li><li><a href="wealth-fund.html">Vagyonalap</a></li><li><a href="infrastructure.html">Infrastruktúra</a></li><li><a href="plane.html">Diplomáciai Flotta</a></li></ul></div><div class="menu-group"><h2>Királyi Család</h2><ul><li><a href="dynasty.html">A Dinasztia</a></li><li><a href="chease-and-jessica.html">Chease és Jessica</a></li><li><a href="raimondo-and-selena.html" aria-current="page">Raimondo és Selena</a></li><li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li></ul></div><div class="menu-group"><h2>Látogatás</h2><ul><li><a href="tourism.html">Turizmus</a></li><li><a href="sights.html">Látnivalók</a></li><li><a href="travel-guide.html">Utazási Kalauz</a></li><li><a href="faq.html">GYIK</a></li></ul></div>
+            <div class="menu-group">
+                <h2>Nemzet</h2>
+                <ul>
+                    <li><a href="index.html">Főoldal</a></li>
+                    <li><a href="overview.html">Áttekintés</a></li>
+                    <li><a href="history.html">Történelem</a></li>
+                    <li><a href="society.html">Társadalom</a></li>
+                    <li><a href="culture.html">Kultúra</a></li>
+                    <li><a href="ideology.html">Ideológia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Kormányzás</h2>
+                <ul>
+                    <li><a href="government.html">Kormány</a></li>
+                    <li><a href="leadership.html">Vezetés</a></li>
+                    <li><a href="parties.html">Politika</a></li>
+                    <li><a href="constitution.html">Alkotmány</a></li>
+                    <li><a href="citizenship.html">Állampolgárság</a></li>
+                    <li><a href="military.html">Hadsereg</a></li>
+                    <li><a href="diplomacy.html">Diplomácia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Jólét</h2>
+                <ul>
+                    <li><a href="economy.html">Gazdaság</a></li>
+                    <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                    <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                    <li><a href="plane.html">Diplomáciai Flotta</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Királyi Család</h2>
+                <ul>
+                    <li><a href="dynasty.html">A Dinasztia</a></li>
+                    <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html" aria-current="page">Raimondo és Selena</a></li>
+                    <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Látogatás</h2>
+                <ul>
+                    <li><a href="tourism.html">Turizmus</a></li>
+                    <li><a href="sights.html">Látnivalók</a></li>
+                    <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                    <li><a href="faq.html">GYIK</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- /@chrome:header -->
     <main id="main">
-    
-    <section class="hero" data-hero><div class="hero-media"><img src="../images/UniversalUpscaler_ce5d5ecb-d523-4d17-8220-01805124e992-U.jpg" alt="Raimondo és Selena A Királyság Szívében Élő Szerelem" fetchpriority="high" decoding="async" /></div><div class="hero-veil"></div><div class="hero-content"><span class="hero-eyebrow">Királyi Intimitás</span><h1 class="hero-title"><em>Raimondo és Selena</em><br>A Királyság Szívében Élő Szerelem</h1><p class="hero-lead">A hercegi pár meghitt kapcsolatának bemutatása, ahol az odaadás, a szerelem és a kölcsönös támogatás találkozik a mindennapi életben. Egy olyan kötelék, amely túlmutat a protokollon, és amelyben két ember őszinte elkötelezettsége nemcsak egymás boldogságát, hanem egy egész nemzet jövőjét is aktívan formálja.</p></div><button class="hero-scroll" type="button">Görgetés</button></section>
-    <!-- @chrome:subnav --><nav class="subnav" aria-label="A királyi pár oldalai"><ul class="subnav-list"><li><a href="raimondo-and-selena.html">Áttekintés</a></li><li><a href="raimondo-and-selena-detailed.html">Történet</a></li><li><a href="raimondo-and-selena-gallery.html">Galéria</a></li><li><a href="raimondo-and-selena-private.html" aria-current="page">Magánélet</a></li></ul></nav><!-- /@chrome:subnav -->
-    <!-- Private -->
-    <section class="private-section">
-        <div class="private-container">
-            <div class="private-intro">
-                <h2>Egy Példaértékű Partnerség</h2>
-                <p>Raimondo Chease és Selena Gomez szerelme egy olyan példaértékű kapcsolatot testesít meg, amelyben a kölcsönös odaadás révén egy kiegyensúlyozott, támogató és harmonikus partnerség valósul meg. Ez a kapcsolat nem csupán személyes kötődés, hanem a királyság stabilitásának és prosperitásának szimbóluma is, ahol mindketten mindent megtesznek annak érdekében, hogy párjuk támogatottnak, boldognak és kiegyensúlyozottnak érezze magát a mindennapi életében.</p>
-            </div>
-            <div class="content-grid">
-                <div class="content-block">
-                    <h3>Érzelmi Támogatás és Mindennapi Harmónia</h3>
-                    <p>Selena hercegnő Raimondo herceg mellett kifinomult érzelmi támaszt nyújt, ami a királyság vezetésének kihívásai közepette kulcsfontosságú. Reggelente finom gesztusokkal kezdi a napot, miközben halkan beszélgetnek a napi tervekről. Selena figyelmesen hallgatja Raimondo gondolatait a diplomáciai ügyekről vagy gazdasági döntésekről, és intelligens javaslataival hozzájárul ezekhez, például UNICEF-projektek vagy nemzetközi találkozók kapcsán. Ez nem csupán tanácsadás, hanem egyfajta érzelmi menedék is egyben. Selena mindig jelen van, hogy enyhítse a feszültséget, legyen szó egy hosszú nap utáni beszélgetésről vagy egy közös sétáról a palota kertjében. A hercegnő odaadása kiterjed a családi körre is, ahol aktívan részt vesz a Chease dinasztia ünnepein, például karácsonyi vagy függetlenség napi eseményeken, biztosítva, hogy Raimondo érezze a családi egységet és támogatást.</p>
+        <section class="hero" data-hero>
+            <div class="hero-media"><img src="../images/UniversalUpscaler_ce5d5ecb-d523-4d17-8220-01805124e992-U.jpg" alt="Raimondo és Selena A Királyság Szívében Élő Szerelem" fetchpriority="high" decoding="async" /></div>
+            <div class="hero-veil"></div>
+            <div class="hero-content"><span class="hero-eyebrow">Királyi Intimitás</span>
+                <h1 class="hero-title"><em>Raimondo és Selena</em><br>A Királyság Szívében Élő Szerelem</h1>
+                <p class="hero-lead">A hercegi pár meghitt kapcsolatának bemutatása, ahol az odaadás, a szerelem és a kölcsönös támogatás találkozik a mindennapi életben. Egy olyan kötelék, amely túlmutat a protokollon, és amelyben két ember őszinte elkötelezettsége nemcsak egymás boldogságát, hanem egy egész nemzet jövőjét is aktívan formálja.</p>
+            </div><button class="hero-scroll" type="button">Görgetés</button>
+        </section>
+        <!-- @chrome:subnav -->
+        <nav class="subnav" aria-label="A királyi pár oldalai">
+            <ul class="subnav-list">
+                <li><a href="raimondo-and-selena.html">Áttekintés</a></li>
+                <li><a href="raimondo-and-selena-detailed.html">Történet</a></li>
+                <li><a href="raimondo-and-selena-gallery.html">Galéria</a></li>
+                <li><a href="raimondo-and-selena-private.html" aria-current="page">Magánélet</a></li>
+            </ul>
+        </nav><!-- /@chrome:subnav -->
+        <!-- Private -->
+        <section class="private-section">
+            <div class="private-container">
+                <div class="private-intro">
+                    <h2>Egy Példaértékű Partnerség</h2>
+                    <p>Raimondo Chease és Selena Gomez szerelme egy olyan példaértékű kapcsolatot testesít meg, amelyben a kölcsönös odaadás révén egy kiegyensúlyozott, támogató és harmonikus partnerség valósul meg. Ez a kapcsolat nem csupán személyes kötődés, hanem a királyság stabilitásának és prosperitásának szimbóluma is, ahol mindketten mindent megtesznek annak érdekében, hogy párjuk támogatottnak, boldognak és kiegyensúlyozottnak érezze magát a mindennapi életében.</p>
                 </div>
-                <div class="content-block">
-                    <h3>Közös Élmények és Kulturális Gazdagodás</h3>
-                    <p>Selena mindent megtesz annak érdekében, hogy Raimondo élete gazdag és változatos legyen, így közös utazásokkal és kulturális programokkal tölti ki a szabadidejüket. A diplomáciai utazások során Selena megszervezi, hogy együtt élvezzék a helyi kultúrát, legyen szó egy privát tea ceremóniáról, történelmi emlékművek meglátogatásáról, egy túráról a nemzeti parkban vagy egy sétáról a cseresznyevirágok alatt. Ezeken az alkalmakon míg Raimondo a tárgyalásokra készül, Selena gondoskodik a részletekről. Kiválasztja a helyszíneket, gondoskodik a diszkrécióról, és biztosítja, hogy Raimondo ellazuljon és kikapcsolódjon. A közös élmények nem csupán szórakozást nyújtanak, hanem erősítik a kötődésüket is, hiszen Selena mindig figyeli partnere hangulatát, és alkalmazkodik hozzá, például egy fáradt nap után egy csendes vacsorával vagy egy közös olvasással zárják az estét.</p>
+                <div class="content-grid">
+                    <div class="content-block">
+                        <h3>Érzelmi Támogatás és Mindennapi Harmónia</h3>
+                        <p>Selena hercegnő Raimondo herceg mellett kifinomult érzelmi támaszt nyújt, ami a királyság vezetésének kihívásai közepette kulcsfontosságú. Reggelente finom gesztusokkal kezdi a napot, miközben halkan beszélgetnek a napi tervekről. Selena figyelmesen hallgatja Raimondo gondolatait a diplomáciai ügyekről vagy gazdasági döntésekről, és intelligens javaslataival hozzájárul ezekhez, például UNICEF-projektek vagy nemzetközi találkozók kapcsán. Ez nem csupán tanácsadás, hanem egyfajta érzelmi menedék is egyben. Selena mindig jelen van, hogy enyhítse a feszültséget, legyen szó egy hosszú nap utáni beszélgetésről vagy egy közös sétáról a palota kertjében. A hercegnő odaadása kiterjed a családi körre is, ahol aktívan részt vesz a Chease dinasztia ünnepein, például karácsonyi vagy függetlenség napi eseményeken, biztosítva, hogy Raimondo érezze a családi egységet és támogatást.</p>
+                    </div>
+                    <div class="content-block">
+                        <h3>Közös Élmények és Kulturális Gazdagodás</h3>
+                        <p>Selena mindent megtesz annak érdekében, hogy Raimondo élete gazdag és változatos legyen, így közös utazásokkal és kulturális programokkal tölti ki a szabadidejüket. A diplomáciai utazások során Selena megszervezi, hogy együtt élvezzék a helyi kultúrát, legyen szó egy privát tea ceremóniáról, történelmi emlékművek meglátogatásáról, egy túráról a nemzeti parkban vagy egy sétáról a cseresznyevirágok alatt. Ezeken az alkalmakon míg Raimondo a tárgyalásokra készül, Selena gondoskodik a részletekről. Kiválasztja a helyszíneket, gondoskodik a diszkrécióról, és biztosítja, hogy Raimondo ellazuljon és kikapcsolódjon. A közös élmények nem csupán szórakozást nyújtanak, hanem erősítik a kötődésüket is, hiszen Selena mindig figyeli partnere hangulatát, és alkalmazkodik hozzá, például egy fáradt nap után egy csendes vacsorával vagy egy közös olvasással zárják az estét.</p>
+                    </div>
+                    <div class="content-block">
+                        <h3>Intim Közelség és Gondoskodás</h3>
+                        <p>Kapcsolatuk intim oldala a kölcsönös tisztelet és vonzalom kifejeződése, ahol Selena mindent megtesz Raimondo kényelméért és elégedettségéért. Ez magában foglalja a gyengéd érintéseket, hosszú öleléseket és meghitt pillanatokat, amelyek a nap feszültségei után nyugalmat hoznak. Selena figyelmesen érzékeli Raimondo igényeit, legyen szó egy érzéki vállmasszázsról vagy egy csendes estéről, ahol csak kettejükre koncentrál. Ezek a pillanatok nem csupán testi, hanem érzelmi szinten is gazdagítják a kapcsolatot, hiszen Selena mindig kifejezi szeretetét és háláját, például halk suttogással vagy egy mosollyal, ami emlékezteti Raimondót arra, hogy mellette van valaki, aki teljes szívéből támogatja. Ez a gondoskodás hozzájárul ahhoz, hogy Raimondo herceg kiegyensúlyozott maradjon, és ő is mindent megtegyen barátnője boldogságáért.</p>
+                    </div>
                 </div>
-                <div class="content-block">
-                    <h3>Intim Közelség és Gondoskodás</h3>
-                    <p>Kapcsolatuk intim oldala a kölcsönös tisztelet és vonzalom kifejeződése, ahol Selena mindent megtesz Raimondo kényelméért és elégedettségéért. Ez magában foglalja a gyengéd érintéseket, hosszú öleléseket és meghitt pillanatokat, amelyek a nap feszültségei után nyugalmat hoznak. Selena figyelmesen érzékeli Raimondo igényeit, legyen szó egy érzéki vállmasszázsról vagy egy csendes estéről, ahol csak kettejükre koncentrál. Ezek a pillanatok nem csupán testi, hanem érzelmi szinten is gazdagítják a kapcsolatot, hiszen Selena mindig kifejezi szeretetét és háláját, például halk suttogással vagy egy mosollyal, ami emlékezteti Raimondót arra, hogy mellette van valaki, aki teljes szívéből támogatja. Ez a gondoskodás hozzájárul ahhoz, hogy Raimondo herceg kiegyensúlyozott maradjon, és ő is mindent megtegyen barátnője boldogságáért.</p>
-                </div>
-            </div>
-            <div class="image-gallery">
-                <div class="gallery-item">
-                    <img src="../images/UniversalUpscaler_c0fa3034-3884-4262-a153-d2df7e9d6f5c-U.jpg">
-                    <div class="gallery-overlay">
-                        <h4>Harmonikus Egység</h4>
-                        <p>A kölcsönös bizalom és szerelem kifejeződése</p>
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <img src="../images/UniversalUpscaler_c0fa3034-3884-4262-a153-d2df7e9d6f5c-U.jpg">
+                        <div class="gallery-overlay">
+                            <h4>Harmonikus Egység</h4>
+                            <p>A kölcsönös bizalom és szerelem kifejeződése</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Intimate -->
-    <section class="intimate-section">
-        <div class="private-container">
-            <div class="private-intro">
-                <h2>Kapcsolatuk Mélyebb Dimenziói</h2>
-                <p>Raimondo és Selena kapcsolata egy mély, kölcsönös vonzalomra épülő kötelék, ahol Selena odaadó barátnői élménye a szeretet legteljesebb kifejeződése, amely áthatja mindennapjaikat. Selena számára Raimondo boldogsága és elégedettsége a legfontosabb. Minden gesztusában ez tükröződik, miközben egyenrangú társ marad, aki önként és örömmel adja át magát ennek a dinamikának. A pár kapcsolata túlmutat a hagyományos partnerségen, ahol az intellektuális párbeszéd és az érzelmi biztonság harmonikus egységet alkot, amely nemcsak személyes boldogságot teremt, hanem az egész nemzet számára példaértékű modellt nyújt a modern királyi kapcsolatokról.</p>
-            </div>
-            <div class="content-grid">
-                <div class="content-block">
-                    <h3>A Harmonikus Egység Dinamikája</h3>
-                    <p>A közös pillanatokban Selena mindent megtesz azért, hogy Raimondo érezze a gondoskodást, legyen az egy privát jachtos kirándulás az óceánon vagy egy esti séta a palota trópusi kertjében, kéz a kézben, ahol a csillagok alatt beszélgetnek álmaikról és emlékeikről. Selena Gomez azonban nem csupán a diktátor partnere, hanem Waikiki politikai életének és diplomáciájának egyik meghatározó alakja is. Szenátorként és a Waikiki Economics University diplomásaként aktívan formálja a nemzetközi diskurzust, saját diplomáciai agendát vezet, humanitárius missziókat irányít, és az ENSZ közgyűlésében is hallatja szavát. Ez az önállóság teszi lehetővé, hogy Selena Raimondo számára ne egy passzív kísérő, hanem egy egyenrangú intellektuális partner lehessen, így a pár kapcsolatában a személyes szabadság és a totális odaadás egymást erősítő folyamatokként jelennek meg.</p>
+        </section>
+        <!-- Intimate -->
+        <section class="intimate-section">
+            <div class="private-container">
+                <div class="private-intro">
+                    <h2>Kapcsolatuk Mélyebb Dimenziói</h2>
+                    <p>Raimondo és Selena kapcsolata egy mély, kölcsönös vonzalomra épülő kötelék, ahol Selena odaadó barátnői élménye a szeretet legteljesebb kifejeződése, amely áthatja mindennapjaikat. Selena számára Raimondo boldogsága és elégedettsége a legfontosabb. Minden gesztusában ez tükröződik, miközben egyenrangú társ marad, aki önként és örömmel adja át magát ennek a dinamikának. A pár kapcsolata túlmutat a hagyományos partnerségen, ahol az intellektuális párbeszéd és az érzelmi biztonság harmonikus egységet alkot, amely nemcsak személyes boldogságot teremt, hanem az egész nemzet számára példaértékű modellt nyújt a modern királyi kapcsolatokról.</p>
                 </div>
-                <div class="content-block">
-                    <h3>Az Érzelmi Jelenlét Rítusai</h3>
-                    <p>A palota falai között a kapcsolat egy sokkal közvetlenebb, ösztönösebb formát ölt. Selena Gomez a legfeszültebb kormányzati órákban is képes megtörni a protokollt egy váratlan öleléssel vagy egy olyan gesztussal, amely emlékezteti a vezetőt emberi mivoltára. A napok nem előírt forgatókönyv szerint, hanem az egymásra hangolódás jegyében indulnak. Az intimitásukban Selena odaadása a legmélyebb. Selena lassú, érzéki pillanatokban simul hozzá, hagyja, hogy Raimondo vezesse, miközben ő mindent megtesz azért, hogy a férfi minden vágya teljesüljön. Élvezi az átadást, a bizalmat, a kölcsönös felfedezést, legyen az egy hosszú ölelkezés, ahol testük órákig összeér, vagy egy szenvedélyesebb együttlét, ahol Selena teljes figyelmével és odaadásával Raimondo örömére koncentrál.</p>
+                <div class="content-grid">
+                    <div class="content-block">
+                        <h3>A Harmonikus Egység Dinamikája</h3>
+                        <p>A közös pillanatokban Selena mindent megtesz azért, hogy Raimondo érezze a gondoskodást, legyen az egy privát jachtos kirándulás az óceánon vagy egy esti séta a palota trópusi kertjében, kéz a kézben, ahol a csillagok alatt beszélgetnek álmaikról és emlékeikről. Selena Gomez azonban nem csupán a diktátor partnere, hanem Waikiki politikai életének és diplomáciájának egyik meghatározó alakja is. Szenátorként és a Waikiki Economics University diplomásaként aktívan formálja a nemzetközi diskurzust, saját diplomáciai agendát vezet, humanitárius missziókat irányít, és az ENSZ közgyűlésében is hallatja szavát. Ez az önállóság teszi lehetővé, hogy Selena Raimondo számára ne egy passzív kísérő, hanem egy egyenrangú intellektuális partner lehessen, így a pár kapcsolatában a személyes szabadság és a totális odaadás egymást erősítő folyamatokként jelennek meg.</p>
+                    </div>
+                    <div class="content-block">
+                        <h3>Az Érzelmi Jelenlét Rítusai</h3>
+                        <p>A palota falai között a kapcsolat egy sokkal közvetlenebb, ösztönösebb formát ölt. Selena Gomez a legfeszültebb kormányzati órákban is képes megtörni a protokollt egy váratlan öleléssel vagy egy olyan gesztussal, amely emlékezteti a vezetőt emberi mivoltára. A napok nem előírt forgatókönyv szerint, hanem az egymásra hangolódás jegyében indulnak. Az intimitásukban Selena odaadása a legmélyebb. Selena lassú, érzéki pillanatokban simul hozzá, hagyja, hogy Raimondo vezesse, miközben ő mindent megtesz azért, hogy a férfi minden vágya teljesüljön. Élvezi az átadást, a bizalmat, a kölcsönös felfedezést, legyen az egy hosszú ölelkezés, ahol testük órákig összeér, vagy egy szenvedélyesebb együttlét, ahol Selena teljes figyelmével és odaadásával Raimondo örömére koncentrál.</p>
+                    </div>
+                    <div class="content-block">
+                        <h3>A Szenvedély és Bizalom Teljessége</h3>
+                        <p>Időnként a gyengédség kalandosabb, intenzívebb rétegekkel mélyül, ahol Selena készségesen engedi, hogy Raimondo átvegye a teljes irányítást. A lányt ezekben a pillanatokban is az odaadás vezérli, mert tudja, hogy Raimondo figyelmessége és védelmező szeretete mindig visszatér, hogy átölelje és dédelgesse utána. A liget rejtett zugai, a palota szobái vagy egy távoli utazás intim pillanatai mind ezt a harmóniát erősítik. Selena átadja magát Raimondónak, majd újra egyenlő társakként simulnak össze. Ez az odaadó barátnői élmény nem egyoldalú, Raimondo teljes mértékben viszonozza a figyelmet, a védelmet, a luxust és a szeretetet, így Selena is értékesnek, kívánatosnak és imádottnak érezheti magát. A kapcsolatuk így válik teljessé, egy olyan kötelékké, ahol Selena minden nap újra és újra bizonyítja, hogy Raimondo boldogsága a sajátja, miközben ő maga is teljes mértékben kiteljesedik a szerelemben.</p>
+                    </div>
                 </div>
-                <div class="content-block">
-                    <h3>A Szenvedély és Bizalom Teljessége</h3>
-                    <p>Időnként a gyengédség kalandosabb, intenzívebb rétegekkel mélyül, ahol Selena készségesen engedi, hogy Raimondo átvegye a teljes irányítást. A lányt ezekben a pillanatokban is az odaadás vezérli, mert tudja, hogy Raimondo figyelmessége és védelmező szeretete mindig visszatér, hogy átölelje és dédelgesse utána. A liget rejtett zugai, a palota szobái vagy egy távoli utazás intim pillanatai mind ezt a harmóniát erősítik. Selena átadja magát Raimondónak, majd újra egyenlő társakként simulnak össze. Ez az odaadó barátnői élmény nem egyoldalú, Raimondo teljes mértékben viszonozza a figyelmet, a védelmet, a luxust és a szeretetet, így Selena is értékesnek, kívánatosnak és imádottnak érezheti magát. A kapcsolatuk így válik teljessé, egy olyan kötelékké, ahol Selena minden nap újra és újra bizonyítja, hogy Raimondo boldogsága a sajátja, miközben ő maga is teljes mértékben kiteljesedik a szerelemben.</p>
-                </div>
-            </div>
-            <div class="image-gallery">
-                <div class="gallery-item">
-                    <img src="../images/UniversalUpscaler_7b5fdaea-8b6d-47c6-9cd4-da791c36e472-U.jpg">
-                    <div class="gallery-overlay">
-                        <h4>Kettejük Világa</h4>
-                        <p>Ahol a szeretet és az odaadás találkozik</p>
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <img src="../images/UniversalUpscaler_7b5fdaea-8b6d-47c6-9cd4-da791c36e472-U.jpg">
+                        <div class="gallery-overlay">
+                            <h4>Kettejük Világa</h4>
+                            <p>Ahol a szeretet és az odaadás találkozik</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Adventures -->
-    <section class="adventure-section">
-        <div class="private-container">
-            <div class="private-intro">
-                <h2>Közös Kalandok és Utazások</h2>
-                <p>A hercegi pár kapcsolatát a hivatalos kötelezettségek mellett számtalan közös kaland és utazás teszi különlegessé. A diplomáciai küldetésektől kezdve az egzotikus vakációkon át az űrutazásig együtt fedezik fel a világot, miközben kölcsönösen gazdagítják egymás életét új élményekkel és perspektívákkal. Kapcsolatuk erejét éppen ez a közös felfedezési vágy adja, amely során új helyeket és kultúrákat ismernek meg. Legyen szó egy ókori templom csendjéről, a világűr végtelen tágasságáról vagy egy trópusi sziget romantikájáról, Raimondo és Selena mindig egymásban találják meg a legjobb útitársat, akivel minden kaland felejthetetlenné válik.</p>
-            </div>
-            <div class="content-grid">
-                <div class="content-block">
-                    <h3>Diplomáciai Küldetések és Kulturális Felfedezések</h3>
-                    <p>A hercegi pár első közös diplomáciai próbatétele a 2017-es moszkvai küldetés volt, ahol Vlagyimir Putyin elnökkel tárgyaltak a szíriai konfliktusról. Raimondo és Selena együtt álltak helyt a nemzetközi diplomácia legmagasabb szintjén, és az élmény örökre összekovácsolta őket. Későbbi útjaik során Izraelben meglátogatták Jeruzsálem óvárosát, a Siratófalat és a Szent Sír-templomot, Indiában pedig iskolákat építettek és jótékonysági munkában vettek részt. Közös szenvedélyük az ókori civilizációk felfedezése is. Egyiptomban együtt mászták meg a Gízai Nagy Piramis belső kamráit, a Királyok Völgyében zárt szarkofágokat tekintettek meg, majd privát tevekaraván hátán vágtak neki a sivatagnak. Peruban Machu Picchu romjait csodálták meg a felkelő nap fényében, Kambodzsában pedig az Angkor Wat ősi temploma előtt együtt meditáltak.</p>
+        </section>
+        <!-- Adventures -->
+        <section class="adventure-section">
+            <div class="private-container">
+                <div class="private-intro">
+                    <h2>Közös Kalandok és Utazások</h2>
+                    <p>A hercegi pár kapcsolatát a hivatalos kötelezettségek mellett számtalan közös kaland és utazás teszi különlegessé. A diplomáciai küldetésektől kezdve az egzotikus vakációkon át az űrutazásig együtt fedezik fel a világot, miközben kölcsönösen gazdagítják egymás életét új élményekkel és perspektívákkal. Kapcsolatuk erejét éppen ez a közös felfedezési vágy adja, amely során új helyeket és kultúrákat ismernek meg. Legyen szó egy ókori templom csendjéről, a világűr végtelen tágasságáról vagy egy trópusi sziget romantikájáról, Raimondo és Selena mindig egymásban találják meg a legjobb útitársat, akivel minden kaland felejthetetlenné válik.</p>
                 </div>
-                <div class="content-block">
-                    <h3>Űrutazás és Romantikus Kalandok</h3>
-                    <p>Kapcsolatuk egyik legkülönlegesebb fejezete a 2018-as közös űrutazás volt. A kéthetes küldetés előtt hosszú kiképzésen vettek részt, megtanulták az űrruhák használatát és az űrállomás biztonsági előírásait. Waikiki űrállomásának fedélzetén töltött két hét alatt űrsétákon vettek részt és hosszasan csodálták a Föld páratlan panorámáját. Amikor a hivatalos programok mellett kettesben elvonultak, a súlytalanság állapotában lebegve mindketten új perspektívából látták a kapcsolatukat. Első évfordulójukat a lélegzetelállító Bora-Bora szigetén ünnepelték, egy másik alkalommal pedig a Maldív-szigeteken egy egész szigetet béreltek, ahol korallzátonyok között búvárkodtak és tengeri teknősökkel úsztak. Thaiföldön és Indonéziában a család többi tagjával közösen fedezték fel Phuket szigetét, Bangkokot és Ajutthaja ősi városát. Abu-Dzabiban és Japánban a tradíciók és a modern világ egyedi ötvözetét tapasztalták meg együtt.</p>
+                <div class="content-grid">
+                    <div class="content-block">
+                        <h3>Diplomáciai Küldetések és Kulturális Felfedezések</h3>
+                        <p>A hercegi pár első közös diplomáciai próbatétele a 2017-es moszkvai küldetés volt, ahol Vlagyimir Putyin elnökkel tárgyaltak a szíriai konfliktusról. Raimondo és Selena együtt álltak helyt a nemzetközi diplomácia legmagasabb szintjén, és az élmény örökre összekovácsolta őket. Későbbi útjaik során Izraelben meglátogatták Jeruzsálem óvárosát, a Siratófalat és a Szent Sír-templomot, Indiában pedig iskolákat építettek és jótékonysági munkában vettek részt. Közös szenvedélyük az ókori civilizációk felfedezése is. Egyiptomban együtt mászták meg a Gízai Nagy Piramis belső kamráit, a Királyok Völgyében zárt szarkofágokat tekintettek meg, majd privát tevekaraván hátán vágtak neki a sivatagnak. Peruban Machu Picchu romjait csodálták meg a felkelő nap fényében, Kambodzsában pedig az Angkor Wat ősi temploma előtt együtt meditáltak.</p>
+                    </div>
+                    <div class="content-block">
+                        <h3>Űrutazás és Romantikus Kalandok</h3>
+                        <p>Kapcsolatuk egyik legkülönlegesebb fejezete a 2018-as közös űrutazás volt. A kéthetes küldetés előtt hosszú kiképzésen vettek részt, megtanulták az űrruhák használatát és az űrállomás biztonsági előírásait. Waikiki űrállomásának fedélzetén töltött két hét alatt űrsétákon vettek részt és hosszasan csodálták a Föld páratlan panorámáját. Amikor a hivatalos programok mellett kettesben elvonultak, a súlytalanság állapotában lebegve mindketten új perspektívából látták a kapcsolatukat. Első évfordulójukat a lélegzetelállító Bora-Bora szigetén ünnepelték, egy másik alkalommal pedig a Maldív-szigeteken egy egész szigetet béreltek, ahol korallzátonyok között búvárkodtak és tengeri teknősökkel úsztak. Thaiföldön és Indonéziában a család többi tagjával közösen fedezték fel Phuket szigetét, Bangkokot és Ajutthaja ősi városát. Abu-Dzabiban és Japánban a tradíciók és a modern világ egyedi ötvözetét tapasztalták meg együtt.</p>
+                    </div>
+                    <div class="content-block">
+                        <h3>Környezetvédelem és Közös Szabadidő</h3>
+                        <p>Raimondo és Selena közös értékrendje a klímaváltozás elleni küzdelemben is megmutatkozik. Az Antarktiszon tett tudományos expedíciójuk során együtt figyelték meg a császárpingvinek kolóniáit, gleccsertúrán fedeztek fel jégbarlangokat és óriás kékbálnák megfigyelésén vettek részt. A COP26 klímacsúcson közösen mutatták be a Kék Öv Egyezményt, jótékonysági fogadásokon pedig több millió dollárt fordítottak veszélyeztetett állatfajok védelmére. Raimondo és Selena szeretik a lovaspólót, mindketten rajonganak a fantasztikus sorozatokért, és gyakran hívják meg kedvenc műsoraik szereplőit vendégségbe. A Seven Seas High School osztálytalálkozóján együtt idézték fel Raimondo iskolai emlékeit, míg a Disney sztárokkal töltött programok Selena múltjába engedtek betekintést. Ezek a pillanatok bizonyítják, hogy kapcsolatukban egyformán fontosak egymás emlékei és szenvedélyei.</p>
+                    </div>
                 </div>
-                <div class="content-block">
-                    <h3>Környezetvédelem és Közös Szabadidő</h3>
-                    <p>Raimondo és Selena közös értékrendje a klímaváltozás elleni küzdelemben is megmutatkozik. Az Antarktiszon tett tudományos expedíciójuk során együtt figyelték meg a császárpingvinek kolóniáit, gleccsertúrán fedeztek fel jégbarlangokat és óriás kékbálnák megfigyelésén vettek részt. A COP26 klímacsúcson közösen mutatták be a Kék Öv Egyezményt, jótékonysági fogadásokon pedig több millió dollárt fordítottak veszélyeztetett állatfajok védelmére. Raimondo és Selena szeretik a lovaspólót, mindketten rajonganak a fantasztikus sorozatokért, és gyakran hívják meg kedvenc műsoraik szereplőit vendégségbe. A Seven Seas High School osztálytalálkozóján együtt idézték fel Raimondo iskolai emlékeit, míg a Disney sztárokkal töltött programok Selena múltjába engedtek betekintést. Ezek a pillanatok bizonyítják, hogy kapcsolatukban egyformán fontosak egymás emlékei és szenvedélyei.</p>
-                </div>
-            </div>
-            <div class="image-gallery">
-                <div class="gallery-item">
-                    <img src="../images/UniversalUpscaler_Legacy_Cinematic_2_1f175ebb-d531-68a0-88fd-96b37d1c2cbc-U.jpg">
-                    <div class="gallery-overlay">
-                        <h4>Együtt a Világ Minden Táján</h4>
-                        <p>A közös felfedezések erősítik a köteléket</p>
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <img src="../images/UniversalUpscaler_Legacy_Cinematic_2_1f175ebb-d531-68a0-88fd-96b37d1c2cbc-U.jpg">
+                        <div class="gallery-overlay">
+                            <h4>Együtt a Világ Minden Táján</h4>
+                            <p>A közös felfedezések erősítik a köteléket</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Milestones -->
-    <section class="milestones-section">
-        <div class="private-container">
-            <div class="private-intro">
-                <h2>A Kapcsolat Mérföldkövei</h2>
-                <p>Raimondo Chease és Selena Gomez szerelmi története a modern Waikiki történelem egyik legfigyelemreméltóbb narratívája. Első találkozásuktól egy filmforgatáson egészen a nemzet vezető párjaként való megkoronázásukig útjuk több mint egy évtizedet ölel fel a barátságtól a növekvő vonzalmon és hivatalos partnerségen át egészen a házasságig. Kapcsolatuk minden fejezetét jelentős nyilvános és privát pillanatok jelölték, amelyek nemcsak személyes életüket, hanem az egész nemzet sorsát is formálták.</p>
-            </div>
-            <div class="content-grid">
-                <div class="content-block">
-                    <h3>Vonzalom a Barátság Mögött</h3>
-                    <p>Raimondo és Selena 2014-ben találkoztak először egy filmforgatáson, ahol raimondo producerként vett részt. Szinte azonnal rendkívüli intellektuális és baráti harmónia alakult ki közöttük, amely messze túlmutatott egy tipikus munkakapcsolat keretein. Ebben az időszakban Raimondo Bailey Pickett-tel, a középiskolai szerelmével járt. Bár Selena egy spontán csókkal próbálta kifejezni mélyebb érzéseit, Raimondo tisztelettel elutasította a romantikus közeledést a meglévő elkötelezettsége miatt. Ez a pillanat azonban nem vetett árnyékot a kibontakozó barátságukra. Továbbra is rendszeresen találkoztak, együtt utaztak külföldre, és a gazdaság, illetve a társadalom iránti közös érdeklődésük újabb dimenziót adott a köteléküknek. A 2015-ös egyiptomi utazásuk legendássá vált a médiában, csakúgy, mint a közös megjelenéseik a Miss Supranational szépségversenyen, a Szenátus ülésein és a számtalan jótékonysági gálán.</p>
+        </section>
+        <!-- Milestones -->
+        <section class="milestones-section">
+            <div class="private-container">
+                <div class="private-intro">
+                    <h2>A Kapcsolat Mérföldkövei</h2>
+                    <p>Raimondo Chease és Selena Gomez szerelmi története a modern Waikiki történelem egyik legfigyelemreméltóbb narratívája. Első találkozásuktól egy filmforgatáson egészen a nemzet vezető párjaként való megkoronázásukig útjuk több mint egy évtizedet ölel fel a barátságtól a növekvő vonzalmon és hivatalos partnerségen át egészen a házasságig. Kapcsolatuk minden fejezetét jelentős nyilvános és privát pillanatok jelölték, amelyek nemcsak személyes életüket, hanem az egész nemzet sorsát is formálták.</p>
                 </div>
-                <div class="content-block">
-                    <h3>A Hivatalos Kapcsolat</h3>
-                    <p>A fordulópont 2017 márciusában jött el egy thaiföldi utazás során, ahol Raimondo és Selena gondtalan napokat töltöttek együtt az egzotikus környezetben. Hazatérésük után mindketten békésen lezárták korábbi kapcsolataikat, és mindössze egy nappal később bejelentették, hogy hivatalosan is együtt vannak. A hír világszerte a címlapokra került. A Golden Globe-gálán jelentek meg először hivatalos párként, és a média a Relena becenevet adta nekik. Ugyanebben az évben Raimondo lett Waikiki diktátora, októberben pedig Selenát Waikiki hercegnőjévé koronázták. Együtt tettek történelmi űrutazást, első évfordulójukat Bora Borán ünnepelték, és számtalan diplomáciai küldetést vezettek Moszkvától Jeruzsálemig. A COP26 klímacsúcson bemutatták a Kék Öv Egyezményt, a járvány idején megalapították a Global Hope Alapítványt, és a Forbes szerint a világ legbefolyásosabb fiatal hatalmi párjává váltak.</p>
+                <div class="content-grid">
+                    <div class="content-block">
+                        <h3>Vonzalom a Barátság Mögött</h3>
+                        <p>Raimondo és Selena 2014-ben találkoztak először egy filmforgatáson, ahol raimondo producerként vett részt. Szinte azonnal rendkívüli intellektuális és baráti harmónia alakult ki közöttük, amely messze túlmutatott egy tipikus munkakapcsolat keretein. Ebben az időszakban Raimondo Bailey Pickett-tel, a középiskolai szerelmével járt. Bár Selena egy spontán csókkal próbálta kifejezni mélyebb érzéseit, Raimondo tisztelettel elutasította a romantikus közeledést a meglévő elkötelezettsége miatt. Ez a pillanat azonban nem vetett árnyékot a kibontakozó barátságukra. Továbbra is rendszeresen találkoztak, együtt utaztak külföldre, és a gazdaság, illetve a társadalom iránti közös érdeklődésük újabb dimenziót adott a köteléküknek. A 2015-ös egyiptomi utazásuk legendássá vált a médiában, csakúgy, mint a közös megjelenéseik a Miss Supranational szépségversenyen, a Szenátus ülésein és a számtalan jótékonysági gálán.</p>
+                    </div>
+                    <div class="content-block">
+                        <h3>A Hivatalos Kapcsolat</h3>
+                        <p>A fordulópont 2017 márciusában jött el egy thaiföldi utazás során, ahol Raimondo és Selena gondtalan napokat töltöttek együtt az egzotikus környezetben. Hazatérésük után mindketten békésen lezárták korábbi kapcsolataikat, és mindössze egy nappal később bejelentették, hogy hivatalosan is együtt vannak. A hír világszerte a címlapokra került. A Golden Globe-gálán jelentek meg először hivatalos párként, és a média a Relena becenevet adta nekik. Ugyanebben az évben Raimondo lett Waikiki diktátora, októberben pedig Selenát Waikiki hercegnőjévé koronázták. Együtt tettek történelmi űrutazást, első évfordulójukat Bora Borán ünnepelték, és számtalan diplomáciai küldetést vezettek Moszkvától Jeruzsálemig. A COP26 klímacsúcson bemutatták a Kék Öv Egyezményt, a járvány idején megalapították a Global Hope Alapítványt, és a Forbes szerint a világ legbefolyásosabb fiatal hatalmi párjává váltak.</p>
+                    </div>
+                    <div class="content-block">
+                        <h3>Esküvő és Házasság</h3>
+                        <p>Közel egy évtizednyi partnerség, a világon átívelő közös kalandok és a Waikiki kormányzásának szívében közösen épített élet után Raimondo és Selena 2026 elején jelentette be eljegyzését. Az esküvői szertartáson, amelyet a Hercegi Palotában tartottak, politikai vezetők, a világ minden tájáról érkezett királyi családok tagjai, hírességek és Waikiki polgárai vettek részt, akik az ország egész területén felállított óriáskivetítőkön követték az élő közvetítést. A szertartás a Waikiki hagyomány és a modern elegancia tökéletes ötvözete volt, tükrözve a pár útját a barátságtól a partnerségen át a házasságig. Házasságuk nemcsak személyes mérföldkő, hanem a Chease dinasztia új fejezete is, amely a stabilitást, a folytonosságot és a tartós szerelmet szimbolizálja, amelyre Waikiki jóléte épül. Ahogy együtt kezdik meg ezt az új szakaszt, a nemzet két olyan ember egyesülését ünnepli, akik életüket egymásnak és népük szolgálatának szentelték.</p>
+                    </div>
                 </div>
-                <div class="content-block">
-                    <h3>Esküvő és Házasság</h3>
-                    <p>Közel egy évtizednyi partnerség, a világon átívelő közös kalandok és a Waikiki kormányzásának szívében közösen épített élet után Raimondo és Selena 2026 elején jelentette be eljegyzését. Az esküvői szertartáson, amelyet a Hercegi Palotában tartottak, politikai vezetők, a világ minden tájáról érkezett királyi családok tagjai, hírességek és Waikiki polgárai vettek részt, akik az ország egész területén felállított óriáskivetítőkön követték az élő közvetítést. A szertartás a Waikiki hagyomány és a modern elegancia tökéletes ötvözete volt, tükrözve a pár útját a barátságtól a partnerségen át a házasságig. Házasságuk nemcsak személyes mérföldkő, hanem a Chease dinasztia új fejezete is, amely a stabilitást, a folytonosságot és a tartós szerelmet szimbolizálja, amelyre Waikiki jóléte épül. Ahogy együtt kezdik meg ezt az új szakaszt, a nemzet két olyan ember egyesülését ünnepli, akik életüket egymásnak és népük szolgálatának szentelték.</p>
-                </div>
-            </div>
-            <div class="image-gallery">
-                <div class="gallery-item">
-                    <img src="../images/UniversalUpscaler_54d247e9-009e-4159-81c0-5b2ac5824dca-U.jpg">
-                    <div class="gallery-overlay">
-                        <h4>Egy Évtized Szerelem</h4>
-                        <p>A barátságtól az örökké tartó szerelemig</p>
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <img src="../images/UniversalUpscaler_54d247e9-009e-4159-81c0-5b2ac5824dca-U.jpg">
+                        <div class="gallery-overlay">
+                            <h4>Egy Évtized Szerelem</h4>
+                            <p>A barátságtól az örökké tartó szerelemig</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Summary -->
-    <section class="private-section">
-        <div class="private-container">
-            <div class="private-intro" style="margin-bottom: 0;">
-                <h2>A Szeretet Mint Nemzeti Érték</h2>
-                <p>Összességében Selena hercegnő odaadó barátnői élménye egy példaértékű modell a Waikiki Királyságban, ahol a személyes kötődés és a támogatás a királyság prosperitásának alapja. Ez a kapcsolat nem csupán Raimondo herceg személyes boldogságát szolgálja, hanem inspirációként hat az egész nemzetre, mutatva, hogyan lehet a szeretet és az elkötelezettség révén erősíteni a stabilitást és a harmóniát.</p>
-                <p style="margin-top: 40px; font-style: italic; color: #C95A41;">Waikiki polgárai számára, látni egy vezetőt, akit egy sokoldalú, intelligens és szenvedélyes nő támogat, bizalmat gerjeszt a rendszer stabilitása iránt. A pár kapcsolata tehát egy élő műalkotás, a racionalitás és a mély érzelmi intelligencia tökéletes fúziója, amelyben a legszemélyesebb intimitás és a legmagasabb állami érdek elválaszthatatlanul összefonódik.</p>
+        </section>
+        <!-- Summary -->
+        <section class="private-section">
+            <div class="private-container">
+                <div class="private-intro" style="margin-bottom: 0;">
+                    <h2>A Szeretet Mint Nemzeti Érték</h2>
+                    <p>Összességében Selena hercegnő odaadó barátnői élménye egy példaértékű modell a Waikiki Királyságban, ahol a személyes kötődés és a támogatás a királyság prosperitásának alapja. Ez a kapcsolat nem csupán Raimondo herceg személyes boldogságát szolgálja, hanem inspirációként hat az egész nemzetre, mutatva, hogyan lehet a szeretet és az elkötelezettség révén erősíteni a stabilitást és a harmóniát.</p>
+                    <p style="margin-top: 40px; font-style: italic; color: #C95A41;">Waikiki polgárai számára, látni egy vezetőt, akit egy sokoldalú, intelligens és szenvedélyes nő támogat, bizalmat gerjeszt a rendszer stabilitása iránt. A pár kapcsolata tehát egy élő műalkotás, a racionalitás és a mély érzelmi intelligencia tökéletes fúziója, amelyben a legszemélyesebb intimitás és a legmagasabb állami érdek elválaszthatatlanul összefonódik.</p>
+                </div>
             </div>
-        </div>
-    </section>
-    <!-- @chrome:next --><section class="next-chapter"><a class="next-card" href="dynasty.html"><div class="next-media"><img src="../images/UniversalUpscaler_e38222ed-70b3-4c90-9777-c114aa60d527-U.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Folytassa az utazást · Királyi Család</span><span class="next-title">A Dinasztia</span><span class="next-arrow" aria-hidden="true">→</span></span></a></section><!-- /@chrome:next -->
+        </section>
+        <!-- @chrome:next -->
+        <section class="next-chapter"><a class="next-card" href="dynasty.html">
+                <div class="next-media"><img src="../images/UniversalUpscaler_e38222ed-70b3-4c90-9777-c114aa60d527-U.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Folytassa az utazást · Királyi Család</span><span class="next-title">A Dinasztia</span><span class="next-arrow" aria-hidden="true">→</span></span>
+            </a></section><!-- /@chrome:next -->
     </main>
     <!-- @chrome:footer -->
     <footer class="site-footer">
-        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z"/></svg>
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand">
@@ -207,7 +300,57 @@
                     <p class="footer-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
                     <p class="footer-about">Waikiki Szuverén Állam hivatalos portálja. Alapítva 1999. március 10-én · Nova Aurelia. Ez az oldal mesterséges intelligenciával készült, bármilyen hasonlóság valós személyekhez, országokhoz vagy intézményekhez pusztán a véletlen műve.</p>
                 </div>
-                <div class="footer-col"><h2>Nemzet</h2><ul><li><a href="index.html">Főoldal</a></li><li><a href="overview.html">Áttekintés</a></li><li><a href="history.html">Történelem</a></li><li><a href="society.html">Társadalom</a></li><li><a href="culture.html">Kultúra</a></li><li><a href="ideology.html">Ideológia</a></li></ul></div><div class="footer-col"><h2>Kormányzás</h2><ul><li><a href="government.html">Kormány</a></li><li><a href="leadership.html">Vezetés</a></li><li><a href="parties.html">Politika</a></li><li><a href="constitution.html">Alkotmány</a></li><li><a href="citizenship.html">Állampolgárság</a></li><li><a href="military.html">Hadsereg</a></li><li><a href="diplomacy.html">Diplomácia</a></li></ul></div><div class="footer-col"><h2>Jólét</h2><ul><li><a href="economy.html">Gazdaság</a></li><li><a href="wealth-fund.html">Vagyonalap</a></li><li><a href="infrastructure.html">Infrastruktúra</a></li><li><a href="plane.html">Diplomáciai Flotta</a></li></ul></div><div class="footer-col"><h2>Királyi Család</h2><ul><li><a href="dynasty.html">A Dinasztia</a></li><li><a href="chease-and-jessica.html">Chease és Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li><li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li></ul></div><div class="footer-col"><h2>Látogatás</h2><ul><li><a href="tourism.html">Turizmus</a></li><li><a href="sights.html">Látnivalók</a></li><li><a href="travel-guide.html">Utazási Kalauz</a></li><li><a href="faq.html">GYIK</a></li></ul></div>
+                <div class="footer-col">
+                    <h2>Nemzet</h2>
+                    <ul>
+                        <li><a href="index.html">Főoldal</a></li>
+                        <li><a href="overview.html">Áttekintés</a></li>
+                        <li><a href="history.html">Történelem</a></li>
+                        <li><a href="society.html">Társadalom</a></li>
+                        <li><a href="culture.html">Kultúra</a></li>
+                        <li><a href="ideology.html">Ideológia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Kormányzás</h2>
+                    <ul>
+                        <li><a href="government.html">Kormány</a></li>
+                        <li><a href="leadership.html">Vezetés</a></li>
+                        <li><a href="parties.html">Politika</a></li>
+                        <li><a href="constitution.html">Alkotmány</a></li>
+                        <li><a href="citizenship.html">Állampolgárság</a></li>
+                        <li><a href="military.html">Hadsereg</a></li>
+                        <li><a href="diplomacy.html">Diplomácia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Jólét</h2>
+                    <ul>
+                        <li><a href="economy.html">Gazdaság</a></li>
+                        <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                        <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                        <li><a href="plane.html">Diplomáciai Flotta</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Királyi Család</h2>
+                    <ul>
+                        <li><a href="dynasty.html">A Dinasztia</a></li>
+                        <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Látogatás</h2>
+                    <ul>
+                        <li><a href="tourism.html">Turizmus</a></li>
+                        <li><a href="sights.html">Látnivalók</a></li>
+                        <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                        <li><a href="faq.html">GYIK</a></li>
+                    </ul>
+                </div>
             </div>
             <span class="footer-mega" aria-hidden="true">Waikiki</span>
             <div class="footer-bottom">
@@ -216,7 +359,10 @@
             </div>
         </div>
     </footer>
-    <button class="to-top" type="button" aria-label="Vissza a tetejére"><svg viewBox="0 0 54 54" aria-hidden="true"><circle class="ring-bg" cx="27" cy="27" r="24"/><circle class="ring" cx="27" cy="27" r="24"/></svg><span aria-hidden="true">↑</span></button>
+    <button class="to-top" type="button" aria-label="Vissza a tetejére"><svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span></button>
     <!-- /@chrome:footer -->
     <script src="../js/common.js"></script>
 </body>

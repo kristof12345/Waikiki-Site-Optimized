@@ -11,7 +11,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />
-    <script>(function(d){var h=d.documentElement;h.classList.add('js');try{if(localStorage.getItem('isDarkMode')==='true')h.classList.add('body-dark');if(localStorage.getItem('isAnimationDisabled')==='true')h.classList.add('no-reveal')}catch(e){}setTimeout(function(){if(!h.classList.contains('reveal-ready'))h.classList.remove('js')},3500)})(document);</script>
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
     <!-- /@chrome:head -->
     <title>Taylor Lautner</title>
     <link rel="icon" href="../../icons/favicon.ico" />
@@ -30,8 +42,20 @@
         <a href="../index.html" class="brand" aria-label="Waikiki főoldal"><img class="brand-mark" src="../../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" decoding="async" /><span class="brand-word">Waikiki</span></a>
         <nav class="primary-nav" aria-label="Fő navigáció"><a href="../tourism.html">Utazás</a><a href="../society.html">Társadalom</a><a href="../economy.html">Gazdaság</a><a href="../government.html">Kormány</a><a href="../history.html">Történelem</a><a href="../dynasty.html" aria-current="page">Királyi Család</a></nav>
         <div class="header-actions">
-            <a class="lang-pill" href="../../en/bio/taylor.html" hreflang="en" lang="en" title="English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>EN</span></a>
-            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Éjszakai mód váltása"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><mask id="theme-mask"><rect width="24" height="24" fill="#fff"/><circle class="theme-cut" cx="26" cy="2" r="6" fill="#000"/></mask><circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)"/><g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5"/></g></svg></button>
+            <a class="lang-pill" href="../../en/bio/taylor.html" hreflang="en" lang="en" title="English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg><span>EN</span></a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Éjszakai mód váltása"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg></button>
             <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="menu-lines" aria-hidden="true"></span><span class="menu-label-open">Menü</span><span class="menu-label-close">Bezárás</span><span class="visually-hidden">Menü</span></button>
         </div>
     </header>
@@ -49,35 +73,96 @@
                 <p class="menu-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
                 <div class="menu-aside-row"><a class="menu-chip" href="../../en/bio/taylor.html" hreflang="en" lang="en">English</a><a class="menu-chip is-active" href="../../hu/bio/taylor.html" hreflang="hu" lang="hu">Magyar</a><button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Éjszakai mód</button><button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animáció</button></div>
             </aside>
-            <div class="menu-group"><h2>Nemzet</h2><ul><li><a href="../index.html">Főoldal</a></li><li><a href="../overview.html">Áttekintés</a></li><li><a href="../history.html">Történelem</a></li><li><a href="../society.html">Társadalom</a></li><li><a href="../culture.html">Kultúra</a></li><li><a href="../ideology.html">Ideológia</a></li></ul></div><div class="menu-group"><h2>Kormányzás</h2><ul><li><a href="../government.html">Kormány</a></li><li><a href="../leadership.html">Vezetés</a></li><li><a href="../parties.html">Politika</a></li><li><a href="../constitution.html">Alkotmány</a></li><li><a href="../citizenship.html">Állampolgárság</a></li><li><a href="../military.html">Hadsereg</a></li><li><a href="../diplomacy.html">Diplomácia</a></li></ul></div><div class="menu-group"><h2>Jólét</h2><ul><li><a href="../economy.html">Gazdaság</a></li><li><a href="../wealth-fund.html">Vagyonalap</a></li><li><a href="../infrastructure.html">Infrastruktúra</a></li><li><a href="../plane.html">Diplomáciai Flotta</a></li></ul></div><div class="menu-group"><h2>Királyi Család</h2><ul><li><a href="../dynasty.html">A Dinasztia</a></li><li><a href="../chease-and-jessica.html">Chease és Jessica</a></li><li><a href="../raimondo-and-selena.html">Raimondo és Selena</a></li><li><a href="../angelina-and-taylor.html">Angelina és Taylor</a></li><li><a href="../jennifer-and-tyler.html">Jennifer és Tyler</a></li></ul></div><div class="menu-group"><h2>Látogatás</h2><ul><li><a href="../tourism.html">Turizmus</a></li><li><a href="../sights.html">Látnivalók</a></li><li><a href="../travel-guide.html">Utazási Kalauz</a></li><li><a href="../faq.html">GYIK</a></li></ul></div>
+            <div class="menu-group">
+                <h2>Nemzet</h2>
+                <ul>
+                    <li><a href="../index.html">Főoldal</a></li>
+                    <li><a href="../overview.html">Áttekintés</a></li>
+                    <li><a href="../history.html">Történelem</a></li>
+                    <li><a href="../society.html">Társadalom</a></li>
+                    <li><a href="../culture.html">Kultúra</a></li>
+                    <li><a href="../ideology.html">Ideológia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Kormányzás</h2>
+                <ul>
+                    <li><a href="../government.html">Kormány</a></li>
+                    <li><a href="../leadership.html">Vezetés</a></li>
+                    <li><a href="../parties.html">Politika</a></li>
+                    <li><a href="../constitution.html">Alkotmány</a></li>
+                    <li><a href="../citizenship.html">Állampolgárság</a></li>
+                    <li><a href="../military.html">Hadsereg</a></li>
+                    <li><a href="../diplomacy.html">Diplomácia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Jólét</h2>
+                <ul>
+                    <li><a href="../economy.html">Gazdaság</a></li>
+                    <li><a href="../wealth-fund.html">Vagyonalap</a></li>
+                    <li><a href="../infrastructure.html">Infrastruktúra</a></li>
+                    <li><a href="../plane.html">Diplomáciai Flotta</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Királyi Család</h2>
+                <ul>
+                    <li><a href="../dynasty.html">A Dinasztia</a></li>
+                    <li><a href="../chease-and-jessica.html">Chease és Jessica</a></li>
+                    <li><a href="../raimondo-and-selena.html">Raimondo és Selena</a></li>
+                    <li><a href="../angelina-and-taylor.html">Angelina és Taylor</a></li>
+                    <li><a href="../jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Látogatás</h2>
+                <ul>
+                    <li><a href="../tourism.html">Turizmus</a></li>
+                    <li><a href="../sights.html">Látnivalók</a></li>
+                    <li><a href="../travel-guide.html">Utazási Kalauz</a></li>
+                    <li><a href="../faq.html">GYIK</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- /@chrome:header -->
     <main id="main">
-    
-    <section class="hero" data-hero><div class="hero-media"><img src="../../images/UniversalUpscaler_Pro_Precise_2_1f185c11-4e6a-6c00-868b-10816a1d038f.jpg" alt="Taylor Lautner" style="object-position: 70% top" fetchpriority="high" decoding="async" /></div><div class="hero-veil"></div><div class="hero-content"><span class="hero-eyebrow">Waikiki Hercege</span><h1 class="hero-title">Taylor Lautner</h1><p class="hero-lead">Waikiki hercege és szenátora, a közbiztonság, a fenntartható közlekedés és az ifjúsági sportprogramok elkötelezett védnöke. Angelina Chease férjeként a dinasztia zöld törekvéseinek aktív támogatója, legyen szó az óceáni ökoszisztémák megóvásáról, amazóniai esőerdeinek kutatóexpedícióiról vagy tudományos űrmisszióról.</p></div><button class="hero-scroll" type="button">Görgetés</button></section>
-    <!-- @chrome:subnav --><!-- /@chrome:subnav -->
-    <section id="narrative">
-        <div class="narrative-content max-w-4xl mx-auto">
-            <p class="narrative-text bio-summary"> 👑 Waikiki Hercege | 🏛️ Szenátor | 💍 Angelina Chease férje | 🥋 Korábbi karate bajnok | 🌿 Környezetvédő | 🚀 Űrhajós | ⚽ A Waikiki Jövő Bajnokai alapítója </p>
-            <h3 class="section-title">Hollywood és az új haza 🎬</h3>
-            <p class="narrative-text">Mielőtt Waikiki fejlődésének és közéletének szenteltem volna az életemet, a világ nagy része a mozivászonról és Hollywood vörös szőnyegeiről ismerhetett meg. A színészi pálya mellett a fegyelem és a küzdősportok határozták meg a fiatalkoromat. Büszke vagyok a junior karate világbajnokságon elért sikereimre, amelyek megtanítottak a kitartásra és az önuralomra. 🏅 Bár Kalifornia csillogó világa komoly lehetőségeket kínált, úgy éreztem, egy sokkal mélyebb, alkotóbb hivatásra van szükségem. Ezért hoztam meg azt a döntést, hogy magam mögött hagyom az amerikai filmipart és Waikikire költözöm, hogy tehetségemmel és munkámmal egy új, ambiciózus nemzet építését segítsem. 🏡</p>
-            <h3 class="section-title">Találkozás az egyetemen és közös kezdeményezések 🎓</h3>
-            <p class="narrative-text">A Waikiki Economics University-n töltött évek legfontosabb mérföldköve kétségkívül az volt, amikor a Global Futures Club egyik őszi vitáján megismertem Angelinát. Egy rendkívül izgalmas vitában álltunk szemben egymással és a szellemi szövetségünkből hamar mély szerelem született. 2012 tavaszán közösen alapítottuk meg a WEU Fenntarthatósági Körét, amely a campus zöld modernizációját kezdeményezte. ♻️ Ugyanezen év nyarán tettük meg első közös utazásunkat, ahol a sekély vizű lagúnákban paddleboardozni tanítottam Angelinát. 2013-ban elkísértem őt Barcelonába a vendégtanulmányaira, ahol kulturális kutatóként tevékenykedtem. Az első közös családi karácsonyunkra elhoztam a kaliforniai családom hagyományát és minden szerettünknek saját verset írtam a fa alá. 🎄</p>
-            <h3 class="section-title">Szenátusi munka és a közbiztonsági reform 🪪</h3>
-            <p class="narrative-text">2015. május 18-án a sorsdöntő alkotmánymódosítás után Chease Young kinevezett az újonnan felállított Waikiki Szenátus tagjává. Szenátorként a sportfejlesztés, a fenntartható infrastruktúra és a közbiztonság tartoztak a főbb felelősségi köreim közé. 2015-ben vezetésemmel dolgoztuk ki a waikiki rendvédelmi rendszer átfogó reformját, amely a digitalizációra és a közösségi rendészetre helyezte a hangsúlyt. Ezt a modernizációs csomagot a polgárok egy 2016-os országos népszavazáson elsöprő többséggel fogadták el. 🗳️ Emellett szószólója voltam a fenntartható tömegközlekedési projekteknek, amelyek a nagyvárosaink környezetbarát összeköttetését és a karbonsemleges mobilitást tűzték ki célul. 🚋</p>
-            <h3 class="section-title">Hercegi rang és házasság Angelinával 💍</h3>
-            <p class="narrative-text">Az állam szolgálatáért végzett munkám legnagyobb elismeréseként 2017. október 16-án Nova Aureliában ünnepélyes keretek között herceggé koronáztak, amivel formálisan is a királyi család tagjává váltam. 🤴 Kapcsolatunk Angelinával az évek során csak még szorosabbá vált, míg végül 2024. október 12-én kimondtuk a boldogító igent. Az esküvőt a Palazzo Versace tengerparti szárnyában, egy üvegoltár felett rendeztük meg a lenyűgöző naplementében, kétszáz legközelebbi rokonunk és barátunk jelenlétében. Különleges és megható volt, amikor Chease Young maga vezette az oltárhoz Angelinát, én pedig az őáltala választott fehér bazsarózsa kitűzővel a hajtókámon fogadtam őt. 👰 A szertartás alatt a saját magunk által titokban írt fogadalmakat olvastuk fel egymásnak.</p>
-            <h3 class="section-title">Környezetvédelem, űrmisszió és expedíciók 🚀</h3>
-            <p class="narrative-text">A közéleti feladataim mellett a környezetvédelem jelenti számomra a legfőbb elhivatottságot. Angelinával közösen globális kampányt indítottunk az óceánok műanyagszennyezése ellen, és személyesen vettünk részt a waikiki strandok megtisztításában. 2021-ben egy egészen rendkívüli kalandban volt részünk, amikor tíz napot tölthettünk a Waikiki Nemzeti Űrállomáson, ahová egy Falcon 9 rakétával jutottunk fel. 🛰️ 2024 tavaszán a WWF és a Greenpeace partnerségében egy kutatóexpedíciót vezettünk Amazónia mélyére, veszélyeztetett arapapagájok fészkelőhelyeit és növényfajokat térképezve fel. 🦜 A sport iránti szeretetemet és a fiatalok támogatását ötvözve elindítottam a Jövő Bajnokai ösztöndíjat, amely a tehetséges hazai utánpótlás-sportolók nemzetközi felkészülését segíti elő.</p>
-            <p class="narrative-text bio-quote"> A sportban és a közéletben egyaránt hiszek abban, hogy a valódi eredményeket fegyelemmel, empátiával és a környezetünk iránti felelősségvállalással érhetjük el. Waikiki zöld jövője a mi közös küldetésünk. 🌿 </p>
-        </div>
-    </section>
-    <!-- @chrome:next --><section class="next-chapter"><a class="next-card" href="../chease-and-jessica.html"><div class="next-media"><img src="../../images/UniversalUpscaler_f257fcea-c942-4c07-91fd-e0d5374df3f1.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Folytassa az utazást · Királyi Család</span><span class="next-title">Chease és Jessica</span><span class="next-arrow" aria-hidden="true">→</span></span></a></section><!-- /@chrome:next -->
+        <section class="hero" data-hero>
+            <div class="hero-media"><img src="../../images/UniversalUpscaler_Pro_Precise_2_1f185c11-4e6a-6c00-868b-10816a1d038f.jpg" alt="Taylor Lautner" style="object-position: 70% top" fetchpriority="high" decoding="async" /></div>
+            <div class="hero-veil"></div>
+            <div class="hero-content"><span class="hero-eyebrow">Waikiki Hercege</span>
+                <h1 class="hero-title">Taylor Lautner</h1>
+                <p class="hero-lead">Waikiki hercege és szenátora, a közbiztonság, a fenntartható közlekedés és az ifjúsági sportprogramok elkötelezett védnöke. Angelina Chease férjeként a dinasztia zöld törekvéseinek aktív támogatója, legyen szó az óceáni ökoszisztémák megóvásáról, amazóniai esőerdeinek kutatóexpedícióiról vagy tudományos űrmisszióról.</p>
+            </div><button class="hero-scroll" type="button">Görgetés</button>
+        </section>
+        <!-- @chrome:subnav --><!-- /@chrome:subnav -->
+        <section id="narrative">
+            <div class="narrative-content max-w-4xl mx-auto">
+                <p class="narrative-text bio-summary"> 👑 Waikiki Hercege | 🏛️ Szenátor | 💍 Angelina Chease férje | 🥋 Korábbi karate bajnok | 🌿 Környezetvédő | 🚀 Űrhajós | ⚽ A Waikiki Jövő Bajnokai alapítója </p>
+                <h3 class="section-title">Hollywood és az új haza 🎬</h3>
+                <p class="narrative-text">Mielőtt Waikiki fejlődésének és közéletének szenteltem volna az életemet, a világ nagy része a mozivászonról és Hollywood vörös szőnyegeiről ismerhetett meg. A színészi pálya mellett a fegyelem és a küzdősportok határozták meg a fiatalkoromat. Büszke vagyok a junior karate világbajnokságon elért sikereimre, amelyek megtanítottak a kitartásra és az önuralomra. 🏅 Bár Kalifornia csillogó világa komoly lehetőségeket kínált, úgy éreztem, egy sokkal mélyebb, alkotóbb hivatásra van szükségem. Ezért hoztam meg azt a döntést, hogy magam mögött hagyom az amerikai filmipart és Waikikire költözöm, hogy tehetségemmel és munkámmal egy új, ambiciózus nemzet építését segítsem. 🏡</p>
+                <h3 class="section-title">Találkozás az egyetemen és közös kezdeményezések 🎓</h3>
+                <p class="narrative-text">A Waikiki Economics University-n töltött évek legfontosabb mérföldköve kétségkívül az volt, amikor a Global Futures Club egyik őszi vitáján megismertem Angelinát. Egy rendkívül izgalmas vitában álltunk szemben egymással és a szellemi szövetségünkből hamar mély szerelem született. 2012 tavaszán közösen alapítottuk meg a WEU Fenntarthatósági Körét, amely a campus zöld modernizációját kezdeményezte. ♻️ Ugyanezen év nyarán tettük meg első közös utazásunkat, ahol a sekély vizű lagúnákban paddleboardozni tanítottam Angelinát. 2013-ban elkísértem őt Barcelonába a vendégtanulmányaira, ahol kulturális kutatóként tevékenykedtem. Az első közös családi karácsonyunkra elhoztam a kaliforniai családom hagyományát és minden szerettünknek saját verset írtam a fa alá. 🎄</p>
+                <h3 class="section-title">Szenátusi munka és a közbiztonsági reform 🪪</h3>
+                <p class="narrative-text">2015. május 18-án a sorsdöntő alkotmánymódosítás után Chease Young kinevezett az újonnan felállított Waikiki Szenátus tagjává. Szenátorként a sportfejlesztés, a fenntartható infrastruktúra és a közbiztonság tartoztak a főbb felelősségi köreim közé. 2015-ben vezetésemmel dolgoztuk ki a waikiki rendvédelmi rendszer átfogó reformját, amely a digitalizációra és a közösségi rendészetre helyezte a hangsúlyt. Ezt a modernizációs csomagot a polgárok egy 2016-os országos népszavazáson elsöprő többséggel fogadták el. 🗳️ Emellett szószólója voltam a fenntartható tömegközlekedési projekteknek, amelyek a nagyvárosaink környezetbarát összeköttetését és a karbonsemleges mobilitást tűzték ki célul. 🚋</p>
+                <h3 class="section-title">Hercegi rang és házasság Angelinával 💍</h3>
+                <p class="narrative-text">Az állam szolgálatáért végzett munkám legnagyobb elismeréseként 2017. október 16-án Nova Aureliában ünnepélyes keretek között herceggé koronáztak, amivel formálisan is a királyi család tagjává váltam. 🤴 Kapcsolatunk Angelinával az évek során csak még szorosabbá vált, míg végül 2024. október 12-én kimondtuk a boldogító igent. Az esküvőt a Palazzo Versace tengerparti szárnyában, egy üvegoltár felett rendeztük meg a lenyűgöző naplementében, kétszáz legközelebbi rokonunk és barátunk jelenlétében. Különleges és megható volt, amikor Chease Young maga vezette az oltárhoz Angelinát, én pedig az őáltala választott fehér bazsarózsa kitűzővel a hajtókámon fogadtam őt. 👰 A szertartás alatt a saját magunk által titokban írt fogadalmakat olvastuk fel egymásnak.</p>
+                <h3 class="section-title">Környezetvédelem, űrmisszió és expedíciók 🚀</h3>
+                <p class="narrative-text">A közéleti feladataim mellett a környezetvédelem jelenti számomra a legfőbb elhivatottságot. Angelinával közösen globális kampányt indítottunk az óceánok műanyagszennyezése ellen, és személyesen vettünk részt a waikiki strandok megtisztításában. 2021-ben egy egészen rendkívüli kalandban volt részünk, amikor tíz napot tölthettünk a Waikiki Nemzeti Űrállomáson, ahová egy Falcon 9 rakétával jutottunk fel. 🛰️ 2024 tavaszán a WWF és a Greenpeace partnerségében egy kutatóexpedíciót vezettünk Amazónia mélyére, veszélyeztetett arapapagájok fészkelőhelyeit és növényfajokat térképezve fel. 🦜 A sport iránti szeretetemet és a fiatalok támogatását ötvözve elindítottam a Jövő Bajnokai ösztöndíjat, amely a tehetséges hazai utánpótlás-sportolók nemzetközi felkészülését segíti elő.</p>
+                <p class="narrative-text bio-quote"> A sportban és a közéletben egyaránt hiszek abban, hogy a valódi eredményeket fegyelemmel, empátiával és a környezetünk iránti felelősségvállalással érhetjük el. Waikiki zöld jövője a mi közös küldetésünk. 🌿 </p>
+            </div>
+        </section>
+        <!-- @chrome:next -->
+        <section class="next-chapter"><a class="next-card" href="../chease-and-jessica.html">
+                <div class="next-media"><img src="../../images/UniversalUpscaler_f257fcea-c942-4c07-91fd-e0d5374df3f1.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Folytassa az utazást · Királyi Család</span><span class="next-title">Chease és Jessica</span><span class="next-arrow" aria-hidden="true">→</span></span>
+            </a></section><!-- /@chrome:next -->
     </main>
     <!-- @chrome:footer -->
     <footer class="site-footer">
-        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z"/></svg>
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand">
@@ -85,7 +170,57 @@
                     <p class="footer-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
                     <p class="footer-about">Waikiki Szuverén Állam hivatalos portálja. Alapítva 1999. március 10-én · Nova Aurelia. Ez az oldal mesterséges intelligenciával készült, bármilyen hasonlóság valós személyekhez, országokhoz vagy intézményekhez pusztán a véletlen műve.</p>
                 </div>
-                <div class="footer-col"><h2>Nemzet</h2><ul><li><a href="../index.html">Főoldal</a></li><li><a href="../overview.html">Áttekintés</a></li><li><a href="../history.html">Történelem</a></li><li><a href="../society.html">Társadalom</a></li><li><a href="../culture.html">Kultúra</a></li><li><a href="../ideology.html">Ideológia</a></li></ul></div><div class="footer-col"><h2>Kormányzás</h2><ul><li><a href="../government.html">Kormány</a></li><li><a href="../leadership.html">Vezetés</a></li><li><a href="../parties.html">Politika</a></li><li><a href="../constitution.html">Alkotmány</a></li><li><a href="../citizenship.html">Állampolgárság</a></li><li><a href="../military.html">Hadsereg</a></li><li><a href="../diplomacy.html">Diplomácia</a></li></ul></div><div class="footer-col"><h2>Jólét</h2><ul><li><a href="../economy.html">Gazdaság</a></li><li><a href="../wealth-fund.html">Vagyonalap</a></li><li><a href="../infrastructure.html">Infrastruktúra</a></li><li><a href="../plane.html">Diplomáciai Flotta</a></li></ul></div><div class="footer-col"><h2>Királyi Család</h2><ul><li><a href="../dynasty.html">A Dinasztia</a></li><li><a href="../chease-and-jessica.html">Chease és Jessica</a></li><li><a href="../raimondo-and-selena.html">Raimondo és Selena</a></li><li><a href="../angelina-and-taylor.html">Angelina és Taylor</a></li><li><a href="../jennifer-and-tyler.html">Jennifer és Tyler</a></li></ul></div><div class="footer-col"><h2>Látogatás</h2><ul><li><a href="../tourism.html">Turizmus</a></li><li><a href="../sights.html">Látnivalók</a></li><li><a href="../travel-guide.html">Utazási Kalauz</a></li><li><a href="../faq.html">GYIK</a></li></ul></div>
+                <div class="footer-col">
+                    <h2>Nemzet</h2>
+                    <ul>
+                        <li><a href="../index.html">Főoldal</a></li>
+                        <li><a href="../overview.html">Áttekintés</a></li>
+                        <li><a href="../history.html">Történelem</a></li>
+                        <li><a href="../society.html">Társadalom</a></li>
+                        <li><a href="../culture.html">Kultúra</a></li>
+                        <li><a href="../ideology.html">Ideológia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Kormányzás</h2>
+                    <ul>
+                        <li><a href="../government.html">Kormány</a></li>
+                        <li><a href="../leadership.html">Vezetés</a></li>
+                        <li><a href="../parties.html">Politika</a></li>
+                        <li><a href="../constitution.html">Alkotmány</a></li>
+                        <li><a href="../citizenship.html">Állampolgárság</a></li>
+                        <li><a href="../military.html">Hadsereg</a></li>
+                        <li><a href="../diplomacy.html">Diplomácia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Jólét</h2>
+                    <ul>
+                        <li><a href="../economy.html">Gazdaság</a></li>
+                        <li><a href="../wealth-fund.html">Vagyonalap</a></li>
+                        <li><a href="../infrastructure.html">Infrastruktúra</a></li>
+                        <li><a href="../plane.html">Diplomáciai Flotta</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Királyi Család</h2>
+                    <ul>
+                        <li><a href="../dynasty.html">A Dinasztia</a></li>
+                        <li><a href="../chease-and-jessica.html">Chease és Jessica</a></li>
+                        <li><a href="../raimondo-and-selena.html">Raimondo és Selena</a></li>
+                        <li><a href="../angelina-and-taylor.html">Angelina és Taylor</a></li>
+                        <li><a href="../jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Látogatás</h2>
+                    <ul>
+                        <li><a href="../tourism.html">Turizmus</a></li>
+                        <li><a href="../sights.html">Látnivalók</a></li>
+                        <li><a href="../travel-guide.html">Utazási Kalauz</a></li>
+                        <li><a href="../faq.html">GYIK</a></li>
+                    </ul>
+                </div>
             </div>
             <span class="footer-mega" aria-hidden="true">Waikiki</span>
             <div class="footer-bottom">
@@ -94,7 +229,10 @@
             </div>
         </div>
     </footer>
-    <button class="to-top" type="button" aria-label="Vissza a tetejére"><svg viewBox="0 0 54 54" aria-hidden="true"><circle class="ring-bg" cx="27" cy="27" r="24"/><circle class="ring" cx="27" cy="27" r="24"/></svg><span aria-hidden="true">↑</span></button>
+    <button class="to-top" type="button" aria-label="Vissza a tetejére"><svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span></button>
     <!-- /@chrome:footer -->
     <script src="../../js/common.js"></script>
 </body>

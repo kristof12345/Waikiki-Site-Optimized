@@ -11,7 +11,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />
-    <script>(function(d){var h=d.documentElement;h.classList.add('js');try{if(localStorage.getItem('isDarkMode')==='true')h.classList.add('body-dark');if(localStorage.getItem('isAnimationDisabled')==='true')h.classList.add('no-reveal')}catch(e){}setTimeout(function(){if(!h.classList.contains('reveal-ready'))h.classList.remove('js')},3500)})(document);</script>
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
     <!-- /@chrome:head -->
     <title>Waikiki Citizenship Portal</title>
     <link rel="icon" href="../icons/favicon.ico" />
@@ -41,8 +53,20 @@
         <a href="index.html" class="brand" aria-label="Waikiki home"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" decoding="async" /><span class="brand-word">Waikiki</span></a>
         <nav class="primary-nav" aria-label="Primary"><a href="tourism.html">Visit</a><a href="society.html">Society</a><a href="economy.html">Economy</a><a href="government.html">Government</a><a href="history.html">History</a><a href="dynasty.html">Royal Family</a></nav>
         <div class="header-actions">
-            <a class="lang-pill" href="../hu/citizenship.html" hreflang="hu" lang="hu" title="Magyar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>HU</span></a>
-            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle night mode"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><mask id="theme-mask"><rect width="24" height="24" fill="#fff"/><circle class="theme-cut" cx="26" cy="2" r="6" fill="#000"/></mask><circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)"/><g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5"/></g></svg></button>
+            <a class="lang-pill" href="../hu/citizenship.html" hreflang="hu" lang="hu" title="Magyar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg><span>HU</span></a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle night mode"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg></button>
             <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="menu-lines" aria-hidden="true"></span><span class="menu-label-open">Menu</span><span class="menu-label-close">Close</span><span class="visually-hidden">Menu</span></button>
         </div>
     </header>
@@ -60,170 +84,225 @@
                 <p class="menu-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
                 <div class="menu-aside-row"><a class="menu-chip is-active" href="../en/citizenship.html" hreflang="en" lang="en">English</a><a class="menu-chip" href="../hu/citizenship.html" hreflang="hu" lang="hu">Magyar</a><button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Night mode</button><button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animate</button></div>
             </aside>
-            <div class="menu-group"><h2>Nation</h2><ul><li><a href="index.html">Home</a></li><li><a href="overview.html">Overview</a></li><li><a href="history.html">History</a></li><li><a href="society.html">Society</a></li><li><a href="culture.html">Culture</a></li><li><a href="ideology.html">Ideology</a></li></ul></div><div class="menu-group"><h2>Governance</h2><ul><li><a href="government.html">Government</a></li><li><a href="leadership.html">Leadership</a></li><li><a href="parties.html">Politics</a></li><li><a href="constitution.html">Constitution</a></li><li><a href="citizenship.html" aria-current="page">Citizenship</a></li><li><a href="military.html">Military</a></li><li><a href="diplomacy.html">Diplomacy</a></li></ul></div><div class="menu-group"><h2>Prosperity</h2><ul><li><a href="economy.html">Economy</a></li><li><a href="wealth-fund.html">Wealth Fund</a></li><li><a href="infrastructure.html">Infrastructure</a></li><li><a href="plane.html">Diplomatic Fleet</a></li></ul></div><div class="menu-group"><h2>Royal Family</h2><ul><li><a href="dynasty.html">The Dynasty</a></li><li><a href="chease-and-jessica.html">Chease and Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li><li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li></ul></div><div class="menu-group"><h2>Visit</h2><ul><li><a href="tourism.html">Tourism</a></li><li><a href="sights.html">Sights</a></li><li><a href="travel-guide.html">Travel Guide</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+            <div class="menu-group">
+                <h2>Nation</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="overview.html">Overview</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="society.html">Society</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="ideology.html">Ideology</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Governance</h2>
+                <ul>
+                    <li><a href="government.html">Government</a></li>
+                    <li><a href="leadership.html">Leadership</a></li>
+                    <li><a href="parties.html">Politics</a></li>
+                    <li><a href="constitution.html">Constitution</a></li>
+                    <li><a href="citizenship.html" aria-current="page">Citizenship</a></li>
+                    <li><a href="military.html">Military</a></li>
+                    <li><a href="diplomacy.html">Diplomacy</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Prosperity</h2>
+                <ul>
+                    <li><a href="economy.html">Economy</a></li>
+                    <li><a href="wealth-fund.html">Wealth Fund</a></li>
+                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                    <li><a href="plane.html">Diplomatic Fleet</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Royal Family</h2>
+                <ul>
+                    <li><a href="dynasty.html">The Dynasty</a></li>
+                    <li><a href="chease-and-jessica.html">Chease and Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li>
+                    <li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Visit</h2>
+                <ul>
+                    <li><a href="tourism.html">Tourism</a></li>
+                    <li><a href="sights.html">Sights</a></li>
+                    <li><a href="travel-guide.html">Travel Guide</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- /@chrome:header -->
     <main id="main">
-    <!-- @chrome:subnav --><!-- /@chrome:subnav -->
-    <div class="min-h-screen">
-        <section class="relative h-screen flex items-center justify-center overflow-hidden">
-            <div class="absolute inset-0 z-0">
-                <div class="absolute inset-0 bg-gradient-to-r from-[#072221]/90 to-[#11605B]/40 z-10"></div><img src="../images/UniversalUpscaler_62c05666-3901-44ad-a6d5-d1b9c4459ea4.jpg" class="w-full h-full object-cover" />
-            </div>
-            <div class="container mx-auto px-6 z-20 relative text-center pt-20">
-                <div class="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold tracking-widest uppercase mb-6 animate-fade-up">Waikiki Citizenship Program</div>
-                <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">Civilizational <span style="color: #C95A41">Sanctuary</span></h1>
-                <p class="text-xl text-gray-200 max-w-4xl mx-auto mb-10 font-light">The "Citizenship by Merit" program is not only reserved for the wealthy. We are welcoming inventors, doctors, entrepreneurs, and artists from all around the world. Talent and diligence are highly rewarded. Assess your eligibility under the new system.</p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button class="px-8 py-4 rounded-lg text-white font-bold text-lg transition-all shadow-lg open-assessment" style="background-color: #11605B">Start Application</button>
+        <!-- @chrome:subnav --><!-- /@chrome:subnav -->
+        <div class="min-h-screen">
+            <section class="relative h-screen flex items-center justify-center overflow-hidden">
+                <div class="absolute inset-0 z-0">
+                    <div class="absolute inset-0 bg-gradient-to-r from-[#072221]/90 to-[#11605B]/40 z-10"></div><img src="../images/UniversalUpscaler_62c05666-3901-44ad-a6d5-d1b9c4459ea4.jpg" class="w-full h-full object-cover" />
                 </div>
-            </div>
-        </section>
-        <section class="bg-white screening-tiers-section">
-            <div class="mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold mb-4">Initial Screening Tiers</h2>
-                    <p class="text-gray-600">After filling the application form, the system classifies applicants into six initial tiers based on their score. Due to the high number of applicants, this is a necessary step to prioritize processing. This category also gives an overview of the applicant's current standing; however, it does not determine the final decision. Once citizenship is granted, all citizens enjoy the same rights and benefits. <em>Note: This is a preliminary classification, not a final decision.</em></p>
-                </div>
-                <div class="grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6 gap-6">
-                    <div class="p-6 rounded-2xl border-2 text-center border-red-300 bg-red-50 hover-card">
-                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><i class="fas fa-times-circle"></i></div>
-                        <div class="text-xs font-bold uppercase tracking-widest mb-2 opacity-60">0-34 points</div>
-                        <h3 class="text-lg font-bold mb-2">Red Tier</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">System Rejection. Applicant profile triggers "Red Line" exclusions or fails the "Civilizational Compatibility" threshold.</p>
-                    </div>
-                    <div class="p-6 rounded-2xl border-2 text-center border-blue-300 bg-blue-50 hover-card">
-                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><i class="fas fa-laptop-code"></i></div>
-                        <div class="text-xs font-bold uppercase tracking-widest mb-2 opacity-60">35-49 points</div>
-                        <h3 class="text-lg font-bold mb-2">Blue Tier</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">Talent Visa. Temporary status for young digital innovators. Probably a longer integration path required before naturalization.</p>
-                    </div>
-                    <div class="p-6 rounded-2xl border-2 text-center border-orange-300 bg-orange-50 hover-card">
-                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><i class="fas fa-user-shield"></i></div>
-                        <div class="text-xs font-bold uppercase tracking-widest mb-2 opacity-60">50-64 points</div>
-                        <h3 class="text-lg font-bold mb-2">Bronze Tier</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">Probationary Resident. Medium probability of being granted citizenship. Residency permit might be available with a security deposit.</p>
-                    </div>
-                    <div class="p-6 rounded-2xl border-2 text-center border-gray-400 bg-gray-50 hover-card">
-                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><i class="fas fa-medal"></i></div>
-                        <div class="text-xs font-bold uppercase tracking-widest mb-2 opacity-60">65-79 points</div>
-                        <h3 class="text-lg font-bold mb-2">Silver Tier</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">Standard Investor. Citizenship path within a few years with sufficient contributions to the nation's prosperity.</p>
-                    </div>
-                    <div class="p-6 rounded-2xl border-2 text-center border-yellow-400 bg-yellow-50 hover-card">
-                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><i class="fas fa-crown"></i></div>
-                        <div class="text-xs font-bold uppercase tracking-widest mb-2 opacity-60">80-90 points</div>
-                        <h3 class="text-lg font-bold mb-2">Gold Tier</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">Strategic Partner. Priority processing. Citizenship is likely granted immediately with favorable offers.</p>
-                    </div>
-                    <div class="p-6 rounded-2xl border-2 text-center border-indigo-300 bg-indigo-50 hover-card">
-                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><i class="fas fa-gem"></i></div>
-                        <div class="text-xs font-bold uppercase tracking-widest mb-2 opacity-60">90+ points</div>
-                        <h3 class="text-lg font-bold mb-2">Diamond Tier</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">Sovereign Asset. Reserved for the top 1% of global innovators and ultra-high-net-worth individuals.</p>
+                <div class="container mx-auto px-6 z-20 relative text-center pt-20">
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold tracking-widest uppercase mb-6 animate-fade-up">Waikiki Citizenship Program</div>
+                    <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">Civilizational <span style="color: #C95A41">Sanctuary</span></h1>
+                    <p class="text-xl text-gray-200 max-w-4xl mx-auto mb-10 font-light">The "Citizenship by Merit" program is not only reserved for the wealthy. We are welcoming inventors, doctors, entrepreneurs, and artists from all around the world. Talent and diligence are highly rewarded. Assess your eligibility under the new system.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button class="px-8 py-4 rounded-lg text-white font-bold text-lg transition-all shadow-lg open-assessment" style="background-color: #11605B">Start Application</button>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="naturalization-section">
-            <div class="mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold mb-4">Naturalization Process</h2>
-                    <p class="text-gray-600">The process consists of three separate stages designed to ensure that applicants meet all financial, legal, and social requirements for citizenship. The three steps combine automated reviews, questionnaires, and a personal or online interview with an immigration officer. The combined score of these steps will determine the decision on the citizenship application.</p>
+            </section>
+            <section class="bg-white screening-tiers-section">
+                <div class="mx-auto px-6">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold mb-4">Initial Screening Tiers</h2>
+                        <p class="text-gray-600">After filling the application form, the system classifies applicants into six initial tiers based on their score. Due to the high number of applicants, this is a necessary step to prioritize processing. This category also gives an overview of the applicant's current standing; however, it does not determine the final decision. Once citizenship is granted, all citizens enjoy the same rights and benefits. <em>Note: This is a preliminary classification, not a final decision.</em></p>
+                    </div>
+                    <div class="grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6 gap-6">
+                        <div class="p-6 rounded-2xl border-2 text-center border-red-300 bg-red-50 hover-card">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><i class="fas fa-times-circle"></i></div>
+                            <div class="text-xs font-bold uppercase tracking-widest mb-2 opacity-60">0-34 points</div>
+                            <h3 class="text-lg font-bold mb-2">Red Tier</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">System Rejection. Applicant profile triggers "Red Line" exclusions or fails the "Civilizational Compatibility" threshold.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl border-2 text-center border-blue-300 bg-blue-50 hover-card">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><i class="fas fa-laptop-code"></i></div>
+                            <div class="text-xs font-bold uppercase tracking-widest mb-2 opacity-60">35-49 points</div>
+                            <h3 class="text-lg font-bold mb-2">Blue Tier</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Talent Visa. Temporary status for young digital innovators. Probably a longer integration path required before naturalization.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl border-2 text-center border-orange-300 bg-orange-50 hover-card">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><i class="fas fa-user-shield"></i></div>
+                            <div class="text-xs font-bold uppercase tracking-widest mb-2 opacity-60">50-64 points</div>
+                            <h3 class="text-lg font-bold mb-2">Bronze Tier</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Probationary Resident. Medium probability of being granted citizenship. Residency permit might be available with a security deposit.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl border-2 text-center border-gray-400 bg-gray-50 hover-card">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><i class="fas fa-medal"></i></div>
+                            <div class="text-xs font-bold uppercase tracking-widest mb-2 opacity-60">65-79 points</div>
+                            <h3 class="text-lg font-bold mb-2">Silver Tier</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Standard Investor. Citizenship path within a few years with sufficient contributions to the nation's prosperity.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl border-2 text-center border-yellow-400 bg-yellow-50 hover-card">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><i class="fas fa-crown"></i></div>
+                            <div class="text-xs font-bold uppercase tracking-widest mb-2 opacity-60">80-90 points</div>
+                            <h3 class="text-lg font-bold mb-2">Gold Tier</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Strategic Partner. Priority processing. Citizenship is likely granted immediately with favorable offers.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl border-2 text-center border-indigo-300 bg-indigo-50 hover-card">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><i class="fas fa-gem"></i></div>
+                            <div class="text-xs font-bold uppercase tracking-widest mb-2 opacity-60">90+ points</div>
+                            <h3 class="text-lg font-bold mb-2">Diamond Tier</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Sovereign Asset. Reserved for the top 1% of global innovators and ultra-high-net-worth individuals.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="p-8 bg-white rounded-2xl border border-gray-100 text-center hover-card">
-                        <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm text-2xl" style="color: #C95A41"><i class="fas fa-chart-pie"></i></div>
-                        <h3 class="text-xl font-bold mb-3">The Scorecard</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">A quantitative validation of facts. We verify net worth, "hard science" qualifications (STEM preference), and family status. Subjective claims are ignored; only mathematically demonstrable value is considered.</p>
+            </section>
+            <section class="naturalization-section">
+                <div class="mx-auto px-6">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold mb-4">Naturalization Process</h2>
+                        <p class="text-gray-600">The process consists of three separate stages designed to ensure that applicants meet all financial, legal, and social requirements for citizenship. The three steps combine automated reviews, questionnaires, and a personal or online interview with an immigration officer. The combined score of these steps will determine the decision on the citizenship application.</p>
                     </div>
-                    <div class="p-8 bg-white rounded-2xl border border-gray-100 text-center hover-card">
-                        <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm text-2xl" style="color: #C95A41"><i class="fas fa-brain"></i></div>
-                        <h3 class="text-xl font-bold mb-3">The Gatekeeper AI</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">"The Gatekeeper" analyzes 15 years of digital footprints and financial transactions. It predicts "integration friction" by filtering out ideological radicalism, speculative risk-taking, and social volatility.</p>
-                    </div>
-                    <div class="p-8 bg-white rounded-2xl border border-gray-100 text-center hover-card">
-                        <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm text-2xl" style="color: #C95A41"><i class="fas fa-shield-halved"></i></div>
-                        <h3 class="text-xl font-bold mb-3">Alignment Interview</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">A personal assessment with a senior Immigration Officer. This phase tests loyalty, stoicism under stress, and acceptance of Waikiki's hierarchical social structure.</p>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="p-8 bg-white rounded-2xl border border-gray-100 text-center hover-card">
+                            <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm text-2xl" style="color: #C95A41"><i class="fas fa-chart-pie"></i></div>
+                            <h3 class="text-xl font-bold mb-3">The Scorecard</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">A quantitative validation of facts. We verify net worth, "hard science" qualifications (STEM preference), and family status. Subjective claims are ignored; only mathematically demonstrable value is considered.</p>
+                        </div>
+                        <div class="p-8 bg-white rounded-2xl border border-gray-100 text-center hover-card">
+                            <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm text-2xl" style="color: #C95A41"><i class="fas fa-brain"></i></div>
+                            <h3 class="text-xl font-bold mb-3">The Gatekeeper AI</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">"The Gatekeeper" analyzes 15 years of digital footprints and financial transactions. It predicts "integration friction" by filtering out ideological radicalism, speculative risk-taking, and social volatility.</p>
+                        </div>
+                        <div class="p-8 bg-white rounded-2xl border border-gray-100 text-center hover-card">
+                            <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm text-2xl" style="color: #C95A41"><i class="fas fa-shield-halved"></i></div>
+                            <h3 class="text-xl font-bold mb-3">Alignment Interview</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">A personal assessment with a senior Immigration Officer. This phase tests loyalty, stoicism under stress, and acceptance of Waikiki's hierarchical social structure.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section id="citizenship" class="fade-in bg-white">
-            <div class="faq-container">
-                <h2 class="faq-section-title">Naturalization and Citizenship</h2>
-                <details class="faq-item">
-                    <summary class="faq-question">
-                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/passport.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">What is the "Citizenship by Merit" philosophy?</span></div>
-                        <div class="faq-toggle"></div>
-                    </summary>
-                    <div class="faq-answer">
-                        <p>Waikiki operates a unique meritocratic naturalization system. Unlike traditional "golden visa" programs, citizenship is not merely bought but earned through a combination of economic contribution, professional expertise, and cultural compatibility. The program evaluates applicants via the Waikiki Merit Assessment Protocol, favoring those who act as "Strategic Partners" to the state.</p>
-                    </div>
-                </details>
-                <details class="faq-item">
-                    <summary class="faq-question">
-                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/layers-triple.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">What factors influence my W-MAP Score?</span></div>
-                        <div class="faq-toggle"></div>
-                    </summary>
-                    <div class="faq-answer">
-                        <p>The W-MAP algorithm weighs four key pillars: <br>1. <strong>Cultural Connection:</strong> Preference for nations with similar legal/cultural frameworks (Western/Developed Asian). <br>2. <strong>Strategic Skills:</strong> "Hard Sciences" (Fusion, AI, Medicine) are prioritized over social sciences. <br>3. <strong>Economic Power:</strong> Liquid assets and verified passive income. <br>4. <strong>Demographics:</strong> Bonus points for married couples with children, as families are the bedrock of our society. </p>
-                    </div>
-                </details>
-                <details class="faq-item">
-                    <summary class="faq-question">
-                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/eye-check.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">How does "The Gatekeeper" vetting work?</span></div>
-                        <div class="faq-toggle"></div>
-                    </summary>
-                    <div class="faq-answer">
-                        <p>Security is paramount. "The Gatekeeper" is our state-of-the-art AI vetting system that analyzes the applicant's digital footprint and financial history. It screens for "Cultural Entropy"—behaviors such as "cancel culture" activism, speculative gambling, or ideological radicalism that threaten our social harmony.</p>
-                    </div>
-                </details>
-                <details class="faq-item">
-                    <summary class="faq-question">
-                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/cash-multiple.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">What are the financial requirements?</span></div>
-                        <div class="faq-toggle"></div>
-                    </summary>
-                    <div class="faq-answer">
-                        <p>Costs are dynamic based on your W-MAP score. The base application fee is 1,000 WUD. Most applicants must purchase a Loyalty Bond ranging from $100,000 to $100,000,000 WUD, held for 5 years. Mandatory real estate investments and donations to the National Fund may also apply based on your assigned tier.</p>
-                    </div>
-                </details>
-                <details class="faq-item">
-                    <summary class="faq-question">
-                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/account-multiple-plus.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Does my family receive citizenship?</span></div>
-                        <div class="faq-toggle"></div>
-                    </summary>
-                    <div class="faq-answer">
-                        <p>Yes, Waikiki is strongly family-centric. The nuclear family (spouse and children) is included in the application. In fact, being married with children grants significant bonus points in the assessment. We view the family unit as a stabilizing force and essential for the nation's future.</p>
-                    </div>
-                </details>
-                <details class="faq-item myth-reality">
-                    <summary class="faq-question">
-                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/card-account-details.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Is dual citizenship allowed?</span></div>
-                        <div class="faq-toggle"></div>
-                    </summary>
-                    <div class="faq-answer">
-                        <p>Waikiki generally allows dual citizenship, recognizing the global nature of our elite citizens. However, in the event of a diplomatic or trade conflict between Waikiki and your country of origin, your primary loyalty must lie with Waikiki. Certain high-security government positions may require renouncing other allegiances.</p>
-                    </div>
-                </details>
-                <details class="faq-item myth-reality">
-                    <summary class="faq-question">
-                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/card-account-details.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Are there "Second Class" citizens?</span></div>
-                        <div class="faq-toggle"></div>
-                    </summary>
-                    <div class="faq-answer">
-                        <p>No. While the entry process is strictly hierarchical and selective, the outcome is egalitarian. Once the Oath of Citizenship is taken and the passport is issued, your "Score" is wiped from public records. Every naturalized citizen enjoys the exact same legal rights and protections as those born in Waikiki.</p>
-                    </div>
-                </details>
-            </div>
-        </section>
-    <!-- @chrome:next --><section class="next-chapter"><a class="next-card" href="military.html"><div class="next-media"><img src="../images/UniversalUpscaler_8a87a065-93bb-4106-9cdf-b81171bed0dd.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Continue the journey · Governance</span><span class="next-title">Military</span><span class="next-arrow" aria-hidden="true">→</span></span></a></section><!-- /@chrome:next -->
+            </section>
+            <section id="citizenship" class="fade-in bg-white">
+                <div class="faq-container">
+                    <h2 class="faq-section-title">Naturalization and Citizenship</h2>
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <div class="faq-icon"><img src="https://api.iconify.design/mdi/passport.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">What is the "Citizenship by Merit" philosophy?</span></div>
+                            <div class="faq-toggle"></div>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Waikiki operates a unique meritocratic naturalization system. Unlike traditional "golden visa" programs, citizenship is not merely bought but earned through a combination of economic contribution, professional expertise, and cultural compatibility. The program evaluates applicants via the Waikiki Merit Assessment Protocol, favoring those who act as "Strategic Partners" to the state.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <div class="faq-icon"><img src="https://api.iconify.design/mdi/layers-triple.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">What factors influence my W-MAP Score?</span></div>
+                            <div class="faq-toggle"></div>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>The W-MAP algorithm weighs four key pillars: <br>1. <strong>Cultural Connection:</strong> Preference for nations with similar legal/cultural frameworks (Western/Developed Asian). <br>2. <strong>Strategic Skills:</strong> "Hard Sciences" (Fusion, AI, Medicine) are prioritized over social sciences. <br>3. <strong>Economic Power:</strong> Liquid assets and verified passive income. <br>4. <strong>Demographics:</strong> Bonus points for married couples with children, as families are the bedrock of our society. </p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <div class="faq-icon"><img src="https://api.iconify.design/mdi/eye-check.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">How does "The Gatekeeper" vetting work?</span></div>
+                            <div class="faq-toggle"></div>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Security is paramount. "The Gatekeeper" is our state-of-the-art AI vetting system that analyzes the applicant's digital footprint and financial history. It screens for "Cultural Entropy"—behaviors such as "cancel culture" activism, speculative gambling, or ideological radicalism that threaten our social harmony.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <div class="faq-icon"><img src="https://api.iconify.design/mdi/cash-multiple.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">What are the financial requirements?</span></div>
+                            <div class="faq-toggle"></div>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Costs are dynamic based on your W-MAP score. The base application fee is 1,000 WUD. Most applicants must purchase a Loyalty Bond ranging from $100,000 to $100,000,000 WUD, held for 5 years. Mandatory real estate investments and donations to the National Fund may also apply based on your assigned tier.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <div class="faq-icon"><img src="https://api.iconify.design/mdi/account-multiple-plus.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Does my family receive citizenship?</span></div>
+                            <div class="faq-toggle"></div>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes, Waikiki is strongly family-centric. The nuclear family (spouse and children) is included in the application. In fact, being married with children grants significant bonus points in the assessment. We view the family unit as a stabilizing force and essential for the nation's future.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item myth-reality">
+                        <summary class="faq-question">
+                            <div class="faq-icon"><img src="https://api.iconify.design/mdi/card-account-details.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Is dual citizenship allowed?</span></div>
+                            <div class="faq-toggle"></div>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Waikiki generally allows dual citizenship, recognizing the global nature of our elite citizens. However, in the event of a diplomatic or trade conflict between Waikiki and your country of origin, your primary loyalty must lie with Waikiki. Certain high-security government positions may require renouncing other allegiances.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item myth-reality">
+                        <summary class="faq-question">
+                            <div class="faq-icon"><img src="https://api.iconify.design/mdi/card-account-details.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Are there "Second Class" citizens?</span></div>
+                            <div class="faq-toggle"></div>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>No. While the entry process is strictly hierarchical and selective, the outcome is egalitarian. Once the Oath of Citizenship is taken and the passport is issued, your "Score" is wiped from public records. Every naturalized citizen enjoys the exact same legal rights and protections as those born in Waikiki.</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+            <!-- @chrome:next -->
+            <section class="next-chapter"><a class="next-card" href="military.html">
+                    <div class="next-media"><img src="../images/UniversalUpscaler_8a87a065-93bb-4106-9cdf-b81171bed0dd.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Continue the journey · Governance</span><span class="next-title">Military</span><span class="next-arrow" aria-hidden="true">→</span></span>
+                </a></section><!-- /@chrome:next -->
     </main>
     <!-- @chrome:footer -->
     <footer class="site-footer">
-        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z"/></svg>
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand">
@@ -231,7 +310,57 @@
                     <p class="footer-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
                     <p class="footer-about">The official portal of the Sovereign Nation of Waikiki. Founded 10 March 1999 · Nova Aurelia. This site was generated with AI, any resemblance to real people, countries or institutions is just a coincidence.</p>
                 </div>
-                <div class="footer-col"><h2>Nation</h2><ul><li><a href="index.html">Home</a></li><li><a href="overview.html">Overview</a></li><li><a href="history.html">History</a></li><li><a href="society.html">Society</a></li><li><a href="culture.html">Culture</a></li><li><a href="ideology.html">Ideology</a></li></ul></div><div class="footer-col"><h2>Governance</h2><ul><li><a href="government.html">Government</a></li><li><a href="leadership.html">Leadership</a></li><li><a href="parties.html">Politics</a></li><li><a href="constitution.html">Constitution</a></li><li><a href="citizenship.html">Citizenship</a></li><li><a href="military.html">Military</a></li><li><a href="diplomacy.html">Diplomacy</a></li></ul></div><div class="footer-col"><h2>Prosperity</h2><ul><li><a href="economy.html">Economy</a></li><li><a href="wealth-fund.html">Wealth Fund</a></li><li><a href="infrastructure.html">Infrastructure</a></li><li><a href="plane.html">Diplomatic Fleet</a></li></ul></div><div class="footer-col"><h2>Royal Family</h2><ul><li><a href="dynasty.html">The Dynasty</a></li><li><a href="chease-and-jessica.html">Chease and Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li><li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li></ul></div><div class="footer-col"><h2>Visit</h2><ul><li><a href="tourism.html">Tourism</a></li><li><a href="sights.html">Sights</a></li><li><a href="travel-guide.html">Travel Guide</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+                <div class="footer-col">
+                    <h2>Nation</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="overview.html">Overview</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="society.html">Society</a></li>
+                        <li><a href="culture.html">Culture</a></li>
+                        <li><a href="ideology.html">Ideology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Governance</h2>
+                    <ul>
+                        <li><a href="government.html">Government</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="parties.html">Politics</a></li>
+                        <li><a href="constitution.html">Constitution</a></li>
+                        <li><a href="citizenship.html">Citizenship</a></li>
+                        <li><a href="military.html">Military</a></li>
+                        <li><a href="diplomacy.html">Diplomacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Prosperity</h2>
+                    <ul>
+                        <li><a href="economy.html">Economy</a></li>
+                        <li><a href="wealth-fund.html">Wealth Fund</a></li>
+                        <li><a href="infrastructure.html">Infrastructure</a></li>
+                        <li><a href="plane.html">Diplomatic Fleet</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Royal Family</h2>
+                    <ul>
+                        <li><a href="dynasty.html">The Dynasty</a></li>
+                        <li><a href="chease-and-jessica.html">Chease and Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Visit</h2>
+                    <ul>
+                        <li><a href="tourism.html">Tourism</a></li>
+                        <li><a href="sights.html">Sights</a></li>
+                        <li><a href="travel-guide.html">Travel Guide</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
             </div>
             <span class="footer-mega" aria-hidden="true">Waikiki</span>
             <div class="footer-bottom">
@@ -240,7 +369,10 @@
             </div>
         </div>
     </footer>
-    <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 54 54" aria-hidden="true"><circle class="ring-bg" cx="27" cy="27" r="24"/><circle class="ring" cx="27" cy="27" r="24"/></svg><span aria-hidden="true">↑</span></button>
+    <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span></button>
     <!-- /@chrome:footer -->
     </div>
     <div id="modal-root"></div>

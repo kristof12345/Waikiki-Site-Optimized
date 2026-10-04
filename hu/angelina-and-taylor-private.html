@@ -11,7 +11,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />
-    <script>(function(d){var h=d.documentElement;h.classList.add('js');try{if(localStorage.getItem('isDarkMode')==='true')h.classList.add('body-dark');if(localStorage.getItem('isAnimationDisabled')==='true')h.classList.add('no-reveal')}catch(e){}setTimeout(function(){if(!h.classList.contains('reveal-ready'))h.classList.remove('js')},3500)})(document);</script>
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
     <!-- /@chrome:head -->
     <title>Angelina és Taylor kapcsolata</title>
     <link rel="icon" href="../icons/favicon.ico" />
@@ -30,8 +42,20 @@
         <a href="index.html" class="brand" aria-label="Waikiki főoldal"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" decoding="async" /><span class="brand-word">Waikiki</span></a>
         <nav class="primary-nav" aria-label="Fő navigáció"><a href="tourism.html">Utazás</a><a href="society.html">Társadalom</a><a href="economy.html">Gazdaság</a><a href="government.html">Kormány</a><a href="history.html">Történelem</a><a href="dynasty.html" aria-current="page">Királyi Család</a></nav>
         <div class="header-actions">
-            <a class="lang-pill" href="../en/angelina-and-taylor-private.html" hreflang="en" lang="en" title="English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>EN</span></a>
-            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Éjszakai mód váltása"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><mask id="theme-mask"><rect width="24" height="24" fill="#fff"/><circle class="theme-cut" cx="26" cy="2" r="6" fill="#000"/></mask><circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)"/><g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5"/></g></svg></button>
+            <a class="lang-pill" href="../en/angelina-and-taylor-private.html" hreflang="en" lang="en" title="English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg><span>EN</span></a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Éjszakai mód váltása"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg></button>
             <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="menu-lines" aria-hidden="true"></span><span class="menu-label-open">Menü</span><span class="menu-label-close">Bezárás</span><span class="visually-hidden">Menü</span></button>
         </div>
     </header>
@@ -49,159 +73,229 @@
                 <p class="menu-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
                 <div class="menu-aside-row"><a class="menu-chip" href="../en/angelina-and-taylor-private.html" hreflang="en" lang="en">English</a><a class="menu-chip is-active" href="../hu/angelina-and-taylor-private.html" hreflang="hu" lang="hu">Magyar</a><button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Éjszakai mód</button><button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animáció</button></div>
             </aside>
-            <div class="menu-group"><h2>Nemzet</h2><ul><li><a href="index.html">Főoldal</a></li><li><a href="overview.html">Áttekintés</a></li><li><a href="history.html">Történelem</a></li><li><a href="society.html">Társadalom</a></li><li><a href="culture.html">Kultúra</a></li><li><a href="ideology.html">Ideológia</a></li></ul></div><div class="menu-group"><h2>Kormányzás</h2><ul><li><a href="government.html">Kormány</a></li><li><a href="leadership.html">Vezetés</a></li><li><a href="parties.html">Politika</a></li><li><a href="constitution.html">Alkotmány</a></li><li><a href="citizenship.html">Állampolgárság</a></li><li><a href="military.html">Hadsereg</a></li><li><a href="diplomacy.html">Diplomácia</a></li></ul></div><div class="menu-group"><h2>Jólét</h2><ul><li><a href="economy.html">Gazdaság</a></li><li><a href="wealth-fund.html">Vagyonalap</a></li><li><a href="infrastructure.html">Infrastruktúra</a></li><li><a href="plane.html">Diplomáciai Flotta</a></li></ul></div><div class="menu-group"><h2>Királyi Család</h2><ul><li><a href="dynasty.html">A Dinasztia</a></li><li><a href="chease-and-jessica.html">Chease és Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li><li><a href="angelina-and-taylor.html" aria-current="page">Angelina és Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li></ul></div><div class="menu-group"><h2>Látogatás</h2><ul><li><a href="tourism.html">Turizmus</a></li><li><a href="sights.html">Látnivalók</a></li><li><a href="travel-guide.html">Utazási Kalauz</a></li><li><a href="faq.html">GYIK</a></li></ul></div>
+            <div class="menu-group">
+                <h2>Nemzet</h2>
+                <ul>
+                    <li><a href="index.html">Főoldal</a></li>
+                    <li><a href="overview.html">Áttekintés</a></li>
+                    <li><a href="history.html">Történelem</a></li>
+                    <li><a href="society.html">Társadalom</a></li>
+                    <li><a href="culture.html">Kultúra</a></li>
+                    <li><a href="ideology.html">Ideológia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Kormányzás</h2>
+                <ul>
+                    <li><a href="government.html">Kormány</a></li>
+                    <li><a href="leadership.html">Vezetés</a></li>
+                    <li><a href="parties.html">Politika</a></li>
+                    <li><a href="constitution.html">Alkotmány</a></li>
+                    <li><a href="citizenship.html">Állampolgárság</a></li>
+                    <li><a href="military.html">Hadsereg</a></li>
+                    <li><a href="diplomacy.html">Diplomácia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Jólét</h2>
+                <ul>
+                    <li><a href="economy.html">Gazdaság</a></li>
+                    <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                    <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                    <li><a href="plane.html">Diplomáciai Flotta</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Királyi Család</h2>
+                <ul>
+                    <li><a href="dynasty.html">A Dinasztia</a></li>
+                    <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                    <li><a href="angelina-and-taylor.html" aria-current="page">Angelina és Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Látogatás</h2>
+                <ul>
+                    <li><a href="tourism.html">Turizmus</a></li>
+                    <li><a href="sights.html">Látnivalók</a></li>
+                    <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                    <li><a href="faq.html">GYIK</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- /@chrome:header -->
     <main id="main">
-    
-    <section class="hero" data-hero><div class="hero-media"><img src="../images/UniversalUpscaler_1bb2bf9f-cacb-40a1-b403-cd87a15ad767.jpg" alt="Angelina és Taylor Közös Célban Gyökerező Szerelem" fetchpriority="high" decoding="async" /></div><div class="hero-veil"></div><div class="hero-content"><span class="hero-eyebrow">Természetes kötelék</span><h1 class="hero-title"><em>Angelina és Taylor</em><br>Közös Célban Gyökerező Szerelem</h1><p class="hero-lead">Egy szenátori pár meghitt portréja, amelyben az intellektuális szövetség, a személyes odaadás és a közjó iránti felelősség egyszerre van jelen. Kapcsolatuk az egyetemi vitakörökből indult, majd a jótékonysági missziók, a környezetvédelmi kezdeményezések és a közös diplomáciai utak során vált tartós, példaértékű partnerséggé.</p><div class="hero-actions" style="visibility: hidden;">
-                <button class="hero-btn open-assessment" style="background-color: #11605B">További információ</button>
-            </div></div><button class="hero-scroll" type="button">Görgetés</button></section>
-    <!-- @chrome:subnav --><nav class="subnav" aria-label="A királyi pár oldalai"><ul class="subnav-list"><li><a href="angelina-and-taylor.html">Áttekintés</a></li><li><a href="angelina-and-taylor-detailed.html">Történet</a></li><li><a href="angelina-and-taylor-gallery.html">Galéria</a></li><li><a href="angelina-and-taylor-private.html" aria-current="page">Magánélet</a></li></ul></nav><!-- /@chrome:subnav -->
-    <!-- Private -->
-    <section class="private-section">
-        <div class="private-container">
-            <div class="private-intro">
-                <h2>Egy Példaértékű Partnerség</h2>
-                <p>Angelina Chease és Taylor Lautner szerelme olyan egységet testesít meg, ahol az intellektuális egyenrangúság, a közös célok és a személyes hűség teremtenek stabil alapot. A Waikiki Economics University Global Futures Clubjában kezdődő ismeretségük az évek során az ország egyik legtiszteltebb kapcsolatává érett, amelyben a magánéleti összhang folyamatos közéleti felelősségvállalással párosul. Közös munkájukban a környezetvédelem, az ifjúsági programok támogatása és a nemzetközi humanitárius szerepvállalás kiemelt helyet kap.</p>
-            </div>
-            <div class="content-grid">
-                <div class="content-block">
-                    <h3>Érzelmi Támogatás és Mindennapi Harmónia</h3>
-                    <p>Taylor Lautner rendíthetetlen nyugalmat és erős érzelmi támaszt nyújt Angelina számára a szenátusi munka, a diplomáciai szereplések és az üzleti döntések sűrű időszakaiban. A mindennapokban ez apró, de következetes gesztusokban jelenik meg a közös reggeli egyeztetésekben, a hosszú beszélgetésekben és abban a figyelemben, amellyel Taylor végigkíséri Angelina közéleti feladatait. Ugyanez a támogatás a nagyobb vállalások idején is megmutatkozott, a Venezuelai humanitárius misszió szervezésétől egészen a Covid-időszak egészségügyi és kommunikációs terheiig. Kapcsolatuk ereje éppen abban áll, hogy a nyilvános felelősséget és a személyes gondoskodást egységként kezelik. Kapcsolatuk ebben a kölcsönös őszinteségben virágzik, ahol mindkét fél egyforma mértékben elkötelezett a másik jólétének ápolása iránt.</p>
+        <section class="hero" data-hero>
+            <div class="hero-media"><img src="../images/UniversalUpscaler_1bb2bf9f-cacb-40a1-b403-cd87a15ad767.jpg" alt="Angelina és Taylor Közös Célban Gyökerező Szerelem" fetchpriority="high" decoding="async" /></div>
+            <div class="hero-veil"></div>
+            <div class="hero-content"><span class="hero-eyebrow">Természetes kötelék</span>
+                <h1 class="hero-title"><em>Angelina és Taylor</em><br>Közös Célban Gyökerező Szerelem</h1>
+                <p class="hero-lead">Egy szenátori pár meghitt portréja, amelyben az intellektuális szövetség, a személyes odaadás és a közjó iránti felelősség egyszerre van jelen. Kapcsolatuk az egyetemi vitakörökből indult, majd a jótékonysági missziók, a környezetvédelmi kezdeményezések és a közös diplomáciai utak során vált tartós, példaértékű partnerséggé.</p>
+                <div class="hero-actions" style="visibility: hidden;">
+                    <button class="hero-btn open-assessment" style="background-color: #11605B">További információ</button>
                 </div>
-                <div class="content-block">
-                    <h3>Közös Értékek és Céltudatos Kalandok</h3>
-                    <p>Angelina és Taylor kapcsolatát az teszi különlegessé, hogy a személyes meggyőződés és a közéleti felelősség ritka következetességgel találkozik bennük. Szerelmük közös mozgatóerő, amely kézzelfogható ügyekben ölt testet. Együtt indítottak óceáni műanyaggyűjtő kampányokat Waikiki partjain, támogatták a fiatalok sportmotivációs programjait, és rendszeresen kiálltak a zöld infrastruktúra fejlesztése mellett. A világ első nyilvános Hyperloop-vonalának alapkőletételétől a fenntartható ipari reformokig olyan kezdeményezések mellett álltak ki, amelyek egyszerre szolgálják a fejlődést és a természeti értékek megőrzését. Egymás mellett fedezik fel az Amazonas-esőerdőt, szörföznek az érintetlen partvidéken, hogy kapcsolódjanak ahhoz a természethez, amelynek védelmét politikai életüket szentelik. Minden kalandon a kötelékük a felfedezés közös élményén keresztül mélyül.</p>
+            </div><button class="hero-scroll" type="button">Görgetés</button>
+        </section>
+        <!-- @chrome:subnav -->
+        <nav class="subnav" aria-label="A királyi pár oldalai">
+            <ul class="subnav-list">
+                <li><a href="angelina-and-taylor.html">Áttekintés</a></li>
+                <li><a href="angelina-and-taylor-detailed.html">Történet</a></li>
+                <li><a href="angelina-and-taylor-gallery.html">Galéria</a></li>
+                <li><a href="angelina-and-taylor-private.html" aria-current="page">Magánélet</a></li>
+            </ul>
+        </nav><!-- /@chrome:subnav -->
+        <!-- Private -->
+        <section class="private-section">
+            <div class="private-container">
+                <div class="private-intro">
+                    <h2>Egy Példaértékű Partnerség</h2>
+                    <p>Angelina Chease és Taylor Lautner szerelme olyan egységet testesít meg, ahol az intellektuális egyenrangúság, a közös célok és a személyes hűség teremtenek stabil alapot. A Waikiki Economics University Global Futures Clubjában kezdődő ismeretségük az évek során az ország egyik legtiszteltebb kapcsolatává érett, amelyben a magánéleti összhang folyamatos közéleti felelősségvállalással párosul. Közös munkájukban a környezetvédelem, az ifjúsági programok támogatása és a nemzetközi humanitárius szerepvállalás kiemelt helyet kap.</p>
                 </div>
-                <div class="content-block">
-                    <h3>Intim Közelség és Gondoskodás</h3>
-                    <p>Angelina és Taylor kapcsolatának intim oldala a kölcsönös bizalom és a következetes tisztelet természetes következménye. A közélettől távolabb lévő csendesebb órákban kapcsolatuk leggyengédebb formájában nyilvánul meg. Taylor figyelmes gondossága ezekben a privát pillanatokban is ugyanolyan átgondoltsággal mutatkozik meg, mint mindenben, gondoskodva arról, hogy Angelina valóban szeretettnek, megbecsültnek és felszabadultnak érezze magát. A hosszú munkanapok utáni csendes esték, a közös olvasás, a visszafogott elvonulások és az egymásra hangolt figyelem mind azt mutatják, hogy kapcsolatuk nemcsak látványos eseményekben, hanem a hétköznapi gondoskodásban is erős. Ez a nyugodt belső egyensúly ad tartást közös szerepvállalásuknak is, amikor a világszínpadról az otthon melegébe lépnek át.</p>
+                <div class="content-grid">
+                    <div class="content-block">
+                        <h3>Érzelmi Támogatás és Mindennapi Harmónia</h3>
+                        <p>Taylor Lautner rendíthetetlen nyugalmat és erős érzelmi támaszt nyújt Angelina számára a szenátusi munka, a diplomáciai szereplések és az üzleti döntések sűrű időszakaiban. A mindennapokban ez apró, de következetes gesztusokban jelenik meg a közös reggeli egyeztetésekben, a hosszú beszélgetésekben és abban a figyelemben, amellyel Taylor végigkíséri Angelina közéleti feladatait. Ugyanez a támogatás a nagyobb vállalások idején is megmutatkozott, a Venezuelai humanitárius misszió szervezésétől egészen a Covid-időszak egészségügyi és kommunikációs terheiig. Kapcsolatuk ereje éppen abban áll, hogy a nyilvános felelősséget és a személyes gondoskodást egységként kezelik. Kapcsolatuk ebben a kölcsönös őszinteségben virágzik, ahol mindkét fél egyforma mértékben elkötelezett a másik jólétének ápolása iránt.</p>
+                    </div>
+                    <div class="content-block">
+                        <h3>Közös Értékek és Céltudatos Kalandok</h3>
+                        <p>Angelina és Taylor kapcsolatát az teszi különlegessé, hogy a személyes meggyőződés és a közéleti felelősség ritka következetességgel találkozik bennük. Szerelmük közös mozgatóerő, amely kézzelfogható ügyekben ölt testet. Együtt indítottak óceáni műanyaggyűjtő kampányokat Waikiki partjain, támogatták a fiatalok sportmotivációs programjait, és rendszeresen kiálltak a zöld infrastruktúra fejlesztése mellett. A világ első nyilvános Hyperloop-vonalának alapkőletételétől a fenntartható ipari reformokig olyan kezdeményezések mellett álltak ki, amelyek egyszerre szolgálják a fejlődést és a természeti értékek megőrzését. Egymás mellett fedezik fel az Amazonas-esőerdőt, szörföznek az érintetlen partvidéken, hogy kapcsolódjanak ahhoz a természethez, amelynek védelmét politikai életüket szentelik. Minden kalandon a kötelékük a felfedezés közös élményén keresztül mélyül.</p>
+                    </div>
+                    <div class="content-block">
+                        <h3>Intim Közelség és Gondoskodás</h3>
+                        <p>Angelina és Taylor kapcsolatának intim oldala a kölcsönös bizalom és a következetes tisztelet természetes következménye. A közélettől távolabb lévő csendesebb órákban kapcsolatuk leggyengédebb formájában nyilvánul meg. Taylor figyelmes gondossága ezekben a privát pillanatokban is ugyanolyan átgondoltsággal mutatkozik meg, mint mindenben, gondoskodva arról, hogy Angelina valóban szeretettnek, megbecsültnek és felszabadultnak érezze magát. A hosszú munkanapok utáni csendes esték, a közös olvasás, a visszafogott elvonulások és az egymásra hangolt figyelem mind azt mutatják, hogy kapcsolatuk nemcsak látványos eseményekben, hanem a hétköznapi gondoskodásban is erős. Ez a nyugodt belső egyensúly ad tartást közös szerepvállalásuknak is, amikor a világszínpadról az otthon melegébe lépnek át.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="image-gallery">
-                <div class="gallery-item">
-                    <img src="../images/UniversalUpscaler_9085a6d0-d075-4c24-9d36-309989af3aca.jpg">
-                    <div class="gallery-overlay">
-                        <h4>Harmonikus Egység</h4>
-                        <p>A közös cél és a szeretet kifejeződése</p>
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <img src="../images/UniversalUpscaler_9085a6d0-d075-4c24-9d36-309989af3aca.jpg">
+                        <div class="gallery-overlay">
+                            <h4>Harmonikus Egység</h4>
+                            <p>A közös cél és a szeretet kifejeződése</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Intimate -->
-    <section class="intimate-section">
-        <div class="private-container">
-            <div class="private-intro">
-                <h2>Kapcsolatuk Mélyebb Dimenziói</h2>
-                <p>Angelina és Taylor kapcsolata valódi egyenlőségre épül, ahol mindkét fél teljes súllyal van jelen a közös döntésekben. Angelina stratégiai gondolkodása és szakpolitikai fókusza Taylor higgadt, gyakorlatias megközelítésével egészül ki, így egyikük sem háttérszereplő a másik mellett. Partnerségük állandó párbeszédre épül, amely a közéletben és a magánéletben is kiegyensúlyozott. Kötelékük mélysége a közös eredmények mellett a mindennapi, csendes pillanatokban is jól látható, amikor szerelmük a legigazibb arcán mutatkozik meg.</p>
-            </div>
-            <div class="content-grid">
-                <div class="content-block">
-                    <h3>Egyenlő Partnerség és Kölcsönös Inspiráció</h3>
-                    <p>Kapcsolatuk egyik legfontosabb jellemzője a valódi partnerség. A Szenátusban Taylor ugyanolyan felelősséggel dolgozik a közbiztonsági és ifjúsági programokon, mint Angelina a zöld pénzügyi és környezetvédelmi ügyeken. Közös munkájukban rendszeresen kiegészítik egymást, legyen szó a fenntartható ipari törvénycsomagokról, a közösségi kezdeményezésekről vagy a hosszú távú infrastruktúrafejlesztésről. Egymást nemcsak támogatják, hanem szakmailag is folyamatosan inspirálják, ami tartós dinamizmust ad a kapcsolatuknak. Intellektuálisan kihívják egymást, szenvedélyesen vitáznak a szakpolitikáról, és egymás győzelmeit őszinte büszkeséggel ünneplik. Ez a kölcsönös inspiráció azt jelenti, hogy kapcsolatuk soha nem stagnál, hanem mindig fejlődik, mindig valami felé tart, amit egyikőjük sem érhetne el a másik nélkül.</p>
+        </section>
+        <!-- Intimate -->
+        <section class="intimate-section">
+            <div class="private-container">
+                <div class="private-intro">
+                    <h2>Kapcsolatuk Mélyebb Dimenziói</h2>
+                    <p>Angelina és Taylor kapcsolata valódi egyenlőségre épül, ahol mindkét fél teljes súllyal van jelen a közös döntésekben. Angelina stratégiai gondolkodása és szakpolitikai fókusza Taylor higgadt, gyakorlatias megközelítésével egészül ki, így egyikük sem háttérszereplő a másik mellett. Partnerségük állandó párbeszédre épül, amely a közéletben és a magánéletben is kiegyensúlyozott. Kötelékük mélysége a közös eredmények mellett a mindennapi, csendes pillanatokban is jól látható, amikor szerelmük a legigazibb arcán mutatkozik meg.</p>
                 </div>
-                <div class="content-block">
-                    <h3>Bizalom és Közös Tér</h3>
-                    <p>A két szenátor nyilvános szerepe mögött egy tudatosan védett magánvilág húzódik, amelyet bizalom és érzelmi biztonság tart össze. A politikai figyelem és az állandó közéleti terhelés mellett ez a közös tér biztosítja számukra a valódi regenerációt. Taylor Angelina számára következetesen olyan partner, akivel szűrők nélkül lehet gondolkodni és dönteni, Angelina pedig ugyanilyen nyitottsággal támasza Taylornak a nagy felelősséggel járó időszakokban. Ez a bizalom egy olyan intimitást hoz létre, amely messze mélyebb a közös érdeklődési körnél vagy az egymást kiegészítő képességeknél. Ez annak a két embernek az intimitása, akik újra és újra, tudatosan választják egymást biztonságos kikötőként. Ezekben az önfeledt pillanatokban szerelmük a maga legelevenebb valójában mutatkozik meg, mentes a protokoll és az elvárások korlátaitól.</p>
+                <div class="content-grid">
+                    <div class="content-block">
+                        <h3>Egyenlő Partnerség és Kölcsönös Inspiráció</h3>
+                        <p>Kapcsolatuk egyik legfontosabb jellemzője a valódi partnerség. A Szenátusban Taylor ugyanolyan felelősséggel dolgozik a közbiztonsági és ifjúsági programokon, mint Angelina a zöld pénzügyi és környezetvédelmi ügyeken. Közös munkájukban rendszeresen kiegészítik egymást, legyen szó a fenntartható ipari törvénycsomagokról, a közösségi kezdeményezésekről vagy a hosszú távú infrastruktúrafejlesztésről. Egymást nemcsak támogatják, hanem szakmailag is folyamatosan inspirálják, ami tartós dinamizmust ad a kapcsolatuknak. Intellektuálisan kihívják egymást, szenvedélyesen vitáznak a szakpolitikáról, és egymás győzelmeit őszinte büszkeséggel ünneplik. Ez a kölcsönös inspiráció azt jelenti, hogy kapcsolatuk soha nem stagnál, hanem mindig fejlődik, mindig valami felé tart, amit egyikőjük sem érhetne el a másik nélkül.</p>
+                    </div>
+                    <div class="content-block">
+                        <h3>Bizalom és Közös Tér</h3>
+                        <p>A két szenátor nyilvános szerepe mögött egy tudatosan védett magánvilág húzódik, amelyet bizalom és érzelmi biztonság tart össze. A politikai figyelem és az állandó közéleti terhelés mellett ez a közös tér biztosítja számukra a valódi regenerációt. Taylor Angelina számára következetesen olyan partner, akivel szűrők nélkül lehet gondolkodni és dönteni, Angelina pedig ugyanilyen nyitottsággal támasza Taylornak a nagy felelősséggel járó időszakokban. Ez a bizalom egy olyan intimitást hoz létre, amely messze mélyebb a közös érdeklődési körnél vagy az egymást kiegészítő képességeknél. Ez annak a két embernek az intimitása, akik újra és újra, tudatosan választják egymást biztonságos kikötőként. Ezekben az önfeledt pillanatokban szerelmük a maga legelevenebb valójában mutatkozik meg, mentes a protokoll és az elvárások korlátaitól.</p>
+                    </div>
+                    <div class="content-block">
+                        <h3>Szenvedély, Közelség és Öröm</h3>
+                        <p>Angelina és Taylor kapcsolatát az egyetemi évek óta változatlan derű és egymás társaságában megélt öröm jellemzi, ami semmit nem halványult az évtizedes együttlétük alatt. A közös futások Nova Aurelia homokos partvidékén, az esti beszélgetések a csillagos ég alatt és a spontán utazások mind olyan pillanatok, amelyekben a kölcsönös figyelem természetes marad. Vonzalmuk nemcsak intellektuális, hanem a mindennapi gyengédségben és az egymás felé forduló jelenlétben is erősen megmutatkozik. Minden közösen vállalt feladat, legyen az közösségi program vagy nemzetközi szereplés, tovább mélyíti ezt a szövetséget. Minden közösen megtett diplomáciai út, minden felkarolt környezetvédelmi ügy és minden csendes együtt töltött este újabb réteget ad egy kapcsolatnak, amely az idő múlásával egyre gazdagabbá válik.</p>
+                    </div>
                 </div>
-                <div class="content-block">
-                    <h3>Szenvedély, Közelség és Öröm</h3>
-                    <p>Angelina és Taylor kapcsolatát az egyetemi évek óta változatlan derű és egymás társaságában megélt öröm jellemzi, ami semmit nem halványult az évtizedes együttlétük alatt. A közös futások Nova Aurelia homokos partvidékén, az esti beszélgetések a csillagos ég alatt és a spontán utazások mind olyan pillanatok, amelyekben a kölcsönös figyelem természetes marad. Vonzalmuk nemcsak intellektuális, hanem a mindennapi gyengédségben és az egymás felé forduló jelenlétben is erősen megmutatkozik. Minden közösen vállalt feladat, legyen az közösségi program vagy nemzetközi szereplés, tovább mélyíti ezt a szövetséget. Minden közösen megtett diplomáciai út, minden felkarolt környezetvédelmi ügy és minden csendes együtt töltött este újabb réteget ad egy kapcsolatnak, amely az idő múlásával egyre gazdagabbá válik.</p>
-                </div>
-            </div>
-            <div class="image-gallery">
-                <div class="gallery-item">
-                    <img src="../images/UniversalUpscaler_Legacy_Cinematic_2_3ba64daa-8bd0-40ee-85ea-9013eae85c2e.jpg">
-                    <div class="gallery-overlay">
-                        <h4>Kettejük Világa</h4>
-                        <p>Ahol a szeretet és a közös cél találkozik</p>
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <img src="../images/UniversalUpscaler_Legacy_Cinematic_2_3ba64daa-8bd0-40ee-85ea-9013eae85c2e.jpg">
+                        <div class="gallery-overlay">
+                            <h4>Kettejük Világa</h4>
+                            <p>Ahol a szeretet és a közös cél találkozik</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Adventures -->
-    <section class="adventure-section">
-        <div class="private-container">
-            <div class="private-intro">
-                <h2>Közös Kalandok és Utazások</h2>
-                <p>A nyilvános szerepeiken túl Angelina és Taylor az utazásokat tudatosan a tanulás, a diplomácia és a természetvédelmi tapasztalatszerzés eszközévé tették. Az Isla de la Estrella napsütötte partjától, az Amazonas sűrű lombkoronáján át, a Japán diplomáciai küldetésig, majd a 2021-es űrmisszióig minden útjuk egyszerre volt személyes és közösségi jelentőségű. Kalandjaik visszatérő üzenete, hogy a világ felfedezése és tevékeny megismerése a felelősségvállalás nélkül nem lehetséges.</p>
-            </div>
-            <div class="content-grid">
-                <div class="content-block">
-                    <h3>Környezetvédelmi Expedíciók és Tudományos Utak</h3>
-                    <p>Kapcsolatuk több meghatározó szakasza természeti és tudományos környezetben mélyült el. Az Amazonasban kutatócsoportokkal dolgoztak ritka fajok megfigyelésén, antarktiszi expedícióikon pedig közvetlen tapasztalatot szereztek a sérülékeny ökoszisztémákról és az éghajlati változások helyi hatásairól. A terepmunkát minden alkalommal részletes szakpolitikai egyeztetések követték, amelyek során a megszerzett adatokból konkrét hazai javaslatok készültek a partvédelem, a hulladékkezelés és a vizes élőhelyek helyreállítása érdekében. Ezt a szemléletet hazai programokban is következetesen érvényesítették, közös parttisztítási akciókat szerveztek, és a műanyagszennyezés visszaszorítását célzó kampányok élére álltak. Számukra a környezetvédelem nem retorikai elem, hanem mérhető társadalmi cselekvés.</p>
+        </section>
+        <!-- Adventures -->
+        <section class="adventure-section">
+            <div class="private-container">
+                <div class="private-intro">
+                    <h2>Közös Kalandok és Utazások</h2>
+                    <p>A nyilvános szerepeiken túl Angelina és Taylor az utazásokat tudatosan a tanulás, a diplomácia és a természetvédelmi tapasztalatszerzés eszközévé tették. Az Isla de la Estrella napsütötte partjától, az Amazonas sűrű lombkoronáján át, a Japán diplomáciai küldetésig, majd a 2021-es űrmisszióig minden útjuk egyszerre volt személyes és közösségi jelentőségű. Kalandjaik visszatérő üzenete, hogy a világ felfedezése és tevékeny megismerése a felelősségvállalás nélkül nem lehetséges.</p>
                 </div>
-                <div class="content-block">
-                    <h3>Közös Űrutazás</h3>
-                    <p>2021-ben Angelina és Taylor tíznapos küldetést teljesített a Waikiki Nemzeti Űrállomáson. A brazíliai kiképzőközpontban végzett intenzív felkészülést, majd pedig a SpaceX Falcon 9 rakétával az űrállomásra érkezést követően űrsétát is végrehajtottak, miközben napi élő bejelentkezésekkel tartottak fenntarthatósági és természettudományos órákat Waikiki iskoláinak. A fedélzeten végzett programjuk a mikrogravitációs kísérletek kommunikálására, az űrinfrastruktúra társadalmi hasznának bemutatására és a fiatal kutatói pályák népszerűsítésére épült. Hazatérésük után országos előadássorozatban ismertették, miként kapcsolódik az űrkutatás a hétköznapi életminőség javításához az egészségügyi innovációtól az energiahatékonysági megoldásokig. A misszió számukra egyszerre volt technológiai mérföldkő és közszolgálati vállalás.</p>
+                <div class="content-grid">
+                    <div class="content-block">
+                        <h3>Környezetvédelmi Expedíciók és Tudományos Utak</h3>
+                        <p>Kapcsolatuk több meghatározó szakasza természeti és tudományos környezetben mélyült el. Az Amazonasban kutatócsoportokkal dolgoztak ritka fajok megfigyelésén, antarktiszi expedícióikon pedig közvetlen tapasztalatot szereztek a sérülékeny ökoszisztémákról és az éghajlati változások helyi hatásairól. A terepmunkát minden alkalommal részletes szakpolitikai egyeztetések követték, amelyek során a megszerzett adatokból konkrét hazai javaslatok készültek a partvédelem, a hulladékkezelés és a vizes élőhelyek helyreállítása érdekében. Ezt a szemléletet hazai programokban is következetesen érvényesítették, közös parttisztítási akciókat szerveztek, és a műanyagszennyezés visszaszorítását célzó kampányok élére álltak. Számukra a környezetvédelem nem retorikai elem, hanem mérhető társadalmi cselekvés.</p>
+                    </div>
+                    <div class="content-block">
+                        <h3>Közös Űrutazás</h3>
+                        <p>2021-ben Angelina és Taylor tíznapos küldetést teljesített a Waikiki Nemzeti Űrállomáson. A brazíliai kiképzőközpontban végzett intenzív felkészülést, majd pedig a SpaceX Falcon 9 rakétával az űrállomásra érkezést követően űrsétát is végrehajtottak, miközben napi élő bejelentkezésekkel tartottak fenntarthatósági és természettudományos órákat Waikiki iskoláinak. A fedélzeten végzett programjuk a mikrogravitációs kísérletek kommunikálására, az űrinfrastruktúra társadalmi hasznának bemutatására és a fiatal kutatói pályák népszerűsítésére épült. Hazatérésük után országos előadássorozatban ismertették, miként kapcsolódik az űrkutatás a hétköznapi életminőség javításához az egészségügyi innovációtól az energiahatékonysági megoldásokig. A misszió számukra egyszerre volt technológiai mérföldkő és közszolgálati vállalás.</p>
+                    </div>
+                    <div class="content-block">
+                        <h3>Kulturális Felfedezések és Közös Szenvedélyek</h3>
+                        <p>Angelina és Taylor utazásait kulturális kíváncsiság és határozott diplomáciai célok jellemzik. A 2014-es ázsiai körút során Kiotó, Szingapúr, Agra és Bangkok állomásain személyes tapasztalatot gyűjtöttek a kulturális örökség és a modern városfejlesztés kapcsolatáról. Jelen voltak a Nova Aureliában megrendezett olimpián, 2021-ben pedig japán diplomáciai küldetésben vettek részt. Minden ilyen út során tudatosan építették a kulturális párbeszédet, oktatási partnerekkel találkoztak, valamint olyan projekteket támogattak, amelyek a fiatal generációk nyitottságát erősítik. Kiemelik, hogy a diplomácia hitelességét a közvetlen emberi kapcsolatok adják, ezért a protokolláris események mellett rendszeresen vállalnak részvételt közösségi fórumokon és ifjúsági programokban is. Az utazások mellett rendszeresen támogatnak sportkezdeményezéseket és oktatási programokat, így jelenlétük nemcsak reprezentatív, hanem társadalmi hatású is.</p>
+                    </div>
                 </div>
-                <div class="content-block">
-                    <h3>Kulturális Felfedezések és Közös Szenvedélyek</h3>
-                    <p>Angelina és Taylor utazásait kulturális kíváncsiság és határozott diplomáciai célok jellemzik. A 2014-es ázsiai körút során Kiotó, Szingapúr, Agra és Bangkok állomásain személyes tapasztalatot gyűjtöttek a kulturális örökség és a modern városfejlesztés kapcsolatáról. Jelen voltak a Nova Aureliában megrendezett olimpián, 2021-ben pedig japán diplomáciai küldetésben vettek részt. Minden ilyen út során tudatosan építették a kulturális párbeszédet, oktatási partnerekkel találkoztak, valamint olyan projekteket támogattak, amelyek a fiatal generációk nyitottságát erősítik. Kiemelik, hogy a diplomácia hitelességét a közvetlen emberi kapcsolatok adják, ezért a protokolláris események mellett rendszeresen vállalnak részvételt közösségi fórumokon és ifjúsági programokban is. Az utazások mellett rendszeresen támogatnak sportkezdeményezéseket és oktatási programokat, így jelenlétük nemcsak reprezentatív, hanem társadalmi hatású is.</p>
-                </div>
-            </div>
-            <div class="image-gallery">
-                <div class="gallery-item">
-                    <img src="../images/UniversalUpscaler_b16892e2-4068-4b41-8740-37ac7c1d19c8.jpg">
-                    <div class="gallery-overlay">
-                        <h4>Együtt a Világ Minden Táján</h4>
-                        <p>A közös felfedezések erősítik a köteléket</p>
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <img src="../images/UniversalUpscaler_b16892e2-4068-4b41-8740-37ac7c1d19c8.jpg">
+                        <div class="gallery-overlay">
+                            <h4>Együtt a Világ Minden Táján</h4>
+                            <p>A közös felfedezések erősítik a köteléket</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Milestones -->
-    <section class="milestones-section">
-        <div class="private-container">
-            <div class="private-intro">
-                <h2>A Kapcsolat Mérföldkövei</h2>
-                <p>Angelina Chease és Taylor Lautner szerelmi története a Waikiki királyi család egyik legmeghatározóbb közéleti és személyes narratívája. Az egyetemi találkozástól a szenátori kinevezésen át a közös környezetvédelmi és jótékonysági programokig kapcsolatuk minden szakasza a fejlődésről, az együtt vállalt felelősségről és a megóvni kívánt világ iránti egyre mélyülő hosszú távú elköteleződésről szól.</p>
-            </div>
-            <div class="content-grid">
-                <div class="content-block">
-                    <h3>Elmék Találkozása</h3>
-                    <p>Angelina és Taylor a Waikiki Economics University Global Futures Clubjában találkoztak először, ahol a globális társadalmi kihívásokról és a fenntartható fejlődésről szóló szenvedélyes viták szinte azonnal összekapcsolták őket. Taylor, aki már elért a nemzetközi hírnévig filmsztárként, a Hollywood csillogása helyett a Waikikit választotta, az ország ambiciózus víziója és szellemi energiája által vonzva. Ebben a közegben találkozott Angelinával, aki ragaszkodott ahhoz, hogy királyi státusza ellenére átlagos diákként kezeljék. Első beszélgetéseik a közgazdaságtant, a környezetpolitikát és a globális kormányzás jövőjét ölelték fel, és mindketten gyorsan felismerték, hogy ritka intellektuális egyenrangú társra leltek egymásban. Ami baráti ismeretségként kezdődött, fokozatosan valami sokkal jelentősebbé mélyült, amelyet az Isla de la Estrellára tett elvonulásuk pecsételt meg, ahol a média szorítása nélkül kapcsolódtak egymáshoz.</p>
+        </section>
+        <!-- Milestones -->
+        <section class="milestones-section">
+            <div class="private-container">
+                <div class="private-intro">
+                    <h2>A Kapcsolat Mérföldkövei</h2>
+                    <p>Angelina Chease és Taylor Lautner szerelmi története a Waikiki királyi család egyik legmeghatározóbb közéleti és személyes narratívája. Az egyetemi találkozástól a szenátori kinevezésen át a közös környezetvédelmi és jótékonysági programokig kapcsolatuk minden szakasza a fejlődésről, az együtt vállalt felelősségről és a megóvni kívánt világ iránti egyre mélyülő hosszú távú elköteleződésről szól.</p>
                 </div>
-                <div class="content-block">
-                    <h3>A Partnerség Formalizálása</h3>
-                    <p>Mire Angelina kitüntetéssel elvégezte tanulmányait és megszerezte a nemzetközi gazdaság mesteri fokozatát, ő és Taylor rendkívüli mélységű kapcsolatot épített fel. Első szenátorokká való kinevezésük 2015-ben, a Szenátus Chease Young általi megalapításakor, a nyilvános közös partnerségük kezdetét jelölte. Angelina első felszólalásában a digitális oktatás és a társadalmi igazságosság vízióját vázolta fel, Taylor pedig ezzel egy időben a közbiztonság reformjáért és az ifjúsági programokért vállalt mandátumot. A szenátusi ülésteremben egymás mellett dolgozva, a Waikiki Fenntartható Iparprogram és a mérföldkőnek számító Tesla-Waikiki Zöld Energia Megállapodás zászlóvivőiként bebizonyították, hogy kapcsolatuk nemcsak személyes kötelék, hanem félelmetesen hatékony szakmai szövetség is. Hivatalos partnerségük a következő évek során Waikiki politikai tájképének egyik meghatározó jegyévé vált.</p>
+                <div class="content-grid">
+                    <div class="content-block">
+                        <h3>Elmék Találkozása</h3>
+                        <p>Angelina és Taylor a Waikiki Economics University Global Futures Clubjában találkoztak először, ahol a globális társadalmi kihívásokról és a fenntartható fejlődésről szóló szenvedélyes viták szinte azonnal összekapcsolták őket. Taylor, aki már elért a nemzetközi hírnévig filmsztárként, a Hollywood csillogása helyett a Waikikit választotta, az ország ambiciózus víziója és szellemi energiája által vonzva. Ebben a közegben találkozott Angelinával, aki ragaszkodott ahhoz, hogy királyi státusza ellenére átlagos diákként kezeljék. Első beszélgetéseik a közgazdaságtant, a környezetpolitikát és a globális kormányzás jövőjét ölelték fel, és mindketten gyorsan felismerték, hogy ritka intellektuális egyenrangú társra leltek egymásban. Ami baráti ismeretségként kezdődött, fokozatosan valami sokkal jelentősebbé mélyült, amelyet az Isla de la Estrellára tett elvonulásuk pecsételt meg, ahol a média szorítása nélkül kapcsolódtak egymáshoz.</p>
+                    </div>
+                    <div class="content-block">
+                        <h3>A Partnerség Formalizálása</h3>
+                        <p>Mire Angelina kitüntetéssel elvégezte tanulmányait és megszerezte a nemzetközi gazdaság mesteri fokozatát, ő és Taylor rendkívüli mélységű kapcsolatot épített fel. Első szenátorokká való kinevezésük 2015-ben, a Szenátus Chease Young általi megalapításakor, a nyilvános közös partnerségük kezdetét jelölte. Angelina első felszólalásában a digitális oktatás és a társadalmi igazságosság vízióját vázolta fel, Taylor pedig ezzel egy időben a közbiztonság reformjáért és az ifjúsági programokért vállalt mandátumot. A szenátusi ülésteremben egymás mellett dolgozva, a Waikiki Fenntartható Iparprogram és a mérföldkőnek számító Tesla-Waikiki Zöld Energia Megállapodás zászlóvivőiként bebizonyították, hogy kapcsolatuk nemcsak személyes kötelék, hanem félelmetesen hatékony szakmai szövetség is. Hivatalos partnerségük a következő évek során Waikiki politikai tájképének egyik meghatározó jegyévé vált.</p>
+                    </div>
+                    <div class="content-block">
+                        <h3>Közös Élet Felépítése</h3>
+                        <p>Az évek múlásával Angelina és Taylor tovább mélyítette mind személyes kötelékét, mind a nemzetre és a világra gyakorolt hatását. Attól kezdve, hogy Angelina 2019-ben csatlakozott a Chease Investment Group igazgatótanácsához, egészen addig, hogy a Covid-19 világjárvány idején közös szerepet vállaltak az egészségügyi kommunikációban, minden kihívással egységes erőként néztek szembe. A 2021-es közös űrmisszió talán a legdrámaibb kifejezése közösen megélt kalandvágyuknak és a jövő iránti elkötelezettségüknek. Minden fejezeten átívelően, a privát elvonulások bensőségességétől a klímacsúcsok és diplomáciai küldetések világszínpadáig, egy olyan életet építettek fel, amely egyszerre mélyen személyes és céltudatos. Szerelmi történetük még mindig íródik, és minden évvel gazdagabbá válik az egész nemzet számára, amely bennük természeti öröksége és jövője gondviselőire tekint.</p>
+                    </div>
                 </div>
-                <div class="content-block">
-                    <h3>Közös Élet Felépítése</h3>
-                    <p>Az évek múlásával Angelina és Taylor tovább mélyítette mind személyes kötelékét, mind a nemzetre és a világra gyakorolt hatását. Attól kezdve, hogy Angelina 2019-ben csatlakozott a Chease Investment Group igazgatótanácsához, egészen addig, hogy a Covid-19 világjárvány idején közös szerepet vállaltak az egészségügyi kommunikációban, minden kihívással egységes erőként néztek szembe. A 2021-es közös űrmisszió talán a legdrámaibb kifejezése közösen megélt kalandvágyuknak és a jövő iránti elkötelezettségüknek. Minden fejezeten átívelően, a privát elvonulások bensőségességétől a klímacsúcsok és diplomáciai küldetések világszínpadáig, egy olyan életet építettek fel, amely egyszerre mélyen személyes és céltudatos. Szerelmi történetük még mindig íródik, és minden évvel gazdagabbá válik az egész nemzet számára, amely bennük természeti öröksége és jövője gondviselőire tekint.</p>
-                </div>
-            </div>
-            <div class="image-gallery">
-                <div class="gallery-item">
-                    <img src="../images/UniversalUpscaler_142a8c48-ac5f-4245-9e9a-94c0b95fdceb.jpg">
-                    <div class="gallery-overlay">
-                        <h4>Közös Út</h4>
-                        <p>Az egyetem termeitől a Szenátusig és azon is túl</p>
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <img src="../images/UniversalUpscaler_142a8c48-ac5f-4245-9e9a-94c0b95fdceb.jpg">
+                        <div class="gallery-overlay">
+                            <h4>Közös Út</h4>
+                            <p>Az egyetem termeitől a Szenátusig és azon is túl</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Summary -->
-    <section class="private-section">
-        <div class="private-container">
-            <div class="private-intro" style="margin-bottom: 0;">
-                <h2>Elhivatottság a Jövő Nemzedékei Iránt</h2>
-                <p>Összességében Angelina Chease és Taylor Lautner partnersége a Waikiki Királyság egyik leginspirálóbb mintája, ahol az intellektuális egyenlőség, a személyes hűség és a közösségi felelősség egyszerre van jelen. Történetük azt mutatja, hogy a tartós kapcsolat nemcsak érzelmi alapokon áll, hanem közösen vállalt ügyeken is, a jótékonysági misszióktól a környezetvédelmi reformokig.</p>
-                <p style="margin-top: 40px; font-style: italic; color: #C95A41;">Waikiki polgárai számára Angelina és Taylor egy olyan jövő lehetőségét jelképezik, ahol az együttérzés és a stratégiai gondolkodás nem egymás ellentétei, hanem egymást erősítő értékek. A segélyprogramokban való részvétel, az óceánvédelmi kampányok támogatása és a fiatalokat célzó közösségi kezdeményezések azt bizonyítják, hogy vezetői hitelességük és a jövő generációi iránti elhivatottságuk komoly tettekben mérhető.</p>
+        </section>
+        <!-- Summary -->
+        <section class="private-section">
+            <div class="private-container">
+                <div class="private-intro" style="margin-bottom: 0;">
+                    <h2>Elhivatottság a Jövő Nemzedékei Iránt</h2>
+                    <p>Összességében Angelina Chease és Taylor Lautner partnersége a Waikiki Királyság egyik leginspirálóbb mintája, ahol az intellektuális egyenlőség, a személyes hűség és a közösségi felelősség egyszerre van jelen. Történetük azt mutatja, hogy a tartós kapcsolat nemcsak érzelmi alapokon áll, hanem közösen vállalt ügyeken is, a jótékonysági misszióktól a környezetvédelmi reformokig.</p>
+                    <p style="margin-top: 40px; font-style: italic; color: #C95A41;">Waikiki polgárai számára Angelina és Taylor egy olyan jövő lehetőségét jelképezik, ahol az együttérzés és a stratégiai gondolkodás nem egymás ellentétei, hanem egymást erősítő értékek. A segélyprogramokban való részvétel, az óceánvédelmi kampányok támogatása és a fiatalokat célzó közösségi kezdeményezések azt bizonyítják, hogy vezetői hitelességük és a jövő generációi iránti elhivatottságuk komoly tettekben mérhető.</p>
+                </div>
             </div>
-        </div>
-    </section>
-    <!-- @chrome:next --><section class="next-chapter"><a class="next-card" href="dynasty.html"><div class="next-media"><img src="../images/UniversalUpscaler_e38222ed-70b3-4c90-9777-c114aa60d527-U.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Folytassa az utazást · Királyi Család</span><span class="next-title">A Dinasztia</span><span class="next-arrow" aria-hidden="true">→</span></span></a></section><!-- /@chrome:next -->
+        </section>
+        <!-- @chrome:next -->
+        <section class="next-chapter"><a class="next-card" href="dynasty.html">
+                <div class="next-media"><img src="../images/UniversalUpscaler_e38222ed-70b3-4c90-9777-c114aa60d527-U.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Folytassa az utazást · Királyi Család</span><span class="next-title">A Dinasztia</span><span class="next-arrow" aria-hidden="true">→</span></span>
+            </a></section><!-- /@chrome:next -->
     </main>
     <!-- @chrome:footer -->
     <footer class="site-footer">
-        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z"/></svg>
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand">
@@ -209,7 +303,57 @@
                     <p class="footer-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
                     <p class="footer-about">Waikiki Szuverén Állam hivatalos portálja. Alapítva 1999. március 10-én · Nova Aurelia. Ez az oldal mesterséges intelligenciával készült, bármilyen hasonlóság valós személyekhez, országokhoz vagy intézményekhez pusztán a véletlen műve.</p>
                 </div>
-                <div class="footer-col"><h2>Nemzet</h2><ul><li><a href="index.html">Főoldal</a></li><li><a href="overview.html">Áttekintés</a></li><li><a href="history.html">Történelem</a></li><li><a href="society.html">Társadalom</a></li><li><a href="culture.html">Kultúra</a></li><li><a href="ideology.html">Ideológia</a></li></ul></div><div class="footer-col"><h2>Kormányzás</h2><ul><li><a href="government.html">Kormány</a></li><li><a href="leadership.html">Vezetés</a></li><li><a href="parties.html">Politika</a></li><li><a href="constitution.html">Alkotmány</a></li><li><a href="citizenship.html">Állampolgárság</a></li><li><a href="military.html">Hadsereg</a></li><li><a href="diplomacy.html">Diplomácia</a></li></ul></div><div class="footer-col"><h2>Jólét</h2><ul><li><a href="economy.html">Gazdaság</a></li><li><a href="wealth-fund.html">Vagyonalap</a></li><li><a href="infrastructure.html">Infrastruktúra</a></li><li><a href="plane.html">Diplomáciai Flotta</a></li></ul></div><div class="footer-col"><h2>Királyi Család</h2><ul><li><a href="dynasty.html">A Dinasztia</a></li><li><a href="chease-and-jessica.html">Chease és Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li><li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li></ul></div><div class="footer-col"><h2>Látogatás</h2><ul><li><a href="tourism.html">Turizmus</a></li><li><a href="sights.html">Látnivalók</a></li><li><a href="travel-guide.html">Utazási Kalauz</a></li><li><a href="faq.html">GYIK</a></li></ul></div>
+                <div class="footer-col">
+                    <h2>Nemzet</h2>
+                    <ul>
+                        <li><a href="index.html">Főoldal</a></li>
+                        <li><a href="overview.html">Áttekintés</a></li>
+                        <li><a href="history.html">Történelem</a></li>
+                        <li><a href="society.html">Társadalom</a></li>
+                        <li><a href="culture.html">Kultúra</a></li>
+                        <li><a href="ideology.html">Ideológia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Kormányzás</h2>
+                    <ul>
+                        <li><a href="government.html">Kormány</a></li>
+                        <li><a href="leadership.html">Vezetés</a></li>
+                        <li><a href="parties.html">Politika</a></li>
+                        <li><a href="constitution.html">Alkotmány</a></li>
+                        <li><a href="citizenship.html">Állampolgárság</a></li>
+                        <li><a href="military.html">Hadsereg</a></li>
+                        <li><a href="diplomacy.html">Diplomácia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Jólét</h2>
+                    <ul>
+                        <li><a href="economy.html">Gazdaság</a></li>
+                        <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                        <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                        <li><a href="plane.html">Diplomáciai Flotta</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Királyi Család</h2>
+                    <ul>
+                        <li><a href="dynasty.html">A Dinasztia</a></li>
+                        <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Látogatás</h2>
+                    <ul>
+                        <li><a href="tourism.html">Turizmus</a></li>
+                        <li><a href="sights.html">Látnivalók</a></li>
+                        <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                        <li><a href="faq.html">GYIK</a></li>
+                    </ul>
+                </div>
             </div>
             <span class="footer-mega" aria-hidden="true">Waikiki</span>
             <div class="footer-bottom">
@@ -218,7 +362,10 @@
             </div>
         </div>
     </footer>
-    <button class="to-top" type="button" aria-label="Vissza a tetejére"><svg viewBox="0 0 54 54" aria-hidden="true"><circle class="ring-bg" cx="27" cy="27" r="24"/><circle class="ring" cx="27" cy="27" r="24"/></svg><span aria-hidden="true">↑</span></button>
+    <button class="to-top" type="button" aria-label="Vissza a tetejére"><svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span></button>
     <!-- /@chrome:footer -->
     <script src="../js/common.js"></script>
 </body>

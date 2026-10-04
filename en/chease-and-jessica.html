@@ -11,7 +11,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />
-    <script>(function(d){var h=d.documentElement;h.classList.add('js');try{if(localStorage.getItem('isDarkMode')==='true')h.classList.add('body-dark');if(localStorage.getItem('isAnimationDisabled')==='true')h.classList.add('no-reveal')}catch(e){}setTimeout(function(){if(!h.classList.contains('reveal-ready'))h.classList.remove('js')},3500)})(document);</script>
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
     <!-- /@chrome:head -->
     <title>King Chease and Queen Jessica</title>
     <link rel="icon" href="../icons/favicon.ico" />
@@ -29,8 +41,20 @@
         <a href="index.html" class="brand" aria-label="Waikiki home"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" decoding="async" /><span class="brand-word">Waikiki</span></a>
         <nav class="primary-nav" aria-label="Primary"><a href="tourism.html">Visit</a><a href="society.html">Society</a><a href="economy.html">Economy</a><a href="government.html">Government</a><a href="history.html">History</a><a href="dynasty.html" aria-current="page">Royal Family</a></nav>
         <div class="header-actions">
-            <a class="lang-pill" href="../hu/chease-and-jessica.html" hreflang="hu" lang="hu" title="Magyar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>HU</span></a>
-            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle night mode"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><mask id="theme-mask"><rect width="24" height="24" fill="#fff"/><circle class="theme-cut" cx="26" cy="2" r="6" fill="#000"/></mask><circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)"/><g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5"/></g></svg></button>
+            <a class="lang-pill" href="../hu/chease-and-jessica.html" hreflang="hu" lang="hu" title="Magyar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg><span>HU</span></a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle night mode"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg></button>
             <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="menu-lines" aria-hidden="true"></span><span class="menu-label-open">Menu</span><span class="menu-label-close">Close</span><span class="visually-hidden">Menu</span></button>
         </div>
     </header>
@@ -48,33 +72,102 @@
                 <p class="menu-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
                 <div class="menu-aside-row"><a class="menu-chip is-active" href="../en/chease-and-jessica.html" hreflang="en" lang="en">English</a><a class="menu-chip" href="../hu/chease-and-jessica.html" hreflang="hu" lang="hu">Magyar</a><button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Night mode</button><button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animate</button></div>
             </aside>
-            <div class="menu-group"><h2>Nation</h2><ul><li><a href="index.html">Home</a></li><li><a href="overview.html">Overview</a></li><li><a href="history.html">History</a></li><li><a href="society.html">Society</a></li><li><a href="culture.html">Culture</a></li><li><a href="ideology.html">Ideology</a></li></ul></div><div class="menu-group"><h2>Governance</h2><ul><li><a href="government.html">Government</a></li><li><a href="leadership.html">Leadership</a></li><li><a href="parties.html">Politics</a></li><li><a href="constitution.html">Constitution</a></li><li><a href="citizenship.html">Citizenship</a></li><li><a href="military.html">Military</a></li><li><a href="diplomacy.html">Diplomacy</a></li></ul></div><div class="menu-group"><h2>Prosperity</h2><ul><li><a href="economy.html">Economy</a></li><li><a href="wealth-fund.html">Wealth Fund</a></li><li><a href="infrastructure.html">Infrastructure</a></li><li><a href="plane.html">Diplomatic Fleet</a></li></ul></div><div class="menu-group"><h2>Royal Family</h2><ul><li><a href="dynasty.html">The Dynasty</a></li><li><a href="chease-and-jessica.html" aria-current="page">Chease and Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li><li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li></ul></div><div class="menu-group"><h2>Visit</h2><ul><li><a href="tourism.html">Tourism</a></li><li><a href="sights.html">Sights</a></li><li><a href="travel-guide.html">Travel Guide</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+            <div class="menu-group">
+                <h2>Nation</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="overview.html">Overview</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="society.html">Society</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="ideology.html">Ideology</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Governance</h2>
+                <ul>
+                    <li><a href="government.html">Government</a></li>
+                    <li><a href="leadership.html">Leadership</a></li>
+                    <li><a href="parties.html">Politics</a></li>
+                    <li><a href="constitution.html">Constitution</a></li>
+                    <li><a href="citizenship.html">Citizenship</a></li>
+                    <li><a href="military.html">Military</a></li>
+                    <li><a href="diplomacy.html">Diplomacy</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Prosperity</h2>
+                <ul>
+                    <li><a href="economy.html">Economy</a></li>
+                    <li><a href="wealth-fund.html">Wealth Fund</a></li>
+                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                    <li><a href="plane.html">Diplomatic Fleet</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Royal Family</h2>
+                <ul>
+                    <li><a href="dynasty.html">The Dynasty</a></li>
+                    <li><a href="chease-and-jessica.html" aria-current="page">Chease and Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li>
+                    <li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Visit</h2>
+                <ul>
+                    <li><a href="tourism.html">Tourism</a></li>
+                    <li><a href="sights.html">Sights</a></li>
+                    <li><a href="travel-guide.html">Travel Guide</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- /@chrome:header -->
     <main id="main">
-    
-    <section class="hero" data-hero><div class="hero-media"><img src="../images/UniversalUpscaler_f257fcea-c942-4c07-91fd-e0d5374df3f1.jpg" alt="The Legacy of Chease and Jessica" fetchpriority="high" decoding="async" /></div><div class="hero-veil"></div><div class="hero-content"><span class="hero-eyebrow">The Founders</span><h1 class="hero-title">The Legacy of<br><em>Chease and Jessica</em></h1><p class="hero-lead">The founding generation of the Chease dynasty whose partnership transformed a failing state into the world's wealthiest nation. An alliance forged in intellectual attraction, strategic vision, and unwavering commitment to building a new civilization.</p></div><button class="hero-scroll" type="button">Scroll</button></section>
-    <!-- @chrome:subnav --><nav class="subnav" aria-label="Royal couple pages"><ul class="subnav-list"><li><a href="chease-and-jessica.html" aria-current="page">Overview</a></li><li><a href="chease-and-jessica-detailed.html">Story</a></li><li><a href="chease-and-jessica-gallery.html">Gallery</a></li><li><a href="chease-and-jessica-private.html">Private Life</a></li></ul></nav><!-- /@chrome:subnav -->
-    <section id="narrative">
-        <h2 class="section-title">The Story of Waikiki's Founding Couple</h2>
-        <div class="narrative-content">
-            <p class="narrative-text">In the founding generation of the Chease dynasty, the roles of King Chease Young and Queen Jessica Walker carry both deeply personal and state-founding significance, tracing an arc from youthful entrepreneurial ambition to the creation of one of the world's most influential dynasties. Their partnership exemplifies mutual intellectual attraction, strategic thinking, and shared vision, where private harmony and the monumental task of nation-building are inseparably intertwined. Their alliance forms the cornerstone of modern Waikiki, where personal commitment and service to the nation are one and the same.</p>
-            <p class="narrative-text">Chease Young was born in 1972 in New York State as an American citizen. From childhood, he showed keen interest in economic processes, regularly following stock market news and paying special attention to international trade trends. During his high school years, he actively participated in economics clubs and debate societies, where his outstanding analytical skills and strategic thinking were already evident. In 1987, he was admitted to Stanford University in California, where he pursued studies in economics. During his university years, he focused on deepening his understanding of international trade, corporate management, and financial market operations. As a student, he participated in several research projects examining the development opportunities of emerging economies and the challenges of the globalizing financial environment. In 1991, he graduated with honors in economics, which laid the foundation for his later career. Chease Young and Jessica Walker first met in early 1992 at the Starlight Hotel in New York, when Jessica was participating in advertising film projects during her final year of financial studies. The young woman's education, determination, and strategic thinking immediately captured Chease's interest. From the beginning, their relationship was based on mutual respect and intellectual attraction. They regularly engaged in conversations about the transformation of the global economy and geopolitical changes. Jessica joined the Starlight Hotels as financial director, and her expertise and values soon became defining factors in both Chease's personal and professional life. In 1993, they married at an exclusive ceremony on a Pacific estate, characterized by intimacy and elegance. During their Southeast Asian honeymoon, they traveled from Singapore through Bali to Japan and South Korea, discovering the models that would later inspire Waikiki's development.</p>
-            <p class="narrative-text">Chease Young first traveled to Havana in 1998 as part of a business delegation examining hotel industry investment opportunities. There he confronted the country's hopeless situation while also recognizing its inherent economic and geopolitical potential. In 1999, Cuban dictator Fidel Castro was threatened by NATO airstrikes for not allowing UN aid shipments into the country. Chease proposed a more open trade policy and modernization package to the government in an advisory capacity, which won the support of the then supreme leadership. To avoid foreign intervention, Fidel Castro transferred power to Chease Young on March 10, 1999, who immediately ordered democratic elections while retaining the dictatorial rank to ensure stability during the transition period. As part of the state founding process, the country's official name was changed to Waikiki at Chease Young's suggestion to symbolize the beginning of a new era. While Chease directed political and strategic decisions, Jessica was an indispensable partner as she took on a key role as senior advisor in the cabinet's work, particularly in financial stability and institution building. From preparing the first democratic elections through establishing the National Bank to building international trade relations, Jessica's work was essential. During the Pacific War, Chease founded the Alliance of Atomic Powers, while Jessica ensured economic stability during the war and financing of military industrial capacity. After the victory and the Treaty of New York, Waikiki became one of the world's leading powers, the foundations of which were created by their close cooperation.</p>
-            <p class="narrative-text">In recognition of the victories in the Pacific War and his outstanding work in the economic and social reconstruction of the country, Waikiki citizens decided by referendum to elevate Chease Young and his family to the nation's ruling house. Following the parliamentary resolution supporting the founding of the royal dynasty, the national referendum also confirmed the decision, and on August 4, 2005, Chease Young was officially elected King of Waikiki. The coronation ceremony took place in the capital, in the main square before Parliament, which was dressed in national colors for this occasion. One of the historic moments of the ceremonial event was that Pope Benedict XVI himself placed the royal crown on Chease Young's head, symbolizing the connection between tradition and modernity. During the ceremony, Jessica Walker officially became Queen of Waikiki, Raimondo received the crown prince title, while Angelina and Jennifer received the princess titles. Representatives of several European royal houses were also present at the event, including delegates from the British, Belgian, and Swedish royal families, which recognized Waikiki's new political and social order at the international level.</p>
-            <p class="narrative-text">Jessica Walker's independent career is outstanding at the international level as well. From 2008, as president of the Waikiki National Bank, she directed the country's financial system, and in 2009, together with Chease, they won the Nobel Prize in Economics for maintaining monetary stability during the financial crisis. Later the 2018 cashless reform, which was a world first of its kind, became one of Jessica's greatest professional achievements. Additionally, from 2013, she served as UN Deputy Secretary-General and then as Director of the World Bank. She manages a significant financial portfolio that includes ownership of institutions such as Commonwealth Bank, Lloyds Banking Group, Mastercard, and Visa. In 2024, Jessica returned to the WNB presidency, continuing to ensure Waikiki's financial stability. The essence of Chease Young and Jessica Walker's cooperation is perfect harmony alongside clear delineation of roles. While Chease is responsible for geopolitical strategy, presidential duties at the World Government, and the work of the Trilateral Commission, Jessica directs the financial system, banking regulation, and international economic relations. Since the 2017 power transfer, when Raimondo took over the dictatorial office, Chease as Chancellor continues to oversee strategic guidelines and international geopolitical balancing, while Jessica ensures institutional continuity through the Monetary Council and the National Bank. Their relationship is thus not merely a marriage but a governance model in which personal trust and professional competence are inseparably intertwined. The Chease-Jessica partnership is the foremost guarantee of Waikiki's stability and long-term success.</p>
-            <p class="narrative-text">The royal couple's international prestige is unparalleled. Chease Young leads the list of the world's most influential people, while Jessica stands beside him as the foremost financial expert and diplomat. Their close friendly relationship with President Donald Trump is of strategic significance, with Mar-a-Lago meetings and regular consultations serving to align the Waikiki First and America First doctrines. The core philosophy of both systems is the primacy of national interest. This shared stance creates a climate of trust in which the Chease dynasty and American leadership understand each other with minimal words, as both treat strong nation-state borders as the guarantee of security. The royal couple maintains close relationships with European royal houses, Asian leaders, and African heads of state alike. Chease as president of the World Government and Jessica as one of the defining figures of the global financial system together shape the 21st-century world order. Their partnership is thus not merely personal happiness but one of the most important factors in the renewal of Western civilization.</p>
-        </div>
-        <div class="video-wrapper" style="background-image: url(../images/UniversalUpscaler_Legacy_Cinematic_2_05c22cfd-ea3a-4295-9dc1-a0c35f3818a7.jpg);">
-            <video controls preload src="../videos/chease-and-jessica.mp4"></video>
-        </div>
-    </section>
-    <!-- @chrome:next --><section class="next-chapter"><a class="next-card" href="chease-and-jessica-detailed.html"><div class="next-media"><img src="../images/UniversalUpscaler_13200b7d-454a-405a-838e-f6c8924fe894.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Continue the journey · Royal Family</span><span class="next-title">Story of Chease and Jessica</span><span class="next-arrow" aria-hidden="true">→</span></span></a></section><!-- /@chrome:next -->
+        <section class="hero" data-hero>
+            <div class="hero-media"><img src="../images/UniversalUpscaler_f257fcea-c942-4c07-91fd-e0d5374df3f1.jpg" alt="The Legacy of Chease and Jessica" fetchpriority="high" decoding="async" /></div>
+            <div class="hero-veil"></div>
+            <div class="hero-content"><span class="hero-eyebrow">The Founders</span>
+                <h1 class="hero-title">The Legacy of<br><em>Chease and Jessica</em></h1>
+                <p class="hero-lead">The founding generation of the Chease dynasty whose partnership transformed a failing state into the world's wealthiest nation. An alliance forged in intellectual attraction, strategic vision, and unwavering commitment to building a new civilization.</p>
+            </div><button class="hero-scroll" type="button">Scroll</button>
+        </section>
+        <!-- @chrome:subnav -->
+        <nav class="subnav" aria-label="Royal couple pages">
+            <ul class="subnav-list">
+                <li><a href="chease-and-jessica.html" aria-current="page">Overview</a></li>
+                <li><a href="chease-and-jessica-detailed.html">Story</a></li>
+                <li><a href="chease-and-jessica-gallery.html">Gallery</a></li>
+                <li><a href="chease-and-jessica-private.html">Private Life</a></li>
+            </ul>
+        </nav><!-- /@chrome:subnav -->
+        <section id="narrative">
+            <h2 class="section-title">The Story of Waikiki's Founding Couple</h2>
+            <div class="narrative-content">
+                <p class="narrative-text">In the founding generation of the Chease dynasty, the roles of King Chease Young and Queen Jessica Walker carry both deeply personal and state-founding significance, tracing an arc from youthful entrepreneurial ambition to the creation of one of the world's most influential dynasties. Their partnership exemplifies mutual intellectual attraction, strategic thinking, and shared vision, where private harmony and the monumental task of nation-building are inseparably intertwined. Their alliance forms the cornerstone of modern Waikiki, where personal commitment and service to the nation are one and the same.</p>
+                <p class="narrative-text">Chease Young was born in 1972 in New York State as an American citizen. From childhood, he showed keen interest in economic processes, regularly following stock market news and paying special attention to international trade trends. During his high school years, he actively participated in economics clubs and debate societies, where his outstanding analytical skills and strategic thinking were already evident. In 1987, he was admitted to Stanford University in California, where he pursued studies in economics. During his university years, he focused on deepening his understanding of international trade, corporate management, and financial market operations. As a student, he participated in several research projects examining the development opportunities of emerging economies and the challenges of the globalizing financial environment. In 1991, he graduated with honors in economics, which laid the foundation for his later career. Chease Young and Jessica Walker first met in early 1992 at the Starlight Hotel in New York, when Jessica was participating in advertising film projects during her final year of financial studies. The young woman's education, determination, and strategic thinking immediately captured Chease's interest. From the beginning, their relationship was based on mutual respect and intellectual attraction. They regularly engaged in conversations about the transformation of the global economy and geopolitical changes. Jessica joined the Starlight Hotels as financial director, and her expertise and values soon became defining factors in both Chease's personal and professional life. In 1993, they married at an exclusive ceremony on a Pacific estate, characterized by intimacy and elegance. During their Southeast Asian honeymoon, they traveled from Singapore through Bali to Japan and South Korea, discovering the models that would later inspire Waikiki's development.</p>
+                <p class="narrative-text">Chease Young first traveled to Havana in 1998 as part of a business delegation examining hotel industry investment opportunities. There he confronted the country's hopeless situation while also recognizing its inherent economic and geopolitical potential. In 1999, Cuban dictator Fidel Castro was threatened by NATO airstrikes for not allowing UN aid shipments into the country. Chease proposed a more open trade policy and modernization package to the government in an advisory capacity, which won the support of the then supreme leadership. To avoid foreign intervention, Fidel Castro transferred power to Chease Young on March 10, 1999, who immediately ordered democratic elections while retaining the dictatorial rank to ensure stability during the transition period. As part of the state founding process, the country's official name was changed to Waikiki at Chease Young's suggestion to symbolize the beginning of a new era. While Chease directed political and strategic decisions, Jessica was an indispensable partner as she took on a key role as senior advisor in the cabinet's work, particularly in financial stability and institution building. From preparing the first democratic elections through establishing the National Bank to building international trade relations, Jessica's work was essential. During the Pacific War, Chease founded the Alliance of Atomic Powers, while Jessica ensured economic stability during the war and financing of military industrial capacity. After the victory and the Treaty of New York, Waikiki became one of the world's leading powers, the foundations of which were created by their close cooperation.</p>
+                <p class="narrative-text">In recognition of the victories in the Pacific War and his outstanding work in the economic and social reconstruction of the country, Waikiki citizens decided by referendum to elevate Chease Young and his family to the nation's ruling house. Following the parliamentary resolution supporting the founding of the royal dynasty, the national referendum also confirmed the decision, and on August 4, 2005, Chease Young was officially elected King of Waikiki. The coronation ceremony took place in the capital, in the main square before Parliament, which was dressed in national colors for this occasion. One of the historic moments of the ceremonial event was that Pope Benedict XVI himself placed the royal crown on Chease Young's head, symbolizing the connection between tradition and modernity. During the ceremony, Jessica Walker officially became Queen of Waikiki, Raimondo received the crown prince title, while Angelina and Jennifer received the princess titles. Representatives of several European royal houses were also present at the event, including delegates from the British, Belgian, and Swedish royal families, which recognized Waikiki's new political and social order at the international level.</p>
+                <p class="narrative-text">Jessica Walker's independent career is outstanding at the international level as well. From 2008, as president of the Waikiki National Bank, she directed the country's financial system, and in 2009, together with Chease, they won the Nobel Prize in Economics for maintaining monetary stability during the financial crisis. Later the 2018 cashless reform, which was a world first of its kind, became one of Jessica's greatest professional achievements. Additionally, from 2013, she served as UN Deputy Secretary-General and then as Director of the World Bank. She manages a significant financial portfolio that includes ownership of institutions such as Commonwealth Bank, Lloyds Banking Group, Mastercard, and Visa. In 2024, Jessica returned to the WNB presidency, continuing to ensure Waikiki's financial stability. The essence of Chease Young and Jessica Walker's cooperation is perfect harmony alongside clear delineation of roles. While Chease is responsible for geopolitical strategy, presidential duties at the World Government, and the work of the Trilateral Commission, Jessica directs the financial system, banking regulation, and international economic relations. Since the 2017 power transfer, when Raimondo took over the dictatorial office, Chease as Chancellor continues to oversee strategic guidelines and international geopolitical balancing, while Jessica ensures institutional continuity through the Monetary Council and the National Bank. Their relationship is thus not merely a marriage but a governance model in which personal trust and professional competence are inseparably intertwined. The Chease-Jessica partnership is the foremost guarantee of Waikiki's stability and long-term success.</p>
+                <p class="narrative-text">The royal couple's international prestige is unparalleled. Chease Young leads the list of the world's most influential people, while Jessica stands beside him as the foremost financial expert and diplomat. Their close friendly relationship with President Donald Trump is of strategic significance, with Mar-a-Lago meetings and regular consultations serving to align the Waikiki First and America First doctrines. The core philosophy of both systems is the primacy of national interest. This shared stance creates a climate of trust in which the Chease dynasty and American leadership understand each other with minimal words, as both treat strong nation-state borders as the guarantee of security. The royal couple maintains close relationships with European royal houses, Asian leaders, and African heads of state alike. Chease as president of the World Government and Jessica as one of the defining figures of the global financial system together shape the 21st-century world order. Their partnership is thus not merely personal happiness but one of the most important factors in the renewal of Western civilization.</p>
+            </div>
+            <div class="video-wrapper" style="background-image: url(../images/UniversalUpscaler_Legacy_Cinematic_2_05c22cfd-ea3a-4295-9dc1-a0c35f3818a7.jpg);">
+                <video controls preload src="../videos/chease-and-jessica.mp4"></video>
+            </div>
+        </section>
+        <!-- @chrome:next -->
+        <section class="next-chapter"><a class="next-card" href="chease-and-jessica-detailed.html">
+                <div class="next-media"><img src="../images/UniversalUpscaler_13200b7d-454a-405a-838e-f6c8924fe894.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Continue the journey · Royal Family</span><span class="next-title">Story of Chease and Jessica</span><span class="next-arrow" aria-hidden="true">→</span></span>
+            </a></section><!-- /@chrome:next -->
     </main>
     <!-- @chrome:footer -->
     <footer class="site-footer">
-        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z"/></svg>
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand">
@@ -82,7 +175,57 @@
                     <p class="footer-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
                     <p class="footer-about">The official portal of the Sovereign Nation of Waikiki. Founded 10 March 1999 · Nova Aurelia. This site was generated with AI, any resemblance to real people, countries or institutions is just a coincidence.</p>
                 </div>
-                <div class="footer-col"><h2>Nation</h2><ul><li><a href="index.html">Home</a></li><li><a href="overview.html">Overview</a></li><li><a href="history.html">History</a></li><li><a href="society.html">Society</a></li><li><a href="culture.html">Culture</a></li><li><a href="ideology.html">Ideology</a></li></ul></div><div class="footer-col"><h2>Governance</h2><ul><li><a href="government.html">Government</a></li><li><a href="leadership.html">Leadership</a></li><li><a href="parties.html">Politics</a></li><li><a href="constitution.html">Constitution</a></li><li><a href="citizenship.html">Citizenship</a></li><li><a href="military.html">Military</a></li><li><a href="diplomacy.html">Diplomacy</a></li></ul></div><div class="footer-col"><h2>Prosperity</h2><ul><li><a href="economy.html">Economy</a></li><li><a href="wealth-fund.html">Wealth Fund</a></li><li><a href="infrastructure.html">Infrastructure</a></li><li><a href="plane.html">Diplomatic Fleet</a></li></ul></div><div class="footer-col"><h2>Royal Family</h2><ul><li><a href="dynasty.html">The Dynasty</a></li><li><a href="chease-and-jessica.html">Chease and Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li><li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li></ul></div><div class="footer-col"><h2>Visit</h2><ul><li><a href="tourism.html">Tourism</a></li><li><a href="sights.html">Sights</a></li><li><a href="travel-guide.html">Travel Guide</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+                <div class="footer-col">
+                    <h2>Nation</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="overview.html">Overview</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="society.html">Society</a></li>
+                        <li><a href="culture.html">Culture</a></li>
+                        <li><a href="ideology.html">Ideology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Governance</h2>
+                    <ul>
+                        <li><a href="government.html">Government</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="parties.html">Politics</a></li>
+                        <li><a href="constitution.html">Constitution</a></li>
+                        <li><a href="citizenship.html">Citizenship</a></li>
+                        <li><a href="military.html">Military</a></li>
+                        <li><a href="diplomacy.html">Diplomacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Prosperity</h2>
+                    <ul>
+                        <li><a href="economy.html">Economy</a></li>
+                        <li><a href="wealth-fund.html">Wealth Fund</a></li>
+                        <li><a href="infrastructure.html">Infrastructure</a></li>
+                        <li><a href="plane.html">Diplomatic Fleet</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Royal Family</h2>
+                    <ul>
+                        <li><a href="dynasty.html">The Dynasty</a></li>
+                        <li><a href="chease-and-jessica.html">Chease and Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Visit</h2>
+                    <ul>
+                        <li><a href="tourism.html">Tourism</a></li>
+                        <li><a href="sights.html">Sights</a></li>
+                        <li><a href="travel-guide.html">Travel Guide</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
             </div>
             <span class="footer-mega" aria-hidden="true">Waikiki</span>
             <div class="footer-bottom">
@@ -91,7 +234,10 @@
             </div>
         </div>
     </footer>
-    <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 54 54" aria-hidden="true"><circle class="ring-bg" cx="27" cy="27" r="24"/><circle class="ring" cx="27" cy="27" r="24"/></svg><span aria-hidden="true">↑</span></button>
+    <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span></button>
     <!-- /@chrome:footer -->
     <script src="../js/common.js"></script>
 </body>

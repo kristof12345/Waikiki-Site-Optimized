@@ -11,7 +11,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />
-    <script>(function(d){var h=d.documentElement;h.classList.add('js');try{if(localStorage.getItem('isDarkMode')==='true')h.classList.add('body-dark');if(localStorage.getItem('isAnimationDisabled')==='true')h.classList.add('no-reveal')}catch(e){}setTimeout(function(){if(!h.classList.contains('reveal-ready'))h.classList.remove('js')},3500)})(document);</script>
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
     <!-- /@chrome:head -->
     <title>Sights of Waikiki</title>
     <link rel="icon" href="../icons/favicon.ico" />
@@ -30,8 +42,20 @@
         <a href="index.html" class="brand" aria-label="Waikiki home"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" decoding="async" /><span class="brand-word">Waikiki</span></a>
         <nav class="primary-nav" aria-label="Primary"><a href="tourism.html">Visit</a><a href="society.html">Society</a><a href="economy.html">Economy</a><a href="government.html">Government</a><a href="history.html">History</a><a href="dynasty.html">Royal Family</a></nav>
         <div class="header-actions">
-            <a class="lang-pill" href="../hu/sights.html" hreflang="hu" lang="hu" title="Magyar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>HU</span></a>
-            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle night mode"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><mask id="theme-mask"><rect width="24" height="24" fill="#fff"/><circle class="theme-cut" cx="26" cy="2" r="6" fill="#000"/></mask><circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)"/><g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5"/></g></svg></button>
+            <a class="lang-pill" href="../hu/sights.html" hreflang="hu" lang="hu" title="Magyar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg><span>HU</span></a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle night mode"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg></button>
             <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="menu-lines" aria-hidden="true"></span><span class="menu-label-open">Menu</span><span class="menu-label-close">Close</span><span class="visually-hidden">Menu</span></button>
         </div>
     </header>
@@ -49,200 +73,262 @@
                 <p class="menu-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
                 <div class="menu-aside-row"><a class="menu-chip is-active" href="../en/sights.html" hreflang="en" lang="en">English</a><a class="menu-chip" href="../hu/sights.html" hreflang="hu" lang="hu">Magyar</a><button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Night mode</button><button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animate</button></div>
             </aside>
-            <div class="menu-group"><h2>Nation</h2><ul><li><a href="index.html">Home</a></li><li><a href="overview.html">Overview</a></li><li><a href="history.html">History</a></li><li><a href="society.html">Society</a></li><li><a href="culture.html">Culture</a></li><li><a href="ideology.html">Ideology</a></li></ul></div><div class="menu-group"><h2>Governance</h2><ul><li><a href="government.html">Government</a></li><li><a href="leadership.html">Leadership</a></li><li><a href="parties.html">Politics</a></li><li><a href="constitution.html">Constitution</a></li><li><a href="citizenship.html">Citizenship</a></li><li><a href="military.html">Military</a></li><li><a href="diplomacy.html">Diplomacy</a></li></ul></div><div class="menu-group"><h2>Prosperity</h2><ul><li><a href="economy.html">Economy</a></li><li><a href="wealth-fund.html">Wealth Fund</a></li><li><a href="infrastructure.html">Infrastructure</a></li><li><a href="plane.html">Diplomatic Fleet</a></li></ul></div><div class="menu-group"><h2>Royal Family</h2><ul><li><a href="dynasty.html">The Dynasty</a></li><li><a href="chease-and-jessica.html">Chease and Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li><li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li></ul></div><div class="menu-group"><h2>Visit</h2><ul><li><a href="tourism.html">Tourism</a></li><li><a href="sights.html" aria-current="page">Sights</a></li><li><a href="travel-guide.html">Travel Guide</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+            <div class="menu-group">
+                <h2>Nation</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="overview.html">Overview</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="society.html">Society</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="ideology.html">Ideology</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Governance</h2>
+                <ul>
+                    <li><a href="government.html">Government</a></li>
+                    <li><a href="leadership.html">Leadership</a></li>
+                    <li><a href="parties.html">Politics</a></li>
+                    <li><a href="constitution.html">Constitution</a></li>
+                    <li><a href="citizenship.html">Citizenship</a></li>
+                    <li><a href="military.html">Military</a></li>
+                    <li><a href="diplomacy.html">Diplomacy</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Prosperity</h2>
+                <ul>
+                    <li><a href="economy.html">Economy</a></li>
+                    <li><a href="wealth-fund.html">Wealth Fund</a></li>
+                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                    <li><a href="plane.html">Diplomatic Fleet</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Royal Family</h2>
+                <ul>
+                    <li><a href="dynasty.html">The Dynasty</a></li>
+                    <li><a href="chease-and-jessica.html">Chease and Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li>
+                    <li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Visit</h2>
+                <ul>
+                    <li><a href="tourism.html">Tourism</a></li>
+                    <li><a href="sights.html" aria-current="page">Sights</a></li>
+                    <li><a href="travel-guide.html">Travel Guide</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- /@chrome:header -->
     <main id="main">
-    
-    <section class="hero" data-hero><div class="hero-media"><img src="../images/UniversalUpscaler_Pro_Precise_2_1f151359-d87d-6f40-8bc6-3ec08a6173d3.jpg" alt="Sights of Waikiki" fetchpriority="high" decoding="async" /></div><div class="hero-veil"></div><div class="hero-content"><span class="hero-eyebrow">The World's Treasury</span><h1 class="hero-title">Sights of <em>Waikiki</em></h1><p class="hero-lead">Discover the world's most unique country, where ultramodern metropolises, masterpieces of ancient architecture, pristine tropical paradises, lush wild rainforests, and snow-capped mountain peaks meet within the borders of a single nation.</p><div class="hero-actions" style="visibility: hidden;">
-                <button class="hero-btn open-assessment" style="background-color: #11605B">Learn more</button>
-            </div></div><button class="hero-scroll" type="button">Scroll</button></section>
-    <!-- @chrome:subnav --><!-- /@chrome:subnav -->
-    <section id="nova-aurelia" class="fade-in">
-        <h2 class="section-title">The Most Visited City in the World</h2>
-        <p class="section-intro">Nova Aurelia is not only the capital of Waikiki, but of the entire world. With its massive skyscrapers, government district, and ancient monuments spanning millennia, it has rightfully earned the title of the world's most beautiful city. In addition to its seven million residents, 35 million visitors visit the metropolis annually.</p>
-        <div class="card-grid">
-            <div class="card">
-                <h3>Historical Treasures</h3>
-                <p>Masterpieces of Aztec architecture, the grandiose legacy of the Roman Empire, and English classicist castles form the city's unparalleled historical core.</p>
+        <section class="hero" data-hero>
+            <div class="hero-media"><img src="../images/UniversalUpscaler_Pro_Precise_2_1f151359-d87d-6f40-8bc6-3ec08a6173d3.jpg" alt="Sights of Waikiki" fetchpriority="high" decoding="async" /></div>
+            <div class="hero-veil"></div>
+            <div class="hero-content"><span class="hero-eyebrow">The World's Treasury</span>
+                <h1 class="hero-title">Sights of <em>Waikiki</em></h1>
+                <p class="hero-lead">Discover the world's most unique country, where ultramodern metropolises, masterpieces of ancient architecture, pristine tropical paradises, lush wild rainforests, and snow-capped mountain peaks meet within the borders of a single nation.</p>
+                <div class="hero-actions" style="visibility: hidden;">
+                    <button class="hero-btn open-assessment" style="background-color: #11605B">Learn more</button>
+                </div>
+            </div><button class="hero-scroll" type="button">Scroll</button>
+        </section>
+        <!-- @chrome:subnav --><!-- /@chrome:subnav -->
+        <section id="nova-aurelia" class="fade-in">
+            <h2 class="section-title">The Most Visited City in the World</h2>
+            <p class="section-intro">Nova Aurelia is not only the capital of Waikiki, but of the entire world. With its massive skyscrapers, government district, and ancient monuments spanning millennia, it has rightfully earned the title of the world's most beautiful city. In addition to its seven million residents, 35 million visitors visit the metropolis annually.</p>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Historical Treasures</h3>
+                    <p>Masterpieces of Aztec architecture, the grandiose legacy of the Roman Empire, and English classicist castles form the city's unparalleled historical core.</p>
+                </div>
+                <div class="card">
+                    <h3>Modern Wonders</h3>
+                    <p>The world's tallest and boldest skyscrapers shape the stunning skyline, crowned by the three towers of the World Government headquarters.</p>
+                </div>
+                <div class="card">
+                    <h3>Luxury and Comfort</h3>
+                    <p>From the 15-star luxury of the Hotel President to the water villas of the Paradise Islands, Starlight Hotels and other global brands offer unforgettable experiences.</p>
+                </div>
+                <div class="card">
+                    <h3>Entertainment and Adventure</h3>
+                    <p>Disneyland, Legoland, the world's largest zoo, and Aqua World all await families and adventurous tourists in Nova Aurelia.</p>
+                </div>
             </div>
-            <div class="card">
-                <h3>Modern Wonders</h3>
-                <p>The world's tallest and boldest skyscrapers shape the stunning skyline, crowned by the three towers of the World Government headquarters.</p>
+        </section>
+        <section id="tortenelem" class="sight-section fade-in">
+            <div class="sight-image">
+                <img src="../images/sights_temple.jpg">
             </div>
-            <div class="card">
-                <h3>Luxury and Comfort</h3>
-                <p>From the 15-star luxury of the Hotel President to the water villas of the Paradise Islands, Starlight Hotels and other global brands offer unforgettable experiences.</p>
+            <div class="sight-info">
+                <h3>Historical Buildings</h3>
+                <p>Waikiki has been part of countless empires throughout history, and this rich heritage still permeates the streets of Nova Aurelia today. From the ancient Roman settlement and the British colonial era to the modern capital, every epoch has left an enduring mark.</p>
+                <ul>
+                    <li><strong>Roman Temple:</strong> 100 perfectly identical marble columns that change color depending on the position of the sun. The temple is an unparalleled monument to the craftsmanship of ancient stonecutters.</li>
+                    <li><strong>Step Pyramid:</strong> A 24-meter-high, over 2,000-year-old Aztec cult structure whose alignment demonstrates remarkable astronomical knowledge.</li>
+                    <li><strong>City Walls:</strong> The longest intact section of walls surviving from the Roman Empire, along with twelve monumental gates, each built from 50,000 ceramic bricks.</li>
+                    <li><strong>National Museum:</strong> Alongside replicas of Michelangelo's David and Botticelli's masterpieces, art comes to life using state-of-the-art multimedia displays.</li>
+                </ul>
             </div>
-            <div class="card">
-                <h3>Entertainment and Adventure</h3>
-                <p>Disneyland, Legoland, the world's largest zoo, and Aqua World all await families and adventurous tourists in Nova Aurelia.</p>
+        </section>
+        <section id="toronyhazak" class="sight-section reverse fade-in">
+            <div class="sight-info">
+                <h3>Skyscrapers and Business District</h3>
+                <p>Nova Aurelia's skyline is dominated by some of the world's boldest engineering creations. In the business district, the headquarters of major international corporations line the streets, with the silhouette shaped by iconic buildings.</p>
+                <ul>
+                    <li><strong>Sky City:</strong> The world's tallest building, reaching into the sky at a height of 956 meters and featuring 220 floors. Its record-breaking fountain system is illuminated by 6,600 light sources.</li>
+                    <li><strong>Infinity Tower:</strong> The world's only skyscraper twisted 90 degrees, which has been a distinctive symbol of Waikiki since its completion in 2009.</li>
+                    <li><strong>World Government Center:</strong> Three massive towers connected at the top by a landscaped platform featuring pools and restaurants.</li>
+                    <li><strong>Royal Towers:</strong> Exclusive luxury apartments with panoramic views, featuring private Michelin-starred restaurants, a casino, and a yacht marina.</li>
+                </ul>
             </div>
-        </div>
-    </section>
-    <section id="tortenelem" class="sight-section fade-in">
-        <div class="sight-image">
-            <img src="../images/sights_temple.jpg">
-        </div>
-        <div class="sight-info">
-            <h3>Historical Buildings</h3>
-            <p>Waikiki has been part of countless empires throughout history, and this rich heritage still permeates the streets of Nova Aurelia today. From the ancient Roman settlement and the British colonial era to the modern capital, every epoch has left an enduring mark.</p>
-            <ul>
-                <li><strong>Roman Temple:</strong> 100 perfectly identical marble columns that change color depending on the position of the sun. The temple is an unparalleled monument to the craftsmanship of ancient stonecutters.</li>
-                <li><strong>Step Pyramid:</strong> A 24-meter-high, over 2,000-year-old Aztec cult structure whose alignment demonstrates remarkable astronomical knowledge.</li>
-                <li><strong>City Walls:</strong> The longest intact section of walls surviving from the Roman Empire, along with twelve monumental gates, each built from 50,000 ceramic bricks.</li>
-                <li><strong>National Museum:</strong> Alongside replicas of Michelangelo's David and Botticelli's masterpieces, art comes to life using state-of-the-art multimedia displays.</li>
-            </ul>
-        </div>
-    </section>
-    <section id="toronyhazak" class="sight-section reverse fade-in">
-        <div class="sight-info">
-            <h3>Skyscrapers and Business District</h3>
-            <p>Nova Aurelia's skyline is dominated by some of the world's boldest engineering creations. In the business district, the headquarters of major international corporations line the streets, with the silhouette shaped by iconic buildings.</p>
-            <ul>
-                <li><strong>Sky City:</strong> The world's tallest building, reaching into the sky at a height of 956 meters and featuring 220 floors. Its record-breaking fountain system is illuminated by 6,600 light sources.</li>
-                <li><strong>Infinity Tower:</strong> The world's only skyscraper twisted 90 degrees, which has been a distinctive symbol of Waikiki since its completion in 2009.</li>
-                <li><strong>World Government Center:</strong> Three massive towers connected at the top by a landscaped platform featuring pools and restaurants.</li>
-                <li><strong>Royal Towers:</strong> Exclusive luxury apartments with panoramic views, featuring private Michelin-starred restaurants, a casino, and a yacht marina.</li>
-            </ul>
-        </div>
-        <div class="sight-image">
-            <img src="../images/sights_skyscraper.jpg">
-        </div>
-    </section>
-    <div id="hotels-palaces" class="anchor-offset"></div>
-    <section id="szallodak" class="sight-section fade-in">
-        <div class="sight-image">
-            <img src="../images/sights_hotel.jpg">
-        </div>
-        <div class="sight-info">
-            <h3>Luxury Hotels</h3>
-            <p>Waikiki is the bastion of premium tourism. The hotels of this island nation represent the pinnacle of comfort and exclusivity, allowing guests to relax in the world's most extraordinary destinations.</p>
-            <ul>
-                <li><strong>Hotel President:</strong> The world's only 15-star hotel, featuring a 1,600 m² Presidential Suite and a subterranean spa and thermal bath complex.</li>
-                <li><strong>Hotel Atlantis:</strong> Underwater suites where marine life swims right past the window. The tallest of its four towers rises to 600 meters.</li>
-                <li><strong>Hotel Khalifa:</strong> A 10-star resort located on Palm Island with one of the world's largest waterparks, where servers offer guests fine dining choices all day.</li>
-                <li><strong>Paradise Islands:</strong> Overwater villas on Chameleon Island, offering direct views of dolphins and vibrant coral reef life right from the terrace.</li>
-            </ul>
-        </div>
-    </section>
-    <section id="palotak" class="sight-section reverse fade-in">
-        <div class="sight-info">
-            <h3>Royal Palaces</h3>
-            <p>The residences hosting the government leaders and the royal family are among the world's most valuable properties. Each palace merges the highest technological standards with the timeless beauty of classic elegance.</p>
-            <ul>
-                <li><strong>Princely Palace:</strong> Prince Raimondo's home, valued at around $80 billion, which includes its own concert hall, waterpark, cinema, and a 2.5 km private beach stretch.</li>
-                <li><strong>Jennifer's Palace:</strong> A coastal residence surrounded by a 90-hectare botanical garden, where a 1.5-kilometer private shoreline offers undisturbed tranquility.</li>
-                <li><strong>Chease and Jessica's Villa:</strong> An ultramodern glass palace designed by the legendary Ludwig Mies van der Rohe, surrounded by a miniature jungle and cascading waterfalls.</li>
-            </ul>
-        </div>
-        <div class="sight-image">
-            <img src="../images/UniversalUpscaler_d9905236-4b28-4848-bb0c-90a95f9ae31f.jpg">
-        </div>
-    </section>
-    <section id="parkok" class="fade-in">
-        <h2 class="section-title">Theme Parks</h2>
-        <p class="section-intro">World-class family recreation. Nova Aurelia is a global center for the entertainment industry, welcoming visitors to some of the world's most famous theme parks.</p>
-        <div class="card-grid">
-            <div class="card">
-                <h3>Disneyland &amp; Legoland</h3>
-                <p>Waikiki boasts two Disneylands and three Legolands. In the Rio Legoland, more than 90 million LEGO bricks were used to build miniature models of major global cities.</p>
+            <div class="sight-image">
+                <img src="../images/sights_skyscraper.jpg">
             </div>
-            <div class="card">
-                <h3>Aqua World</h3>
-                <p>The world's largest water park, featuring more than 80 slides and 40 pools. On the 75-meter-high "Mount Everest" slide, riders can reach speeds of up to 110 km/h.</p>
+        </section>
+        <div id="hotels-palaces" class="anchor-offset"></div>
+        <section id="szallodak" class="sight-section fade-in">
+            <div class="sight-image">
+                <img src="../images/sights_hotel.jpg">
             </div>
-            <div class="card">
-                <h3>Nova Aurelia Zoo</h3>
-                <p>The world's largest zoo, offering close encounters with some of the most exotic animals. A polar dome, an indoor rainforest enclosure, and permanent dolphin shows await visitors.</p>
+            <div class="sight-info">
+                <h3>Luxury Hotels</h3>
+                <p>Waikiki is the bastion of premium tourism. The hotels of this island nation represent the pinnacle of comfort and exclusivity, allowing guests to relax in the world's most extraordinary destinations.</p>
+                <ul>
+                    <li><strong>Hotel President:</strong> The world's only 15-star hotel, featuring a 1,600 m² Presidential Suite and a subterranean spa and thermal bath complex.</li>
+                    <li><strong>Hotel Atlantis:</strong> Underwater suites where marine life swims right past the window. The tallest of its four towers rises to 600 meters.</li>
+                    <li><strong>Hotel Khalifa:</strong> A 10-star resort located on Palm Island with one of the world's largest waterparks, where servers offer guests fine dining choices all day.</li>
+                    <li><strong>Paradise Islands:</strong> Overwater villas on Chameleon Island, offering direct views of dolphins and vibrant coral reef life right from the terrace.</li>
+                </ul>
             </div>
-            <div class="card">
-                <h3>Kennedy Space Center</h3>
-                <p>A vacation in Amazónia would not be complete without visiting the Kennedy Space Center, where you can try piloting a landing module and sample astronaut food.</p>
+        </section>
+        <section id="palotak" class="sight-section reverse fade-in">
+            <div class="sight-info">
+                <h3>Royal Palaces</h3>
+                <p>The residences hosting the government leaders and the royal family are among the world's most valuable properties. Each palace merges the highest technological standards with the timeless beauty of classic elegance.</p>
+                <ul>
+                    <li><strong>Princely Palace:</strong> Prince Raimondo's home, valued at around $80 billion, which includes its own concert hall, waterpark, cinema, and a 2.5 km private beach stretch.</li>
+                    <li><strong>Jennifer's Palace:</strong> A coastal residence surrounded by a 90-hectare botanical garden, where a 1.5-kilometer private shoreline offers undisturbed tranquility.</li>
+                    <li><strong>Chease and Jessica's Villa:</strong> An ultramodern glass palace designed by the legendary Ludwig Mies van der Rohe, surrounded by a miniature jungle and cascading waterfalls.</li>
+                </ul>
             </div>
-        </div>
-    </section>
-    <div id="nature-adventure" class="anchor-offset"></div>
-    <section class="fade-in">
-        <h2 class="section-title">Regional Wonders of Waikiki</h2>
-        <p class="section-intro">Beyond the capital, a whole world unfolds: pristine natural landscapes, tropical paradises, ancient forests, and snow-capped peaks, offering unforgettable experiences within the borders of a single nation.</p>
-    </section>
-    <section id="nature" class="sight-section fade-in">
-        <div class="sight-image">
-            <img src="../images/sights_nature.jpg">
-        </div>
-        <div class="sight-info">
-            <h3>Natural Wonders</h3>
-            <p>Waikiki is a sanctuary not only for architecture but for nature itself. From majestic volcanic peaks to waterfalls pouring into crystal-clear lagoons, every region harbors a unique magic unlike anywhere else in the world.</p>
-            <ul>
-                <li><strong>Volcanic Peaks:</strong> Hiking trails along the mountain ranges that form the spine of the archipelago offer breathtaking panoramic views over the infinite horizon of the Pacific Ocean.</li>
-                <li><strong>Eden Falls:</strong> Hidden deep in the jungle, natural turquoise pools await bathers beneath this 80-meter-high waterfall, far from the noise of civilization.</li>
-                <li><strong>Geothermal Springs:</strong> Natural healing waters and hot springs at the foot of the mountains, where ancient volcanic activity has brought thermal treasures to the surface.</li>
-            </ul>
-        </div>
-    </section>
-    <section id="islands" class="sight-section reverse fade-in">
-        <div class="sight-info">
-            <h3>Tropical Archipelago</h3>
-            <p>The hundreds of islands composing the Waikiki archipelago serve as the world's most exclusive retreats. White sandy beaches, turquoise lagoons, and the unparalleled marine life of the coral reefs surpass all imagination.</p>
-            <ul>
-                <li><strong>Palm Islands:</strong> Artificial and natural islands featuring luxury villas, private beaches, and vacation homes of numerous celebrities.</li>
-                <li><strong>World Islands:</strong> An archipelago shaped like the Earth's continents, where visitors can explore theme parks and museums showcasing different cultures and traditions.</li>
-                <li><strong>Coral Reefs:</strong> A diver's paradise boasting some of the highest marine biodiversity in the world, allowing you to spend days admiring the fantastic aquatic life in 28°C (82°F) waters.</li>
-            </ul>
-        </div>
-        <div class="sight-image">
-            <img src="../images/sights_islands.jpg">
-        </div>
-    </section>
-    <section id="jungle" class="sight-section fade-in">
-        <div class="sight-image">
-            <img src="../images/sights_jungle.jpg">
-        </div>
-        <div class="sight-info">
-            <h3>Pristine Rainforests</h3>
-            <p>Waikiki's Amazonian provinces preserve the lungs of the Earth. The lush green vegetation and extremely rich wildlife offer unforgettable experiences for adventurous travelers, while the Green Waikiki program ensures the preservation of these natural assets.</p>
-            <ul>
-                <li><strong>Biodiversity:</strong> Home to thousands of bird species, colorful parrots, toucans, and rare orchids, forming one of the richest ecosystems on Earth.</li>
-                <li><strong>Canopy Tours:</strong> Walk across specialized suspension bridges to discover the hidden life of the rainforest's upper canopy and admire the treetops from a stunning bird's-eye view.</li>
-                <li><strong>River Expeditions:</strong> Explore mysterious rivers winding deep within the rainforest by canoe, accompanied by caimans and river dolphins along the way.</li>
-            </ul>
-        </div>
-    </section>
-    <section id="ski" class="sight-section reverse fade-in">
-        <div class="sight-info">
-            <h3>Snow-Capped Ski Paradises</h3>
-            <p>One of Waikiki's greatest surprises is the eternal snow of its high mountain ranges. State-of-the-art ski lifts and luxury chalets await winter sports enthusiasts, all in close proximity to tropical beaches—allowing you to ski in the morning and surf in the afternoon.</p>
-            <ul>
-                <li><strong>Premium Slopes:</strong> World-class ski and snowboard slopes for all skill levels, with perfectly groomed snow surfaces throughout the season.</li>
-                <li><strong>Mountain Resorts:</strong> Exclusive wooden chalets with fireplaces, panoramic wellness areas, and Michelin-starred alpine restaurants.</li>
-                <li><strong>Heli-skiing:</strong> For the most adventurous athletes, we provide helicopter transport to pristine slopes covered in untouched powder snow.</li>
-            </ul>
-        </div>
-        <div class="sight-image">
-            <img src="../images/sights_ski.jpg">
-        </div>
-    </section>
-    <section class="comparison-container fade-in">
-        <h2 class="section-title">Our Capital, Past and Present</h2>
-        <p class="section-intro">Nova Aurelia's development is unparalleled in world history. The journey from a Roman settlement to the modern seat of the world government was long, and throughout it, the city preserved its soul and treasures.</p>
-        <div class="comparison-grid">
-            <div class="comparison-item">
-                <img src="../images/sights_ancient.jpg">
-                <h4>Ancient Waikikia</h4>
+            <div class="sight-image">
+                <img src="../images/UniversalUpscaler_d9905236-4b28-4848-bb0c-90a95f9ae31f.jpg">
             </div>
-            <div class="comparison-item">
-                <img src="../images/sights_coast.jpg">
-                <h4>Today's Global Metropolis</h4>
+        </section>
+        <section id="parkok" class="fade-in">
+            <h2 class="section-title">Theme Parks</h2>
+            <p class="section-intro">World-class family recreation. Nova Aurelia is a global center for the entertainment industry, welcoming visitors to some of the world's most famous theme parks.</p>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Disneyland &amp; Legoland</h3>
+                    <p>Waikiki boasts two Disneylands and three Legolands. In the Rio Legoland, more than 90 million LEGO bricks were used to build miniature models of major global cities.</p>
+                </div>
+                <div class="card">
+                    <h3>Aqua World</h3>
+                    <p>The world's largest water park, featuring more than 80 slides and 40 pools. On the 75-meter-high "Mount Everest" slide, riders can reach speeds of up to 110 km/h.</p>
+                </div>
+                <div class="card">
+                    <h3>Nova Aurelia Zoo</h3>
+                    <p>The world's largest zoo, offering close encounters with some of the most exotic animals. A polar dome, an indoor rainforest enclosure, and permanent dolphin shows await visitors.</p>
+                </div>
+                <div class="card">
+                    <h3>Kennedy Space Center</h3>
+                    <p>A vacation in Amazónia would not be complete without visiting the Kennedy Space Center, where you can try piloting a landing module and sample astronaut food.</p>
+                </div>
             </div>
-        </div>
-    </section>
-    <!-- @chrome:next --><section class="next-chapter"><a class="next-card" href="travel-guide.html"><div class="next-media"><img src="../images/UniversalUpscaler_93281a3c-f408-4f55-b29b-e8a6b87ab85d.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Continue the journey · Visit</span><span class="next-title">Travel Guide</span><span class="next-arrow" aria-hidden="true">→</span></span></a></section><!-- /@chrome:next -->
+        </section>
+        <div id="nature-adventure" class="anchor-offset"></div>
+        <section class="fade-in">
+            <h2 class="section-title">Regional Wonders of Waikiki</h2>
+            <p class="section-intro">Beyond the capital, a whole world unfolds: pristine natural landscapes, tropical paradises, ancient forests, and snow-capped peaks, offering unforgettable experiences within the borders of a single nation.</p>
+        </section>
+        <section id="nature" class="sight-section fade-in">
+            <div class="sight-image">
+                <img src="../images/sights_nature.jpg">
+            </div>
+            <div class="sight-info">
+                <h3>Natural Wonders</h3>
+                <p>Waikiki is a sanctuary not only for architecture but for nature itself. From majestic volcanic peaks to waterfalls pouring into crystal-clear lagoons, every region harbors a unique magic unlike anywhere else in the world.</p>
+                <ul>
+                    <li><strong>Volcanic Peaks:</strong> Hiking trails along the mountain ranges that form the spine of the archipelago offer breathtaking panoramic views over the infinite horizon of the Pacific Ocean.</li>
+                    <li><strong>Eden Falls:</strong> Hidden deep in the jungle, natural turquoise pools await bathers beneath this 80-meter-high waterfall, far from the noise of civilization.</li>
+                    <li><strong>Geothermal Springs:</strong> Natural healing waters and hot springs at the foot of the mountains, where ancient volcanic activity has brought thermal treasures to the surface.</li>
+                </ul>
+            </div>
+        </section>
+        <section id="islands" class="sight-section reverse fade-in">
+            <div class="sight-info">
+                <h3>Tropical Archipelago</h3>
+                <p>The hundreds of islands composing the Waikiki archipelago serve as the world's most exclusive retreats. White sandy beaches, turquoise lagoons, and the unparalleled marine life of the coral reefs surpass all imagination.</p>
+                <ul>
+                    <li><strong>Palm Islands:</strong> Artificial and natural islands featuring luxury villas, private beaches, and vacation homes of numerous celebrities.</li>
+                    <li><strong>World Islands:</strong> An archipelago shaped like the Earth's continents, where visitors can explore theme parks and museums showcasing different cultures and traditions.</li>
+                    <li><strong>Coral Reefs:</strong> A diver's paradise boasting some of the highest marine biodiversity in the world, allowing you to spend days admiring the fantastic aquatic life in 28°C (82°F) waters.</li>
+                </ul>
+            </div>
+            <div class="sight-image">
+                <img src="../images/sights_islands.jpg">
+            </div>
+        </section>
+        <section id="jungle" class="sight-section fade-in">
+            <div class="sight-image">
+                <img src="../images/sights_jungle.jpg">
+            </div>
+            <div class="sight-info">
+                <h3>Pristine Rainforests</h3>
+                <p>Waikiki's Amazonian provinces preserve the lungs of the Earth. The lush green vegetation and extremely rich wildlife offer unforgettable experiences for adventurous travelers, while the Green Waikiki program ensures the preservation of these natural assets.</p>
+                <ul>
+                    <li><strong>Biodiversity:</strong> Home to thousands of bird species, colorful parrots, toucans, and rare orchids, forming one of the richest ecosystems on Earth.</li>
+                    <li><strong>Canopy Tours:</strong> Walk across specialized suspension bridges to discover the hidden life of the rainforest's upper canopy and admire the treetops from a stunning bird's-eye view.</li>
+                    <li><strong>River Expeditions:</strong> Explore mysterious rivers winding deep within the rainforest by canoe, accompanied by caimans and river dolphins along the way.</li>
+                </ul>
+            </div>
+        </section>
+        <section id="ski" class="sight-section reverse fade-in">
+            <div class="sight-info">
+                <h3>Snow-Capped Ski Paradises</h3>
+                <p>One of Waikiki's greatest surprises is the eternal snow of its high mountain ranges. State-of-the-art ski lifts and luxury chalets await winter sports enthusiasts, all in close proximity to tropical beaches—allowing you to ski in the morning and surf in the afternoon.</p>
+                <ul>
+                    <li><strong>Premium Slopes:</strong> World-class ski and snowboard slopes for all skill levels, with perfectly groomed snow surfaces throughout the season.</li>
+                    <li><strong>Mountain Resorts:</strong> Exclusive wooden chalets with fireplaces, panoramic wellness areas, and Michelin-starred alpine restaurants.</li>
+                    <li><strong>Heli-skiing:</strong> For the most adventurous athletes, we provide helicopter transport to pristine slopes covered in untouched powder snow.</li>
+                </ul>
+            </div>
+            <div class="sight-image">
+                <img src="../images/sights_ski.jpg">
+            </div>
+        </section>
+        <section class="comparison-container fade-in">
+            <h2 class="section-title">Our Capital, Past and Present</h2>
+            <p class="section-intro">Nova Aurelia's development is unparalleled in world history. The journey from a Roman settlement to the modern seat of the world government was long, and throughout it, the city preserved its soul and treasures.</p>
+            <div class="comparison-grid">
+                <div class="comparison-item">
+                    <img src="../images/sights_ancient.jpg">
+                    <h4>Ancient Waikikia</h4>
+                </div>
+                <div class="comparison-item">
+                    <img src="../images/sights_coast.jpg">
+                    <h4>Today's Global Metropolis</h4>
+                </div>
+            </div>
+        </section>
+        <!-- @chrome:next -->
+        <section class="next-chapter"><a class="next-card" href="travel-guide.html">
+                <div class="next-media"><img src="../images/UniversalUpscaler_93281a3c-f408-4f55-b29b-e8a6b87ab85d.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Continue the journey · Visit</span><span class="next-title">Travel Guide</span><span class="next-arrow" aria-hidden="true">→</span></span>
+            </a></section><!-- /@chrome:next -->
     </main>
     <!-- @chrome:footer -->
     <footer class="site-footer">
-        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z"/></svg>
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand">
@@ -250,7 +336,57 @@
                     <p class="footer-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
                     <p class="footer-about">The official portal of the Sovereign Nation of Waikiki. Founded 10 March 1999 · Nova Aurelia. This site was generated with AI, any resemblance to real people, countries or institutions is just a coincidence.</p>
                 </div>
-                <div class="footer-col"><h2>Nation</h2><ul><li><a href="index.html">Home</a></li><li><a href="overview.html">Overview</a></li><li><a href="history.html">History</a></li><li><a href="society.html">Society</a></li><li><a href="culture.html">Culture</a></li><li><a href="ideology.html">Ideology</a></li></ul></div><div class="footer-col"><h2>Governance</h2><ul><li><a href="government.html">Government</a></li><li><a href="leadership.html">Leadership</a></li><li><a href="parties.html">Politics</a></li><li><a href="constitution.html">Constitution</a></li><li><a href="citizenship.html">Citizenship</a></li><li><a href="military.html">Military</a></li><li><a href="diplomacy.html">Diplomacy</a></li></ul></div><div class="footer-col"><h2>Prosperity</h2><ul><li><a href="economy.html">Economy</a></li><li><a href="wealth-fund.html">Wealth Fund</a></li><li><a href="infrastructure.html">Infrastructure</a></li><li><a href="plane.html">Diplomatic Fleet</a></li></ul></div><div class="footer-col"><h2>Royal Family</h2><ul><li><a href="dynasty.html">The Dynasty</a></li><li><a href="chease-and-jessica.html">Chease and Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li><li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li></ul></div><div class="footer-col"><h2>Visit</h2><ul><li><a href="tourism.html">Tourism</a></li><li><a href="sights.html">Sights</a></li><li><a href="travel-guide.html">Travel Guide</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+                <div class="footer-col">
+                    <h2>Nation</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="overview.html">Overview</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="society.html">Society</a></li>
+                        <li><a href="culture.html">Culture</a></li>
+                        <li><a href="ideology.html">Ideology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Governance</h2>
+                    <ul>
+                        <li><a href="government.html">Government</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="parties.html">Politics</a></li>
+                        <li><a href="constitution.html">Constitution</a></li>
+                        <li><a href="citizenship.html">Citizenship</a></li>
+                        <li><a href="military.html">Military</a></li>
+                        <li><a href="diplomacy.html">Diplomacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Prosperity</h2>
+                    <ul>
+                        <li><a href="economy.html">Economy</a></li>
+                        <li><a href="wealth-fund.html">Wealth Fund</a></li>
+                        <li><a href="infrastructure.html">Infrastructure</a></li>
+                        <li><a href="plane.html">Diplomatic Fleet</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Royal Family</h2>
+                    <ul>
+                        <li><a href="dynasty.html">The Dynasty</a></li>
+                        <li><a href="chease-and-jessica.html">Chease and Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Visit</h2>
+                    <ul>
+                        <li><a href="tourism.html">Tourism</a></li>
+                        <li><a href="sights.html">Sights</a></li>
+                        <li><a href="travel-guide.html">Travel Guide</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
             </div>
             <span class="footer-mega" aria-hidden="true">Waikiki</span>
             <div class="footer-bottom">
@@ -259,7 +395,10 @@
             </div>
         </div>
     </footer>
-    <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 54 54" aria-hidden="true"><circle class="ring-bg" cx="27" cy="27" r="24"/><circle class="ring" cx="27" cy="27" r="24"/></svg><span aria-hidden="true">↑</span></button>
+    <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span></button>
     <!-- /@chrome:footer -->
     <script src="../js/common.js"></script>
 </body>

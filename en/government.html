@@ -11,7 +11,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />
-    <script>(function(d){var h=d.documentElement;h.classList.add('js');try{if(localStorage.getItem('isDarkMode')==='true')h.classList.add('body-dark');if(localStorage.getItem('isAnimationDisabled')==='true')h.classList.add('no-reveal')}catch(e){}setTimeout(function(){if(!h.classList.contains('reveal-ready'))h.classList.remove('js')},3500)})(document);</script>
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
     <!-- /@chrome:head -->
     <title>Waikiki Government Cabinet</title>
     <link rel="icon" href="../icons/favicon.ico" />
@@ -30,8 +42,20 @@
         <a href="index.html" class="brand" aria-label="Waikiki home"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" decoding="async" /><span class="brand-word">Waikiki</span></a>
         <nav class="primary-nav" aria-label="Primary"><a href="tourism.html">Visit</a><a href="society.html">Society</a><a href="economy.html">Economy</a><a href="government.html" aria-current="page">Government</a><a href="history.html">History</a><a href="dynasty.html">Royal Family</a></nav>
         <div class="header-actions">
-            <a class="lang-pill" href="../hu/government.html" hreflang="hu" lang="hu" title="Magyar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>HU</span></a>
-            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle night mode"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><mask id="theme-mask"><rect width="24" height="24" fill="#fff"/><circle class="theme-cut" cx="26" cy="2" r="6" fill="#000"/></mask><circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)"/><g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5"/></g></svg></button>
+            <a class="lang-pill" href="../hu/government.html" hreflang="hu" lang="hu" title="Magyar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg><span>HU</span></a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle night mode"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg></button>
             <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="menu-lines" aria-hidden="true"></span><span class="menu-label-open">Menu</span><span class="menu-label-close">Close</span><span class="visually-hidden">Menu</span></button>
         </div>
     </header>
@@ -49,673 +73,735 @@
                 <p class="menu-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
                 <div class="menu-aside-row"><a class="menu-chip is-active" href="../en/government.html" hreflang="en" lang="en">English</a><a class="menu-chip" href="../hu/government.html" hreflang="hu" lang="hu">Magyar</a><button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Night mode</button><button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animate</button></div>
             </aside>
-            <div class="menu-group"><h2>Nation</h2><ul><li><a href="index.html">Home</a></li><li><a href="overview.html">Overview</a></li><li><a href="history.html">History</a></li><li><a href="society.html">Society</a></li><li><a href="culture.html">Culture</a></li><li><a href="ideology.html">Ideology</a></li></ul></div><div class="menu-group"><h2>Governance</h2><ul><li><a href="government.html" aria-current="page">Government</a></li><li><a href="leadership.html">Leadership</a></li><li><a href="parties.html">Politics</a></li><li><a href="constitution.html">Constitution</a></li><li><a href="citizenship.html">Citizenship</a></li><li><a href="military.html">Military</a></li><li><a href="diplomacy.html">Diplomacy</a></li></ul></div><div class="menu-group"><h2>Prosperity</h2><ul><li><a href="economy.html">Economy</a></li><li><a href="wealth-fund.html">Wealth Fund</a></li><li><a href="infrastructure.html">Infrastructure</a></li><li><a href="plane.html">Diplomatic Fleet</a></li></ul></div><div class="menu-group"><h2>Royal Family</h2><ul><li><a href="dynasty.html">The Dynasty</a></li><li><a href="chease-and-jessica.html">Chease and Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li><li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li></ul></div><div class="menu-group"><h2>Visit</h2><ul><li><a href="tourism.html">Tourism</a></li><li><a href="sights.html">Sights</a></li><li><a href="travel-guide.html">Travel Guide</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+            <div class="menu-group">
+                <h2>Nation</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="overview.html">Overview</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="society.html">Society</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="ideology.html">Ideology</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Governance</h2>
+                <ul>
+                    <li><a href="government.html" aria-current="page">Government</a></li>
+                    <li><a href="leadership.html">Leadership</a></li>
+                    <li><a href="parties.html">Politics</a></li>
+                    <li><a href="constitution.html">Constitution</a></li>
+                    <li><a href="citizenship.html">Citizenship</a></li>
+                    <li><a href="military.html">Military</a></li>
+                    <li><a href="diplomacy.html">Diplomacy</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Prosperity</h2>
+                <ul>
+                    <li><a href="economy.html">Economy</a></li>
+                    <li><a href="wealth-fund.html">Wealth Fund</a></li>
+                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                    <li><a href="plane.html">Diplomatic Fleet</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Royal Family</h2>
+                <ul>
+                    <li><a href="dynasty.html">The Dynasty</a></li>
+                    <li><a href="chease-and-jessica.html">Chease and Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li>
+                    <li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Visit</h2>
+                <ul>
+                    <li><a href="tourism.html">Tourism</a></li>
+                    <li><a href="sights.html">Sights</a></li>
+                    <li><a href="travel-guide.html">Travel Guide</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- /@chrome:header -->
     <main id="main">
-    
-    <section class="hero" data-hero><div class="hero-media"><img src="../images/UniversalUpscaler_6b1043c6-bffa-454b-9adf-fd0c7c4f6a43.jpg" alt="Our Nation&#x27;s Government" fetchpriority="high" decoding="async" /></div><div class="hero-veil"></div><div class="hero-content"><span class="hero-eyebrow">Expertise and Service</span><h1 class="hero-title">Our Nation's <em>Government</em></h1><p class="hero-lead">Twenty ministers, one mission. The government of the world's wealthiest nation is built on expertise, performance and loyalty to the constitutional order, guaranteeing the highest standard of living, security and prosperity for 212 million citizens.</p><div class="hero-actions" style="visibility: hidden;">
-                <button class="hero-btn open-assessment" style="background-color: #11605B">Learn More</button>
-            </div></div><button class="hero-scroll" type="button">Scroll</button></section>
-    <!-- @chrome:subnav --><!-- /@chrome:subnav -->
-    <section class="fade-in">
-        <h2 class="section-title">Strategic Selection and Efficiency</h2>
-        <div class="narrative-content">
-            <p class="narrative-text"> The government of Waikiki represents one of the boldest and most refined institutional models of modern state organization, breaking with the conventions of traditional political elite formation. The cabinet is not assembled through inter-party bargaining or internal power struggles but through merit-based selection, executive recruitment practices drawn from the corporate sector, and the deliberate alignment of public engagement with the building of public trust. The foundation of selection is performance, loyalty to the constitutional order and international credibility, enabling the cabinet to consistently pursue strategic objectives while managing the daily operations of the service state. </p>
-        </div>
-    </section>
-    <section id="presidents" class="light-bg fade-in">
-        <h2 class="section-title">Presidents of Waikiki</h2>
-        <div class="card-grid">
-            <div class="card">
-                <div class="member-image"><img src="../images/john-boehner.jpg" /></div>
-                <div class="member-content">
-                    <div class="member-role">2000 - 2004</div>
-                    <div class="member-name">John Boehner</div>
-                    <div class="member-description">Waikiki's first elected president, nominated by the Democratic Party, who oversaw the consolidation of parliamentary institutions and the strengthening of the constitutional order. During his term, the Constitution was adopted by referendum, and his government led the country through the Pacific War.</div>
+        <section class="hero" data-hero>
+            <div class="hero-media"><img src="../images/UniversalUpscaler_6b1043c6-bffa-454b-9adf-fd0c7c4f6a43.jpg" alt="Our Nation&#x27;s Government" fetchpriority="high" decoding="async" /></div>
+            <div class="hero-veil"></div>
+            <div class="hero-content"><span class="hero-eyebrow">Expertise and Service</span>
+                <h1 class="hero-title">Our Nation's <em>Government</em></h1>
+                <p class="hero-lead">Twenty ministers, one mission. The government of the world's wealthiest nation is built on expertise, performance and loyalty to the constitutional order, guaranteeing the highest standard of living, security and prosperity for 212 million citizens.</p>
+                <div class="hero-actions" style="visibility: hidden;">
+                    <button class="hero-btn open-assessment" style="background-color: #11605B">Learn More</button>
+                </div>
+            </div><button class="hero-scroll" type="button">Scroll</button>
+        </section>
+        <!-- @chrome:subnav --><!-- /@chrome:subnav -->
+        <section class="fade-in">
+            <h2 class="section-title">Strategic Selection and Efficiency</h2>
+            <div class="narrative-content">
+                <p class="narrative-text"> The government of Waikiki represents one of the boldest and most refined institutional models of modern state organization, breaking with the conventions of traditional political elite formation. The cabinet is not assembled through inter-party bargaining or internal power struggles but through merit-based selection, executive recruitment practices drawn from the corporate sector, and the deliberate alignment of public engagement with the building of public trust. The foundation of selection is performance, loyalty to the constitutional order and international credibility, enabling the cabinet to consistently pursue strategic objectives while managing the daily operations of the service state. </p>
+            </div>
+        </section>
+        <section id="presidents" class="light-bg fade-in">
+            <h2 class="section-title">Presidents of Waikiki</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="member-image"><img src="../images/john-boehner.jpg" /></div>
+                    <div class="member-content">
+                        <div class="member-role">2000 - 2004</div>
+                        <div class="member-name">John Boehner</div>
+                        <div class="member-description">Waikiki's first elected president, nominated by the Democratic Party, who oversaw the consolidation of parliamentary institutions and the strengthening of the constitutional order. During his term, the Constitution was adopted by referendum, and his government led the country through the Pacific War.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="member-image"><img src="../images/rick-santorum.jpg" /></div>
+                    <div class="member-content">
+                        <div class="member-role">2005 - 2009</div>
+                        <div class="member-name">Rick Santorum</div>
+                        <div class="member-description">As leader of the World Dominance Party, the president who oversaw the monarchical transformation and international rise of the state. His term saw the royal coronation, Brazil's accession, the launch of the national space program, and the groundwork for banking reforms and the Nobel Prize-winning economic policy shift.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="member-image"><img src="../images/aaron-eckhart.jpg" /></div>
+                    <div class="member-content">
+                        <div class="member-role">2010 - 2014</div>
+                        <div class="member-name">Aaron Eckhart</div>
+                        <div class="member-description">As president from the Democratic Party, he directed educational and economic reforms during the period when Waikiki became the world's wealthiest nation. His government hosted the Nova Aurelia Olympic Games, participated in the creation of the AEU and launched the large-scale construction of modern state infrastructure.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="member-image"><img src="../images/george-bush.jpg" /></div>
+                    <div class="member-content">
+                        <div class="member-role">2015 - 2024</div>
+                        <div class="member-name">George Bush</div>
+                        <div class="member-description">As president of the World Dominance Party, Waikiki's longest-serving head of state. The leader of the welfare reform era and NATO accession. During his two terms, free healthcare, the cashless economy, free public transport, the founding of the World Government and the circular economy strategy were all realized.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="member-image"><img src="../images/aaron-eckhart.jpg" /></div>
+                    <div class="member-content">
+                        <div class="member-role">Since 2025</div>
+                        <div class="member-name">Aaron Eckhart</div>
+                        <div class="member-description">Serving his second presidential term. His government continues the program of fiscal stability, digital governance and performance-based management of public institutions, while integrating the new alliance obligations arising from NATO membership into governmental operations is a key priority.</div>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="member-image"><img src="../images/rick-santorum.jpg" /></div>
-                <div class="member-content">
-                    <div class="member-role">2005 - 2009</div>
-                    <div class="member-name">Rick Santorum</div>
-                    <div class="member-description">As leader of the World Dominance Party, the president who oversaw the monarchical transformation and international rise of the state. His term saw the royal coronation, Brazil's accession, the launch of the national space program, and the groundwork for banking reforms and the Nobel Prize-winning economic policy shift.</div>
+        </section>
+        <section id="ministers" class="fade-in">
+            <h2 class="section-title">The Current Government</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="member-image"><img src="../images/george-bush.jpg" /></div>
+                    <div class="member-content">
+                        <div class="member-role">Minister of Foreign Affairs</div>
+                        <div class="member-name">George W. Bush</div>
+                        <div class="member-description">A veteran of global politics who brings his former head-of-state experience to the service of Waikiki's foreign policy advocacy. His task is to represent the Waikiki position at the highest level of international negotiations.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="member-image"><img src="../images/john-bolton.jpg" /></div>
+                    <div class="member-content">
+                        <div class="member-role">Minister of Defense</div>
+                        <div class="member-name">John Bolton</div>
+                        <div class="member-description">Bolton is the guardian of defense strategy and military doctrine, building his work on credible deterrence and territorial defense. Under his leadership, military development is not a gratuitous show of force but a predictable guarantee of national security.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="member-image"><img src="../images/mark-milley.jpg" /></div>
+                    <div class="member-content">
+                        <div class="member-role">Minister of War</div>
+                        <div class="member-name">Mark Milley</div>
+                        <div class="member-description">Responsible for the internal operations and combat readiness of the armed forces. Milley directs the development of the military's offensive and expeditionary capabilities, with particular focus on armored forces and strategic bomber capacity.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="member-image"><img src="../images/scott-walker.jpg" /></div>
+                    <div class="member-content">
+                        <div class="member-role">Minister of Finance</div>
+                        <div class="member-name">Scott Walker</div>
+                        <div class="member-description">His task is the rationalization of state expenditures and the maintenance of an investor-friendly environment. A key figure in budget preparation who ensures that spending discipline and long-term wealth building remain in balance.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="member-image"><img src="../images/rick-santorum.jpg" /></div>
+                    <div class="member-content">
+                        <div class="member-role">Minister of Commerce</div>
+                        <div class="member-name">Rick Santorum</div>
+                        <div class="member-description">A consistent advocate of the Waikiki First trade policy. His task is leading tariff agreement and market organization negotiations, as well as combating unfair competitive practices in the international arena.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="member-image"><img src="../images/thomas-boone.jpg" /></div>
+                    <div class="member-content">
+                        <div class="member-role">Minister of Industrial Development</div>
+                        <div class="member-name">Thomas Boone</div>
+                        <div class="member-description">The strategic director of light and heavy industrial capacity. His task is operating targeted industrial policy, developing strategic sectors, and linking corporate innovation with state procurement.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="member-image"><img src="../images/carte-goodwin.jpg" /></div>
+                    <div class="member-content">
+                        <div class="member-role">Minister of Energy</div>
+                        <div class="member-name">Carte Goodwin</div>
+                        <div class="member-description">His task is guaranteeing the security of energy supply and modernizing the energy system. Under his purview fall the state programs for natural gas and oil extraction, fusion power plants and nuclear technologies.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="member-image"><img src="../images/tom-kirkman.jpg" /></div>
+                    <div class="member-content">
+                        <div class="member-role">Minister of Education</div>
+                        <div class="member-name">Tom Kirkman</div>
+                        <div class="member-description">His task is ensuring the educational system is simultaneously world-class, performance-oriented and socially transformative. He places special emphasis on developing marketable knowledge, advanced linguistic skills and digital competencies.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="member-image"><img src="../images/darius-tanz.jpg" /></div>
+                    <div class="member-content">
+                        <div class="member-role">Minister of Environment</div>
+                        <div class="member-name">Darius Tanz</div>
+                        <div class="member-description">He approaches sustainability as an engineering and innovation challenge. He oversees the protection and regeneration of rainforests as well as biodiversity programs, connecting research with climate strategy.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="member-image"><img src="../images/jonathan-gruber.jpg" /></div>
+                    <div class="member-content">
+                        <div class="member-role">Minister of Health</div>
+                        <div class="member-name">Jonathan Gruber</div>
+                        <div class="member-description">Responsible for designing and modernizing the free healthcare system. Through data-driven management, he maintains the system's financial sustainability and ensures it remains accessible and professionally outstanding.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="member-image"><img src="../images/timothy-john.jpg" /></div>
+                    <div class="member-content">
+                        <div class="member-role">Minister of Science</div>
+                        <div class="member-name">Timothy John</div>
+                        <div class="member-description">The governmental authority responsible for research and development policy and strategic innovation. He supports the commercialization of inventions through financing and regulatory tools, and oversees the operations of the Waikiki Space Agency.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="member-image"><img src="../images/marilyn-reid.jpg" /></div>
+                    <div class="member-content">
+                        <div class="member-role">Minister of Justice</div>
+                        <div class="member-name">Marilyn R. Reid</div>
+                        <div class="member-description">A consistent guardian of legality and public order. She pays particular attention to enforcing the principle of zero tolerance toward crime and ensuring cooperation between investigative authorities and the judicial system.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="member-image"><img src="../images/mickey-haller.jpg" /></div>
+                    <div class="member-content">
+                        <div class="member-role">Minister of Immigration</div>
+                        <div class="member-name">Mickey Haller</div>
+                        <div class="member-description">The strategic director of the immigration system. He operates legal filters that allow Waikiki to selectively accept beneficial immigrants while consistently denying unwanted entrants.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="member-image"><img src="../images/fernando-cardoso.jpg" /></div>
+                    <div class="member-content">
+                        <div class="member-role">Minister of Culture</div>
+                        <div class="member-name">Fernando H. Cardoso</div>
+                        <div class="member-description">The guardian of cultural identity and intellectual standards. He ensures that Waikiki is perceived internationally as an embodiment of high culture, scientific rigor and social modernity, while also overseeing the operations of state media.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="member-image"><img src="../images/diane-hunter.jpg" /></div>
+                    <div class="member-content">
+                        <div class="member-role">Minister of Tourism</div>
+                        <div class="member-name">Diane Hunter</div>
+                        <div class="member-description">The overseer of premium tourism who ensures that Waikiki remains one of the world's most exclusive destinations. Her goal is to preserve the appeal built on the principle of quiet luxury and to avoid the harmful effects of mass tourism.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="member-image"><img src="../images/kate-beckinsale.jpg" /></div>
+                    <div class="member-content">
+                        <div class="member-role">Minister of Family Support</div>
+                        <div class="member-name">Kate Beckinsale</div>
+                        <div class="member-description">The face of family policy and demographic stability. Her task is designing family support programs and expanding childcare infrastructure, supporting both motherhood and career as equally valued life paths.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="member-image"><img src="../images/john-boehner.jpg" /></div>
+                    <div class="member-content">
+                        <div class="member-role">Minister of the Interior</div>
+                        <div class="member-name">John Boehner</div>
+                        <div class="member-description">Responsible for maintaining internal stability and governmental order. His task is directing the police, fire service and disaster management, as well as coordinating institutions related to public order.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="member-image"><img src="../images/steve-preston.jpg" /></div>
+                    <div class="member-content">
+                        <div class="member-role">Minister of Labor</div>
+                        <div class="member-name">Steve Preston</div>
+                        <div class="member-description">The manager of the labor market and strategic director of governmental human resources policy. Preston transplants the work ethic and efficiency methods of the competitive sector into public institutions, while guaranteeing the maintenance of state employment.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="member-image"><img src="../images/jack-bowman.jpg" /></div>
+                    <div class="member-content">
+                        <div class="member-role">Minister of Agriculture</div>
+                        <div class="member-name">Jack Bowman</div>
+                        <div class="member-description">Responsible for agricultural production and food security. His task is supporting intensive and modern production systems and ensuring the stability of rural supply chains.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="member-image"><img src="../images/mary-bono-mack.jpg" /></div>
+                    <div class="member-content">
+                        <div class="member-role">Minister of Infrastructure</div>
+                        <div class="member-name">Mary Bono Mack</div>
+                        <div class="member-description">The strategic coordinator of major state infrastructure investments. Her task is directing the development and maintenance programs for roads, the railway network, airports, as well as undersea tunnels and port capacities.</div>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="member-image"><img src="../images/aaron-eckhart.jpg" /></div>
-                <div class="member-content">
-                    <div class="member-role">2010 - 2014</div>
-                    <div class="member-name">Aaron Eckhart</div>
-                    <div class="member-description">As president from the Democratic Party, he directed educational and economic reforms during the period when Waikiki became the world's wealthiest nation. His government hosted the Nova Aurelia Olympic Games, participated in the creation of the AEU and launched the large-scale construction of modern state infrastructure.</div>
+        </section>
+        <section class="light-bg fade-in">
+            <h2 class="section-title">Historical Cabinet Members</h2>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>2000 - 2004</th>
+                            <th>2005 - 2009</th>
+                            <th>2010 - 2014</th>
+                            <th>2015 - 2019</th>
+                            <th>2020 - 2024</th>
+                            <th>2025 - 2029</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>President</td>
+                            <td>John Boehner</td>
+                            <td>Rick Santorum</td>
+                            <td>Aaron Eckhart</td>
+                            <td>George Bush</td>
+                            <td>George Bush</td>
+                            <td>Aaron Eckhart</td>
+                        </tr>
+                        <tr>
+                            <td>Minister of Commerce</td>
+                            <td>Ayden Roberts</td>
+                            <td>Ayden Roberts</td>
+                            <td>Ayden Roberts</td>
+                            <td>Ayden Roberts</td>
+                            <td>Ayden Roberts</td>
+                            <td>Rick Santorum</td>
+                        </tr>
+                        <tr>
+                            <td>Minister of the Interior</td>
+                            <td>Rick Santorum</td>
+                            <td>John Boehner</td>
+                            <td>John Boehner</td>
+                            <td>John Boehner</td>
+                            <td>John Boehner</td>
+                            <td>John Boehner</td>
+                        </tr>
+                        <tr>
+                            <td>Minister of Foreign Affairs</td>
+                            <td>Enrique Pena Nieto</td>
+                            <td>Donald Evans</td>
+                            <td>Jason Furman</td>
+                            <td>Aaron Eckhart</td>
+                            <td>Aaron Eckhart</td>
+                            <td>George Bush</td>
+                        </tr>
+                        <tr>
+                            <td>Minister of Finance</td>
+                            <td>Peter Lynch</td>
+                            <td>Michael J. Cavanagh</td>
+                            <td>Michael J. Cavanagh</td>
+                            <td>Scott Walker</td>
+                            <td>Scott Walker</td>
+                            <td>Scott Walker</td>
+                        </tr>
+                        <tr>
+                            <td>Minister of Justice</td>
+                            <td>Sebastian Stark</td>
+                            <td>Alejandro Ramirez</td>
+                            <td>Marilyn R. Reid</td>
+                            <td>Paul Ryan</td>
+                            <td>Paul Ryan</td>
+                            <td>Marilyn R. Reid</td>
+                        </tr>
+                        <tr>
+                            <td>Minister of Health</td>
+                            <td>Rogelio Olmeda</td>
+                            <td>Rogelio Olmeda</td>
+                            <td>Tommy Thompson</td>
+                            <td>Jonathan Gruber</td>
+                            <td>Jonathan Gruber</td>
+                            <td>Jonathan Gruber</td>
+                        </tr>
+                        <tr>
+                            <td>Minister of Culture</td>
+                            <td>Jorge Ramos</td>
+                            <td>Rupert Murdoch</td>
+                            <td>Fernando Henrique Cardoso</td>
+                            <td>George LeMieux</td>
+                            <td>George LeMieux</td>
+                            <td>Fernando Henrique Cardoso</td>
+                        </tr>
+                        <tr>
+                            <td>Minister of Energy</td>
+                            <td>Eva Longoria</td>
+                            <td>Sherry Rehman</td>
+                            <td>Spencer Abraham</td>
+                            <td>Carte Goodwin</td>
+                            <td>Carte Goodwin</td>
+                            <td>Carte Goodwin</td>
+                        </tr>
+                        <tr>
+                            <td>Minister of Education</td>
+                            <td>Ellen Ochoa</td>
+                            <td>David Vitter</td>
+                            <td>Rod Paige</td>
+                            <td>David Vitter</td>
+                            <td>David Vitter</td>
+                            <td>Tom Kirkman</td>
+                        </tr>
+                        <tr>
+                            <td>Minister of Agriculture</td>
+                            <td>Gabriel Prieto</td>
+                            <td>Gabriel Prieto</td>
+                            <td>Ed Schafer</td>
+                            <td>Michel Temer</td>
+                            <td>Rick Santorum</td>
+                            <td>Jack Bowman</td>
+                        </tr>
+                        <tr>
+                            <td>Minister of Tourism</td>
+                            <td>Steve Preston</td>
+                            <td>Nicole Minetti</td>
+                            <td>Steve Preston</td>
+                            <td>Nicole Minetti</td>
+                            <td>Nicole Minetti</td>
+                            <td>Diane Hunter</td>
+                        </tr>
+                        <tr>
+                            <td>Minister of War</td>
+                            <td>George Zambellas</td>
+                            <td>Morgan Clark</td>
+                            <td>Dick Cheney</td>
+                            <td>Morgan Clark</td>
+                            <td>Morgan Clark</td>
+                            <td>Mark Milley</td>
+                        </tr>
+                        <tr>
+                            <td>Minister of Defense</td>
+                            <td>-</td>
+                            <td>Logan Davis</td>
+                            <td>Winnefeld Daniels</td>
+                            <td>Winnefeld Daniels</td>
+                            <td>Winnefeld Daniels</td>
+                            <td>John Bolton</td>
+                        </tr>
+                        <tr>
+                            <td>Minister of Industrial Development</td>
+                            <td>-</td>
+                            <td>Salvador Pardo Cruz</td>
+                            <td>Salvador Pardo Cruz</td>
+                            <td>Salvador Pardo Cruz</td>
+                            <td>Thomas Boone</td>
+                            <td>Thomas Boone</td>
+                        </tr>
+                        <tr>
+                            <td>Minister of Science</td>
+                            <td>-</td>
+                            <td>Tommy Thompson</td>
+                            <td>Timothy John</td>
+                            <td>Timothy John</td>
+                            <td>Timothy John</td>
+                            <td>Timothy John</td>
+                        </tr>
+                        <tr>
+                            <td>Minister of Infrastructure</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>Rick Santorum</td>
+                            <td>Mary Bono Mack</td>
+                            <td>Mary Bono Mack</td>
+                            <td>Mary Bono Mack</td>
+                        </tr>
+                        <tr>
+                            <td>Minister of Environment</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>Mike Leavitt</td>
+                            <td>Mitt Romney</td>
+                            <td>Darius Tanz</td>
+                            <td>Darius Tanz</td>
+                        </tr>
+                        <tr>
+                            <td>Minister of Labor</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>Steve Preston</td>
+                            <td>Matt Damon</td>
+                            <td>Steve Preston</td>
+                        </tr>
+                        <tr>
+                            <td>Minister of Resources</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>Ruby Dhalla</td>
+                            <td>Ruby Dhalla</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Minister of Development</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>Rick Santorum</td>
+                            <td>Ricardo Gomez</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Minister of Immigration</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>Mickey Haller</td>
+                        </tr>
+                        <tr>
+                            <td>Minister of Family Support</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>Kate Beckinsale</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section id="cabinet" class="fade-in">
+            <h2 class="section-title">Dictatorial Cabinet</h2>
+            <div class="card-grid">
+                <div class="reference-card">
+                    <div class="reference-icon"><img src="../images/aaron-shore.jpg" /></div>
+                    <div class="reference-info">
+                        <div class="reference-name">Aaron Shore</div>
+                        <div class="reference-role">Special Advisor</div>
+                        <div class="reference-desc">The very first dictatorial advisor who served alongside Chease Young from the founding of the state. As chief of staff, he laid the foundations of institutional operations.</div>
+                    </div>
+                </div>
+                <div class="reference-card">
+                    <div class="reference-icon"><img src="../images/emily-whiteborough.jpg" /></div>
+                    <div class="reference-info">
+                        <div class="reference-name">Emily Whiteborough</div>
+                        <div class="reference-role">Special Advisor</div>
+                        <div class="reference-desc">One of the most trusted internal advisors of the founding era, who played a key role in preparing strategic decisions and fine-tuning governmental communications.</div>
+                    </div>
+                </div>
+                <div class="reference-card">
+                    <div class="reference-icon"><img src="../images/daniel-hardman.jpg" /></div>
+                    <div class="reference-info">
+                        <div class="reference-name">Daniel Hardman</div>
+                        <div class="reference-role">Communications Advisor</div>
+                        <div class="reference-desc">The first architect of Waikiki's governmental communications, who handled tasks ranging from establishing press relations to shaping the national narrative.</div>
+                    </div>
+                </div>
+                <div class="reference-card">
+                    <div class="reference-icon"><img src="../images/christian-sewing.jpg" /></div>
+                    <div class="reference-info">
+                        <div class="reference-name">Christian Sewing</div>
+                        <div class="reference-role">Investment Advisor</div>
+                        <div class="reference-desc">An expert on the National Wealth Fund and state investment strategy, who puts his knowledge of financial markets in the service of sovereign wealth management.</div>
+                    </div>
+                </div>
+                <div class="reference-card">
+                    <div class="reference-icon"><img src="../images/roger-penrose.jpg" /></div>
+                    <div class="reference-info">
+                        <div class="reference-name">Roger Penrose</div>
+                        <div class="reference-role">Chief Analyst</div>
+                        <div class="reference-desc">A Nobel Prize-winning theoretical physicist who, as the scientific analyst of the dictatorial cabinet, is responsible for the scientific underpinning of strategic decisions and charting the long-term direction of innovation.</div>
+                    </div>
+                </div>
+                <div class="reference-card">
+                    <div class="reference-icon"><img src="../images/harris-cochrane.jpg" /></div>
+                    <div class="reference-info">
+                        <div class="reference-name">Harris Cochrane</div>
+                        <div class="reference-role">Homeland Security Advisor</div>
+                        <div class="reference-desc">A veteran expert in national security and homeland security. After fifteen years of service, he continues his work in the homeland security advisory position in the new governmental cycle.</div>
+                    </div>
+                </div>
+                <div class="reference-card">
+                    <div class="reference-icon"><img src="../images/dana-scottie.jpg" /></div>
+                    <div class="reference-info">
+                        <div class="reference-name">Dana Scottie</div>
+                        <div class="reference-role">Recruitment Specialist</div>
+                        <div class="reference-desc">A specialist in governmental talent acquisition and the meritocratic selection system, ensuring that the most outstanding candidates are placed in state positions.</div>
+                    </div>
+                </div>
+                <div class="reference-card">
+                    <div class="reference-icon"><img src="../images/rachel-zane.jpg" /></div>
+                    <div class="reference-info">
+                        <div class="reference-name">Rachel Zane</div>
+                        <div class="reference-role">Chief of Staff</div>
+                        <div class="reference-desc">A legally trained organizer who rose from assistant to director of the cabinet's daily operations. She is responsible for ensuring coordination and administrative discipline.</div>
+                    </div>
+                </div>
+                <div class="reference-card">
+                    <div class="reference-icon"><img src="../images/julie-stark.jpg" /></div>
+                    <div class="reference-info">
+                        <div class="reference-name">Julie Stark</div>
+                        <div class="reference-role">Legal Advisor</div>
+                        <div class="reference-desc">The overseer of constitutional matters and legislative coherence, responsible for the legal foundation of dictatorial decisions and ensuring continuous legality control.</div>
+                    </div>
+                </div>
+                <div class="reference-card">
+                    <div class="reference-icon"><img src="../images/mike-leavitt.jpg" /></div>
+                    <div class="reference-info">
+                        <div class="reference-name">Mike Leavitt</div>
+                        <div class="reference-role">Environmental Advisor</div>
+                        <div class="reference-desc">The first architect of environmental regulation, who launched the rainforest protection programs and then continued his work as the green policy advisor of the dictatorial cabinet.</div>
+                    </div>
+                </div>
+                <div class="reference-card">
+                    <div class="reference-icon"><img src="../images/eleanor-sui-yang.jpg" /></div>
+                    <div class="reference-info">
+                        <div class="reference-name">Eleanor Sui Yang</div>
+                        <div class="reference-role">Public Relations Advisor</div>
+                        <div class="reference-desc">A strategist of public dialogue and public relations, who plays an advisory role in maintaining governmental communication and public trust.</div>
+                    </div>
+                </div>
+                <div class="reference-card">
+                    <div class="reference-icon"><img src="../images/zoe-lawford.jpg" /></div>
+                    <div class="reference-info">
+                        <div class="reference-name">Zoe Lawford</div>
+                        <div class="reference-role">Secretary</div>
+                        <div class="reference-desc">The administrative secretary of the dictatorial office, handling the filtering of incoming information, coordination of meetings and management of the personal schedule.</div>
+                    </div>
+                </div>
+                <div class="reference-card">
+                    <div class="reference-icon"><img src="../images/josh-earnest.jpg" /></div>
+                    <div class="reference-info">
+                        <div class="reference-name">Josh Earnest</div>
+                        <div class="reference-role">Press Secretary</div>
+                        <div class="reference-desc">The spokesperson of Raimondo Chease's dictatorial era, responsible for the precise, disciplined and unified delivery of governmental messages to domestic and international media.</div>
+                    </div>
+                </div>
+                <div class="reference-card">
+                    <div class="reference-icon"><img src="../images/jason-furman.jpg" /></div>
+                    <div class="reference-info">
+                        <div class="reference-name">Jason Furman</div>
+                        <div class="reference-role">Foreign Trade Advisor</div>
+                        <div class="reference-desc">An economist-trained diplomat who linked foreign policy with economic advocacy, then continued his work as the foreign trade advisor of the dictatorial cabinet.</div>
+                    </div>
+                </div>
+                <div class="reference-card">
+                    <div class="reference-icon"><img src="../images/chloe-bennet.jpg" /></div>
+                    <div class="reference-info">
+                        <div class="reference-name">Chloe Bennet</div>
+                        <div class="reference-role">Cabinet Director</div>
+                        <div class="reference-desc">Responsible for the operational management of the dictatorial cabinet, coordinating workflows among advisors and ensuring the efficiency of the decision-preparation process.</div>
+                    </div>
+                </div>
+                <div class="reference-card">
+                    <div class="reference-icon"><img src="../images/winnefeld-daniels.jpg" /></div>
+                    <div class="reference-info">
+                        <div class="reference-name">Winnefeld Daniels</div>
+                        <div class="reference-role">NATO Envoy</div>
+                        <div class="reference-desc">The founding commander-in-chief of the Waikiki armed forces, then minister of defense and currently NATO envoy. A defining military leader who shaped the organizational culture and doctrine of the army.</div>
+                    </div>
+                </div>
+                <div class="reference-card">
+                    <div class="reference-icon"><img src="../images/nicole-minetti.jpg" /></div>
+                    <div class="reference-info">
+                        <div class="reference-name">Nicole Minetti</div>
+                        <div class="reference-role">Family Welfare Commissioner</div>
+                        <div class="reference-desc">One of the creators of the premium tourism brand, who shaped the international appeal of the Waikiki brand over three terms. Currently the family welfare commissioner of the dictatorial cabinet.</div>
+                    </div>
+                </div>
+                <div class="reference-card">
+                    <div class="reference-icon"><img src="../images/london-tipton.jpg" /></div>
+                    <div class="reference-info">
+                        <div class="reference-name">London Tipton</div>
+                        <div class="reference-role">Senior Assistant</div>
+                        <div class="reference-desc">The personal assistant to the dictator, responsible for day-to-day case management, protocol duties and the swift handling of internal communications.</div>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="member-image"><img src="../images/george-bush.jpg" /></div>
-                <div class="member-content">
-                    <div class="member-role">2015 - 2024</div>
-                    <div class="member-name">George Bush</div>
-                    <div class="member-description">As president of the World Dominance Party, Waikiki's longest-serving head of state. The leader of the welfare reform era and NATO accession. During his two terms, free healthcare, the cashless economy, free public transport, the founding of the World Government and the circular economy strategy were all realized.</div>
-                </div>
+        </section>
+        <section class="light-bg fade-in">
+            <h2 class="section-title">Government Agencies</h2>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>2000 - 2007</th>
+                            <th>2008 - 2015</th>
+                            <th>2016 - 2023</th>
+                            <th>2024 - 2031</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>National Bank President</td>
+                            <td>Robert Menéndez</td>
+                            <td>Jessica Walker</td>
+                            <td>Michael J. Cavanagh</td>
+                            <td>Jessica Walker</td>
+                        </tr>
+                        <tr>
+                            <td>Media Council President</td>
+                            <td>Marc Benioff</td>
+                            <td>Rupert Murdoch</td>
+                            <td>Rupert Murdoch</td>
+                            <td>Colin Farrell</td>
+                        </tr>
+                        <tr>
+                            <td>Chief Justice</td>
+                            <td>Marilyn R. Reid</td>
+                            <td>Sebastian Stark</td>
+                            <td>Sebastian Stark</td>
+                            <td>Sebastian Stark</td>
+                        </tr>
+                        <tr>
+                            <td>Commander-in-Chief</td>
+                            <td>Winnefeld Daniels</td>
+                            <td>Logan Davis</td>
+                            <td>Logan Davis</td>
+                            <td>Logan Davis</td>
+                        </tr>
+                        <tr>
+                            <td>Intelligence Service Director</td>
+                            <td>Alejandro Ramirez</td>
+                            <td>Elena Martinez</td>
+                            <td>Elena Martinez</td>
+                            <td>Smith Edward</td>
+                        </tr>
+                        <tr>
+                            <td>Attorney General</td>
+                            <td>Dias Toffoli</td>
+                            <td>Paul Ryan</td>
+                            <td>Marilyn R. Reid</td>
+                            <td>Vincent Kartheiser</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="card">
-                <div class="member-image"><img src="../images/aaron-eckhart.jpg" /></div>
-                <div class="member-content">
-                    <div class="member-role">Since 2025</div>
-                    <div class="member-name">Aaron Eckhart</div>
-                    <div class="member-description">Serving his second presidential term. His government continues the program of fiscal stability, digital governance and performance-based management of public institutions, while integrating the new alliance obligations arising from NATO membership into governmental operations is a key priority.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="ministers" class="fade-in">
-        <h2 class="section-title">The Current Government</h2>
-        <div class="card-grid">
-            <div class="card">
-                <div class="member-image"><img src="../images/george-bush.jpg" /></div>
-                <div class="member-content">
-                    <div class="member-role">Minister of Foreign Affairs</div>
-                    <div class="member-name">George W. Bush</div>
-                    <div class="member-description">A veteran of global politics who brings his former head-of-state experience to the service of Waikiki's foreign policy advocacy. His task is to represent the Waikiki position at the highest level of international negotiations.</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="member-image"><img src="../images/john-bolton.jpg" /></div>
-                <div class="member-content">
-                    <div class="member-role">Minister of Defense</div>
-                    <div class="member-name">John Bolton</div>
-                    <div class="member-description">Bolton is the guardian of defense strategy and military doctrine, building his work on credible deterrence and territorial defense. Under his leadership, military development is not a gratuitous show of force but a predictable guarantee of national security.</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="member-image"><img src="../images/mark-milley.jpg" /></div>
-                <div class="member-content">
-                    <div class="member-role">Minister of War</div>
-                    <div class="member-name">Mark Milley</div>
-                    <div class="member-description">Responsible for the internal operations and combat readiness of the armed forces. Milley directs the development of the military's offensive and expeditionary capabilities, with particular focus on armored forces and strategic bomber capacity.</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="member-image"><img src="../images/scott-walker.jpg" /></div>
-                <div class="member-content">
-                    <div class="member-role">Minister of Finance</div>
-                    <div class="member-name">Scott Walker</div>
-                    <div class="member-description">His task is the rationalization of state expenditures and the maintenance of an investor-friendly environment. A key figure in budget preparation who ensures that spending discipline and long-term wealth building remain in balance.</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="member-image"><img src="../images/rick-santorum.jpg" /></div>
-                <div class="member-content">
-                    <div class="member-role">Minister of Commerce</div>
-                    <div class="member-name">Rick Santorum</div>
-                    <div class="member-description">A consistent advocate of the Waikiki First trade policy. His task is leading tariff agreement and market organization negotiations, as well as combating unfair competitive practices in the international arena.</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="member-image"><img src="../images/thomas-boone.jpg" /></div>
-                <div class="member-content">
-                    <div class="member-role">Minister of Industrial Development</div>
-                    <div class="member-name">Thomas Boone</div>
-                    <div class="member-description">The strategic director of light and heavy industrial capacity. His task is operating targeted industrial policy, developing strategic sectors, and linking corporate innovation with state procurement.</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="member-image"><img src="../images/carte-goodwin.jpg" /></div>
-                <div class="member-content">
-                    <div class="member-role">Minister of Energy</div>
-                    <div class="member-name">Carte Goodwin</div>
-                    <div class="member-description">His task is guaranteeing the security of energy supply and modernizing the energy system. Under his purview fall the state programs for natural gas and oil extraction, fusion power plants and nuclear technologies.</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="member-image"><img src="../images/tom-kirkman.jpg" /></div>
-                <div class="member-content">
-                    <div class="member-role">Minister of Education</div>
-                    <div class="member-name">Tom Kirkman</div>
-                    <div class="member-description">His task is ensuring the educational system is simultaneously world-class, performance-oriented and socially transformative. He places special emphasis on developing marketable knowledge, advanced linguistic skills and digital competencies.</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="member-image"><img src="../images/darius-tanz.jpg" /></div>
-                <div class="member-content">
-                    <div class="member-role">Minister of Environment</div>
-                    <div class="member-name">Darius Tanz</div>
-                    <div class="member-description">He approaches sustainability as an engineering and innovation challenge. He oversees the protection and regeneration of rainforests as well as biodiversity programs, connecting research with climate strategy.</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="member-image"><img src="../images/jonathan-gruber.jpg" /></div>
-                <div class="member-content">
-                    <div class="member-role">Minister of Health</div>
-                    <div class="member-name">Jonathan Gruber</div>
-                    <div class="member-description">Responsible for designing and modernizing the free healthcare system. Through data-driven management, he maintains the system's financial sustainability and ensures it remains accessible and professionally outstanding.</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="member-image"><img src="../images/timothy-john.jpg" /></div>
-                <div class="member-content">
-                    <div class="member-role">Minister of Science</div>
-                    <div class="member-name">Timothy John</div>
-                    <div class="member-description">The governmental authority responsible for research and development policy and strategic innovation. He supports the commercialization of inventions through financing and regulatory tools, and oversees the operations of the Waikiki Space Agency.</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="member-image"><img src="../images/marilyn-reid.jpg" /></div>
-                <div class="member-content">
-                    <div class="member-role">Minister of Justice</div>
-                    <div class="member-name">Marilyn R. Reid</div>
-                    <div class="member-description">A consistent guardian of legality and public order. She pays particular attention to enforcing the principle of zero tolerance toward crime and ensuring cooperation between investigative authorities and the judicial system.</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="member-image"><img src="../images/mickey-haller.jpg" /></div>
-                <div class="member-content">
-                    <div class="member-role">Minister of Immigration</div>
-                    <div class="member-name">Mickey Haller</div>
-                    <div class="member-description">The strategic director of the immigration system. He operates legal filters that allow Waikiki to selectively accept beneficial immigrants while consistently denying unwanted entrants.</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="member-image"><img src="../images/fernando-cardoso.jpg" /></div>
-                <div class="member-content">
-                    <div class="member-role">Minister of Culture</div>
-                    <div class="member-name">Fernando H. Cardoso</div>
-                    <div class="member-description">The guardian of cultural identity and intellectual standards. He ensures that Waikiki is perceived internationally as an embodiment of high culture, scientific rigor and social modernity, while also overseeing the operations of state media.</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="member-image"><img src="../images/diane-hunter.jpg" /></div>
-                <div class="member-content">
-                    <div class="member-role">Minister of Tourism</div>
-                    <div class="member-name">Diane Hunter</div>
-                    <div class="member-description">The overseer of premium tourism who ensures that Waikiki remains one of the world's most exclusive destinations. Her goal is to preserve the appeal built on the principle of quiet luxury and to avoid the harmful effects of mass tourism.</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="member-image"><img src="../images/kate-beckinsale.jpg" /></div>
-                <div class="member-content">
-                    <div class="member-role">Minister of Family Support</div>
-                    <div class="member-name">Kate Beckinsale</div>
-                    <div class="member-description">The face of family policy and demographic stability. Her task is designing family support programs and expanding childcare infrastructure, supporting both motherhood and career as equally valued life paths.</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="member-image"><img src="../images/john-boehner.jpg" /></div>
-                <div class="member-content">
-                    <div class="member-role">Minister of the Interior</div>
-                    <div class="member-name">John Boehner</div>
-                    <div class="member-description">Responsible for maintaining internal stability and governmental order. His task is directing the police, fire service and disaster management, as well as coordinating institutions related to public order.</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="member-image"><img src="../images/steve-preston.jpg" /></div>
-                <div class="member-content">
-                    <div class="member-role">Minister of Labor</div>
-                    <div class="member-name">Steve Preston</div>
-                    <div class="member-description">The manager of the labor market and strategic director of governmental human resources policy. Preston transplants the work ethic and efficiency methods of the competitive sector into public institutions, while guaranteeing the maintenance of state employment.</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="member-image"><img src="../images/jack-bowman.jpg" /></div>
-                <div class="member-content">
-                    <div class="member-role">Minister of Agriculture</div>
-                    <div class="member-name">Jack Bowman</div>
-                    <div class="member-description">Responsible for agricultural production and food security. His task is supporting intensive and modern production systems and ensuring the stability of rural supply chains.</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="member-image"><img src="../images/mary-bono-mack.jpg" /></div>
-                <div class="member-content">
-                    <div class="member-role">Minister of Infrastructure</div>
-                    <div class="member-name">Mary Bono Mack</div>
-                    <div class="member-description">The strategic coordinator of major state infrastructure investments. Her task is directing the development and maintenance programs for roads, the railway network, airports, as well as undersea tunnels and port capacities.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="light-bg fade-in">
-        <h2 class="section-title">Historical Cabinet Members</h2>
-        <div class="table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Position</th>
-                        <th>2000 - 2004</th>
-                        <th>2005 - 2009</th>
-                        <th>2010 - 2014</th>
-                        <th>2015 - 2019</th>
-                        <th>2020 - 2024</th>
-                        <th>2025 - 2029</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>President</td>
-                        <td>John Boehner</td>
-                        <td>Rick Santorum</td>
-                        <td>Aaron Eckhart</td>
-                        <td>George Bush</td>
-                        <td>George Bush</td>
-                        <td>Aaron Eckhart</td>
-                    </tr>
-                    <tr>
-                        <td>Minister of Commerce</td>
-                        <td>Ayden Roberts</td>
-                        <td>Ayden Roberts</td>
-                        <td>Ayden Roberts</td>
-                        <td>Ayden Roberts</td>
-                        <td>Ayden Roberts</td>
-                        <td>Rick Santorum</td>
-                    </tr>
-                    <tr>
-                        <td>Minister of the Interior</td>
-                        <td>Rick Santorum</td>
-                        <td>John Boehner</td>
-                        <td>John Boehner</td>
-                        <td>John Boehner</td>
-                        <td>John Boehner</td>
-                        <td>John Boehner</td>
-                    </tr>
-                    <tr>
-                        <td>Minister of Foreign Affairs</td>
-                        <td>Enrique Pena Nieto</td>
-                        <td>Donald Evans</td>
-                        <td>Jason Furman</td>
-                        <td>Aaron Eckhart</td>
-                        <td>Aaron Eckhart</td>
-                        <td>George Bush</td>
-                    </tr>
-                    <tr>
-                        <td>Minister of Finance</td>
-                        <td>Peter Lynch</td>
-                        <td>Michael J. Cavanagh</td>
-                        <td>Michael J. Cavanagh</td>
-                        <td>Scott Walker</td>
-                        <td>Scott Walker</td>
-                        <td>Scott Walker</td>
-                    </tr>
-                    <tr>
-                        <td>Minister of Justice</td>
-                        <td>Sebastian Stark</td>
-                        <td>Alejandro Ramirez</td>
-                        <td>Marilyn R. Reid</td>
-                        <td>Paul Ryan</td>
-                        <td>Paul Ryan</td>
-                        <td>Marilyn R. Reid</td>
-                    </tr>
-                    <tr>
-                        <td>Minister of Health</td>
-                        <td>Rogelio Olmeda</td>
-                        <td>Rogelio Olmeda</td>
-                        <td>Tommy Thompson</td>
-                        <td>Jonathan Gruber</td>
-                        <td>Jonathan Gruber</td>
-                        <td>Jonathan Gruber</td>
-                    </tr>
-                    <tr>
-                        <td>Minister of Culture</td>
-                        <td>Jorge Ramos</td>
-                        <td>Rupert Murdoch</td>
-                        <td>Fernando Henrique Cardoso</td>
-                        <td>George LeMieux</td>
-                        <td>George LeMieux</td>
-                        <td>Fernando Henrique Cardoso</td>
-                    </tr>
-                    <tr>
-                        <td>Minister of Energy</td>
-                        <td>Eva Longoria</td>
-                        <td>Sherry Rehman</td>
-                        <td>Spencer Abraham</td>
-                        <td>Carte Goodwin</td>
-                        <td>Carte Goodwin</td>
-                        <td>Carte Goodwin</td>
-                    </tr>
-                    <tr>
-                        <td>Minister of Education</td>
-                        <td>Ellen Ochoa</td>
-                        <td>David Vitter</td>
-                        <td>Rod Paige</td>
-                        <td>David Vitter</td>
-                        <td>David Vitter</td>
-                        <td>Tom Kirkman</td>
-                    </tr>
-                    <tr>
-                        <td>Minister of Agriculture</td>
-                        <td>Gabriel Prieto</td>
-                        <td>Gabriel Prieto</td>
-                        <td>Ed Schafer</td>
-                        <td>Michel Temer</td>
-                        <td>Rick Santorum</td>
-                        <td>Jack Bowman</td>
-                    </tr>
-                    <tr>
-                        <td>Minister of Tourism</td>
-                        <td>Steve Preston</td>
-                        <td>Nicole Minetti</td>
-                        <td>Steve Preston</td>
-                        <td>Nicole Minetti</td>
-                        <td>Nicole Minetti</td>
-                        <td>Diane Hunter</td>
-                    </tr>
-                    <tr>
-                        <td>Minister of War</td>
-                        <td>George Zambellas</td>
-                        <td>Morgan Clark</td>
-                        <td>Dick Cheney</td>
-                        <td>Morgan Clark</td>
-                        <td>Morgan Clark</td>
-                        <td>Mark Milley</td>
-                    </tr>
-                    <tr>
-                        <td>Minister of Defense</td>
-                        <td>-</td>
-                        <td>Logan Davis</td>
-                        <td>Winnefeld Daniels</td>
-                        <td>Winnefeld Daniels</td>
-                        <td>Winnefeld Daniels</td>
-                        <td>John Bolton</td>
-                    </tr>
-                    <tr>
-                        <td>Minister of Industrial Development</td>
-                        <td>-</td>
-                        <td>Salvador Pardo Cruz</td>
-                        <td>Salvador Pardo Cruz</td>
-                        <td>Salvador Pardo Cruz</td>
-                        <td>Thomas Boone</td>
-                        <td>Thomas Boone</td>
-                    </tr>
-                    <tr>
-                        <td>Minister of Science</td>
-                        <td>-</td>
-                        <td>Tommy Thompson</td>
-                        <td>Timothy John</td>
-                        <td>Timothy John</td>
-                        <td>Timothy John</td>
-                        <td>Timothy John</td>
-                    </tr>
-                    <tr>
-                        <td>Minister of Infrastructure</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>Rick Santorum</td>
-                        <td>Mary Bono Mack</td>
-                        <td>Mary Bono Mack</td>
-                        <td>Mary Bono Mack</td>
-                    </tr>
-                    <tr>
-                        <td>Minister of Environment</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>Mike Leavitt</td>
-                        <td>Mitt Romney</td>
-                        <td>Darius Tanz</td>
-                        <td>Darius Tanz</td>
-                    </tr>
-                    <tr>
-                        <td>Minister of Labor</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>Steve Preston</td>
-                        <td>Matt Damon</td>
-                        <td>Steve Preston</td>
-                    </tr>
-                    <tr>
-                        <td>Minister of Resources</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>Ruby Dhalla</td>
-                        <td>Ruby Dhalla</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td>Minister of Development</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>Rick Santorum</td>
-                        <td>Ricardo Gomez</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td>Minister of Immigration</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>Mickey Haller</td>
-                    </tr>
-                    <tr>
-                        <td>Minister of Family Support</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>Kate Beckinsale</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-    <section id="cabinet" class="fade-in">
-        <h2 class="section-title">Dictatorial Cabinet</h2>
-        <div class="card-grid">
-            <div class="reference-card">
-                <div class="reference-icon"><img src="../images/aaron-shore.jpg" /></div>
-                <div class="reference-info">
-                    <div class="reference-name">Aaron Shore</div>
-                    <div class="reference-role">Special Advisor</div>
-                    <div class="reference-desc">The very first dictatorial advisor who served alongside Chease Young from the founding of the state. As chief of staff, he laid the foundations of institutional operations.</div>
-                </div>
-            </div>
-            <div class="reference-card">
-                <div class="reference-icon"><img src="../images/emily-whiteborough.jpg" /></div>
-                <div class="reference-info">
-                    <div class="reference-name">Emily Whiteborough</div>
-                    <div class="reference-role">Special Advisor</div>
-                    <div class="reference-desc">One of the most trusted internal advisors of the founding era, who played a key role in preparing strategic decisions and fine-tuning governmental communications.</div>
-                </div>
-            </div>
-            <div class="reference-card">
-                <div class="reference-icon"><img src="../images/daniel-hardman.jpg" /></div>
-                <div class="reference-info">
-                    <div class="reference-name">Daniel Hardman</div>
-                    <div class="reference-role">Communications Advisor</div>
-                    <div class="reference-desc">The first architect of Waikiki's governmental communications, who handled tasks ranging from establishing press relations to shaping the national narrative.</div>
-                </div>
-            </div>
-            <div class="reference-card">
-                <div class="reference-icon"><img src="../images/christian-sewing.jpg" /></div>
-                <div class="reference-info">
-                    <div class="reference-name">Christian Sewing</div>
-                    <div class="reference-role">Investment Advisor</div>
-                    <div class="reference-desc">An expert on the National Wealth Fund and state investment strategy, who puts his knowledge of financial markets in the service of sovereign wealth management.</div>
-                </div>
-            </div>
-            <div class="reference-card">
-                <div class="reference-icon"><img src="../images/roger-penrose.jpg" /></div>
-                <div class="reference-info">
-                    <div class="reference-name">Roger Penrose</div>
-                    <div class="reference-role">Chief Analyst</div>
-                    <div class="reference-desc">A Nobel Prize-winning theoretical physicist who, as the scientific analyst of the dictatorial cabinet, is responsible for the scientific underpinning of strategic decisions and charting the long-term direction of innovation.</div>
-                </div>
-            </div>
-            <div class="reference-card">
-                <div class="reference-icon"><img src="../images/harris-cochrane.jpg" /></div>
-                <div class="reference-info">
-                    <div class="reference-name">Harris Cochrane</div>
-                    <div class="reference-role">Homeland Security Advisor</div>
-                    <div class="reference-desc">A veteran expert in national security and homeland security. After fifteen years of service, he continues his work in the homeland security advisory position in the new governmental cycle.</div>
-                </div>
-            </div>
-            <div class="reference-card">
-                <div class="reference-icon"><img src="../images/dana-scottie.jpg" /></div>
-                <div class="reference-info">
-                    <div class="reference-name">Dana Scottie</div>
-                    <div class="reference-role">Recruitment Specialist</div>
-                    <div class="reference-desc">A specialist in governmental talent acquisition and the meritocratic selection system, ensuring that the most outstanding candidates are placed in state positions.</div>
-                </div>
-            </div>
-            <div class="reference-card">
-                <div class="reference-icon"><img src="../images/rachel-zane.jpg" /></div>
-                <div class="reference-info">
-                    <div class="reference-name">Rachel Zane</div>
-                    <div class="reference-role">Chief of Staff</div>
-                    <div class="reference-desc">A legally trained organizer who rose from assistant to director of the cabinet's daily operations. She is responsible for ensuring coordination and administrative discipline.</div>
-                </div>
-            </div>
-            <div class="reference-card">
-                <div class="reference-icon"><img src="../images/julie-stark.jpg" /></div>
-                <div class="reference-info">
-                    <div class="reference-name">Julie Stark</div>
-                    <div class="reference-role">Legal Advisor</div>
-                    <div class="reference-desc">The overseer of constitutional matters and legislative coherence, responsible for the legal foundation of dictatorial decisions and ensuring continuous legality control.</div>
-                </div>
-            </div>
-            <div class="reference-card">
-                <div class="reference-icon"><img src="../images/mike-leavitt.jpg" /></div>
-                <div class="reference-info">
-                    <div class="reference-name">Mike Leavitt</div>
-                    <div class="reference-role">Environmental Advisor</div>
-                    <div class="reference-desc">The first architect of environmental regulation, who launched the rainforest protection programs and then continued his work as the green policy advisor of the dictatorial cabinet.</div>
-                </div>
-            </div>
-            <div class="reference-card">
-                <div class="reference-icon"><img src="../images/eleanor-sui-yang.jpg" /></div>
-                <div class="reference-info">
-                    <div class="reference-name">Eleanor Sui Yang</div>
-                    <div class="reference-role">Public Relations Advisor</div>
-                    <div class="reference-desc">A strategist of public dialogue and public relations, who plays an advisory role in maintaining governmental communication and public trust.</div>
-                </div>
-            </div>
-            <div class="reference-card">
-                <div class="reference-icon"><img src="../images/zoe-lawford.jpg" /></div>
-                <div class="reference-info">
-                    <div class="reference-name">Zoe Lawford</div>
-                    <div class="reference-role">Secretary</div>
-                    <div class="reference-desc">The administrative secretary of the dictatorial office, handling the filtering of incoming information, coordination of meetings and management of the personal schedule.</div>
-                </div>
-            </div>
-            <div class="reference-card">
-                <div class="reference-icon"><img src="../images/josh-earnest.jpg" /></div>
-                <div class="reference-info">
-                    <div class="reference-name">Josh Earnest</div>
-                    <div class="reference-role">Press Secretary</div>
-                    <div class="reference-desc">The spokesperson of Raimondo Chease's dictatorial era, responsible for the precise, disciplined and unified delivery of governmental messages to domestic and international media.</div>
-                </div>
-            </div>
-            <div class="reference-card">
-                <div class="reference-icon"><img src="../images/jason-furman.jpg" /></div>
-                <div class="reference-info">
-                    <div class="reference-name">Jason Furman</div>
-                    <div class="reference-role">Foreign Trade Advisor</div>
-                    <div class="reference-desc">An economist-trained diplomat who linked foreign policy with economic advocacy, then continued his work as the foreign trade advisor of the dictatorial cabinet.</div>
-                </div>
-            </div>
-            <div class="reference-card">
-                <div class="reference-icon"><img src="../images/chloe-bennet.jpg" /></div>
-                <div class="reference-info">
-                    <div class="reference-name">Chloe Bennet</div>
-                    <div class="reference-role">Cabinet Director</div>
-                    <div class="reference-desc">Responsible for the operational management of the dictatorial cabinet, coordinating workflows among advisors and ensuring the efficiency of the decision-preparation process.</div>
-                </div>
-            </div>
-            <div class="reference-card">
-                <div class="reference-icon"><img src="../images/winnefeld-daniels.jpg" /></div>
-                <div class="reference-info">
-                    <div class="reference-name">Winnefeld Daniels</div>
-                    <div class="reference-role">NATO Envoy</div>
-                    <div class="reference-desc">The founding commander-in-chief of the Waikiki armed forces, then minister of defense and currently NATO envoy. A defining military leader who shaped the organizational culture and doctrine of the army.</div>
-                </div>
-            </div>
-            <div class="reference-card">
-                <div class="reference-icon"><img src="../images/nicole-minetti.jpg" /></div>
-                <div class="reference-info">
-                    <div class="reference-name">Nicole Minetti</div>
-                    <div class="reference-role">Family Welfare Commissioner</div>
-                    <div class="reference-desc">One of the creators of the premium tourism brand, who shaped the international appeal of the Waikiki brand over three terms. Currently the family welfare commissioner of the dictatorial cabinet.</div>
-                </div>
-            </div>
-            <div class="reference-card">
-                <div class="reference-icon"><img src="../images/london-tipton.jpg" /></div>
-                <div class="reference-info">
-                    <div class="reference-name">London Tipton</div>
-                    <div class="reference-role">Senior Assistant</div>
-                    <div class="reference-desc">The personal assistant to the dictator, responsible for day-to-day case management, protocol duties and the swift handling of internal communications.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="light-bg fade-in">
-        <h2 class="section-title">Government Agencies</h2>
-        <div class="table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Position</th>
-                        <th>2000 - 2007</th>
-                        <th>2008 - 2015</th>
-                        <th>2016 - 2023</th>
-                        <th>2024 - 2031</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>National Bank President</td>
-                        <td>Robert Menéndez</td>
-                        <td>Jessica Walker</td>
-                        <td>Michael J. Cavanagh</td>
-                        <td>Jessica Walker</td>
-                    </tr>
-                    <tr>
-                        <td>Media Council President</td>
-                        <td>Marc Benioff</td>
-                        <td>Rupert Murdoch</td>
-                        <td>Rupert Murdoch</td>
-                        <td>Colin Farrell</td>
-                    </tr>
-                    <tr>
-                        <td>Chief Justice</td>
-                        <td>Marilyn R. Reid</td>
-                        <td>Sebastian Stark</td>
-                        <td>Sebastian Stark</td>
-                        <td>Sebastian Stark</td>
-                    </tr>
-                    <tr>
-                        <td>Commander-in-Chief</td>
-                        <td>Winnefeld Daniels</td>
-                        <td>Logan Davis</td>
-                        <td>Logan Davis</td>
-                        <td>Logan Davis</td>
-                    </tr>
-                    <tr>
-                        <td>Intelligence Service Director</td>
-                        <td>Alejandro Ramirez</td>
-                        <td>Elena Martinez</td>
-                        <td>Elena Martinez</td>
-                        <td>Smith Edward</td>
-                    </tr>
-                    <tr>
-                        <td>Attorney General</td>
-                        <td>Dias Toffoli</td>
-                        <td>Paul Ryan</td>
-                        <td>Marilyn R. Reid</td>
-                        <td>Vincent Kartheiser</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-    <!-- @chrome:next --><section class="next-chapter"><a class="next-card" href="leadership.html"><div class="next-media"><img src="../images/UniversalUpscaler_7aad8819-6b95-41d0-9c62-908a065bf183.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Continue the journey · Governance</span><span class="next-title">Leadership</span><span class="next-arrow" aria-hidden="true">→</span></span></a></section><!-- /@chrome:next -->
+        </section>
+        <!-- @chrome:next -->
+        <section class="next-chapter"><a class="next-card" href="leadership.html">
+                <div class="next-media"><img src="../images/UniversalUpscaler_7aad8819-6b95-41d0-9c62-908a065bf183.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Continue the journey · Governance</span><span class="next-title">Leadership</span><span class="next-arrow" aria-hidden="true">→</span></span>
+            </a></section><!-- /@chrome:next -->
     </main>
     <!-- @chrome:footer -->
     <footer class="site-footer">
-        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z"/></svg>
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand">
@@ -723,7 +809,57 @@
                     <p class="footer-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
                     <p class="footer-about">The official portal of the Sovereign Nation of Waikiki. Founded 10 March 1999 · Nova Aurelia. This site was generated with AI, any resemblance to real people, countries or institutions is just a coincidence.</p>
                 </div>
-                <div class="footer-col"><h2>Nation</h2><ul><li><a href="index.html">Home</a></li><li><a href="overview.html">Overview</a></li><li><a href="history.html">History</a></li><li><a href="society.html">Society</a></li><li><a href="culture.html">Culture</a></li><li><a href="ideology.html">Ideology</a></li></ul></div><div class="footer-col"><h2>Governance</h2><ul><li><a href="government.html">Government</a></li><li><a href="leadership.html">Leadership</a></li><li><a href="parties.html">Politics</a></li><li><a href="constitution.html">Constitution</a></li><li><a href="citizenship.html">Citizenship</a></li><li><a href="military.html">Military</a></li><li><a href="diplomacy.html">Diplomacy</a></li></ul></div><div class="footer-col"><h2>Prosperity</h2><ul><li><a href="economy.html">Economy</a></li><li><a href="wealth-fund.html">Wealth Fund</a></li><li><a href="infrastructure.html">Infrastructure</a></li><li><a href="plane.html">Diplomatic Fleet</a></li></ul></div><div class="footer-col"><h2>Royal Family</h2><ul><li><a href="dynasty.html">The Dynasty</a></li><li><a href="chease-and-jessica.html">Chease and Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li><li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li></ul></div><div class="footer-col"><h2>Visit</h2><ul><li><a href="tourism.html">Tourism</a></li><li><a href="sights.html">Sights</a></li><li><a href="travel-guide.html">Travel Guide</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+                <div class="footer-col">
+                    <h2>Nation</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="overview.html">Overview</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="society.html">Society</a></li>
+                        <li><a href="culture.html">Culture</a></li>
+                        <li><a href="ideology.html">Ideology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Governance</h2>
+                    <ul>
+                        <li><a href="government.html">Government</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="parties.html">Politics</a></li>
+                        <li><a href="constitution.html">Constitution</a></li>
+                        <li><a href="citizenship.html">Citizenship</a></li>
+                        <li><a href="military.html">Military</a></li>
+                        <li><a href="diplomacy.html">Diplomacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Prosperity</h2>
+                    <ul>
+                        <li><a href="economy.html">Economy</a></li>
+                        <li><a href="wealth-fund.html">Wealth Fund</a></li>
+                        <li><a href="infrastructure.html">Infrastructure</a></li>
+                        <li><a href="plane.html">Diplomatic Fleet</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Royal Family</h2>
+                    <ul>
+                        <li><a href="dynasty.html">The Dynasty</a></li>
+                        <li><a href="chease-and-jessica.html">Chease and Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Visit</h2>
+                    <ul>
+                        <li><a href="tourism.html">Tourism</a></li>
+                        <li><a href="sights.html">Sights</a></li>
+                        <li><a href="travel-guide.html">Travel Guide</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
             </div>
             <span class="footer-mega" aria-hidden="true">Waikiki</span>
             <div class="footer-bottom">
@@ -732,7 +868,10 @@
             </div>
         </div>
     </footer>
-    <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 54 54" aria-hidden="true"><circle class="ring-bg" cx="27" cy="27" r="24"/><circle class="ring" cx="27" cy="27" r="24"/></svg><span aria-hidden="true">↑</span></button>
+    <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span></button>
     <!-- /@chrome:footer -->
     <script src="../js/common.js"></script>
 </body>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +11,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />
-    <script>(function(d){var h=d.documentElement;h.classList.add('js');try{if(localStorage.getItem('isDarkMode')==='true')h.classList.add('body-dark');if(localStorage.getItem('isAnimationDisabled')==='true')h.classList.add('no-reveal')}catch(e){}setTimeout(function(){if(!h.classList.contains('reveal-ready'))h.classList.remove('js')},3500)})(document);</script>
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
     <!-- /@chrome:head -->
     <title>Waikiki Diplomatic Fleet</title>
     <link rel="icon" href="../icons/favicon.ico" />
@@ -22,7 +33,6 @@
     <link rel="preload" as="image" href="../images/UniversalUpscaler_e27ff905-734a-449b-8963-c47ba25ba5de.jpg" fetchpriority="high" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
 <body class="page-plane group-prosperity">
     <!-- @chrome:header -->
     <div class="page-curtain" aria-hidden="true"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="64" height="64" loading="eager" decoding="async" /></div>
@@ -31,8 +41,20 @@
         <a href="index.html" class="brand" aria-label="Waikiki home"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" decoding="async" /><span class="brand-word">Waikiki</span></a>
         <nav class="primary-nav" aria-label="Primary"><a href="tourism.html">Visit</a><a href="society.html">Society</a><a href="economy.html">Economy</a><a href="government.html">Government</a><a href="history.html">History</a><a href="dynasty.html">Royal Family</a></nav>
         <div class="header-actions">
-            <a class="lang-pill" href="../hu/plane.html" hreflang="hu" lang="hu" title="Magyar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>HU</span></a>
-            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle night mode"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><mask id="theme-mask"><rect width="24" height="24" fill="#fff"/><circle class="theme-cut" cx="26" cy="2" r="6" fill="#000"/></mask><circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)"/><g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5"/></g></svg></button>
+            <a class="lang-pill" href="../hu/plane.html" hreflang="hu" lang="hu" title="Magyar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg><span>HU</span></a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle night mode"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg></button>
             <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="menu-lines" aria-hidden="true"></span><span class="menu-label-open">Menu</span><span class="menu-label-close">Close</span><span class="visually-hidden">Menu</span></button>
         </div>
     </header>
@@ -50,222 +72,277 @@
                 <p class="menu-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
                 <div class="menu-aside-row"><a class="menu-chip is-active" href="../en/plane.html" hreflang="en" lang="en">English</a><a class="menu-chip" href="../hu/plane.html" hreflang="hu" lang="hu">Magyar</a><button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Night mode</button><button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animate</button></div>
             </aside>
-            <div class="menu-group"><h2>Nation</h2><ul><li><a href="index.html">Home</a></li><li><a href="overview.html">Overview</a></li><li><a href="history.html">History</a></li><li><a href="society.html">Society</a></li><li><a href="culture.html">Culture</a></li><li><a href="ideology.html">Ideology</a></li></ul></div><div class="menu-group"><h2>Governance</h2><ul><li><a href="government.html">Government</a></li><li><a href="leadership.html">Leadership</a></li><li><a href="parties.html">Politics</a></li><li><a href="constitution.html">Constitution</a></li><li><a href="citizenship.html">Citizenship</a></li><li><a href="military.html">Military</a></li><li><a href="diplomacy.html">Diplomacy</a></li></ul></div><div class="menu-group"><h2>Prosperity</h2><ul><li><a href="economy.html">Economy</a></li><li><a href="wealth-fund.html">Wealth Fund</a></li><li><a href="infrastructure.html">Infrastructure</a></li><li><a href="plane.html" aria-current="page">Diplomatic Fleet</a></li></ul></div><div class="menu-group"><h2>Royal Family</h2><ul><li><a href="dynasty.html">The Dynasty</a></li><li><a href="chease-and-jessica.html">Chease and Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li><li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li></ul></div><div class="menu-group"><h2>Visit</h2><ul><li><a href="tourism.html">Tourism</a></li><li><a href="sights.html">Sights</a></li><li><a href="travel-guide.html">Travel Guide</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+            <div class="menu-group">
+                <h2>Nation</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="overview.html">Overview</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="society.html">Society</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="ideology.html">Ideology</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Governance</h2>
+                <ul>
+                    <li><a href="government.html">Government</a></li>
+                    <li><a href="leadership.html">Leadership</a></li>
+                    <li><a href="parties.html">Politics</a></li>
+                    <li><a href="constitution.html">Constitution</a></li>
+                    <li><a href="citizenship.html">Citizenship</a></li>
+                    <li><a href="military.html">Military</a></li>
+                    <li><a href="diplomacy.html">Diplomacy</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Prosperity</h2>
+                <ul>
+                    <li><a href="economy.html">Economy</a></li>
+                    <li><a href="wealth-fund.html">Wealth Fund</a></li>
+                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                    <li><a href="plane.html" aria-current="page">Diplomatic Fleet</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Royal Family</h2>
+                <ul>
+                    <li><a href="dynasty.html">The Dynasty</a></li>
+                    <li><a href="chease-and-jessica.html">Chease and Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li>
+                    <li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Visit</h2>
+                <ul>
+                    <li><a href="tourism.html">Tourism</a></li>
+                    <li><a href="sights.html">Sights</a></li>
+                    <li><a href="travel-guide.html">Travel Guide</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- /@chrome:header -->
     <main id="main">
-    <!-- @chrome:subnav --><!-- /@chrome:subnav -->
-    <div class="min-h-screen">
-        <section class="relative h-screen flex items-center justify-center overflow-hidden">
-            <div class="absolute inset-0 z-0">
-                <div class="absolute inset-0 bg-gradient-to-r from-[#072221]/90 to-[#11605B]/40 z-10"></div><img src="../images/UniversalUpscaler_e27ff905-734a-449b-8963-c47ba25ba5de.jpg" class="w-full h-full object-cover" />
-            </div>
-            <div class="container mx-auto px-6 z-20 relative text-center pt-20">
-                <div class="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold tracking-widest uppercase mb-6 animate-fade-up">Waikiki Royal Air Wing</div>
-                <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">Wings of Global <span style="color: #C95A41">Dominance</span></h1>
-                <p class="text-xl text-gray-200 max-w-4xl mx-auto mb-10 font-light">The diplomatic fleet is the jewel of the "Fortress Americas" doctrine and projects Waikiki's sovereign influence abroad. Each plane pairs state-of-the-art engineering with communications and defensive systems to preserve continuity of government under any conditions.</p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center" style="visibility: hidden;"><button class="px-8 py-4 rounded-lg text-white font-bold text-lg transition-all shadow-lg open-assessment" style="background-color: #11605B">Discover more</button></div>
-            </div>
-        </section>
-        <main class="flex-grow px-4 pb-12 pt-12 relative z-20">
-            <div class="max-w-5xl mx-auto space-y-8">
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-500 w-full relative group hover:-translate-y-2 hover:shadow-2xl tab-container">
-                    <div class="flex flex-col md:flex-row h-full min-h-[450px]">
-                        <div class="md:w-5/12 p-8 relative overflow-hidden flex flex-col justify-between" style="background-color: #C95A41;">
-                            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-white to-transparent"></div>
-                            <div class="relative z-10 text-white">
-                                <div class="flex items-center gap-2 mb-4 opacity-90"><img src="https://api.iconify.design/mdi/airplane-takeoff.svg?color=%23FFFFFF&width=20&height=20" class="w-5 h-5" /><span class="text-xs font-bold tracking-widest uppercase">Dictator's Flagship</span></div>
-                                <h2 class="text-3xl font-bold mb-2 leading-tight">AIR FORCE ONE</h2>
-                                <div class="w-12 h-1 bg-white/30 mb-4 rounded-full"></div>
-                                <p class="text-white/80 text-sm font-light italic">Citadel of Sovereignty and Luxury</p>
-                            </div>
-                            <div class="relative z-10 mt-8 md:mt-0">
-                                <div class="text-xs font-mono text-white/60 uppercase tracking-widest flex items-center gap-2"><img src="https://api.iconify.design/mdi/shield.svg?color=%23FFFFFF&width=12&height=12" class="w-3 h-3" />Boeing 7107-B </div>
-                            </div>
-                            <div class="absolute -bottom-6 -right-6 text-white opacity-10 transform -rotate-12"><img src="https://api.iconify.design/mdi/chevron-right.svg?color=%23FFFFFF&width=140&height=140" style="width:140px;height:140px;" /></div>
-                        </div>
-                        <div class="md:w-7/12 flex flex-col">
-                            <div class="p-8 pb-4">
-                                <p class="text-gray-600 text-sm leading-relaxed">The largest aircraft ever built. Not merely a transport but a flying fortress capable of carrying the entire government and military command in a crisis.</p>
-                            </div>
-                            <div class="flex px-8 border-b border-gray-100"><button data-target="specs" class="tab-btn pb-3 text-xs font-bold uppercase tracking-wider mr-6 transition-all duration-300 flex items-center gap-2 text-gray-800 border-b-2 border-gray-800"><img src="https://api.iconify.design/mdi/clipboard-list.svg?color=%23374751&width=14&height=14" class="w-3.5 h-3.5" />Specifications </button><button data-target="interior" class="tab-btn pb-3 text-xs font-bold uppercase tracking-wider transition-all duration-300 flex items-center gap-2 text-gray-400 border-b-2 border-transparent hover:text-gray-600"><img src="https://api.iconify.design/mdi/home.svg?color=%23374751&width=14&height=14" class="w-3.5 h-3.5" />Interior </button></div>
-                            <div class="p-8 pt-6 flex-grow bg-gray-50/30">
-                                <div class="tab-content space-y-1" data-content="specs">
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Engines</span><span class="text-sm font-bold text-gray-800 font-mono">6 Rolls-Royce Titan XWB</span></div>
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Length</span><span class="text-sm font-bold text-gray-800 font-mono">102 m</span></div>
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Wingspan</span><span class="text-sm font-bold text-gray-800 font-mono">94 m</span></div>
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Range</span><span class="text-sm font-bold text-gray-800 font-mono">16,400 km (supports air refueling)</span></div>
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Max. speed</span><span class="text-sm font-bold text-gray-800 font-mono">1000 km/h</span></div>
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Runway</span><span class="text-sm font-bold text-gray-800 font-mono">3,500 m (reinforced)</span></div>
+        <!-- @chrome:subnav --><!-- /@chrome:subnav -->
+        <div class="min-h-screen">
+            <section class="relative h-screen flex items-center justify-center overflow-hidden">
+                <div class="absolute inset-0 z-0">
+                    <div class="absolute inset-0 bg-gradient-to-r from-[#072221]/90 to-[#11605B]/40 z-10"></div><img src="../images/UniversalUpscaler_e27ff905-734a-449b-8963-c47ba25ba5de.jpg" class="w-full h-full object-cover" />
+                </div>
+                <div class="container mx-auto px-6 z-20 relative text-center pt-20">
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold tracking-widest uppercase mb-6 animate-fade-up">Waikiki Royal Air Wing</div>
+                    <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">Wings of Global <span style="color: #C95A41">Dominance</span></h1>
+                    <p class="text-xl text-gray-200 max-w-4xl mx-auto mb-10 font-light">The diplomatic fleet is the jewel of the "Fortress Americas" doctrine and projects Waikiki's sovereign influence abroad. Each plane pairs state-of-the-art engineering with communications and defensive systems to preserve continuity of government under any conditions.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center" style="visibility: hidden;"><button class="px-8 py-4 rounded-lg text-white font-bold text-lg transition-all shadow-lg open-assessment" style="background-color: #11605B">Discover more</button></div>
+                </div>
+            </section>
+            <main class="flex-grow px-4 pb-12 pt-12 relative z-20">
+                <div class="max-w-5xl mx-auto space-y-8">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-500 w-full relative group hover:-translate-y-2 hover:shadow-2xl tab-container">
+                        <div class="flex flex-col md:flex-row h-full min-h-[450px]">
+                            <div class="md:w-5/12 p-8 relative overflow-hidden flex flex-col justify-between" style="background-color: #C95A41;">
+                                <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-white to-transparent"></div>
+                                <div class="relative z-10 text-white">
+                                    <div class="flex items-center gap-2 mb-4 opacity-90"><img src="https://api.iconify.design/mdi/airplane-takeoff.svg?color=%23FFFFFF&width=20&height=20" class="w-5 h-5" /><span class="text-xs font-bold tracking-widest uppercase">Dictator's Flagship</span></div>
+                                    <h2 class="text-3xl font-bold mb-2 leading-tight">AIR FORCE ONE</h2>
+                                    <div class="w-12 h-1 bg-white/30 mb-4 rounded-full"></div>
+                                    <p class="text-white/80 text-sm font-light italic">Citadel of Sovereignty and Luxury</p>
                                 </div>
-                                <div class="tab-content hidden grid grid-cols-1 gap-1" data-content="interior">
-                                    <div class="mb-2 p-3 border border-transparent hover:border-gray-100 hover:bg-gray-50 rounded-lg transition-all">
-                                        <h4 class="text-[#0B3B3A] font-bold text-sm mb-1">Two-level Deck</h4>
-                                        <p class="text-gray-500 text-xs leading-relaxed">500 m² living area on two levels with luxury interior design, featuring two full-size bedrooms, a living room and bathrooms with showers.</p>
+                                <div class="relative z-10 mt-8 md:mt-0">
+                                    <div class="text-xs font-mono text-white/60 uppercase tracking-widest flex items-center gap-2"><img src="https://api.iconify.design/mdi/shield.svg?color=%23FFFFFF&width=12&height=12" class="w-3 h-3" />Boeing 7107-B </div>
+                                </div>
+                                <div class="absolute -bottom-6 -right-6 text-white opacity-10 transform -rotate-12"><img src="https://api.iconify.design/mdi/chevron-right.svg?color=%23FFFFFF&width=140&height=140" style="width:140px;height:140px;" /></div>
+                            </div>
+                            <div class="md:w-7/12 flex flex-col">
+                                <div class="p-8 pb-4">
+                                    <p class="text-gray-600 text-sm leading-relaxed">The largest aircraft ever built. Not merely a transport but a flying fortress capable of carrying the entire government and military command in a crisis.</p>
+                                </div>
+                                <div class="flex px-8 border-b border-gray-100"><button data-target="specs" class="tab-btn pb-3 text-xs font-bold uppercase tracking-wider mr-6 transition-all duration-300 flex items-center gap-2 text-gray-800 border-b-2 border-gray-800"><img src="https://api.iconify.design/mdi/clipboard-list.svg?color=%23374751&width=14&height=14" class="w-3.5 h-3.5" />Specifications </button><button data-target="interior" class="tab-btn pb-3 text-xs font-bold uppercase tracking-wider transition-all duration-300 flex items-center gap-2 text-gray-400 border-b-2 border-transparent hover:text-gray-600"><img src="https://api.iconify.design/mdi/home.svg?color=%23374751&width=14&height=14" class="w-3.5 h-3.5" />Interior </button></div>
+                                <div class="p-8 pt-6 flex-grow bg-gray-50/30">
+                                    <div class="tab-content space-y-1" data-content="specs">
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Engines</span><span class="text-sm font-bold text-gray-800 font-mono">6 Rolls-Royce Titan XWB</span></div>
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Length</span><span class="text-sm font-bold text-gray-800 font-mono">102 m</span></div>
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Wingspan</span><span class="text-sm font-bold text-gray-800 font-mono">94 m</span></div>
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Range</span><span class="text-sm font-bold text-gray-800 font-mono">16,400 km (supports air refueling)</span></div>
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Max. speed</span><span class="text-sm font-bold text-gray-800 font-mono">1000 km/h</span></div>
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Runway</span><span class="text-sm font-bold text-gray-800 font-mono">3,500 m (reinforced)</span></div>
                                     </div>
-                                    <div class="mb-2 p-3 border border-transparent hover:border-gray-100 hover:bg-gray-50 rounded-lg transition-all">
-                                        <h4 class="text-[#0B3B3A] font-bold text-sm mb-1">Diplomacy quarters</h4>
-                                        <p class="text-gray-500 text-xs leading-relaxed">Official reception room with a 12-seat banquet table and mahogany paneling, bars and luxury lounges and a video conference room.</p>
+                                    <div class="tab-content hidden grid grid-cols-1 gap-1" data-content="interior">
+                                        <div class="mb-2 p-3 border border-transparent hover:border-gray-100 hover:bg-gray-50 rounded-lg transition-all">
+                                            <h4 class="text-[#0B3B3A] font-bold text-sm mb-1">Two-level Deck</h4>
+                                            <p class="text-gray-500 text-xs leading-relaxed">500 m² living area on two levels with luxury interior design, featuring two full-size bedrooms, a living room and bathrooms with showers.</p>
+                                        </div>
+                                        <div class="mb-2 p-3 border border-transparent hover:border-gray-100 hover:bg-gray-50 rounded-lg transition-all">
+                                            <h4 class="text-[#0B3B3A] font-bold text-sm mb-1">Diplomacy quarters</h4>
+                                            <p class="text-gray-500 text-xs leading-relaxed">Official reception room with a 12-seat banquet table and mahogany paneling, bars and luxury lounges and a video conference room.</p>
+                                        </div>
+                                        <div class="mb-2 p-3 border border-transparent hover:border-gray-100 hover:bg-gray-50 rounded-lg transition-all">
+                                            <h4 class="text-[#0B3B3A] font-bold text-sm mb-1">Passenger spaces</h4>
+                                            <p class="text-gray-500 text-xs leading-relaxed">Additional 24 seats for government members and media staff, designed for comfort and functionality during long flights.</p>
+                                        </div>
                                     </div>
-                                    <div class="mb-2 p-3 border border-transparent hover:border-gray-100 hover:bg-gray-50 rounded-lg transition-all">
-                                        <h4 class="text-[#0B3B3A] font-bold text-sm mb-1">Passenger spaces</h4>
-                                        <p class="text-gray-500 text-xs leading-relaxed">Additional 24 seats for government members and media staff, designed for comfort and functionality during long flights.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-500 w-full relative group hover:-translate-y-2 hover:shadow-2xl tab-container">
+                        <div class="flex flex-col md:flex-row h-full min-h-[450px]">
+                            <div class="md:w-5/12 p-8 relative overflow-hidden flex flex-col justify-between" style="background-color: #4FB3A9;">
+                                <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-white to-transparent"></div>
+                                <div class="relative z-10 text-white">
+                                    <div class="flex items-center gap-2 mb-4 opacity-90"><img src="https://api.iconify.design/mdi/rocket-launch.svg?color=%23FFFFFF&width=20&height=20" class="w-5 h-5" /><span class="text-xs font-bold tracking-widest uppercase">Supersonic Royal Jet</span></div>
+                                    <h2 class="text-3xl font-bold mb-2 leading-tight">ROYAL CONCORDE</h2>
+                                    <div class="w-12 h-1 bg-white/30 mb-4 rounded-full"></div>
+                                    <p class="text-white/80 text-sm font-light italic">Master of Speed and Time</p>
+                                </div>
+                                <div class="relative z-10 mt-8 md:mt-0">
+                                    <div class="text-xs font-mono text-white/60 uppercase tracking-widest flex items-center gap-2"><img src="https://api.iconify.design/mdi/shield.svg?color=%23FFFFFF&width=12&height=12" class="w-3 h-3" />Lockheed Martin Concorde V2</div>
+                                </div>
+                                <div class="absolute -bottom-6 -right-6 text-white opacity-10 transform -rotate-12"><img src="https://api.iconify.design/mdi/chevron-right.svg?color=%23FFFFFF&width=140&height=140" style="width:140px;height:140px;" /></div>
+                            </div>
+                            <div class="md:w-7/12 flex flex-col">
+                                <div class="p-8 pb-4">
+                                    <p class="text-gray-600 text-sm leading-relaxed">When time is the most precious resource. It cruises at supersonic speed, faster than sound, while maintaining remarkable elegance and comfort.</p>
+                                </div>
+                                <div class="flex px-8 border-b border-gray-100"><button data-target="specs" class="tab-btn pb-3 text-xs font-bold uppercase tracking-wider mr-6 transition-all duration-300 flex items-center gap-2 text-gray-800 border-b-2 border-gray-800"><img src="https://api.iconify.design/mdi/clipboard-list.svg?color=%23374751&width=14&height=14" class="w-3.5 h-3.5" />Specifications </button><button data-target="interior" class="tab-btn pb-3 text-xs font-bold uppercase tracking-wider transition-all duration-300 flex items-center gap-2 text-gray-400 border-b-2 border-transparent hover:text-gray-600"><img src="https://api.iconify.design/mdi/home.svg?color=%23374751&width=14&height=14" class="w-3.5 h-3.5" />Interior </button></div>
+                                <div class="p-8 pt-6 flex-grow bg-gray-50/30">
+                                    <div class="tab-content space-y-1" data-content="specs">
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Engines</span><span class="text-sm font-bold text-gray-800 font-mono">4 Rolls-Royce Olympus 1000</span></div>
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Length</span><span class="text-sm font-bold text-gray-800 font-mono">64 m</span></div>
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Wingspan</span><span class="text-sm font-bold text-gray-800 font-mono">26 m</span></div>
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Range</span><span class="text-sm font-bold text-gray-800 font-mono">8,800 km</span></div>
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Max. speed</span><span class="text-sm font-bold text-gray-800 font-mono">2400 km/h</span></div>
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Runway</span><span class="text-sm font-bold text-gray-800 font-mono">3,400 m</span></div>
+                                    </div>
+                                    <div class="tab-content hidden grid grid-cols-1 gap-1" data-content="interior">
+                                        <div class="mb-2 p-3 border border-transparent hover:border-gray-100 hover:bg-gray-50 rounded-lg transition-all">
+                                            <h4 class="text-[#0B3B3A] font-bold text-sm mb-1">Exclusive Cabin</h4>
+                                            <p class="text-gray-500 text-xs leading-relaxed">Designed for maximum comfort and elegance, the cabin offers a serene environment for relaxation and work with a dining table and a bathroom with shower.</p>
+                                        </div>
+                                        <div class="mb-2 p-3 border border-transparent hover:border-gray-100 hover:bg-gray-50 rounded-lg transition-all">
+                                            <h4 class="text-[#0B3B3A] font-bold text-sm mb-1">Digital Communication</h4>
+                                            <p class="text-gray-500 text-xs leading-relaxed">The cabin offers the latest video conferencing standards, fast internet access and secure communication protocols.</p>
+                                        </div>
+                                        <div class="mb-2 p-3 border border-transparent hover:border-gray-100 hover:bg-gray-50 rounded-lg transition-all">
+                                            <h4 class="text-[#0B3B3A] font-bold text-sm mb-1">Gastronomy</h4>
+                                            <p class="text-gray-500 text-xs leading-relaxed">Molecular cuisine optimized for high-altitude taste offered at a full-sized dining table while flying faster than the speed of sound.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-500 w-full relative group hover:-translate-y-2 hover:shadow-2xl tab-container">
+                        <div class="flex flex-col md:flex-row h-full min-h-[450px]">
+                            <div class="md:w-5/12 p-8 relative overflow-hidden flex flex-col justify-between" style="background-color: #11605B;">
+                                <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-white to-transparent"></div>
+                                <div class="relative z-10 text-white">
+                                    <div class="flex items-center gap-2 mb-4 opacity-90"><img src="https://api.iconify.design/mdi/earth.svg?color=%23FFFFFF&width=20&height=20" class="w-5 h-5" /><span class="text-xs font-bold tracking-widest uppercase">Diplomacy Aircraft</span></div>
+                                    <h2 class="text-3xl font-bold mb-2 leading-tight">AIR FORCE II and III</h2>
+                                    <div class="w-12 h-1 bg-white/30 mb-4 rounded-full"></div>
+                                    <p class="text-white/80 text-sm font-light italic">Flying Offices of Power and Might</p>
+                                </div>
+                                <div class="relative z-10 mt-8 md:mt-0">
+                                    <div class="text-xs font-mono text-white/60 uppercase tracking-widest flex items-center gap-2"><img src="https://api.iconify.design/mdi/shield.svg?color=%23FFFFFF&width=12&height=12" class="w-3 h-3" />Boeing 747-8I </div>
+                                </div>
+                                <div class="absolute -bottom-6 -right-6 text-white opacity-10 transform -rotate-12"><img src="https://api.iconify.design/mdi/chevron-right.svg?color=%23FFFFFF&width=140&height=140" style="width:140px;height:140px;" /></div>
+                            </div>
+                            <div class="md:w-7/12 flex flex-col">
+                                <div class="p-8 pb-4">
+                                    <p class="text-gray-600 text-sm leading-relaxed">A flying skyscraper where decisions are made. Often used by high-ranking government officials like the Chancellor, President or ministers.</p>
+                                </div>
+                                <div class="flex px-8 border-b border-gray-100"><button data-target="specs" class="tab-btn pb-3 text-xs font-bold uppercase tracking-wider mr-6 transition-all duration-300 flex items-center gap-2 text-gray-800 border-b-2 border-gray-800"><img src="https://api.iconify.design/mdi/clipboard-list.svg?color=%23374751&width=14&height=14" class="w-3.5 h-3.5" />Specifications </button><button data-target="interior" class="tab-btn pb-3 text-xs font-bold uppercase tracking-wider transition-all duration-300 flex items-center gap-2 text-gray-400 border-b-2 border-transparent hover:text-gray-600"><img src="https://api.iconify.design/mdi/home.svg?color=%23374751&width=14&height=14" class="w-3.5 h-3.5" />Interior </button></div>
+                                <div class="p-8 pt-6 flex-grow bg-gray-50/30">
+                                    <div class="tab-content space-y-1" data-content="specs">
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Engines</span><span class="text-sm font-bold text-gray-800 font-mono">4 General Electric GEnx-2B67</span></div>
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Length</span><span class="text-sm font-bold text-gray-800 font-mono">76 m</span></div>
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Wingspan</span><span class="text-sm font-bold text-gray-800 font-mono">68 m</span></div>
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Range</span><span class="text-sm font-bold text-gray-800 font-mono">15,000 km</span></div>
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Max. speed</span><span class="text-sm font-bold text-gray-800 font-mono">988 km/h</span></div>
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Runway</span><span class="text-sm font-bold text-gray-800 font-mono">2,800 m</span></div>
+                                    </div>
+                                    <div class="tab-content hidden grid grid-cols-1 gap-1" data-content="interior">
+                                        <div class="mb-2 p-3 border border-transparent hover:border-gray-100 hover:bg-gray-50 rounded-lg transition-all">
+                                            <h4 class="text-[#0B3B3A] font-bold text-sm mb-1">Oval Office</h4>
+                                            <p class="text-gray-500 text-xs leading-relaxed">Soundproofed, secure meeting room in the nose cone featuring the latest secure communication standards and priority lines to world leaders.</p>
+                                        </div>
+                                        <div class="mb-2 p-3 border border-transparent hover:border-gray-100 hover:bg-gray-50 rounded-lg transition-all">
+                                            <h4 class="text-[#0B3B3A] font-bold text-sm mb-1">Situation Room</h4>
+                                            <p class="text-gray-500 text-xs leading-relaxed">Global monitoring center with real-time satellite imagery, a fully-equipped military command center for crisis management in the air.</p>
+                                        </div>
+                                        <div class="mb-2 p-3 border border-transparent hover:border-gray-100 hover:bg-gray-50 rounded-lg transition-all">
+                                            <h4 class="text-[#0B3B3A] font-bold text-sm mb-1">Media Center</h4>
+                                            <p class="text-gray-500 text-xs leading-relaxed">Press briefing room for up to 10 journalists or media associates. Providing real-time coverage of Waikiki's diplomatic achievements.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-500 w-full relative group hover:-translate-y-2 hover:shadow-2xl tab-container">
+                        <div class="flex flex-col md:flex-row h-full min-h-[450px]">
+                            <div class="md:w-5/12 p-8 relative overflow-hidden flex flex-col justify-between" style="background-color: #0B3B3A;">
+                                <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-white to-transparent"></div>
+                                <div class="relative z-10 text-white">
+                                    <div class="flex items-center gap-2 mb-4 opacity-90"><img src="https://api.iconify.design/mdi/family.svg?color=%23FFFFFF&width=20&height=20" class="w-5 h-5" /><span class="text-xs font-bold tracking-widest uppercase">Family Aircraft</span></div>
+                                    <h2 class="text-3xl font-bold mb-2 leading-tight">DYNASTY</h2>
+                                    <div class="w-12 h-1 bg-white/30 mb-4 rounded-full"></div>
+                                    <p class="text-white/80 text-sm font-light italic">Family Residence</p>
+                                </div>
+                                <div class="relative z-10 mt-8 md:mt-0">
+                                    <div class="text-xs font-mono text-white/60 uppercase tracking-widest flex items-center gap-2"><img src="https://api.iconify.design/mdi/shield.svg?color=%23FFFFFF&width=12&height=12" class="w-3 h-3" />Boeing 777-200 ER</div>
+                                </div>
+                                <div class="absolute -bottom-6 -right-6 text-white opacity-10 transform -rotate-12"><img src="https://api.iconify.design/mdi/chevron-right.svg?color=%23FFFFFF&width=140&height=140" style="width:140px;height:140px;" /></div>
+                            </div>
+                            <div class="md:w-7/12 flex flex-col">
+                                <div class="p-8 pb-4">
+                                    <p class="text-gray-600 text-sm leading-relaxed">Optimized for maximum comfort on family travel. This five-star hotel above the clouds was converted from the dictator's original aircraft.</p>
+                                </div>
+                                <div class="flex px-8 border-b border-gray-100"><button data-target="specs" class="tab-btn pb-3 text-xs font-bold uppercase tracking-wider mr-6 transition-all duration-300 flex items-center gap-2 text-gray-800 border-b-2 border-gray-800"><img src="https://api.iconify.design/mdi/clipboard-list.svg?color=%23374751&width=14&height=14" class="w-3.5 h-3.5" />Specifications </button><button data-target="interior" class="tab-btn pb-3 text-xs font-bold uppercase tracking-wider transition-all duration-300 flex items-center gap-2 text-gray-400 border-b-2 border-transparent hover:text-gray-600"><img src="https://api.iconify.design/mdi/home.svg?color=%23374751&width=14&height=14" class="w-3.5 h-3.5" />Interior </button></div>
+                                <div class="p-8 pt-6 flex-grow bg-gray-50/30">
+                                    <div class="tab-content space-y-1" data-content="specs">
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Engines</span><span class="text-sm font-bold text-gray-800 font-mono">2 General Electric GE90</span></div>
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Length</span><span class="text-sm font-bold text-gray-800 font-mono">64 m</span></div>
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Wingspan</span><span class="text-sm font-bold text-gray-800 font-mono">61 m</span></div>
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Range</span><span class="text-sm font-bold text-gray-800 font-mono">14,300 km</span></div>
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Max. speed</span><span class="text-sm font-bold text-gray-800 font-mono">950 km/h</span></div>
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Runway</span><span class="text-sm font-bold text-gray-800 font-mono">2,700 m</span></div>
+                                    </div>
+                                    <div class="tab-content hidden grid grid-cols-1 gap-1" data-content="interior">
+                                        <div class="mb-2 p-3 border border-transparent hover:border-gray-100 hover:bg-gray-50 rounded-lg transition-all">
+                                            <h4 class="text-[#0B3B3A] font-bold text-sm mb-1">Sky Apartment</h4>
+                                            <p class="text-gray-500 text-xs leading-relaxed">Central suite with living room and rain-shower bathroom. Panoramic windows provide uninterrupted ocean views and an automated climate system ensures perfect comfort.</p>
+                                        </div>
+                                        <div class="mb-2 p-3 border border-transparent hover:border-gray-100 hover:bg-gray-50 rounded-lg transition-all">
+                                            <h4 class="text-[#0B3B3A] font-bold text-sm mb-1">Dining Zone and Bar</h4>
+                                            <p class="text-gray-500 text-xs leading-relaxed">Private dining area with a full-service galley and curated menus for state banquets. An onboard service staff cater to diplomatic preferences and protocol.</p>
+                                        </div>
+                                        <div class="mb-2 p-3 border border-transparent hover:border-gray-100 hover:bg-gray-50 rounded-lg transition-all">
+                                            <h4 class="text-[#0B3B3A] font-bold text-sm mb-1">Guest Wing</h4>
+                                            <p class="text-gray-500 text-xs leading-relaxed">10 business-class level mini-suites. Each suite is soundproofed and equipped with foldaway workstations and secure communications for visiting officials.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-500 w-full relative group hover:-translate-y-2 hover:shadow-2xl tab-container">
-                    <div class="flex flex-col md:flex-row h-full min-h-[450px]">
-                        <div class="md:w-5/12 p-8 relative overflow-hidden flex flex-col justify-between" style="background-color: #4FB3A9;">
-                            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-white to-transparent"></div>
-                            <div class="relative z-10 text-white">
-                                <div class="flex items-center gap-2 mb-4 opacity-90"><img src="https://api.iconify.design/mdi/rocket-launch.svg?color=%23FFFFFF&width=20&height=20" class="w-5 h-5" /><span class="text-xs font-bold tracking-widest uppercase">Supersonic Royal Jet</span></div>
-                                <h2 class="text-3xl font-bold mb-2 leading-tight">ROYAL CONCORDE</h2>
-                                <div class="w-12 h-1 bg-white/30 mb-4 rounded-full"></div>
-                                <p class="text-white/80 text-sm font-light italic">Master of Speed and Time</p>
-                            </div>
-                            <div class="relative z-10 mt-8 md:mt-0">
-                                <div class="text-xs font-mono text-white/60 uppercase tracking-widest flex items-center gap-2"><img src="https://api.iconify.design/mdi/shield.svg?color=%23FFFFFF&width=12&height=12" class="w-3 h-3" />Lockheed Martin Concorde V2</div>
-                            </div>
-                            <div class="absolute -bottom-6 -right-6 text-white opacity-10 transform -rotate-12"><img src="https://api.iconify.design/mdi/chevron-right.svg?color=%23FFFFFF&width=140&height=140" style="width:140px;height:140px;" /></div>
-                        </div>
-                        <div class="md:w-7/12 flex flex-col">
-                            <div class="p-8 pb-4">
-                                <p class="text-gray-600 text-sm leading-relaxed">When time is the most precious resource. It cruises at supersonic speed, faster than sound, while maintaining remarkable elegance and comfort.</p>
-                            </div>
-                            <div class="flex px-8 border-b border-gray-100"><button data-target="specs" class="tab-btn pb-3 text-xs font-bold uppercase tracking-wider mr-6 transition-all duration-300 flex items-center gap-2 text-gray-800 border-b-2 border-gray-800"><img src="https://api.iconify.design/mdi/clipboard-list.svg?color=%23374751&width=14&height=14" class="w-3.5 h-3.5" />Specifications </button><button data-target="interior" class="tab-btn pb-3 text-xs font-bold uppercase tracking-wider transition-all duration-300 flex items-center gap-2 text-gray-400 border-b-2 border-transparent hover:text-gray-600"><img src="https://api.iconify.design/mdi/home.svg?color=%23374751&width=14&height=14" class="w-3.5 h-3.5" />Interior </button></div>
-                            <div class="p-8 pt-6 flex-grow bg-gray-50/30">
-                                <div class="tab-content space-y-1" data-content="specs">
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Engines</span><span class="text-sm font-bold text-gray-800 font-mono">4 Rolls-Royce Olympus 1000</span></div>
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Length</span><span class="text-sm font-bold text-gray-800 font-mono">64 m</span></div>
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Wingspan</span><span class="text-sm font-bold text-gray-800 font-mono">26 m</span></div>
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Range</span><span class="text-sm font-bold text-gray-800 font-mono">8,800 km</span></div>
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Max. speed</span><span class="text-sm font-bold text-gray-800 font-mono">2400 km/h</span></div>
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Runway</span><span class="text-sm font-bold text-gray-800 font-mono">3,400 m</span></div>
-                                </div>
-                                <div class="tab-content hidden grid grid-cols-1 gap-1" data-content="interior">
-                                    <div class="mb-2 p-3 border border-transparent hover:border-gray-100 hover:bg-gray-50 rounded-lg transition-all">
-                                        <h4 class="text-[#0B3B3A] font-bold text-sm mb-1">Exclusive Cabin</h4>
-                                        <p class="text-gray-500 text-xs leading-relaxed">Designed for maximum comfort and elegance, the cabin offers a serene environment for relaxation and work with a dining table and a bathroom with shower.</p>
-                                    </div>
-                                    <div class="mb-2 p-3 border border-transparent hover:border-gray-100 hover:bg-gray-50 rounded-lg transition-all">
-                                        <h4 class="text-[#0B3B3A] font-bold text-sm mb-1">Digital Communication</h4>
-                                        <p class="text-gray-500 text-xs leading-relaxed">The cabin offers the latest video conferencing standards, fast internet access and secure communication protocols.</p>
-                                    </div>
-                                    <div class="mb-2 p-3 border border-transparent hover:border-gray-100 hover:bg-gray-50 rounded-lg transition-all">
-                                        <h4 class="text-[#0B3B3A] font-bold text-sm mb-1">Gastronomy</h4>
-                                        <p class="text-gray-500 text-xs leading-relaxed">Molecular cuisine optimized for high-altitude taste offered at a full-sized dining table while flying faster than the speed of sound.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-500 w-full relative group hover:-translate-y-2 hover:shadow-2xl tab-container">
-                    <div class="flex flex-col md:flex-row h-full min-h-[450px]">
-                        <div class="md:w-5/12 p-8 relative overflow-hidden flex flex-col justify-between" style="background-color: #11605B;">
-                            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-white to-transparent"></div>
-                            <div class="relative z-10 text-white">
-                                <div class="flex items-center gap-2 mb-4 opacity-90"><img src="https://api.iconify.design/mdi/earth.svg?color=%23FFFFFF&width=20&height=20" class="w-5 h-5" /><span class="text-xs font-bold tracking-widest uppercase">Diplomacy Aircraft</span></div>
-                                <h2 class="text-3xl font-bold mb-2 leading-tight">AIR FORCE II and III</h2>
-                                <div class="w-12 h-1 bg-white/30 mb-4 rounded-full"></div>
-                                <p class="text-white/80 text-sm font-light italic">Flying Offices of Power and Might</p>
-                            </div>
-                            <div class="relative z-10 mt-8 md:mt-0">
-                                <div class="text-xs font-mono text-white/60 uppercase tracking-widest flex items-center gap-2"><img src="https://api.iconify.design/mdi/shield.svg?color=%23FFFFFF&width=12&height=12" class="w-3 h-3" />Boeing 747-8I </div>
-                            </div>
-                            <div class="absolute -bottom-6 -right-6 text-white opacity-10 transform -rotate-12"><img src="https://api.iconify.design/mdi/chevron-right.svg?color=%23FFFFFF&width=140&height=140" style="width:140px;height:140px;" /></div>
-                        </div>
-                        <div class="md:w-7/12 flex flex-col">
-                            <div class="p-8 pb-4">
-                                <p class="text-gray-600 text-sm leading-relaxed">A flying skyscraper where decisions are made. Often used by high-ranking government officials like the Chancellor, President or ministers.</p>
-                            </div>
-                            <div class="flex px-8 border-b border-gray-100"><button data-target="specs" class="tab-btn pb-3 text-xs font-bold uppercase tracking-wider mr-6 transition-all duration-300 flex items-center gap-2 text-gray-800 border-b-2 border-gray-800"><img src="https://api.iconify.design/mdi/clipboard-list.svg?color=%23374751&width=14&height=14" class="w-3.5 h-3.5" />Specifications </button><button data-target="interior" class="tab-btn pb-3 text-xs font-bold uppercase tracking-wider transition-all duration-300 flex items-center gap-2 text-gray-400 border-b-2 border-transparent hover:text-gray-600"><img src="https://api.iconify.design/mdi/home.svg?color=%23374751&width=14&height=14" class="w-3.5 h-3.5" />Interior </button></div>
-                            <div class="p-8 pt-6 flex-grow bg-gray-50/30">
-                                <div class="tab-content space-y-1" data-content="specs">
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Engines</span><span class="text-sm font-bold text-gray-800 font-mono">4 General Electric GEnx-2B67</span></div>
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Length</span><span class="text-sm font-bold text-gray-800 font-mono">76 m</span></div>
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Wingspan</span><span class="text-sm font-bold text-gray-800 font-mono">68 m</span></div>
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Range</span><span class="text-sm font-bold text-gray-800 font-mono">15,000 km</span></div>
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Max. speed</span><span class="text-sm font-bold text-gray-800 font-mono">988 km/h</span></div>
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Runway</span><span class="text-sm font-bold text-gray-800 font-mono">2,800 m</span></div>
-                                </div>
-                                <div class="tab-content hidden grid grid-cols-1 gap-1" data-content="interior">
-                                    <div class="mb-2 p-3 border border-transparent hover:border-gray-100 hover:bg-gray-50 rounded-lg transition-all">
-                                        <h4 class="text-[#0B3B3A] font-bold text-sm mb-1">Oval Office</h4>
-                                        <p class="text-gray-500 text-xs leading-relaxed">Soundproofed, secure meeting room in the nose cone featuring the latest secure communication standards and priority lines to world leaders.</p>
-                                    </div>
-                                    <div class="mb-2 p-3 border border-transparent hover:border-gray-100 hover:bg-gray-50 rounded-lg transition-all">
-                                        <h4 class="text-[#0B3B3A] font-bold text-sm mb-1">Situation Room</h4>
-                                        <p class="text-gray-500 text-xs leading-relaxed">Global monitoring center with real-time satellite imagery, a fully-equipped military command center for crisis management in the air.</p>
-                                    </div>
-                                    <div class="mb-2 p-3 border border-transparent hover:border-gray-100 hover:bg-gray-50 rounded-lg transition-all">
-                                        <h4 class="text-[#0B3B3A] font-bold text-sm mb-1">Media Center</h4>
-                                        <p class="text-gray-500 text-xs leading-relaxed">Press briefing room for up to 10 journalists or media associates. Providing real-time coverage of Waikiki's diplomatic achievements.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-500 w-full relative group hover:-translate-y-2 hover:shadow-2xl tab-container">
-                    <div class="flex flex-col md:flex-row h-full min-h-[450px]">
-                        <div class="md:w-5/12 p-8 relative overflow-hidden flex flex-col justify-between" style="background-color: #0B3B3A;">
-                            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-white to-transparent"></div>
-                            <div class="relative z-10 text-white">
-                                <div class="flex items-center gap-2 mb-4 opacity-90"><img src="https://api.iconify.design/mdi/family.svg?color=%23FFFFFF&width=20&height=20" class="w-5 h-5" /><span class="text-xs font-bold tracking-widest uppercase">Family Aircraft</span></div>
-                                <h2 class="text-3xl font-bold mb-2 leading-tight">DYNASTY</h2>
-                                <div class="w-12 h-1 bg-white/30 mb-4 rounded-full"></div>
-                                <p class="text-white/80 text-sm font-light italic">Family Residence</p>
-                            </div>
-                            <div class="relative z-10 mt-8 md:mt-0">
-                                <div class="text-xs font-mono text-white/60 uppercase tracking-widest flex items-center gap-2"><img src="https://api.iconify.design/mdi/shield.svg?color=%23FFFFFF&width=12&height=12" class="w-3 h-3" />Boeing 777-200 ER</div>
-                            </div>
-                            <div class="absolute -bottom-6 -right-6 text-white opacity-10 transform -rotate-12"><img src="https://api.iconify.design/mdi/chevron-right.svg?color=%23FFFFFF&width=140&height=140" style="width:140px;height:140px;" /></div>
-                        </div>
-                        <div class="md:w-7/12 flex flex-col">
-                            <div class="p-8 pb-4">
-                                <p class="text-gray-600 text-sm leading-relaxed">Optimized for maximum comfort on family travel. This five-star hotel above the clouds was converted from the dictator's original aircraft.</p>
-                            </div>
-                            <div class="flex px-8 border-b border-gray-100"><button data-target="specs" class="tab-btn pb-3 text-xs font-bold uppercase tracking-wider mr-6 transition-all duration-300 flex items-center gap-2 text-gray-800 border-b-2 border-gray-800"><img src="https://api.iconify.design/mdi/clipboard-list.svg?color=%23374751&width=14&height=14" class="w-3.5 h-3.5" />Specifications </button><button data-target="interior" class="tab-btn pb-3 text-xs font-bold uppercase tracking-wider transition-all duration-300 flex items-center gap-2 text-gray-400 border-b-2 border-transparent hover:text-gray-600"><img src="https://api.iconify.design/mdi/home.svg?color=%23374751&width=14&height=14" class="w-3.5 h-3.5" />Interior </button></div>
-                            <div class="p-8 pt-6 flex-grow bg-gray-50/30">
-                                <div class="tab-content space-y-1" data-content="specs">
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Engines</span><span class="text-sm font-bold text-gray-800 font-mono">2 General Electric GE90</span></div>
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Length</span><span class="text-sm font-bold text-gray-800 font-mono">64 m</span></div>
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Wingspan</span><span class="text-sm font-bold text-gray-800 font-mono">61 m</span></div>
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Range</span><span class="text-sm font-bold text-gray-800 font-mono">14,300 km</span></div>
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Max. speed</span><span class="text-sm font-bold text-gray-800 font-mono">950 km/h</span></div>
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100 px-2"><span class="text-sm font-medium text-[#0B3B3A] transition-colors">Runway</span><span class="text-sm font-bold text-gray-800 font-mono">2,700 m</span></div>
-                                </div>
-                                <div class="tab-content hidden grid grid-cols-1 gap-1" data-content="interior">
-                                    <div class="mb-2 p-3 border border-transparent hover:border-gray-100 hover:bg-gray-50 rounded-lg transition-all">
-                                        <h4 class="text-[#0B3B3A] font-bold text-sm mb-1">Sky Apartment</h4>
-                                        <p class="text-gray-500 text-xs leading-relaxed">Central suite with living room and rain-shower bathroom. Panoramic windows provide uninterrupted ocean views and an automated climate system ensures perfect comfort.</p>
-                                    </div>
-                                    <div class="mb-2 p-3 border border-transparent hover:border-gray-100 hover:bg-gray-50 rounded-lg transition-all">
-                                        <h4 class="text-[#0B3B3A] font-bold text-sm mb-1">Dining Zone and Bar</h4>
-                                        <p class="text-gray-500 text-xs leading-relaxed">Private dining area with a full-service galley and curated menus for state banquets. An onboard service staff cater to diplomatic preferences and protocol.</p>
-                                    </div>
-                                    <div class="mb-2 p-3 border border-transparent hover:border-gray-100 hover:bg-gray-50 rounded-lg transition-all">
-                                        <h4 class="text-[#0B3B3A] font-bold text-sm mb-1">Guest Wing</h4>
-                                        <p class="text-gray-500 text-xs leading-relaxed">10 business-class level mini-suites. Each suite is soundproofed and equipped with foldaway workstations and secure communications for visiting officials.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
-    <!-- @chrome:next --><section class="next-chapter"><a class="next-card" href="dynasty.html"><div class="next-media"><img src="../images/UniversalUpscaler_e38222ed-70b3-4c90-9777-c114aa60d527-U.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Continue the journey · Royal Family</span><span class="next-title">The Dynasty</span><span class="next-arrow" aria-hidden="true">→</span></span></a></section><!-- /@chrome:next -->
+            </main>
+        </div>
+        <!-- @chrome:next -->
+        <section class="next-chapter"><a class="next-card" href="dynasty.html">
+                <div class="next-media"><img src="../images/UniversalUpscaler_e38222ed-70b3-4c90-9777-c114aa60d527-U.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Continue the journey · Royal Family</span><span class="next-title">The Dynasty</span><span class="next-arrow" aria-hidden="true">→</span></span>
+            </a></section><!-- /@chrome:next -->
     </main>
     <!-- @chrome:footer -->
     <footer class="site-footer">
-        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z"/></svg>
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand">
@@ -273,7 +350,57 @@
                     <p class="footer-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
                     <p class="footer-about">The official portal of the Sovereign Nation of Waikiki. Founded 10 March 1999 · Nova Aurelia. This site was generated with AI, any resemblance to real people, countries or institutions is just a coincidence.</p>
                 </div>
-                <div class="footer-col"><h2>Nation</h2><ul><li><a href="index.html">Home</a></li><li><a href="overview.html">Overview</a></li><li><a href="history.html">History</a></li><li><a href="society.html">Society</a></li><li><a href="culture.html">Culture</a></li><li><a href="ideology.html">Ideology</a></li></ul></div><div class="footer-col"><h2>Governance</h2><ul><li><a href="government.html">Government</a></li><li><a href="leadership.html">Leadership</a></li><li><a href="parties.html">Politics</a></li><li><a href="constitution.html">Constitution</a></li><li><a href="citizenship.html">Citizenship</a></li><li><a href="military.html">Military</a></li><li><a href="diplomacy.html">Diplomacy</a></li></ul></div><div class="footer-col"><h2>Prosperity</h2><ul><li><a href="economy.html">Economy</a></li><li><a href="wealth-fund.html">Wealth Fund</a></li><li><a href="infrastructure.html">Infrastructure</a></li><li><a href="plane.html">Diplomatic Fleet</a></li></ul></div><div class="footer-col"><h2>Royal Family</h2><ul><li><a href="dynasty.html">The Dynasty</a></li><li><a href="chease-and-jessica.html">Chease and Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li><li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li></ul></div><div class="footer-col"><h2>Visit</h2><ul><li><a href="tourism.html">Tourism</a></li><li><a href="sights.html">Sights</a></li><li><a href="travel-guide.html">Travel Guide</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+                <div class="footer-col">
+                    <h2>Nation</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="overview.html">Overview</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="society.html">Society</a></li>
+                        <li><a href="culture.html">Culture</a></li>
+                        <li><a href="ideology.html">Ideology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Governance</h2>
+                    <ul>
+                        <li><a href="government.html">Government</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="parties.html">Politics</a></li>
+                        <li><a href="constitution.html">Constitution</a></li>
+                        <li><a href="citizenship.html">Citizenship</a></li>
+                        <li><a href="military.html">Military</a></li>
+                        <li><a href="diplomacy.html">Diplomacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Prosperity</h2>
+                    <ul>
+                        <li><a href="economy.html">Economy</a></li>
+                        <li><a href="wealth-fund.html">Wealth Fund</a></li>
+                        <li><a href="infrastructure.html">Infrastructure</a></li>
+                        <li><a href="plane.html">Diplomatic Fleet</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Royal Family</h2>
+                    <ul>
+                        <li><a href="dynasty.html">The Dynasty</a></li>
+                        <li><a href="chease-and-jessica.html">Chease and Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Visit</h2>
+                    <ul>
+                        <li><a href="tourism.html">Tourism</a></li>
+                        <li><a href="sights.html">Sights</a></li>
+                        <li><a href="travel-guide.html">Travel Guide</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
             </div>
             <span class="footer-mega" aria-hidden="true">Waikiki</span>
             <div class="footer-bottom">
@@ -282,10 +409,35 @@
             </div>
         </div>
     </footer>
-    <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 54 54" aria-hidden="true"><circle class="ring-bg" cx="27" cy="27" r="24"/><circle class="ring" cx="27" cy="27" r="24"/></svg><span aria-hidden="true">↑</span></button>
+    <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span></button>
     <!-- /@chrome:footer -->
     <script src="../js/common.js"></script>
-    <script>document.addEventListener('DOMContentLoaded', () => { const tabs = document.querySelectorAll('.tab-btn'); tabs.forEach(tab => { tab.addEventListener('click', function () { const container = this.closest('.tab-container'); const targetName = this.getAttribute('data-target'); container.querySelectorAll('.tab-btn').forEach(btn => { btn.classList.remove('text-gray-800', 'border-gray-800', 'border-b-2'); btn.classList.add('text-gray-400', 'border-transparent'); }); this.classList.remove('text-gray-400', 'border-transparent'); this.classList.add('text-gray-800', 'border-gray-800', 'border-b-2'); container.querySelectorAll('.tab-content').forEach(content => { content.classList.add('hidden'); }); const targetContent = container.querySelector(`.tab-content[data-content="${targetName}"]`); if (targetContent) { targetContent.classList.remove('hidden'); } }); }); }); </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.tab-btn');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const container = this.closest('.tab-container');
+                    const targetName = this.getAttribute('data-target');
+                    container.querySelectorAll('.tab-btn').forEach(btn => {
+                        btn.classList.remove('text-gray-800', 'border-gray-800', 'border-b-2');
+                        btn.classList.add('text-gray-400', 'border-transparent');
+                    });
+                    this.classList.remove('text-gray-400', 'border-transparent');
+                    this.classList.add('text-gray-800', 'border-gray-800', 'border-b-2');
+                    container.querySelectorAll('.tab-content').forEach(content => {
+                        content.classList.add('hidden');
+                    });
+                    const targetContent = container.querySelector(`.tab-content[data-content="${targetName}"]`);
+                    if (targetContent) {
+                        targetContent.classList.remove('hidden');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
-
 </html>

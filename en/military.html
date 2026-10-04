@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- @chrome:head -->
     <meta name="description" content="Waikiki&#x27;s armed forces are a modern, well-resourced military organization. Their approach is based on credible deterrence and rapid response, combining…" />
     <meta name="theme-color" content="#fbf7f0" />
@@ -11,14 +11,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />
-    <script>(function(d){var h=d.documentElement;h.classList.add('js');try{if(localStorage.getItem('isDarkMode')==='true')h.classList.add('body-dark');if(localStorage.getItem('isAnimationDisabled')==='true')h.classList.add('no-reveal')}catch(e){}setTimeout(function(){if(!h.classList.contains('reveal-ready'))h.classList.remove('js')},3500)})(document);</script>
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
     <!-- /@chrome:head -->
-  <title>Waikiki Military</title>
-  <link rel="icon" href="../icons/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo-green.png" />
-  <link href="../manifest.json" rel="manifest" />
-  <link rel="stylesheet" href="../css/common.css" />
-  <link rel="preload" as="image" href="../images/UniversalUpscaler_8a87a065-93bb-4106-9cdf-b81171bed0dd.jpg" fetchpriority="high" />
+    <title>Waikiki Military</title>
+    <link rel="icon" href="../icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo-green.png" />
+    <link href="../manifest.json" rel="manifest" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="preload" as="image" href="../images/UniversalUpscaler_8a87a065-93bb-4106-9cdf-b81171bed0dd.jpg" fetchpriority="high" />
 </head>
 <body class="page-military group-governance">
     <!-- @chrome:header -->
@@ -28,8 +40,20 @@
         <a href="index.html" class="brand" aria-label="Waikiki home"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" decoding="async" /><span class="brand-word">Waikiki</span></a>
         <nav class="primary-nav" aria-label="Primary"><a href="tourism.html">Visit</a><a href="society.html">Society</a><a href="economy.html">Economy</a><a href="government.html">Government</a><a href="history.html">History</a><a href="dynasty.html">Royal Family</a></nav>
         <div class="header-actions">
-            <a class="lang-pill" href="../hu/military.html" hreflang="hu" lang="hu" title="Magyar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>HU</span></a>
-            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle night mode"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><mask id="theme-mask"><rect width="24" height="24" fill="#fff"/><circle class="theme-cut" cx="26" cy="2" r="6" fill="#000"/></mask><circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)"/><g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5"/></g></svg></button>
+            <a class="lang-pill" href="../hu/military.html" hreflang="hu" lang="hu" title="Magyar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg><span>HU</span></a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle night mode"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg></button>
             <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="menu-lines" aria-hidden="true"></span><span class="menu-label-open">Menu</span><span class="menu-label-close">Close</span><span class="visually-hidden">Menu</span></button>
         </div>
     </header>
@@ -47,155 +71,222 @@
                 <p class="menu-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
                 <div class="menu-aside-row"><a class="menu-chip is-active" href="../en/military.html" hreflang="en" lang="en">English</a><a class="menu-chip" href="../hu/military.html" hreflang="hu" lang="hu">Magyar</a><button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Night mode</button><button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animate</button></div>
             </aside>
-            <div class="menu-group"><h2>Nation</h2><ul><li><a href="index.html">Home</a></li><li><a href="overview.html">Overview</a></li><li><a href="history.html">History</a></li><li><a href="society.html">Society</a></li><li><a href="culture.html">Culture</a></li><li><a href="ideology.html">Ideology</a></li></ul></div><div class="menu-group"><h2>Governance</h2><ul><li><a href="government.html">Government</a></li><li><a href="leadership.html">Leadership</a></li><li><a href="parties.html">Politics</a></li><li><a href="constitution.html">Constitution</a></li><li><a href="citizenship.html">Citizenship</a></li><li><a href="military.html" aria-current="page">Military</a></li><li><a href="diplomacy.html">Diplomacy</a></li></ul></div><div class="menu-group"><h2>Prosperity</h2><ul><li><a href="economy.html">Economy</a></li><li><a href="wealth-fund.html">Wealth Fund</a></li><li><a href="infrastructure.html">Infrastructure</a></li><li><a href="plane.html">Diplomatic Fleet</a></li></ul></div><div class="menu-group"><h2>Royal Family</h2><ul><li><a href="dynasty.html">The Dynasty</a></li><li><a href="chease-and-jessica.html">Chease and Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li><li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li></ul></div><div class="menu-group"><h2>Visit</h2><ul><li><a href="tourism.html">Tourism</a></li><li><a href="sights.html">Sights</a></li><li><a href="travel-guide.html">Travel Guide</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+            <div class="menu-group">
+                <h2>Nation</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="overview.html">Overview</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="society.html">Society</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="ideology.html">Ideology</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Governance</h2>
+                <ul>
+                    <li><a href="government.html">Government</a></li>
+                    <li><a href="leadership.html">Leadership</a></li>
+                    <li><a href="parties.html">Politics</a></li>
+                    <li><a href="constitution.html">Constitution</a></li>
+                    <li><a href="citizenship.html">Citizenship</a></li>
+                    <li><a href="military.html" aria-current="page">Military</a></li>
+                    <li><a href="diplomacy.html">Diplomacy</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Prosperity</h2>
+                <ul>
+                    <li><a href="economy.html">Economy</a></li>
+                    <li><a href="wealth-fund.html">Wealth Fund</a></li>
+                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                    <li><a href="plane.html">Diplomatic Fleet</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Royal Family</h2>
+                <ul>
+                    <li><a href="dynasty.html">The Dynasty</a></li>
+                    <li><a href="chease-and-jessica.html">Chease and Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li>
+                    <li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Visit</h2>
+                <ul>
+                    <li><a href="tourism.html">Tourism</a></li>
+                    <li><a href="sights.html">Sights</a></li>
+                    <li><a href="travel-guide.html">Travel Guide</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- /@chrome:header -->
     <main id="main">
-  
-  <section class="hero" data-hero><div class="hero-media"><img src="../images/UniversalUpscaler_8a87a065-93bb-4106-9cdf-b81171bed0dd.jpg" alt="Armed Forces" fetchpriority="high" decoding="async" /></div><div class="hero-veil"></div><div class="hero-content"><span class="hero-eyebrow">Governance · Military</span><h1 class="hero-title">Armed Forces</h1><p class="hero-lead">Waikiki's armed forces are a modern, well-resourced military organization. Their approach is based on credible deterrence and rapid response, combining nuclear and conventional capabilities with advanced cyber and space technologies. The military is tasked with protecting national sovereignty and supporting collective defense agreements with international partners.</p><div class="hero-stats"><div class="stat-item"><span class="stat-number">507k</span><span class="stat-label">Active Personnel</span></div><div class="stat-item"><span class="stat-number">6</span><span class="stat-label">Aircraft Carriers</span></div><div class="stat-item"><span class="stat-number">108</span><span class="stat-label">Nuclear Warheads</span></div><div class="stat-item"><span class="stat-number">95</span><span class="stat-label">Modern Bombers</span></div></div></div><button class="hero-scroll" type="button">Scroll</button></section>
-    <!-- @chrome:subnav --><!-- /@chrome:subnav -->
-  <section id="mission" class="fade-in">
-    <h2 class="section-title">Mission and Principles</h2>
-    <p class="section-intro">The Waikiki armed forces are responsible for defending national independence and territorial integrity, securing strategic resources and infrastructure, and participating in collective defense with allied nations. The defense doctrine focuses on credible deterrence and rapid response, using a balanced mix of nuclear and conventional forces to address a range of security challenges.</p>
-    <div class="card-grid">
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/shield-check.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>National Defense</h3>
-        <p>Protecting national independence, territorial integrity, vital infrastructure and sovereignty through a broad range of defense capabilities. The armed forces maintain readiness to respond to threats against Waikiki's territory, citizens and strategic interests across all areas of modern defense.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/flash.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Strategic Deterrence</h3>
-        <p>Maintaining credible deterrence through nuclear strike capabilities helps prevent potential threats to Waikiki's security. The strategic deterrent includes land-based missiles, submarine-launched systems, air-launched platforms and satellite platforms, providing second-strike capability.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/security.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Trade Route Protection</h3>
-        <p>The military protects vital infrastructure and international trade routes across the globe against piracy, terrorist organizations, and rogue states. The military also works with civilian agencies to help ensure continuity of essential services and to support recovery from natural disasters or hostile actions.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/handshake.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Collective Defense</h3>
-        <p>Fulfilling NATO commitments and regional security partnerships through joint exercises, intelligence sharing and coordinated operations. Waikiki also contributes to international stability through peacekeeping missions, humanitarian operations and defense cooperation programs.</p>
-      </div>
-    </div>
-  </section>
-  <section id="forces" class="light-bg fade-in">
-    <h2 class="section-title">Forces and Commands</h2>
-    <p class="section-intro">The armed forces are organized into three main service branches, supported by strategic commands that coordinate capabilities. Ground forces include modern armored and mechanized brigades and advanced artillery systems. The air force operates multi-role fighters and strategic bombers, supported by aerial refueling. The navy maintains a global presence with aircraft carriers, nuclear submarines and destroyers.</p>
-    <div class="card-grid">
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/tank.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Ground Forces</h3>
-        <p>Armored and mechanized brigades are equipped with more than 1.900 main battle tanks and armored vehicles, including industry-leading stealth units. Advanced artillery, mobile anti-air units, special operations forces and almost 270.000 soldiers provide combined arms capabilities across Waikiki's three provinces.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/airplane-takeoff.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Air Force</h3>
-        <p>About 720 multi-role fighter aircraft and 85 strategic and 10 stealth bombers provide air superiority and strike capabilities. The fleet includes aerial refueling tankers for global reach, advanced reconnaissance platforms, transport aircraft and long-range drones for rapid worldwide deployment.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/ferry.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Naval Forces</h3>
-        <p>Besides three supercarriers and three aircraft carriers, 18 nuclear submarines and 12 missile destroyers form the core of the fleet. Amphibious landing ships and support vessels enable operations across oceans, while corvettes and frigates protect sea lanes and support missions in distant regions.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/nuke.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Nuclear Arsenal</h3>
-        <p>The strategic deterrent of over 100 warheads is deployed across multiple platforms to ensure a survivable second-strike capability. Twenty-six warheads are on land-based ICBMs, 36 on submarine-launched ballistic missiles and 30 air-launched nuclear weapons in secure reserves, providing layered nuclear deterrence.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/rocket-launch.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Strategic Commands</h3>
-        <p>The Strategic Missile Force manages intercontinental ballistic capabilities and nuclear deterrence with over 100 warheads. The Cyber and Space Operations Command oversees satellite systems, drone operations and electronic warfare, working closely with WSA military support components.</p>
-      </div>
-    </div>
-  </section>
-  <section id="command" class="fade-in">
-    <h2 class="section-title">Command and Control</h2>
-    <p class="section-intro">Waikiki's armed forces operate under a dual-ministerial structure that ensures civilian control over military operations. The Defense Minister oversees border defense, air patrol, missile defense systems and internal security support, while the Minister of War manages offensive operations, the naval fleet and the strategic direction of foreign military operations.</p>
-    <div class="card-grid">
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/crown.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Supreme Command</h3>
-        <p>The dictator is the supreme commander of the armed forces with constitutional authority over all military operations. The Chief of General Staff is appointed directly, ensuring unity of command and maintaining civilian oversight through the dual-ministerial structure.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/medal.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Joint Operations</h3>
-        <p>The Chief of General Staff coordinates all service branches in combined operations, ensuring interoperability and unified action. The joint command structure integrates land, air, naval, cyber and space capabilities for coordinated effects across multiple domains.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/shield-home.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Ministry of Defense</h3>
-        <p>Responsible for border security, air and missile defense systems including the Transborder Missile Defense System, and support to internal security agencies. Manages defensive infrastructure and territorial protection across Waikiki's three provinces.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/sword-cross.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Ministry of War</h3>
-        <p>Directs offensive operational capabilities, naval forces and overseas military deployments. Provides strategic guidance for expeditionary operations, foreign military cooperation programs and international defense partnerships.</p>
-      </div>
-    </div>
-  </section>
-  <section id="doctrine" class="light-bg fade-in">
-    <h2 class="section-title">Doctrine and Key Capabilities</h2>
-    <p class="section-intro">Waikiki's defense doctrine centers on layered missile defense, advanced air and naval power, and strong cyber and space capabilities. The military also supports civil defense and humanitarian operations at home and abroad, while participating in border security against illegal immigration.</p>
-    <div class="card-grid">
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/shield-alert.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Transborder Missile Defense</h3>
-        <p>This multi-layered nationwide system intercepts threats from short-range tactical missiles to intercontinental ballistic missiles. The ₩132 billion program integrates early warning radars, ground-based interceptors and space-based sensors to protect Waikiki's territory and regional allies.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/cloud-alert.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Network-Centric Warfare</h3>
-        <p>Advanced command and control systems link sensors, weapons and decision-makers in a real-time battlefield network. Precision-guided munitions, electronic warfare systems and integrated air defenses provide advantages in contested airspace.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/waves.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Oceanic Projection</h3>
-        <p>Carrier strike groups, supported by nuclear submarines and amphibious ready groups, enable operations far from home. Blue-water navy capabilities protect sea lanes, support expeditionary operations and maintain a presence in strategic regions.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/satellite-variant.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Cyber and Space Operations</h3>
-        <p>AI-enhanced cyber defense protects critical networks and infrastructure from sophisticated threats. Drone swarm technology, satellite reconnaissance networks and WSA orbital platforms provide intelligence, communications and navigation services for military operations.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/school.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Advanced Training Systems</h3>
-        <p>Competency-based officer education, digital simulation environments and regular live-fire exercises help maintain high readiness. Specialized training programs for cyber warfare and space operations prepare personnel for new areas of conflict.</p>
-      </div>
-    </div>
-  </section>
-  <section id="budget" class="fade-in">
-    <h2 class="section-title">Budget and Defense Industry</h2>
-    <p class="section-intro">Defense spending is about three percent of GDP, with National Wealth Fund revenues supporting major programs. Key priorities include missile defense, new fighter jets, submarine upgrades, drone and cyber capabilities, and satellite expansion. The defense industry relies on state-private partnerships for high domestic value.</p>
-    <div class="card-grid">
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/cash-multiple.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Defense Budget</h3>
-        <p>About 3% of GDP or 7% of the government budget is allocated to defense, providing funding for personnel, operations and modernization. The most expensive programs include the Transborder Missile Defense System, next-generation aircraft carriers, ICBM and thermonuclear device maintenance and expanded military satellite networks.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/factory.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Defense Industrial Base</h3>
-        <p>The domestic defense industry, led by Techno Industries, Waikiki Space and Aerodynamics, Lockheed Martin and General Arms and Defense, produces advanced weapons systems, aerospace platforms and electronics. State-private partnerships help maintain a technological edge and ensure supply chain security.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/graph.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Economic Impact</h3>
-        <p>Defense spending supports high-value manufacturing, research and development, and skilled employment throughout Waikiki's provinces. Technology transfer from military research also contributes to civilian innovation in aerospace, communications and advanced materials. Arms exports also significantly contribute to the country's positive trade balance.</p>
-      </div>
-    </div>
-  </section>
-  <section id="international" class="light-bg fade-in">
-    <h2 class="section-title">International Role and Partnerships</h2>
-    <p class="section-intro">Waikiki became a NATO member in 2025, meeting collective defense obligations and compatibility standards for interoperability with allied forces. The country participates in UN and regional missions through peacekeeping and crisis management. Defense diplomacy includes bilateral and multilateral cooperation, joint development projects and training programs with partners worldwide.</p>
-    <div class="card-grid">
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/shield-star.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>NATO Membership</h3>
-        <p>As a full NATO member since 2025, Waikiki contributes forces to collective defense, participates in alliance decision-making and maintains interoperable equipment and procedures. Commitment to Article 5 mutual defense obligation supports transatlantic security.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/peace.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>UN Peacekeeping</h3>
-        <p>Waikiki deploys personnel to UN peacekeeping missions worldwide, supporting conflict resolution and stability operations. Military observers, engineering units, medical teams and logistics support contribute to international peace and security.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/handshake-outline.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Bilateral Cooperation</h3>
-        <p>Defense partnerships with allied nations include joint training exercises, intelligence sharing, equipment co-development and military education exchanges. These relationships enhance interoperability and build trust among security partners.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/school-outline.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Capacity Building</h3>
-        <p>Waikiki provides military training and advisory support to partner nations, strengthening regional security. Defense diplomacy programs share expertise in logistics, maintenance and professional military education with developing countries.</p>
-      </div>
-    </div>
-  </section>
-    <!-- @chrome:next --><section class="next-chapter"><a class="next-card" href="diplomacy.html"><div class="next-media"><img src="../images/UniversalUpscaler_daeff1a7-495d-4412-80d7-a0eacf6e3ac6.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Continue the journey · Governance</span><span class="next-title">Diplomacy</span><span class="next-arrow" aria-hidden="true">→</span></span></a></section><!-- /@chrome:next -->
+        <section class="hero" data-hero>
+            <div class="hero-media"><img src="../images/UniversalUpscaler_8a87a065-93bb-4106-9cdf-b81171bed0dd.jpg" alt="Armed Forces" fetchpriority="high" decoding="async" /></div>
+            <div class="hero-veil"></div>
+            <div class="hero-content"><span class="hero-eyebrow">Governance · Military</span>
+                <h1 class="hero-title">Armed Forces</h1>
+                <p class="hero-lead">Waikiki's armed forces are a modern, well-resourced military organization. Their approach is based on credible deterrence and rapid response, combining nuclear and conventional capabilities with advanced cyber and space technologies. The military is tasked with protecting national sovereignty and supporting collective defense agreements with international partners.</p>
+                <div class="hero-stats">
+                    <div class="stat-item"><span class="stat-number">507k</span><span class="stat-label">Active Personnel</span></div>
+                    <div class="stat-item"><span class="stat-number">6</span><span class="stat-label">Aircraft Carriers</span></div>
+                    <div class="stat-item"><span class="stat-number">108</span><span class="stat-label">Nuclear Warheads</span></div>
+                    <div class="stat-item"><span class="stat-number">95</span><span class="stat-label">Modern Bombers</span></div>
+                </div>
+            </div><button class="hero-scroll" type="button">Scroll</button>
+        </section>
+        <!-- @chrome:subnav --><!-- /@chrome:subnav -->
+        <section id="mission" class="fade-in">
+            <h2 class="section-title">Mission and Principles</h2>
+            <p class="section-intro">The Waikiki armed forces are responsible for defending national independence and territorial integrity, securing strategic resources and infrastructure, and participating in collective defense with allied nations. The defense doctrine focuses on credible deterrence and rapid response, using a balanced mix of nuclear and conventional forces to address a range of security challenges.</p>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/shield-check.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>National Defense</h3>
+                    <p>Protecting national independence, territorial integrity, vital infrastructure and sovereignty through a broad range of defense capabilities. The armed forces maintain readiness to respond to threats against Waikiki's territory, citizens and strategic interests across all areas of modern defense.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/flash.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Strategic Deterrence</h3>
+                    <p>Maintaining credible deterrence through nuclear strike capabilities helps prevent potential threats to Waikiki's security. The strategic deterrent includes land-based missiles, submarine-launched systems, air-launched platforms and satellite platforms, providing second-strike capability.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/security.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Trade Route Protection</h3>
+                    <p>The military protects vital infrastructure and international trade routes across the globe against piracy, terrorist organizations, and rogue states. The military also works with civilian agencies to help ensure continuity of essential services and to support recovery from natural disasters or hostile actions.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/handshake.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Collective Defense</h3>
+                    <p>Fulfilling NATO commitments and regional security partnerships through joint exercises, intelligence sharing and coordinated operations. Waikiki also contributes to international stability through peacekeeping missions, humanitarian operations and defense cooperation programs.</p>
+                </div>
+            </div>
+        </section>
+        <section id="forces" class="light-bg fade-in">
+            <h2 class="section-title">Forces and Commands</h2>
+            <p class="section-intro">The armed forces are organized into three main service branches, supported by strategic commands that coordinate capabilities. Ground forces include modern armored and mechanized brigades and advanced artillery systems. The air force operates multi-role fighters and strategic bombers, supported by aerial refueling. The navy maintains a global presence with aircraft carriers, nuclear submarines and destroyers.</p>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/tank.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Ground Forces</h3>
+                    <p>Armored and mechanized brigades are equipped with more than 1.900 main battle tanks and armored vehicles, including industry-leading stealth units. Advanced artillery, mobile anti-air units, special operations forces and almost 270.000 soldiers provide combined arms capabilities across Waikiki's three provinces.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/airplane-takeoff.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Air Force</h3>
+                    <p>About 720 multi-role fighter aircraft and 85 strategic and 10 stealth bombers provide air superiority and strike capabilities. The fleet includes aerial refueling tankers for global reach, advanced reconnaissance platforms, transport aircraft and long-range drones for rapid worldwide deployment.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/ferry.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Naval Forces</h3>
+                    <p>Besides three supercarriers and three aircraft carriers, 18 nuclear submarines and 12 missile destroyers form the core of the fleet. Amphibious landing ships and support vessels enable operations across oceans, while corvettes and frigates protect sea lanes and support missions in distant regions.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/nuke.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Nuclear Arsenal</h3>
+                    <p>The strategic deterrent of over 100 warheads is deployed across multiple platforms to ensure a survivable second-strike capability. Twenty-six warheads are on land-based ICBMs, 36 on submarine-launched ballistic missiles and 30 air-launched nuclear weapons in secure reserves, providing layered nuclear deterrence.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/rocket-launch.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Strategic Commands</h3>
+                    <p>The Strategic Missile Force manages intercontinental ballistic capabilities and nuclear deterrence with over 100 warheads. The Cyber and Space Operations Command oversees satellite systems, drone operations and electronic warfare, working closely with WSA military support components.</p>
+                </div>
+            </div>
+        </section>
+        <section id="command" class="fade-in">
+            <h2 class="section-title">Command and Control</h2>
+            <p class="section-intro">Waikiki's armed forces operate under a dual-ministerial structure that ensures civilian control over military operations. The Defense Minister oversees border defense, air patrol, missile defense systems and internal security support, while the Minister of War manages offensive operations, the naval fleet and the strategic direction of foreign military operations.</p>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/crown.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Supreme Command</h3>
+                    <p>The dictator is the supreme commander of the armed forces with constitutional authority over all military operations. The Chief of General Staff is appointed directly, ensuring unity of command and maintaining civilian oversight through the dual-ministerial structure.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/medal.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Joint Operations</h3>
+                    <p>The Chief of General Staff coordinates all service branches in combined operations, ensuring interoperability and unified action. The joint command structure integrates land, air, naval, cyber and space capabilities for coordinated effects across multiple domains.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/shield-home.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Ministry of Defense</h3>
+                    <p>Responsible for border security, air and missile defense systems including the Transborder Missile Defense System, and support to internal security agencies. Manages defensive infrastructure and territorial protection across Waikiki's three provinces.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/sword-cross.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Ministry of War</h3>
+                    <p>Directs offensive operational capabilities, naval forces and overseas military deployments. Provides strategic guidance for expeditionary operations, foreign military cooperation programs and international defense partnerships.</p>
+                </div>
+            </div>
+        </section>
+        <section id="doctrine" class="light-bg fade-in">
+            <h2 class="section-title">Doctrine and Key Capabilities</h2>
+            <p class="section-intro">Waikiki's defense doctrine centers on layered missile defense, advanced air and naval power, and strong cyber and space capabilities. The military also supports civil defense and humanitarian operations at home and abroad, while participating in border security against illegal immigration.</p>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/shield-alert.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Transborder Missile Defense</h3>
+                    <p>This multi-layered nationwide system intercepts threats from short-range tactical missiles to intercontinental ballistic missiles. The ₩132 billion program integrates early warning radars, ground-based interceptors and space-based sensors to protect Waikiki's territory and regional allies.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/cloud-alert.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Network-Centric Warfare</h3>
+                    <p>Advanced command and control systems link sensors, weapons and decision-makers in a real-time battlefield network. Precision-guided munitions, electronic warfare systems and integrated air defenses provide advantages in contested airspace.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/waves.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Oceanic Projection</h3>
+                    <p>Carrier strike groups, supported by nuclear submarines and amphibious ready groups, enable operations far from home. Blue-water navy capabilities protect sea lanes, support expeditionary operations and maintain a presence in strategic regions.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/satellite-variant.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Cyber and Space Operations</h3>
+                    <p>AI-enhanced cyber defense protects critical networks and infrastructure from sophisticated threats. Drone swarm technology, satellite reconnaissance networks and WSA orbital platforms provide intelligence, communications and navigation services for military operations.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/school.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Advanced Training Systems</h3>
+                    <p>Competency-based officer education, digital simulation environments and regular live-fire exercises help maintain high readiness. Specialized training programs for cyber warfare and space operations prepare personnel for new areas of conflict.</p>
+                </div>
+            </div>
+        </section>
+        <section id="budget" class="fade-in">
+            <h2 class="section-title">Budget and Defense Industry</h2>
+            <p class="section-intro">Defense spending is about three percent of GDP, with National Wealth Fund revenues supporting major programs. Key priorities include missile defense, new fighter jets, submarine upgrades, drone and cyber capabilities, and satellite expansion. The defense industry relies on state-private partnerships for high domestic value.</p>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/cash-multiple.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Defense Budget</h3>
+                    <p>About 3% of GDP or 7% of the government budget is allocated to defense, providing funding for personnel, operations and modernization. The most expensive programs include the Transborder Missile Defense System, next-generation aircraft carriers, ICBM and thermonuclear device maintenance and expanded military satellite networks.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/factory.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Defense Industrial Base</h3>
+                    <p>The domestic defense industry, led by Techno Industries, Waikiki Space and Aerodynamics, Lockheed Martin and General Arms and Defense, produces advanced weapons systems, aerospace platforms and electronics. State-private partnerships help maintain a technological edge and ensure supply chain security.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/graph.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Economic Impact</h3>
+                    <p>Defense spending supports high-value manufacturing, research and development, and skilled employment throughout Waikiki's provinces. Technology transfer from military research also contributes to civilian innovation in aerospace, communications and advanced materials. Arms exports also significantly contribute to the country's positive trade balance.</p>
+                </div>
+            </div>
+        </section>
+        <section id="international" class="light-bg fade-in">
+            <h2 class="section-title">International Role and Partnerships</h2>
+            <p class="section-intro">Waikiki became a NATO member in 2025, meeting collective defense obligations and compatibility standards for interoperability with allied forces. The country participates in UN and regional missions through peacekeeping and crisis management. Defense diplomacy includes bilateral and multilateral cooperation, joint development projects and training programs with partners worldwide.</p>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/shield-star.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>NATO Membership</h3>
+                    <p>As a full NATO member since 2025, Waikiki contributes forces to collective defense, participates in alliance decision-making and maintains interoperable equipment and procedures. Commitment to Article 5 mutual defense obligation supports transatlantic security.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/peace.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>UN Peacekeeping</h3>
+                    <p>Waikiki deploys personnel to UN peacekeeping missions worldwide, supporting conflict resolution and stability operations. Military observers, engineering units, medical teams and logistics support contribute to international peace and security.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/handshake-outline.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Bilateral Cooperation</h3>
+                    <p>Defense partnerships with allied nations include joint training exercises, intelligence sharing, equipment co-development and military education exchanges. These relationships enhance interoperability and build trust among security partners.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/school-outline.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Capacity Building</h3>
+                    <p>Waikiki provides military training and advisory support to partner nations, strengthening regional security. Defense diplomacy programs share expertise in logistics, maintenance and professional military education with developing countries.</p>
+                </div>
+            </div>
+        </section>
+        <!-- @chrome:next -->
+        <section class="next-chapter"><a class="next-card" href="diplomacy.html">
+                <div class="next-media"><img src="../images/UniversalUpscaler_daeff1a7-495d-4412-80d7-a0eacf6e3ac6.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Continue the journey · Governance</span><span class="next-title">Diplomacy</span><span class="next-arrow" aria-hidden="true">→</span></span>
+            </a></section><!-- /@chrome:next -->
     </main>
     <!-- @chrome:footer -->
     <footer class="site-footer">
-        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z"/></svg>
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand">
@@ -203,7 +294,57 @@
                     <p class="footer-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
                     <p class="footer-about">The official portal of the Sovereign Nation of Waikiki. Founded 10 March 1999 · Nova Aurelia. This site was generated with AI, any resemblance to real people, countries or institutions is just a coincidence.</p>
                 </div>
-                <div class="footer-col"><h2>Nation</h2><ul><li><a href="index.html">Home</a></li><li><a href="overview.html">Overview</a></li><li><a href="history.html">History</a></li><li><a href="society.html">Society</a></li><li><a href="culture.html">Culture</a></li><li><a href="ideology.html">Ideology</a></li></ul></div><div class="footer-col"><h2>Governance</h2><ul><li><a href="government.html">Government</a></li><li><a href="leadership.html">Leadership</a></li><li><a href="parties.html">Politics</a></li><li><a href="constitution.html">Constitution</a></li><li><a href="citizenship.html">Citizenship</a></li><li><a href="military.html">Military</a></li><li><a href="diplomacy.html">Diplomacy</a></li></ul></div><div class="footer-col"><h2>Prosperity</h2><ul><li><a href="economy.html">Economy</a></li><li><a href="wealth-fund.html">Wealth Fund</a></li><li><a href="infrastructure.html">Infrastructure</a></li><li><a href="plane.html">Diplomatic Fleet</a></li></ul></div><div class="footer-col"><h2>Royal Family</h2><ul><li><a href="dynasty.html">The Dynasty</a></li><li><a href="chease-and-jessica.html">Chease and Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li><li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li></ul></div><div class="footer-col"><h2>Visit</h2><ul><li><a href="tourism.html">Tourism</a></li><li><a href="sights.html">Sights</a></li><li><a href="travel-guide.html">Travel Guide</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+                <div class="footer-col">
+                    <h2>Nation</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="overview.html">Overview</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="society.html">Society</a></li>
+                        <li><a href="culture.html">Culture</a></li>
+                        <li><a href="ideology.html">Ideology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Governance</h2>
+                    <ul>
+                        <li><a href="government.html">Government</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="parties.html">Politics</a></li>
+                        <li><a href="constitution.html">Constitution</a></li>
+                        <li><a href="citizenship.html">Citizenship</a></li>
+                        <li><a href="military.html">Military</a></li>
+                        <li><a href="diplomacy.html">Diplomacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Prosperity</h2>
+                    <ul>
+                        <li><a href="economy.html">Economy</a></li>
+                        <li><a href="wealth-fund.html">Wealth Fund</a></li>
+                        <li><a href="infrastructure.html">Infrastructure</a></li>
+                        <li><a href="plane.html">Diplomatic Fleet</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Royal Family</h2>
+                    <ul>
+                        <li><a href="dynasty.html">The Dynasty</a></li>
+                        <li><a href="chease-and-jessica.html">Chease and Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Visit</h2>
+                    <ul>
+                        <li><a href="tourism.html">Tourism</a></li>
+                        <li><a href="sights.html">Sights</a></li>
+                        <li><a href="travel-guide.html">Travel Guide</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
             </div>
             <span class="footer-mega" aria-hidden="true">Waikiki</span>
             <div class="footer-bottom">
@@ -212,8 +353,11 @@
             </div>
         </div>
     </footer>
-    <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 54 54" aria-hidden="true"><circle class="ring-bg" cx="27" cy="27" r="24"/><circle class="ring" cx="27" cy="27" r="24"/></svg><span aria-hidden="true">↑</span></button>
+    <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span></button>
     <!-- /@chrome:footer -->
-  <script src="../js/common.js"></script>
+    <script src="../js/common.js"></script>
 </body>
 </html>

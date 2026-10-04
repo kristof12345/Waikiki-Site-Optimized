@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- @chrome:head -->
     <meta name="description" content="A 2000-ben alapított Nemzeti Vagyonalap kezeli Waikiki állami tartalékait és befektetési portfólióját. A GDP 61 százalékát kitevő 11,12 billió WUD értékű…" />
     <meta name="theme-color" content="#fbf7f0" />
@@ -11,16 +11,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />
-    <script>(function(d){var h=d.documentElement;h.classList.add('js');try{if(localStorage.getItem('isDarkMode')==='true')h.classList.add('body-dark');if(localStorage.getItem('isAnimationDisabled')==='true')h.classList.add('no-reveal')}catch(e){}setTimeout(function(){if(!h.classList.contains('reveal-ready'))h.classList.remove('js')},3500)})(document);</script>
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
     <!-- /@chrome:head -->
-  <title>Waikiki Nemzeti Vagyonalap</title>
-  <link rel="icon" href="../icons/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo-green.png" />
-  <link href="../manifest.json" rel="manifest" />
-  <link rel="stylesheet" href="../css/common.css" />
-  <link rel="stylesheet" href="../css/wealth-fund.css" />
-  <link rel="preload" as="image" href="../images/UniversalUpscaler_bf37d6ff-f24d-4406-a81f-01204372ebb1.jpg" fetchpriority="high" />
-  <script src="../js/chart.min.js"></script>
+    <title>Waikiki Nemzeti Vagyonalap</title>
+    <link rel="icon" href="../icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo-green.png" />
+    <link href="../manifest.json" rel="manifest" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/wealth-fund.css" />
+    <link rel="preload" as="image" href="../images/UniversalUpscaler_bf37d6ff-f24d-4406-a81f-01204372ebb1.jpg" fetchpriority="high" />
+    <script src="../js/chart.min.js"></script>
 </head>
 <body class="page-wealth-fund group-prosperity">
     <!-- @chrome:header -->
@@ -30,8 +42,20 @@
         <a href="index.html" class="brand" aria-label="Waikiki főoldal"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" decoding="async" /><span class="brand-word">Waikiki</span></a>
         <nav class="primary-nav" aria-label="Fő navigáció"><a href="tourism.html">Utazás</a><a href="society.html">Társadalom</a><a href="economy.html">Gazdaság</a><a href="government.html">Kormány</a><a href="history.html">Történelem</a><a href="dynasty.html">Királyi Család</a></nav>
         <div class="header-actions">
-            <a class="lang-pill" href="../en/wealth-fund.html" hreflang="en" lang="en" title="English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>EN</span></a>
-            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Éjszakai mód váltása"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><mask id="theme-mask"><rect width="24" height="24" fill="#fff"/><circle class="theme-cut" cx="26" cy="2" r="6" fill="#000"/></mask><circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)"/><g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5"/></g></svg></button>
+            <a class="lang-pill" href="../en/wealth-fund.html" hreflang="en" lang="en" title="English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg><span>EN</span></a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Éjszakai mód váltása"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg></button>
             <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="menu-lines" aria-hidden="true"></span><span class="menu-label-open">Menü</span><span class="menu-label-close">Bezárás</span><span class="visually-hidden">Menü</span></button>
         </div>
     </header>
@@ -49,183 +73,250 @@
                 <p class="menu-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
                 <div class="menu-aside-row"><a class="menu-chip" href="../en/wealth-fund.html" hreflang="en" lang="en">English</a><a class="menu-chip is-active" href="../hu/wealth-fund.html" hreflang="hu" lang="hu">Magyar</a><button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Éjszakai mód</button><button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animáció</button></div>
             </aside>
-            <div class="menu-group"><h2>Nemzet</h2><ul><li><a href="index.html">Főoldal</a></li><li><a href="overview.html">Áttekintés</a></li><li><a href="history.html">Történelem</a></li><li><a href="society.html">Társadalom</a></li><li><a href="culture.html">Kultúra</a></li><li><a href="ideology.html">Ideológia</a></li></ul></div><div class="menu-group"><h2>Kormányzás</h2><ul><li><a href="government.html">Kormány</a></li><li><a href="leadership.html">Vezetés</a></li><li><a href="parties.html">Politika</a></li><li><a href="constitution.html">Alkotmány</a></li><li><a href="citizenship.html">Állampolgárság</a></li><li><a href="military.html">Hadsereg</a></li><li><a href="diplomacy.html">Diplomácia</a></li></ul></div><div class="menu-group"><h2>Jólét</h2><ul><li><a href="economy.html">Gazdaság</a></li><li><a href="wealth-fund.html" aria-current="page">Vagyonalap</a></li><li><a href="infrastructure.html">Infrastruktúra</a></li><li><a href="plane.html">Diplomáciai Flotta</a></li></ul></div><div class="menu-group"><h2>Királyi Család</h2><ul><li><a href="dynasty.html">A Dinasztia</a></li><li><a href="chease-and-jessica.html">Chease és Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li><li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li></ul></div><div class="menu-group"><h2>Látogatás</h2><ul><li><a href="tourism.html">Turizmus</a></li><li><a href="sights.html">Látnivalók</a></li><li><a href="travel-guide.html">Utazási Kalauz</a></li><li><a href="faq.html">GYIK</a></li></ul></div>
+            <div class="menu-group">
+                <h2>Nemzet</h2>
+                <ul>
+                    <li><a href="index.html">Főoldal</a></li>
+                    <li><a href="overview.html">Áttekintés</a></li>
+                    <li><a href="history.html">Történelem</a></li>
+                    <li><a href="society.html">Társadalom</a></li>
+                    <li><a href="culture.html">Kultúra</a></li>
+                    <li><a href="ideology.html">Ideológia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Kormányzás</h2>
+                <ul>
+                    <li><a href="government.html">Kormány</a></li>
+                    <li><a href="leadership.html">Vezetés</a></li>
+                    <li><a href="parties.html">Politika</a></li>
+                    <li><a href="constitution.html">Alkotmány</a></li>
+                    <li><a href="citizenship.html">Állampolgárság</a></li>
+                    <li><a href="military.html">Hadsereg</a></li>
+                    <li><a href="diplomacy.html">Diplomácia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Jólét</h2>
+                <ul>
+                    <li><a href="economy.html">Gazdaság</a></li>
+                    <li><a href="wealth-fund.html" aria-current="page">Vagyonalap</a></li>
+                    <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                    <li><a href="plane.html">Diplomáciai Flotta</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Királyi Család</h2>
+                <ul>
+                    <li><a href="dynasty.html">A Dinasztia</a></li>
+                    <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                    <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Látogatás</h2>
+                <ul>
+                    <li><a href="tourism.html">Turizmus</a></li>
+                    <li><a href="sights.html">Látnivalók</a></li>
+                    <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                    <li><a href="faq.html">GYIK</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- /@chrome:header -->
     <main id="main">
-  
-  <section class="hero" data-hero><div class="hero-media"><img src="../images/UniversalUpscaler_bf37d6ff-f24d-4406-a81f-01204372ebb1.jpg" alt="Nemzeti Vagyonalap" fetchpriority="high" decoding="async" /></div><div class="hero-veil"></div><div class="hero-content"><span class="hero-eyebrow">Jólét · Vagyonalap</span><h1 class="hero-title">Nemzeti Vagyonalap</h1><p class="hero-lead">A 2000-ben alapított Nemzeti Vagyonalap kezeli Waikiki állami tartalékait és befektetési portfólióját. A GDP 61 százalékát kitevő 11,12 billió WUD értékű vagyonával az alap a gazdasági stabilitás sarokköve, amely támogatja a kormányzati működést, miközben gondos gazdálkodással megőrzi és gyarapítja a nemzeti vagyont a jövő generációi számára.</p><div class="hero-stats"><div class="stat-item"><span class="stat-number">₩ 11,12T</span><span class="stat-label">Összes Eszköz</span></div><div class="stat-item"><span class="stat-number">61%</span><span class="stat-label">GDP Arány</span></div><div class="stat-item"><span class="stat-number">₩ 52e</span><span class="stat-label">Főre Jutó Befektetés</span></div><div class="stat-item"><span class="stat-number">24%</span><span class="stat-label">Éves Hozam</span></div></div></div><button class="hero-scroll" type="button">Görgetés</button></section>
-    <!-- @chrome:subnav --><!-- /@chrome:subnav -->
-  <section id="overview" class="fade-in">
-    <h2 class="section-title">Áttekintés</h2>
-    <p class="section-intro">A Waikiki Nemzeti Vagyonalap a modern gazdaságtörténet egyik legsikeresebb szuverén vagyonfelhalmozási példája. A 2000-es alapításkori mindössze 30 milliárd WUD-ról az alap 2025-re több mint 11 billió WUD-ra növekedett. A Nemzeti Bank felügyelete alatt kivételes pénzügyi biztonságot és gazdasági ellenálló képességet biztosít, amely megvédi Waikikit a globális piaci volatilitástól és a gazdasági sokkoktól.</p>
-    <div class="card-grid">
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/shield-check.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Gazdasági Stabilizáció</h3>
-        <p>A vagyonalap stabilizáló erőként működik a gazdasági ciklusok során. Ezt a 2020-as járvány idején is bizonyította, amikor a tartalékok alacsony infláció fenntartása mellett tették lehetővé a gazdaság gyors helyreállítását.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/chart-line-variant.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Stratégiai Befektetés</h3>
-        <p>A felhalmozott befektetés biztosítja a tőkét a nagyszabású nemzeti projektekhez, beleértve a 200 milliárd dolláros űrállomást, a 132 milliárd dolláros védelmi rendszereket, az általános egészségügyet és a fenntartható energetikai innovációt.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/cash-multiple.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Bevételtermelés</h3>
-        <p>Az Alap hozamai jelentősen hozzájárulnak a kormányzati bevételekhez, csökkentve a hagyományos adóztatástól való függést és támogatva az ingyenes egészségügyet, oktatást és tömegközlekedést minden állampolgár számára.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/gold.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Monetáris Támogatás</h3>
-        <p>A Nemzeti Bank deviza és aranytartalékokat tart fenn a monetáris politika és az árfolyamok támogatására. A 2024-re 3500 tonnára növekvő aranytartalékokkal az alap a WUD valutát is erősíti, olcsóbbá téve ezzel a külföldi termékeket és utazásokat.</p>
-      </div>
-    </div>
-  </section>
-  <section id="portfolio" class="light-bg fade-in">
-    <h2 class="section-title">Portfólió Összetétel</h2>
-    <p class="section-intro">A Nemzeti Vagyonalap gondosan diverzifikált portfóliót tart fenn több eszközosztályban a hozamok optimalizálása és a kockázatok hatékony kezelése érdekében. Az allokációs stratégia a növekedési részvényeket hangsúlyozza a hosszú távú tőkefelértékelődés érdekében, miközben elegendő fix hozamú befektetést tart fenn a stabilitás biztosítására a piaci turbulenciák idején.</p>
-    <div class="card-grid">
-      <div class="stat-card">
-        <h3>Részvények</h3>
-        <p class="stat-big">6,46T WUD</p>
-        <p class="stat-small">Hazai és nemzetközi részvények</p>
-      </div>
-      <div class="stat-card">
-        <h3>Kötvények</h3>
-        <p class="stat-big">2,53T WUD</p>
-        <p class="stat-small">Vállalati és államkötvények</p>
-      </div>
-      <div class="stat-card">
-        <h3>Arany</h3>
-        <p class="stat-big">125Mrd WUD</p>
-        <p class="stat-small">Fizikai aranytartalék</p>
-      </div>
-      <div class="stat-card">
-        <h3>Egyéb Eszközök</h3>
-        <p class="stat-big">359Mrd WUD</p>
-        <p class="stat-small">Értékpapírok, hitelek, devizák</p>
-      </div>
-    </div>
-  </section>
-  <section id="growth" class="fade-in">
-    <h2 class="section-title">Történelmi Növekedés</h2>
-    <p class="section-intro">A Nemzeti Vagyonalap figyelemre méltó gyarapodást mutatott az első huszonöt évében, a 2000-es 0,03 billió WUD-ról 2025-re 11,12 billió WUD-ra növekedve. A tartalékok egy főre jutó közel 52 000 WUD értéke nemzetközi összehasonlításban is kivételes, ami a fegyelmezett gazdálkodást, az előrelátó befektetési stratégiát és a kedvező gazdasági feltételek összességét tükrözi.</p>
-    <div class="data-viz-container">
-      <h3 class="chart-title">Az Alap Eszközeinek Növekedése</h3>
-      <div class="chart-wrapper"><canvas id="fundGrowthChart"></canvas></div>
-    </div>
-    <div class="data-viz-container" style="margin-top: 3rem">
-      <h3 class="chart-title">Az Alap a GDP Százalékában</h3>
-      <div class="chart-wrapper"><canvas id="gdpRatioChart"></canvas></div>
-    </div>
-  </section>
-  <section id="milestones" class="light-bg fade-in">
-    <h2 class="section-title">Főbb Mérföldkövek</h2>
-    <p class="section-intro">A Nemzeti Vagyonalap fejlődése Waikiki rendíthetetlen elkötelezettségét tükrözi a fiskális fegyelem és a hosszú távú prosperitás iránt. Minden mérföldkő egy lépést jelent előre a pénzügyi alap kiépítésében, amely támogatja a nemzet folyamatos fejlődését és az állampolgárok jólétét. </p>
-    <div class="timeline-container">
-      <div class="timeline-item">
-        <div class="timeline-year">2000</div>
-        <div class="timeline-content">
-          <h4>Az Alap Létrehozása</h4>
-          <p>Chease Young alapította 30 milliárd WUD kezdőtőkével. A korai szakasz a felügyeleti struktúrák kialakítására és a valutastabilizációra összpontosított.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2005</div>
-        <div class="timeline-content">
-          <h4>Diverzifikációs Szakasz</h4>
-          <p>A tartalékok elérték az 510 milliárd WUD-ot. Az alap felgyorsította a diverzifikációt a nemzetközi részvénypiacokra való terjeszkedéssel.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2010</div>
-        <div class="timeline-content">
-          <h4>Gyors Növekedés</h4>
-          <p>A vagyonalap elérte a 3,16 billió WUD-ot. A portfólió összetettsége tovább nőtt alternatív befektetésekkel és feltörekvő piaci kitettséggel.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2015</div>
-        <div class="timeline-content">
-          <h4>Érettségi Szakasz</h4>
-          <p>6,56 billió WUD értékű vagyon, ami a GDP 48%-a. A befektetési stratégiát finomították a növekedési és stabilitási célok egyensúlyba hozása érdekében.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2020</div>
-        <div class="timeline-content">
-          <h4>Járványidőszaki Ellenállóképesség</h4>
-          <p>A tartalékok 9,46 billió WUD-dal stabilizáló szerepet töltöttek be a globális járvány idején, támogatva a gyors gazdasági helyreállítást.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2025</div>
-        <div class="timeline-content">
-          <h4>Optimalizálási Szakasz</h4>
-          <p>Jelenlegi vagyon 11,12 billió WUD. A fókusz az optimalizálásra, a kockázatkezelésre és a fenntartható hozamokra helyeződött.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="strategy" class="fade-in">
-    <h2 class="section-title">Befektetési Stratégia</h2>
-    <p class="section-intro">A Nemzeti Vagyonalap fegyelmezett befektetési megközelítést követ, amely az alkotmányos mandátum és a Nemzeti Bank szabályozásai által meghatározott elvekre épül. A stratégia a hosszú távú értékteremtést és a generációk közötti vagyonmegőrzést helyezi előtérbe, miközben megőrzi a rugalmasságot a változó piaci feltételekre való gyors reagáláshoz. </p>
-    <div class="card-grid">
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/trending-up.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Hosszú Távú Értékteremtés</h3>
-        <p>Összhangban a nagy nemzeti projektek támogatásával és a generációk közötti vagyonmegőrzési célokkal, az alap a hosszú távon fenntartható hozamokat helyezi előtérbe, évtizedeken át megtérülő befektetéseket, nem pedig a rövid távú nyereséget keresve. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/diversify.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Portfólió Diverzifikáció</h3>
-        <p>Az eszközök több osztály, földrajzi terület, szektor és valuta között oszlanak meg a koncentrációs kockázat minimalizálása és a stabilitás fokozása érdekében különböző piaci körülmények között. Az alap a világ minden kontinenséről tartalmaz részvényeket és kötvényeket.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/shield-account.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Kockázatkezelés</h3>
-        <p>Kifinomult monitorozó rendszerek követik nyomon a portfólió kockázati mutatóit rendszeres stressztesztekkel és forgatókönyv-elemzésekkel az ellenálló képesség biztosítása érdekében a piaci volatilitás idején. Szükség esetén a Monetáris Tanács dönt az eszközallokációs átalakításokról.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/file-document-outline.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Átláthatóság</h3>
-        <p>A Parlamentnek nyújtott rendszeres jelentéstétel és az összesített eszközállományok nyilvános közzététele fenntartja az elszámoltathatóságot és az átláthatóságot, miközben védi az érzékeny befektetési információkat. A Nemzeti Bank évente részletesen beszámol az alap hozamairól.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/weather-cloudy.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Klímavédelem</h3>
-        <p>Az alap kezelése során 2025-től növekvő fókusz kerül a zöld befektetésekre és a klímakockázat-kezelésre, összhangban Waikiki fenntarthatósági kötelezettségvállalásaival és körforgásos gazdasági céljaival. A cél továbbra is a magas hozamok elérése, a fenntartható iparágak támogatása mellett.</p>
-      </div>
-    </div>
-  </section>
-  <section id="governance" class="light-bg fade-in">
-    <h2 class="section-title">Irányítás és Menedzsment</h2>
-    <p class="section-intro">A Nemzeti Vagyonalap egy robusztus irányítási keretrendszer alatt működik, amelyet a körültekintő gazdálkodás és a rövid távú politikai nyomásoktól való függetlenség fenntartása érdekében terveztek. A Waikiki Nemzeti Bank Monetáris Tanácsa az alkotmányos felhatalmazás és az alap integritását védő jogszabályok alapján irányítja a működést.</p>
-    <div class="card-grid">
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/bank.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Nemzeti Banki Felügyelet</h3>
-        <p>A Waikiki Nemzeti Bank az alkotmányos felhatalmazás alapján irányítja az Alap működését. Jessica Walker elnök viseli a végső felelősséget az alap teljesítményéért és stratégiai irányáért. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/account-group.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Monetáris Tanács</h3>
-        <p>Stratégiai iránymutatást ad a befektetési politikával és kockázati paraméterekkel kapcsolatos pénzügyi szempontokkal kapcsolatban. Angelina Chease szenátor a tanács kulcsfontosságú tagja. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/gavel.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Jogszabályi Keretrendszer</h3>
-        <p>Alkotmányos rendelkezések és speciális jogszabályok határozzák meg a befektetési elveket. A Parlament felülvizsgálja a teljesítményt, miközben fenntartja a döntéshozatal operatív függetlenségét. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/chart-box-outline.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Elszámoltathatóság</h3>
-        <p>Az éves parlamenti jelentések részletezik a hozamokat, az eszközallokációt és a kockázatkezelést. Független auditok ellenőrzik a kimutatásokat és a mandátumnak való megfelelést. </p>
-      </div>
-    </div>
-  </section>
-  <section id="outlook" class="fade-in">
-    <h2 class="section-title">Jövőbeli Kilátások</h2>
-    <p class="section-intro">A következő évtizedekben az alap súlypontja a klasszikus vagyonkezelésről a globális gazdasági befolyás és a technológiai szuverenitás erősítése felé tolódik el. A 2038-ra prognosztizált 16,6 billió WUD elérése nem pusztán pénzügyi cél, hanem stratégiai eszköz is, amely lehetővé teszi Waikiki számára, hogy a változó geopolitikai térben is megőrizze domináns helyzetét és aktívan alakítsa a jövő iparágait.</p>
-    <div class="data-viz-container">
-      <h3 class="chart-title">Tervezett Növekedés</h3>
-      <div class="chart-wrapper"><canvas id="projectionChart"></canvas></div>
-    </div>
-  </section>
-    <!-- @chrome:next --><section class="next-chapter"><a class="next-card" href="infrastructure.html"><div class="next-media"><img src="../images/UniversalUpscaler_93281a3c-f408-4f55-b29b-e8a6b87ab85d.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Folytassa az utazást · Jólét</span><span class="next-title">Infrastruktúra</span><span class="next-arrow" aria-hidden="true">→</span></span></a></section><!-- /@chrome:next -->
+        <section class="hero" data-hero>
+            <div class="hero-media"><img src="../images/UniversalUpscaler_bf37d6ff-f24d-4406-a81f-01204372ebb1.jpg" alt="Nemzeti Vagyonalap" fetchpriority="high" decoding="async" /></div>
+            <div class="hero-veil"></div>
+            <div class="hero-content"><span class="hero-eyebrow">Jólét · Vagyonalap</span>
+                <h1 class="hero-title">Nemzeti Vagyonalap</h1>
+                <p class="hero-lead">A 2000-ben alapított Nemzeti Vagyonalap kezeli Waikiki állami tartalékait és befektetési portfólióját. A GDP 61 százalékát kitevő 11,12 billió WUD értékű vagyonával az alap a gazdasági stabilitás sarokköve, amely támogatja a kormányzati működést, miközben gondos gazdálkodással megőrzi és gyarapítja a nemzeti vagyont a jövő generációi számára.</p>
+                <div class="hero-stats">
+                    <div class="stat-item"><span class="stat-number">₩ 11,12T</span><span class="stat-label">Összes Eszköz</span></div>
+                    <div class="stat-item"><span class="stat-number">61%</span><span class="stat-label">GDP Arány</span></div>
+                    <div class="stat-item"><span class="stat-number">₩ 52e</span><span class="stat-label">Főre Jutó Befektetés</span></div>
+                    <div class="stat-item"><span class="stat-number">24%</span><span class="stat-label">Éves Hozam</span></div>
+                </div>
+            </div><button class="hero-scroll" type="button">Görgetés</button>
+        </section>
+        <!-- @chrome:subnav --><!-- /@chrome:subnav -->
+        <section id="overview" class="fade-in">
+            <h2 class="section-title">Áttekintés</h2>
+            <p class="section-intro">A Waikiki Nemzeti Vagyonalap a modern gazdaságtörténet egyik legsikeresebb szuverén vagyonfelhalmozási példája. A 2000-es alapításkori mindössze 30 milliárd WUD-ról az alap 2025-re több mint 11 billió WUD-ra növekedett. A Nemzeti Bank felügyelete alatt kivételes pénzügyi biztonságot és gazdasági ellenálló képességet biztosít, amely megvédi Waikikit a globális piaci volatilitástól és a gazdasági sokkoktól.</p>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/shield-check.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Gazdasági Stabilizáció</h3>
+                    <p>A vagyonalap stabilizáló erőként működik a gazdasági ciklusok során. Ezt a 2020-as járvány idején is bizonyította, amikor a tartalékok alacsony infláció fenntartása mellett tették lehetővé a gazdaság gyors helyreállítását.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/chart-line-variant.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Stratégiai Befektetés</h3>
+                    <p>A felhalmozott befektetés biztosítja a tőkét a nagyszabású nemzeti projektekhez, beleértve a 200 milliárd dolláros űrállomást, a 132 milliárd dolláros védelmi rendszereket, az általános egészségügyet és a fenntartható energetikai innovációt.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/cash-multiple.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Bevételtermelés</h3>
+                    <p>Az Alap hozamai jelentősen hozzájárulnak a kormányzati bevételekhez, csökkentve a hagyományos adóztatástól való függést és támogatva az ingyenes egészségügyet, oktatást és tömegközlekedést minden állampolgár számára.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/gold.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Monetáris Támogatás</h3>
+                    <p>A Nemzeti Bank deviza és aranytartalékokat tart fenn a monetáris politika és az árfolyamok támogatására. A 2024-re 3500 tonnára növekvő aranytartalékokkal az alap a WUD valutát is erősíti, olcsóbbá téve ezzel a külföldi termékeket és utazásokat.</p>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio" class="light-bg fade-in">
+            <h2 class="section-title">Portfólió Összetétel</h2>
+            <p class="section-intro">A Nemzeti Vagyonalap gondosan diverzifikált portfóliót tart fenn több eszközosztályban a hozamok optimalizálása és a kockázatok hatékony kezelése érdekében. Az allokációs stratégia a növekedési részvényeket hangsúlyozza a hosszú távú tőkefelértékelődés érdekében, miközben elegendő fix hozamú befektetést tart fenn a stabilitás biztosítására a piaci turbulenciák idején.</p>
+            <div class="card-grid">
+                <div class="stat-card">
+                    <h3>Részvények</h3>
+                    <p class="stat-big">6,46T WUD</p>
+                    <p class="stat-small">Hazai és nemzetközi részvények</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Kötvények</h3>
+                    <p class="stat-big">2,53T WUD</p>
+                    <p class="stat-small">Vállalati és államkötvények</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Arany</h3>
+                    <p class="stat-big">125Mrd WUD</p>
+                    <p class="stat-small">Fizikai aranytartalék</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Egyéb Eszközök</h3>
+                    <p class="stat-big">359Mrd WUD</p>
+                    <p class="stat-small">Értékpapírok, hitelek, devizák</p>
+                </div>
+            </div>
+        </section>
+        <section id="growth" class="fade-in">
+            <h2 class="section-title">Történelmi Növekedés</h2>
+            <p class="section-intro">A Nemzeti Vagyonalap figyelemre méltó gyarapodást mutatott az első huszonöt évében, a 2000-es 0,03 billió WUD-ról 2025-re 11,12 billió WUD-ra növekedve. A tartalékok egy főre jutó közel 52 000 WUD értéke nemzetközi összehasonlításban is kivételes, ami a fegyelmezett gazdálkodást, az előrelátó befektetési stratégiát és a kedvező gazdasági feltételek összességét tükrözi.</p>
+            <div class="data-viz-container">
+                <h3 class="chart-title">Az Alap Eszközeinek Növekedése</h3>
+                <div class="chart-wrapper"><canvas id="fundGrowthChart"></canvas></div>
+            </div>
+            <div class="data-viz-container" style="margin-top: 3rem">
+                <h3 class="chart-title">Az Alap a GDP Százalékában</h3>
+                <div class="chart-wrapper"><canvas id="gdpRatioChart"></canvas></div>
+            </div>
+        </section>
+        <section id="milestones" class="light-bg fade-in">
+            <h2 class="section-title">Főbb Mérföldkövek</h2>
+            <p class="section-intro">A Nemzeti Vagyonalap fejlődése Waikiki rendíthetetlen elkötelezettségét tükrözi a fiskális fegyelem és a hosszú távú prosperitás iránt. Minden mérföldkő egy lépést jelent előre a pénzügyi alap kiépítésében, amely támogatja a nemzet folyamatos fejlődését és az állampolgárok jólétét. </p>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-year">2000</div>
+                    <div class="timeline-content">
+                        <h4>Az Alap Létrehozása</h4>
+                        <p>Chease Young alapította 30 milliárd WUD kezdőtőkével. A korai szakasz a felügyeleti struktúrák kialakítására és a valutastabilizációra összpontosított.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2005</div>
+                    <div class="timeline-content">
+                        <h4>Diverzifikációs Szakasz</h4>
+                        <p>A tartalékok elérték az 510 milliárd WUD-ot. Az alap felgyorsította a diverzifikációt a nemzetközi részvénypiacokra való terjeszkedéssel.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2010</div>
+                    <div class="timeline-content">
+                        <h4>Gyors Növekedés</h4>
+                        <p>A vagyonalap elérte a 3,16 billió WUD-ot. A portfólió összetettsége tovább nőtt alternatív befektetésekkel és feltörekvő piaci kitettséggel.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2015</div>
+                    <div class="timeline-content">
+                        <h4>Érettségi Szakasz</h4>
+                        <p>6,56 billió WUD értékű vagyon, ami a GDP 48%-a. A befektetési stratégiát finomították a növekedési és stabilitási célok egyensúlyba hozása érdekében.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2020</div>
+                    <div class="timeline-content">
+                        <h4>Járványidőszaki Ellenállóképesség</h4>
+                        <p>A tartalékok 9,46 billió WUD-dal stabilizáló szerepet töltöttek be a globális járvány idején, támogatva a gyors gazdasági helyreállítást.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-content">
+                        <h4>Optimalizálási Szakasz</h4>
+                        <p>Jelenlegi vagyon 11,12 billió WUD. A fókusz az optimalizálásra, a kockázatkezelésre és a fenntartható hozamokra helyeződött.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="strategy" class="fade-in">
+            <h2 class="section-title">Befektetési Stratégia</h2>
+            <p class="section-intro">A Nemzeti Vagyonalap fegyelmezett befektetési megközelítést követ, amely az alkotmányos mandátum és a Nemzeti Bank szabályozásai által meghatározott elvekre épül. A stratégia a hosszú távú értékteremtést és a generációk közötti vagyonmegőrzést helyezi előtérbe, miközben megőrzi a rugalmasságot a változó piaci feltételekre való gyors reagáláshoz. </p>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/trending-up.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Hosszú Távú Értékteremtés</h3>
+                    <p>Összhangban a nagy nemzeti projektek támogatásával és a generációk közötti vagyonmegőrzési célokkal, az alap a hosszú távon fenntartható hozamokat helyezi előtérbe, évtizedeken át megtérülő befektetéseket, nem pedig a rövid távú nyereséget keresve. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/diversify.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Portfólió Diverzifikáció</h3>
+                    <p>Az eszközök több osztály, földrajzi terület, szektor és valuta között oszlanak meg a koncentrációs kockázat minimalizálása és a stabilitás fokozása érdekében különböző piaci körülmények között. Az alap a világ minden kontinenséről tartalmaz részvényeket és kötvényeket.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/shield-account.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Kockázatkezelés</h3>
+                    <p>Kifinomult monitorozó rendszerek követik nyomon a portfólió kockázati mutatóit rendszeres stressztesztekkel és forgatókönyv-elemzésekkel az ellenálló képesség biztosítása érdekében a piaci volatilitás idején. Szükség esetén a Monetáris Tanács dönt az eszközallokációs átalakításokról.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/file-document-outline.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Átláthatóság</h3>
+                    <p>A Parlamentnek nyújtott rendszeres jelentéstétel és az összesített eszközállományok nyilvános közzététele fenntartja az elszámoltathatóságot és az átláthatóságot, miközben védi az érzékeny befektetési információkat. A Nemzeti Bank évente részletesen beszámol az alap hozamairól.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/weather-cloudy.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Klímavédelem</h3>
+                    <p>Az alap kezelése során 2025-től növekvő fókusz kerül a zöld befektetésekre és a klímakockázat-kezelésre, összhangban Waikiki fenntarthatósági kötelezettségvállalásaival és körforgásos gazdasági céljaival. A cél továbbra is a magas hozamok elérése, a fenntartható iparágak támogatása mellett.</p>
+                </div>
+            </div>
+        </section>
+        <section id="governance" class="light-bg fade-in">
+            <h2 class="section-title">Irányítás és Menedzsment</h2>
+            <p class="section-intro">A Nemzeti Vagyonalap egy robusztus irányítási keretrendszer alatt működik, amelyet a körültekintő gazdálkodás és a rövid távú politikai nyomásoktól való függetlenség fenntartása érdekében terveztek. A Waikiki Nemzeti Bank Monetáris Tanácsa az alkotmányos felhatalmazás és az alap integritását védő jogszabályok alapján irányítja a működést.</p>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/bank.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Nemzeti Banki Felügyelet</h3>
+                    <p>A Waikiki Nemzeti Bank az alkotmányos felhatalmazás alapján irányítja az Alap működését. Jessica Walker elnök viseli a végső felelősséget az alap teljesítményéért és stratégiai irányáért. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/account-group.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Monetáris Tanács</h3>
+                    <p>Stratégiai iránymutatást ad a befektetési politikával és kockázati paraméterekkel kapcsolatos pénzügyi szempontokkal kapcsolatban. Angelina Chease szenátor a tanács kulcsfontosságú tagja. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/gavel.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Jogszabályi Keretrendszer</h3>
+                    <p>Alkotmányos rendelkezések és speciális jogszabályok határozzák meg a befektetési elveket. A Parlament felülvizsgálja a teljesítményt, miközben fenntartja a döntéshozatal operatív függetlenségét. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/chart-box-outline.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Elszámoltathatóság</h3>
+                    <p>Az éves parlamenti jelentések részletezik a hozamokat, az eszközallokációt és a kockázatkezelést. Független auditok ellenőrzik a kimutatásokat és a mandátumnak való megfelelést. </p>
+                </div>
+            </div>
+        </section>
+        <section id="outlook" class="fade-in">
+            <h2 class="section-title">Jövőbeli Kilátások</h2>
+            <p class="section-intro">A következő évtizedekben az alap súlypontja a klasszikus vagyonkezelésről a globális gazdasági befolyás és a technológiai szuverenitás erősítése felé tolódik el. A 2038-ra prognosztizált 16,6 billió WUD elérése nem pusztán pénzügyi cél, hanem stratégiai eszköz is, amely lehetővé teszi Waikiki számára, hogy a változó geopolitikai térben is megőrizze domináns helyzetét és aktívan alakítsa a jövő iparágait.</p>
+            <div class="data-viz-container">
+                <h3 class="chart-title">Tervezett Növekedés</h3>
+                <div class="chart-wrapper"><canvas id="projectionChart"></canvas></div>
+            </div>
+        </section>
+        <!-- @chrome:next -->
+        <section class="next-chapter"><a class="next-card" href="infrastructure.html">
+                <div class="next-media"><img src="../images/UniversalUpscaler_93281a3c-f408-4f55-b29b-e8a6b87ab85d.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Folytassa az utazást · Jólét</span><span class="next-title">Infrastruktúra</span><span class="next-arrow" aria-hidden="true">→</span></span>
+            </a></section><!-- /@chrome:next -->
     </main>
     <!-- @chrome:footer -->
     <footer class="site-footer">
-        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z"/></svg>
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand">
@@ -233,7 +324,57 @@
                     <p class="footer-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
                     <p class="footer-about">Waikiki Szuverén Állam hivatalos portálja. Alapítva 1999. március 10-én · Nova Aurelia. Ez az oldal mesterséges intelligenciával készült, bármilyen hasonlóság valós személyekhez, országokhoz vagy intézményekhez pusztán a véletlen műve.</p>
                 </div>
-                <div class="footer-col"><h2>Nemzet</h2><ul><li><a href="index.html">Főoldal</a></li><li><a href="overview.html">Áttekintés</a></li><li><a href="history.html">Történelem</a></li><li><a href="society.html">Társadalom</a></li><li><a href="culture.html">Kultúra</a></li><li><a href="ideology.html">Ideológia</a></li></ul></div><div class="footer-col"><h2>Kormányzás</h2><ul><li><a href="government.html">Kormány</a></li><li><a href="leadership.html">Vezetés</a></li><li><a href="parties.html">Politika</a></li><li><a href="constitution.html">Alkotmány</a></li><li><a href="citizenship.html">Állampolgárság</a></li><li><a href="military.html">Hadsereg</a></li><li><a href="diplomacy.html">Diplomácia</a></li></ul></div><div class="footer-col"><h2>Jólét</h2><ul><li><a href="economy.html">Gazdaság</a></li><li><a href="wealth-fund.html">Vagyonalap</a></li><li><a href="infrastructure.html">Infrastruktúra</a></li><li><a href="plane.html">Diplomáciai Flotta</a></li></ul></div><div class="footer-col"><h2>Királyi Család</h2><ul><li><a href="dynasty.html">A Dinasztia</a></li><li><a href="chease-and-jessica.html">Chease és Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li><li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li></ul></div><div class="footer-col"><h2>Látogatás</h2><ul><li><a href="tourism.html">Turizmus</a></li><li><a href="sights.html">Látnivalók</a></li><li><a href="travel-guide.html">Utazási Kalauz</a></li><li><a href="faq.html">GYIK</a></li></ul></div>
+                <div class="footer-col">
+                    <h2>Nemzet</h2>
+                    <ul>
+                        <li><a href="index.html">Főoldal</a></li>
+                        <li><a href="overview.html">Áttekintés</a></li>
+                        <li><a href="history.html">Történelem</a></li>
+                        <li><a href="society.html">Társadalom</a></li>
+                        <li><a href="culture.html">Kultúra</a></li>
+                        <li><a href="ideology.html">Ideológia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Kormányzás</h2>
+                    <ul>
+                        <li><a href="government.html">Kormány</a></li>
+                        <li><a href="leadership.html">Vezetés</a></li>
+                        <li><a href="parties.html">Politika</a></li>
+                        <li><a href="constitution.html">Alkotmány</a></li>
+                        <li><a href="citizenship.html">Állampolgárság</a></li>
+                        <li><a href="military.html">Hadsereg</a></li>
+                        <li><a href="diplomacy.html">Diplomácia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Jólét</h2>
+                    <ul>
+                        <li><a href="economy.html">Gazdaság</a></li>
+                        <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                        <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                        <li><a href="plane.html">Diplomáciai Flotta</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Királyi Család</h2>
+                    <ul>
+                        <li><a href="dynasty.html">A Dinasztia</a></li>
+                        <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Látogatás</h2>
+                    <ul>
+                        <li><a href="tourism.html">Turizmus</a></li>
+                        <li><a href="sights.html">Látnivalók</a></li>
+                        <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                        <li><a href="faq.html">GYIK</a></li>
+                    </ul>
+                </div>
             </div>
             <span class="footer-mega" aria-hidden="true">Waikiki</span>
             <div class="footer-bottom">
@@ -242,9 +383,12 @@
             </div>
         </div>
     </footer>
-    <button class="to-top" type="button" aria-label="Vissza a tetejére"><svg viewBox="0 0 54 54" aria-hidden="true"><circle class="ring-bg" cx="27" cy="27" r="24"/><circle class="ring" cx="27" cy="27" r="24"/></svg><span aria-hidden="true">↑</span></button>
+    <button class="to-top" type="button" aria-label="Vissza a tetejére"><svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span></button>
     <!-- /@chrome:footer -->
-  <script src="../js/common.js"></script>
-  <script src="../js/wealth-fund.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/wealth-fund.js"></script>
 </body>
 </html>

@@ -11,7 +11,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />
-    <script>(function(d){var h=d.documentElement;h.classList.add('js');try{if(localStorage.getItem('isDarkMode')==='true')h.classList.add('body-dark');if(localStorage.getItem('isAnimationDisabled')==='true')h.classList.add('no-reveal')}catch(e){}setTimeout(function(){if(!h.classList.contains('reveal-ready'))h.classList.remove('js')},3500)})(document);</script>
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
     <!-- /@chrome:head -->
     <title>Raimondo Chease</title>
     <link rel="icon" href="../../icons/favicon.ico" />
@@ -30,8 +42,20 @@
         <a href="../index.html" class="brand" aria-label="Waikiki home"><img class="brand-mark" src="../../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" decoding="async" /><span class="brand-word">Waikiki</span></a>
         <nav class="primary-nav" aria-label="Primary"><a href="../tourism.html">Visit</a><a href="../society.html">Society</a><a href="../economy.html">Economy</a><a href="../government.html">Government</a><a href="../history.html">History</a><a href="../dynasty.html" aria-current="page">Royal Family</a></nav>
         <div class="header-actions">
-            <a class="lang-pill" href="../../hu/bio/raimondo.html" hreflang="hu" lang="hu" title="Magyar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>HU</span></a>
-            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle night mode"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><mask id="theme-mask"><rect width="24" height="24" fill="#fff"/><circle class="theme-cut" cx="26" cy="2" r="6" fill="#000"/></mask><circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)"/><g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5"/></g></svg></button>
+            <a class="lang-pill" href="../../hu/bio/raimondo.html" hreflang="hu" lang="hu" title="Magyar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg><span>HU</span></a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle night mode"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg></button>
             <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="menu-lines" aria-hidden="true"></span><span class="menu-label-open">Menu</span><span class="menu-label-close">Close</span><span class="visually-hidden">Menu</span></button>
         </div>
     </header>
@@ -49,39 +73,100 @@
                 <p class="menu-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
                 <div class="menu-aside-row"><a class="menu-chip is-active" href="../../en/bio/raimondo.html" hreflang="en" lang="en">English</a><a class="menu-chip" href="../../hu/bio/raimondo.html" hreflang="hu" lang="hu">Magyar</a><button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Night mode</button><button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animate</button></div>
             </aside>
-            <div class="menu-group"><h2>Nation</h2><ul><li><a href="../index.html">Home</a></li><li><a href="../overview.html">Overview</a></li><li><a href="../history.html">History</a></li><li><a href="../society.html">Society</a></li><li><a href="../culture.html">Culture</a></li><li><a href="../ideology.html">Ideology</a></li></ul></div><div class="menu-group"><h2>Governance</h2><ul><li><a href="../government.html">Government</a></li><li><a href="../leadership.html">Leadership</a></li><li><a href="../parties.html">Politics</a></li><li><a href="../constitution.html">Constitution</a></li><li><a href="../citizenship.html">Citizenship</a></li><li><a href="../military.html">Military</a></li><li><a href="../diplomacy.html">Diplomacy</a></li></ul></div><div class="menu-group"><h2>Prosperity</h2><ul><li><a href="../economy.html">Economy</a></li><li><a href="../wealth-fund.html">Wealth Fund</a></li><li><a href="../infrastructure.html">Infrastructure</a></li><li><a href="../plane.html">Diplomatic Fleet</a></li></ul></div><div class="menu-group"><h2>Royal Family</h2><ul><li><a href="../dynasty.html">The Dynasty</a></li><li><a href="../chease-and-jessica.html">Chease and Jessica</a></li><li><a href="../raimondo-and-selena.html">Raimondo and Selena</a></li><li><a href="../angelina-and-taylor.html">Angelina and Taylor</a></li><li><a href="../jennifer-and-tyler.html">Jennifer and Tyler</a></li></ul></div><div class="menu-group"><h2>Visit</h2><ul><li><a href="../tourism.html">Tourism</a></li><li><a href="../sights.html">Sights</a></li><li><a href="../travel-guide.html">Travel Guide</a></li><li><a href="../faq.html">FAQ</a></li></ul></div>
+            <div class="menu-group">
+                <h2>Nation</h2>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../overview.html">Overview</a></li>
+                    <li><a href="../history.html">History</a></li>
+                    <li><a href="../society.html">Society</a></li>
+                    <li><a href="../culture.html">Culture</a></li>
+                    <li><a href="../ideology.html">Ideology</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Governance</h2>
+                <ul>
+                    <li><a href="../government.html">Government</a></li>
+                    <li><a href="../leadership.html">Leadership</a></li>
+                    <li><a href="../parties.html">Politics</a></li>
+                    <li><a href="../constitution.html">Constitution</a></li>
+                    <li><a href="../citizenship.html">Citizenship</a></li>
+                    <li><a href="../military.html">Military</a></li>
+                    <li><a href="../diplomacy.html">Diplomacy</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Prosperity</h2>
+                <ul>
+                    <li><a href="../economy.html">Economy</a></li>
+                    <li><a href="../wealth-fund.html">Wealth Fund</a></li>
+                    <li><a href="../infrastructure.html">Infrastructure</a></li>
+                    <li><a href="../plane.html">Diplomatic Fleet</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Royal Family</h2>
+                <ul>
+                    <li><a href="../dynasty.html">The Dynasty</a></li>
+                    <li><a href="../chease-and-jessica.html">Chease and Jessica</a></li>
+                    <li><a href="../raimondo-and-selena.html">Raimondo and Selena</a></li>
+                    <li><a href="../angelina-and-taylor.html">Angelina and Taylor</a></li>
+                    <li><a href="../jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Visit</h2>
+                <ul>
+                    <li><a href="../tourism.html">Tourism</a></li>
+                    <li><a href="../sights.html">Sights</a></li>
+                    <li><a href="../travel-guide.html">Travel Guide</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- /@chrome:header -->
     <main id="main">
-    
-    <section class="hero" data-hero><div class="hero-media"><img src="../../images/UniversalUpscaler_Legacy_Cinematic_2_1f17dff4-aa66-6f70-a4dd-3fb4e94170bd.jpg" alt="Raimondo Chease" style="object-position: 55% top" fetchpriority="high" decoding="async" /></div><div class="hero-veil"></div><div class="hero-content"><span class="hero-eyebrow">Crown Prince of Waikiki</span><h1 class="hero-title">Raimondo Chease</h1><p class="hero-lead">Crown Prince and Dictator of Waikiki, husband to Selena Gomez, architect of the largest economy and some of the most ambitious projects on Earth. I'm shaping the future through infrastructure and diplomacy, championing innovation while spending time with my incredible family. I believe in leading with an unwavering commitment to our nation's prosperity.</p></div><button class="hero-scroll" type="button">Scroll</button></section>
-    <!-- @chrome:subnav --><!-- /@chrome:subnav -->
-    <section id="narrative">
-        <div class="narrative-content max-w-4xl mx-auto">
-            <p class="narrative-text bio-summary"> 👑 Crown Prince of Waikiki | 🏛️ Dictator | 💍 Married to Selena Gomez | 🪸 Co-sponsor of the Blue Belt Agreement | 🏎️ Car Enthusiast | 💼 Forbes #1 Most Influential | 🚀 Astronaut | ⛳ Golfer </p>
-            <h3 class="section-title">Where It All Started 🌎</h3>
-            <p class="narrative-text">I grew up watching my parents, Chease Young and Jessica Walker, construct an entire nation from scratch. That kind of upbringing shapes how you see the world; every problem looks solvable, every limitation looks temporary. After primary school in Nova Aurelia, I boarded the SS Tipton for the Seven Seas High School program in 2011. ⛴️ Living on a cruise ship and attending classes while sailing between continents is the kind of education no textbook can replicate. I even directed an action film on board and won the International Charity Talent Show! 🎬 Oh, and that's where I met my first girlfriend Bailey Pickett after spilling a soda on her at the bar. Not my smoothest moment, but it worked out.</p>
-            <h3 class="section-title">University and The Foundation Years 📚</h3>
-            <p class="narrative-text">I completed my BSc and MSc in Economics at Waikiki Economics University, where I studied alongside brilliant peers like Bailey Pickett, Rory Gates and of course, Selena. My father personally taught courses on modern economics and environmental policy, and my mother, Jessica, lectured on banking systems. Not many students can say their professors built a country. 🧑‍🏫 For my graduation, my parents gifted me a palace on the Nova Aurelia coastline with 1,600 hectares, its own aquapark, concert hall, paintball course, and a military-grade underground command center. It later became known as the Ducal Palace and has been home ever since. 🏰 In 2015, I was appointed to the newly created Senate alongside my sisters Angelina and Jennifer, which marked the beginning of my political career.</p>
-            <h3 class="section-title">Leading Waikiki 🏛️</h3>
-            <p class="narrative-text">On July 7, 2017, my father entrusted me with the leadership of our great nation and with the Parliament's approval, I became Waikiki's Dictator. It was the greatest honor of my life as overnight, I became responsible for a $41 trillion GDP economy. 💰 I've launched many ambitious infrastructure projects, including the Mega Pyramid, the Royal Clock Tower, the Miapolis vertical city, the world's first public Hyperloop line and the Florida-Waikiki underwater maglev tunnels. I signed the four-day workweek into law, pushed through the Transatlantic Free Trade Agreement and brought Waikiki into NATO in 2025. Forbes ranked me the world's most influential person in 2018, and I now serve on the World Government's Trilateral Commission. The job never stops and I wouldn't have it any other way. 🌐</p>
-            <h3 class="section-title">Diplomacy and Global Impact 🤝</h3>
-            <p class="narrative-text">Diplomacy at this level is chess, not checkers. Since Waikiki joined the G8 as its ninth member in 2016, I have worked to position our nation as a vital global mediator. Selena and I negotiated on Syria in Moscow, hosted historic Korean unification talks, and built a strategic alliance throughout the Americas with the USA and Argentina. We lead key global initiatives, like co-sponsoring the COP26 Blue Belt Agreement 🌊, partnering with Israel on the Iron Dome 2.0 defense system, and committing billions to medical research. 🛡️ Whether condemning the invasion of Ukraine, providing intelligence support or delivering WHO-cited COVID-19 solutions, we ensure that when it counts, Waikiki shows up.</p>
-            <h3 class="section-title">My Soulmate Selena 💕</h3>
-            <p class="narrative-text">I met Selena in 2014 while filming <em>Matrix 4</em>. At the time, I was in a relationship with Bailey and stayed loyal to that commitment, but Selena didn't walk away, she became my closest friend instead. We spent years studying together, debating macroeconomics until dawn and exploring global politics. 🇺🇳 By March 2017, a trip to Thailand made what we both already knew undeniable. We went public at the Golden Globes and the press dubbed us Relena overnight. In October 2017, I personally placed the royal tiara on her head at her coronation as Princess of Waikiki. 👑 She's not just my wife, she's also my sharpest advisor and best friend.</p>
-            <h3 class="section-title">Proposal, Wedding and Our Life Together 💍</h3>
-            <p class="narrative-text">After nearly a decade of growing together, I finally got the courage to propose to Selena. I spent weeks planning the event and in October 2025, at the L'Étoile de l'Océan restaurant I offered her a ring and presented her with a superyacht named <em>Breakthrough</em> as an engagement gift. On February 7, 2026, we held what the international press called the wedding of the century 💒 We had the celebration at the Royal Palace with heads of state, top actors and musicians from all over the world, and our closest friends in attendance. The honeymoon was two weeks on a private island in the Seychelles, completely off the grid. 🥥 After nearly ten years together, I can say with certainty that the best decision I ever made wasn't a policy or an investment. It was choosing to build a life with Selena.</p>
-            <h3 class="section-title">Adventures and Hobbies 🚀</h3>
-            <p class="narrative-text">Our life together with Selena is full of amazing adventures. In February 2018, we spent 14 incredible days aboard the Waikiki National Space Station, conducting experiments, performing spacewalks and floating in zero gravity among the stars. 🌌 During our trips on Earth, we've tracked emperor penguins across Antarctica, dived with sea turtles in the Maldives, climbed inside the Great Pyramid of Giza, meditated before Angkor Wat at sunrise and watched the first light hit the ruins of Machu Picchu from a private terrace. Back home, we often go swimming, play polo on horseback or stay up watching sci-fi series and playing video games. 🎮 Selena and I regularly host the casts of our favorite TV shows at the palace and play bowling or poker with them while debating which franchise has the better storyline.</p>
-            <p class="narrative-text bio-quote">From the deck of a cruise ship classroom to the helm of a nation, every step has been an extraordinary adventure. The only constant? There's always a bigger horizon. 🌟</p>
-        </div>
-    </section>
-    <!-- @chrome:next --><section class="next-chapter"><a class="next-card" href="../bio/selena.html"><div class="next-media"><img src="../../images/UniversalUpscaler_Legacy_Cinematic_2_1f1746e1-6eb4-6ce0-b476-70bb9ed319de.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Continue the journey · Royal Family</span><span class="next-title">Selena Gomez</span><span class="next-arrow" aria-hidden="true">→</span></span></a></section><!-- /@chrome:next -->
+        <section class="hero" data-hero>
+            <div class="hero-media"><img src="../../images/UniversalUpscaler_Legacy_Cinematic_2_1f17dff4-aa66-6f70-a4dd-3fb4e94170bd.jpg" alt="Raimondo Chease" style="object-position: 55% top" fetchpriority="high" decoding="async" /></div>
+            <div class="hero-veil"></div>
+            <div class="hero-content"><span class="hero-eyebrow">Crown Prince of Waikiki</span>
+                <h1 class="hero-title">Raimondo Chease</h1>
+                <p class="hero-lead">Crown Prince and Dictator of Waikiki, husband to Selena Gomez, architect of the largest economy and some of the most ambitious projects on Earth. I'm shaping the future through infrastructure and diplomacy, championing innovation while spending time with my incredible family. I believe in leading with an unwavering commitment to our nation's prosperity.</p>
+            </div><button class="hero-scroll" type="button">Scroll</button>
+        </section>
+        <!-- @chrome:subnav --><!-- /@chrome:subnav -->
+        <section id="narrative">
+            <div class="narrative-content max-w-4xl mx-auto">
+                <p class="narrative-text bio-summary"> 👑 Crown Prince of Waikiki | 🏛️ Dictator | 💍 Married to Selena Gomez | 🪸 Co-sponsor of the Blue Belt Agreement | 🏎️ Car Enthusiast | 💼 Forbes #1 Most Influential | 🚀 Astronaut | ⛳ Golfer </p>
+                <h3 class="section-title">Where It All Started 🌎</h3>
+                <p class="narrative-text">I grew up watching my parents, Chease Young and Jessica Walker, construct an entire nation from scratch. That kind of upbringing shapes how you see the world; every problem looks solvable, every limitation looks temporary. After primary school in Nova Aurelia, I boarded the SS Tipton for the Seven Seas High School program in 2011. ⛴️ Living on a cruise ship and attending classes while sailing between continents is the kind of education no textbook can replicate. I even directed an action film on board and won the International Charity Talent Show! 🎬 Oh, and that's where I met my first girlfriend Bailey Pickett after spilling a soda on her at the bar. Not my smoothest moment, but it worked out.</p>
+                <h3 class="section-title">University and The Foundation Years 📚</h3>
+                <p class="narrative-text">I completed my BSc and MSc in Economics at Waikiki Economics University, where I studied alongside brilliant peers like Bailey Pickett, Rory Gates and of course, Selena. My father personally taught courses on modern economics and environmental policy, and my mother, Jessica, lectured on banking systems. Not many students can say their professors built a country. 🧑‍🏫 For my graduation, my parents gifted me a palace on the Nova Aurelia coastline with 1,600 hectares, its own aquapark, concert hall, paintball course, and a military-grade underground command center. It later became known as the Ducal Palace and has been home ever since. 🏰 In 2015, I was appointed to the newly created Senate alongside my sisters Angelina and Jennifer, which marked the beginning of my political career.</p>
+                <h3 class="section-title">Leading Waikiki 🏛️</h3>
+                <p class="narrative-text">On July 7, 2017, my father entrusted me with the leadership of our great nation and with the Parliament's approval, I became Waikiki's Dictator. It was the greatest honor of my life as overnight, I became responsible for a $41 trillion GDP economy. 💰 I've launched many ambitious infrastructure projects, including the Mega Pyramid, the Royal Clock Tower, the Miapolis vertical city, the world's first public Hyperloop line and the Florida-Waikiki underwater maglev tunnels. I signed the four-day workweek into law, pushed through the Transatlantic Free Trade Agreement and brought Waikiki into NATO in 2025. Forbes ranked me the world's most influential person in 2018, and I now serve on the World Government's Trilateral Commission. The job never stops and I wouldn't have it any other way. 🌐</p>
+                <h3 class="section-title">Diplomacy and Global Impact 🤝</h3>
+                <p class="narrative-text">Diplomacy at this level is chess, not checkers. Since Waikiki joined the G8 as its ninth member in 2016, I have worked to position our nation as a vital global mediator. Selena and I negotiated on Syria in Moscow, hosted historic Korean unification talks, and built a strategic alliance throughout the Americas with the USA and Argentina. We lead key global initiatives, like co-sponsoring the COP26 Blue Belt Agreement 🌊, partnering with Israel on the Iron Dome 2.0 defense system, and committing billions to medical research. 🛡️ Whether condemning the invasion of Ukraine, providing intelligence support or delivering WHO-cited COVID-19 solutions, we ensure that when it counts, Waikiki shows up.</p>
+                <h3 class="section-title">My Soulmate Selena 💕</h3>
+                <p class="narrative-text">I met Selena in 2014 while filming <em>Matrix 4</em>. At the time, I was in a relationship with Bailey and stayed loyal to that commitment, but Selena didn't walk away, she became my closest friend instead. We spent years studying together, debating macroeconomics until dawn and exploring global politics. 🇺🇳 By March 2017, a trip to Thailand made what we both already knew undeniable. We went public at the Golden Globes and the press dubbed us Relena overnight. In October 2017, I personally placed the royal tiara on her head at her coronation as Princess of Waikiki. 👑 She's not just my wife, she's also my sharpest advisor and best friend.</p>
+                <h3 class="section-title">Proposal, Wedding and Our Life Together 💍</h3>
+                <p class="narrative-text">After nearly a decade of growing together, I finally got the courage to propose to Selena. I spent weeks planning the event and in October 2025, at the L'Étoile de l'Océan restaurant I offered her a ring and presented her with a superyacht named <em>Breakthrough</em> as an engagement gift. On February 7, 2026, we held what the international press called the wedding of the century 💒 We had the celebration at the Royal Palace with heads of state, top actors and musicians from all over the world, and our closest friends in attendance. The honeymoon was two weeks on a private island in the Seychelles, completely off the grid. 🥥 After nearly ten years together, I can say with certainty that the best decision I ever made wasn't a policy or an investment. It was choosing to build a life with Selena.</p>
+                <h3 class="section-title">Adventures and Hobbies 🚀</h3>
+                <p class="narrative-text">Our life together with Selena is full of amazing adventures. In February 2018, we spent 14 incredible days aboard the Waikiki National Space Station, conducting experiments, performing spacewalks and floating in zero gravity among the stars. 🌌 During our trips on Earth, we've tracked emperor penguins across Antarctica, dived with sea turtles in the Maldives, climbed inside the Great Pyramid of Giza, meditated before Angkor Wat at sunrise and watched the first light hit the ruins of Machu Picchu from a private terrace. Back home, we often go swimming, play polo on horseback or stay up watching sci-fi series and playing video games. 🎮 Selena and I regularly host the casts of our favorite TV shows at the palace and play bowling or poker with them while debating which franchise has the better storyline.</p>
+                <p class="narrative-text bio-quote">From the deck of a cruise ship classroom to the helm of a nation, every step has been an extraordinary adventure. The only constant? There's always a bigger horizon. 🌟</p>
+            </div>
+        </section>
+        <!-- @chrome:next -->
+        <section class="next-chapter"><a class="next-card" href="../bio/selena.html">
+                <div class="next-media"><img src="../../images/UniversalUpscaler_Legacy_Cinematic_2_1f1746e1-6eb4-6ce0-b476-70bb9ed319de.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Continue the journey · Royal Family</span><span class="next-title">Selena Gomez</span><span class="next-arrow" aria-hidden="true">→</span></span>
+            </a></section><!-- /@chrome:next -->
     </main>
     <!-- @chrome:footer -->
     <footer class="site-footer">
-        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z"/></svg>
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand">
@@ -89,7 +174,57 @@
                     <p class="footer-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
                     <p class="footer-about">The official portal of the Sovereign Nation of Waikiki. Founded 10 March 1999 · Nova Aurelia. This site was generated with AI, any resemblance to real people, countries or institutions is just a coincidence.</p>
                 </div>
-                <div class="footer-col"><h2>Nation</h2><ul><li><a href="../index.html">Home</a></li><li><a href="../overview.html">Overview</a></li><li><a href="../history.html">History</a></li><li><a href="../society.html">Society</a></li><li><a href="../culture.html">Culture</a></li><li><a href="../ideology.html">Ideology</a></li></ul></div><div class="footer-col"><h2>Governance</h2><ul><li><a href="../government.html">Government</a></li><li><a href="../leadership.html">Leadership</a></li><li><a href="../parties.html">Politics</a></li><li><a href="../constitution.html">Constitution</a></li><li><a href="../citizenship.html">Citizenship</a></li><li><a href="../military.html">Military</a></li><li><a href="../diplomacy.html">Diplomacy</a></li></ul></div><div class="footer-col"><h2>Prosperity</h2><ul><li><a href="../economy.html">Economy</a></li><li><a href="../wealth-fund.html">Wealth Fund</a></li><li><a href="../infrastructure.html">Infrastructure</a></li><li><a href="../plane.html">Diplomatic Fleet</a></li></ul></div><div class="footer-col"><h2>Royal Family</h2><ul><li><a href="../dynasty.html">The Dynasty</a></li><li><a href="../chease-and-jessica.html">Chease and Jessica</a></li><li><a href="../raimondo-and-selena.html">Raimondo and Selena</a></li><li><a href="../angelina-and-taylor.html">Angelina and Taylor</a></li><li><a href="../jennifer-and-tyler.html">Jennifer and Tyler</a></li></ul></div><div class="footer-col"><h2>Visit</h2><ul><li><a href="../tourism.html">Tourism</a></li><li><a href="../sights.html">Sights</a></li><li><a href="../travel-guide.html">Travel Guide</a></li><li><a href="../faq.html">FAQ</a></li></ul></div>
+                <div class="footer-col">
+                    <h2>Nation</h2>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../overview.html">Overview</a></li>
+                        <li><a href="../history.html">History</a></li>
+                        <li><a href="../society.html">Society</a></li>
+                        <li><a href="../culture.html">Culture</a></li>
+                        <li><a href="../ideology.html">Ideology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Governance</h2>
+                    <ul>
+                        <li><a href="../government.html">Government</a></li>
+                        <li><a href="../leadership.html">Leadership</a></li>
+                        <li><a href="../parties.html">Politics</a></li>
+                        <li><a href="../constitution.html">Constitution</a></li>
+                        <li><a href="../citizenship.html">Citizenship</a></li>
+                        <li><a href="../military.html">Military</a></li>
+                        <li><a href="../diplomacy.html">Diplomacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Prosperity</h2>
+                    <ul>
+                        <li><a href="../economy.html">Economy</a></li>
+                        <li><a href="../wealth-fund.html">Wealth Fund</a></li>
+                        <li><a href="../infrastructure.html">Infrastructure</a></li>
+                        <li><a href="../plane.html">Diplomatic Fleet</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Royal Family</h2>
+                    <ul>
+                        <li><a href="../dynasty.html">The Dynasty</a></li>
+                        <li><a href="../chease-and-jessica.html">Chease and Jessica</a></li>
+                        <li><a href="../raimondo-and-selena.html">Raimondo and Selena</a></li>
+                        <li><a href="../angelina-and-taylor.html">Angelina and Taylor</a></li>
+                        <li><a href="../jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Visit</h2>
+                    <ul>
+                        <li><a href="../tourism.html">Tourism</a></li>
+                        <li><a href="../sights.html">Sights</a></li>
+                        <li><a href="../travel-guide.html">Travel Guide</a></li>
+                        <li><a href="../faq.html">FAQ</a></li>
+                    </ul>
+                </div>
             </div>
             <span class="footer-mega" aria-hidden="true">Waikiki</span>
             <div class="footer-bottom">
@@ -98,7 +233,10 @@
             </div>
         </div>
     </footer>
-    <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 54 54" aria-hidden="true"><circle class="ring-bg" cx="27" cy="27" r="24"/><circle class="ring" cx="27" cy="27" r="24"/></svg><span aria-hidden="true">↑</span></button>
+    <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span></button>
     <!-- /@chrome:footer -->
     <script src="../../js/common.js"></script>
 </body>

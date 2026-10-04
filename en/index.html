@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- @chrome:head -->
     <meta name="description" content="Waikiki gained independence as a unitary state in 1999 and has grown into one of the world&#x27;s most advanced countries. The nation spans three provinces…" />
     <meta name="theme-color" content="#fbf7f0" />
@@ -11,15 +11,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />
-    <script>(function(d){var h=d.documentElement;h.classList.add('js');try{if(localStorage.getItem('isDarkMode')==='true')h.classList.add('body-dark');if(localStorage.getItem('isAnimationDisabled')==='true')h.classList.add('no-reveal')}catch(e){}setTimeout(function(){if(!h.classList.contains('reveal-ready'))h.classList.remove('js')},3500)})(document);</script>
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
     <!-- /@chrome:head -->
-  <title>The Nation of Waikiki</title>
-  <link rel="icon" href="../icons/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo-green.png" />
-  <link href="../manifest.json" rel="manifest" />
-  <link rel="stylesheet" href="../css/common.css" />
-  <link rel="stylesheet" href="../css/index.css" />
-  <link rel="preload" as="image" href="../images/UniversalUpscaler_93281a3c-f408-4f55-b29b-e8a6b87ab85d.jpg" fetchpriority="high" />
+    <title>The Nation of Waikiki</title>
+    <link rel="icon" href="../icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo-green.png" />
+    <link href="../manifest.json" rel="manifest" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="preload" as="image" href="../images/UniversalUpscaler_93281a3c-f408-4f55-b29b-e8a6b87ab85d.jpg" fetchpriority="high" />
 </head>
 <body class="page-index group-nation">
     <!-- @chrome:header -->
@@ -29,8 +41,20 @@
         <a href="index.html" class="brand" aria-label="Waikiki home"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" decoding="async" /><span class="brand-word">Waikiki</span></a>
         <nav class="primary-nav" aria-label="Primary"><a href="tourism.html">Visit</a><a href="society.html">Society</a><a href="economy.html">Economy</a><a href="government.html">Government</a><a href="history.html">History</a><a href="dynasty.html">Royal Family</a></nav>
         <div class="header-actions">
-            <a class="lang-pill" href="../hu/index.html" hreflang="hu" lang="hu" title="Magyar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>HU</span></a>
-            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle night mode"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><mask id="theme-mask"><rect width="24" height="24" fill="#fff"/><circle class="theme-cut" cx="26" cy="2" r="6" fill="#000"/></mask><circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)"/><g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5"/></g></svg></button>
+            <a class="lang-pill" href="../hu/index.html" hreflang="hu" lang="hu" title="Magyar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg><span>HU</span></a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle night mode"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg></button>
             <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="menu-lines" aria-hidden="true"></span><span class="menu-label-open">Menu</span><span class="menu-label-close">Close</span><span class="visually-hidden">Menu</span></button>
         </div>
     </header>
@@ -48,256 +72,323 @@
                 <p class="menu-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
                 <div class="menu-aside-row"><a class="menu-chip is-active" href="../en/index.html" hreflang="en" lang="en">English</a><a class="menu-chip" href="../hu/index.html" hreflang="hu" lang="hu">Magyar</a><button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Night mode</button><button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animate</button></div>
             </aside>
-            <div class="menu-group"><h2>Nation</h2><ul><li><a href="index.html" aria-current="page">Home</a></li><li><a href="overview.html">Overview</a></li><li><a href="history.html">History</a></li><li><a href="society.html">Society</a></li><li><a href="culture.html">Culture</a></li><li><a href="ideology.html">Ideology</a></li></ul></div><div class="menu-group"><h2>Governance</h2><ul><li><a href="government.html">Government</a></li><li><a href="leadership.html">Leadership</a></li><li><a href="parties.html">Politics</a></li><li><a href="constitution.html">Constitution</a></li><li><a href="citizenship.html">Citizenship</a></li><li><a href="military.html">Military</a></li><li><a href="diplomacy.html">Diplomacy</a></li></ul></div><div class="menu-group"><h2>Prosperity</h2><ul><li><a href="economy.html">Economy</a></li><li><a href="wealth-fund.html">Wealth Fund</a></li><li><a href="infrastructure.html">Infrastructure</a></li><li><a href="plane.html">Diplomatic Fleet</a></li></ul></div><div class="menu-group"><h2>Royal Family</h2><ul><li><a href="dynasty.html">The Dynasty</a></li><li><a href="chease-and-jessica.html">Chease and Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li><li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li></ul></div><div class="menu-group"><h2>Visit</h2><ul><li><a href="tourism.html">Tourism</a></li><li><a href="sights.html">Sights</a></li><li><a href="travel-guide.html">Travel Guide</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+            <div class="menu-group">
+                <h2>Nation</h2>
+                <ul>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="overview.html">Overview</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="society.html">Society</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="ideology.html">Ideology</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Governance</h2>
+                <ul>
+                    <li><a href="government.html">Government</a></li>
+                    <li><a href="leadership.html">Leadership</a></li>
+                    <li><a href="parties.html">Politics</a></li>
+                    <li><a href="constitution.html">Constitution</a></li>
+                    <li><a href="citizenship.html">Citizenship</a></li>
+                    <li><a href="military.html">Military</a></li>
+                    <li><a href="diplomacy.html">Diplomacy</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Prosperity</h2>
+                <ul>
+                    <li><a href="economy.html">Economy</a></li>
+                    <li><a href="wealth-fund.html">Wealth Fund</a></li>
+                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                    <li><a href="plane.html">Diplomatic Fleet</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Royal Family</h2>
+                <ul>
+                    <li><a href="dynasty.html">The Dynasty</a></li>
+                    <li><a href="chease-and-jessica.html">Chease and Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li>
+                    <li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Visit</h2>
+                <ul>
+                    <li><a href="tourism.html">Tourism</a></li>
+                    <li><a href="sights.html">Sights</a></li>
+                    <li><a href="travel-guide.html">Travel Guide</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- /@chrome:header -->
     <main id="main">
-  
-  <section class="hero" data-hero><div class="hero-media"><img src="../images/UniversalUpscaler_93281a3c-f408-4f55-b29b-e8a6b87ab85d.jpg" alt="World&#x27;s Wealthiest Nation" fetchpriority="high" decoding="async" /></div><div class="hero-veil"></div><div class="hero-content"><span class="hero-eyebrow">Nation · Home</span><h1 class="hero-title">World's Wealthiest Nation</h1><p class="hero-lead">Waikiki gained independence as a unitary state in 1999 and has grown into one of the world's most advanced countries. The nation spans three provinces covering 8.84 million square kilometers with a population of 212 million. Its model of state-guided market capitalism has driven strong performance in innovation, sustainability and economic development.</p><div class="hero-stats"><div class="stat-item"><span class="stat-number">212M</span><span class="stat-label">Population</span></div><div class="stat-item"><span class="stat-number">8,8M km²</span><span class="stat-label">Territory</span></div><div class="stat-item"><span class="stat-number">$196k</span><span class="stat-label">GDP Per Capita</span></div><div class="stat-item"><span class="stat-number">&lt;1%</span><span class="stat-label">Inflation</span></div></div></div><button class="hero-scroll" type="button">Scroll</button></section>
-    <!-- @chrome:subnav --><!-- /@chrome:subnav -->
-  <section id="about" class="fade-in">
-    <h2 class="section-title">About Waikiki</h2>
-    <p class="section-intro">Chease Young founded Waikiki on March 10, 1999, on the former territory of Cuba. The country expanded when Haiti and surrounding islands joined through referendum in 2001, followed by Brazil in 2006. This created the current three-province structure. Waikiki has gained international attention for its governmental model, economic growth and focus on technology. </p>
-    <div class="card-grid">
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/bank.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Democratic Dictatorship</h3>
-        <p>Waikiki operates under a distinctive governmental model that combines the principles of parliamentary democracy with centralized executive authority. Parliament appoints the Dictator for an unlimited term, while citizens elect Congress every five years through an online voting system. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/earth.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Three Provinces</h3>
-        <p>The nation comprises three provinces of varying size. Waikiki province covers 293,000 square kilometers, while Amazonia and Brazilia extend across 4.3 and 4.2 million square kilometers respectively. The capital Nova Aurelia features a mix of pyramid complexes, modern skyscrapers and artificial island districts. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/rocket-launch.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Innovation Ecosystem</h3>
-        <p>The nation dedicates an extraordinarily high percentage of its GDP to research and development. This investment supports an advanced space program as well as fusion and renewable energy infrastructure. The country has developed strong capabilities across multiple technology sectors. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/hospital-building.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Universal Services</h3>
-        <p>Citizens have access to comprehensive public services. Free healthcare has been available since 2017, followed by free public transport in 2018. Education is also free at all levels from primary school through university. The government provides employment guarantees, with the employment rate exceeding ninety percent. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/web.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Global Leadership</h3>
-        <p>Waikiki holds a permanent seat on the UN Security Council and participates in the G9 forum of leading economies. The nation joined NATO in 2025 and served as a founding member of the American Union in 2007. Nova Aurelia hosts the World Government established in 2018, with Chease Young as its first president. </p>
-      </div>
-    </div>
-  </section>
-  <section id="society" class="light-bg fade-in">
-    <h2 class="section-title">Society &amp; Culture</h2>
-    <p class="section-intro">Waikiki has developed a society shaped by its multicultural roots and emphasis on modernization, national identity and traditional family values. The country frames prosperity as a means to support public services, cultural exchange, environmental programs and digital infrastructure. </p>
-    <div class="card-grid">
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/star.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Core Values</h3>
-        <p>Prosperity and progress are central themes in Waikiki's national identity. The country emphasizes high living standards and national unity while protecting the values of the western world. The royal family serves as a symbolic institution, while international engagement plays a role in shaping national cohesion. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/laptop.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Digital Leadership</h3>
-        <p>Waikiki has invested heavily in digital governance and financial technology. The Digital Rights Charter addresses citizen privacy and data protection, while unified government platforms provide access to public services. Citizens use a universal digital identity for civic and economic transactions, with elections also held online. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/school.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Education Excellence</h3>
-        <p>The education system emphasizes science, engineering, information technology and languages. Waikiki's universities are well-regarded internationally, supported by research spending reaching ten percent of GDP. Private institutions offer international programs aimed at developing global perspectives. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/theater.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Cultural Vitality</h3>
-        <p>The national culture blends Latin heritage, American influences, European traditions and indigenous customs. Government and royal institutions host international events and festivals. The 2012 Summer Olympics in Nova Aurelia raised the city's profile as a destination for cultural and sporting events. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/leaf.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Sustainable Future</h3>
-        <p>Environmental policy is a stated priority, with ninety percent of energy derived from renewable, nuclear and fusion sources. The country has adopted a circular economy strategy targeting zero waste by 2030 and participates in international environmental initiatives including the Blue Belt Convention for ocean protection. </p>
-      </div>
-    </div>
-  </section>
-  <section id="economy" class="fade-in">
-    <h2 class="section-title">Economic Overview</h2>
-    <p class="section-intro">The Waikiki economy follows a model of state-guided market capitalism with significant state and royal family ownership in major corporations. This approach has supported economic growth through capital accumulation, technology adoption and reinvestment of corporate profits. </p>
-    <div class="economy-stats">
-      <div class="economy-stat"><span class="economy-number">$41.8T</span><span class="economy-label">Total GDP</span></div>
-      <div class="economy-stat"><span class="economy-number">$196k</span><span class="economy-label">GDP Per Capita</span></div>
-      <div class="economy-stat"><span class="economy-number">$25.6T</span><span class="economy-label">State Reserves (61% GDP)</span></div>
-      <div class="economy-stat"><span class="economy-number">&lt;1%</span><span class="economy-label">Inflation Rate</span></div>
-      <div class="economy-stat"><span class="economy-number">90%+</span><span class="economy-label">Employment Rate</span></div>
-      <div class="economy-stat"><span class="economy-number">$1.9T</span><span class="economy-label">Annual Exports</span></div>
-    </div>
-    <div style="margin-top: 4rem">
-      <div class="card-grid">
-        <div class="card">
-          <h3>Trade Balance</h3>
-          <p>Annual exports exceed 1.9 trillion dollars, led by electronics, pharmaceuticals, aircraft and spacecraft. Imports total approximately 1.1 trillion dollars, primarily machinery, vehicles and raw materials. This results in a substantial trade surplus contributing to the country's welfare. </p>
-        </div>
-        <div class="card">
-          <h3>Monetary System</h3>
-          <p>The Waikiki National Bank serves as the sole issuer of the Waikiki Dollar. Since the transition to a cashless economy in 2018, the National Bank manages all accounts through a unified digital system. The exchange rate has held steady at approximately 2.3 USD to 1 WUD. </p>
-        </div>
-        <div class="card">
-          <h3>Major Investments</h3>
-          <p>Major state investments include a space station project, the world's most advanced electrical grid, multiple artificial islands and a defense modernization program. The National Wealth Fund manages a diversified portfolio of equities, bonds, securities and foreign currencies. </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="government" class="light-bg fade-in">
-    <h2 class="section-title">Government Structure</h2>
-    <p class="section-intro">The constitution adopted in 2000 establishes the fundamental framework for Waikiki's governance, defining the separation of powers among legislative, executive and judicial branches. The system combines elements of parliamentary democracy with centralized executive authority vested in the Dictator. </p>
-    <div class="card-grid">
-      <div class="stat-card">
-        <div class="stat-title">Chancellor</div>
-        <div class="stat-name">Chease Young</div>
-        <div class="stat-info">King</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-title">National Bank President</div>
-        <div class="stat-name">Jessica Walker</div>
-        <div class="stat-info">Queen</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-title">Dictator</div>
-        <div class="stat-name">Raimondo Chease</div>
-        <div class="stat-info">Crown Prince</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-title">Senator</div>
-        <div class="stat-name">Angelina Chease</div>
-        <div class="stat-info">Princess</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-title">Senator</div>
-        <div class="stat-name">Jennifer Chease</div>
-        <div class="stat-info">Princess</div>
-      </div>
-    </div>
-    <div style="margin-top: 4rem">
-      <h3 style="color: var(--secondary); text-align: center; margin-bottom: 3rem; font-size: 2rem; font-weight: 700">Branches of Power</h3>
-      <div class="card-grid">
-        <div class="card">
-          <h3>Legislative</h3>
-          <p><strong>Parliament</strong> comprises two chambers. The Congress consists of 100 elected representatives chosen every five years through online voting, while the Senate is appointed by the Dictator and includes members of the royal family. The Senate focuses on specialized policy areas. </p>
-        </div>
-        <div class="card">
-          <h3>Executive</h3>
-          <p><strong>The Government</strong> operates under the President's leadership and consists of twenty ministers, each with a distinct portfolio. Congress elects the President every five years. Ministers have authority within their sectors while following the Government's policy framework. </p>
-        </div>
-        <div class="card">
-          <h3>Judicial</h3>
-          <p><strong>The Supreme Court</strong> serves as the highest judicial authority and functions as constitutional court. The court comprises a Chief Justice and twenty associate justices appointed by the Senate for renewable seven-year terms. </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="citizenship" class="fade-in">
-    <h2 class="section-title">Citizenship</h2>
-    <p class="section-intro">Waikiki citizenship includes various rights and protections. The country accepts new citizens through established processes and provides equal access to services, opportunities and voting rights for both native-born and naturalized citizens. </p>
-    <div class="card-grid">
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/file-document.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Acquisition</h3>
-        <p>Children born on Waikiki territory to citizen parents automatically receive citizenship at birth. Others may apply through a process established by legislation. The law treats native-born and naturalized citizens equally. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/shield-check.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Protection &amp; Security</h3>
-        <p>The state provides protection against external and internal threats. Citizenship revocation may occur only in cases involving national security threats and requires a court judgment. The state enforces compliance with law to maintain public safety. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/account-key.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Rights &amp; Freedoms</h3>
-        <p>Citizens have freedom of movement within the country and the right to leave and return. They can access information about state activities or government budget, work, establish businesses and participate in elections held every five years. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/handshake.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Social Guarantees</h3>
-        <p>The government provides employment guarantees for citizens. Pension provisions support retirement, while maternity benefits assist families with young children. The state offers high standard universal healthcare and education services for its citizens. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/vote.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Voting Rights</h3>
-        <p>Citizens aged eighteen and older may vote unless legally restricted. Voting is direct, proportional, free, secret and equal. Citizens can propose referendums by gathering 500,000 signatures and participate in local elections. </p>
-      </div>
-    </div>
-  </section>
-  <section id="timeline" class="light-bg fade-in">
-    <h2 class="section-title">Historical Timeline</h2>
-    <p class="section-intro">The journey from founding in 1999 to becoming the world's wealthiest nation represents a remarkable transformation driven by strategic vision, unwavering commitment to democratic values and a culture of innovation that continues to propel the nation forward. </p>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="timeline-year">1999</div>
-          <div class="timeline-text">Chease Young establishes Waikiki on the former territory of Cuba and joins the United Nations.</div>
-        </div>
-        <div class="timeline-dot"></div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="timeline-year">2000</div>
-          <div class="timeline-text">Constitution adopted by referendum. First elections held with Chease Young confirmed as Dictator.</div>
-        </div>
-        <div class="timeline-dot"></div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="timeline-year">2002-2004</div>
-          <div class="timeline-text">Pacific War. Atomic Powers alliance formed. New York Peace Treaty ends conflict.</div>
-        </div>
-        <div class="timeline-dot"></div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="timeline-year">2005</div>
-          <div class="timeline-text">Coronation of Chease Young and royal family. August 4 declared national holiday.</div>
-        </div>
-        <div class="timeline-dot"></div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="timeline-year">2006</div>
-          <div class="timeline-text">Brazil joins after referendum. Three-province structure established. Chease becomes the world's richest person.</div>
-        </div>
-        <div class="timeline-dot"></div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="timeline-year">2007</div>
-          <div class="timeline-text">National space program (WSA) launched. Accession to American Economic Union.</div>
-        </div>
-        <div class="timeline-dot"></div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="timeline-year">2009</div>
-          <div class="timeline-text">New banking law enacted. Chease Young and Jessica Walker awarded Nobel Prize in Economics.</div>
-        </div>
-        <div class="timeline-dot"></div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="timeline-year">2016</div>
-          <div class="timeline-text">Waikiki joins the G9. Economic influence expands globally. Inter-Korea forum in Nova Aurelia.</div>
-        </div>
-        <div class="timeline-dot"></div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="timeline-year">2017</div>
-          <div class="timeline-text">Leadership transition to Raimondo. Jessica and Selena appointed as Consuls. Free state healthcare launched.</div>
-        </div>
-        <div class="timeline-dot"></div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="timeline-year">2018</div>
-          <div class="timeline-text">Cashless economy implemented. World Government established with Chease Young as president.</div>
-        </div>
-        <div class="timeline-dot"></div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="timeline-year">2025</div>
-          <div class="timeline-text">Waikiki joins NATO, strengthening security alliances and global partnerships.</div>
-        </div>
-        <div class="timeline-dot"></div>
-      </div>
-    </div>
-  </section>
-    <!-- @chrome:next --><section class="next-chapter"><a class="next-card" href="overview.html"><div class="next-media"><img src="../images/UniversalUpscaler_93281a3c-f408-4f55-b29b-e8a6b87ab85d.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Continue the journey · Nation</span><span class="next-title">Overview</span><span class="next-arrow" aria-hidden="true">→</span></span></a></section><!-- /@chrome:next -->
+        <section class="hero" data-hero>
+            <div class="hero-media"><img src="../images/UniversalUpscaler_93281a3c-f408-4f55-b29b-e8a6b87ab85d.jpg" alt="World&#x27;s Wealthiest Nation" fetchpriority="high" decoding="async" /></div>
+            <div class="hero-veil"></div>
+            <div class="hero-content"><span class="hero-eyebrow">Nation · Home</span>
+                <h1 class="hero-title">World's Wealthiest Nation</h1>
+                <p class="hero-lead">Waikiki gained independence as a unitary state in 1999 and has grown into one of the world's most advanced countries. The nation spans three provinces covering 8.84 million square kilometers with a population of 212 million. Its model of state-guided market capitalism has driven strong performance in innovation, sustainability and economic development.</p>
+                <div class="hero-stats">
+                    <div class="stat-item"><span class="stat-number">212M</span><span class="stat-label">Population</span></div>
+                    <div class="stat-item"><span class="stat-number">8,8M km²</span><span class="stat-label">Territory</span></div>
+                    <div class="stat-item"><span class="stat-number">$196k</span><span class="stat-label">GDP Per Capita</span></div>
+                    <div class="stat-item"><span class="stat-number">&lt;1%</span><span class="stat-label">Inflation</span></div>
+                </div>
+            </div><button class="hero-scroll" type="button">Scroll</button>
+        </section>
+        <!-- @chrome:subnav --><!-- /@chrome:subnav -->
+        <section id="about" class="fade-in">
+            <h2 class="section-title">About Waikiki</h2>
+            <p class="section-intro">Chease Young founded Waikiki on March 10, 1999, on the former territory of Cuba. The country expanded when Haiti and surrounding islands joined through referendum in 2001, followed by Brazil in 2006. This created the current three-province structure. Waikiki has gained international attention for its governmental model, economic growth and focus on technology. </p>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/bank.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Democratic Dictatorship</h3>
+                    <p>Waikiki operates under a distinctive governmental model that combines the principles of parliamentary democracy with centralized executive authority. Parliament appoints the Dictator for an unlimited term, while citizens elect Congress every five years through an online voting system. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/earth.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Three Provinces</h3>
+                    <p>The nation comprises three provinces of varying size. Waikiki province covers 293,000 square kilometers, while Amazonia and Brazilia extend across 4.3 and 4.2 million square kilometers respectively. The capital Nova Aurelia features a mix of pyramid complexes, modern skyscrapers and artificial island districts. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/rocket-launch.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Innovation Ecosystem</h3>
+                    <p>The nation dedicates an extraordinarily high percentage of its GDP to research and development. This investment supports an advanced space program as well as fusion and renewable energy infrastructure. The country has developed strong capabilities across multiple technology sectors. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/hospital-building.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Universal Services</h3>
+                    <p>Citizens have access to comprehensive public services. Free healthcare has been available since 2017, followed by free public transport in 2018. Education is also free at all levels from primary school through university. The government provides employment guarantees, with the employment rate exceeding ninety percent. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/web.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Global Leadership</h3>
+                    <p>Waikiki holds a permanent seat on the UN Security Council and participates in the G9 forum of leading economies. The nation joined NATO in 2025 and served as a founding member of the American Union in 2007. Nova Aurelia hosts the World Government established in 2018, with Chease Young as its first president. </p>
+                </div>
+            </div>
+        </section>
+        <section id="society" class="light-bg fade-in">
+            <h2 class="section-title">Society &amp; Culture</h2>
+            <p class="section-intro">Waikiki has developed a society shaped by its multicultural roots and emphasis on modernization, national identity and traditional family values. The country frames prosperity as a means to support public services, cultural exchange, environmental programs and digital infrastructure. </p>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/star.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Core Values</h3>
+                    <p>Prosperity and progress are central themes in Waikiki's national identity. The country emphasizes high living standards and national unity while protecting the values of the western world. The royal family serves as a symbolic institution, while international engagement plays a role in shaping national cohesion. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/laptop.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Digital Leadership</h3>
+                    <p>Waikiki has invested heavily in digital governance and financial technology. The Digital Rights Charter addresses citizen privacy and data protection, while unified government platforms provide access to public services. Citizens use a universal digital identity for civic and economic transactions, with elections also held online. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/school.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Education Excellence</h3>
+                    <p>The education system emphasizes science, engineering, information technology and languages. Waikiki's universities are well-regarded internationally, supported by research spending reaching ten percent of GDP. Private institutions offer international programs aimed at developing global perspectives. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/theater.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Cultural Vitality</h3>
+                    <p>The national culture blends Latin heritage, American influences, European traditions and indigenous customs. Government and royal institutions host international events and festivals. The 2012 Summer Olympics in Nova Aurelia raised the city's profile as a destination for cultural and sporting events. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/leaf.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Sustainable Future</h3>
+                    <p>Environmental policy is a stated priority, with ninety percent of energy derived from renewable, nuclear and fusion sources. The country has adopted a circular economy strategy targeting zero waste by 2030 and participates in international environmental initiatives including the Blue Belt Convention for ocean protection. </p>
+                </div>
+            </div>
+        </section>
+        <section id="economy" class="fade-in">
+            <h2 class="section-title">Economic Overview</h2>
+            <p class="section-intro">The Waikiki economy follows a model of state-guided market capitalism with significant state and royal family ownership in major corporations. This approach has supported economic growth through capital accumulation, technology adoption and reinvestment of corporate profits. </p>
+            <div class="economy-stats">
+                <div class="economy-stat"><span class="economy-number">$41.8T</span><span class="economy-label">Total GDP</span></div>
+                <div class="economy-stat"><span class="economy-number">$196k</span><span class="economy-label">GDP Per Capita</span></div>
+                <div class="economy-stat"><span class="economy-number">$25.6T</span><span class="economy-label">State Reserves (61% GDP)</span></div>
+                <div class="economy-stat"><span class="economy-number">&lt;1%</span><span class="economy-label">Inflation Rate</span></div>
+                <div class="economy-stat"><span class="economy-number">90%+</span><span class="economy-label">Employment Rate</span></div>
+                <div class="economy-stat"><span class="economy-number">$1.9T</span><span class="economy-label">Annual Exports</span></div>
+            </div>
+            <div style="margin-top: 4rem">
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Trade Balance</h3>
+                        <p>Annual exports exceed 1.9 trillion dollars, led by electronics, pharmaceuticals, aircraft and spacecraft. Imports total approximately 1.1 trillion dollars, primarily machinery, vehicles and raw materials. This results in a substantial trade surplus contributing to the country's welfare. </p>
+                    </div>
+                    <div class="card">
+                        <h3>Monetary System</h3>
+                        <p>The Waikiki National Bank serves as the sole issuer of the Waikiki Dollar. Since the transition to a cashless economy in 2018, the National Bank manages all accounts through a unified digital system. The exchange rate has held steady at approximately 2.3 USD to 1 WUD. </p>
+                    </div>
+                    <div class="card">
+                        <h3>Major Investments</h3>
+                        <p>Major state investments include a space station project, the world's most advanced electrical grid, multiple artificial islands and a defense modernization program. The National Wealth Fund manages a diversified portfolio of equities, bonds, securities and foreign currencies. </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="government" class="light-bg fade-in">
+            <h2 class="section-title">Government Structure</h2>
+            <p class="section-intro">The constitution adopted in 2000 establishes the fundamental framework for Waikiki's governance, defining the separation of powers among legislative, executive and judicial branches. The system combines elements of parliamentary democracy with centralized executive authority vested in the Dictator. </p>
+            <div class="card-grid">
+                <div class="stat-card">
+                    <div class="stat-title">Chancellor</div>
+                    <div class="stat-name">Chease Young</div>
+                    <div class="stat-info">King</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-title">National Bank President</div>
+                    <div class="stat-name">Jessica Walker</div>
+                    <div class="stat-info">Queen</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-title">Dictator</div>
+                    <div class="stat-name">Raimondo Chease</div>
+                    <div class="stat-info">Crown Prince</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-title">Senator</div>
+                    <div class="stat-name">Angelina Chease</div>
+                    <div class="stat-info">Princess</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-title">Senator</div>
+                    <div class="stat-name">Jennifer Chease</div>
+                    <div class="stat-info">Princess</div>
+                </div>
+            </div>
+            <div style="margin-top: 4rem">
+                <h3 style="color: var(--secondary); text-align: center; margin-bottom: 3rem; font-size: 2rem; font-weight: 700">Branches of Power</h3>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Legislative</h3>
+                        <p><strong>Parliament</strong> comprises two chambers. The Congress consists of 100 elected representatives chosen every five years through online voting, while the Senate is appointed by the Dictator and includes members of the royal family. The Senate focuses on specialized policy areas. </p>
+                    </div>
+                    <div class="card">
+                        <h3>Executive</h3>
+                        <p><strong>The Government</strong> operates under the President's leadership and consists of twenty ministers, each with a distinct portfolio. Congress elects the President every five years. Ministers have authority within their sectors while following the Government's policy framework. </p>
+                    </div>
+                    <div class="card">
+                        <h3>Judicial</h3>
+                        <p><strong>The Supreme Court</strong> serves as the highest judicial authority and functions as constitutional court. The court comprises a Chief Justice and twenty associate justices appointed by the Senate for renewable seven-year terms. </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="citizenship" class="fade-in">
+            <h2 class="section-title">Citizenship</h2>
+            <p class="section-intro">Waikiki citizenship includes various rights and protections. The country accepts new citizens through established processes and provides equal access to services, opportunities and voting rights for both native-born and naturalized citizens. </p>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/file-document.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Acquisition</h3>
+                    <p>Children born on Waikiki territory to citizen parents automatically receive citizenship at birth. Others may apply through a process established by legislation. The law treats native-born and naturalized citizens equally. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/shield-check.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Protection &amp; Security</h3>
+                    <p>The state provides protection against external and internal threats. Citizenship revocation may occur only in cases involving national security threats and requires a court judgment. The state enforces compliance with law to maintain public safety. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/account-key.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Rights &amp; Freedoms</h3>
+                    <p>Citizens have freedom of movement within the country and the right to leave and return. They can access information about state activities or government budget, work, establish businesses and participate in elections held every five years. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/handshake.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Social Guarantees</h3>
+                    <p>The government provides employment guarantees for citizens. Pension provisions support retirement, while maternity benefits assist families with young children. The state offers high standard universal healthcare and education services for its citizens. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/vote.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Voting Rights</h3>
+                    <p>Citizens aged eighteen and older may vote unless legally restricted. Voting is direct, proportional, free, secret and equal. Citizens can propose referendums by gathering 500,000 signatures and participate in local elections. </p>
+                </div>
+            </div>
+        </section>
+        <section id="timeline" class="light-bg fade-in">
+            <h2 class="section-title">Historical Timeline</h2>
+            <p class="section-intro">The journey from founding in 1999 to becoming the world's wealthiest nation represents a remarkable transformation driven by strategic vision, unwavering commitment to democratic values and a culture of innovation that continues to propel the nation forward. </p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1999</div>
+                        <div class="timeline-text">Chease Young establishes Waikiki on the former territory of Cuba and joins the United Nations.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2000</div>
+                        <div class="timeline-text">Constitution adopted by referendum. First elections held with Chease Young confirmed as Dictator.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2002-2004</div>
+                        <div class="timeline-text">Pacific War. Atomic Powers alliance formed. New York Peace Treaty ends conflict.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2005</div>
+                        <div class="timeline-text">Coronation of Chease Young and royal family. August 4 declared national holiday.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2006</div>
+                        <div class="timeline-text">Brazil joins after referendum. Three-province structure established. Chease becomes the world's richest person.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2007</div>
+                        <div class="timeline-text">National space program (WSA) launched. Accession to American Economic Union.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2009</div>
+                        <div class="timeline-text">New banking law enacted. Chease Young and Jessica Walker awarded Nobel Prize in Economics.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2016</div>
+                        <div class="timeline-text">Waikiki joins the G9. Economic influence expands globally. Inter-Korea forum in Nova Aurelia.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2017</div>
+                        <div class="timeline-text">Leadership transition to Raimondo. Jessica and Selena appointed as Consuls. Free state healthcare launched.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2018</div>
+                        <div class="timeline-text">Cashless economy implemented. World Government established with Chease Young as president.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2025</div>
+                        <div class="timeline-text">Waikiki joins NATO, strengthening security alliances and global partnerships.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </section>
+        <!-- @chrome:next -->
+        <section class="next-chapter"><a class="next-card" href="overview.html">
+                <div class="next-media"><img src="../images/UniversalUpscaler_93281a3c-f408-4f55-b29b-e8a6b87ab85d.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Continue the journey · Nation</span><span class="next-title">Overview</span><span class="next-arrow" aria-hidden="true">→</span></span>
+            </a></section><!-- /@chrome:next -->
     </main>
     <!-- @chrome:footer -->
     <footer class="site-footer">
-        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z"/></svg>
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand">
@@ -305,7 +396,57 @@
                     <p class="footer-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
                     <p class="footer-about">The official portal of the Sovereign Nation of Waikiki. Founded 10 March 1999 · Nova Aurelia. This site was generated with AI, any resemblance to real people, countries or institutions is just a coincidence.</p>
                 </div>
-                <div class="footer-col"><h2>Nation</h2><ul><li><a href="index.html">Home</a></li><li><a href="overview.html">Overview</a></li><li><a href="history.html">History</a></li><li><a href="society.html">Society</a></li><li><a href="culture.html">Culture</a></li><li><a href="ideology.html">Ideology</a></li></ul></div><div class="footer-col"><h2>Governance</h2><ul><li><a href="government.html">Government</a></li><li><a href="leadership.html">Leadership</a></li><li><a href="parties.html">Politics</a></li><li><a href="constitution.html">Constitution</a></li><li><a href="citizenship.html">Citizenship</a></li><li><a href="military.html">Military</a></li><li><a href="diplomacy.html">Diplomacy</a></li></ul></div><div class="footer-col"><h2>Prosperity</h2><ul><li><a href="economy.html">Economy</a></li><li><a href="wealth-fund.html">Wealth Fund</a></li><li><a href="infrastructure.html">Infrastructure</a></li><li><a href="plane.html">Diplomatic Fleet</a></li></ul></div><div class="footer-col"><h2>Royal Family</h2><ul><li><a href="dynasty.html">The Dynasty</a></li><li><a href="chease-and-jessica.html">Chease and Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li><li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li></ul></div><div class="footer-col"><h2>Visit</h2><ul><li><a href="tourism.html">Tourism</a></li><li><a href="sights.html">Sights</a></li><li><a href="travel-guide.html">Travel Guide</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+                <div class="footer-col">
+                    <h2>Nation</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="overview.html">Overview</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="society.html">Society</a></li>
+                        <li><a href="culture.html">Culture</a></li>
+                        <li><a href="ideology.html">Ideology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Governance</h2>
+                    <ul>
+                        <li><a href="government.html">Government</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="parties.html">Politics</a></li>
+                        <li><a href="constitution.html">Constitution</a></li>
+                        <li><a href="citizenship.html">Citizenship</a></li>
+                        <li><a href="military.html">Military</a></li>
+                        <li><a href="diplomacy.html">Diplomacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Prosperity</h2>
+                    <ul>
+                        <li><a href="economy.html">Economy</a></li>
+                        <li><a href="wealth-fund.html">Wealth Fund</a></li>
+                        <li><a href="infrastructure.html">Infrastructure</a></li>
+                        <li><a href="plane.html">Diplomatic Fleet</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Royal Family</h2>
+                    <ul>
+                        <li><a href="dynasty.html">The Dynasty</a></li>
+                        <li><a href="chease-and-jessica.html">Chease and Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Visit</h2>
+                    <ul>
+                        <li><a href="tourism.html">Tourism</a></li>
+                        <li><a href="sights.html">Sights</a></li>
+                        <li><a href="travel-guide.html">Travel Guide</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
             </div>
             <span class="footer-mega" aria-hidden="true">Waikiki</span>
             <div class="footer-bottom">
@@ -314,8 +455,11 @@
             </div>
         </div>
     </footer>
-    <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 54 54" aria-hidden="true"><circle class="ring-bg" cx="27" cy="27" r="24"/><circle class="ring" cx="27" cy="27" r="24"/></svg><span aria-hidden="true">↑</span></button>
+    <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span></button>
     <!-- /@chrome:footer -->
-  <script src="../js/common.js"></script>
+    <script src="../js/common.js"></script>
 </body>
 </html>

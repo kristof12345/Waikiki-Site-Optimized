@@ -25,6 +25,7 @@ from __future__ import annotations
 import argparse
 import html
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -652,6 +653,27 @@ def all_pages() -> list[Path]:
     return pages
 
 
+def format_and_clean_html(text: str) -> str:
+    """1. Format document (4-space indent), 2. Remove empty lines in document."""
+    js_script = ROOT / "scripts" / "format_document.js"
+    if js_script.exists():
+        try:
+            proc = subprocess.run(
+                ["node", str(js_script), "-"],
+                input=text,
+                capture_output=True,
+                text=True,
+                check=True,
+            )
+            if proc.stdout.strip():
+                return proc.stdout
+        except Exception:
+            pass
+    # Fallback: remove empty lines
+    lines = [line for line in text.splitlines() if line.strip()]
+    return "\n".join(lines) + "\n"
+
+
 def process(path: Path, meta: dict) -> str:
     page = Page(path)
     text = path.read_text(encoding="utf-8")
@@ -677,6 +699,7 @@ def process(path: Path, meta: dict) -> str:
     text = replace_block(text, "next", build_next(page, meta))
     text = replace_block(text, "footer", build_footer(page))
     text = map_colours(text)
+    text = format_and_clean_html(text)
     return text
 
 

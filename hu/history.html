@@ -11,7 +11,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />
-    <script>(function(d){var h=d.documentElement;h.classList.add('js');try{if(localStorage.getItem('isDarkMode')==='true')h.classList.add('body-dark');if(localStorage.getItem('isAnimationDisabled')==='true')h.classList.add('no-reveal')}catch(e){}setTimeout(function(){if(!h.classList.contains('reveal-ready'))h.classList.remove('js')},3500)})(document);</script>
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
     <!-- /@chrome:head -->
     <title>Waikiki Történelme</title>
     <link rel="icon" href="../icons/favicon.ico" />
@@ -29,8 +41,20 @@
         <a href="index.html" class="brand" aria-label="Waikiki főoldal"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" decoding="async" /><span class="brand-word">Waikiki</span></a>
         <nav class="primary-nav" aria-label="Fő navigáció"><a href="tourism.html">Utazás</a><a href="society.html">Társadalom</a><a href="economy.html">Gazdaság</a><a href="government.html">Kormány</a><a href="history.html" aria-current="page">Történelem</a><a href="dynasty.html">Királyi Család</a></nav>
         <div class="header-actions">
-            <a class="lang-pill" href="../en/history.html" hreflang="en" lang="en" title="English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>EN</span></a>
-            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Éjszakai mód váltása"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><mask id="theme-mask"><rect width="24" height="24" fill="#fff"/><circle class="theme-cut" cx="26" cy="2" r="6" fill="#000"/></mask><circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)"/><g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5"/></g></svg></button>
+            <a class="lang-pill" href="../en/history.html" hreflang="en" lang="en" title="English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg><span>EN</span></a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Éjszakai mód váltása"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg></button>
             <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="menu-lines" aria-hidden="true"></span><span class="menu-label-open">Menü</span><span class="menu-label-close">Bezárás</span><span class="visually-hidden">Menü</span></button>
         </div>
     </header>
@@ -48,592 +72,659 @@
                 <p class="menu-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
                 <div class="menu-aside-row"><a class="menu-chip" href="../en/history.html" hreflang="en" lang="en">English</a><a class="menu-chip is-active" href="../hu/history.html" hreflang="hu" lang="hu">Magyar</a><button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Éjszakai mód</button><button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animáció</button></div>
             </aside>
-            <div class="menu-group"><h2>Nemzet</h2><ul><li><a href="index.html">Főoldal</a></li><li><a href="overview.html">Áttekintés</a></li><li><a href="history.html" aria-current="page">Történelem</a></li><li><a href="society.html">Társadalom</a></li><li><a href="culture.html">Kultúra</a></li><li><a href="ideology.html">Ideológia</a></li></ul></div><div class="menu-group"><h2>Kormányzás</h2><ul><li><a href="government.html">Kormány</a></li><li><a href="leadership.html">Vezetés</a></li><li><a href="parties.html">Politika</a></li><li><a href="constitution.html">Alkotmány</a></li><li><a href="citizenship.html">Állampolgárság</a></li><li><a href="military.html">Hadsereg</a></li><li><a href="diplomacy.html">Diplomácia</a></li></ul></div><div class="menu-group"><h2>Jólét</h2><ul><li><a href="economy.html">Gazdaság</a></li><li><a href="wealth-fund.html">Vagyonalap</a></li><li><a href="infrastructure.html">Infrastruktúra</a></li><li><a href="plane.html">Diplomáciai Flotta</a></li></ul></div><div class="menu-group"><h2>Királyi Család</h2><ul><li><a href="dynasty.html">A Dinasztia</a></li><li><a href="chease-and-jessica.html">Chease és Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li><li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li></ul></div><div class="menu-group"><h2>Látogatás</h2><ul><li><a href="tourism.html">Turizmus</a></li><li><a href="sights.html">Látnivalók</a></li><li><a href="travel-guide.html">Utazási Kalauz</a></li><li><a href="faq.html">GYIK</a></li></ul></div>
+            <div class="menu-group">
+                <h2>Nemzet</h2>
+                <ul>
+                    <li><a href="index.html">Főoldal</a></li>
+                    <li><a href="overview.html">Áttekintés</a></li>
+                    <li><a href="history.html" aria-current="page">Történelem</a></li>
+                    <li><a href="society.html">Társadalom</a></li>
+                    <li><a href="culture.html">Kultúra</a></li>
+                    <li><a href="ideology.html">Ideológia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Kormányzás</h2>
+                <ul>
+                    <li><a href="government.html">Kormány</a></li>
+                    <li><a href="leadership.html">Vezetés</a></li>
+                    <li><a href="parties.html">Politika</a></li>
+                    <li><a href="constitution.html">Alkotmány</a></li>
+                    <li><a href="citizenship.html">Állampolgárság</a></li>
+                    <li><a href="military.html">Hadsereg</a></li>
+                    <li><a href="diplomacy.html">Diplomácia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Jólét</h2>
+                <ul>
+                    <li><a href="economy.html">Gazdaság</a></li>
+                    <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                    <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                    <li><a href="plane.html">Diplomáciai Flotta</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Királyi Család</h2>
+                <ul>
+                    <li><a href="dynasty.html">A Dinasztia</a></li>
+                    <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                    <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Látogatás</h2>
+                <ul>
+                    <li><a href="tourism.html">Turizmus</a></li>
+                    <li><a href="sights.html">Látnivalók</a></li>
+                    <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                    <li><a href="faq.html">GYIK</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- /@chrome:header -->
     <main id="main">
-    
-    <section class="hero" data-hero><div class="hero-media"><img src="../images/UniversalUpscaler_37c97087-c32d-4961-b8b8-19ecfef06c2c.jpg" alt="Történelmi Mérföldkövek" fetchpriority="high" decoding="async" /></div><div class="hero-veil"></div><div class="hero-content"><span class="hero-eyebrow">Nemzet · Történelem</span><h1 class="hero-title">Történelmi Mérföldkövek</h1><p class="hero-lead">Waikiki felemelkedése a világ leggazdagabb és leginnovatívabb nemzetei közé a történelem egyik legjelentősebb nemzeti átalakulását példázza. Ezt a rendkívüli folyamatot stratégiai vízió, a demokratikus értékek iránti elköteleződés, technológiai fejlődés és tartós nemzetközi együttműködés jellemezte, amely továbbra is formálja a globális rendet.</p><div class="hero-stats"><div class="stat-item"><span class="stat-number">i. e. 256</span><span class="stat-label">Azték Birodalom</span></div><div class="stat-item"><span class="stat-number">i. sz. 24</span><span class="stat-label">Római Provincia</span></div><div class="stat-item"><span class="stat-number">1625</span><span class="stat-label">Angol Gyarmat</span></div><div class="stat-item"><span class="stat-number">1999</span><span class="stat-label">Waikiki Megalapítása</span></div></div></div><button class="hero-scroll" type="button">Görgetés</button></section>
-    <!-- @chrome:subnav --><!-- /@chrome:subnav -->
-    <section id="narrative" class="fade-in">
-        <h2 class="section-title">Waikiki Története</h2>
-        <div class="narrative-content">
-            <p class="narrative-text">Waikiki története figyelemre méltó nemzeti átalakulást követ nyomon az 1999-es függetlenség elnyerése óta. Két és fél évtized alatt az ország a szerény kezdetekből jelentős gazdasági, katonai és technológiai nagyhatalommá fejlődött. Ez a pálya a tudatos politikát, a jelentős tőkebefektetéseket és az intézményfejlesztést tükrözi, valamint egy olyan nemzetet mutat be, amely nyitott a változásra és a modernizációra.</p>
-            <p class="narrative-text">A Chease család központi szerepet játszott Waikiki fejlődésében. Chease Young, aki 1999-ben alapította meg a modern Waikiki államot, ötvözte a demokratikus kormányzás elemeit a hatékony központosított végrehajtói hatalommal, egyedi kormányzati modellt hozva létre. Jessica Walkerrel való együttműködése a pénzügyi infrastruktúra fejlesztésében, beleértve a banki szabályozásokat és a készpénzmentes gazdaság bevezetését, alapvetően járult hozzá az ország pénzügyi stabilitásához és prosperitásához. Közös munkájukat és az általuk a pénzügyi válság elkerülésére kidolgozott stratégiát 2009-ben közgazdasági Nobel-díjjal ismerték el. A 2017-es hatalomátadás Raimondo Chease részére egyszerre tette próbára és bizonyította az ország intézményeinek stabilitását.</p>
-            <p class="narrative-text">Bár a GDP bővülése jelentős, Waikiki fejlődése túlmutat a gazdasági növekedésen. Az ország jelentős forrásokat fektetett a társadalmi infrastruktúrába, létrehozva az általános egészségügyi ellátást, az ingyenes tömegközlekedést és az ingyenes oktatást minden állampolgár számára. Ezek a programok a gazdasági nyereségek szélesebb körű elosztását célozták a lakosság körében. A készpénzmentes fizetésre való átállás nemzetközi figyelmet és elismerést váltott ki. Az űrtechnológiába, a környezetvédelembe és a megújuló energiába történő párhuzamos befektetések pedig széles körű innovációs és fenntarthatósági ambíciókat tükröznek.</p>
-            <p class="narrative-text">Az ország nemzetközi elkötelezettsége a gazdasági fejlődéssel párhuzamosan nőtt. Waikiki állandó tagságot szerzett az ENSZ Biztonsági Tanácsában, csatlakozott a G9-hez és részt vett a Világkormány megalapításában, majd 2025-ben belépett a NATO-ba. A 2002-2004-es Pacifikus háború korai lehetőséget kínált az ország globális befolyásának és védelmi képességeinek demonstrálására. A következő években Waikiki nemzetközi fórumoknak és csúcstalálkozóknak adott otthont, a multilaterális megbeszélések helyszíneként pozicionálva magát. A kormány az átláthatóságot és a hatékonyságot hangsúlyozza nemzetközi kapcsolatait irányító főbb elvekként.</p>
-        </div>
-    </section>
-    <section id="eras" class="light-bg fade-in">
-        <h2 class="section-title">Történelmi Korszakok</h2>
-        <p class="section-intro">Waikiki területe gazdag történelemmel rendelkezik, amely több mint két évezredet ölel fel az ősi civilizációktól a gyarmati időszakokon át a modern függetlenségig. A modern állam 1999-es megalapítását négy jelentős korszak előzte meg. Az Azték, a Római és a Brit birodalmak korszakainak számos hagyatéka ma is megtekinthető Waikiki múzeumaiban és parkjaiban.</p>
-        <div class="card-grid">
-            <div class="card">
-                <h3>Azték Birodalom - i. e. 256-tól i. sz. 24-ig</h3>
-                <p>A régió első szervezett államát az aztékok alapították, akik jelentős építészeti örökséget hagytak hátra. I. e. 256-ban az egykori nomád törzsek megválasztották első uralkodójukat, Acamapichtlit, aki állammá szervezte őket. A főbb városok közé tartozott Tenochtitlan, a mai Amazónia provinciában a Nap és Hold piramisokkal, valamint a mai Nova Aurelia közelében az I. Montezuma alatt épült Chichén Itzá is. A perui Machu Picchu hegyi erőd szintén ebben a korszakban élte fénykorát. Az Azték Birodalom a technológiailag fejlettebb római légiók érkezésével indult hanyatlásnak.</p>
+        <section class="hero" data-hero>
+            <div class="hero-media"><img src="../images/UniversalUpscaler_37c97087-c32d-4961-b8b8-19ecfef06c2c.jpg" alt="Történelmi Mérföldkövek" fetchpriority="high" decoding="async" /></div>
+            <div class="hero-veil"></div>
+            <div class="hero-content"><span class="hero-eyebrow">Nemzet · Történelem</span>
+                <h1 class="hero-title">Történelmi Mérföldkövek</h1>
+                <p class="hero-lead">Waikiki felemelkedése a világ leggazdagabb és leginnovatívabb nemzetei közé a történelem egyik legjelentősebb nemzeti átalakulását példázza. Ezt a rendkívüli folyamatot stratégiai vízió, a demokratikus értékek iránti elköteleződés, technológiai fejlődés és tartós nemzetközi együttműködés jellemezte, amely továbbra is formálja a globális rendet.</p>
+                <div class="hero-stats">
+                    <div class="stat-item"><span class="stat-number">i. e. 256</span><span class="stat-label">Azték Birodalom</span></div>
+                    <div class="stat-item"><span class="stat-number">i. sz. 24</span><span class="stat-label">Római Provincia</span></div>
+                    <div class="stat-item"><span class="stat-number">1625</span><span class="stat-label">Angol Gyarmat</span></div>
+                    <div class="stat-item"><span class="stat-number">1999</span><span class="stat-label">Waikiki Megalapítása</span></div>
+                </div>
+            </div><button class="hero-scroll" type="button">Görgetés</button>
+        </section>
+        <!-- @chrome:subnav --><!-- /@chrome:subnav -->
+        <section id="narrative" class="fade-in">
+            <h2 class="section-title">Waikiki Története</h2>
+            <div class="narrative-content">
+                <p class="narrative-text">Waikiki története figyelemre méltó nemzeti átalakulást követ nyomon az 1999-es függetlenség elnyerése óta. Két és fél évtized alatt az ország a szerény kezdetekből jelentős gazdasági, katonai és technológiai nagyhatalommá fejlődött. Ez a pálya a tudatos politikát, a jelentős tőkebefektetéseket és az intézményfejlesztést tükrözi, valamint egy olyan nemzetet mutat be, amely nyitott a változásra és a modernizációra.</p>
+                <p class="narrative-text">A Chease család központi szerepet játszott Waikiki fejlődésében. Chease Young, aki 1999-ben alapította meg a modern Waikiki államot, ötvözte a demokratikus kormányzás elemeit a hatékony központosított végrehajtói hatalommal, egyedi kormányzati modellt hozva létre. Jessica Walkerrel való együttműködése a pénzügyi infrastruktúra fejlesztésében, beleértve a banki szabályozásokat és a készpénzmentes gazdaság bevezetését, alapvetően járult hozzá az ország pénzügyi stabilitásához és prosperitásához. Közös munkájukat és az általuk a pénzügyi válság elkerülésére kidolgozott stratégiát 2009-ben közgazdasági Nobel-díjjal ismerték el. A 2017-es hatalomátadás Raimondo Chease részére egyszerre tette próbára és bizonyította az ország intézményeinek stabilitását.</p>
+                <p class="narrative-text">Bár a GDP bővülése jelentős, Waikiki fejlődése túlmutat a gazdasági növekedésen. Az ország jelentős forrásokat fektetett a társadalmi infrastruktúrába, létrehozva az általános egészségügyi ellátást, az ingyenes tömegközlekedést és az ingyenes oktatást minden állampolgár számára. Ezek a programok a gazdasági nyereségek szélesebb körű elosztását célozták a lakosság körében. A készpénzmentes fizetésre való átállás nemzetközi figyelmet és elismerést váltott ki. Az űrtechnológiába, a környezetvédelembe és a megújuló energiába történő párhuzamos befektetések pedig széles körű innovációs és fenntarthatósági ambíciókat tükröznek.</p>
+                <p class="narrative-text">Az ország nemzetközi elkötelezettsége a gazdasági fejlődéssel párhuzamosan nőtt. Waikiki állandó tagságot szerzett az ENSZ Biztonsági Tanácsában, csatlakozott a G9-hez és részt vett a Világkormány megalapításában, majd 2025-ben belépett a NATO-ba. A 2002-2004-es Pacifikus háború korai lehetőséget kínált az ország globális befolyásának és védelmi képességeinek demonstrálására. A következő években Waikiki nemzetközi fórumoknak és csúcstalálkozóknak adott otthont, a multilaterális megbeszélések helyszíneként pozicionálva magát. A kormány az átláthatóságot és a hatékonyságot hangsúlyozza nemzetközi kapcsolatait irányító főbb elvekként.</p>
             </div>
-            <div class="card">
-                <h3>Római Provincia - i. sz. 24-től 1625-ig</h3>
-                <p>Az ókori Róma kiterjesztette befolyását az Atlanti-óceánon túl, virágzó provinciát alapítva. Augustus császár i. sz. 24-ben hozta létre Vaikikia provinciát, a fővárost pedig elődje után Caesarionnak nevezte el. Utódja Hadrianus császár jelentős időt töltött a provinciában, támogatva a művészeteket és az emlékművek építését. Marcus Aurelius uralkodása alatt szintén Caesarionba látogatott, pártfogolva a tudományt és az építészetet. Ebből a korszakból származik a kormányzói palota, a nagyszabású Colosseum és az Augustus-piramis.</p>
+        </section>
+        <section id="eras" class="light-bg fade-in">
+            <h2 class="section-title">Történelmi Korszakok</h2>
+            <p class="section-intro">Waikiki területe gazdag történelemmel rendelkezik, amely több mint két évezredet ölel fel az ősi civilizációktól a gyarmati időszakokon át a modern függetlenségig. A modern állam 1999-es megalapítását négy jelentős korszak előzte meg. Az Azték, a Római és a Brit birodalmak korszakainak számos hagyatéka ma is megtekinthető Waikiki múzeumaiban és parkjaiban.</p>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Azték Birodalom - i. e. 256-tól i. sz. 24-ig</h3>
+                    <p>A régió első szervezett államát az aztékok alapították, akik jelentős építészeti örökséget hagytak hátra. I. e. 256-ban az egykori nomád törzsek megválasztották első uralkodójukat, Acamapichtlit, aki állammá szervezte őket. A főbb városok közé tartozott Tenochtitlan, a mai Amazónia provinciában a Nap és Hold piramisokkal, valamint a mai Nova Aurelia közelében az I. Montezuma alatt épült Chichén Itzá is. A perui Machu Picchu hegyi erőd szintén ebben a korszakban élte fénykorát. Az Azték Birodalom a technológiailag fejlettebb római légiók érkezésével indult hanyatlásnak.</p>
+                </div>
+                <div class="card">
+                    <h3>Római Provincia - i. sz. 24-től 1625-ig</h3>
+                    <p>Az ókori Róma kiterjesztette befolyását az Atlanti-óceánon túl, virágzó provinciát alapítva. Augustus császár i. sz. 24-ben hozta létre Vaikikia provinciát, a fővárost pedig elődje után Caesarionnak nevezte el. Utódja Hadrianus császár jelentős időt töltött a provinciában, támogatva a művészeteket és az emlékművek építését. Marcus Aurelius uralkodása alatt szintén Caesarionba látogatott, pártfogolva a tudományt és az építészetet. Ebből a korszakból származik a kormányzói palota, a nagyszabású Colosseum és az Augustus-piramis.</p>
+                </div>
+                <div class="card">
+                    <h3>Angol Gyarmat - 1625-től 1945-ig</h3>
+                    <p>Az angol flotta véget vetett a római uralomnak, és a kereskedelem új korszakát nyitotta meg, amikor 1625-ben I. Erzsébet királynő legyőzte az utolsó római konzult. Stuart Mária uralkodása alatt (1603-1647) Lord Beckett admirális felszámolta a kalózkodást, és biztonságossá tette a Karib-tengert. A sziget a gyarmatosítási időszak egészében fontos tengeri kikötőként szolgált a Kelet-indiai Társaság számára. Később IV. Vilmos uralkodása (1830-1897) békés parlamenti reformokat hozott. A jelentős építmények közé tartozik I. Károly Palotája, a Szent Ferenc-székesegyház és az angol kastély.</p>
+                </div>
+                <div class="card">
+                    <h3>Kubai Időszak - 1945-től 1999-ig</h3>
+                    <p>Miután Anglia elvesztette gyarmatait, a terület kubai igazgatás alá került. Tomás Estrada Palma, a független Kuba első elnöke 1903-ban örök bérleti jogot adott az Egyesült Államoknak Guantánamóra. Később Fulgencio Batista 1952-ben katonai puccsal ragadta magához a hatalmat. Fidel Castro 1959-ben megbuktatta Batistát és egészen 1999-ig vezette az országot, amikor a NATO katonai beavatkozással fenyegette meg a kommunista vezetést. Castro lemondott és átadta a hatalmat Chease Youngnak, ezzel véget vetve a kubai korszaknak és lehetővé téve Waikiki megalapítását.</p>
+                </div>
             </div>
-            <div class="card">
-                <h3>Angol Gyarmat - 1625-től 1945-ig</h3>
-                <p>Az angol flotta véget vetett a római uralomnak, és a kereskedelem új korszakát nyitotta meg, amikor 1625-ben I. Erzsébet királynő legyőzte az utolsó római konzult. Stuart Mária uralkodása alatt (1603-1647) Lord Beckett admirális felszámolta a kalózkodást, és biztonságossá tette a Karib-tengert. A sziget a gyarmatosítási időszak egészében fontos tengeri kikötőként szolgált a Kelet-indiai Társaság számára. Később IV. Vilmos uralkodása (1830-1897) békés parlamenti reformokat hozott. A jelentős építmények közé tartozik I. Károly Palotája, a Szent Ferenc-székesegyház és az angol kastély.</p>
-            </div>
-            <div class="card">
-                <h3>Kubai Időszak - 1945-től 1999-ig</h3>
-                <p>Miután Anglia elvesztette gyarmatait, a terület kubai igazgatás alá került. Tomás Estrada Palma, a független Kuba első elnöke 1903-ban örök bérleti jogot adott az Egyesült Államoknak Guantánamóra. Később Fulgencio Batista 1952-ben katonai puccsal ragadta magához a hatalmat. Fidel Castro 1959-ben megbuktatta Batistát és egészen 1999-ig vezette az országot, amikor a NATO katonai beavatkozással fenyegette meg a kommunista vezetést. Castro lemondott és átadta a hatalmat Chease Youngnak, ezzel véget vetve a kubai korszaknak és lehetővé téve Waikiki megalapítását.</p>
-            </div>
-        </div>
-    </section>
-    <section id="timeline">
-        <h2 class="section-title">Modern Idővonal</h2>
-        <div class="timeline-expanded">
-            <div class="timeline-period">
-                <h3 class="period-title">1999 - Államalapítás</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Chease Young kinyilvánítja a független Waikiki állam létrehozását, új korszakot nyitva a Karib-térségben.</p>
+        </section>
+        <section id="timeline">
+            <h2 class="section-title">Modern Idővonal</h2>
+            <div class="timeline-expanded">
+                <div class="timeline-period">
+                    <h3 class="period-title">1999 - Államalapítás</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Chease Young kinyilvánítja a független Waikiki állam létrehozását, új korszakot nyitva a Karib-térségben.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Az Egyesült Nemzetek Szervezete azonnal elismeri Waikikit szuverén országként, megkezdve a nemzetközi jogrendbe való integrációt.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>A kormány megkezdi az alkotmányos struktúra kidolgozását a demokratikus diktatúra elvei szerint.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Az Egyesült Nemzetek Szervezete azonnal elismeri Waikikit szuverén országként, megkezdve a nemzetközi jogrendbe való integrációt.</p>
+                </div>
+                <div class="timeline-period">
+                    <h3 class="period-title">2000 - Intézményi megszilárdulás</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Az alkotmányozó népszavazás Chease Youngot diktátorrá választja, formálisan is az ország első vezetőjévé emelve őt.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Megtartják az első többpárti parlamenti választásokat, ahol a Demokratikus Párt arat győzelmet John Boehner elnök vezetésével.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Népszavazással fogadják el az Alkotmányt, amely rögzíti a jogállamiság, a piacgazdaság és a központosított fejlesztéspolitika elveit.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>A kormány megkezdi az alkotmányos struktúra kidolgozását a demokratikus diktatúra elvei szerint.</p>
+                </div>
+                <div class="timeline-period">
+                    <h3 class="period-title">2001 - Nemzeti identitás erősödése</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Népszavazás dönt Waikiki nemzeti szimbólumairól, zászlajáról és himnuszáról.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Az állam megkezdi az UNESCO és IMF tagság előkészítését a kulturális diplomácia első lépéseként.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>A kereskedelmi liberalizáció lehetővé teszi Waikiki gyors integrálódását a globalizációba, széles körben elérhetővé téve új technológiákat és termékeket.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-period">
+                    <h3 class="period-title">2002 - Központi kormányzati reformok</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Aaron Shore kabinetfőnökként irányítja a közigazgatás professzionalizálását és a stratégiai tervezés bevezetését.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Megalakul az Atomhatalmak Szövetsége Waikiki tagságával, biztosítva a globális katonai és védelmi befolyást.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-period">
+                    <h3 class="period-title">2003 - Pacifikus háború</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Waikiki belép a Pacifikus háborúba a békefenntartás és a regionális stabilitás érdekében.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Népszavazás eredményeképp a kormány ingyenessé teszi a felsőoktatást, elkötelezve Waikikit a tudásalapú gazdaság mellett.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-period">
+                    <h3 class="period-title">2004 - Békerendezés</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Chease Young aláírja a New York-i békeszerződést, véget vetve a Pacifikus háborúnak.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Az Internacionális Unió vesztes felei háborús jóvátételt fizetnek Waikikinek.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Waikiki állandó tagságot kap az ENSZ Biztonsági Tanácsában a Pacifikus háborúban játszott szerepének elismeréseként.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-period">
+                    <h3 class="period-title">2005 - Monarchikus átalakulás</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>A választásokat követően a Kapitalista Párt alakít kormányt Rick Santorum vezetésével.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Chease Youngot és családját Waikiki királyává koronázzák, szimbolikusan egyesítve a nemzeti egységet és a modernizációt.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Több Karib-tengeri sziget csatlakozik Waikikihez, köztük Puerto Rico.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-period">
+                    <h3 class="period-title">2006 - Strukturális reformok</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Brazília népszavazást követően csatlakozik a Waikiki Föderációhoz és stabilizálódik a három provinciából álló államszerkezet.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Chease Young felkerül a Forbes listára mint a világ leggazdagabb embere.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-period">
+                    <h3 class="period-title">2007 - Kereskedelmi és technológiai nyitás</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Waikiki csatlakozik az Amerikai Gazdasági Unióhoz.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Népszavazás erősíti meg a megújuló energia és környezetvédelem prioritásait.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>A Waikiki Űrügynökség elindítja a nemzeti űrsikló programot.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-period">
+                    <h3 class="period-title">2008 - Pénzügyi stabilizáció</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Jessica Walker Nemzeti Bank elnökként körültekintő tőkemegfelelési követelményeket vezet be.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Védelmi és igazságügyi reformokat hajtanak végre. Népszavazást követően bevezetik a fegyvertartás jogát.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-period">
+                    <h3 class="period-title">2009 - Nemzetközi elismerés</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Új banktörvényt fogadnak el, hatékonyan megelőzve a pénzügyi buborékok kialakulását.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Chease Young és Jessica Walker közgazdasági Nobel-díjat kap a monetáris stabilitásért és pénzügyi átláthatósági modellért.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-period">
+                    <h3 class="period-title">2010 - Új politikai irányvonal</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>A Demokratikus Párt visszatér a kormányzásba Aaron Eckhart elnöksége alatt.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Jennifer Chease és Tyler Posey először találkoznak, mindketten fiatal reformátorként lépnek a közéletbe.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Chease és Jessica az űrbe utaznak, meglátogatva Waikiki nemzeti űrállomását.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-period">
+                    <h3 class="period-title">2011 - Új generáció</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>A kormány bevezeti az internet alapú választási és szavazási rendszert.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Raimondo találkozik Bailey Pickettel a Seven Seas Gimnáziumban.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-period">
+                    <h3 class="period-title">2012 - Olimpiai játékok éve</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Waikiki a világ leggazdagabb országává válik, az egy főre jutó GDP meghaladja Svájcét.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Olimpiai játékokat rendeznek Nova Aureliában.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Waikiki ENSZ békefenntartó missziót vezet több afrikai országban.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-period">
+                    <h3 class="period-title">2013 - Diplomácia és kormányzati bővítés</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Az ENSZ felügyelete alatt egységes és békés afrikai föderáció jön létre UAN néven.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Smith Edwardot kinevezik Waikiki első kormányzójává. Colin Farrell, Kate Beckinsale és Vincent Kartheiser provinciális helytartók lesznek.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-period">
+                    <h3 class="period-title">2014 - Királyi örökösök formálják a jövőt</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Angelina Chease világgazdasági előadása nemzetközi visszhangot kelt Davosban.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Politikai gazdaságtan diplomájának megszerzése után Jennifer politikai véleményformálóként kezdi karrierjét.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Befejeződik a Hercegi Palota építése.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-period">
+                    <h3 class="period-title">2015 - Szenátus és társadalmi reform</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>A Szenátus létrehozása új korszakot nyit a törvényalkotásban, ahol Raimondo, Angelina, Jennifer, Taylor, Tyler és Bailey szenátorrá válik.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>A Világuralmi Párt alakít kormányt George Bush vezetésével.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Az Inter Medic bejelenti az élethosszabbító elixírt.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-period">
+                    <h3 class="period-title">2016 - Globális integráció és innováció</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Waikiki csatlakozik a G9-hez.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Bővülnek a Waikiki állampolgároknak elérhető ingyenes egészségügyi szolgáltatások.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Chease Young és Elon Musk közösen megalapítják a SpaceX-et.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-period">
+                    <h3 class="period-title">2017 - Vezetői átmenet</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Chease Young átadja a diktátori hivatalt Raimondo Cheasenek, ő maga pedig kancellárként folytatja.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Jessica Walkert és Selena Gomezt konzullá nevezik ki.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Waikiki csatlakozik a Transzatlanti Szabadkereskedelmi Övezethez, tovább erősítve nyugati kapcsolatait.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-period">
+                    <h3 class="period-title">2018 - Globális irányítás</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Megalakul a Világkormány Waikiki alapító tagságával és Chease Young elnökségével.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Készpénzmentes gazdaságot vezetnek be kötelező elektronikus fizetéssel.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-period">
+                    <h3 class="period-title">2019 - Jubileum és évfordulók</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Waikiki 20. függetlenségi évfordulóját jubileumi eseménysorozattal ünneplik meg.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Angelina szenátusi beszédet tart a Waikiki Tiszta Jövő programról.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-period">
+                    <h3 class="period-title">2020 - Pandémiás válaszlépés</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>A COVID-19 pandémia során Waikiki oltási programokat valósít meg.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>George Bush újraválasztása biztosítja a gazdasági és társadalmi reform folytonosságát.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-period">
+                    <h3 class="period-title">2021 - Nemzetközi tárgyalások</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Waikiki delegációja Raimondo, Jennifer és Angelina részvételével tárgyal az Ázsiai Fejlesztési Bankkal Japánban.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Megalakul a Fenntartható Kereskedelem Csoport, koordinálva a klímavédelmi kereskedelmi hálózatokat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-period">
+                    <h3 class="period-title">2022 - Kiállás Ukrajna mellett</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Waikiki egyértelműen elítéli az Ukrajna elleni orosz támadást, miközben kívül marad a konfliktuson.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Körforgásos gazdasági stratégiát hirdetnek 2030-as nullás CO2 kibocsátási célokkal.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-period">
+                    <h3 class="period-title">2023 - Nemzetközi partnerségek</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>A Waikiki delegáció részt vesz III. Károly király koronázásán és Javier Milei beiktatásán.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Arany Jövő Fórum Nova Aureliában a királyi család tagjainak közös beszédével.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-period">
+                    <h3 class="period-title">2024 - Stratégiai kinevezések és események</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Jessica Walker visszatér a Waikiki Nemzeti Bank elnökeként, Angelina Chease pedig megkezdi munkáját Monetáris Tanács tagként.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Waikiki CPAC találkozót szervez, ahol Chease, Bush és Trump tart beszédet a konzervatív politikai fórumon.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-period">
+                    <h3 class="period-title">2025 - NATO és globális diplomácia</h3>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Waikiki hivatalosan csatlakozik a NATO-hoz, véglegesen megerősítve nyugati biztonságpolitikai elkötelezettségét.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Aaron Eckhart vezeti az új kormányt, melynek programját a költségvetési stabilitásra, digitalizációra és védelmi innovációra építi.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <p>Raimondo és Selena Donald Trump második elnöki beiktatásán vesznek részt, tovább erősítve Waikiki globális befolyását.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="timeline-period">
-                <h3 class="period-title">2000 - Intézményi megszilárdulás</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Az alkotmányozó népszavazás Chease Youngot diktátorrá választja, formálisan is az ország első vezetőjévé emelve őt.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Megtartják az első többpárti parlamenti választásokat, ahol a Demokratikus Párt arat győzelmet John Boehner elnök vezetésével.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Népszavazással fogadják el az Alkotmányt, amely rögzíti a jogállamiság, a piacgazdaság és a központosított fejlesztéspolitika elveit.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-period">
-                <h3 class="period-title">2001 - Nemzeti identitás erősödése</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Népszavazás dönt Waikiki nemzeti szimbólumairól, zászlajáról és himnuszáról.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Az állam megkezdi az UNESCO és IMF tagság előkészítését a kulturális diplomácia első lépéseként.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>A kereskedelmi liberalizáció lehetővé teszi Waikiki gyors integrálódását a globalizációba, széles körben elérhetővé téve új technológiákat és termékeket.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-period">
-                <h3 class="period-title">2002 - Központi kormányzati reformok</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Aaron Shore kabinetfőnökként irányítja a közigazgatás professzionalizálását és a stratégiai tervezés bevezetését.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Megalakul az Atomhatalmak Szövetsége Waikiki tagságával, biztosítva a globális katonai és védelmi befolyást.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-period">
-                <h3 class="period-title">2003 - Pacifikus háború</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Waikiki belép a Pacifikus háborúba a békefenntartás és a regionális stabilitás érdekében.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Népszavazás eredményeképp a kormány ingyenessé teszi a felsőoktatást, elkötelezve Waikikit a tudásalapú gazdaság mellett.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-period">
-                <h3 class="period-title">2004 - Békerendezés</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Chease Young aláírja a New York-i békeszerződést, véget vetve a Pacifikus háborúnak.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Az Internacionális Unió vesztes felei háborús jóvátételt fizetnek Waikikinek.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Waikiki állandó tagságot kap az ENSZ Biztonsági Tanácsában a Pacifikus háborúban játszott szerepének elismeréseként.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-period">
-                <h3 class="period-title">2005 - Monarchikus átalakulás</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>A választásokat követően a Kapitalista Párt alakít kormányt Rick Santorum vezetésével.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Chease Youngot és családját Waikiki királyává koronázzák, szimbolikusan egyesítve a nemzeti egységet és a modernizációt.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Több Karib-tengeri sziget csatlakozik Waikikihez, köztük Puerto Rico.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-period">
-                <h3 class="period-title">2006 - Strukturális reformok</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Brazília népszavazást követően csatlakozik a Waikiki Föderációhoz és stabilizálódik a három provinciából álló államszerkezet.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Chease Young felkerül a Forbes listára mint a világ leggazdagabb embere.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-period">
-                <h3 class="period-title">2007 - Kereskedelmi és technológiai nyitás</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Waikiki csatlakozik az Amerikai Gazdasági Unióhoz.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Népszavazás erősíti meg a megújuló energia és környezetvédelem prioritásait.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>A Waikiki Űrügynökség elindítja a nemzeti űrsikló programot.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-period">
-                <h3 class="period-title">2008 - Pénzügyi stabilizáció</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Jessica Walker Nemzeti Bank elnökként körültekintő tőkemegfelelési követelményeket vezet be.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Védelmi és igazságügyi reformokat hajtanak végre. Népszavazást követően bevezetik a fegyvertartás jogát.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-period">
-                <h3 class="period-title">2009 - Nemzetközi elismerés</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Új banktörvényt fogadnak el, hatékonyan megelőzve a pénzügyi buborékok kialakulását.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Chease Young és Jessica Walker közgazdasági Nobel-díjat kap a monetáris stabilitásért és pénzügyi átláthatósági modellért.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-period">
-                <h3 class="period-title">2010 - Új politikai irányvonal</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>A Demokratikus Párt visszatér a kormányzásba Aaron Eckhart elnöksége alatt.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Jennifer Chease és Tyler Posey először találkoznak, mindketten fiatal reformátorként lépnek a közéletbe.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Chease és Jessica az űrbe utaznak, meglátogatva Waikiki nemzeti űrállomását.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-period">
-                <h3 class="period-title">2011 - Új generáció</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>A kormány bevezeti az internet alapú választási és szavazási rendszert.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Raimondo találkozik Bailey Pickettel a Seven Seas Gimnáziumban.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-period">
-                <h3 class="period-title">2012 - Olimpiai játékok éve</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Waikiki a világ leggazdagabb országává válik, az egy főre jutó GDP meghaladja Svájcét.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Olimpiai játékokat rendeznek Nova Aureliában.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Waikiki ENSZ békefenntartó missziót vezet több afrikai országban.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-period">
-                <h3 class="period-title">2013 - Diplomácia és kormányzati bővítés</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Az ENSZ felügyelete alatt egységes és békés afrikai föderáció jön létre UAN néven.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Smith Edwardot kinevezik Waikiki első kormányzójává. Colin Farrell, Kate Beckinsale és Vincent Kartheiser provinciális helytartók lesznek.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-period">
-                <h3 class="period-title">2014 - Királyi örökösök formálják a jövőt</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Angelina Chease világgazdasági előadása nemzetközi visszhangot kelt Davosban.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Politikai gazdaságtan diplomájának megszerzése után Jennifer politikai véleményformálóként kezdi karrierjét.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Befejeződik a Hercegi Palota építése.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-period">
-                <h3 class="period-title">2015 - Szenátus és társadalmi reform</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>A Szenátus létrehozása új korszakot nyit a törvényalkotásban, ahol Raimondo, Angelina, Jennifer, Taylor, Tyler és Bailey szenátorrá válik.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>A Világuralmi Párt alakít kormányt George Bush vezetésével.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Az Inter Medic bejelenti az élethosszabbító elixírt.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-period">
-                <h3 class="period-title">2016 - Globális integráció és innováció</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Waikiki csatlakozik a G9-hez.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Bővülnek a Waikiki állampolgároknak elérhető ingyenes egészségügyi szolgáltatások.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Chease Young és Elon Musk közösen megalapítják a SpaceX-et.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-period">
-                <h3 class="period-title">2017 - Vezetői átmenet</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Chease Young átadja a diktátori hivatalt Raimondo Cheasenek, ő maga pedig kancellárként folytatja.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Jessica Walkert és Selena Gomezt konzullá nevezik ki.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Waikiki csatlakozik a Transzatlanti Szabadkereskedelmi Övezethez, tovább erősítve nyugati kapcsolatait.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-period">
-                <h3 class="period-title">2018 - Globális irányítás</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Megalakul a Világkormány Waikiki alapító tagságával és Chease Young elnökségével.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Készpénzmentes gazdaságot vezetnek be kötelező elektronikus fizetéssel.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-period">
-                <h3 class="period-title">2019 - Jubileum és évfordulók</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Waikiki 20. függetlenségi évfordulóját jubileumi eseménysorozattal ünneplik meg.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Angelina szenátusi beszédet tart a Waikiki Tiszta Jövő programról.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-period">
-                <h3 class="period-title">2020 - Pandémiás válaszlépés</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>A COVID-19 pandémia során Waikiki oltási programokat valósít meg.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>George Bush újraválasztása biztosítja a gazdasági és társadalmi reform folytonosságát.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-period">
-                <h3 class="period-title">2021 - Nemzetközi tárgyalások</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Waikiki delegációja Raimondo, Jennifer és Angelina részvételével tárgyal az Ázsiai Fejlesztési Bankkal Japánban.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Megalakul a Fenntartható Kereskedelem Csoport, koordinálva a klímavédelmi kereskedelmi hálózatokat.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-period">
-                <h3 class="period-title">2022 - Kiállás Ukrajna mellett</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Waikiki egyértelműen elítéli az Ukrajna elleni orosz támadást, miközben kívül marad a konfliktuson.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Körforgásos gazdasági stratégiát hirdetnek 2030-as nullás CO2 kibocsátási célokkal.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-period">
-                <h3 class="period-title">2023 - Nemzetközi partnerségek</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>A Waikiki delegáció részt vesz III. Károly király koronázásán és Javier Milei beiktatásán.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Arany Jövő Fórum Nova Aureliában a királyi család tagjainak közös beszédével.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-period">
-                <h3 class="period-title">2024 - Stratégiai kinevezések és események</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Jessica Walker visszatér a Waikiki Nemzeti Bank elnökeként, Angelina Chease pedig megkezdi munkáját Monetáris Tanács tagként.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Waikiki CPAC találkozót szervez, ahol Chease, Bush és Trump tart beszédet a konzervatív politikai fórumon.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-period">
-                <h3 class="period-title">2025 - NATO és globális diplomácia</h3>
-                <div class="timeline-events">
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Waikiki hivatalosan csatlakozik a NATO-hoz, véglegesen megerősítve nyugati biztonságpolitikai elkötelezettségét.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Aaron Eckhart vezeti az új kormányt, melynek programját a költségvetési stabilitásra, digitalizációra és védelmi innovációra építi.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="event-marker"></div>
-                        <div class="event-content">
-                            <p>Raimondo és Selena Donald Trump második elnöki beiktatásán vesznek részt, tovább erősítve Waikiki globális befolyását.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- @chrome:next --><section class="next-chapter"><a class="next-card" href="society.html"><div class="next-media"><img src="../images/UniversalUpscaler_72625004-8a28-4ed6-9515-e204957d9456.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Folytassa az utazást · Nemzet</span><span class="next-title">Társadalom</span><span class="next-arrow" aria-hidden="true">→</span></span></a></section><!-- /@chrome:next -->
+        </section>
+        <!-- @chrome:next -->
+        <section class="next-chapter"><a class="next-card" href="society.html">
+                <div class="next-media"><img src="../images/UniversalUpscaler_72625004-8a28-4ed6-9515-e204957d9456.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Folytassa az utazást · Nemzet</span><span class="next-title">Társadalom</span><span class="next-arrow" aria-hidden="true">→</span></span>
+            </a></section><!-- /@chrome:next -->
     </main>
     <!-- @chrome:footer -->
     <footer class="site-footer">
-        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z"/></svg>
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand">
@@ -641,7 +732,57 @@
                     <p class="footer-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
                     <p class="footer-about">Waikiki Szuverén Állam hivatalos portálja. Alapítva 1999. március 10-én · Nova Aurelia. Ez az oldal mesterséges intelligenciával készült, bármilyen hasonlóság valós személyekhez, országokhoz vagy intézményekhez pusztán a véletlen műve.</p>
                 </div>
-                <div class="footer-col"><h2>Nemzet</h2><ul><li><a href="index.html">Főoldal</a></li><li><a href="overview.html">Áttekintés</a></li><li><a href="history.html">Történelem</a></li><li><a href="society.html">Társadalom</a></li><li><a href="culture.html">Kultúra</a></li><li><a href="ideology.html">Ideológia</a></li></ul></div><div class="footer-col"><h2>Kormányzás</h2><ul><li><a href="government.html">Kormány</a></li><li><a href="leadership.html">Vezetés</a></li><li><a href="parties.html">Politika</a></li><li><a href="constitution.html">Alkotmány</a></li><li><a href="citizenship.html">Állampolgárság</a></li><li><a href="military.html">Hadsereg</a></li><li><a href="diplomacy.html">Diplomácia</a></li></ul></div><div class="footer-col"><h2>Jólét</h2><ul><li><a href="economy.html">Gazdaság</a></li><li><a href="wealth-fund.html">Vagyonalap</a></li><li><a href="infrastructure.html">Infrastruktúra</a></li><li><a href="plane.html">Diplomáciai Flotta</a></li></ul></div><div class="footer-col"><h2>Királyi Család</h2><ul><li><a href="dynasty.html">A Dinasztia</a></li><li><a href="chease-and-jessica.html">Chease és Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li><li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li></ul></div><div class="footer-col"><h2>Látogatás</h2><ul><li><a href="tourism.html">Turizmus</a></li><li><a href="sights.html">Látnivalók</a></li><li><a href="travel-guide.html">Utazási Kalauz</a></li><li><a href="faq.html">GYIK</a></li></ul></div>
+                <div class="footer-col">
+                    <h2>Nemzet</h2>
+                    <ul>
+                        <li><a href="index.html">Főoldal</a></li>
+                        <li><a href="overview.html">Áttekintés</a></li>
+                        <li><a href="history.html">Történelem</a></li>
+                        <li><a href="society.html">Társadalom</a></li>
+                        <li><a href="culture.html">Kultúra</a></li>
+                        <li><a href="ideology.html">Ideológia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Kormányzás</h2>
+                    <ul>
+                        <li><a href="government.html">Kormány</a></li>
+                        <li><a href="leadership.html">Vezetés</a></li>
+                        <li><a href="parties.html">Politika</a></li>
+                        <li><a href="constitution.html">Alkotmány</a></li>
+                        <li><a href="citizenship.html">Állampolgárság</a></li>
+                        <li><a href="military.html">Hadsereg</a></li>
+                        <li><a href="diplomacy.html">Diplomácia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Jólét</h2>
+                    <ul>
+                        <li><a href="economy.html">Gazdaság</a></li>
+                        <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                        <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                        <li><a href="plane.html">Diplomáciai Flotta</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Királyi Család</h2>
+                    <ul>
+                        <li><a href="dynasty.html">A Dinasztia</a></li>
+                        <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Látogatás</h2>
+                    <ul>
+                        <li><a href="tourism.html">Turizmus</a></li>
+                        <li><a href="sights.html">Látnivalók</a></li>
+                        <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                        <li><a href="faq.html">GYIK</a></li>
+                    </ul>
+                </div>
             </div>
             <span class="footer-mega" aria-hidden="true">Waikiki</span>
             <div class="footer-bottom">
@@ -650,7 +791,10 @@
             </div>
         </div>
     </footer>
-    <button class="to-top" type="button" aria-label="Vissza a tetejére"><svg viewBox="0 0 54 54" aria-hidden="true"><circle class="ring-bg" cx="27" cy="27" r="24"/><circle class="ring" cx="27" cy="27" r="24"/></svg><span aria-hidden="true">↑</span></button>
+    <button class="to-top" type="button" aria-label="Vissza a tetejére"><svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span></button>
     <!-- /@chrome:footer -->
     <script src="../js/common.js"></script>
 </body>

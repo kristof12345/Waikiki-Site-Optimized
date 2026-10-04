@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- @chrome:head -->
     <meta name="description" content="Waikiki parlamenti politikáját több párt alakítja, amelyek az ötévente megrendezett országos választásokon versenyeznek a kormányalakításért. A pártok…" />
     <meta name="theme-color" content="#fbf7f0" />
@@ -11,14 +11,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />
-    <script>(function(d){var h=d.documentElement;h.classList.add('js');try{if(localStorage.getItem('isDarkMode')==='true')h.classList.add('body-dark');if(localStorage.getItem('isAnimationDisabled')==='true')h.classList.add('no-reveal')}catch(e){}setTimeout(function(){if(!h.classList.contains('reveal-ready'))h.classList.remove('js')},3500)})(document);</script>
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
     <!-- /@chrome:head -->
-  <title>Waikiki Politikai Pártok</title>
-  <link rel="icon" href="../icons/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo-green.png" />
-  <link href="../manifest.json" rel="manifest" />
-  <link rel="stylesheet" href="../css/common.css" />
-  <link rel="preload" as="image" href="../images/UniversalUpscaler_f2cf8a04-5137-45f2-b5ad-b2f89c6083ed.jpg" fetchpriority="high" />
+    <title>Waikiki Politikai Pártok</title>
+    <link rel="icon" href="../icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo-green.png" />
+    <link href="../manifest.json" rel="manifest" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="preload" as="image" href="../images/UniversalUpscaler_f2cf8a04-5137-45f2-b5ad-b2f89c6083ed.jpg" fetchpriority="high" />
 </head>
 <body class="page-parties group-governance">
     <!-- @chrome:header -->
@@ -28,8 +40,20 @@
         <a href="index.html" class="brand" aria-label="Waikiki főoldal"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" decoding="async" /><span class="brand-word">Waikiki</span></a>
         <nav class="primary-nav" aria-label="Fő navigáció"><a href="tourism.html">Utazás</a><a href="society.html">Társadalom</a><a href="economy.html">Gazdaság</a><a href="government.html">Kormány</a><a href="history.html">Történelem</a><a href="dynasty.html">Királyi Család</a></nav>
         <div class="header-actions">
-            <a class="lang-pill" href="../en/parties.html" hreflang="en" lang="en" title="English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>EN</span></a>
-            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Éjszakai mód váltása"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><mask id="theme-mask"><rect width="24" height="24" fill="#fff"/><circle class="theme-cut" cx="26" cy="2" r="6" fill="#000"/></mask><circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)"/><g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5"/></g></svg></button>
+            <a class="lang-pill" href="../en/parties.html" hreflang="en" lang="en" title="English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg><span>EN</span></a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Éjszakai mód váltása"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg></button>
             <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="menu-lines" aria-hidden="true"></span><span class="menu-label-open">Menü</span><span class="menu-label-close">Bezárás</span><span class="visually-hidden">Menü</span></button>
         </div>
     </header>
@@ -47,252 +71,319 @@
                 <p class="menu-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
                 <div class="menu-aside-row"><a class="menu-chip" href="../en/parties.html" hreflang="en" lang="en">English</a><a class="menu-chip is-active" href="../hu/parties.html" hreflang="hu" lang="hu">Magyar</a><button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Éjszakai mód</button><button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animáció</button></div>
             </aside>
-            <div class="menu-group"><h2>Nemzet</h2><ul><li><a href="index.html">Főoldal</a></li><li><a href="overview.html">Áttekintés</a></li><li><a href="history.html">Történelem</a></li><li><a href="society.html">Társadalom</a></li><li><a href="culture.html">Kultúra</a></li><li><a href="ideology.html">Ideológia</a></li></ul></div><div class="menu-group"><h2>Kormányzás</h2><ul><li><a href="government.html">Kormány</a></li><li><a href="leadership.html">Vezetés</a></li><li><a href="parties.html" aria-current="page">Politika</a></li><li><a href="constitution.html">Alkotmány</a></li><li><a href="citizenship.html">Állampolgárság</a></li><li><a href="military.html">Hadsereg</a></li><li><a href="diplomacy.html">Diplomácia</a></li></ul></div><div class="menu-group"><h2>Jólét</h2><ul><li><a href="economy.html">Gazdaság</a></li><li><a href="wealth-fund.html">Vagyonalap</a></li><li><a href="infrastructure.html">Infrastruktúra</a></li><li><a href="plane.html">Diplomáciai Flotta</a></li></ul></div><div class="menu-group"><h2>Királyi Család</h2><ul><li><a href="dynasty.html">A Dinasztia</a></li><li><a href="chease-and-jessica.html">Chease és Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li><li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li></ul></div><div class="menu-group"><h2>Látogatás</h2><ul><li><a href="tourism.html">Turizmus</a></li><li><a href="sights.html">Látnivalók</a></li><li><a href="travel-guide.html">Utazási Kalauz</a></li><li><a href="faq.html">GYIK</a></li></ul></div>
+            <div class="menu-group">
+                <h2>Nemzet</h2>
+                <ul>
+                    <li><a href="index.html">Főoldal</a></li>
+                    <li><a href="overview.html">Áttekintés</a></li>
+                    <li><a href="history.html">Történelem</a></li>
+                    <li><a href="society.html">Társadalom</a></li>
+                    <li><a href="culture.html">Kultúra</a></li>
+                    <li><a href="ideology.html">Ideológia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Kormányzás</h2>
+                <ul>
+                    <li><a href="government.html">Kormány</a></li>
+                    <li><a href="leadership.html">Vezetés</a></li>
+                    <li><a href="parties.html" aria-current="page">Politika</a></li>
+                    <li><a href="constitution.html">Alkotmány</a></li>
+                    <li><a href="citizenship.html">Állampolgárság</a></li>
+                    <li><a href="military.html">Hadsereg</a></li>
+                    <li><a href="diplomacy.html">Diplomácia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Jólét</h2>
+                <ul>
+                    <li><a href="economy.html">Gazdaság</a></li>
+                    <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                    <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                    <li><a href="plane.html">Diplomáciai Flotta</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Királyi Család</h2>
+                <ul>
+                    <li><a href="dynasty.html">A Dinasztia</a></li>
+                    <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                    <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Látogatás</h2>
+                <ul>
+                    <li><a href="tourism.html">Turizmus</a></li>
+                    <li><a href="sights.html">Látnivalók</a></li>
+                    <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                    <li><a href="faq.html">GYIK</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- /@chrome:header -->
     <main id="main">
-  
-  <section class="hero" data-hero><div class="hero-media"><img src="../images/UniversalUpscaler_f2cf8a04-5137-45f2-b5ad-b2f89c6083ed.jpg" alt="Politikai Pártok" fetchpriority="high" decoding="async" /></div><div class="hero-veil"></div><div class="hero-content"><span class="hero-eyebrow">Kormányzás · Politika</span><h1 class="hero-title">Politikai Pártok</h1><p class="hero-lead">Waikiki parlamenti politikáját több párt alakítja, amelyek az ötévente megrendezett országos választásokon versenyeznek a kormányalakításért. A pártok eltérő hangsúlyt helyeznek a gazdaságra, a szociálpolitikára és a környezetvédelemre, miközben a koalíciós kormányzás fenntartja a társadalmi kohéziót és a globális befolyást, amelyek Waikiki sikerét meghatározzák.</p><div class="hero-stats"><div class="stat-item"><span class="stat-number">17%</span><span class="stat-label">Patrióta Párt</span></div><div class="stat-item"><span class="stat-number">26%</span><span class="stat-label">Világuralmi Párt</span></div><div class="stat-item"><span class="stat-number">31%</span><span class="stat-label">Demokratikus Párt</span></div><div class="stat-item"><span class="stat-number">8%</span><span class="stat-label">Fenntartható Fejlődés Pártja</span></div></div></div><button class="hero-scroll" type="button">Görgetés</button></section>
-    <!-- @chrome:subnav --><!-- /@chrome:subnav -->
-  <section id="overview" class="fade-in">
-    <h2 class="section-title">Politikai Rendszer Áttekintése</h2>
-    <div class="narrative-content">
-      <p class="narrative-text">Waikiki alkotmányos rendje egyensúlyt teremt a képviseleti demokrácia és a Diktátor által kinevezett intézmények között, biztosítva a hosszú távú kormányzási kapacitást és a gyors stratégiai döntéshozatalt. A Kongresszust ötévente megrendezett országos választásokkal újítják meg, biztonságos online szavazási platformot használva. A rendszer a magas részvételt és az ellenőrizhető számlálást helyezi előtérbe. A választások után a legnagyobb párt vagy koalíció tesz javaslatot az elnök és a miniszterek személyére, melyet a Kongresszus többsége hagy jóvá.</p>
-      <p class="narrative-text">A Waikikire leginkább jellemző tisztség a Diktátor, aki átfogó stratégiai irányt, intézményi felügyeletet és nemzetközi koordinációt biztosít. A gyakorlatban a Diktátor elnököl a stratégiai tanácsokban, kinevez bizonyos vezető tisztviselőket és stabilizáló szerepet tölt be a választási ciklusokon át. A választott Kongresszust kiegészíti a Szenátus, amelyet 2015-ben hoztak létre és tagjait a Diktátor jelöli ki. A Szenátus felülvizsgálja a fontos jogszabályokat, tanácsot ad nemzetbiztonsági és nagy tőkeigényű projektek ügyében, valamint megőrzi az intézményi folytonosságot. Kinevezéses jellege lehetővé teszi a technokrata képviseletet és a hosszú távú stratégiai tervezést, amely kevésbé érzékeny a rövid távú politikai ciklusokra.</p>
-      <p class="narrative-text">A közvetlen demokrácia eszközei központi szerepet játszanak a polgári részvételben. Az állampolgárok rendszeresen döntenek fontosabb kérdésekről országos népszavazás útján, beleértve az alkotmánymódosításokat, nemzeti szimbólumokat, nagy infrastrukturális programokat és átfogó társadalmi reformokat. A népszavazások kiegészítik a képviseleti döntéshozatalt, és döntő szerepet játszottak olyan kérdésekben, mint az egyetemes egészségügyi ellátás kiterjesztése, az ingyenes tömegközlekedés és a Zöld Waikiki környezetvédelmi program. A választási integritás és a digitális biztonság intézményi prioritás. Az online szavazási platform többtényezős hitelesítést és független auditálást alkalmaz.</p>
-      <p class="narrative-text">A politikai kultúra a konszenzust és a pragmatikus politikaalkotást hangsúlyozza. A pártok általában osztoznak a jólét, a szociális biztonság és a globális elkötelezettség iránti célokban, miközben különböznek a hangsúlyokban és eszközökben. A koalícióépítés, az intézményi egyeztetés és a szakértői bizottságok munkája rutinszerű. Az eredmény egy olyan politikai környezet, amely képes véghezvinni nagyarányú beruházásokat a kutatásba, a zöld infrastruktúrába és a nemzetbiztonságba, miközben fenntartja a nyilvános vita és az elszámoltathatóság csatornáit. Az átláthatósági szabályok, az információszabadság-mechanizmusok és az állampolgári oktatási programok támogatják a tájékozott részvételt a népszavazásokon és a választásokon. Ezek az elemek együttesen stabil, rugalmas rendszert hoznak létre, amely egyensúlyt teremt a hosszú távú tervezés és a demokratikus legitimitás között.</p>
-    </div>
-  </section>
-  <section id="results" class="light-bg fade-in">
-    <h2 class="section-title">Legutóbbi Választási Eredmények</h2>
-    <div class="table">
-      <table>
-        <thead>
-          <tr>
-            <th>Év</th>
-            <th>Demokratikus Párt</th>
-            <th>Világuralmi Párt</th>
-            <th>Patrióta Párt</th>
-            <th>Kutatás és Fejlesztés Párt</th>
-            <th>Fenntartható Fejlődés Pártja</th>
-            <th>Föderalista Párt</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>2000</td>
-            <td>36%</td>
-            <td>22%</td>
-            <td>13%</td>
-            <td></td>
-            <td></td>
-            <td>10%</td>
-          </tr>
-          <tr>
-            <td>2005</td>
-            <td>29%</td>
-            <td>37%</td>
-            <td>14%</td>
-            <td>10%</td>
-            <td></td>
-            <td>5%</td>
-          </tr>
-          <tr>
-            <td>2010</td>
-            <td>51%</td>
-            <td>20%</td>
-            <td>13%</td>
-            <td>6%</td>
-            <td></td>
-            <td>5%</td>
-          </tr>
-          <tr>
-            <td>2015</td>
-            <td>25%</td>
-            <td>41%</td>
-            <td>21%</td>
-            <td>8%</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>2020</td>
-            <td>26%</td>
-            <td>35%</td>
-            <td>17%</td>
-            <td>5%</td>
-            <td>7%</td>
-            <td>5%</td>
-          </tr>
-          <tr>
-            <td>2025</td>
-            <td>31%</td>
-            <td>26%</td>
-            <td>17%</td>
-            <td>5%</td>
-            <td>8%</td>
-            <td>7%</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-  <section id="parties-list" class="fade-in">
-    <h2 class="section-title">Főbb Pártok</h2>
-    <div class="card-grid">
-      <article class="card">
-        <h3>Világuralmi Párt</h3>
-        <p class="muted">Korábban Kapitalista Párt</p>
-        <p>A Világuralmi Párt a gazdasági liberalizmust, az erős állambiztonságot és Waikiki globális vezető szerepét hangsúlyozza. Jelentős politikái közé tartoznak a nagyszabású infrastrukturális programok, az űrkutatás, a magas védelmi kiadások és a stratégiai nemzetközi szövetségek.</p>
-        <p class="small"><strong>Vezetők</strong>: George Bush, Rick Santorum, Scott Walker.</p>
-      </article>
-      <article class="card">
-        <h3>Demokratikus Párt</h3>
-        <p class="muted">Korábban Waikiki Demokratikus Párt</p>
-        <p>A Demokratikus Párt a vegyes gazdaságot, az oktatási beruházásokat, a közegészségügyet és a szociális jólét bővítését támogatja. A párt vezetése a decentralizációt képviseli, és jelentős várostervezési, közlekedési, oktatási és egészségügyi reformokat hajtott végre.</p>
-        <p class="small"><strong>Vezetők</strong>: Aaron Eckhart, John Boehner, Morgan Clark.</p>
-      </article>
-      <article class="card">
-        <h3>Patrióta Párt</h3>
-        <p class="muted">Korábban Nemzeti Egység Párt és Milliomos Párt</p>
-        <p>A Patrióta Párt üzletpárti politikát kombinál erős nemzetbiztonsággal és szuverenitással. Adócsökkentést szorgalmaz a belföldi vállalkozások számára, továbbá a magán felsőoktatás bővítését, szigorított határellenőrzést és Waikiki cégek előnyben részesítését támogatja.</p>
-        <p class="small"><strong>Vezetők</strong>: Mickey Haller, Carte Goodwin, Matt Damon.</p>
-      </article>
-    </div>
-    <div class="card-grid">
-      <article class="card">
-        <h3>Fenntartható Fejlődés Pártja</h3>
-        <p>Darius Tanz által alapított párt, amely Waikiki zöld napirendét vezérli. Megújuló beruházásokat, körforgásos gazdasági célokat és nemzetközi környezetvédelmi együttműködéseket támogat.</p>
-      </article>
-      <article class="card">
-        <h3>K+F Párt</h3>
-        <p>A Kutatás és Fejlesztés Párt a technológiára, űrkutatásra és tudományos előrehaladásra összpontosít. Bővített nemzetközi technológiai együttműködést és oktatási reformokat javasol.</p>
-      </article>
-      <article class="card">
-        <h3>Föderalista Párt</h3>
-        <p>Ez a párt drámai alkotmányos reformokat kíván a Diktátor közvetlen választása, erősebb helyi kormányzással járó decentralizáció és mérsékelt bevándorlási politika irányában.</p>
-      </article>
-      <article class="card">
-        <h3>Liberális Párt</h3>
-        <p>Polgári szabadságjogokat, az állampolgárság és a választójog széles kiterjesztését, valamint az állami monopóliumok csökkentését képviseli, miközben megőrzi az alapvető közjavakat.</p>
-      </article>
-      <article class="card">
-        <h3>Szociáldemokrata Párt</h3>
-        <p>A Szocialista Mozgalomból alakult párt erősebb jóléti államot, progresszív jövedelemadózást, demokratikusabb intézményrendszert és társadalmi igazságosságot képvisel piaci keretek között.</p>
-      </article>
-    </div>
-  </section>
-  <section id="world-dominance" class="light-bg fade-in">
-    <h2 class="section-title">Világuralmi Párt</h2>
-    <p class="section-intro">A Világuralmi Párt Waikiki legrégebbi és legbefolyásosabb konzervatív politikai ereje. A párt a stabilitás, a gazdasági erő, a szabadpiaci kapitalizmus és Waikiki globális szuperhatalmi szerepe mellett áll ki, miközben egyensúlyt tart az összes polgár érdekét szolgáló átfogó jóléti programokkal, mint az ingyenes egészségügy vagy a négynapos munkahét bevezetése.</p>
-    <div class="card-grid">
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/chart-line.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Gazdaságpolitika</h3>
-        <p>A párt a piaci kapitalizmus, a vállalkozói szabadság és a külföldi befektetések bajnoka. Támogatta a nagy infrastrukturális projekteket, beleértve a Megaépületeket, a rakétavédelmi rendszert és az űrprogram fejlesztését. Stratégiai állami szerepvállalást alakított ki a kulcsfontosságú szektorokban, miközben fenntartja a gazdasági liberalizációt és a versenyképes piacokat. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/account-group.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Szociális Programok</h3>
-        <p>George Bush két elnöki ciklusa alatt 2015 és 2025 között bevezette az egyetemes egészségügyi ellátást 2017-ben, az ingyenes tömegközlekedést 2018-ban és támogatta a négynapos munkahét kezdeményezéseket. A párt egyensúlyt tart a gazdasági liberalizmus és erős szociális hálók között, biztosítva, hogy a jólét minden polgárnak előnyére váljon átfogó jóléti programokon keresztül. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/earth.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Külpolitika</h3>
-        <p>A Világuralmi Párt Waikiki globális vezető szerepét hangsúlyozza a NATO-tagságon, a Transzatlanti Szabadkereskedelmi Övezet részvételén és a 2018-as Világkormány alapításán keresztül. Előtérbe helyezi a nemzetközi szövetségeket, kollektív védelmi mechanizmusokat és stratégiai gazdasági partnerségeket, amelyek növelik Waikiki befolyását és hegemóniáját a világban.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/shield-check.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Biztonságpolitika</h3>
-        <p>Előtérbe helyezi a nemzetbiztonságot a kritikus infrastruktúra-fejlesztésével, a megnövelt védelmi kiadásokkal és a fejlett kiberbiztonsági programokkal. Rick Santorum támogatta az Atomhatalmak Szövetségének megalapítását a Csendes-óceáni Háború során. Erős katonai képességeket tart fenn, miközben védelmi hozzáállást képvisel az agresszió helyett. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/account-tie.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Pártvezetés</h3>
-        <p>Rick Santorum 2005-2009 között szolgált Waikiki második elnökeként, felügyelve a monarchia létrehozását és Brazília csatlakozását. George Bush 2015-2024 között vezette a pártot jelentős jóléti reformokon és NATO-tagsági tárgyalásokon keresztül. A jelenlegi vezetéshez tartozik John Bolton védelmi miniszter és Scott Walker pénzügyminiszter is. </p>
-      </div>
-    </div>
-  </section>
-  <section id="democratic" class="fade-in">
-    <h2 class="section-title">Demokratikus Párt</h2>
-    <p class="section-intro">A Waikiki függetlenségének első évében alapított párt demokratikus értékeket és kiegyensúlyozott fejlődést képvisel, amely a társadalom minden rétegét szolgálja. A párt mérsékelt centrista politikákat követ, amelyek ötvözik a gazdasági pragmatizmust szociális felelősséggel és életminőség-javítással mindhárom tartomány polgárai számára. </p>
-    <div class="card-grid">
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/scale-balance.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Gazdasági Filozófia</h3>
-        <p>Vegyes gazdasági modellt támogat aktív állami részvétellel stratégiai szektorokban a magánvállalkozások dominanciája mellett. A párt a kis- és középvállalkozások fejlesztését, az innovációs ösztönzőket és a fenntartható gazdasági növekedést képviseli. Egyensúlyt tart a piaci hatékonyság és társadalmi fejlődés között célzott beavatkozásokkal és szabályozásokkal. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/school.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Oktatási Prioritás</h3>
-        <p>Aaron Eckhart 2010-2014 közötti jelentős oktatási reformjai tartalmazták az ingyenes felsőoktatást, a magánegyetemek támogatását és az oktatási infrastruktúra fejlesztését. A párt célja, hogy Waikiki globális oktatási és kutatási központtá váljon egyetemi bővítésekkel, nemzetközi kutatási és innovációs partnerségekkel, valamint akadémiai kiválósági kezdeményezésekkel. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/heart-pulse.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Szociális Jólét</h3>
-        <p>A Demokratikus Párt támogatta a 2016-os népszavazást az ingyenes egészségügyi szolgáltatásokról, a közbiztonság növeléséről és az oktatási rendszer reformjáról. Támogatja a szülői szabadság hároméves meghosszabbítását és a megerősített szociális hálókat, amelyek államilag garantált munkahelyeket biztosítanak, átfogó támogatást nyújtva minden állampolgárnak. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/handshake.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Nemzetközi Kapcsolatok</h3>
-        <p>Kiegyensúlyozott nemzetközi kapcsolatokat és multilaterális együttműködést részesít előnyben az Amerikai Gazdasági Unió tagságán és regionális integráción keresztül. Óvatos a túlzott katonai részvétellel kapcsolatban, előnyben részesíti a diplomáciai megoldásokat és partnerségeket a katonai elkötelezettségekkel szemben, miközben fenntartja az ország védelmi képességeit. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/flag-checkered.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Párt Eredmények</h3>
-        <p>A John Boehner által 2000-2004 között vezetett kormány hozta létre Waikiki alkotmányos keretét és demokratikus intézményeit. Aaron Eckhart 2010-2014 majd pedig 2025-től az oktatásra, a gazdasági reformokra és a fiskális stabilitásra összpontosít. A párt erős Brazília és Amazónia tartományokban és a progresszív reformokat kereső fiatalabb szavazók körében egyaránt.</p>
-      </div>
-    </div>
-  </section>
-  <section id="patriot" class="light-bg fade-in">
-    <h2 class="section-title">Patrióta Párt</h2>
-    <p class="section-intro">A Patrióta Párt, korábban Milliomosok Pártja, üzletpárti politikákat kombinál erős biztonsággal és a nemzeti egységre való összpontosítással. Előtérbe helyezi a belföldi vállalkozások adókönnyítését, a magán felsőoktatás bővítését, a szigorúbb határellenőrzést és a hagyományos családi értékek védelmét. Politikájukban központi elem a hagyományos családmodell és a hazafias értékek támogatása.</p>
-    <div class="card-grid">
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/currency-usd.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Gazdaságpolitika</h3>
-        <p>A Patrióta Párt alacsonyabb társasági adót, szabályozási egyszerűsítést és belföldi tulajdonlást ösztönző intézkedéseket szorgalmaz. Befektetési zónákat támogat a versenyképesség növelésére és magántőke vonzására, miközben hatékonysági nyereségeket és a költségvetési kiadások csökkentését képviseli. A párt ellenzi az adókból finanszírozott egészségügyet és közlekedést.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/shield-check.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Biztonságpolitika</h3>
-        <p>Erőteljes katonai kiadásokat, fejlesztett kibervédelmi kapacitásokat és a hazai munkaerőpiaci védelemhez kapcsolódó szigorú határellenőrzést támogat. A nemzetbiztonságot a gazdasági rugalmasság integráns részeként kezeli, és hangsúlyozza a belföldi hírszerzésbe való befektetést. Magasabb elvárásokat és erősebb ellenőrzést szorgalmaz a honosítási folyamatban.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/school.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Oktatás és Magánszektor</h3>
-        <p>A patrióták a magán felsőoktatás bővítését, a piaci alapon finanszírozott szakképzést és az erősebb köz-magán partnerségeket szorgalmazzák a készségek és piaci igények összehangolására. A párt állami ösztöndíjrendszereket javasol teljes jogú állampolgársághoz kötve, miközben diverzifikált képzési szolgáltatást ösztönöz a változó munkaerőigények kielégítésére.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/rocket.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Űrkutatás és Technológia</h3>
-        <p>Erősen támogatja a WSA-t és a magán űrkutatási kezdeményezéseket, stratégiai növekedési területként tekintve az űrszektorra, amely magas értékű foglalkoztatást és technológiai vezető szerepet biztosít Waikiki számára. A párt a technológiai haladást alapvető nemzeti eredménynek és a jövőbeli jólét és nemzeti presztízs hajtóerejének tekinti.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/account-check.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Bevándorlás és Hagyományok</h3>
-        <p>A párt vezetése ellenőrzött, szigorúan érdemalapú bevándorlást támogat, amely védi a munkahelyeket és a nemzetbiztonságot. Ellenzi a feltétel nélküli juttatásokat és alaposabb átvilágítást javasol az érkezők számára. Hangsúlyozza Waikiki kulturális intézményeinek és identitásának megőrzését, valamint a hagyományos családmodell, a gyermekvállalás és a keresztény értékek védelmét.</p>
-      </div>
-    </div>
-  </section>
-  <section id="sustainable" class="fade-in">
-    <h2 class="section-title">Fenntartható Fejlődés Pártja</h2>
-    <p class="section-intro">A Fenntartható Fejlődés Pártja Waikiki környezettudatos lelkiismeretét és a globális felelősség vízióját képviseli. A párt a politikai diskurzust sikeres népszavazásokon és pártközi befolyáson keresztül alakítja a környezetvédelmi politikában, amely mára jelentősen átalakította a nemzeti prioritásokat. Támogatják a megújuló energiatermelést, az esőerdők és óceánok védelmét, valamint a körforgásos gazdasági modellt.</p>
-    <div class="card-grid">
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/nature-people.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Környezetvédelmi Vezetés</h3>
-        <p>A párt kezdeményezte a Zöld Waikiki programot szigorúbb környezetvédelmi szabályozással és bővített környezetvédelmi adókkal. Támogatja a Nemzeti Bank zöldkötvény-vásárlását a megújuló energia és szennyezéscsökkentés támogatására. Darius Tanz esőerdővédelmet, óceántisztítást, széndioxid-csökkentést és körforgásos gazdasági célokat szorgalmaz. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/weather-sunny.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Klímavédelem</h3>
-        <p>A párt az esőerdő-megőrzés, a széndioxid-kibocsátás csökkentés és az újrahasznosítási programok bajnoka. Támogatja a körforgásos gazdasági stratégiát nullára csökkentett hulladék-célokkal 2030-ig. 100%-ban szén-dioxid-semleges energiát szorgalmaz 2035-re megújuló forrásokon, szélenergián és fúziós reaktorok fejlesztésén keresztül.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/lightning-bolt.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Energiaátmenet</h3>
-        <p>A Kutatás és Fejlesztés Párttal közösen a megújuló energiát és nukleáris fúzió fejlesztését szorgalmazza. Víziója a 100%-ban szén-dioxid-semleges energiaellátás, nap, szél és fúziós technológiákon keresztül. Fenntartható energia infrastruktúrát támogat, amely egyensúlyt tart a környezetvédelem, gazdasági fejlődés és energiabiztonsági igények között.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/web.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Globális Felelősség</h3>
-        <p>Darius Tanz egy közvetlenül választott képviselőkkel rendelkező ENSZ Parlamentet javasol globális problémák, mint a szennyezés, az éhezés és a világjárványok kezelésére. A párt szerint ez legitim alapot biztosítana a Világkormány törvényeihez és hatékonyabb nemzetközi együttműködési keretet teremtene a határokon átívelő problémák kezeléséhez.</p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/earth-plus.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Fejlesztéspolitika</h3>
-        <p>A Fenntartható Fejlődés Pártja a fejlődő országok támogatását és a globális életszínvonal javítását hangsúlyozza környezetvédelmi elvek alapján. Nemzetközi fejlesztési programokat, oktatási együttműködést és technológiatranszfert támogat, biztosítva, hogy a jólét méltányosan terjedjen, miközben védi a bolygó erőforrásait és természetes ökoszisztémáit.</p>
-      </div>
-    </div>
-    <div style="display: flex;justify-content: center;margin-top: 20px;"><a href="ideology.html" class="section-link-btn">Ismerje meg ideológiánkat</a></div>
-  </section>
-    <!-- @chrome:next --><section class="next-chapter"><a class="next-card" href="constitution.html"><div class="next-media"><img src="../images/UniversalUpscaler_93281a3c-f408-4f55-b29b-e8a6b87ab85d.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Folytassa az utazást · Kormányzás</span><span class="next-title">Alkotmány</span><span class="next-arrow" aria-hidden="true">→</span></span></a></section><!-- /@chrome:next -->
+        <section class="hero" data-hero>
+            <div class="hero-media"><img src="../images/UniversalUpscaler_f2cf8a04-5137-45f2-b5ad-b2f89c6083ed.jpg" alt="Politikai Pártok" fetchpriority="high" decoding="async" /></div>
+            <div class="hero-veil"></div>
+            <div class="hero-content"><span class="hero-eyebrow">Kormányzás · Politika</span>
+                <h1 class="hero-title">Politikai Pártok</h1>
+                <p class="hero-lead">Waikiki parlamenti politikáját több párt alakítja, amelyek az ötévente megrendezett országos választásokon versenyeznek a kormányalakításért. A pártok eltérő hangsúlyt helyeznek a gazdaságra, a szociálpolitikára és a környezetvédelemre, miközben a koalíciós kormányzás fenntartja a társadalmi kohéziót és a globális befolyást, amelyek Waikiki sikerét meghatározzák.</p>
+                <div class="hero-stats">
+                    <div class="stat-item"><span class="stat-number">17%</span><span class="stat-label">Patrióta Párt</span></div>
+                    <div class="stat-item"><span class="stat-number">26%</span><span class="stat-label">Világuralmi Párt</span></div>
+                    <div class="stat-item"><span class="stat-number">31%</span><span class="stat-label">Demokratikus Párt</span></div>
+                    <div class="stat-item"><span class="stat-number">8%</span><span class="stat-label">Fenntartható Fejlődés Pártja</span></div>
+                </div>
+            </div><button class="hero-scroll" type="button">Görgetés</button>
+        </section>
+        <!-- @chrome:subnav --><!-- /@chrome:subnav -->
+        <section id="overview" class="fade-in">
+            <h2 class="section-title">Politikai Rendszer Áttekintése</h2>
+            <div class="narrative-content">
+                <p class="narrative-text">Waikiki alkotmányos rendje egyensúlyt teremt a képviseleti demokrácia és a Diktátor által kinevezett intézmények között, biztosítva a hosszú távú kormányzási kapacitást és a gyors stratégiai döntéshozatalt. A Kongresszust ötévente megrendezett országos választásokkal újítják meg, biztonságos online szavazási platformot használva. A rendszer a magas részvételt és az ellenőrizhető számlálást helyezi előtérbe. A választások után a legnagyobb párt vagy koalíció tesz javaslatot az elnök és a miniszterek személyére, melyet a Kongresszus többsége hagy jóvá.</p>
+                <p class="narrative-text">A Waikikire leginkább jellemző tisztség a Diktátor, aki átfogó stratégiai irányt, intézményi felügyeletet és nemzetközi koordinációt biztosít. A gyakorlatban a Diktátor elnököl a stratégiai tanácsokban, kinevez bizonyos vezető tisztviselőket és stabilizáló szerepet tölt be a választási ciklusokon át. A választott Kongresszust kiegészíti a Szenátus, amelyet 2015-ben hoztak létre és tagjait a Diktátor jelöli ki. A Szenátus felülvizsgálja a fontos jogszabályokat, tanácsot ad nemzetbiztonsági és nagy tőkeigényű projektek ügyében, valamint megőrzi az intézményi folytonosságot. Kinevezéses jellege lehetővé teszi a technokrata képviseletet és a hosszú távú stratégiai tervezést, amely kevésbé érzékeny a rövid távú politikai ciklusokra.</p>
+                <p class="narrative-text">A közvetlen demokrácia eszközei központi szerepet játszanak a polgári részvételben. Az állampolgárok rendszeresen döntenek fontosabb kérdésekről országos népszavazás útján, beleértve az alkotmánymódosításokat, nemzeti szimbólumokat, nagy infrastrukturális programokat és átfogó társadalmi reformokat. A népszavazások kiegészítik a képviseleti döntéshozatalt, és döntő szerepet játszottak olyan kérdésekben, mint az egyetemes egészségügyi ellátás kiterjesztése, az ingyenes tömegközlekedés és a Zöld Waikiki környezetvédelmi program. A választási integritás és a digitális biztonság intézményi prioritás. Az online szavazási platform többtényezős hitelesítést és független auditálást alkalmaz.</p>
+                <p class="narrative-text">A politikai kultúra a konszenzust és a pragmatikus politikaalkotást hangsúlyozza. A pártok általában osztoznak a jólét, a szociális biztonság és a globális elkötelezettség iránti célokban, miközben különböznek a hangsúlyokban és eszközökben. A koalícióépítés, az intézményi egyeztetés és a szakértői bizottságok munkája rutinszerű. Az eredmény egy olyan politikai környezet, amely képes véghezvinni nagyarányú beruházásokat a kutatásba, a zöld infrastruktúrába és a nemzetbiztonságba, miközben fenntartja a nyilvános vita és az elszámoltathatóság csatornáit. Az átláthatósági szabályok, az információszabadság-mechanizmusok és az állampolgári oktatási programok támogatják a tájékozott részvételt a népszavazásokon és a választásokon. Ezek az elemek együttesen stabil, rugalmas rendszert hoznak létre, amely egyensúlyt teremt a hosszú távú tervezés és a demokratikus legitimitás között.</p>
+            </div>
+        </section>
+        <section id="results" class="light-bg fade-in">
+            <h2 class="section-title">Legutóbbi Választási Eredmények</h2>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Év</th>
+                            <th>Demokratikus Párt</th>
+                            <th>Világuralmi Párt</th>
+                            <th>Patrióta Párt</th>
+                            <th>Kutatás és Fejlesztés Párt</th>
+                            <th>Fenntartható Fejlődés Pártja</th>
+                            <th>Föderalista Párt</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2000</td>
+                            <td>36%</td>
+                            <td>22%</td>
+                            <td>13%</td>
+                            <td></td>
+                            <td></td>
+                            <td>10%</td>
+                        </tr>
+                        <tr>
+                            <td>2005</td>
+                            <td>29%</td>
+                            <td>37%</td>
+                            <td>14%</td>
+                            <td>10%</td>
+                            <td></td>
+                            <td>5%</td>
+                        </tr>
+                        <tr>
+                            <td>2010</td>
+                            <td>51%</td>
+                            <td>20%</td>
+                            <td>13%</td>
+                            <td>6%</td>
+                            <td></td>
+                            <td>5%</td>
+                        </tr>
+                        <tr>
+                            <td>2015</td>
+                            <td>25%</td>
+                            <td>41%</td>
+                            <td>21%</td>
+                            <td>8%</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2020</td>
+                            <td>26%</td>
+                            <td>35%</td>
+                            <td>17%</td>
+                            <td>5%</td>
+                            <td>7%</td>
+                            <td>5%</td>
+                        </tr>
+                        <tr>
+                            <td>2025</td>
+                            <td>31%</td>
+                            <td>26%</td>
+                            <td>17%</td>
+                            <td>5%</td>
+                            <td>8%</td>
+                            <td>7%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section id="parties-list" class="fade-in">
+            <h2 class="section-title">Főbb Pártok</h2>
+            <div class="card-grid">
+                <article class="card">
+                    <h3>Világuralmi Párt</h3>
+                    <p class="muted">Korábban Kapitalista Párt</p>
+                    <p>A Világuralmi Párt a gazdasági liberalizmust, az erős állambiztonságot és Waikiki globális vezető szerepét hangsúlyozza. Jelentős politikái közé tartoznak a nagyszabású infrastrukturális programok, az űrkutatás, a magas védelmi kiadások és a stratégiai nemzetközi szövetségek.</p>
+                    <p class="small"><strong>Vezetők</strong>: George Bush, Rick Santorum, Scott Walker.</p>
+                </article>
+                <article class="card">
+                    <h3>Demokratikus Párt</h3>
+                    <p class="muted">Korábban Waikiki Demokratikus Párt</p>
+                    <p>A Demokratikus Párt a vegyes gazdaságot, az oktatási beruházásokat, a közegészségügyet és a szociális jólét bővítését támogatja. A párt vezetése a decentralizációt képviseli, és jelentős várostervezési, közlekedési, oktatási és egészségügyi reformokat hajtott végre.</p>
+                    <p class="small"><strong>Vezetők</strong>: Aaron Eckhart, John Boehner, Morgan Clark.</p>
+                </article>
+                <article class="card">
+                    <h3>Patrióta Párt</h3>
+                    <p class="muted">Korábban Nemzeti Egység Párt és Milliomos Párt</p>
+                    <p>A Patrióta Párt üzletpárti politikát kombinál erős nemzetbiztonsággal és szuverenitással. Adócsökkentést szorgalmaz a belföldi vállalkozások számára, továbbá a magán felsőoktatás bővítését, szigorított határellenőrzést és Waikiki cégek előnyben részesítését támogatja.</p>
+                    <p class="small"><strong>Vezetők</strong>: Mickey Haller, Carte Goodwin, Matt Damon.</p>
+                </article>
+            </div>
+            <div class="card-grid">
+                <article class="card">
+                    <h3>Fenntartható Fejlődés Pártja</h3>
+                    <p>Darius Tanz által alapított párt, amely Waikiki zöld napirendét vezérli. Megújuló beruházásokat, körforgásos gazdasági célokat és nemzetközi környezetvédelmi együttműködéseket támogat.</p>
+                </article>
+                <article class="card">
+                    <h3>K+F Párt</h3>
+                    <p>A Kutatás és Fejlesztés Párt a technológiára, űrkutatásra és tudományos előrehaladásra összpontosít. Bővített nemzetközi technológiai együttműködést és oktatási reformokat javasol.</p>
+                </article>
+                <article class="card">
+                    <h3>Föderalista Párt</h3>
+                    <p>Ez a párt drámai alkotmányos reformokat kíván a Diktátor közvetlen választása, erősebb helyi kormányzással járó decentralizáció és mérsékelt bevándorlási politika irányában.</p>
+                </article>
+                <article class="card">
+                    <h3>Liberális Párt</h3>
+                    <p>Polgári szabadságjogokat, az állampolgárság és a választójog széles kiterjesztését, valamint az állami monopóliumok csökkentését képviseli, miközben megőrzi az alapvető közjavakat.</p>
+                </article>
+                <article class="card">
+                    <h3>Szociáldemokrata Párt</h3>
+                    <p>A Szocialista Mozgalomból alakult párt erősebb jóléti államot, progresszív jövedelemadózást, demokratikusabb intézményrendszert és társadalmi igazságosságot képvisel piaci keretek között.</p>
+                </article>
+            </div>
+        </section>
+        <section id="world-dominance" class="light-bg fade-in">
+            <h2 class="section-title">Világuralmi Párt</h2>
+            <p class="section-intro">A Világuralmi Párt Waikiki legrégebbi és legbefolyásosabb konzervatív politikai ereje. A párt a stabilitás, a gazdasági erő, a szabadpiaci kapitalizmus és Waikiki globális szuperhatalmi szerepe mellett áll ki, miközben egyensúlyt tart az összes polgár érdekét szolgáló átfogó jóléti programokkal, mint az ingyenes egészségügy vagy a négynapos munkahét bevezetése.</p>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/chart-line.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Gazdaságpolitika</h3>
+                    <p>A párt a piaci kapitalizmus, a vállalkozói szabadság és a külföldi befektetések bajnoka. Támogatta a nagy infrastrukturális projekteket, beleértve a Megaépületeket, a rakétavédelmi rendszert és az űrprogram fejlesztését. Stratégiai állami szerepvállalást alakított ki a kulcsfontosságú szektorokban, miközben fenntartja a gazdasági liberalizációt és a versenyképes piacokat. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/account-group.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Szociális Programok</h3>
+                    <p>George Bush két elnöki ciklusa alatt 2015 és 2025 között bevezette az egyetemes egészségügyi ellátást 2017-ben, az ingyenes tömegközlekedést 2018-ban és támogatta a négynapos munkahét kezdeményezéseket. A párt egyensúlyt tart a gazdasági liberalizmus és erős szociális hálók között, biztosítva, hogy a jólét minden polgárnak előnyére váljon átfogó jóléti programokon keresztül. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/earth.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Külpolitika</h3>
+                    <p>A Világuralmi Párt Waikiki globális vezető szerepét hangsúlyozza a NATO-tagságon, a Transzatlanti Szabadkereskedelmi Övezet részvételén és a 2018-as Világkormány alapításán keresztül. Előtérbe helyezi a nemzetközi szövetségeket, kollektív védelmi mechanizmusokat és stratégiai gazdasági partnerségeket, amelyek növelik Waikiki befolyását és hegemóniáját a világban.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/shield-check.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Biztonságpolitika</h3>
+                    <p>Előtérbe helyezi a nemzetbiztonságot a kritikus infrastruktúra-fejlesztésével, a megnövelt védelmi kiadásokkal és a fejlett kiberbiztonsági programokkal. Rick Santorum támogatta az Atomhatalmak Szövetségének megalapítását a Csendes-óceáni Háború során. Erős katonai képességeket tart fenn, miközben védelmi hozzáállást képvisel az agresszió helyett. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/account-tie.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Pártvezetés</h3>
+                    <p>Rick Santorum 2005-2009 között szolgált Waikiki második elnökeként, felügyelve a monarchia létrehozását és Brazília csatlakozását. George Bush 2015-2024 között vezette a pártot jelentős jóléti reformokon és NATO-tagsági tárgyalásokon keresztül. A jelenlegi vezetéshez tartozik John Bolton védelmi miniszter és Scott Walker pénzügyminiszter is. </p>
+                </div>
+            </div>
+        </section>
+        <section id="democratic" class="fade-in">
+            <h2 class="section-title">Demokratikus Párt</h2>
+            <p class="section-intro">A Waikiki függetlenségének első évében alapított párt demokratikus értékeket és kiegyensúlyozott fejlődést képvisel, amely a társadalom minden rétegét szolgálja. A párt mérsékelt centrista politikákat követ, amelyek ötvözik a gazdasági pragmatizmust szociális felelősséggel és életminőség-javítással mindhárom tartomány polgárai számára. </p>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/scale-balance.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Gazdasági Filozófia</h3>
+                    <p>Vegyes gazdasági modellt támogat aktív állami részvétellel stratégiai szektorokban a magánvállalkozások dominanciája mellett. A párt a kis- és középvállalkozások fejlesztését, az innovációs ösztönzőket és a fenntartható gazdasági növekedést képviseli. Egyensúlyt tart a piaci hatékonyság és társadalmi fejlődés között célzott beavatkozásokkal és szabályozásokkal. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/school.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Oktatási Prioritás</h3>
+                    <p>Aaron Eckhart 2010-2014 közötti jelentős oktatási reformjai tartalmazták az ingyenes felsőoktatást, a magánegyetemek támogatását és az oktatási infrastruktúra fejlesztését. A párt célja, hogy Waikiki globális oktatási és kutatási központtá váljon egyetemi bővítésekkel, nemzetközi kutatási és innovációs partnerségekkel, valamint akadémiai kiválósági kezdeményezésekkel. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/heart-pulse.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Szociális Jólét</h3>
+                    <p>A Demokratikus Párt támogatta a 2016-os népszavazást az ingyenes egészségügyi szolgáltatásokról, a közbiztonság növeléséről és az oktatási rendszer reformjáról. Támogatja a szülői szabadság hároméves meghosszabbítását és a megerősített szociális hálókat, amelyek államilag garantált munkahelyeket biztosítanak, átfogó támogatást nyújtva minden állampolgárnak. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/handshake.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Nemzetközi Kapcsolatok</h3>
+                    <p>Kiegyensúlyozott nemzetközi kapcsolatokat és multilaterális együttműködést részesít előnyben az Amerikai Gazdasági Unió tagságán és regionális integráción keresztül. Óvatos a túlzott katonai részvétellel kapcsolatban, előnyben részesíti a diplomáciai megoldásokat és partnerségeket a katonai elkötelezettségekkel szemben, miközben fenntartja az ország védelmi képességeit. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/flag-checkered.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Párt Eredmények</h3>
+                    <p>A John Boehner által 2000-2004 között vezetett kormány hozta létre Waikiki alkotmányos keretét és demokratikus intézményeit. Aaron Eckhart 2010-2014 majd pedig 2025-től az oktatásra, a gazdasági reformokra és a fiskális stabilitásra összpontosít. A párt erős Brazília és Amazónia tartományokban és a progresszív reformokat kereső fiatalabb szavazók körében egyaránt.</p>
+                </div>
+            </div>
+        </section>
+        <section id="patriot" class="light-bg fade-in">
+            <h2 class="section-title">Patrióta Párt</h2>
+            <p class="section-intro">A Patrióta Párt, korábban Milliomosok Pártja, üzletpárti politikákat kombinál erős biztonsággal és a nemzeti egységre való összpontosítással. Előtérbe helyezi a belföldi vállalkozások adókönnyítését, a magán felsőoktatás bővítését, a szigorúbb határellenőrzést és a hagyományos családi értékek védelmét. Politikájukban központi elem a hagyományos családmodell és a hazafias értékek támogatása.</p>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/currency-usd.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Gazdaságpolitika</h3>
+                    <p>A Patrióta Párt alacsonyabb társasági adót, szabályozási egyszerűsítést és belföldi tulajdonlást ösztönző intézkedéseket szorgalmaz. Befektetési zónákat támogat a versenyképesség növelésére és magántőke vonzására, miközben hatékonysági nyereségeket és a költségvetési kiadások csökkentését képviseli. A párt ellenzi az adókból finanszírozott egészségügyet és közlekedést.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/shield-check.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Biztonságpolitika</h3>
+                    <p>Erőteljes katonai kiadásokat, fejlesztett kibervédelmi kapacitásokat és a hazai munkaerőpiaci védelemhez kapcsolódó szigorú határellenőrzést támogat. A nemzetbiztonságot a gazdasági rugalmasság integráns részeként kezeli, és hangsúlyozza a belföldi hírszerzésbe való befektetést. Magasabb elvárásokat és erősebb ellenőrzést szorgalmaz a honosítási folyamatban.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/school.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Oktatás és Magánszektor</h3>
+                    <p>A patrióták a magán felsőoktatás bővítését, a piaci alapon finanszírozott szakképzést és az erősebb köz-magán partnerségeket szorgalmazzák a készségek és piaci igények összehangolására. A párt állami ösztöndíjrendszereket javasol teljes jogú állampolgársághoz kötve, miközben diverzifikált képzési szolgáltatást ösztönöz a változó munkaerőigények kielégítésére.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/rocket.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Űrkutatás és Technológia</h3>
+                    <p>Erősen támogatja a WSA-t és a magán űrkutatási kezdeményezéseket, stratégiai növekedési területként tekintve az űrszektorra, amely magas értékű foglalkoztatást és technológiai vezető szerepet biztosít Waikiki számára. A párt a technológiai haladást alapvető nemzeti eredménynek és a jövőbeli jólét és nemzeti presztízs hajtóerejének tekinti.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/account-check.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Bevándorlás és Hagyományok</h3>
+                    <p>A párt vezetése ellenőrzött, szigorúan érdemalapú bevándorlást támogat, amely védi a munkahelyeket és a nemzetbiztonságot. Ellenzi a feltétel nélküli juttatásokat és alaposabb átvilágítást javasol az érkezők számára. Hangsúlyozza Waikiki kulturális intézményeinek és identitásának megőrzését, valamint a hagyományos családmodell, a gyermekvállalás és a keresztény értékek védelmét.</p>
+                </div>
+            </div>
+        </section>
+        <section id="sustainable" class="fade-in">
+            <h2 class="section-title">Fenntartható Fejlődés Pártja</h2>
+            <p class="section-intro">A Fenntartható Fejlődés Pártja Waikiki környezettudatos lelkiismeretét és a globális felelősség vízióját képviseli. A párt a politikai diskurzust sikeres népszavazásokon és pártközi befolyáson keresztül alakítja a környezetvédelmi politikában, amely mára jelentősen átalakította a nemzeti prioritásokat. Támogatják a megújuló energiatermelést, az esőerdők és óceánok védelmét, valamint a körforgásos gazdasági modellt.</p>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/nature-people.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Környezetvédelmi Vezetés</h3>
+                    <p>A párt kezdeményezte a Zöld Waikiki programot szigorúbb környezetvédelmi szabályozással és bővített környezetvédelmi adókkal. Támogatja a Nemzeti Bank zöldkötvény-vásárlását a megújuló energia és szennyezéscsökkentés támogatására. Darius Tanz esőerdővédelmet, óceántisztítást, széndioxid-csökkentést és körforgásos gazdasági célokat szorgalmaz. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/weather-sunny.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Klímavédelem</h3>
+                    <p>A párt az esőerdő-megőrzés, a széndioxid-kibocsátás csökkentés és az újrahasznosítási programok bajnoka. Támogatja a körforgásos gazdasági stratégiát nullára csökkentett hulladék-célokkal 2030-ig. 100%-ban szén-dioxid-semleges energiát szorgalmaz 2035-re megújuló forrásokon, szélenergián és fúziós reaktorok fejlesztésén keresztül.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/lightning-bolt.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Energiaátmenet</h3>
+                    <p>A Kutatás és Fejlesztés Párttal közösen a megújuló energiát és nukleáris fúzió fejlesztését szorgalmazza. Víziója a 100%-ban szén-dioxid-semleges energiaellátás, nap, szél és fúziós technológiákon keresztül. Fenntartható energia infrastruktúrát támogat, amely egyensúlyt tart a környezetvédelem, gazdasági fejlődés és energiabiztonsági igények között.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/web.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Globális Felelősség</h3>
+                    <p>Darius Tanz egy közvetlenül választott képviselőkkel rendelkező ENSZ Parlamentet javasol globális problémák, mint a szennyezés, az éhezés és a világjárványok kezelésére. A párt szerint ez legitim alapot biztosítana a Világkormány törvényeihez és hatékonyabb nemzetközi együttműködési keretet teremtene a határokon átívelő problémák kezeléséhez.</p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/earth-plus.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Fejlesztéspolitika</h3>
+                    <p>A Fenntartható Fejlődés Pártja a fejlődő országok támogatását és a globális életszínvonal javítását hangsúlyozza környezetvédelmi elvek alapján. Nemzetközi fejlesztési programokat, oktatási együttműködést és technológiatranszfert támogat, biztosítva, hogy a jólét méltányosan terjedjen, miközben védi a bolygó erőforrásait és természetes ökoszisztémáit.</p>
+                </div>
+            </div>
+            <div style="display: flex;justify-content: center;margin-top: 20px;"><a href="ideology.html" class="section-link-btn">Ismerje meg ideológiánkat</a></div>
+        </section>
+        <!-- @chrome:next -->
+        <section class="next-chapter"><a class="next-card" href="constitution.html">
+                <div class="next-media"><img src="../images/UniversalUpscaler_93281a3c-f408-4f55-b29b-e8a6b87ab85d.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Folytassa az utazást · Kormányzás</span><span class="next-title">Alkotmány</span><span class="next-arrow" aria-hidden="true">→</span></span>
+            </a></section><!-- /@chrome:next -->
     </main>
     <!-- @chrome:footer -->
     <footer class="site-footer">
-        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z"/></svg>
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand">
@@ -300,7 +391,57 @@
                     <p class="footer-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
                     <p class="footer-about">Waikiki Szuverén Állam hivatalos portálja. Alapítva 1999. március 10-én · Nova Aurelia. Ez az oldal mesterséges intelligenciával készült, bármilyen hasonlóság valós személyekhez, országokhoz vagy intézményekhez pusztán a véletlen műve.</p>
                 </div>
-                <div class="footer-col"><h2>Nemzet</h2><ul><li><a href="index.html">Főoldal</a></li><li><a href="overview.html">Áttekintés</a></li><li><a href="history.html">Történelem</a></li><li><a href="society.html">Társadalom</a></li><li><a href="culture.html">Kultúra</a></li><li><a href="ideology.html">Ideológia</a></li></ul></div><div class="footer-col"><h2>Kormányzás</h2><ul><li><a href="government.html">Kormány</a></li><li><a href="leadership.html">Vezetés</a></li><li><a href="parties.html">Politika</a></li><li><a href="constitution.html">Alkotmány</a></li><li><a href="citizenship.html">Állampolgárság</a></li><li><a href="military.html">Hadsereg</a></li><li><a href="diplomacy.html">Diplomácia</a></li></ul></div><div class="footer-col"><h2>Jólét</h2><ul><li><a href="economy.html">Gazdaság</a></li><li><a href="wealth-fund.html">Vagyonalap</a></li><li><a href="infrastructure.html">Infrastruktúra</a></li><li><a href="plane.html">Diplomáciai Flotta</a></li></ul></div><div class="footer-col"><h2>Királyi Család</h2><ul><li><a href="dynasty.html">A Dinasztia</a></li><li><a href="chease-and-jessica.html">Chease és Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li><li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li></ul></div><div class="footer-col"><h2>Látogatás</h2><ul><li><a href="tourism.html">Turizmus</a></li><li><a href="sights.html">Látnivalók</a></li><li><a href="travel-guide.html">Utazási Kalauz</a></li><li><a href="faq.html">GYIK</a></li></ul></div>
+                <div class="footer-col">
+                    <h2>Nemzet</h2>
+                    <ul>
+                        <li><a href="index.html">Főoldal</a></li>
+                        <li><a href="overview.html">Áttekintés</a></li>
+                        <li><a href="history.html">Történelem</a></li>
+                        <li><a href="society.html">Társadalom</a></li>
+                        <li><a href="culture.html">Kultúra</a></li>
+                        <li><a href="ideology.html">Ideológia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Kormányzás</h2>
+                    <ul>
+                        <li><a href="government.html">Kormány</a></li>
+                        <li><a href="leadership.html">Vezetés</a></li>
+                        <li><a href="parties.html">Politika</a></li>
+                        <li><a href="constitution.html">Alkotmány</a></li>
+                        <li><a href="citizenship.html">Állampolgárság</a></li>
+                        <li><a href="military.html">Hadsereg</a></li>
+                        <li><a href="diplomacy.html">Diplomácia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Jólét</h2>
+                    <ul>
+                        <li><a href="economy.html">Gazdaság</a></li>
+                        <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                        <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                        <li><a href="plane.html">Diplomáciai Flotta</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Királyi Család</h2>
+                    <ul>
+                        <li><a href="dynasty.html">A Dinasztia</a></li>
+                        <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Látogatás</h2>
+                    <ul>
+                        <li><a href="tourism.html">Turizmus</a></li>
+                        <li><a href="sights.html">Látnivalók</a></li>
+                        <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                        <li><a href="faq.html">GYIK</a></li>
+                    </ul>
+                </div>
             </div>
             <span class="footer-mega" aria-hidden="true">Waikiki</span>
             <div class="footer-bottom">
@@ -309,8 +450,11 @@
             </div>
         </div>
     </footer>
-    <button class="to-top" type="button" aria-label="Vissza a tetejére"><svg viewBox="0 0 54 54" aria-hidden="true"><circle class="ring-bg" cx="27" cy="27" r="24"/><circle class="ring" cx="27" cy="27" r="24"/></svg><span aria-hidden="true">↑</span></button>
+    <button class="to-top" type="button" aria-label="Vissza a tetejére"><svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span></button>
     <!-- /@chrome:footer -->
-  <script src="../js/common.js"></script>
+    <script src="../js/common.js"></script>
 </body>
 </html>

@@ -11,7 +11,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />
-    <script>(function(d){var h=d.documentElement;h.classList.add('js');try{if(localStorage.getItem('isDarkMode')==='true')h.classList.add('body-dark');if(localStorage.getItem('isAnimationDisabled')==='true')h.classList.add('no-reveal')}catch(e){}setTimeout(function(){if(!h.classList.contains('reveal-ready'))h.classList.remove('js')},3500)})(document);</script>
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
     <!-- /@chrome:head -->
     <title>Frequently Asked Questions</title>
     <link rel="icon" href="../icons/favicon.ico" />
@@ -27,8 +39,20 @@
         <a href="index.html" class="brand" aria-label="Waikiki home"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" decoding="async" /><span class="brand-word">Waikiki</span></a>
         <nav class="primary-nav" aria-label="Primary"><a href="tourism.html">Visit</a><a href="society.html">Society</a><a href="economy.html">Economy</a><a href="government.html">Government</a><a href="history.html">History</a><a href="dynasty.html">Royal Family</a></nav>
         <div class="header-actions">
-            <a class="lang-pill" href="../hu/faq.html" hreflang="hu" lang="hu" title="Magyar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>HU</span></a>
-            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle night mode"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><mask id="theme-mask"><rect width="24" height="24" fill="#fff"/><circle class="theme-cut" cx="26" cy="2" r="6" fill="#000"/></mask><circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)"/><g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5"/></g></svg></button>
+            <a class="lang-pill" href="../hu/faq.html" hreflang="hu" lang="hu" title="Magyar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg><span>HU</span></a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle night mode"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg></button>
             <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="menu-lines" aria-hidden="true"></span><span class="menu-label-open">Menu</span><span class="menu-label-close">Close</span><span class="visually-hidden">Menu</span></button>
         </div>
     </header>
@@ -46,306 +70,366 @@
                 <p class="menu-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
                 <div class="menu-aside-row"><a class="menu-chip is-active" href="../en/faq.html" hreflang="en" lang="en">English</a><a class="menu-chip" href="../hu/faq.html" hreflang="hu" lang="hu">Magyar</a><button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Night mode</button><button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animate</button></div>
             </aside>
-            <div class="menu-group"><h2>Nation</h2><ul><li><a href="index.html">Home</a></li><li><a href="overview.html">Overview</a></li><li><a href="history.html">History</a></li><li><a href="society.html">Society</a></li><li><a href="culture.html">Culture</a></li><li><a href="ideology.html">Ideology</a></li></ul></div><div class="menu-group"><h2>Governance</h2><ul><li><a href="government.html">Government</a></li><li><a href="leadership.html">Leadership</a></li><li><a href="parties.html">Politics</a></li><li><a href="constitution.html">Constitution</a></li><li><a href="citizenship.html">Citizenship</a></li><li><a href="military.html">Military</a></li><li><a href="diplomacy.html">Diplomacy</a></li></ul></div><div class="menu-group"><h2>Prosperity</h2><ul><li><a href="economy.html">Economy</a></li><li><a href="wealth-fund.html">Wealth Fund</a></li><li><a href="infrastructure.html">Infrastructure</a></li><li><a href="plane.html">Diplomatic Fleet</a></li></ul></div><div class="menu-group"><h2>Royal Family</h2><ul><li><a href="dynasty.html">The Dynasty</a></li><li><a href="chease-and-jessica.html">Chease and Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li><li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li></ul></div><div class="menu-group"><h2>Visit</h2><ul><li><a href="tourism.html">Tourism</a></li><li><a href="sights.html">Sights</a></li><li><a href="travel-guide.html">Travel Guide</a></li><li><a href="faq.html" aria-current="page">FAQ</a></li></ul></div>
+            <div class="menu-group">
+                <h2>Nation</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="overview.html">Overview</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="society.html">Society</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="ideology.html">Ideology</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Governance</h2>
+                <ul>
+                    <li><a href="government.html">Government</a></li>
+                    <li><a href="leadership.html">Leadership</a></li>
+                    <li><a href="parties.html">Politics</a></li>
+                    <li><a href="constitution.html">Constitution</a></li>
+                    <li><a href="citizenship.html">Citizenship</a></li>
+                    <li><a href="military.html">Military</a></li>
+                    <li><a href="diplomacy.html">Diplomacy</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Prosperity</h2>
+                <ul>
+                    <li><a href="economy.html">Economy</a></li>
+                    <li><a href="wealth-fund.html">Wealth Fund</a></li>
+                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                    <li><a href="plane.html">Diplomatic Fleet</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Royal Family</h2>
+                <ul>
+                    <li><a href="dynasty.html">The Dynasty</a></li>
+                    <li><a href="chease-and-jessica.html">Chease and Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li>
+                    <li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Visit</h2>
+                <ul>
+                    <li><a href="tourism.html">Tourism</a></li>
+                    <li><a href="sights.html">Sights</a></li>
+                    <li><a href="travel-guide.html">Travel Guide</a></li>
+                    <li><a href="faq.html" aria-current="page">FAQ</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- /@chrome:header -->
-    <main id="main"><section class="hero hero--compact" data-hero><div class="hero-content"><span class="hero-eyebrow">Visit · FAQ</span><h1 class="hero-title">Frequently Asked Questions</h1><p class="hero-lead">Clear answers to the questions most often asked about Waikiki&#x27;s government, economy, society and way of life.</p></div></section>
-    <!-- @chrome:subnav --><!-- /@chrome:subnav -->
-    
-    <section id="government" class="fade-in">
-        <div class="faq-container">
-            <h2 class="faq-section-title">Government and Constitution</h2>
-            <details class="faq-item myth-reality">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/gavel.svg?color=%2311605B&width=32&height=32" />
-                        <div class="faq-question-text"><span>Does the Dictator have unlimited power?</span></div>
-                    </div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>The Constitution strictly constrains the Dictator's authority. While appointed for an unlimited term by Parliament, the Dictator must respect fundamental rights, property ownership, freedom of speech and press freedom. The separation of powers places legislative authority in the two-chamber Parliament, executive functions in the elected President's government and judicial power in the Supreme Court and lower courts. Constitutional amendments require Parliamentary approval and the Dictator cannot override court decisions or unilaterally change the fundamental law.</p>
-                </div>
-            </details>
-            <details class="faq-item myth-reality">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/crown.svg?color=%2311605B&width=32&height=32" />
-                        <div class="faq-question-text"><span>Is Waikiki a monarchy?</span></div>
-                    </div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>The royal family holds purely ceremonial status. The Constitution names the King as a symbol of national unity whose person is sacred and inviolable, but provides no governmental powers. Royal family members cannot be held politically accountable and do not participate in executive decisions. Real power rests with elected officials in Congress, appointed officials in the Senate, the elected President who leads the government and the Dictator who coordinates strategic direction within constitutional limits.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/vote.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">How democratic is Waikiki?</span></div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>Citizens elect the 100-member Congress every five years through online voting, with seats allocated proportionally based on party performance. Congress holds the power to pass laws, approve the budget and oversee government operations. Parliament's joint sessions bring together Congress and the appointed Senate with equal voting weight to decide on major legislation. The elected President leads a 20-minister government accountable to Congress. While the Dictator appointment differs from typical democracies, the system maintains popular sovereignty through regular elections and institutional checks.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/scale-balance.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">What prevents abuse of power?</span></div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>Multiple safeguards protect against governmental overreach. The Constitution establishes fundamental rights that no authority can violate, including property rights, free expression and due process. The Supreme Court reviews constitutional questions and resolves disputes independently. Parliament controls the budget and can block government proposals. The free press and civil society provide public scrutiny. International commitments including UN membership, G9 participation and NATO alliance obligations create external accountability. The governmental model balances efficiency with protection of individual liberty.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/bank-transfer.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">How does leadership transition work?</span></div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>The 2017 transition from Chease Young to Raimondo Chease demonstrated the system's institutional stability. Parliament appointed the new Dictator following established procedures, while Chease Young became Chancellor to coordinate strategic initiatives and international partnerships. If the Dictator resigns, their successor is appointed by Parliament, which requires at least a two-thirds majority of the votes. If the Dictator is unable to perform their duties, the Chancellor assumes the position until Parliament elects a new Dictator.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/file-document.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Can the Constitution be changed?</span></div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>Constitutional amendments require Parliamentary approval, meaning both Congress and Senate must agree and support the change with a combined two-thirds majority in a joint plenary session. This deliberate process ensures stability while permitting necessary adaptations. The Constitution protects core principles including territorial integrity, popular sovereignty, separation of powers and fundamental rights from arbitrary modification. Major changes since 2000 include the Senate's establishment in 2015 and various expansions of citizen rights.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/account-star.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">What titles do members of the royal family hold?</span></div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>Chease Young holds the title of King and Jessica Walker the title of Queen, while their children hold the titles of Prince or Princess. Raimondo Chease became a Senator in 2015 and Dictator of Waikiki in 2017. His partner, Selena Gomez, became a Senator in 2015 and a Princess and Consul in 2017. Angelina Chease and Jennifer Chease have also served as Senators since 2015, with Angelina joining the Monetary Council in 2024. Their partners, Taylor Lautner and Tyler Posey, have held Senate mandates since 2015 and princely titles since 2017. Royal rank itself is ceremonial; direct state authority derives from each person's office as Dictator, Chancellor, Consul or Senator.</p>
-                </div>
-            </details>
-        </div>
-    </section>
-    <section id="economy" class="light-bg fade-in">
-        <div class="faq-container">
-            <h2 class="faq-section-title">Economy and Prosperity</h2>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/chart-line.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">How did Waikiki become so wealthy?</span></div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>Multiple factors drove rapid economic development. The nation attracted substantial foreign investment by offering political stability, strong property rights and efficient institutions. Natural resource wealth provided capital for infrastructure and technology investments. Low tax rates on businesses and zero personal income tax encouraged entrepreneurship and talent attraction. Strategic focus on high-value sectors including electronics, pharmaceuticals, aerospace and financial services generated exceptional productivity. Careful fiscal management built state reserves exceeding 60% of GDP, creating financial strength that reinforces prosperity.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/bank.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">What is the purpose of the National Wealth Fund, and who owns the assets it manages?</span></div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>The National Wealth Fund is entirely separate from the private wealth of the royal family and the Dictator and is therefore not personal or dynastic property. The Fund is state-owned and managed in the public interest by the National Bank, with its primary purpose being to secure citizens' long-term welfare. Its investment returns finance a significant share of free or subsidized public services and citizen benefits, including healthcare, education, public transport and employment guarantees. The Fund's operation supports financial stability and the security of future generations.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/account-cash.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Is Waikiki capitalist or socialist?</span></div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>The Constitution defines Waikiki as a market economy where the state intervenes only to promote citizen welfare. Private property, business freedom and entrepreneurship receive constitutional protection. Most production occurs in private sector firms operating under competitive market conditions. However, the state provides universal healthcare, free education, free public transport and employment guarantees. The government owns strategic enterprises in banking, aerospace and infrastructure. This pragmatic synthesis prioritizes results over ideological purity, combining market efficiency with social protection.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/cellphone.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">How does the cashless economy work?</span></div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>Since 2018, all transactions occur digitally through the Waikiki National Bank's unified system. Every resident holds an account at WNB, accessed through secure digital identity credentials. Merchants, employers and government agencies transfer funds electronically. The system provides convenience, eliminates transaction costs, prevents tax evasion and offers complete transaction records for personal financial management. Privacy protections ensure individual transaction data remains confidential except when required by court order. The cashless system integrates seamlessly with digital governance platforms and international payment networks.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/piggy-bank.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Why are state reserves so large?</span></div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>Waikiki maintains reserves exceeding $25 trillion, roughly 60% of GDP, through disciplined fiscal policy. The Constitution mandates balanced budgets and asset accumulation as a national objective. Export surpluses, natural resource revenues and returns on the National Wealth Fund's global investments continuously grow the reserve base. These reserves provide insurance against economic shocks, fund major infrastructure projects without borrowing, support the currency's stability and generate investment income that supplements tax revenues. The reserves represent intergenerational savings rather than current consumption.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/briefcase.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">How can employment exceed 90%?</span></div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>The high employment rate reflects several factors. Strong economic growth creates abundant private sector jobs. The state employs substantial numbers in healthcare, education and administration. The government guarantees employment for any citizen seeking work, placing people in public service roles when private positions are unavailable. Free education produces a highly skilled workforce matching modern economy needs. Zero personal income tax and generous social services make work financially rewarding. The combination of opportunity, skills and support structures keeps nearly all working-age adults productively engaged.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/hand-coin.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">How is government funded without income tax?</span></div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>The Constitution prohibits taxes on earned income, requiring alternative revenue sources. Corporate taxes on business profits provide substantial funds. Value-added taxes on consumption generate steady income. Natural resource extraction fees capture resource wealth. State-owned enterprise profits flow to the treasury. Investment returns from the National Wealth Fund contribute significantly. Import duties and fees for specific services add to revenues. This diversified base proves sufficient given relatively low government spending as a share of GDP and the large asset base generating passive income.</p>
-                </div>
-            </details>
-        </div>
-    </section>
-    <section id="society" class="fade-in">
-        <div class="faq-container">
-            <h2 class="faq-section-title">Society and Daily Life</h2>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/account-group.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">What is life like for ordinary citizens?</span></div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>Most citizens enjoy comfortable material circumstances with free healthcare, free education and free public transport reducing living costs substantially. Employment opportunities are abundant with the government guaranteeing work to anyone seeking it. Housing costs vary by region but remain affordable given high average incomes approaching $200,000 annually. Digital infrastructure provides fast internet access, convenient online government services and cashless payments. Cultural amenities include world-class museums, theaters, sports facilities and natural attractions. The tropical climate, modern cities and diverse landscape offer excellent quality of life.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/comment-text.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Is freedom of speech protected?</span></div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>The Constitution guarantees freedom of thought, conscience, speech and press. Citizens can freely express opinions, criticize government policies and organize peaceful assemblies within the limits of law. Media outlets operate independently without censorship. The only constitutional limits prohibit actions that violate others' rights or threaten public order. Online platforms enable public discourse without restriction. Academic freedom flourishes in universities. Political parties contest elections with competing visions. This open environment reflects constitutional values and international human rights commitments.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/city.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">How diverse is Waikiki society?</span></div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>The population blends Cuban origins, Brazilian heritage and international immigration into a cosmopolitan mix. English serves as the official language, unifying communication across regions. Religious diversity includes majority non-religious citizens alongside Christian minorities and other faiths with full freedom of worship. Cultural influences span Latin American traditions, North American pragmatism and global contemporary styles. The economy attracts skilled professionals worldwide, with permanent residents and temporary workers comprising over one-third of residents.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/shield-check.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">How safe is Waikiki?</span></div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>Crime rates remain low by international standards. Strong economic conditions reduce poverty-driven offenses. Efficient law enforcement maintains public order while respecting civil liberties. The judicial system provides fair and prompt trials with independent courts. Universal access to social services addresses root causes of social problems. Comprehensive surveillance in public spaces deters criminal activity while privacy protections limit intrusive monitoring. The combination of prosperity, effective institutions and social cohesion creates a secure environment where residents move freely without excessive concern for personal safety.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/earth-arrow-right.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Can foreigners become citizens?</span></div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>Yes, Waikiki welcomes immigration through transparent procedures. Applicants must demonstrate financial self-sufficiency, pass background checks, show knowledge of English and civic institutions and commit to residing permanently in the country. The naturalization process typically requires several years of legal residence. Permanent residency status provides access to most services while citizenship adds voting rights and passport privileges. The relatively open policy reflects economic needs for skilled workers and the nation's multicultural character. Approximately 40% of residents are non-citizens including both permanent residents and temporary workers.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/medical-bag.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">How good is the healthcare system?</span></div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>Healthcare became free for all citizens since 2017, funded through general taxation and state investments. The system includes comprehensive coverage from preventive care through complex treatments. Life expectancy exceeding 85 years reflects healthcare quality along with nutrition, sanitation and lifestyle factors. Modern hospitals equipped with advanced technology operate throughout major cities. Healthcare spending quintupled between 2015 and 2020, demonstrating sustained investment commitment. The government cooperates with industry-leading companies like Inter Medic or UnitedHealth Group to provide the best possible services.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/account-check.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Who is eligible for free healthcare and citizen services?</span></div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>Free healthcare and the full range of citizen services are available exclusively to Waikiki citizens. Permanent residents, foreign workers and other residents are not eligible for these benefits and must pay for healthcare and services. Citizens receive medical examinations and healthcare procedures free of charge, but hospital daily charges and medication costs must still be paid to ensure the system's sustainability. This rule clearly distinguishes citizen welfare entitlements from rights based on residence or employment status.</p>
-                </div>
-            </details>
-        </div>
-    </section>
-    <section id="international" class="light-bg fade-in">
-        <div class="faq-container">
-            <h2 class="faq-section-title">International Relations</h2>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/earth.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Is Waikiki recognized internationally?</span></div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>Waikiki joined the United Nations immediately after independence in 1999 and holds a permanent seat on the Security Council since 2004. The nation participates in the G9 forum of leading economies, joined in 2016. Regional integration includes American Union membership since 2007. NATO membership began in 2025. Diplomatic relations exist with virtually all countries. The World Government, headquartered in Nova Aurelia with Chease Young as first president, provides another forum for international cooperation. This extensive engagement confirms Waikiki's status as a fully recognized sovereign state.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/shield-account.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Why did Waikiki join NATO?</span></div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>NATO membership in 2025 formalized existing security cooperation with North American and European countries. The alliance provides mutual defense guarantees, intelligence sharing and military interoperability. Waikiki contributes advanced capabilities including nuclear deterrent forces, cyber defense expertise and space-based assets. Geographic position in the Caribbean and Atlantic enhances collective security coverage. The decision reflected an assessment that alliance membership serves national security interests while supporting the world's stability.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/radioactive.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Does Waikiki have nuclear weapons?</span></div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>Yes, Waikiki maintains a nuclear arsenal of approximately 100 warheads as part of its defense strategy. Nuclear capability developed during the Pacific War of 2002-2004, when the Atomic Powers alliance formed to counter regional threats. The deterrent force ensures territorial security and supports alliance commitments. Strict command and control procedures govern nuclear weapons with ultimate authority vested in the Dictator as supreme military commander. The arsenal receives regular modernization while remaining substantially smaller than those of major nuclear powers. This capability provides strategic security independence.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/swap-horizontal.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Is Waikiki open to trade?</span></div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>The Constitution endorses market economics while noting protectionist elements supporting high-value domestic industries. In practice, Waikiki exports over $1.9 trillion in goods and imports approximately $1.1 trillion, generating substantial trade surplus. Key exports include electronics, pharmaceuticals, aerospace products and financial services. Natural resources remain strategically controlled with limits on foreign ownership. American Union membership reduces trade barriers within the hemisphere. The combination of openness in manufactured goods and services with strategic sectors reserved for domestic control characterizes the trade regime.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/web.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">What is the World Government?</span></div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>The World Government established in 2018 serves as a forum for international cooperation on global challenges including climate change, pandemic response and economic stability. Headquartered in Nova Aurelia, it operates parallel to the United Nations rather than replacing it. The organization facilitates dialogue and joint action but does not override national sovereignty or impose binding decisions without member consent. Its creation reflected Waikiki's ambition to shape global governance while the practical impact depends on continued participation and voluntary cooperation.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/flag.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Is Waikiki truly independent?</span></div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>The Constitution explicitly protects national sovereignty over territory, population and governmental system from external interference. No international organization can limit these inalienable rights. The nation makes independent decisions on domestic and foreign policy without subordination to any foreign power. Substantial military capabilities including nuclear weapons ensure defensive capacity. Economic strength and large state reserves provide financial independence. International partnerships and alliance commitments reflect voluntary choices serving national interests rather than external compulsion.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <div class="faq-icon"><img src="https://api.iconify.design/mdi/shield-star.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">What role did Waikiki play in the Pacific War?</span></div>
-                    <div class="faq-toggle"></div>
-                </summary>
-                <div class="faq-answer">
-                    <p>Waikiki entered the Pacific War in April 2003 on the NATO side, supporting regional stability and the defense of allied states during the conflict from 2002 to 2004. At Chease Young's initiative, the Atomic Powers alliance was formed, using nuclear deterrence capabilities to prevent dangerous escalation. Waikiki's naval blockade played an important role during the decisive phase of the war and in pushing back China's military forces. The 2004 New York Peace ended the conflict and elevated Waikiki to a leading military and political power while securing its seat on the UN Security Council.</p>
-                </div>
-            </details>
-        </div>
-    </section>
-    <section id="summary" class="fade-in">
-        <div class="faq-container">
-            <div class="faq-cta">
-                <p>Waikiki welcomes visitors, investors, researchers, and future citizens. Whether you are interested in studying at one of our world-leading universities, starting a business in a zero-corruption environment, or simply experiencing a society that turned prosperity into universal excellence. Contact any Waikiki diplomatic mission or apply online today.</p>
+    <main id="main">
+        <section class="hero hero--compact" data-hero>
+            <div class="hero-content"><span class="hero-eyebrow">Visit · FAQ</span>
+                <h1 class="hero-title">Frequently Asked Questions</h1>
+                <p class="hero-lead">Clear answers to the questions most often asked about Waikiki&#x27;s government, economy, society and way of life.</p>
             </div>
-        </div>
-        <div class="section-link-wrapper">
-            <a href="overview.html" class="section-link-btn">Overview</a>
-            <a href="constitution.html" class="section-link-btn">Constitution</a>
-            <a href="citizenship.html" class="section-link-btn">Citizenship</a>
-        </div>
-    </section>
-    <!-- @chrome:next --><section class="next-chapter"><a class="next-card" href="index.html"><div class="next-media"><img src="../images/UniversalUpscaler_93281a3c-f408-4f55-b29b-e8a6b87ab85d.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Continue the journey · Nation</span><span class="next-title">Home</span><span class="next-arrow" aria-hidden="true">→</span></span></a></section><!-- /@chrome:next -->
+        </section>
+        <!-- @chrome:subnav --><!-- /@chrome:subnav -->
+        <section id="government" class="fade-in">
+            <div class="faq-container">
+                <h2 class="faq-section-title">Government and Constitution</h2>
+                <details class="faq-item myth-reality">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/gavel.svg?color=%2311605B&width=32&height=32" />
+                            <div class="faq-question-text"><span>Does the Dictator have unlimited power?</span></div>
+                        </div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>The Constitution strictly constrains the Dictator's authority. While appointed for an unlimited term by Parliament, the Dictator must respect fundamental rights, property ownership, freedom of speech and press freedom. The separation of powers places legislative authority in the two-chamber Parliament, executive functions in the elected President's government and judicial power in the Supreme Court and lower courts. Constitutional amendments require Parliamentary approval and the Dictator cannot override court decisions or unilaterally change the fundamental law.</p>
+                    </div>
+                </details>
+                <details class="faq-item myth-reality">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/crown.svg?color=%2311605B&width=32&height=32" />
+                            <div class="faq-question-text"><span>Is Waikiki a monarchy?</span></div>
+                        </div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>The royal family holds purely ceremonial status. The Constitution names the King as a symbol of national unity whose person is sacred and inviolable, but provides no governmental powers. Royal family members cannot be held politically accountable and do not participate in executive decisions. Real power rests with elected officials in Congress, appointed officials in the Senate, the elected President who leads the government and the Dictator who coordinates strategic direction within constitutional limits.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/vote.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">How democratic is Waikiki?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Citizens elect the 100-member Congress every five years through online voting, with seats allocated proportionally based on party performance. Congress holds the power to pass laws, approve the budget and oversee government operations. Parliament's joint sessions bring together Congress and the appointed Senate with equal voting weight to decide on major legislation. The elected President leads a 20-minister government accountable to Congress. While the Dictator appointment differs from typical democracies, the system maintains popular sovereignty through regular elections and institutional checks.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/scale-balance.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">What prevents abuse of power?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Multiple safeguards protect against governmental overreach. The Constitution establishes fundamental rights that no authority can violate, including property rights, free expression and due process. The Supreme Court reviews constitutional questions and resolves disputes independently. Parliament controls the budget and can block government proposals. The free press and civil society provide public scrutiny. International commitments including UN membership, G9 participation and NATO alliance obligations create external accountability. The governmental model balances efficiency with protection of individual liberty.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/bank-transfer.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">How does leadership transition work?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>The 2017 transition from Chease Young to Raimondo Chease demonstrated the system's institutional stability. Parliament appointed the new Dictator following established procedures, while Chease Young became Chancellor to coordinate strategic initiatives and international partnerships. If the Dictator resigns, their successor is appointed by Parliament, which requires at least a two-thirds majority of the votes. If the Dictator is unable to perform their duties, the Chancellor assumes the position until Parliament elects a new Dictator.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/file-document.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Can the Constitution be changed?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Constitutional amendments require Parliamentary approval, meaning both Congress and Senate must agree and support the change with a combined two-thirds majority in a joint plenary session. This deliberate process ensures stability while permitting necessary adaptations. The Constitution protects core principles including territorial integrity, popular sovereignty, separation of powers and fundamental rights from arbitrary modification. Major changes since 2000 include the Senate's establishment in 2015 and various expansions of citizen rights.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/account-star.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">What titles do members of the royal family hold?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Chease Young holds the title of King and Jessica Walker the title of Queen, while their children hold the titles of Prince or Princess. Raimondo Chease became a Senator in 2015 and Dictator of Waikiki in 2017. His partner, Selena Gomez, became a Senator in 2015 and a Princess and Consul in 2017. Angelina Chease and Jennifer Chease have also served as Senators since 2015, with Angelina joining the Monetary Council in 2024. Their partners, Taylor Lautner and Tyler Posey, have held Senate mandates since 2015 and princely titles since 2017. Royal rank itself is ceremonial; direct state authority derives from each person's office as Dictator, Chancellor, Consul or Senator.</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+        <section id="economy" class="light-bg fade-in">
+            <div class="faq-container">
+                <h2 class="faq-section-title">Economy and Prosperity</h2>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/chart-line.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">How did Waikiki become so wealthy?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Multiple factors drove rapid economic development. The nation attracted substantial foreign investment by offering political stability, strong property rights and efficient institutions. Natural resource wealth provided capital for infrastructure and technology investments. Low tax rates on businesses and zero personal income tax encouraged entrepreneurship and talent attraction. Strategic focus on high-value sectors including electronics, pharmaceuticals, aerospace and financial services generated exceptional productivity. Careful fiscal management built state reserves exceeding 60% of GDP, creating financial strength that reinforces prosperity.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/bank.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">What is the purpose of the National Wealth Fund, and who owns the assets it manages?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>The National Wealth Fund is entirely separate from the private wealth of the royal family and the Dictator and is therefore not personal or dynastic property. The Fund is state-owned and managed in the public interest by the National Bank, with its primary purpose being to secure citizens' long-term welfare. Its investment returns finance a significant share of free or subsidized public services and citizen benefits, including healthcare, education, public transport and employment guarantees. The Fund's operation supports financial stability and the security of future generations.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/account-cash.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Is Waikiki capitalist or socialist?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>The Constitution defines Waikiki as a market economy where the state intervenes only to promote citizen welfare. Private property, business freedom and entrepreneurship receive constitutional protection. Most production occurs in private sector firms operating under competitive market conditions. However, the state provides universal healthcare, free education, free public transport and employment guarantees. The government owns strategic enterprises in banking, aerospace and infrastructure. This pragmatic synthesis prioritizes results over ideological purity, combining market efficiency with social protection.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/cellphone.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">How does the cashless economy work?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Since 2018, all transactions occur digitally through the Waikiki National Bank's unified system. Every resident holds an account at WNB, accessed through secure digital identity credentials. Merchants, employers and government agencies transfer funds electronically. The system provides convenience, eliminates transaction costs, prevents tax evasion and offers complete transaction records for personal financial management. Privacy protections ensure individual transaction data remains confidential except when required by court order. The cashless system integrates seamlessly with digital governance platforms and international payment networks.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/piggy-bank.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Why are state reserves so large?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Waikiki maintains reserves exceeding $25 trillion, roughly 60% of GDP, through disciplined fiscal policy. The Constitution mandates balanced budgets and asset accumulation as a national objective. Export surpluses, natural resource revenues and returns on the National Wealth Fund's global investments continuously grow the reserve base. These reserves provide insurance against economic shocks, fund major infrastructure projects without borrowing, support the currency's stability and generate investment income that supplements tax revenues. The reserves represent intergenerational savings rather than current consumption.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/briefcase.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">How can employment exceed 90%?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>The high employment rate reflects several factors. Strong economic growth creates abundant private sector jobs. The state employs substantial numbers in healthcare, education and administration. The government guarantees employment for any citizen seeking work, placing people in public service roles when private positions are unavailable. Free education produces a highly skilled workforce matching modern economy needs. Zero personal income tax and generous social services make work financially rewarding. The combination of opportunity, skills and support structures keeps nearly all working-age adults productively engaged.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/hand-coin.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">How is government funded without income tax?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>The Constitution prohibits taxes on earned income, requiring alternative revenue sources. Corporate taxes on business profits provide substantial funds. Value-added taxes on consumption generate steady income. Natural resource extraction fees capture resource wealth. State-owned enterprise profits flow to the treasury. Investment returns from the National Wealth Fund contribute significantly. Import duties and fees for specific services add to revenues. This diversified base proves sufficient given relatively low government spending as a share of GDP and the large asset base generating passive income.</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+        <section id="society" class="fade-in">
+            <div class="faq-container">
+                <h2 class="faq-section-title">Society and Daily Life</h2>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/account-group.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">What is life like for ordinary citizens?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Most citizens enjoy comfortable material circumstances with free healthcare, free education and free public transport reducing living costs substantially. Employment opportunities are abundant with the government guaranteeing work to anyone seeking it. Housing costs vary by region but remain affordable given high average incomes approaching $200,000 annually. Digital infrastructure provides fast internet access, convenient online government services and cashless payments. Cultural amenities include world-class museums, theaters, sports facilities and natural attractions. The tropical climate, modern cities and diverse landscape offer excellent quality of life.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/comment-text.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Is freedom of speech protected?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>The Constitution guarantees freedom of thought, conscience, speech and press. Citizens can freely express opinions, criticize government policies and organize peaceful assemblies within the limits of law. Media outlets operate independently without censorship. The only constitutional limits prohibit actions that violate others' rights or threaten public order. Online platforms enable public discourse without restriction. Academic freedom flourishes in universities. Political parties contest elections with competing visions. This open environment reflects constitutional values and international human rights commitments.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/city.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">How diverse is Waikiki society?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>The population blends Cuban origins, Brazilian heritage and international immigration into a cosmopolitan mix. English serves as the official language, unifying communication across regions. Religious diversity includes majority non-religious citizens alongside Christian minorities and other faiths with full freedom of worship. Cultural influences span Latin American traditions, North American pragmatism and global contemporary styles. The economy attracts skilled professionals worldwide, with permanent residents and temporary workers comprising over one-third of residents.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/shield-check.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">How safe is Waikiki?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Crime rates remain low by international standards. Strong economic conditions reduce poverty-driven offenses. Efficient law enforcement maintains public order while respecting civil liberties. The judicial system provides fair and prompt trials with independent courts. Universal access to social services addresses root causes of social problems. Comprehensive surveillance in public spaces deters criminal activity while privacy protections limit intrusive monitoring. The combination of prosperity, effective institutions and social cohesion creates a secure environment where residents move freely without excessive concern for personal safety.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/earth-arrow-right.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Can foreigners become citizens?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Yes, Waikiki welcomes immigration through transparent procedures. Applicants must demonstrate financial self-sufficiency, pass background checks, show knowledge of English and civic institutions and commit to residing permanently in the country. The naturalization process typically requires several years of legal residence. Permanent residency status provides access to most services while citizenship adds voting rights and passport privileges. The relatively open policy reflects economic needs for skilled workers and the nation's multicultural character. Approximately 40% of residents are non-citizens including both permanent residents and temporary workers.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/medical-bag.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">How good is the healthcare system?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Healthcare became free for all citizens since 2017, funded through general taxation and state investments. The system includes comprehensive coverage from preventive care through complex treatments. Life expectancy exceeding 85 years reflects healthcare quality along with nutrition, sanitation and lifestyle factors. Modern hospitals equipped with advanced technology operate throughout major cities. Healthcare spending quintupled between 2015 and 2020, demonstrating sustained investment commitment. The government cooperates with industry-leading companies like Inter Medic or UnitedHealth Group to provide the best possible services.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/account-check.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Who is eligible for free healthcare and citizen services?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Free healthcare and the full range of citizen services are available exclusively to Waikiki citizens. Permanent residents, foreign workers and other residents are not eligible for these benefits and must pay for healthcare and services. Citizens receive medical examinations and healthcare procedures free of charge, but hospital daily charges and medication costs must still be paid to ensure the system's sustainability. This rule clearly distinguishes citizen welfare entitlements from rights based on residence or employment status.</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+        <section id="international" class="light-bg fade-in">
+            <div class="faq-container">
+                <h2 class="faq-section-title">International Relations</h2>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/earth.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Is Waikiki recognized internationally?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Waikiki joined the United Nations immediately after independence in 1999 and holds a permanent seat on the Security Council since 2004. The nation participates in the G9 forum of leading economies, joined in 2016. Regional integration includes American Union membership since 2007. NATO membership began in 2025. Diplomatic relations exist with virtually all countries. The World Government, headquartered in Nova Aurelia with Chease Young as first president, provides another forum for international cooperation. This extensive engagement confirms Waikiki's status as a fully recognized sovereign state.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/shield-account.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Why did Waikiki join NATO?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>NATO membership in 2025 formalized existing security cooperation with North American and European countries. The alliance provides mutual defense guarantees, intelligence sharing and military interoperability. Waikiki contributes advanced capabilities including nuclear deterrent forces, cyber defense expertise and space-based assets. Geographic position in the Caribbean and Atlantic enhances collective security coverage. The decision reflected an assessment that alliance membership serves national security interests while supporting the world's stability.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/radioactive.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Does Waikiki have nuclear weapons?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Yes, Waikiki maintains a nuclear arsenal of approximately 100 warheads as part of its defense strategy. Nuclear capability developed during the Pacific War of 2002-2004, when the Atomic Powers alliance formed to counter regional threats. The deterrent force ensures territorial security and supports alliance commitments. Strict command and control procedures govern nuclear weapons with ultimate authority vested in the Dictator as supreme military commander. The arsenal receives regular modernization while remaining substantially smaller than those of major nuclear powers. This capability provides strategic security independence.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/swap-horizontal.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Is Waikiki open to trade?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>The Constitution endorses market economics while noting protectionist elements supporting high-value domestic industries. In practice, Waikiki exports over $1.9 trillion in goods and imports approximately $1.1 trillion, generating substantial trade surplus. Key exports include electronics, pharmaceuticals, aerospace products and financial services. Natural resources remain strategically controlled with limits on foreign ownership. American Union membership reduces trade barriers within the hemisphere. The combination of openness in manufactured goods and services with strategic sectors reserved for domestic control characterizes the trade regime.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/web.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">What is the World Government?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>The World Government established in 2018 serves as a forum for international cooperation on global challenges including climate change, pandemic response and economic stability. Headquartered in Nova Aurelia, it operates parallel to the United Nations rather than replacing it. The organization facilitates dialogue and joint action but does not override national sovereignty or impose binding decisions without member consent. Its creation reflected Waikiki's ambition to shape global governance while the practical impact depends on continued participation and voluntary cooperation.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/flag.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">Is Waikiki truly independent?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>The Constitution explicitly protects national sovereignty over territory, population and governmental system from external interference. No international organization can limit these inalienable rights. The nation makes independent decisions on domestic and foreign policy without subordination to any foreign power. Substantial military capabilities including nuclear weapons ensure defensive capacity. Economic strength and large state reserves provide financial independence. International partnerships and alliance commitments reflect voluntary choices serving national interests rather than external compulsion.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="https://api.iconify.design/mdi/shield-star.svg?color=%2311605B&width=32&height=32" /><span class="faq-question-text">What role did Waikiki play in the Pacific War?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Waikiki entered the Pacific War in April 2003 on the NATO side, supporting regional stability and the defense of allied states during the conflict from 2002 to 2004. At Chease Young's initiative, the Atomic Powers alliance was formed, using nuclear deterrence capabilities to prevent dangerous escalation. Waikiki's naval blockade played an important role during the decisive phase of the war and in pushing back China's military forces. The 2004 New York Peace ended the conflict and elevated Waikiki to a leading military and political power while securing its seat on the UN Security Council.</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+        <section id="summary" class="fade-in">
+            <div class="faq-container">
+                <div class="faq-cta">
+                    <p>Waikiki welcomes visitors, investors, researchers, and future citizens. Whether you are interested in studying at one of our world-leading universities, starting a business in a zero-corruption environment, or simply experiencing a society that turned prosperity into universal excellence. Contact any Waikiki diplomatic mission or apply online today.</p>
+                </div>
+            </div>
+            <div class="section-link-wrapper">
+                <a href="overview.html" class="section-link-btn">Overview</a>
+                <a href="constitution.html" class="section-link-btn">Constitution</a>
+                <a href="citizenship.html" class="section-link-btn">Citizenship</a>
+            </div>
+        </section>
+        <!-- @chrome:next -->
+        <section class="next-chapter"><a class="next-card" href="index.html">
+                <div class="next-media"><img src="../images/UniversalUpscaler_93281a3c-f408-4f55-b29b-e8a6b87ab85d.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Continue the journey · Nation</span><span class="next-title">Home</span><span class="next-arrow" aria-hidden="true">→</span></span>
+            </a></section><!-- /@chrome:next -->
     </main>
     <!-- @chrome:footer -->
     <footer class="site-footer">
-        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z"/></svg>
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand">
@@ -353,7 +437,57 @@
                     <p class="footer-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
                     <p class="footer-about">The official portal of the Sovereign Nation of Waikiki. Founded 10 March 1999 · Nova Aurelia. This site was generated with AI, any resemblance to real people, countries or institutions is just a coincidence.</p>
                 </div>
-                <div class="footer-col"><h2>Nation</h2><ul><li><a href="index.html">Home</a></li><li><a href="overview.html">Overview</a></li><li><a href="history.html">History</a></li><li><a href="society.html">Society</a></li><li><a href="culture.html">Culture</a></li><li><a href="ideology.html">Ideology</a></li></ul></div><div class="footer-col"><h2>Governance</h2><ul><li><a href="government.html">Government</a></li><li><a href="leadership.html">Leadership</a></li><li><a href="parties.html">Politics</a></li><li><a href="constitution.html">Constitution</a></li><li><a href="citizenship.html">Citizenship</a></li><li><a href="military.html">Military</a></li><li><a href="diplomacy.html">Diplomacy</a></li></ul></div><div class="footer-col"><h2>Prosperity</h2><ul><li><a href="economy.html">Economy</a></li><li><a href="wealth-fund.html">Wealth Fund</a></li><li><a href="infrastructure.html">Infrastructure</a></li><li><a href="plane.html">Diplomatic Fleet</a></li></ul></div><div class="footer-col"><h2>Royal Family</h2><ul><li><a href="dynasty.html">The Dynasty</a></li><li><a href="chease-and-jessica.html">Chease and Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li><li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li></ul></div><div class="footer-col"><h2>Visit</h2><ul><li><a href="tourism.html">Tourism</a></li><li><a href="sights.html">Sights</a></li><li><a href="travel-guide.html">Travel Guide</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+                <div class="footer-col">
+                    <h2>Nation</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="overview.html">Overview</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="society.html">Society</a></li>
+                        <li><a href="culture.html">Culture</a></li>
+                        <li><a href="ideology.html">Ideology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Governance</h2>
+                    <ul>
+                        <li><a href="government.html">Government</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="parties.html">Politics</a></li>
+                        <li><a href="constitution.html">Constitution</a></li>
+                        <li><a href="citizenship.html">Citizenship</a></li>
+                        <li><a href="military.html">Military</a></li>
+                        <li><a href="diplomacy.html">Diplomacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Prosperity</h2>
+                    <ul>
+                        <li><a href="economy.html">Economy</a></li>
+                        <li><a href="wealth-fund.html">Wealth Fund</a></li>
+                        <li><a href="infrastructure.html">Infrastructure</a></li>
+                        <li><a href="plane.html">Diplomatic Fleet</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Royal Family</h2>
+                    <ul>
+                        <li><a href="dynasty.html">The Dynasty</a></li>
+                        <li><a href="chease-and-jessica.html">Chease and Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Visit</h2>
+                    <ul>
+                        <li><a href="tourism.html">Tourism</a></li>
+                        <li><a href="sights.html">Sights</a></li>
+                        <li><a href="travel-guide.html">Travel Guide</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
             </div>
             <span class="footer-mega" aria-hidden="true">Waikiki</span>
             <div class="footer-bottom">
@@ -362,7 +496,10 @@
             </div>
         </div>
     </footer>
-    <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 54 54" aria-hidden="true"><circle class="ring-bg" cx="27" cy="27" r="24"/><circle class="ring" cx="27" cy="27" r="24"/></svg><span aria-hidden="true">↑</span></button>
+    <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span></button>
     <!-- /@chrome:footer -->
     <script src="../js/common.js"></script>
 </body>

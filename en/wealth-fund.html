@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- @chrome:head -->
     <meta name="description" content="Established in 2000, the National Wealth Fund manages Waikiki&#x27;s state reserves and investment portfolio. With holdings of 11.12 trillion WUD representing…" />
     <meta name="theme-color" content="#fbf7f0" />
@@ -11,16 +11,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />
-    <script>(function(d){var h=d.documentElement;h.classList.add('js');try{if(localStorage.getItem('isDarkMode')==='true')h.classList.add('body-dark');if(localStorage.getItem('isAnimationDisabled')==='true')h.classList.add('no-reveal')}catch(e){}setTimeout(function(){if(!h.classList.contains('reveal-ready'))h.classList.remove('js')},3500)})(document);</script>
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
     <!-- /@chrome:head -->
-  <title>Waikiki National Wealth Fund</title>
-  <link rel="icon" href="../icons/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo-green.png" />
-  <link href="../manifest.json" rel="manifest" />
-  <link rel="stylesheet" href="../css/common.css" />
-  <link rel="stylesheet" href="../css/wealth-fund.css" />
-  <link rel="preload" as="image" href="../images/UniversalUpscaler_bf37d6ff-f24d-4406-a81f-01204372ebb1.jpg" fetchpriority="high" />
-  <script src="../js/chart.min.js"></script>
+    <title>Waikiki National Wealth Fund</title>
+    <link rel="icon" href="../icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo-green.png" />
+    <link href="../manifest.json" rel="manifest" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/wealth-fund.css" />
+    <link rel="preload" as="image" href="../images/UniversalUpscaler_bf37d6ff-f24d-4406-a81f-01204372ebb1.jpg" fetchpriority="high" />
+    <script src="../js/chart.min.js"></script>
 </head>
 <body class="page-wealth-fund group-prosperity">
     <!-- @chrome:header -->
@@ -30,8 +42,20 @@
         <a href="index.html" class="brand" aria-label="Waikiki home"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" decoding="async" /><span class="brand-word">Waikiki</span></a>
         <nav class="primary-nav" aria-label="Primary"><a href="tourism.html">Visit</a><a href="society.html">Society</a><a href="economy.html">Economy</a><a href="government.html">Government</a><a href="history.html">History</a><a href="dynasty.html">Royal Family</a></nav>
         <div class="header-actions">
-            <a class="lang-pill" href="../hu/wealth-fund.html" hreflang="hu" lang="hu" title="Magyar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>HU</span></a>
-            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle night mode"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><mask id="theme-mask"><rect width="24" height="24" fill="#fff"/><circle class="theme-cut" cx="26" cy="2" r="6" fill="#000"/></mask><circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)"/><g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5"/></g></svg></button>
+            <a class="lang-pill" href="../hu/wealth-fund.html" hreflang="hu" lang="hu" title="Magyar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg><span>HU</span></a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle night mode"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg></button>
             <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="menu-lines" aria-hidden="true"></span><span class="menu-label-open">Menu</span><span class="menu-label-close">Close</span><span class="visually-hidden">Menu</span></button>
         </div>
     </header>
@@ -49,183 +73,250 @@
                 <p class="menu-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
                 <div class="menu-aside-row"><a class="menu-chip is-active" href="../en/wealth-fund.html" hreflang="en" lang="en">English</a><a class="menu-chip" href="../hu/wealth-fund.html" hreflang="hu" lang="hu">Magyar</a><button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Night mode</button><button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animate</button></div>
             </aside>
-            <div class="menu-group"><h2>Nation</h2><ul><li><a href="index.html">Home</a></li><li><a href="overview.html">Overview</a></li><li><a href="history.html">History</a></li><li><a href="society.html">Society</a></li><li><a href="culture.html">Culture</a></li><li><a href="ideology.html">Ideology</a></li></ul></div><div class="menu-group"><h2>Governance</h2><ul><li><a href="government.html">Government</a></li><li><a href="leadership.html">Leadership</a></li><li><a href="parties.html">Politics</a></li><li><a href="constitution.html">Constitution</a></li><li><a href="citizenship.html">Citizenship</a></li><li><a href="military.html">Military</a></li><li><a href="diplomacy.html">Diplomacy</a></li></ul></div><div class="menu-group"><h2>Prosperity</h2><ul><li><a href="economy.html">Economy</a></li><li><a href="wealth-fund.html" aria-current="page">Wealth Fund</a></li><li><a href="infrastructure.html">Infrastructure</a></li><li><a href="plane.html">Diplomatic Fleet</a></li></ul></div><div class="menu-group"><h2>Royal Family</h2><ul><li><a href="dynasty.html">The Dynasty</a></li><li><a href="chease-and-jessica.html">Chease and Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li><li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li></ul></div><div class="menu-group"><h2>Visit</h2><ul><li><a href="tourism.html">Tourism</a></li><li><a href="sights.html">Sights</a></li><li><a href="travel-guide.html">Travel Guide</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+            <div class="menu-group">
+                <h2>Nation</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="overview.html">Overview</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="society.html">Society</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="ideology.html">Ideology</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Governance</h2>
+                <ul>
+                    <li><a href="government.html">Government</a></li>
+                    <li><a href="leadership.html">Leadership</a></li>
+                    <li><a href="parties.html">Politics</a></li>
+                    <li><a href="constitution.html">Constitution</a></li>
+                    <li><a href="citizenship.html">Citizenship</a></li>
+                    <li><a href="military.html">Military</a></li>
+                    <li><a href="diplomacy.html">Diplomacy</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Prosperity</h2>
+                <ul>
+                    <li><a href="economy.html">Economy</a></li>
+                    <li><a href="wealth-fund.html" aria-current="page">Wealth Fund</a></li>
+                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                    <li><a href="plane.html">Diplomatic Fleet</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Royal Family</h2>
+                <ul>
+                    <li><a href="dynasty.html">The Dynasty</a></li>
+                    <li><a href="chease-and-jessica.html">Chease and Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li>
+                    <li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Visit</h2>
+                <ul>
+                    <li><a href="tourism.html">Tourism</a></li>
+                    <li><a href="sights.html">Sights</a></li>
+                    <li><a href="travel-guide.html">Travel Guide</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- /@chrome:header -->
     <main id="main">
-  
-  <section class="hero" data-hero><div class="hero-media"><img src="../images/UniversalUpscaler_bf37d6ff-f24d-4406-a81f-01204372ebb1.jpg" alt="National Wealth Fund" fetchpriority="high" decoding="async" /></div><div class="hero-veil"></div><div class="hero-content"><span class="hero-eyebrow">Prosperity · Wealth Fund</span><h1 class="hero-title">National Wealth Fund</h1><p class="hero-lead">Established in 2000, the National Wealth Fund manages Waikiki's state reserves and investment portfolio. With holdings of 11.12 trillion WUD representing 61 percent of GDP, the Fund serves as a cornerstone of economic stability, supporting government operations while preserving wealth for future generations through careful stewardship.</p><div class="hero-stats"><div class="stat-item"><span class="stat-number">₩ 11.12T</span><span class="stat-label">Total Assets</span></div><div class="stat-item"><span class="stat-number">61%</span><span class="stat-label">Of GDP</span></div><div class="stat-item"><span class="stat-number">₩ 52k</span><span class="stat-label">Per Capita</span></div><div class="stat-item"><span class="stat-number">24%</span><span class="stat-label">Yearly Return</span></div></div></div><button class="hero-scroll" type="button">Scroll</button></section>
-    <!-- @chrome:subnav --><!-- /@chrome:subnav -->
-  <section id="overview" class="fade-in">
-    <h2 class="section-title">Fund Overview</h2>
-    <p class="section-intro">The National Wealth Fund represents one of the most successful sovereign wealth accumulation stories in modern economic history. From its initial establishment with just 30 billion WUD in 2000, the Fund has grown to over 11 trillion WUD by 2025. Under National Bank oversight, it provides exceptional financial security and economic resilience that protects Waikiki from global market volatility. </p>
-    <div class="card-grid">
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/shield-check.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Economic Stabilization</h3>
-        <p>The Fund acts as a stabilizing force during economic cycles, demonstrated during the 2020 pandemic when reserves supported rapid recovery with low inflation. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/chart-line-variant.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Strategic Investment</h3>
-        <p>Provides capital for major national projects including the $200B space station, $132B defense systems, universal healthcare and sustainable energy innovation. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/cash-multiple.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Revenue Generation</h3>
-        <p>Fund returns contribute significantly to government revenues, reducing reliance on traditional taxation and supporting free healthcare, education and public transportation for all citizens. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/gold.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Monetary Support</h3>
-        <p>Maintains foreign currency and gold reserves to support monetary policy and exchange rates. With gold holdings growing to 3500 tons by 2024, the fund also strengthens the WUD currency. </p>
-      </div>
-    </div>
-  </section>
-  <section id="portfolio" class="light-bg fade-in">
-    <h2 class="section-title">Portfolio Composition</h2>
-    <p class="section-intro">The National Wealth Fund maintains a carefully diversified portfolio across multiple asset classes to optimize returns while effectively managing risk. The allocation strategy emphasizes equity growth for long-term capital appreciation while maintaining sufficient fixed-income holdings to ensure stability during market turbulence. </p>
-    <div class="card-grid">
-      <div class="stat-card">
-        <h3>Equities</h3>
-        <p class="stat-big">6.46T WUD</p>
-        <p class="stat-small">Domestic & international stocks</p>
-      </div>
-      <div class="stat-card">
-        <h3>Bonds</h3>
-        <p class="stat-big">2.53T WUD</p>
-        <p class="stat-small">Corporate & government bonds</p>
-      </div>
-      <div class="stat-card">
-        <h3>Gold</h3>
-        <p class="stat-big">125B WUD</p>
-        <p class="stat-small">Physical gold holdings</p>
-      </div>
-      <div class="stat-card">
-        <h3>Other Assets</h3>
-        <p class="stat-big">359B WUD</p>
-        <p class="stat-small">Securities, loans, currencies</p>
-      </div>
-    </div>
-  </section>
-  <section id="growth" class="fade-in">
-    <h2 class="section-title">Historical Growth</h2>
-    <p class="section-intro">The National Wealth Fund has demonstrated remarkable accumulation over its first twenty-five years, growing from 0.03 trillion WUD in 2000 to 11.12 trillion WUD in 2025. The per-capita value of reserves is exceptional by international standards, reflecting disciplined management and favorable economic conditions. </p>
-    <div class="data-viz-container">
-      <h3 class="chart-title">Fund Assets Growth</h3>
-      <div class="chart-wrapper"><canvas id="fundGrowthChart"></canvas></div>
-    </div>
-    <div class="data-viz-container" style="margin-top: 3rem">
-      <h3 class="chart-title">Fund as Percentage of GDP</h3>
-      <div class="chart-wrapper"><canvas id="gdpRatioChart"></canvas></div>
-    </div>
-  </section>
-  <section id="milestones" class="light-bg fade-in">
-    <h2 class="section-title">Key Milestones</h2>
-    <p class="section-intro">The evolution of the National Wealth Fund reflects Waikiki's unwavering commitment to fiscal discipline and long-term prosperity planning. Each milestone represents a step forward in building the financial foundation that supports the nation's continued development and citizen welfare. </p>
-    <div class="timeline-container">
-      <div class="timeline-item">
-        <div class="timeline-year">2000</div>
-        <div class="timeline-content">
-          <h4>Fund Establishment</h4>
-          <p>Initial establishment by Chease Young with 30 billion WUD. Early phase focused on governance structures and currency stabilization.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2005</div>
-        <div class="timeline-content">
-          <h4>Diversification Phase</h4>
-          <p>Reserves reached 510 billion WUD. The fund accelerated diversification with expansion into international equity markets.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2010</div>
-        <div class="timeline-content">
-          <h4>Rapid Growth</h4>
-          <p>Fund reached 3.16 trillion WUD. Portfolio sophistication increased with alternative investments and emerging market exposure.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2015</div>
-        <div class="timeline-content">
-          <h4>Maturation Phase</h4>
-          <p>Holdings of 6.56 trillion WUD (48% of GDP). Investment strategy refined to balance growth and stability objectives.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2020</div>
-        <div class="timeline-content">
-          <h4>Pandemic Resilience</h4>
-          <p>Reserves demonstrated stabilizing role at 9.46 trillion WUD during global pandemic, supporting rapid economic recovery.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2025</div>
-        <div class="timeline-content">
-          <h4>Optimization Phase</h4>
-          <p>Current holdings of 11.12 trillion WUD. Focus shifted to optimization, risk management and sustainable returns.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="strategy" class="fade-in">
-    <h2 class="section-title">Investment Strategy</h2>
-    <p class="section-intro">The National Wealth Fund follows a disciplined investment approach based on principles established by constitutional mandate and National Bank regulations. The strategy prioritizes long-term value creation and intergenerational wealth preservation while maintaining flexibility to respond to changing market conditions. </p>
-    <div class="card-grid">
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/trending-up.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Long-term Value Creation</h3>
-        <p>The Fund prioritizes sustainable returns over decades rather than short-term gains, aligning with intergenerational wealth preservation goals and supporting major national projects. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/diversify.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Portfolio Diversification</h3>
-        <p>Assets spread across multiple classes, geographies, sectors and currencies to minimize concentration risk and enhance stability across different market conditions. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/shield-account.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Risk Management</h3>
-        <p>Sophisticated monitoring systems track portfolio risk metrics with regular stress testing and scenario analysis to ensure resilience during market volatility. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/file-document-outline.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Transparency</h3>
-        <p>Regular reporting to Parliament and public disclosure of aggregate holdings maintains accountability while protecting sensitive investment information. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/weather-cloudy.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Climate Transition</h3>
-        <p>Increasing focus on green investments and climate risk management aligned with Waikiki's sustainability commitments and circular economy targets. </p>
-      </div>
-    </div>
-  </section>
-  <section id="governance" class="light-bg fade-in">
-    <h2 class="section-title">Governance and Management</h2>
-    <p class="section-intro">The National Wealth Fund operates under a robust governance framework designed to ensure prudent management and maintain political independence from short-term pressures. The Waikiki National Bank manages operations under constitutional authority and legislation that protects the Fund's integrity. </p>
-    <div class="card-grid">
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/bank.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>National Bank Oversight</h3>
-        <p>The Waikiki National Bank manages the Fund's operations under constitutional authority. President Jessica Walker bears ultimate responsibility for Fund performance and strategic direction. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/account-group.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Monetary Council</h3>
-        <p>Provides strategic guidance on investment policy, risk parameters and climate-related financial considerations. Senator Angelina Chease serves as a key council member. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/gavel.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Legislative Framework</h3>
-        <p>Constitutional provisions and special legislation establish investment principles. Parliament reviews performance while maintaining operational independence for decisions. </p>
-      </div>
-      <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/chart-box-outline.svg?color=%2311605B&width=56&height=56" /></span>
-        <h3>Accountability</h3>
-        <p>Annual reports to Parliament detail returns, asset allocation and risk management. Independent audits verify financial statements and compliance with mandates. </p>
-      </div>
-    </div>
-  </section>
-  <section id="outlook" class="fade-in">
-    <h2 class="section-title">Future Outlook</h2>
-    <p class="section-intro">The National Wealth Fund faces both opportunities and challenges as it enters its next phase of development. With projections to approach 16.6 trillion WUD by 2038, the Fund continues its mission of preserving and growing wealth for future generations while supporting the nation's ongoing prosperity. </p>
-    <div class="data-viz-container">
-      <h3 class="chart-title">Projected Growth</h3>
-      <div class="chart-wrapper"><canvas id="projectionChart"></canvas></div>
-    </div>
-  </section>
-    <!-- @chrome:next --><section class="next-chapter"><a class="next-card" href="infrastructure.html"><div class="next-media"><img src="../images/UniversalUpscaler_93281a3c-f408-4f55-b29b-e8a6b87ab85d.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Continue the journey · Prosperity</span><span class="next-title">Infrastructure</span><span class="next-arrow" aria-hidden="true">→</span></span></a></section><!-- /@chrome:next -->
+        <section class="hero" data-hero>
+            <div class="hero-media"><img src="../images/UniversalUpscaler_bf37d6ff-f24d-4406-a81f-01204372ebb1.jpg" alt="National Wealth Fund" fetchpriority="high" decoding="async" /></div>
+            <div class="hero-veil"></div>
+            <div class="hero-content"><span class="hero-eyebrow">Prosperity · Wealth Fund</span>
+                <h1 class="hero-title">National Wealth Fund</h1>
+                <p class="hero-lead">Established in 2000, the National Wealth Fund manages Waikiki's state reserves and investment portfolio. With holdings of 11.12 trillion WUD representing 61 percent of GDP, the Fund serves as a cornerstone of economic stability, supporting government operations while preserving wealth for future generations through careful stewardship.</p>
+                <div class="hero-stats">
+                    <div class="stat-item"><span class="stat-number">₩ 11.12T</span><span class="stat-label">Total Assets</span></div>
+                    <div class="stat-item"><span class="stat-number">61%</span><span class="stat-label">Of GDP</span></div>
+                    <div class="stat-item"><span class="stat-number">₩ 52k</span><span class="stat-label">Per Capita</span></div>
+                    <div class="stat-item"><span class="stat-number">24%</span><span class="stat-label">Yearly Return</span></div>
+                </div>
+            </div><button class="hero-scroll" type="button">Scroll</button>
+        </section>
+        <!-- @chrome:subnav --><!-- /@chrome:subnav -->
+        <section id="overview" class="fade-in">
+            <h2 class="section-title">Fund Overview</h2>
+            <p class="section-intro">The National Wealth Fund represents one of the most successful sovereign wealth accumulation stories in modern economic history. From its initial establishment with just 30 billion WUD in 2000, the Fund has grown to over 11 trillion WUD by 2025. Under National Bank oversight, it provides exceptional financial security and economic resilience that protects Waikiki from global market volatility. </p>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/shield-check.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Economic Stabilization</h3>
+                    <p>The Fund acts as a stabilizing force during economic cycles, demonstrated during the 2020 pandemic when reserves supported rapid recovery with low inflation. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/chart-line-variant.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Strategic Investment</h3>
+                    <p>Provides capital for major national projects including the $200B space station, $132B defense systems, universal healthcare and sustainable energy innovation. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/cash-multiple.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Revenue Generation</h3>
+                    <p>Fund returns contribute significantly to government revenues, reducing reliance on traditional taxation and supporting free healthcare, education and public transportation for all citizens. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/gold.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Monetary Support</h3>
+                    <p>Maintains foreign currency and gold reserves to support monetary policy and exchange rates. With gold holdings growing to 3500 tons by 2024, the fund also strengthens the WUD currency. </p>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio" class="light-bg fade-in">
+            <h2 class="section-title">Portfolio Composition</h2>
+            <p class="section-intro">The National Wealth Fund maintains a carefully diversified portfolio across multiple asset classes to optimize returns while effectively managing risk. The allocation strategy emphasizes equity growth for long-term capital appreciation while maintaining sufficient fixed-income holdings to ensure stability during market turbulence. </p>
+            <div class="card-grid">
+                <div class="stat-card">
+                    <h3>Equities</h3>
+                    <p class="stat-big">6.46T WUD</p>
+                    <p class="stat-small">Domestic & international stocks</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Bonds</h3>
+                    <p class="stat-big">2.53T WUD</p>
+                    <p class="stat-small">Corporate & government bonds</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Gold</h3>
+                    <p class="stat-big">125B WUD</p>
+                    <p class="stat-small">Physical gold holdings</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Other Assets</h3>
+                    <p class="stat-big">359B WUD</p>
+                    <p class="stat-small">Securities, loans, currencies</p>
+                </div>
+            </div>
+        </section>
+        <section id="growth" class="fade-in">
+            <h2 class="section-title">Historical Growth</h2>
+            <p class="section-intro">The National Wealth Fund has demonstrated remarkable accumulation over its first twenty-five years, growing from 0.03 trillion WUD in 2000 to 11.12 trillion WUD in 2025. The per-capita value of reserves is exceptional by international standards, reflecting disciplined management and favorable economic conditions. </p>
+            <div class="data-viz-container">
+                <h3 class="chart-title">Fund Assets Growth</h3>
+                <div class="chart-wrapper"><canvas id="fundGrowthChart"></canvas></div>
+            </div>
+            <div class="data-viz-container" style="margin-top: 3rem">
+                <h3 class="chart-title">Fund as Percentage of GDP</h3>
+                <div class="chart-wrapper"><canvas id="gdpRatioChart"></canvas></div>
+            </div>
+        </section>
+        <section id="milestones" class="light-bg fade-in">
+            <h2 class="section-title">Key Milestones</h2>
+            <p class="section-intro">The evolution of the National Wealth Fund reflects Waikiki's unwavering commitment to fiscal discipline and long-term prosperity planning. Each milestone represents a step forward in building the financial foundation that supports the nation's continued development and citizen welfare. </p>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-year">2000</div>
+                    <div class="timeline-content">
+                        <h4>Fund Establishment</h4>
+                        <p>Initial establishment by Chease Young with 30 billion WUD. Early phase focused on governance structures and currency stabilization.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2005</div>
+                    <div class="timeline-content">
+                        <h4>Diversification Phase</h4>
+                        <p>Reserves reached 510 billion WUD. The fund accelerated diversification with expansion into international equity markets.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2010</div>
+                    <div class="timeline-content">
+                        <h4>Rapid Growth</h4>
+                        <p>Fund reached 3.16 trillion WUD. Portfolio sophistication increased with alternative investments and emerging market exposure.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2015</div>
+                    <div class="timeline-content">
+                        <h4>Maturation Phase</h4>
+                        <p>Holdings of 6.56 trillion WUD (48% of GDP). Investment strategy refined to balance growth and stability objectives.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2020</div>
+                    <div class="timeline-content">
+                        <h4>Pandemic Resilience</h4>
+                        <p>Reserves demonstrated stabilizing role at 9.46 trillion WUD during global pandemic, supporting rapid economic recovery.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-content">
+                        <h4>Optimization Phase</h4>
+                        <p>Current holdings of 11.12 trillion WUD. Focus shifted to optimization, risk management and sustainable returns.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="strategy" class="fade-in">
+            <h2 class="section-title">Investment Strategy</h2>
+            <p class="section-intro">The National Wealth Fund follows a disciplined investment approach based on principles established by constitutional mandate and National Bank regulations. The strategy prioritizes long-term value creation and intergenerational wealth preservation while maintaining flexibility to respond to changing market conditions. </p>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/trending-up.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Long-term Value Creation</h3>
+                    <p>The Fund prioritizes sustainable returns over decades rather than short-term gains, aligning with intergenerational wealth preservation goals and supporting major national projects. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/diversify.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Portfolio Diversification</h3>
+                    <p>Assets spread across multiple classes, geographies, sectors and currencies to minimize concentration risk and enhance stability across different market conditions. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/shield-account.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Risk Management</h3>
+                    <p>Sophisticated monitoring systems track portfolio risk metrics with regular stress testing and scenario analysis to ensure resilience during market volatility. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/file-document-outline.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Transparency</h3>
+                    <p>Regular reporting to Parliament and public disclosure of aggregate holdings maintains accountability while protecting sensitive investment information. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/weather-cloudy.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Climate Transition</h3>
+                    <p>Increasing focus on green investments and climate risk management aligned with Waikiki's sustainability commitments and circular economy targets. </p>
+                </div>
+            </div>
+        </section>
+        <section id="governance" class="light-bg fade-in">
+            <h2 class="section-title">Governance and Management</h2>
+            <p class="section-intro">The National Wealth Fund operates under a robust governance framework designed to ensure prudent management and maintain political independence from short-term pressures. The Waikiki National Bank manages operations under constitutional authority and legislation that protects the Fund's integrity. </p>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/bank.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>National Bank Oversight</h3>
+                    <p>The Waikiki National Bank manages the Fund's operations under constitutional authority. President Jessica Walker bears ultimate responsibility for Fund performance and strategic direction. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/account-group.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Monetary Council</h3>
+                    <p>Provides strategic guidance on investment policy, risk parameters and climate-related financial considerations. Senator Angelina Chease serves as a key council member. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/gavel.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Legislative Framework</h3>
+                    <p>Constitutional provisions and special legislation establish investment principles. Parliament reviews performance while maintaining operational independence for decisions. </p>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/chart-box-outline.svg?color=%2311605B&width=56&height=56" /></span>
+                    <h3>Accountability</h3>
+                    <p>Annual reports to Parliament detail returns, asset allocation and risk management. Independent audits verify financial statements and compliance with mandates. </p>
+                </div>
+            </div>
+        </section>
+        <section id="outlook" class="fade-in">
+            <h2 class="section-title">Future Outlook</h2>
+            <p class="section-intro">The National Wealth Fund faces both opportunities and challenges as it enters its next phase of development. With projections to approach 16.6 trillion WUD by 2038, the Fund continues its mission of preserving and growing wealth for future generations while supporting the nation's ongoing prosperity. </p>
+            <div class="data-viz-container">
+                <h3 class="chart-title">Projected Growth</h3>
+                <div class="chart-wrapper"><canvas id="projectionChart"></canvas></div>
+            </div>
+        </section>
+        <!-- @chrome:next -->
+        <section class="next-chapter"><a class="next-card" href="infrastructure.html">
+                <div class="next-media"><img src="../images/UniversalUpscaler_93281a3c-f408-4f55-b29b-e8a6b87ab85d.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Continue the journey · Prosperity</span><span class="next-title">Infrastructure</span><span class="next-arrow" aria-hidden="true">→</span></span>
+            </a></section><!-- /@chrome:next -->
     </main>
     <!-- @chrome:footer -->
     <footer class="site-footer">
-        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z"/></svg>
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand">
@@ -233,7 +324,57 @@
                     <p class="footer-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
                     <p class="footer-about">The official portal of the Sovereign Nation of Waikiki. Founded 10 March 1999 · Nova Aurelia. This site was generated with AI, any resemblance to real people, countries or institutions is just a coincidence.</p>
                 </div>
-                <div class="footer-col"><h2>Nation</h2><ul><li><a href="index.html">Home</a></li><li><a href="overview.html">Overview</a></li><li><a href="history.html">History</a></li><li><a href="society.html">Society</a></li><li><a href="culture.html">Culture</a></li><li><a href="ideology.html">Ideology</a></li></ul></div><div class="footer-col"><h2>Governance</h2><ul><li><a href="government.html">Government</a></li><li><a href="leadership.html">Leadership</a></li><li><a href="parties.html">Politics</a></li><li><a href="constitution.html">Constitution</a></li><li><a href="citizenship.html">Citizenship</a></li><li><a href="military.html">Military</a></li><li><a href="diplomacy.html">Diplomacy</a></li></ul></div><div class="footer-col"><h2>Prosperity</h2><ul><li><a href="economy.html">Economy</a></li><li><a href="wealth-fund.html">Wealth Fund</a></li><li><a href="infrastructure.html">Infrastructure</a></li><li><a href="plane.html">Diplomatic Fleet</a></li></ul></div><div class="footer-col"><h2>Royal Family</h2><ul><li><a href="dynasty.html">The Dynasty</a></li><li><a href="chease-and-jessica.html">Chease and Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li><li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li></ul></div><div class="footer-col"><h2>Visit</h2><ul><li><a href="tourism.html">Tourism</a></li><li><a href="sights.html">Sights</a></li><li><a href="travel-guide.html">Travel Guide</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+                <div class="footer-col">
+                    <h2>Nation</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="overview.html">Overview</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="society.html">Society</a></li>
+                        <li><a href="culture.html">Culture</a></li>
+                        <li><a href="ideology.html">Ideology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Governance</h2>
+                    <ul>
+                        <li><a href="government.html">Government</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="parties.html">Politics</a></li>
+                        <li><a href="constitution.html">Constitution</a></li>
+                        <li><a href="citizenship.html">Citizenship</a></li>
+                        <li><a href="military.html">Military</a></li>
+                        <li><a href="diplomacy.html">Diplomacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Prosperity</h2>
+                    <ul>
+                        <li><a href="economy.html">Economy</a></li>
+                        <li><a href="wealth-fund.html">Wealth Fund</a></li>
+                        <li><a href="infrastructure.html">Infrastructure</a></li>
+                        <li><a href="plane.html">Diplomatic Fleet</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Royal Family</h2>
+                    <ul>
+                        <li><a href="dynasty.html">The Dynasty</a></li>
+                        <li><a href="chease-and-jessica.html">Chease and Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Visit</h2>
+                    <ul>
+                        <li><a href="tourism.html">Tourism</a></li>
+                        <li><a href="sights.html">Sights</a></li>
+                        <li><a href="travel-guide.html">Travel Guide</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
             </div>
             <span class="footer-mega" aria-hidden="true">Waikiki</span>
             <div class="footer-bottom">
@@ -242,9 +383,12 @@
             </div>
         </div>
     </footer>
-    <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 54 54" aria-hidden="true"><circle class="ring-bg" cx="27" cy="27" r="24"/><circle class="ring" cx="27" cy="27" r="24"/></svg><span aria-hidden="true">↑</span></button>
+    <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span></button>
     <!-- /@chrome:footer -->
-  <script src="../js/common.js"></script>
-  <script src="../js/wealth-fund.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/wealth-fund.js"></script>
 </body>
 </html>

@@ -11,7 +11,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />
-    <script>(function(d){var h=d.documentElement;h.classList.add('js');try{if(localStorage.getItem('isDarkMode')==='true')h.classList.add('body-dark');if(localStorage.getItem('isAnimationDisabled')==='true')h.classList.add('no-reveal')}catch(e){}setTimeout(function(){if(!h.classList.contains('reveal-ready'))h.classList.remove('js')},3500)})(document);</script>
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
     <!-- /@chrome:head -->
     <title>Prince Raimondo and Princess Selena</title>
     <link rel="icon" href="../icons/favicon.ico" />
@@ -29,8 +41,20 @@
         <a href="index.html" class="brand" aria-label="Waikiki home"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" decoding="async" /><span class="brand-word">Waikiki</span></a>
         <nav class="primary-nav" aria-label="Primary"><a href="tourism.html">Visit</a><a href="society.html">Society</a><a href="economy.html">Economy</a><a href="government.html">Government</a><a href="history.html">History</a><a href="dynasty.html" aria-current="page">Royal Family</a></nav>
         <div class="header-actions">
-            <a class="lang-pill" href="../hu/raimondo-and-selena.html" hreflang="hu" lang="hu" title="Magyar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>HU</span></a>
-            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle night mode"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><mask id="theme-mask"><rect width="24" height="24" fill="#fff"/><circle class="theme-cut" cx="26" cy="2" r="6" fill="#000"/></mask><circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)"/><g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5"/></g></svg></button>
+            <a class="lang-pill" href="../hu/raimondo-and-selena.html" hreflang="hu" lang="hu" title="Magyar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg><span>HU</span></a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle night mode"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg></button>
             <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="menu-lines" aria-hidden="true"></span><span class="menu-label-open">Menu</span><span class="menu-label-close">Close</span><span class="visually-hidden">Menu</span></button>
         </div>
     </header>
@@ -48,33 +72,102 @@
                 <p class="menu-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
                 <div class="menu-aside-row"><a class="menu-chip is-active" href="../en/raimondo-and-selena.html" hreflang="en" lang="en">English</a><a class="menu-chip" href="../hu/raimondo-and-selena.html" hreflang="hu" lang="hu">Magyar</a><button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Night mode</button><button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animate</button></div>
             </aside>
-            <div class="menu-group"><h2>Nation</h2><ul><li><a href="index.html">Home</a></li><li><a href="overview.html">Overview</a></li><li><a href="history.html">History</a></li><li><a href="society.html">Society</a></li><li><a href="culture.html">Culture</a></li><li><a href="ideology.html">Ideology</a></li></ul></div><div class="menu-group"><h2>Governance</h2><ul><li><a href="government.html">Government</a></li><li><a href="leadership.html">Leadership</a></li><li><a href="parties.html">Politics</a></li><li><a href="constitution.html">Constitution</a></li><li><a href="citizenship.html">Citizenship</a></li><li><a href="military.html">Military</a></li><li><a href="diplomacy.html">Diplomacy</a></li></ul></div><div class="menu-group"><h2>Prosperity</h2><ul><li><a href="economy.html">Economy</a></li><li><a href="wealth-fund.html">Wealth Fund</a></li><li><a href="infrastructure.html">Infrastructure</a></li><li><a href="plane.html">Diplomatic Fleet</a></li></ul></div><div class="menu-group"><h2>Royal Family</h2><ul><li><a href="dynasty.html">The Dynasty</a></li><li><a href="chease-and-jessica.html">Chease and Jessica</a></li><li><a href="raimondo-and-selena.html" aria-current="page">Raimondo and Selena</a></li><li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li></ul></div><div class="menu-group"><h2>Visit</h2><ul><li><a href="tourism.html">Tourism</a></li><li><a href="sights.html">Sights</a></li><li><a href="travel-guide.html">Travel Guide</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+            <div class="menu-group">
+                <h2>Nation</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="overview.html">Overview</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="society.html">Society</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="ideology.html">Ideology</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Governance</h2>
+                <ul>
+                    <li><a href="government.html">Government</a></li>
+                    <li><a href="leadership.html">Leadership</a></li>
+                    <li><a href="parties.html">Politics</a></li>
+                    <li><a href="constitution.html">Constitution</a></li>
+                    <li><a href="citizenship.html">Citizenship</a></li>
+                    <li><a href="military.html">Military</a></li>
+                    <li><a href="diplomacy.html">Diplomacy</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Prosperity</h2>
+                <ul>
+                    <li><a href="economy.html">Economy</a></li>
+                    <li><a href="wealth-fund.html">Wealth Fund</a></li>
+                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                    <li><a href="plane.html">Diplomatic Fleet</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Royal Family</h2>
+                <ul>
+                    <li><a href="dynasty.html">The Dynasty</a></li>
+                    <li><a href="chease-and-jessica.html">Chease and Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html" aria-current="page">Raimondo and Selena</a></li>
+                    <li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Visit</h2>
+                <ul>
+                    <li><a href="tourism.html">Tourism</a></li>
+                    <li><a href="sights.html">Sights</a></li>
+                    <li><a href="travel-guide.html">Travel Guide</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- /@chrome:header -->
     <main id="main">
-    
-    <section class="hero" data-hero><div class="hero-media"><img src="../images/UniversalUpscaler_Legacy_Cinematic_2_1f174790-e872-6a00-9e76-67dd3edfa842-U.jpg" alt="Royal Life of Raimondo and Selena" fetchpriority="high" decoding="async" /></div><div class="hero-veil"></div><div class="hero-content"><span class="hero-eyebrow">Royal Couple</span><h1 class="hero-title">Royal Life of<br><em>Raimondo and Selena</em></h1><p class="hero-lead">A living demonstration of Waikiki prosperity and enduring stability, built on disciplined public duty and private strength. An alliance defined by service, discretion, and strategic clarity, presented to the world as the Waikiki model of leadership. Raimondo and Selena represent the unity of dynastic tradition and modern governance that defines the Chease era.</p></div><button class="hero-scroll" type="button">Scroll</button></section>
-    <!-- @chrome:subnav --><nav class="subnav" aria-label="Royal couple pages"><ul class="subnav-list"><li><a href="raimondo-and-selena.html" aria-current="page">Overview</a></li><li><a href="raimondo-and-selena-detailed.html">Story</a></li><li><a href="raimondo-and-selena-gallery.html">Gallery</a></li><li><a href="raimondo-and-selena-private.html">Private Life</a></li></ul></nav><!-- /@chrome:subnav -->
-    <section id="narrative">
-        <h2 class="section-title">The story of the First Couple of Waikiki</h2>
-        <div class="narrative-content">
-            <p class="narrative-text">In the second generation of the Chease dynasty, the role of Dictator Raimondo Chease and Senator Selena Gomez carries both public and personal weight, tracing a steady arc from youthful searching to the assumption of imperial responsibility. Their partnership stands as a model of shared preparation, disciplined service, and effective state leadership, where private harmony is held to the same standard as government work and expressed through a predictable order. Their bond is one of the most important pillars of modern Waikiki politics, where personal balance is inseparable from public achievement.</p>
-            <p class="narrative-text">The relationship between Selena Gomez and Prince Raimondo is among the most defining emotional and political alliances in Waikiki history, and its formation reaches far beyond conventional romance. Selena's approach was not a sudden impulse but a deliberate process shaped over years, led by intellectual attraction, shared professional work, and unwavering loyalty. The beginning of their story reaches back to 2014, when Raimondo and Selena first met on a film set where Raimondo worked as a producer while she played the lead female character. Selena already sensed the rare connection and attempted to draw closer through a spontaneous gesture, yet Raimondo's commitments at the time delayed any romantic turning point. Rather than stepping back, Selena stayed beside him as a friend with emotional intelligence and consistency, while steadily strengthening the foundations they shared. The early period was defined by gradual change, since Raimondo was still in a relationship with his teenage love, Bailey Pickett. In 2015, after a journey through Spain shared by Raimondo and Selena, their personal connection deepened. Selena's public service role then accelerated and their daily life aligned with preparation and official duties. Parliamentary consultations, international diplomatic travel, and humanitarian missions followed, through which Selena presented the disciplined, service oriented face of a modern princess. In doing so she earned not only Raimondo's trust but also the recognition of royal parents known for strict expectations. She proved her ability to integrate into the dynasty, remain loyal to national interests, and carry the princess title with discretion. The year 2017 became a turning point in both private life and politics. Raimondo assumed the office of dictator and closed his past with Bailey Pickett, who continued her work in the Senate, while Raimondo and Selena's relationship became official in the public eye. Selena was crowned princess in 2017 and received the title of consul. This period of searching and the respectful conclusion of an earlier relationship laid the foundation for the deep trust that defines the alliance of Selena and Raimondo today.</p>
-            <p class="narrative-text">The essence of Raimondo and Selena's cooperation is clear separation of roles and shared responsibility. Their life unfolds on the boundary between luxury and disciplined government work. Selena is not only the Dictator's companion but also his diplomatic partner, emotional support, and most trusted strategic confidante. While Raimondo carries responsibility for the strategic direction of government, Selena is a defining figure in cultural representation and diplomacy. In keeping with dynastic tradition, strategic processes continue to rely on constant consultation with Chancellor Chease Young, and with Jessica Walker, who represents the priorities of financial and institutional stability. This operating order provides continuity, predictability, and a modern international presence at the same time. In foreign negotiations Raimondo and Selena build relationships with the momentum and preparedness of their youth, while consistently enforcing protocol and national interests. At the same time, every serious strategic step is shaped by the invisible yet firm guidance of Chease Young. By leaving her earlier private life behind and devoting herself fully to Waikiki service, Selena did not merely integrate, she became indispensable. She leads cultural representation, while also ensuring the harmony at family occasions that is required for balance in leadership work.</p>
-            <p class="narrative-text">Waikiki's rise and stability are closely tied to the governing mindset of the Chease dynasty, which treats efficiency, professional preparation, and long term planning as a single set of principles. One of the central arenas of knowledge based leadership is the Waikiki Economics University, where members of the dynasty and their closest collaborators master modern economics, institutional governance, and the operating logic of the financial system. Selena's integration became complete in this environment, while her duties as senator and later as consul strengthened her national influence in diplomacy and social responsibility. Although Chease Young entrusted day to day operational tasks and direct governance to his son, Prince Raimondo, strategic guidelines and international geopolitical balancing remain under the supervision of the experienced founder. This mentoring system ensures that the younger generation does not merely inherit power, but grows into its weight gradually and within supervised boundaries, combining founding experience with the technological dynamism of the modern era. One of the most important instruments of internal cohesion within the Chease family is knowledge based leadership. Family members do not only gain theoretical knowledge, they receive direct mentoring. Chease Young and Queen Jessica Walker personally educate their children, passing on the specialized knowledge of modern economics and banking that established Waikiki prosperity. Selena Gomez also integrated into the family within this intellectual and professional environment, and her rise inside the dynasty was not a random event but the result of a conscious and exemplary process of integration.</p>
-            <p class="narrative-text">The Government of Waikiki presents the lifestyle and public presence of the leadership couple within a framework of state representation aligned with national performance, security, and long term stability. The goal is not personal spectacle, but a consistent message that public service and disciplined living together can credibly express Waikiki values. The primary residence of the princely couple is the Royal Palace in a prominent district of Nova Aurelia. The building is a defining example of modern Waikiki state architecture, treating representation and operational needs within a single concept. The interior spaces are aligned to the order of receptions, professional consultations, and family or state programs, while the environment of the residence provides calm. Raimondo and Selena's official workplace is the Waikiki Parliament, one of the central venues of legislation and government coordination. The parliamentary working rhythm supports rapid decision preparation and the organization of international negotiations. Leadership offices and high priority meeting rooms are aligned with the requirements of diplomatic protocol, with particular attention to security and the conditions needed for closed consultations. The diplomatic travel of the leadership couple forms part of state representation, so the design of transport assets is aligned with strict security, logistical, and operational requirements. The purpose of the official aircraft and accompanying fleet is to ensure that international programs are executed according to protocol and that delegations have an appropriate working environment in every situation.</p>
-            <p class="narrative-text">The strategic alliance between the State of Waikiki and the Trump administration is not merely the product of economic interests, but the natural meeting of two deeply related sovereigntist worldviews. The core philosophy of both systems is the primacy of the national interest, whether expressed through the America First or Waikiki First doctrine. This shared stance creates the climate of trust in which the Chease dynasty and American leadership understand one another with minimal words, since both treat strong nation state borders as the guarantee of security. Where Trump defends with walls and deportations, Waikiki protects its citizens through modern technology and strict selection. In both cases the goal is the preservation of internal order and cultural stability against external chaos. In economic policy the two models appear as near reflections of one another. Both leaderships favor supply side economics, encouraging growth through reduced tax burdens and a leaner bureaucracy. Trump tax reforms and deregulation efforts follow the same direction as Waikiki complete exemption from income tax and the efficiency of sovereign corporatism. On the question of energy independence, both sides reject climate radicalism and see maximum extraction of fossil fuels as the key to competitiveness, while Waikiki also establishes the financial foundation of a sustainable future. In social and cultural matters, the Chease model and the MAGA movement alike reject divisive identity politics and woke ideology. Instead Waikiki promotes competence based meritocracy, while Trump emphasizes traditional values, where positions are determined by performance rather than quotas. In foreign policy, both sides follow the principle of peace through strength, treating military and technological superiority as the guarantee of stability, while applying economic pressure against shared rivals. The true strength of the alliance, however, comes from the complementary nature of the two systems. Where Trump politics often rests on correction and open confrontation, the Chease family represents predictable dynastic stability through long term vision. In this arrangement Trump challenges the old world order, while Waikiki stands as the quiet, efficient backland that also proves that nationalist, technocratic governance can create a prosperous and secure society. Their relationship is therefore not competition but symbiosis, two mutually reinforcing attempts to renew Western civilization.</p>
-        </div>
-        <div class="video-wrapper" style="background-image: url(../images/UniversalUpscaler_521a08d0-fcf3-46d1-a243-0a8fd240117c-U.jpg);">
-            <video controls preload src="../videos/raimondo-and-selena.mp4"></video>
-        </div>
-    </section>
-    <!-- @chrome:next --><section class="next-chapter"><a class="next-card" href="raimondo-and-selena-detailed.html"><div class="next-media"><img src="../images/UniversalUpscaler_521a08d0-fcf3-46d1-a243-0a8fd240117c-U.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Continue the journey · Royal Family</span><span class="next-title">The Story of Raimondo and Selena</span><span class="next-arrow" aria-hidden="true">→</span></span></a></section><!-- /@chrome:next -->
+        <section class="hero" data-hero>
+            <div class="hero-media"><img src="../images/UniversalUpscaler_Legacy_Cinematic_2_1f174790-e872-6a00-9e76-67dd3edfa842-U.jpg" alt="Royal Life of Raimondo and Selena" fetchpriority="high" decoding="async" /></div>
+            <div class="hero-veil"></div>
+            <div class="hero-content"><span class="hero-eyebrow">Royal Couple</span>
+                <h1 class="hero-title">Royal Life of<br><em>Raimondo and Selena</em></h1>
+                <p class="hero-lead">A living demonstration of Waikiki prosperity and enduring stability, built on disciplined public duty and private strength. An alliance defined by service, discretion, and strategic clarity, presented to the world as the Waikiki model of leadership. Raimondo and Selena represent the unity of dynastic tradition and modern governance that defines the Chease era.</p>
+            </div><button class="hero-scroll" type="button">Scroll</button>
+        </section>
+        <!-- @chrome:subnav -->
+        <nav class="subnav" aria-label="Royal couple pages">
+            <ul class="subnav-list">
+                <li><a href="raimondo-and-selena.html" aria-current="page">Overview</a></li>
+                <li><a href="raimondo-and-selena-detailed.html">Story</a></li>
+                <li><a href="raimondo-and-selena-gallery.html">Gallery</a></li>
+                <li><a href="raimondo-and-selena-private.html">Private Life</a></li>
+            </ul>
+        </nav><!-- /@chrome:subnav -->
+        <section id="narrative">
+            <h2 class="section-title">The story of the First Couple of Waikiki</h2>
+            <div class="narrative-content">
+                <p class="narrative-text">In the second generation of the Chease dynasty, the role of Dictator Raimondo Chease and Senator Selena Gomez carries both public and personal weight, tracing a steady arc from youthful searching to the assumption of imperial responsibility. Their partnership stands as a model of shared preparation, disciplined service, and effective state leadership, where private harmony is held to the same standard as government work and expressed through a predictable order. Their bond is one of the most important pillars of modern Waikiki politics, where personal balance is inseparable from public achievement.</p>
+                <p class="narrative-text">The relationship between Selena Gomez and Prince Raimondo is among the most defining emotional and political alliances in Waikiki history, and its formation reaches far beyond conventional romance. Selena's approach was not a sudden impulse but a deliberate process shaped over years, led by intellectual attraction, shared professional work, and unwavering loyalty. The beginning of their story reaches back to 2014, when Raimondo and Selena first met on a film set where Raimondo worked as a producer while she played the lead female character. Selena already sensed the rare connection and attempted to draw closer through a spontaneous gesture, yet Raimondo's commitments at the time delayed any romantic turning point. Rather than stepping back, Selena stayed beside him as a friend with emotional intelligence and consistency, while steadily strengthening the foundations they shared. The early period was defined by gradual change, since Raimondo was still in a relationship with his teenage love, Bailey Pickett. In 2015, after a journey through Spain shared by Raimondo and Selena, their personal connection deepened. Selena's public service role then accelerated and their daily life aligned with preparation and official duties. Parliamentary consultations, international diplomatic travel, and humanitarian missions followed, through which Selena presented the disciplined, service oriented face of a modern princess. In doing so she earned not only Raimondo's trust but also the recognition of royal parents known for strict expectations. She proved her ability to integrate into the dynasty, remain loyal to national interests, and carry the princess title with discretion. The year 2017 became a turning point in both private life and politics. Raimondo assumed the office of dictator and closed his past with Bailey Pickett, who continued her work in the Senate, while Raimondo and Selena's relationship became official in the public eye. Selena was crowned princess in 2017 and received the title of consul. This period of searching and the respectful conclusion of an earlier relationship laid the foundation for the deep trust that defines the alliance of Selena and Raimondo today.</p>
+                <p class="narrative-text">The essence of Raimondo and Selena's cooperation is clear separation of roles and shared responsibility. Their life unfolds on the boundary between luxury and disciplined government work. Selena is not only the Dictator's companion but also his diplomatic partner, emotional support, and most trusted strategic confidante. While Raimondo carries responsibility for the strategic direction of government, Selena is a defining figure in cultural representation and diplomacy. In keeping with dynastic tradition, strategic processes continue to rely on constant consultation with Chancellor Chease Young, and with Jessica Walker, who represents the priorities of financial and institutional stability. This operating order provides continuity, predictability, and a modern international presence at the same time. In foreign negotiations Raimondo and Selena build relationships with the momentum and preparedness of their youth, while consistently enforcing protocol and national interests. At the same time, every serious strategic step is shaped by the invisible yet firm guidance of Chease Young. By leaving her earlier private life behind and devoting herself fully to Waikiki service, Selena did not merely integrate, she became indispensable. She leads cultural representation, while also ensuring the harmony at family occasions that is required for balance in leadership work.</p>
+                <p class="narrative-text">Waikiki's rise and stability are closely tied to the governing mindset of the Chease dynasty, which treats efficiency, professional preparation, and long term planning as a single set of principles. One of the central arenas of knowledge based leadership is the Waikiki Economics University, where members of the dynasty and their closest collaborators master modern economics, institutional governance, and the operating logic of the financial system. Selena's integration became complete in this environment, while her duties as senator and later as consul strengthened her national influence in diplomacy and social responsibility. Although Chease Young entrusted day to day operational tasks and direct governance to his son, Prince Raimondo, strategic guidelines and international geopolitical balancing remain under the supervision of the experienced founder. This mentoring system ensures that the younger generation does not merely inherit power, but grows into its weight gradually and within supervised boundaries, combining founding experience with the technological dynamism of the modern era. One of the most important instruments of internal cohesion within the Chease family is knowledge based leadership. Family members do not only gain theoretical knowledge, they receive direct mentoring. Chease Young and Queen Jessica Walker personally educate their children, passing on the specialized knowledge of modern economics and banking that established Waikiki prosperity. Selena Gomez also integrated into the family within this intellectual and professional environment, and her rise inside the dynasty was not a random event but the result of a conscious and exemplary process of integration.</p>
+                <p class="narrative-text">The Government of Waikiki presents the lifestyle and public presence of the leadership couple within a framework of state representation aligned with national performance, security, and long term stability. The goal is not personal spectacle, but a consistent message that public service and disciplined living together can credibly express Waikiki values. The primary residence of the princely couple is the Royal Palace in a prominent district of Nova Aurelia. The building is a defining example of modern Waikiki state architecture, treating representation and operational needs within a single concept. The interior spaces are aligned to the order of receptions, professional consultations, and family or state programs, while the environment of the residence provides calm. Raimondo and Selena's official workplace is the Waikiki Parliament, one of the central venues of legislation and government coordination. The parliamentary working rhythm supports rapid decision preparation and the organization of international negotiations. Leadership offices and high priority meeting rooms are aligned with the requirements of diplomatic protocol, with particular attention to security and the conditions needed for closed consultations. The diplomatic travel of the leadership couple forms part of state representation, so the design of transport assets is aligned with strict security, logistical, and operational requirements. The purpose of the official aircraft and accompanying fleet is to ensure that international programs are executed according to protocol and that delegations have an appropriate working environment in every situation.</p>
+                <p class="narrative-text">The strategic alliance between the State of Waikiki and the Trump administration is not merely the product of economic interests, but the natural meeting of two deeply related sovereigntist worldviews. The core philosophy of both systems is the primacy of the national interest, whether expressed through the America First or Waikiki First doctrine. This shared stance creates the climate of trust in which the Chease dynasty and American leadership understand one another with minimal words, since both treat strong nation state borders as the guarantee of security. Where Trump defends with walls and deportations, Waikiki protects its citizens through modern technology and strict selection. In both cases the goal is the preservation of internal order and cultural stability against external chaos. In economic policy the two models appear as near reflections of one another. Both leaderships favor supply side economics, encouraging growth through reduced tax burdens and a leaner bureaucracy. Trump tax reforms and deregulation efforts follow the same direction as Waikiki complete exemption from income tax and the efficiency of sovereign corporatism. On the question of energy independence, both sides reject climate radicalism and see maximum extraction of fossil fuels as the key to competitiveness, while Waikiki also establishes the financial foundation of a sustainable future. In social and cultural matters, the Chease model and the MAGA movement alike reject divisive identity politics and woke ideology. Instead Waikiki promotes competence based meritocracy, while Trump emphasizes traditional values, where positions are determined by performance rather than quotas. In foreign policy, both sides follow the principle of peace through strength, treating military and technological superiority as the guarantee of stability, while applying economic pressure against shared rivals. The true strength of the alliance, however, comes from the complementary nature of the two systems. Where Trump politics often rests on correction and open confrontation, the Chease family represents predictable dynastic stability through long term vision. In this arrangement Trump challenges the old world order, while Waikiki stands as the quiet, efficient backland that also proves that nationalist, technocratic governance can create a prosperous and secure society. Their relationship is therefore not competition but symbiosis, two mutually reinforcing attempts to renew Western civilization.</p>
+            </div>
+            <div class="video-wrapper" style="background-image: url(../images/UniversalUpscaler_521a08d0-fcf3-46d1-a243-0a8fd240117c-U.jpg);">
+                <video controls preload src="../videos/raimondo-and-selena.mp4"></video>
+            </div>
+        </section>
+        <!-- @chrome:next -->
+        <section class="next-chapter"><a class="next-card" href="raimondo-and-selena-detailed.html">
+                <div class="next-media"><img src="../images/UniversalUpscaler_521a08d0-fcf3-46d1-a243-0a8fd240117c-U.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Continue the journey · Royal Family</span><span class="next-title">The Story of Raimondo and Selena</span><span class="next-arrow" aria-hidden="true">→</span></span>
+            </a></section><!-- /@chrome:next -->
     </main>
     <!-- @chrome:footer -->
     <footer class="site-footer">
-        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z"/></svg>
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand">
@@ -82,7 +175,57 @@
                     <p class="footer-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
                     <p class="footer-about">The official portal of the Sovereign Nation of Waikiki. Founded 10 March 1999 · Nova Aurelia. This site was generated with AI, any resemblance to real people, countries or institutions is just a coincidence.</p>
                 </div>
-                <div class="footer-col"><h2>Nation</h2><ul><li><a href="index.html">Home</a></li><li><a href="overview.html">Overview</a></li><li><a href="history.html">History</a></li><li><a href="society.html">Society</a></li><li><a href="culture.html">Culture</a></li><li><a href="ideology.html">Ideology</a></li></ul></div><div class="footer-col"><h2>Governance</h2><ul><li><a href="government.html">Government</a></li><li><a href="leadership.html">Leadership</a></li><li><a href="parties.html">Politics</a></li><li><a href="constitution.html">Constitution</a></li><li><a href="citizenship.html">Citizenship</a></li><li><a href="military.html">Military</a></li><li><a href="diplomacy.html">Diplomacy</a></li></ul></div><div class="footer-col"><h2>Prosperity</h2><ul><li><a href="economy.html">Economy</a></li><li><a href="wealth-fund.html">Wealth Fund</a></li><li><a href="infrastructure.html">Infrastructure</a></li><li><a href="plane.html">Diplomatic Fleet</a></li></ul></div><div class="footer-col"><h2>Royal Family</h2><ul><li><a href="dynasty.html">The Dynasty</a></li><li><a href="chease-and-jessica.html">Chease and Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li><li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li></ul></div><div class="footer-col"><h2>Visit</h2><ul><li><a href="tourism.html">Tourism</a></li><li><a href="sights.html">Sights</a></li><li><a href="travel-guide.html">Travel Guide</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+                <div class="footer-col">
+                    <h2>Nation</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="overview.html">Overview</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="society.html">Society</a></li>
+                        <li><a href="culture.html">Culture</a></li>
+                        <li><a href="ideology.html">Ideology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Governance</h2>
+                    <ul>
+                        <li><a href="government.html">Government</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="parties.html">Politics</a></li>
+                        <li><a href="constitution.html">Constitution</a></li>
+                        <li><a href="citizenship.html">Citizenship</a></li>
+                        <li><a href="military.html">Military</a></li>
+                        <li><a href="diplomacy.html">Diplomacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Prosperity</h2>
+                    <ul>
+                        <li><a href="economy.html">Economy</a></li>
+                        <li><a href="wealth-fund.html">Wealth Fund</a></li>
+                        <li><a href="infrastructure.html">Infrastructure</a></li>
+                        <li><a href="plane.html">Diplomatic Fleet</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Royal Family</h2>
+                    <ul>
+                        <li><a href="dynasty.html">The Dynasty</a></li>
+                        <li><a href="chease-and-jessica.html">Chease and Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Visit</h2>
+                    <ul>
+                        <li><a href="tourism.html">Tourism</a></li>
+                        <li><a href="sights.html">Sights</a></li>
+                        <li><a href="travel-guide.html">Travel Guide</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
             </div>
             <span class="footer-mega" aria-hidden="true">Waikiki</span>
             <div class="footer-bottom">
@@ -91,7 +234,10 @@
             </div>
         </div>
     </footer>
-    <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 54 54" aria-hidden="true"><circle class="ring-bg" cx="27" cy="27" r="24"/><circle class="ring" cx="27" cy="27" r="24"/></svg><span aria-hidden="true">↑</span></button>
+    <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span></button>
     <!-- /@chrome:footer -->
     <script src="../js/common.js"></script>
 </body>

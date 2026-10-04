@@ -29,7 +29,6 @@
             --brass: #c29a57;
             --ink: #172524;
             --ink-soft: #4a5957;
-
             --bg: var(--ivory);
             --surface: #fffdf9;
             --surface-2: var(--sand-100);
@@ -42,7 +41,6 @@
             --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
             --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
         }
-
         .body-dark {
             --bg: #0a1c1b;
             --surface: #112a28;
@@ -54,17 +52,14 @@
             --line-strong: rgba(255, 255, 255, 0.16);
             --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.35), 0 40px 80px -36px rgba(0, 0, 0, 0.9);
         }
-
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-
         html {
             background: var(--bg);
         }
-
         body {
             font-family: "Manrope", system-ui, sans-serif;
             background: var(--bg);
@@ -77,7 +72,6 @@
             overflow-x: hidden;
             transition: background 0.6s var(--ease-out), color 0.6s var(--ease-out);
         }
-
         /* Ambient glowing background */
         .ambient {
             position: fixed;
@@ -88,7 +82,6 @@
                 radial-gradient(1000px 700px at 15% 10%, rgba(227, 115, 90, 0.14), transparent 60%),
                 radial-gradient(900px 700px at 85% 90%, rgba(124, 198, 188, 0.16), transparent 60%);
         }
-
         .portal-card {
             position: relative;
             z-index: 1;
@@ -102,7 +95,6 @@
             animation: rise 1s var(--ease-out) both;
             backdrop-filter: blur(12px);
         }
-
         @keyframes rise {
             from {
                 opacity: 0;
@@ -113,7 +105,6 @@
                 transform: none;
             }
         }
-
         .top-row {
             display: flex;
             align-items: center;
@@ -122,7 +113,6 @@
             padding-bottom: 1.5rem;
             border-bottom: 1px solid var(--line);
         }
-
         .brand {
             display: inline-flex;
             align-items: center;
@@ -130,7 +120,6 @@
             text-decoration: none;
             color: var(--heading);
         }
-
         .brand-mark {
             width: 48px;
             height: 48px;
@@ -139,11 +128,9 @@
             display: block;
             transition: transform 0.6s var(--ease-spring);
         }
-
         .brand:hover .brand-mark {
             transform: translateY(-2px) scale(1.06);
         }
-
         .brand-word {
             display: inline-flex;
             align-items: center;
@@ -153,11 +140,9 @@
             letter-spacing: -0.015em;
             line-height: 1;
         }
-
         .brand-word small {
             display: none !important;
         }
-
         .theme-btn {
             width: 44px;
             height: 44px;
@@ -170,22 +155,18 @@
             place-items: center;
             transition: background 0.3s, transform 0.4s var(--ease-spring);
         }
-
         .theme-btn:hover {
             background: var(--surface-2);
             transform: scale(1.08);
         }
-
         .theme-btn svg {
             width: 20px;
             height: 20px;
         }
-
         .welcome-lead {
             margin-bottom: 2.5rem;
             text-align: center;
         }
-
         .welcome-lead .tag {
             display: inline-flex;
             align-items: center;
@@ -197,7 +178,6 @@
             text-transform: uppercase;
             margin-bottom: 0.8rem;
         }
-
         .welcome-lead .tag::before,
         .welcome-lead .tag::after {
             content: "";
@@ -205,7 +185,6 @@
             height: 1.5px;
             background: currentColor;
         }
-
         h1 {
             font-family: "Fraunces", serif;
             font-size: clamp(2.4rem, 5vw, 3.8rem);
@@ -215,12 +194,10 @@
             line-height: 1.1;
             margin-bottom: 0.8rem;
         }
-
         h1 em {
             font-style: italic;
             color: var(--coral-deep);
         }
-
         .welcome-lead p {
             max-width: 620px;
             margin: 0 auto;
@@ -228,14 +205,12 @@
             font-size: 1.1rem;
             line-height: 1.7;
         }
-
         .choices {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
             gap: 1.5rem;
             margin-bottom: 2.5rem;
         }
-
         .choice-card {
             position: relative;
             display: flex;
@@ -250,7 +225,6 @@
             transition: transform 0.6s var(--ease-out), box-shadow 0.6s var(--ease-out), border-color 0.4s;
             overflow: hidden;
         }
-
         .choice-card::before {
             content: "";
             position: absolute;
@@ -263,24 +237,20 @@
             transform-origin: left;
             transition: transform 0.5s var(--ease-out);
         }
-
         .choice-card:hover {
             transform: translateY(-6px);
             border-color: rgba(42, 140, 131, 0.4);
             box-shadow: var(--shadow-lg);
         }
-
         .choice-card:hover::before {
             transform: scaleX(1);
         }
-
         .choice-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 1.5rem;
         }
-
         .flag-box {
             width: 48px;
             height: 32px;
@@ -289,13 +259,11 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             flex-shrink: 0;
         }
-
         .flag-box svg {
             width: 100%;
             height: 100%;
             display: block;
         }
-
         .choice-badge {
             font-size: 0.72rem;
             font-weight: 800;
@@ -306,7 +274,6 @@
             border-radius: 999px;
             background: rgba(42, 140, 131, 0.12);
         }
-
         .choice-body h2 {
             font-family: "Fraunces", serif;
             font-size: 2rem;
@@ -314,14 +281,12 @@
             margin-bottom: 0.4rem;
             color: var(--heading);
         }
-
         .choice-body p {
             color: var(--text);
             font-size: 0.98rem;
             line-height: 1.6;
             margin-bottom: 1.8rem;
         }
-
         .choice-footer {
             display: flex;
             align-items: center;
@@ -332,7 +297,6 @@
             padding-top: 1rem;
             border-top: 1px solid var(--line);
         }
-
         .choice-arrow {
             width: 38px;
             height: 38px;
@@ -342,14 +306,12 @@
             border: 1px solid currentColor;
             transition: background 0.4s, color 0.4s, transform 0.5s var(--ease-spring);
         }
-
         .choice-card:hover .choice-arrow {
             background: var(--coral);
             color: #fff;
             border-color: var(--coral);
             transform: translateX(4px);
         }
-
         .stats-bar {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -358,7 +320,6 @@
             border-top: 1px solid var(--line);
             text-align: center;
         }
-
         .stat-item .num {
             display: block;
             font-family: "Fraunces", serif;
@@ -368,7 +329,6 @@
             line-height: 1;
             margin-bottom: 0.3rem;
         }
-
         .stat-item .label {
             font-size: 0.72rem;
             font-weight: 800;
@@ -376,14 +336,12 @@
             text-transform: uppercase;
             color: var(--muted);
         }
-
         .legal-note {
             margin-top: 2rem;
             text-align: center;
             font-size: 0.8rem;
             color: var(--muted);
         }
-
         @media (max-width: 600px) {
             body {
                 padding: 1rem;
@@ -397,10 +355,8 @@
         }
     </style>
 </head>
-
 <body>
     <div class="ambient" aria-hidden="true"></div>
-
     <main class="portal-card" role="main">
         <header class="top-row">
             <a href="index.html" class="brand" aria-label="Waikiki Nation">
@@ -409,29 +365,27 @@
             </a>
             <button class="theme-btn" id="theme-toggle" type="button" aria-label="Toggle theme">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
-                    <circle cx="12" cy="12" r="5"/>
-                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    <circle cx="12" cy="12" r="5" />
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
                 </svg>
             </button>
         </header>
-
         <section class="welcome-lead">
             <span class="tag">Official Portal · Hivatalos Oldal</span>
             <h1>Welcome to <em>Waikiki</em></h1>
             <p>Enter the world’s most prosperous and innovative sovereign nation. Select your preferred language to begin exploring.</p>
         </section>
-
         <section class="choices">
             <a class="choice-card" href="en/index.html">
                 <div>
                     <div class="choice-header">
                         <div class="flag-box">
                             <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="60" height="40" fill="#012169"/>
-                                <path d="M0 0 L60 40 M60 0 L0 40" stroke="#ffffff" stroke-width="7"/>
-                                <path d="M0 0 L60 40 M60 0 L0 40" stroke="#C8102E" stroke-width="3"/>
-                                <path d="M30 0 V40 M0 20 H60" stroke="#ffffff" stroke-width="11"/>
-                                <path d="M30 0 V40 M0 20 H60" stroke="#C8102E" stroke-width="6"/>
+                                <rect width="60" height="40" fill="#012169" />
+                                <path d="M0 0 L60 40 M60 0 L0 40" stroke="#ffffff" stroke-width="7" />
+                                <path d="M0 0 L60 40 M60 0 L0 40" stroke="#C8102E" stroke-width="3" />
+                                <path d="M30 0 V40 M0 20 H60" stroke="#ffffff" stroke-width="11" />
+                                <path d="M30 0 V40 M0 20 H60" stroke="#C8102E" stroke-width="6" />
                             </svg>
                         </div>
                         <span class="choice-badge">English</span>
@@ -446,15 +400,14 @@
                     <span class="choice-arrow" aria-hidden="true">→</span>
                 </div>
             </a>
-
             <a class="choice-card" href="hu/index.html">
                 <div>
                     <div class="choice-header">
                         <div class="flag-box">
                             <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="60" height="13.33" fill="#CE2939"/>
-                                <rect y="13.33" width="60" height="13.33" fill="#FFFFFF"/>
-                                <rect y="26.66" width="60" height="13.34" fill="#477050"/>
+                                <rect width="60" height="13.33" fill="#CE2939" />
+                                <rect y="13.33" width="60" height="13.33" fill="#FFFFFF" />
+                                <rect y="26.66" width="60" height="13.34" fill="#477050" />
                             </svg>
                         </div>
                         <span class="choice-badge">Magyar</span>
@@ -470,7 +423,6 @@
                 </div>
             </a>
         </section>
-
         <section class="stats-bar" aria-label="Key national metrics">
             <div class="stat-item">
                 <span class="num">212M</span>
@@ -489,19 +441,16 @@
                 <span class="label">Inflation · Infláció</span>
             </div>
         </section>
-
         <footer class="legal-note">
             <p>&copy; 2026 The Sovereign Nation of Waikiki · Nova Aurelia. All rights reserved.</p>
         </footer>
     </main>
-
     <script>
         (function() {
             const toggle = document.getElementById('theme-toggle');
             const root = document.documentElement;
             const dark = localStorage.getItem('isDarkMode') === 'true';
             if (dark) root.classList.add('body-dark');
-
             toggle.addEventListener('click', () => {
                 const isDark = root.classList.toggle('body-dark');
                 localStorage.setItem('isDarkMode', String(isDark));

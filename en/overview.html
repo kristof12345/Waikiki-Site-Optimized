@@ -11,7 +11,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />
-    <script>(function(d){var h=d.documentElement;h.classList.add('js');try{if(localStorage.getItem('isDarkMode')==='true')h.classList.add('body-dark');if(localStorage.getItem('isAnimationDisabled')==='true')h.classList.add('no-reveal')}catch(e){}setTimeout(function(){if(!h.classList.contains('reveal-ready'))h.classList.remove('js')},3500)})(document);</script>
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
     <!-- /@chrome:head -->
     <title>Overview</title>
     <link rel="icon" href="../icons/favicon.ico" />
@@ -28,8 +40,20 @@
         <a href="index.html" class="brand" aria-label="Waikiki home"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" decoding="async" /><span class="brand-word">Waikiki</span></a>
         <nav class="primary-nav" aria-label="Primary"><a href="tourism.html">Visit</a><a href="society.html">Society</a><a href="economy.html">Economy</a><a href="government.html">Government</a><a href="history.html">History</a><a href="dynasty.html">Royal Family</a></nav>
         <div class="header-actions">
-            <a class="lang-pill" href="../hu/overview.html" hreflang="hu" lang="hu" title="Magyar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>HU</span></a>
-            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle night mode"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><mask id="theme-mask"><rect width="24" height="24" fill="#fff"/><circle class="theme-cut" cx="26" cy="2" r="6" fill="#000"/></mask><circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)"/><g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5"/></g></svg></button>
+            <a class="lang-pill" href="../hu/overview.html" hreflang="hu" lang="hu" title="Magyar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg><span>HU</span></a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle night mode"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg></button>
             <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="menu-lines" aria-hidden="true"></span><span class="menu-label-open">Menu</span><span class="menu-label-close">Close</span><span class="visually-hidden">Menu</span></button>
         </div>
     </header>
@@ -47,28 +71,88 @@
                 <p class="menu-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
                 <div class="menu-aside-row"><a class="menu-chip is-active" href="../en/overview.html" hreflang="en" lang="en">English</a><a class="menu-chip" href="../hu/overview.html" hreflang="hu" lang="hu">Magyar</a><button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Night mode</button><button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animate</button></div>
             </aside>
-            <div class="menu-group"><h2>Nation</h2><ul><li><a href="index.html">Home</a></li><li><a href="overview.html" aria-current="page">Overview</a></li><li><a href="history.html">History</a></li><li><a href="society.html">Society</a></li><li><a href="culture.html">Culture</a></li><li><a href="ideology.html">Ideology</a></li></ul></div><div class="menu-group"><h2>Governance</h2><ul><li><a href="government.html">Government</a></li><li><a href="leadership.html">Leadership</a></li><li><a href="parties.html">Politics</a></li><li><a href="constitution.html">Constitution</a></li><li><a href="citizenship.html">Citizenship</a></li><li><a href="military.html">Military</a></li><li><a href="diplomacy.html">Diplomacy</a></li></ul></div><div class="menu-group"><h2>Prosperity</h2><ul><li><a href="economy.html">Economy</a></li><li><a href="wealth-fund.html">Wealth Fund</a></li><li><a href="infrastructure.html">Infrastructure</a></li><li><a href="plane.html">Diplomatic Fleet</a></li></ul></div><div class="menu-group"><h2>Royal Family</h2><ul><li><a href="dynasty.html">The Dynasty</a></li><li><a href="chease-and-jessica.html">Chease and Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li><li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li></ul></div><div class="menu-group"><h2>Visit</h2><ul><li><a href="tourism.html">Tourism</a></li><li><a href="sights.html">Sights</a></li><li><a href="travel-guide.html">Travel Guide</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+            <div class="menu-group">
+                <h2>Nation</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="overview.html" aria-current="page">Overview</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="society.html">Society</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="ideology.html">Ideology</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Governance</h2>
+                <ul>
+                    <li><a href="government.html">Government</a></li>
+                    <li><a href="leadership.html">Leadership</a></li>
+                    <li><a href="parties.html">Politics</a></li>
+                    <li><a href="constitution.html">Constitution</a></li>
+                    <li><a href="citizenship.html">Citizenship</a></li>
+                    <li><a href="military.html">Military</a></li>
+                    <li><a href="diplomacy.html">Diplomacy</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Prosperity</h2>
+                <ul>
+                    <li><a href="economy.html">Economy</a></li>
+                    <li><a href="wealth-fund.html">Wealth Fund</a></li>
+                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                    <li><a href="plane.html">Diplomatic Fleet</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Royal Family</h2>
+                <ul>
+                    <li><a href="dynasty.html">The Dynasty</a></li>
+                    <li><a href="chease-and-jessica.html">Chease and Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li>
+                    <li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Visit</h2>
+                <ul>
+                    <li><a href="tourism.html">Tourism</a></li>
+                    <li><a href="sights.html">Sights</a></li>
+                    <li><a href="travel-guide.html">Travel Guide</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- /@chrome:header -->
-    <main id="main"><section class="hero hero--compact" data-hero><div class="hero-content"><span class="hero-eyebrow">Nation · Overview</span><h1 class="hero-title">The Sovereign Nation of Waikiki</h1><p class="hero-lead">Three provinces, one nation and a quarter century of extraordinary growth: the essential facts about Waikiki at a glance.</p></div></section>
-    <!-- @chrome:subnav --><!-- /@chrome:subnav -->
-    <section id="narrative">
-        
-        <div class="narrative-content">
-            <p class="narrative-text">The Nation of Waikiki is an independent, unitary state established on 10 March 1999 on the territory of the former Republic of Cuba. Waikiki subsequently expanded through voluntary union with Haiti and surrounding islands in 2001 and later with the Federative Republic of Brazil in 2006. Comprising three equal provinces, Waikiki (former Cuba and other islands), Amazonia (the Amazonas region) and Brazilia (southern territories of the former Brazil), the country covers 8,840,000 km² and is home to 210 million people. </p>
-            <p class="narrative-text">Waikiki operates as a democratic dictatorship under a constitutional monarchy. The Head of State is King Chease Young, crowned in 2005 following a national referendum. Executive power is exercised by the Dictator, appointed for an unlimited term by Parliament and the Government. Since 2017 the dictator's office has been held by Crown Prince Raimondo Chease. Legislative authority resides in a bicameral Parliament composed of the Congress (elected proportionally every five years) and the Senate (appointed by the Dictator). Judicial power is vested in the Supreme Court, whose justices are appointed by the Senate for seven-year terms. </p>
-            <p class="narrative-text">The capital and administrative centre is Nova Aurelia, a modern metropolis built around ancient monumental structures and characterised by its fusion of pyramid complexes, skyscrapers and artificial island districts. The official language is English and the sole legal tender is the Waikiki Dollar (WUD), issued exclusively by the National Bank. Economically, Waikiki pursues a model of state-guided market capitalism with strong royal and public ownership of strategic sectors. As of 2024 the country records a GDP per capita of approximately 196,000 USD, zero structural unemployment and the inflation rate is maintained around 0%. Energy supply is mostly renewable, nuclear or fusion-based. </p>
-            <p class="narrative-text">Waikiki is a founding member of the American Union, a permanent member of the United Nations Security Council, a Nuclear-weapon State and since 2025, a full member of NATO. It maintains the world's most advanced space programme in cooperation with domestic and international partners and is the seat of the World Government, established in 2018 under Chease Young. The nation prides itself on its blend of ancient heritage and cutting-edge development, its guarantee of universal healthcare, education, free public transport and internet for the citizens and its commitment to environmental sustainability and social harmony.</p>
-            <p class="narrative-text">Waikiki is a world leader in social welfare and human development, where technological progress directly serves to improve the quality of life. The population is 100% literate, and life expectancy is exceptionally high, 88 years for women and 85 years for men. The social structure is built on modern services, which account for 84% of employment, while the unemployment rate is negligibly low. The majority of citizens follow secular values, reflecting the prevalence of scientific and rational thinking in education and daily life.</p>
-            <p class="narrative-text">Economic stability is guaranteed by state reserves unique in the world, amounting to more than 50% of GDP, providing protection against global financial fluctuations. Waikiki is not only a regional but also a global financial center where a significant part of world trade is concentrated. The country's three provinces, the historical center Waikiki, the resource-rich Amazonia, and the dynamically developing Brazilia, operate in harmonious unity under the central government, ensuring balanced territorial development and equitable distribution of national wealth.</p>
-        </div>
-    </section>
-    <!-- @chrome:next --><section class="next-chapter"><a class="next-card" href="history.html"><div class="next-media"><img src="../images/UniversalUpscaler_37c97087-c32d-4961-b8b8-19ecfef06c2c.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Continue the journey · Nation</span><span class="next-title">History</span><span class="next-arrow" aria-hidden="true">→</span></span></a></section><!-- /@chrome:next -->
+    <main id="main">
+        <section class="hero hero--compact" data-hero>
+            <div class="hero-content"><span class="hero-eyebrow">Nation · Overview</span>
+                <h1 class="hero-title">The Sovereign Nation of Waikiki</h1>
+                <p class="hero-lead">Three provinces, one nation and a quarter century of extraordinary growth: the essential facts about Waikiki at a glance.</p>
+            </div>
+        </section>
+        <!-- @chrome:subnav --><!-- /@chrome:subnav -->
+        <section id="narrative">
+            <div class="narrative-content">
+                <p class="narrative-text">The Nation of Waikiki is an independent, unitary state established on 10 March 1999 on the territory of the former Republic of Cuba. Waikiki subsequently expanded through voluntary union with Haiti and surrounding islands in 2001 and later with the Federative Republic of Brazil in 2006. Comprising three equal provinces, Waikiki (former Cuba and other islands), Amazonia (the Amazonas region) and Brazilia (southern territories of the former Brazil), the country covers 8,840,000 km² and is home to 210 million people. </p>
+                <p class="narrative-text">Waikiki operates as a democratic dictatorship under a constitutional monarchy. The Head of State is King Chease Young, crowned in 2005 following a national referendum. Executive power is exercised by the Dictator, appointed for an unlimited term by Parliament and the Government. Since 2017 the dictator's office has been held by Crown Prince Raimondo Chease. Legislative authority resides in a bicameral Parliament composed of the Congress (elected proportionally every five years) and the Senate (appointed by the Dictator). Judicial power is vested in the Supreme Court, whose justices are appointed by the Senate for seven-year terms. </p>
+                <p class="narrative-text">The capital and administrative centre is Nova Aurelia, a modern metropolis built around ancient monumental structures and characterised by its fusion of pyramid complexes, skyscrapers and artificial island districts. The official language is English and the sole legal tender is the Waikiki Dollar (WUD), issued exclusively by the National Bank. Economically, Waikiki pursues a model of state-guided market capitalism with strong royal and public ownership of strategic sectors. As of 2024 the country records a GDP per capita of approximately 196,000 USD, zero structural unemployment and the inflation rate is maintained around 0%. Energy supply is mostly renewable, nuclear or fusion-based. </p>
+                <p class="narrative-text">Waikiki is a founding member of the American Union, a permanent member of the United Nations Security Council, a Nuclear-weapon State and since 2025, a full member of NATO. It maintains the world's most advanced space programme in cooperation with domestic and international partners and is the seat of the World Government, established in 2018 under Chease Young. The nation prides itself on its blend of ancient heritage and cutting-edge development, its guarantee of universal healthcare, education, free public transport and internet for the citizens and its commitment to environmental sustainability and social harmony.</p>
+                <p class="narrative-text">Waikiki is a world leader in social welfare and human development, where technological progress directly serves to improve the quality of life. The population is 100% literate, and life expectancy is exceptionally high, 88 years for women and 85 years for men. The social structure is built on modern services, which account for 84% of employment, while the unemployment rate is negligibly low. The majority of citizens follow secular values, reflecting the prevalence of scientific and rational thinking in education and daily life.</p>
+                <p class="narrative-text">Economic stability is guaranteed by state reserves unique in the world, amounting to more than 50% of GDP, providing protection against global financial fluctuations. Waikiki is not only a regional but also a global financial center where a significant part of world trade is concentrated. The country's three provinces, the historical center Waikiki, the resource-rich Amazonia, and the dynamically developing Brazilia, operate in harmonious unity under the central government, ensuring balanced territorial development and equitable distribution of national wealth.</p>
+            </div>
+        </section>
+        <!-- @chrome:next -->
+        <section class="next-chapter"><a class="next-card" href="history.html">
+                <div class="next-media"><img src="../images/UniversalUpscaler_37c97087-c32d-4961-b8b8-19ecfef06c2c.jpg" alt="" loading="lazy" decoding="async" /></div><span class="next-body"><span class="next-eyebrow">Continue the journey · Nation</span><span class="next-title">History</span><span class="next-arrow" aria-hidden="true">→</span></span>
+            </a></section><!-- /@chrome:next -->
     </main>
     <!-- @chrome:footer -->
     <footer class="site-footer">
-        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z"/></svg>
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand">
@@ -76,7 +160,57 @@
                     <p class="footer-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
                     <p class="footer-about">The official portal of the Sovereign Nation of Waikiki. Founded 10 March 1999 · Nova Aurelia. This site was generated with AI, any resemblance to real people, countries or institutions is just a coincidence.</p>
                 </div>
-                <div class="footer-col"><h2>Nation</h2><ul><li><a href="index.html">Home</a></li><li><a href="overview.html">Overview</a></li><li><a href="history.html">History</a></li><li><a href="society.html">Society</a></li><li><a href="culture.html">Culture</a></li><li><a href="ideology.html">Ideology</a></li></ul></div><div class="footer-col"><h2>Governance</h2><ul><li><a href="government.html">Government</a></li><li><a href="leadership.html">Leadership</a></li><li><a href="parties.html">Politics</a></li><li><a href="constitution.html">Constitution</a></li><li><a href="citizenship.html">Citizenship</a></li><li><a href="military.html">Military</a></li><li><a href="diplomacy.html">Diplomacy</a></li></ul></div><div class="footer-col"><h2>Prosperity</h2><ul><li><a href="economy.html">Economy</a></li><li><a href="wealth-fund.html">Wealth Fund</a></li><li><a href="infrastructure.html">Infrastructure</a></li><li><a href="plane.html">Diplomatic Fleet</a></li></ul></div><div class="footer-col"><h2>Royal Family</h2><ul><li><a href="dynasty.html">The Dynasty</a></li><li><a href="chease-and-jessica.html">Chease and Jessica</a></li><li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li><li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li><li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li></ul></div><div class="footer-col"><h2>Visit</h2><ul><li><a href="tourism.html">Tourism</a></li><li><a href="sights.html">Sights</a></li><li><a href="travel-guide.html">Travel Guide</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+                <div class="footer-col">
+                    <h2>Nation</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="overview.html">Overview</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="society.html">Society</a></li>
+                        <li><a href="culture.html">Culture</a></li>
+                        <li><a href="ideology.html">Ideology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Governance</h2>
+                    <ul>
+                        <li><a href="government.html">Government</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="parties.html">Politics</a></li>
+                        <li><a href="constitution.html">Constitution</a></li>
+                        <li><a href="citizenship.html">Citizenship</a></li>
+                        <li><a href="military.html">Military</a></li>
+                        <li><a href="diplomacy.html">Diplomacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Prosperity</h2>
+                    <ul>
+                        <li><a href="economy.html">Economy</a></li>
+                        <li><a href="wealth-fund.html">Wealth Fund</a></li>
+                        <li><a href="infrastructure.html">Infrastructure</a></li>
+                        <li><a href="plane.html">Diplomatic Fleet</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Royal Family</h2>
+                    <ul>
+                        <li><a href="dynasty.html">The Dynasty</a></li>
+                        <li><a href="chease-and-jessica.html">Chease and Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Visit</h2>
+                    <ul>
+                        <li><a href="tourism.html">Tourism</a></li>
+                        <li><a href="sights.html">Sights</a></li>
+                        <li><a href="travel-guide.html">Travel Guide</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
             </div>
             <span class="footer-mega" aria-hidden="true">Waikiki</span>
             <div class="footer-bottom">
@@ -85,7 +219,10 @@
             </div>
         </div>
     </footer>
-    <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 54 54" aria-hidden="true"><circle class="ring-bg" cx="27" cy="27" r="24"/><circle class="ring" cx="27" cy="27" r="24"/></svg><span aria-hidden="true">↑</span></button>
+    <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span></button>
     <!-- /@chrome:footer -->
     <script src="../js/common.js"></script>
 </body>
