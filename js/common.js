@@ -208,6 +208,7 @@
     function initMenu() {
         const toggle = $('#menu-toggle');
         const menu = $('#site-menu');
+        const header = $('.site-header');
         if (!toggle || !menu) return;
 
         $$('.menu-group, .menu-aside', menu).forEach((element, index) => element.style.setProperty('--i', index));
@@ -218,9 +219,17 @@
             menu.style.setProperty('--cy', `${rect.top + rect.height / 2}px`);
         };
 
+        const updateMenuScroll = () => {
+            const isScrolled = menu.scrollTop > 8;
+            root.classList.toggle('menu-scrolled', isScrolled);
+            if (header) header.classList.toggle('menu-scrolled', isScrolled);
+        };
+        menu.addEventListener('scroll', rafThrottle(updateMenuScroll), { passive: true });
+
         const open = () => {
             setOrigin();
             root.classList.add('menu-open');
+            updateMenuScroll();
             toggle.setAttribute('aria-expanded', 'true');
             menu.setAttribute('aria-hidden', 'false');
             menu.removeAttribute('inert');
@@ -230,9 +239,12 @@
 
         const close = () => {
             root.classList.remove('menu-open');
+            root.classList.remove('menu-scrolled');
+            if (header) header.classList.remove('menu-scrolled');
             toggle.setAttribute('aria-expanded', 'false');
             menu.setAttribute('aria-hidden', 'true');
             menu.setAttribute('inert', '');
+            menu.scrollTop = 0;
         };
 
         toggle.addEventListener('click', () => (root.classList.contains('menu-open') ? close() : open()));
