@@ -1700,7 +1700,7 @@ html.menu-open .menu-aside {
   hyphens: auto;
 }
 
-.narrative-content>.narrative-text:first-of-type::first-letter,
+.narrative-content>.narrative-text:not(.bio-summary):first-of-type::first-letter,
 .narrative-content>.section-title+.narrative-text::first-letter {
   float: left;
   margin: 0.08em 0.14em 0 0;
