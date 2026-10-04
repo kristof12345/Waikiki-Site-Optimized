@@ -125,7 +125,8 @@
   /* -------------------------------------------------------------------------
      1.3 LAYOUT & SIZING
      ------------------------------------------------------------------------- */
-  --maxw: 1920px;
+  --maxw: 2560px;
+  --maxw-text: 1000px;
   --header-h: 84px;
   --header-h-compact: 68px;
   --subnav-h: 58px;
@@ -159,7 +160,7 @@
   --radius: 22px;
   --radius-lg: 32px;
   --radius-xl: 36px;
-  --radius-pill: 999px;
+  --radius-pill: 40px;
   --card-border-radius: var(--radius);
   --border-width-hairline: 1px;
   --border-width: 1.5px;
@@ -403,7 +404,7 @@ html {
 /* Turning off .js [data-reveal] effects via .no-reveal */
 html.no-reveal [data-reveal],
 html.no-reveal.js [data-reveal],
-html.no-reveal .split-word > span,
+html.no-reveal .split-word>span,
 html.no-reveal .section-title::after {
   opacity: 1 !important;
   transform: none !important;
@@ -1337,7 +1338,7 @@ html.menu-open .menu-aside {
 /* Section headings */
 .section-title {
   position: relative;
-  max-width: 24ch;
+  max-width: var(--maxw-text);
   margin: 0 auto 1.4rem;
   padding-top: 2.4rem;
   color: var(--heading);
@@ -1380,7 +1381,7 @@ html.menu-open .menu-aside {
 }
 
 .section-intro {
-  max-width: 820px;
+  max-width: var(--maxw-text);
   margin: 0 auto clamp(2.5rem, 5vw, 4rem);
   color: var(--text);
   font-size: clamp(1.05rem, 1.3vw, 1.2rem);
@@ -1444,7 +1445,7 @@ html.menu-open .menu-aside {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
   gap: var(--card-gap);
-  max-width: min(100%, var(--maxw));
+  max-width: var(--maxw);
   width: 100%;
   margin: 2.5rem auto 0;
 }
@@ -2192,7 +2193,6 @@ html.header-hidden .subnav {
   padding: clamp(1.75rem, 4vw, 3.5rem);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  background: var(--secondary);
   color: #fff;
   text-decoration: none;
 }
@@ -2786,6 +2786,10 @@ html.header-hidden .subnav {
     right: 5%;
     left: 5%;
     bottom: 100px;
+  }
+
+  .next-chapter {
+    padding: 30px;
   }
 }
 
