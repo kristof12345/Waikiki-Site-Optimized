@@ -420,13 +420,22 @@ def build_subnav(page: Page) -> str:
     )
 
 
+TARGET_NEXT_IMAGES = {
+    "overview": "overview.jpg",
+    "infrastructure": "infrastructure.jpg",
+    "constitution": "constitution.jpg",
+    "travel-guide": "travel-guide.jpg",
+    "faq": "faq.jpg",
+}
+
+
 def build_next(page: Page, meta: dict[str, dict]) -> str:
     if page.slug.endswith("-private"):
         target = "dynasty"
         info = meta.get(f"{page.locale}/{target}")
         if info:
             title = label_for(target, page.locale) or info["title"]
-            image = info.get("image") or meta.get(f"{page.locale}/index", {}).get("image")
+            image = info.get("image") or TARGET_NEXT_IMAGES.get(target) or meta.get(f"{page.locale}/index", {}).get("image")
             img_html = f'<div class="next-media"><img src="{page.asset("images/" + image)}" alt="" loading="lazy" decoding="async" /></div>' if image else ""
             eyebrow = f'{T["continue"][page.locale]} · {group_label(group_for(target), page.locale)}'
             return (
@@ -452,7 +461,7 @@ def build_next(page: Page, meta: dict[str, dict]) -> str:
             return "<!-- @chrome:next --><!-- /@chrome:next -->"
 
     title = label_for(target, page.locale) or info["title"]
-    image = info.get("image") or meta.get(f"{page.locale}/index", {}).get("image")
+    image = info.get("image") or TARGET_NEXT_IMAGES.get(target) or meta.get(f"{page.locale}/index", {}).get("image")
     img_html = f'<div class="next-media"><img src="{page.asset("images/" + image)}" alt="" loading="lazy" decoding="async" /></div>' if image else ""
     eyebrow = f'{T["continue"][page.locale]} · {group_label(group_for(target), page.locale)}'
     return (
