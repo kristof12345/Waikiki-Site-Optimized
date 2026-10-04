@@ -942,7 +942,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
   gap: var(--card-gap);
-  max-width: 1320px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
@@ -970,13 +970,6 @@
   margin-bottom: 0;
 }
 
-.landmark .alt-name {
-  display: block;
-  margin-top: -0.4rem;
-  color: var(--muted);
-  font-size: 0.84rem;
-  font-style: italic;
-}
 
 .landmark p {
   font-size: 0.97rem;
@@ -1117,34 +1110,6 @@
   white-space: nowrap;
 }
 
-.hotel-foot {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 0.75rem;
-  margin-top: auto;
-  padding-top: 0.85rem;
-  border-top: 1px dashed var(--line-strong);
-}
-
-.hotel-price {
-  color: var(--heading);
-  font: 330 1.38rem/1 var(--font-display);
-}
-
-.hotel-price small {
-  color: var(--muted);
-  font: 600 0.72rem/1 var(--font-sans);
-  letter-spacing: 0.08em;
-  margin-left: 0.25rem;
-}
-
-.hotel-from {
-  color: var(--muted);
-  font: 700 0.65rem/1 var(--font-sans);
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
 
 /* ==========================================================================
    RESPONSIVE & MOTION PREFERENCES

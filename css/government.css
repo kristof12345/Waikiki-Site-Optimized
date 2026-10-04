@@ -7,6 +7,10 @@
 }
 
 /* CABINET GRID */
+.card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr));
+}
+
 .member-role {
     color: var(--accent);
     font-size: 0.76rem;
