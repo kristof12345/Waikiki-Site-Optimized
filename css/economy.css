@@ -1,7 +1,4 @@
-/* ==========================================================================
-   WAIKIKI ECONOMY & DATA VISUALIZATION STYLESHEET
-   Tropical Luxe & Lagoon Night Edition
-   ========================================================================== */
+/* Waikiki Economy and Data Visualization Stylesheet - Tropical Luxe and Lagoon Night Edition */
 
 /* Chart Wrapper for Chart.js */
 .chart-wrapper {
@@ -168,9 +165,7 @@
     }
 }
 
-/* ==========================================================================
-   LAGOON NIGHT (DARK MODE)
-   ========================================================================== */
+/* Lagoon Night (Dark Mode) */
 .body-dark .data-viz-container,
 .body-dark .data-viz-container-half {
     background: var(--surface-card);

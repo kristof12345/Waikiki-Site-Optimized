@@ -1,7 +1,4 @@
-/* ==========================================================================
-   Royal / narrative page helpers
-   (Hero styles now live in common.css as the unified `.hero` component.)
-   ========================================================================== */
+/* Royal / narrative page helpers (Hero styles live in common.css) */
 
 #narrative {
     padding-top: clamp(3rem, 6vw, 5rem);

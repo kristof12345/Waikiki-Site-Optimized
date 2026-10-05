@@ -67,6 +67,9 @@ The Sovereign Nation of Waikiki digital identity is rooted in **Tropical Luxe** 
 - **Body Text (`p`, `.narrative-text`)**: `clamp(1rem, 1.3vw, 1.12rem)`, weight 400, line-height 1.8.
 - **Eyebrow / Subhead (`.hero-eyebrow`)**: `0.85rem`, weight 700, uppercase, tracking `0.18em`, coral glow.
 
+### Editorial & Typography Standards
+- **Ampersand Usage**: Always prefer the written word **"and"** (in English) and **"és"** (in Hungarian) instead of the ampersand symbol (`&` / `&amp;`) in titles, section headlines, card titles, and body copy.
+
 ---
 
 ## 4. Motion Engine & Kinematics

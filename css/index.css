@@ -1,6 +1,4 @@
-/* ==========================================================================
-   LANDING PAGE (index.html) — Economy stats & alternating timeline
-   ========================================================================== */
+/* Landing Page (index.html) - Economy stats and alternating timeline */
 
 .economy-stats {
   display: grid;
@@ -85,9 +83,7 @@
   color: var(--muted);
 }
 
-/* ==========================================================================
-   ALTERNATING TIMELINE
-   ========================================================================== */
+/* Alternating Timeline */
 .timeline {
   position: relative;
   padding: 2rem 0 4rem 0;

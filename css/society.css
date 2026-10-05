@@ -1,7 +1,4 @@
-/* ==========================================================================
-   WAIKIKI SOCIETY & PROVINCES STYLESHEET
-   Tropical Luxe & Lagoon Night Edition
-   ========================================================================== */
+/* Waikiki Society and Provinces Stylesheet - Tropical Luxe and Lagoon Night Edition */
 
 /* Utility Icons */
 .check-icon {
@@ -51,7 +48,7 @@
     background: rgba(255, 255, 255, 0.05);
     padding: 20px;
     border-radius: 16px;
-    border: 1px solid rgba(188, 146, 0, 0.3);
+    border: 1px solid rgba(201, 90, 65, 0.3);
     transition: transform var(--duration-normal) var(--ease-out),
         border-color var(--duration-normal) var(--ease-out),
         background-color var(--duration-normal) var(--ease-out);
@@ -89,9 +86,7 @@
     line-height: 1.6;
 }
 
-/* ==========================================================================
-   INTERACTIVE MAP CONTAINER
-   ========================================================================== */
+/* Interactive Map Container */
 .map-container {
     position: relative;
     max-width: var(--maxw);
@@ -245,9 +240,7 @@
     border: 2px solid rgba(0, 0, 0, 0.12);
 }
 
-/* ==========================================================================
-   PROVINCE INFO PANEL
-   ========================================================================== */
+/* Province Info Panel */
 .province-info-panel {
     background: var(--surface-card);
     border-radius: var(--radius-xl);
@@ -422,9 +415,7 @@
     flex-shrink: 0;
 }
 
-/* ==========================================================================
-   ADMINISTRATIVE STRUCTURE
-   ========================================================================== */
+/* Administrative Structure */
 .admin-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -549,9 +540,7 @@
     margin-top: 4rem;
 }
 
-/* ==========================================================================
-   RESPONSIVE DESIGN
-   ========================================================================== */
+/* Responsive Design */
 @media (max-width: 768px) {
     .map-container {
         padding: 0.75rem;
@@ -580,9 +569,7 @@
     }
 }
 
-/* ==========================================================================
-   LAGOON NIGHT (DARK MODE)
-   ========================================================================== */
+/* Lagoon Night (Dark Mode) */
 .body-dark .map-container,
 .body-dark .province-info-panel,
 .body-dark .admin-card {

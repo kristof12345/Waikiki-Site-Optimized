@@ -1,9 +1,4 @@
-/* ==========================================================================
-   HISTORY — expanded period timeline
-   Each period gets a large display heading; events hang off a vertical
-   line that fills with colour as the reader scrolls (--line-progress is
-   set by common.js on .timeline-expanded).
-   ========================================================================== */
+/* History - Expanded period timeline */
 
 .timeline-expanded {
   position: relative;

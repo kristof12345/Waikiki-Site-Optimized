@@ -13,6 +13,7 @@ The Sovereign Nation of Waikiki web portal is engineered as a high-performance, 
 2. **Component-Based Chrome Injection**: Standardized site header, subnavigation rail, section rails, next-chapter cards, and footer injected via `scripts/build_pages.py`.
 3. **Dual-Locale Parity**: Perfect 1:1 structural symmetry between English (`en/`) and Hungarian (`hu/`) subtrees.
 4. **Resilient Theme Engine**: High-fidelity *Tropical Luxe* default with an instant, non-flashing *Lagoon Night* dark mode backed by CSS variables and local storage.
+5. **Editorial & Copy Standards**: Prefer the written word "and" ("és" in Hungarian) instead of the ampersand symbol ("&" / "&amp;") across all headings, titles, card copy, and text.
 
 ---
 
@@ -139,3 +140,10 @@ The front-end engine is built in native vanilla ES6+, completely event-driven an
 - **Resource Hints**: Google Fonts preconnected with `crossorigin`; hero imagery loaded with `fetchpriority="high"` and below-the-fold media tagged with `loading="lazy"`.
 - **Search Engine Optimization**: Every page features localized metadata (`og:title`, `og:description`, `og:locale`, `canonical`, and `hreflang` alternates).
 - **Reduced Motion Support**: Fully respects `@media (prefers-reduced-motion: reduce)` by immediately rendering all split-word, curtain, and counter states in their completed positions.
+
+---
+
+## 6. Editorial & Content Standards
+
+- **Ampersand Usage**: Always prefer the written word **"and"** (in English) and **"és"** (in Hungarian) instead of the ampersand symbol (`&` / `&amp;`) across all page titles, section headings, card headers, labels, and narrative copy.
+- **Alternating Section Rhythm**: Top-level page sections alternate between normal (transparent canvas) and `light-bg` (`var(--surface-2)` with subtle radial highlights) to maintain consistent visual hierarchy and pacing.

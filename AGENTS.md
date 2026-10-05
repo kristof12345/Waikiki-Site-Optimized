@@ -1,5 +1,10 @@
 # Agent Workflow & Rules for Sovereign Nation of Waikiki Site
 
+## Editorial & Content Guidelines
+
+1. **Prefer "and" / "és" over ampersand ("&")**: Use the word "and" (in English) and "és" (in Hungarian) instead of the "&" symbol in titles, section headings, card headers, labels, and copy.
+2. **Alternating Section Styles**: Top-level page sections must alternate between normal and `light-bg` styles.
+
 ## HTML Page Builds and Edits
 
 After building or editing any HTML page:

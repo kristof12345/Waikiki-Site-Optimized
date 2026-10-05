@@ -1,7 +1,4 @@
-/* ==========================================================================
-   WAIKIKI CITIZENSHIP & IMMIGRATION STYLESHEET
-   Tropical Luxe & Lagoon Night Edition
-   ========================================================================== */
+/* Waikiki Citizenship and Immigration Stylesheet - Tropical Luxe and Lagoon Night Edition */
 
 h2 {
     font-family: var(--font-display);
@@ -19,7 +16,7 @@ h3 {
     margin: auto;
 }
 
-/* Hover Cards (Screening Tiers & Naturalization Process) */
+/* Hover Cards (Screening Tiers and Naturalization Process) */
 .hover-card {
     transition: transform var(--duration-normal) var(--ease-out),
                 box-shadow var(--duration-normal) var(--ease-out),
@@ -85,9 +82,7 @@ h3 {
     color: #172524;
 }
 
-/* ==========================================================================
-   ASSESSMENT MODAL
-   ========================================================================== */
+/* Assessment Modal */
 .assessment-modal-overlay {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -138,9 +133,7 @@ h3 {
     transform: rotate(90deg);
 }
 
-/* ==========================================================================
-   LAGOON NIGHT (DARK MODE)
-   ========================================================================== */
+/* Lagoon Night (Dark Mode) */
 .body-dark h2 {
     color: var(--teal-300) !important;
 }
