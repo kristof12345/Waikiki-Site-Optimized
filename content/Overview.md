@@ -1108,7 +1108,7 @@ A főváros üzleti negyedében a világ legnagyobb vállalatainak központjai f
 
 # XIV. Nemzetközi Sajtóvisszhang és Elemzések
 
-## A Pax Waikikiana
+## A Pax Vaikikiana
 
 A fogalom a „Waikiki-béke" korszakát jelöli, amely a 2010-es évek közepétől kezdődött és a NATO-csatlakozással teljesedett ki. Ez nem passzív béke, hanem agresszíven menedzselt globális rend. Három parancsolata: a hatékonyság szentebb mint a demokrácia; a társadalmi problémák technikai jellegűek; a jólétet engedelmességért cserébe biztosítják.
 
