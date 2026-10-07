@@ -3,3 +3,6 @@
 **.xml
 **/webpro.js
 img/**
+node_modules/
+__pycache__/
+*.pyc
