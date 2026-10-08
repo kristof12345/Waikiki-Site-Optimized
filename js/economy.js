@@ -31,7 +31,7 @@ const commonOptions = {
                 padding: 15,
                 usePointStyle: true,
                 font: {
-                    size: 13,
+                    size: 14,
                     weight: '500'
                 }
             }
@@ -40,11 +40,11 @@ const commonOptions = {
             backgroundColor: 'rgba(14, 48, 142, 0.95)',
             padding: 12,
             titleFont: {
-                size: 14,
+                size: 15,
                 weight: '600'
             },
             bodyFont: {
-                size: 13
+                size: 14
             },
             cornerRadius: 8,
             displayColors: true,
@@ -74,7 +74,7 @@ const commonOptions = {
             ticks: {
                 padding: 10,
                 font: {
-                    size: 12
+                    size: 14
                 }
             }
         },
@@ -86,7 +86,7 @@ const commonOptions = {
             ticks: {
                 padding: 10,
                 font: {
-                    size: 12,
+                    size: 14,
                     weight: '500'
                 }
             }
