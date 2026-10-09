@@ -756,6 +756,543 @@
   line-height: 1.65;
 }
 
+/* ==========================================================================
+   Artificial Islands Map System
+   ========================================================================== */
+
+.islands-section {
+  position: relative;
+}
+
+.island-tabs-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 0 auto 2.5rem;
+  max-width: var(--width-m);
+}
+
+.island-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 50px;
+  padding: 0.65rem 1.4rem;
+  border: var(--border-width) solid var(--line-strong);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--heading);
+  font: 700 0.88rem/1 var(--font-sans);
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 0.3s var(--ease-out);
+  box-shadow: var(--shadow-xs);
+}
+
+.island-tab-btn svg {
+  width: 20px;
+  height: 20px;
+  color: var(--accent);
+  transition: transform 0.3s var(--ease-spring);
+}
+
+.island-tab-btn:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.island-tab-btn.is-active,
+.island-tab-btn[aria-selected="true"] {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(0, 34, 68, 0.22);
+}
+
+.island-tab-btn.is-active svg,
+.island-tab-btn[aria-selected="true"] svg {
+  color: var(--accent-subtle);
+  transform: scale(1.1);
+}
+
+.island-tab-btn .tab-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.22rem 0.55rem;
+  border-radius: var(--radius-pill);
+  background: rgba(0, 34, 68, 0.07);
+  color: var(--text-muted);
+}
+
+.island-tab-btn.is-active .tab-badge,
+.island-tab-btn[aria-selected="true"] .tab-badge {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
+
+.body-dark .island-tab-btn {
+  background: var(--dark-surface);
+  border-color: var(--line-strong);
+  color: var(--dark-heading);
+}
+
+.body-dark .island-tab-btn:hover {
+  border-color: var(--accent);
+}
+
+.body-dark .island-tab-btn.is-active,
+.body-dark .island-tab-btn[aria-selected="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--neutral-900);
+}
+
+.body-dark .island-tab-btn.is-active svg,
+.body-dark .island-tab-btn[aria-selected="true"] svg {
+  color: var(--neutral-900);
+}
+
+.body-dark .island-tab-btn .tab-badge {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--dark-text);
+}
+
+.body-dark .island-tab-btn.is-active .tab-badge,
+.body-dark .island-tab-btn[aria-selected="true"] .tab-badge {
+  background: rgba(0, 0, 0, 0.28);
+  color: var(--neutral-900);
+}
+
+/* Tab Panels */
+.island-panel {
+  display: none;
+  max-width: var(--width-l);
+  margin: auto;
+}
+
+.island-panel.is-active {
+  display: block;
+  animation: islandPanelIn 0.5s var(--ease-out) both;
+}
+
+@keyframes islandPanelIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Island Specs Banner */
+.island-specs-banner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.1rem;
+  margin-bottom: 1.8rem;
+}
+
+.island-spec-item {
+  padding: 1.15rem 1.4rem;
+  border: var(--border-width) solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-xs);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  transition: transform 0.3s var(--ease-out), border-color 0.3s;
+}
+
+.island-spec-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.island-spec-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.island-spec-value {
+  font: 450 1.25rem/1.2 var(--font-display);
+  color: var(--heading);
+}
+
+.island-spec-note {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.body-dark .island-spec-item {
+  background: var(--dark-surface);
+  border-color: var(--line-strong);
+}
+
+/* Island Map Container */
+.island-map-container {
+  position: relative;
+  border-radius: var(--radius-l);
+  border: var(--border-width) solid var(--line-strong);
+  background: var(--surface-2);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 2.2rem;
+}
+
+.island-map-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.6rem;
+  border-bottom: var(--border-width) solid var(--line);
+  background: var(--surface);
+}
+
+.island-map-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.island-map-title-group h3 {
+  font: 500 1.22rem/1.2 var(--font-display);
+  color: var(--heading);
+  margin: 0;
+}
+
+.island-map-legend-pills {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.island-legend-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--surface-2);
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-pill);
+}
+
+.island-legend-pill .legend-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.body-dark .island-map-header {
+  background: var(--dark-surface);
+  border-color: var(--line-strong);
+}
+
+.body-dark .island-legend-pill {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--dark-text);
+}
+
+.island-map-canvas {
+  position: relative;
+  width: 100%;
+  background: #a2cbe9;
+  overflow: hidden;
+}
+
+.body-dark .island-map-canvas {
+  background: #0d233e;
+}
+
+.island-map-canvas svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+}
+
+/* SVG Map Artwork Classes */
+.island-map-canvas .map-sea-deep {
+  fill: #14497e;
+}
+
+.island-map-canvas .map-sea-mid {
+  fill: #3c7ebb;
+}
+
+.island-map-canvas .map-sea-lagoon {
+  fill: #78b8e8;
+}
+
+.island-map-canvas .map-sand {
+  fill: #eeddb2;
+  stroke: #ddc792;
+  stroke-width: 0.8;
+}
+
+.island-map-canvas .map-sand-light {
+  fill: #f5ebce;
+}
+
+.island-map-canvas .map-reef {
+  fill: #2ba29e;
+  stroke: #1b7a77;
+  stroke-width: 1.2;
+}
+
+.island-map-canvas .map-greenery {
+  fill: #5a9e6b;
+  opacity: 0.85;
+}
+
+.island-map-canvas .map-urban {
+  fill: #19385c;
+}
+
+.island-map-canvas .map-road {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.island-map-canvas .map-rail {
+  fill: none;
+  stroke: #c29a57;
+  stroke-width: 2.8;
+  stroke-dasharray: 6 3;
+}
+
+.island-map-canvas .map-ferry {
+  fill: none;
+  stroke: #38bdf8;
+  stroke-width: 1.8;
+  stroke-dasharray: 5 4;
+}
+
+.island-map-canvas .map-cableway {
+  fill: none;
+  stroke: #f43f5e;
+  stroke-width: 2;
+  stroke-dasharray: 4 4;
+}
+
+.island-map-canvas .map-label-bg {
+  fill: rgba(0, 34, 68, 0.72);
+  rx: 4;
+}
+
+.island-map-canvas .map-label-text {
+  fill: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-anchor: middle;
+}
+
+/* Dark Mode Map Artwork Overrides */
+.body-dark .island-map-canvas .map-sea-deep {
+  fill: #061322;
+}
+
+.body-dark .island-map-canvas .map-sea-mid {
+  fill: #0c213b;
+}
+
+.body-dark .island-map-canvas .map-sea-lagoon {
+  fill: #123258;
+}
+
+.body-dark .island-map-canvas .map-sand {
+  fill: #9a8150;
+  stroke: #756037;
+}
+
+.body-dark .island-map-canvas .map-sand-light {
+  fill: #af9764;
+}
+
+.body-dark .island-map-canvas .map-urban {
+  fill: #224b7a;
+}
+
+.body-dark .island-map-canvas .map-greenery {
+  fill: #2e6940;
+}
+
+.body-dark .island-map-canvas .map-reef {
+  fill: #196f6c;
+  stroke: #0d4a48;
+}
+
+/* Interactive Map Hotspot Pins */
+.map-hotspot {
+  cursor: pointer;
+  transition: transform 0.28s var(--ease-spring);
+}
+
+.map-hotspot:hover,
+.map-hotspot.is-highlighted {
+  transform: scale(1.22);
+}
+
+.map-hotspot .hotspot-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: hotspotWave 2.4s var(--ease-out) infinite;
+}
+
+@keyframes hotspotWave {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+.map-hotspot .hotspot-core {
+  fill: var(--primary);
+  stroke: #ffffff;
+  stroke-width: 2.2;
+  transition: fill 0.2s, stroke 0.2s, transform 0.2s;
+}
+
+.map-hotspot:hover .hotspot-core,
+.map-hotspot.is-highlighted .hotspot-core {
+  fill: var(--accent);
+  stroke: #ffffff;
+}
+
+.map-hotspot text {
+  fill: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 800;
+  text-anchor: middle;
+  dominant-baseline: central;
+  pointer-events: none;
+}
+
+.body-dark .map-hotspot .hotspot-core {
+  fill: var(--accent);
+  stroke: #091626;
+}
+
+.body-dark .map-hotspot text {
+  fill: #091626;
+}
+
+/* Interactive Hotspot Feature Cards Grid */
+.island-hotspots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.island-hotspot-card {
+  padding: 1.35rem;
+  border: var(--border-width) solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-xs);
+  transition: all 0.3s var(--ease-out);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  position: relative;
+  text-align: left;
+}
+
+.island-hotspot-card:hover,
+.island-hotspot-card.is-active {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+.island-hotspot-card.is-active {
+  background: var(--surface-card);
+  border-left: 4px solid var(--accent);
+}
+
+.island-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hotspot-card-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.body-dark .hotspot-card-badge {
+  background: var(--accent);
+  color: var(--neutral-900);
+}
+
+.island-hotspot-card h4 {
+  font: 500 1.08rem/1.3 var(--font-display);
+  color: var(--heading);
+  margin: 0;
+}
+
+.island-hotspot-card p {
+  color: var(--text);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.body-dark .island-hotspot-card {
+  background: var(--dark-surface);
+  border-color: var(--line-strong);
+}
+
+.body-dark .island-hotspot-card:hover,
+.body-dark .island-hotspot-card.is-active {
+  border-color: var(--accent);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .island-tab-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .island-map-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 /* Responsive and Motion Preferences */
 @media (max-width: 900px) {
   .split {
