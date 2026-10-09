@@ -1012,10 +1012,6 @@
   overflow: hidden;
 }
 
-.body-dark .island-map-canvas {
-  background: #0d233e;
-}
-
 .island-map-canvas svg {
   display: block;
   width: 100%;
@@ -1104,41 +1100,6 @@
   text-anchor: middle;
 }
 
-/* Dark Mode Map Artwork Overrides */
-.body-dark .island-map-canvas .map-sea-deep {
-  fill: #061322;
-}
-
-.body-dark .island-map-canvas .map-sea-mid {
-  fill: #0c213b;
-}
-
-.body-dark .island-map-canvas .map-sea-lagoon {
-  fill: #123258;
-}
-
-.body-dark .island-map-canvas .map-sand {
-  fill: #9a8150;
-  stroke: #756037;
-}
-
-.body-dark .island-map-canvas .map-sand-light {
-  fill: #af9764;
-}
-
-.body-dark .island-map-canvas .map-urban {
-  fill: #224b7a;
-}
-
-.body-dark .island-map-canvas .map-greenery {
-  fill: #2e6940;
-}
-
-.body-dark .island-map-canvas .map-reef {
-  fill: #196f6c;
-  stroke: #0d4a48;
-}
-
 /* Interactive Map Hotspot Pins */
 .map-hotspot {
   cursor: pointer;
@@ -1168,7 +1129,7 @@
 }
 
 .map-hotspot .hotspot-core {
-  fill: var(--primary);
+  fill: #003366;
   stroke: #ffffff;
   stroke-width: 2.2;
   transition: fill 0.2s, stroke 0.2s, transform 0.2s;
@@ -1188,15 +1149,6 @@
   text-anchor: middle;
   dominant-baseline: central;
   pointer-events: none;
-}
-
-.body-dark .map-hotspot .hotspot-core {
-  fill: var(--accent);
-  stroke: #091626;
-}
-
-.body-dark .map-hotspot text {
-  fill: #091626;
 }
 
 /* Interactive Hotspot Feature Cards Grid */
