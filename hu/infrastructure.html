@@ -1401,163 +1401,163 @@
                     </div>
                     <div class="island-map-canvas">
                         <svg class="ill" viewBox="0 0 1200 700" role="img" aria-label="A Pálma-sziget részletes infrastruktúra-térképe: koronából kinyíló ívelt pálmalevelek, központi törzs és védő félhold">
-                            <defs>
-                                <linearGradient id="palm-sea" x1="0" y1="0" x2="0" y2="1">
-                                    <stop offset="0%" stop-color="#0c3461" />
-                                    <stop offset="40%" stop-color="#185694" />
-                                    <stop offset="100%" stop-color="#2c7ebd" />
-                                </linearGradient>
-                                <radialGradient id="lagoon-glow" cx="50%" cy="50%" r="50%">
-                                    <stop offset="0%" stop-color="#73c7ea" stop-opacity="0.5" />
-                                    <stop offset="100%" stop-color="#19558e" stop-opacity="0" />
-                                </radialGradient>
-                                <filter id="glow-gold" x="-20%" y="-20%" width="140%" height="140%">
-                                    <feGaussianBlur stdDeviation="3" result="blur" />
-                                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                                </filter>
-                            </defs>
-                            <!-- Deep Ocean Water Base -->
-                            <rect width="1200" height="700" fill="url(#palm-sea)" />
-                            <!-- Shallow Lagoon inside the Crescent -->
-                            <circle cx="600" cy="350" r="310" fill="url(#lagoon-glow)" />
-                            <!-- Bathymetric and Navigational Grid Lines -->
-                            <g stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="3 6" fill="none">
-                                <circle cx="600" cy="350" r="200" />
-                                <circle cx="600" cy="350" r="380" />
-                                <circle cx="600" cy="350" r="470" />
-                                <line x1="150" y1="350" x2="1050" y2="350" />
-                            </g>
-                            <!-- Outer Crescent Breakwater with Living Coral Reef -->
-                            <path d="M310.7,545.2 A349,349 0 0 1 563.5,2.9 M636.5,2.9 A349,349 0 0 1 889.3,545.2" fill="none" stroke="#2ba29e" stroke-width="2.5" stroke-dasharray="8 6" opacity="0.65" />
-                            <path d="M327.2,507.5 A315,315 0 0 1 567.1,36.7 M632.9,36.7 A315,315 0 0 1 872.8,507.5" fill="none" stroke="#2ba29e" stroke-width="40" stroke-linecap="round" opacity="0.45" />
-                            <path class="map-frond-edge" d="M327.2,507.5 A315,315 0 0 1 567.1,36.7 M632.9,36.7 A315,315 0 0 1 872.8,507.5" stroke-width="26" />
-                            <path class="map-frond" d="M327.2,507.5 A315,315 0 0 1 567.1,36.7 M632.9,36.7 A315,315 0 0 1 872.8,507.5" stroke-width="22" />
-                            <path class="map-frond-core" d="M327.2,507.5 A315,315 0 0 1 567.1,36.7 M632.9,36.7 A315,315 0 0 1 872.8,507.5" />
-                            <path class="map-frond-villas" d="M327.2,507.5 A315,315 0 0 1 567.1,36.7 M632.9,36.7 A315,315 0 0 1 872.8,507.5" />
-                            <!-- 16 CURVED PALM FRONDS (Seamlessly connected to trunk) -->
-                            <path class="map-frond-edge" d="M600,425 C520,435 405,480 360,455 M600,425 C680,435 795,480 840,455 M600,395 C520,402 380,427 335,400 M600,395 C680,402 820,427 865,400 M600,365 C520,369 370,374 325,345 M600,365 C680,369 830,374 875,345 M600,335 C520,336 375,321 330,290 M600,335 C680,336 825,321 870,290 M600,305 C520,303 395,268 350,235 M600,305 C680,303 805,268 850,235 M600,275 C520,270 430,220 385,185 M600,275 C680,270 770,220 815,185 M600,245 C520,237 485,182 440,145 M600,245 C680,237 715,182 760,145 M600,215 C520,204 560,154 515,115 M600,215 C680,204 640,154 685,115" stroke-width="24" />
-                            <path class="map-frond" d="M600,425 C520,435 405,480 360,455 M600,425 C680,435 795,480 840,455 M600,395 C520,402 380,427 335,400 M600,395 C680,402 820,427 865,400 M600,365 C520,369 370,374 325,345 M600,365 C680,369 830,374 875,345 M600,335 C520,336 375,321 330,290 M600,335 C680,336 825,321 870,290 M600,305 C520,303 395,268 350,235 M600,305 C680,303 805,268 850,235 M600,275 C520,270 430,220 385,185 M600,275 C680,270 770,220 815,185 M600,245 C520,237 485,182 440,145 M600,245 C680,237 715,182 760,145 M600,215 C520,204 560,154 515,115 M600,215 C680,204 640,154 685,115" stroke-width="20" />
-                            <path class="map-frond-core" d="M600,425 C520,435 405,480 360,455 M600,425 C680,435 795,480 840,455 M600,395 C520,402 380,427 335,400 M600,395 C680,402 820,427 865,400 M600,365 C520,369 370,374 325,345 M600,365 C680,369 830,374 875,345 M600,335 C520,336 375,321 330,290 M600,335 C680,336 825,321 870,290 M600,305 C520,303 395,268 350,235 M600,305 C680,303 805,268 850,235 M600,275 C520,270 430,220 385,185 M600,275 C680,270 770,220 815,185 M600,245 C520,237 485,182 440,145 M600,245 C680,237 715,182 760,145 M600,215 C520,204 560,154 515,115 M600,215 C680,204 640,154 685,115" stroke-width="5" />
-                            <path class="map-frond-villas" d="M600,425 C520,435 405,480 360,455 M600,425 C680,435 795,480 840,455 M600,395 C520,402 380,427 335,400 M600,395 C680,402 820,427 865,400 M600,365 C520,369 370,374 325,345 M600,365 C680,369 830,374 875,345 M600,335 C520,336 375,321 330,290 M600,335 C680,336 825,321 870,290 M600,305 C520,303 395,268 350,235 M600,305 C680,303 805,268 850,235 M600,275 C520,270 430,220 385,185 M600,275 C680,270 770,220 815,185 M600,245 C520,237 485,182 440,145 M600,245 C680,237 715,182 760,145 M600,215 C520,204 560,154 515,115 M600,215 C680,204 640,154 685,115" stroke-width="3" stroke-dasharray="0.1 7" />
-                            <!-- The Central Trunk: wide stem base and slender upper crown spine -->
-                            <!-- Sand mass of trunk uniting with the fronds -->
-                            <path class="map-sand" d="M570,640 L570,425 L582,215 Q600,200 618,215 L630,425 L630,640 Z" />
-                            <rect x="586" y="215" width="28" height="420" rx="8" class="map-greenery" />
-                            <!-- Gateway Marina Lobe (West) and Golden Mile Lobe (East) on the lower trunk -->
-                            <path class="map-sand" d="M572,550 L532,550 C514,550 506,562 506,578 L506,598 C506,612 516,618 532,618 L572,618 Z" />
-                            <path class="map-sand" d="M628,550 L668,550 C686,550 694,562 694,578 L694,598 C694,612 684,618 668,618 L628,618 Z" />
-                            <rect x="518" y="560" width="44" height="48" rx="6" class="map-sea-deep" />
-                            <g stroke="#ffffff" stroke-width="1.6">
-                                <line x1="524" y1="572" x2="556" y2="572" />
-                                <line x1="524" y1="584" x2="556" y2="584" />
-                                <line x1="524" y1="596" x2="556" y2="596" />
-                            </g>
-                            <!-- Solar Canopy and Seawater Cooling Hub -->
-                            <g fill="#1f4f7a" stroke="#9fd3f5" stroke-width="0.8">
-                                <rect x="646" y="562" width="11" height="11" rx="1.5" />
-                                <rect x="660" y="562" width="11" height="11" rx="1.5" />
-                                <rect x="674" y="562" width="11" height="11" rx="1.5" />
-                                <rect x="646" y="576" width="11" height="11" rx="1.5" />
-                                <rect x="660" y="576" width="11" height="11" rx="1.5" />
-                                <rect x="674" y="576" width="11" height="11" rx="1.5" />
-                                <rect x="646" y="590" width="11" height="11" rx="1.5" />
-                                <rect x="660" y="590" width="11" height="11" rx="1.5" />
-                                <rect x="674" y="590" width="11" height="11" rx="1.5" />
-                            </g>
-                            <!-- Connected Road Network (Mainland to Trunk, branching into each leaf) -->
-                            <path class="map-road" d="M592,664 L592,425 M608,664 L608,425" />
-                            <path class="map-road" d="M600,425 C520,435 405,480 360,455 M600,425 C680,435 795,480 840,455 M600,395 C520,402 380,427 335,400 M600,395 C680,402 820,427 865,400 M600,365 C520,369 370,374 325,345 M600,365 C680,369 830,374 875,345 M600,335 C520,336 375,321 330,290 M600,335 C680,336 825,321 870,290 M600,305 C520,303 395,268 350,235 M600,305 C680,303 805,268 850,235 M600,275 C520,270 430,220 385,185 M600,275 C680,270 770,220 815,185 M600,245 C520,237 485,182 440,145 M600,245 C680,237 715,182 760,145 M600,215 C520,204 560,154 515,115 M600,215 C680,204 640,154 685,115" stroke-width="2.2" />
-                            <!-- Sub-Sea Tunnel Link to the Crescent -->
-                            <path d="M600,205 L600,48" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 4" fill="none" opacity="0.85" />
-                            <!-- The Elevated Monorail Line along the central spine -->
-                            <path class="map-rail" d="M600,690 L600,205" />
-                            <circle cx="600" cy="664" r="5" fill="#c29a57" stroke="#ffffff" stroke-width="1.8" />
-                            <circle cx="600" cy="580" r="5" fill="#c29a57" stroke="#ffffff" stroke-width="1.8" />
-                            <circle cx="600" cy="425" r="5" fill="#c29a57" stroke="#ffffff" stroke-width="1.8" />
-                            <circle cx="600" cy="315" r="5" fill="#c29a57" stroke="#ffffff" stroke-width="1.8" />
-                            <circle cx="600" cy="210" r="5" fill="#c29a57" stroke="#ffffff" stroke-width="1.8" />
-                            <!-- Crescent Apex Crown Platform (Hotel Khalifa) -->
-                            <ellipse cx="600" cy="35" rx="54" ry="24" class="map-sand" />
-                            <ellipse cx="600" cy="35" rx="42" ry="16" class="map-greenery" />
-                            <g transform="translate(600, 35)">
-                                <ellipse cx="0" cy="2" rx="22" ry="9" fill="#002244" opacity="0.75" />
-                                <path d="M-14,4 L0,-22 L14,4 Z" fill="#c29a57" filter="url(#glow-gold)" />
-                                <path d="M-6,4 L0,-18 L6,4 Z" fill="#ffffff" />
-                                <circle cx="0" cy="-22" r="3" fill="#e3735a" class="twinkle" />
-                            </g>
-                            <!-- Palm Islands Waterpark on the Crescent -->
-                            <g transform="translate(680, 41)">
-                                <ellipse cx="0" cy="0" rx="30" ry="17" class="map-sand" />
-                                <path d="M-16,-5 C-5,-13 14,-10 17,0 C19,9 5,14 -7,10 Z" fill="#38bdf8" stroke="#ffffff" stroke-width="1.2" />
-                                <path d="M-2,-2 C8,-5 9,6 0,7" fill="none" stroke="#7dd3fc" stroke-width="2.2" />
-                            </g>
-                            <!-- Mainland Nova Aurelia Coastline (Bottom) -->
-                            <path class="map-sand" d="M0,650 Q300,634 600,638 Q900,634 1200,650 L1200,700 L0,700 Z" />
-                            <rect x="0" y="664" width="1200" height="36" class="map-urban" />
-                            <line x1="0" y1="664" x2="1200" y2="664" stroke="#ffffff" stroke-width="2.5" />
-                            <!-- Causeway Bridge connecting mainland to trunk -->
-                            <path class="map-road" d="M585,664 L585,618 M615,664 L615,618" />
-                            <!-- Marine Navigation Beacons at the Crescent Passages -->
-                            <circle cx="327.2" cy="507.5" r="4.5" fill="#22c55e" class="twinkle" />
-                            <circle cx="872.8" cy="507.5" r="4.5" fill="#ef4444" class="twinkle" />
-                            <!-- Map Geographic Labels -->
-                            <g class="map-label-group">
-                                <text class="map-label-text" x="260" y="104">Félhold védőgát</text>
-                                <text class="map-label-text" x="600" y="690">Nova Aurelia szárazföld</text>
-                                <text class="map-label-text" x="600" y="84">Hotel Khalifa</text>
-                                <text class="map-label-text" x="300" y="470">Nyugati levelek</text>
-                                <text class="map-label-text" x="900" y="470">Keleti levelek</text>
-                            </g>
-                            <!-- 8 INTERACTIVE HOTSPOT PINS -->
-                            <!-- Hotspot 1: Hotel Khalifa -->
-                            <g class="map-hotspot" data-spot="1" transform="translate(600, 35)">
-                                <circle class="hotspot-pulse" r="16" fill="#c29a57" opacity="0.6" />
-                                <circle class="hotspot-core" r="11" />
-                                <text>1</text>
-                            </g>
-                            <!-- Hotspot 2: Waterpark -->
-                            <g class="map-hotspot" data-spot="2" transform="translate(680, 41)">
-                                <circle class="hotspot-pulse" r="16" fill="#38bdf8" opacity="0.6" />
-                                <circle class="hotspot-core" r="11" />
-                                <text>2</text>
-                            </g>
-                            <!-- Hotspot 3: Elevated Monorail Spine -->
-                            <g class="map-hotspot" data-spot="3" transform="translate(600, 480)">
-                                <circle class="hotspot-pulse" r="16" fill="#c29a57" opacity="0.6" />
-                                <circle class="hotspot-core" r="11" />
-                                <text>3</text>
-                            </g>
-                            <!-- Hotspot 4: Crescent Barrier Reef -->
-                            <g class="map-hotspot" data-spot="4" transform="translate(314.5, 216.9)">
-                                <circle class="hotspot-pulse" r="16" fill="#2ba29e" opacity="0.6" />
-                                <circle class="hotspot-core" r="11" />
-                                <text>4</text>
-                            </g>
-                            <!-- Hotspot 5: West Fronds Estates -->
-                            <g class="map-hotspot" data-spot="5" transform="translate(365, 298)">
-                                <circle class="hotspot-pulse" r="16" fill="#c29a57" opacity="0.6" />
-                                <circle class="hotspot-core" r="11" />
-                                <text>5</text>
-                            </g>
-                            <!-- Hotspot 6: East Fronds Villas -->
-                            <g class="map-hotspot" data-spot="6" transform="translate(835, 298)">
-                                <circle class="hotspot-pulse" r="16" fill="#c29a57" opacity="0.6" />
-                                <circle class="hotspot-core" r="11" />
-                                <text>6</text>
-                            </g>
-                            <!-- Hotspot 7: Gateway Marina -->
-                            <g class="map-hotspot" data-spot="7" transform="translate(540, 582)">
-                                <circle class="hotspot-pulse" r="16" fill="#38bdf8" opacity="0.6" />
-                                <circle class="hotspot-core" r="11" />
-                                <text>7</text>
-                            </g>
-                            <!-- Hotspot 8: Solar and Seawater Cooling Hub -->
-                            <g class="map-hotspot" data-spot="8" transform="translate(660, 582)">
-                                <circle class="hotspot-pulse" r="16" fill="#22c55e" opacity="0.6" />
-                                <circle class="hotspot-core" r="11" />
-                                <text>8</text>
-                            </g>
-                        </svg>
+<defs>
+<linearGradient id="palm-sea" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#0c3461" />
+<stop offset="40%" stop-color="#185694" />
+<stop offset="100%" stop-color="#2c7ebd" />
+</linearGradient>
+<radialGradient id="lagoon-glow" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="#73c7ea" stop-opacity="0.5" />
+<stop offset="100%" stop-color="#19558e" stop-opacity="0" />
+</radialGradient>
+<filter id="glow-gold" x="-20%" y="-20%" width="140%" height="140%">
+<feGaussianBlur stdDeviation="3" result="blur" />
+<feComposite in="SourceGraphic" in2="blur" operator="over" />
+</filter>
+</defs>
+<!-- Deep Ocean Water Base -->
+<rect width="1200" height="700" fill="url(#palm-sea)" />
+<!-- Shallow Lagoon inside the Crescent -->
+<circle cx="600" cy="350" r="310" fill="url(#lagoon-glow)" />
+<!-- Bathymetric and Navigational Grid Lines -->
+<g stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="3 6" fill="none">
+<circle cx="600" cy="350" r="200" />
+<circle cx="600" cy="350" r="380" />
+<circle cx="600" cy="350" r="470" />
+<line x1="150" y1="350" x2="1050" y2="350" />
+</g>
+<!-- Outer Crescent Breakwater with Living Coral Reef -->
+<path d="M310.7,545.2 A349,349 0 0 1 563.5,2.9 M636.5,2.9 A349,349 0 0 1 889.3,545.2" fill="none" stroke="#2ba29e" stroke-width="2.5" stroke-dasharray="8 6" opacity="0.65" />
+<path d="M327.2,507.5 A315,315 0 0 1 567.1,36.7 M632.9,36.7 A315,315 0 0 1 872.8,507.5" fill="none" stroke="#2ba29e" stroke-width="40" stroke-linecap="round" opacity="0.45" />
+<path class="map-frond-edge" d="M327.2,507.5 A315,315 0 0 1 567.1,36.7 M632.9,36.7 A315,315 0 0 1 872.8,507.5" stroke-width="26" />
+<path class="map-frond" d="M327.2,507.5 A315,315 0 0 1 567.1,36.7 M632.9,36.7 A315,315 0 0 1 872.8,507.5" stroke-width="22" />
+<path class="map-frond-core" d="M327.2,507.5 A315,315 0 0 1 567.1,36.7 M632.9,36.7 A315,315 0 0 1 872.8,507.5" />
+<path class="map-frond-villas" d="M327.2,507.5 A315,315 0 0 1 567.1,36.7 M632.9,36.7 A315,315 0 0 1 872.8,507.5" />
+<!-- 16 CURVED PALM FRONDS (Seamlessly connected to trunk) -->
+<path class="map-frond-edge" d="M600,425 C520,435 405,480 360,455 M600,425 C680,435 795,480 840,455 M600,395 C520,402 380,427 335,400 M600,395 C680,402 820,427 865,400 M600,365 C520,369 370,374 325,345 M600,365 C680,369 830,374 875,345 M600,335 C520,336 375,321 330,290 M600,335 C680,336 825,321 870,290 M600,305 C520,303 395,268 350,235 M600,305 C680,303 805,268 850,235 M600,275 C520,270 430,220 385,185 M600,275 C680,270 770,220 815,185 M600,245 C520,237 485,182 440,145 M600,245 C680,237 715,182 760,145 M600,215 C520,204 560,154 515,115 M600,215 C680,204 640,154 685,115" stroke-width="24" />
+<path class="map-frond" d="M600,425 C520,435 405,480 360,455 M600,425 C680,435 795,480 840,455 M600,395 C520,402 380,427 335,400 M600,395 C680,402 820,427 865,400 M600,365 C520,369 370,374 325,345 M600,365 C680,369 830,374 875,345 M600,335 C520,336 375,321 330,290 M600,335 C680,336 825,321 870,290 M600,305 C520,303 395,268 350,235 M600,305 C680,303 805,268 850,235 M600,275 C520,270 430,220 385,185 M600,275 C680,270 770,220 815,185 M600,245 C520,237 485,182 440,145 M600,245 C680,237 715,182 760,145 M600,215 C520,204 560,154 515,115 M600,215 C680,204 640,154 685,115" stroke-width="20" />
+<path class="map-frond-core" d="M600,425 C520,435 405,480 360,455 M600,425 C680,435 795,480 840,455 M600,395 C520,402 380,427 335,400 M600,395 C680,402 820,427 865,400 M600,365 C520,369 370,374 325,345 M600,365 C680,369 830,374 875,345 M600,335 C520,336 375,321 330,290 M600,335 C680,336 825,321 870,290 M600,305 C520,303 395,268 350,235 M600,305 C680,303 805,268 850,235 M600,275 C520,270 430,220 385,185 M600,275 C680,270 770,220 815,185 M600,245 C520,237 485,182 440,145 M600,245 C680,237 715,182 760,145 M600,215 C520,204 560,154 515,115 M600,215 C680,204 640,154 685,115" stroke-width="5" />
+<path class="map-frond-villas" d="M600,425 C520,435 405,480 360,455 M600,425 C680,435 795,480 840,455 M600,395 C520,402 380,427 335,400 M600,395 C680,402 820,427 865,400 M600,365 C520,369 370,374 325,345 M600,365 C680,369 830,374 875,345 M600,335 C520,336 375,321 330,290 M600,335 C680,336 825,321 870,290 M600,305 C520,303 395,268 350,235 M600,305 C680,303 805,268 850,235 M600,275 C520,270 430,220 385,185 M600,275 C680,270 770,220 815,185 M600,245 C520,237 485,182 440,145 M600,245 C680,237 715,182 760,145 M600,215 C520,204 560,154 515,115 M600,215 C680,204 640,154 685,115" stroke-width="3" stroke-dasharray="0.1 7" />
+<!-- The Central Trunk: wide stem base and slender upper crown spine -->
+<!-- Sand mass of trunk uniting with the fronds -->
+<path class="map-sand" d="M570,640 L570,425 L582,215 Q600,200 618,215 L630,425 L630,640 Z" />
+<rect x="586" y="215" width="28" height="420" rx="8" class="map-greenery" />
+<!-- Gateway Marina Lobe (West) and Golden Mile Lobe (East) on the lower trunk -->
+<path class="map-sand" d="M572,550 L532,550 C514,550 506,562 506,578 L506,598 C506,612 516,618 532,618 L572,618 Z" />
+<path class="map-sand" d="M628,550 L668,550 C686,550 694,562 694,578 L694,598 C694,612 684,618 668,618 L628,618 Z" />
+<rect x="518" y="560" width="44" height="48" rx="6" class="map-sea-deep" />
+<g stroke="#ffffff" stroke-width="1.6">
+<line x1="524" y1="572" x2="556" y2="572" />
+<line x1="524" y1="584" x2="556" y2="584" />
+<line x1="524" y1="596" x2="556" y2="596" />
+</g>
+<!-- Solar Canopy and Seawater Cooling Hub -->
+<g fill="#1f4f7a" stroke="#9fd3f5" stroke-width="0.8">
+<rect x="646" y="562" width="11" height="11" rx="1.5" />
+<rect x="660" y="562" width="11" height="11" rx="1.5" />
+<rect x="674" y="562" width="11" height="11" rx="1.5" />
+<rect x="646" y="576" width="11" height="11" rx="1.5" />
+<rect x="660" y="576" width="11" height="11" rx="1.5" />
+<rect x="674" y="576" width="11" height="11" rx="1.5" />
+<rect x="646" y="590" width="11" height="11" rx="1.5" />
+<rect x="660" y="590" width="11" height="11" rx="1.5" />
+<rect x="674" y="590" width="11" height="11" rx="1.5" />
+</g>
+<!-- Connected Road Network (Mainland to Trunk, branching into each leaf) -->
+<path class="map-road" d="M592,664 L592,425 M608,664 L608,425" />
+<path class="map-road" d="M600,425 C520,435 405,480 360,455 M600,425 C680,435 795,480 840,455 M600,395 C520,402 380,427 335,400 M600,395 C680,402 820,427 865,400 M600,365 C520,369 370,374 325,345 M600,365 C680,369 830,374 875,345 M600,335 C520,336 375,321 330,290 M600,335 C680,336 825,321 870,290 M600,305 C520,303 395,268 350,235 M600,305 C680,303 805,268 850,235 M600,275 C520,270 430,220 385,185 M600,275 C680,270 770,220 815,185 M600,245 C520,237 485,182 440,145 M600,245 C680,237 715,182 760,145 M600,215 C520,204 560,154 515,115 M600,215 C680,204 640,154 685,115" stroke-width="2.2" />
+<!-- Sub-Sea Tunnel Link to the Crescent -->
+<path d="M600,205 L600,48" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 4" fill="none" opacity="0.85" />
+<!-- The Elevated Monorail Line along the central spine -->
+<path class="map-rail" d="M600,690 L600,205" />
+<circle cx="600" cy="664" r="5" fill="#c29a57" stroke="#ffffff" stroke-width="1.8" />
+<circle cx="600" cy="580" r="5" fill="#c29a57" stroke="#ffffff" stroke-width="1.8" />
+<circle cx="600" cy="425" r="5" fill="#c29a57" stroke="#ffffff" stroke-width="1.8" />
+<circle cx="600" cy="315" r="5" fill="#c29a57" stroke="#ffffff" stroke-width="1.8" />
+<circle cx="600" cy="210" r="5" fill="#c29a57" stroke="#ffffff" stroke-width="1.8" />
+<!-- Crescent Apex Crown Platform (Hotel Khalifa) -->
+<ellipse cx="600" cy="35" rx="54" ry="24" class="map-sand" />
+<ellipse cx="600" cy="35" rx="42" ry="16" class="map-greenery" />
+<g transform="translate(600, 35)">
+<ellipse cx="0" cy="2" rx="22" ry="9" fill="#002244" opacity="0.75" />
+<path d="M-14,4 L0,-22 L14,4 Z" fill="#c29a57" filter="url(#glow-gold)" />
+<path d="M-6,4 L0,-18 L6,4 Z" fill="#ffffff" />
+<circle cx="0" cy="-22" r="3" fill="#e3735a" class="twinkle" />
+</g>
+<!-- Palm Islands Waterpark on the Crescent -->
+<g transform="translate(680, 41)">
+<ellipse cx="0" cy="0" rx="30" ry="17" class="map-sand" />
+<path d="M-16,-5 C-5,-13 14,-10 17,0 C19,9 5,14 -7,10 Z" fill="#38bdf8" stroke="#ffffff" stroke-width="1.2" />
+<path d="M-2,-2 C8,-5 9,6 0,7" fill="none" stroke="#7dd3fc" stroke-width="2.2" />
+</g>
+<!-- Mainland Nova Aurelia Coastline (Bottom) -->
+<path class="map-sand" d="M0,650 Q300,634 600,638 Q900,634 1200,650 L1200,700 L0,700 Z" />
+<rect x="0" y="664" width="1200" height="36" class="map-urban" />
+<line x1="0" y1="664" x2="1200" y2="664" stroke="#ffffff" stroke-width="2.5" />
+<!-- Causeway Bridge connecting mainland to trunk -->
+<path class="map-road" d="M585,664 L585,618 M615,664 L615,618" />
+<!-- Marine Navigation Beacons at the Crescent Passages -->
+<circle cx="327.2" cy="507.5" r="4.5" fill="#22c55e" class="twinkle" />
+<circle cx="872.8" cy="507.5" r="4.5" fill="#ef4444" class="twinkle" />
+<!-- Map Geographic Labels -->
+<g class="map-label-group">
+<text class="map-label-text" x="260" y="104">Félhold védőgát</text>
+<text class="map-label-text" x="600" y="690">Nova Aurelia szárazföld</text>
+<text class="map-label-text" x="600" y="84">Hotel Khalifa</text>
+<text class="map-label-text" x="300" y="470">Nyugati levelek</text>
+<text class="map-label-text" x="900" y="470">Keleti levelek</text>
+</g>
+<!-- 8 INTERACTIVE HOTSPOT PINS -->
+<!-- Hotspot 1: Hotel Khalifa -->
+<g class="map-hotspot" data-spot="1" transform="translate(600, 35)">
+<circle class="hotspot-pulse" r="16" fill="#c29a57" opacity="0.6" />
+<circle class="hotspot-core" r="11" />
+<text>1</text>
+</g>
+<!-- Hotspot 2: Waterpark -->
+<g class="map-hotspot" data-spot="2" transform="translate(680, 41)">
+<circle class="hotspot-pulse" r="16" fill="#38bdf8" opacity="0.6" />
+<circle class="hotspot-core" r="11" />
+<text>2</text>
+</g>
+<!-- Hotspot 3: Elevated Monorail Spine -->
+<g class="map-hotspot" data-spot="3" transform="translate(600, 480)">
+<circle class="hotspot-pulse" r="16" fill="#c29a57" opacity="0.6" />
+<circle class="hotspot-core" r="11" />
+<text>3</text>
+</g>
+<!-- Hotspot 4: Crescent Barrier Reef -->
+<g class="map-hotspot" data-spot="4" transform="translate(314.5, 216.9)">
+<circle class="hotspot-pulse" r="16" fill="#2ba29e" opacity="0.6" />
+<circle class="hotspot-core" r="11" />
+<text>4</text>
+</g>
+<!-- Hotspot 5: West Fronds Estates -->
+<g class="map-hotspot" data-spot="5" transform="translate(365, 298)">
+<circle class="hotspot-pulse" r="16" fill="#c29a57" opacity="0.6" />
+<circle class="hotspot-core" r="11" />
+<text>5</text>
+</g>
+<!-- Hotspot 6: East Fronds Villas -->
+<g class="map-hotspot" data-spot="6" transform="translate(835, 298)">
+<circle class="hotspot-pulse" r="16" fill="#c29a57" opacity="0.6" />
+<circle class="hotspot-core" r="11" />
+<text>6</text>
+</g>
+<!-- Hotspot 7: Gateway Marina -->
+<g class="map-hotspot" data-spot="7" transform="translate(540, 582)">
+<circle class="hotspot-pulse" r="16" fill="#38bdf8" opacity="0.6" />
+<circle class="hotspot-core" r="11" />
+<text>7</text>
+</g>
+<!-- Hotspot 8: Solar and Seawater Cooling Hub -->
+<g class="map-hotspot" data-spot="8" transform="translate(660, 582)">
+<circle class="hotspot-pulse" r="16" fill="#22c55e" opacity="0.6" />
+<circle class="hotspot-core" r="11" />
+<text>8</text>
+</g>
+</svg>
                     </div>
                 </div>
                 <div class="island-hotspots-grid">
@@ -1666,243 +1666,243 @@
                     </div>
                     <div class="island-map-canvas">
                         <svg class="ill" viewBox="0 0 1200 700" role="img" aria-label="A Világ-szigetek részletes infrastruktúra-térképe: több különálló szigetből álló kontinens alakú szigetcsoport">
-                            <defs>
-                                <linearGradient id="world-sea" x1="0" y1="0" x2="0" y2="1">
-                                    <stop offset="0%" stop-color="#0a2a4e" />
-                                    <stop offset="50%" stop-color="#144d85" />
-                                    <stop offset="100%" stop-color="#236ca9" />
-                                </linearGradient>
-                                <radialGradient id="world-lagoon" cx="50%" cy="50%" r="50%">
-                                    <stop offset="0%" stop-color="#69c3eb" stop-opacity="0.45" />
-                                    <stop offset="85%" stop-color="#124b82" stop-opacity="0.12" />
-                                    <stop offset="100%" stop-color="#0a2a4e" stop-opacity="0" />
-                                </radialGradient>
-                            </defs>
-                            <!-- Deep Water Base -->
-                            <rect width="1200" height="700" fill="url(#world-sea)" />
-                            <!-- Lagoon Shallows -->
-                            <ellipse cx="600" cy="345" rx="540" ry="305" fill="url(#world-lagoon)" />
-                            <!-- Wave Break Line -->
-                            <ellipse cx="600" cy="345" rx="565" ry="328" fill="none" stroke="rgba(255,255,255,0.14)" stroke-dasharray="6 8" />
-                            <!-- Outer Oval Flood Defense Breakwater (4 Storm Gates: N, S, E, W) -->
-                            <path d="M1137.9,371.6 A540,305 0 0 1 647.1,648.8 M552.9,648.8 A540,305 0 0 1 62.1,371.6 M62.1,318.4 A540,305 0 0 1 552.9,41.2 M647.1,41.2 A540,305 0 0 1 1137.9,318.4" fill="none" stroke="#2ba29e" stroke-width="26" stroke-linecap="round" opacity="0.45" />
-                            <path class="map-frond-edge" d="M1137.9,371.6 A540,305 0 0 1 647.1,648.8 M552.9,648.8 A540,305 0 0 1 62.1,371.6 M62.1,318.4 A540,305 0 0 1 552.9,41.2 M647.1,41.2 A540,305 0 0 1 1137.9,318.4" stroke-width="15" />
-                            <path class="map-frond" d="M1137.9,371.6 A540,305 0 0 1 647.1,648.8 M552.9,648.8 A540,305 0 0 1 62.1,371.6 M62.1,318.4 A540,305 0 0 1 552.9,41.2 M647.1,41.2 A540,305 0 0 1 1137.9,318.4" stroke-width="12.5" />
-                            <g class="twinkle">
-                                <circle cx="1137.9" cy="318.4" r="3.5" fill="#ef4444" />
-                                <circle cx="1137.9" cy="371.6" r="3.5" fill="#22c55e" />
-                                <circle cx="647.1" cy="648.8" r="3.5" fill="#ef4444" />
-                                <circle cx="552.9" cy="648.8" r="3.5" fill="#22c55e" />
-                                <circle cx="62.1" cy="371.6" r="3.5" fill="#ef4444" />
-                                <circle cx="62.1" cy="318.4" r="3.5" fill="#22c55e" />
-                                <circle cx="552.9" cy="41.2" r="3.5" fill="#ef4444" />
-                                <circle cx="647.1" cy="41.2" r="3.5" fill="#22c55e" />
-                            </g>
-                            <!-- RECOGNIZABLE WORLD CONTINENTS (ZERO OVERLAPS, CLEAR WATERWAYS) -->
-                            <g id="world-islands-group">
-                                <!-- Canada Arctic Core -->
-                                <path class="map-sand" d="M412.3,135 C412.7,139 407.9,144.2 401.5,148 C395.1,151.8 384,155.9 373.9,157.7 C363.7,159.5 350.7,159.5 340.8,159 C330.9,158.5 322.3,156.8 314.7,154.5 C307.2,152.2 297,149.1 295.4,145.2 C293.8,141.4 298.1,135 305.2,131.4 C312.2,127.8 327.1,125.5 337.8,123.8 C348.4,122.1 358.6,121.4 368.9,121.4 C379.2,121.4 392.3,121.7 399.6,124 C406.8,126.2 412,131 412.3,135 Z" />
-                                <path class="map-greenery" d="M389.8,137 C389,139.5 384.5,142 380.7,144.4 C377,146.9 373.3,149.7 367.2,151.4 C361,153.2 350.7,155 343.9,154.8 C337.1,154.7 330.2,152.3 326.5,150.3 C322.8,148.3 321.7,145.5 321.7,142.9 C321.6,140.4 322.8,137.4 326.3,135 C329.9,132.7 336.6,130.3 343.1,128.8 C349.6,127.4 358.2,126.3 365.2,126.3 C372.3,126.3 381.5,127.2 385.6,129 C389.7,130.8 390.6,134.4 389.8,137 Z" />
-                                <!-- Alaska Peninsula -->
-                                <path class="map-sand" d="M288.1,157.5 C289.1,161 288.2,166.1 285.5,169.5 C282.8,173 276.7,176.1 271.8,178.2 C267,180.3 261.8,181.4 256.4,182.1 C251,182.8 243.7,183.9 239.3,182.4 C234.9,180.9 230.5,176.6 230.1,173 C229.7,169.4 233.7,164.4 236.7,160.9 C239.8,157.4 243.7,154.4 248.3,151.9 C252.8,149.4 258.7,146.6 264,146 C269.2,145.5 275.7,146.6 279.7,148.5 C283.7,150.4 287.2,154 288.1,157.5 Z" />
-                                <path class="map-greenery" d="M275.3,160.9 C275.9,163.1 276.9,165.4 275.9,167.8 C274.8,170.2 272.3,173.7 269.2,175.3 C266.1,176.9 260.9,177.5 257.4,177.5 C253.9,177.5 250.5,176.4 248.1,175 C245.6,173.7 243.5,171.7 242.9,169.6 C242.4,167.4 243.2,164.6 244.6,162.3 C246.1,159.9 248.5,157.3 251.5,155.5 C254.5,153.7 259.3,151.6 262.8,151.5 C266.3,151.4 270.2,153.1 272.3,154.7 C274.4,156.2 274.7,158.7 275.3,160.9 Z" />
-                                <!-- Greenland Isle -->
-                                <path class="map-sand-light" d="M489.6,126.6 C487.8,131.7 482.5,136.4 478.4,139.4 C474.4,142.4 470,143.8 465.2,144.8 C460.5,145.8 454.3,147.6 450,145.4 C445.7,143.3 440.7,137.3 439.5,132 C438.3,126.8 440.7,119.3 442.7,114 C444.7,108.8 447.8,104.1 451.5,100.5 C455.2,97 460.1,93.3 464.7,92.6 C469.3,91.8 475.1,93.4 479.2,96 C483.2,98.7 487.4,103.5 489.2,108.6 C490.9,113.7 491.3,121.4 489.6,126.6 Z" />
-                                <!-- US Pacific Coast -->
-                                <path class="map-sand" d="M317,245.2 C313.9,250.2 309.8,253.6 305.3,257.1 C300.8,260.5 295.2,265.4 290,265.8 C284.7,266.3 277.2,263.7 273.7,259.8 C270.2,255.8 269.1,247.8 269,242 C268.8,236.1 270.2,229.8 272.7,224.6 C275.1,219.4 279.2,213.8 283.7,210.7 C288.2,207.7 294.4,206.1 299.7,206.2 C305,206.3 311.4,207.8 315.4,211.3 C319.4,214.8 323.4,221.7 323.6,227.3 C323.9,233 320,240.3 317,245.2 Z" />
-                                <!-- North America Mainland Hub -->
-                                <path class="map-sand" d="M423.6,221.6 C424.6,226.6 426.7,232.7 423.1,237.6 C419.6,242.4 410.4,248.4 402.2,250.6 C393.9,252.8 382,252.1 373.6,250.8 C365.3,249.5 357.1,246.4 352,242.7 C346.8,239.1 343.1,233.6 342.7,228.7 C342.3,223.8 345.4,218.1 349.7,213.4 C354,208.6 360.4,203 368.4,200.2 C376.4,197.4 389.4,195.4 397.5,196.6 C405.6,197.9 412.8,203.6 417.1,207.7 C421.5,211.9 422.6,216.6 423.6,221.6 Z" />
-                                <path class="map-greenery" d="M414.4,222.4 C414.7,225.9 413,230.2 409.8,233.2 C406.6,236.1 400.3,238.9 395.1,240.1 C389.9,241.2 383.7,240.6 378.3,240.1 C373,239.5 367.4,238.8 363.1,236.7 C358.9,234.7 353.3,231.1 352.9,227.8 C352.4,224.5 356.5,219.6 360.3,216.9 C364.1,214.1 370.6,212.7 375.9,211.4 C381.2,210 386.7,208.7 392.1,208.9 C397.5,209.1 404.4,210.3 408.1,212.6 C411.8,214.8 414.1,219 414.4,222.4 Z" />
-                                <!-- Florida and Bahamas -->
-                                <path class="map-sand" d="M459.1,286.8 C460.7,288.6 461.6,292 460.9,294.6 C460.2,297.2 457.5,300.4 455.1,302.5 C452.7,304.6 449.3,306.5 446.4,307.2 C443.5,308 440,307.9 437.6,307.1 C435.2,306.3 433.4,304.4 432,302.5 C430.7,300.5 429.2,298 429.5,295.4 C429.8,292.8 431.5,288.8 433.9,286.7 C436.2,284.7 440.7,283.7 443.6,283.2 C446.6,282.7 449.2,283.3 451.8,283.9 C454.4,284.5 457.6,285.1 459.1,286.8 Z" />
-                                <!-- Mexico and Central America -->
-                                <path class="map-sand" d="M345,326.6 C343.8,329.4 339.7,331.5 335.7,332.3 C331.8,333.1 326,333 321.3,331.6 C316.5,330.2 310.9,327 307.3,324.1 C303.6,321.2 301.2,317.6 299.2,314.2 C297.2,310.7 294.8,306.5 295.4,303.5 C296,300.5 298.9,296.8 302.8,296 C306.7,295.3 313.9,297.4 318.8,299.2 C323.6,300.9 327.8,303.8 331.8,306.5 C335.8,309.3 340.7,312.6 342.9,315.9 C345.1,319.3 346.2,323.9 345,326.6 Z" />
-                                <!-- Amazon Basin Core -->
-                                <path class="map-sand" d="M478.7,371.4 C479.8,377 477.9,384.6 472.8,389.9 C467.8,395.1 457.1,400 448.5,402.7 C439.8,405.3 430.2,405.6 421.1,405.8 C411.9,406 400.8,406.5 393.4,403.7 C386,401 377.4,394.9 376.7,389.4 C376.1,383.9 383.5,375.8 389.5,370.7 C395.5,365.6 404.3,361.9 412.7,358.7 C421.1,355.5 430.9,351.9 439.9,351.5 C448.9,351.1 460.2,352.9 466.7,356.2 C473.2,359.5 477.7,365.8 478.7,371.4 Z" />
-                                <path class="map-greenery" d="M457.1,375.2 C457.3,378.8 457.4,382.2 455.2,385.8 C453,389.4 449.1,394.6 443.7,396.9 C438.4,399.2 429.1,400.2 423.1,399.8 C417.2,399.3 411.7,396.7 407.9,394.3 C404.1,391.9 401,388.6 400.3,385.2 C399.7,381.9 401.3,377.5 404.2,374 C407,370.6 412,367.1 417.5,364.6 C423,362.2 431,359.5 437.1,359.5 C443.2,359.5 450.5,361.9 453.8,364.6 C457.1,367.2 456.8,371.7 457.1,375.2 Z" />
-                                <!-- Brazil Atlantic Coast -->
-                                <path class="map-sand" d="M505.9,453.3 C504.4,457.7 498.8,462 494.1,464.2 C489.4,466.5 483.4,466.4 477.7,466.6 C472,466.7 465.4,467.3 459.8,465.1 C454.3,462.8 446.8,457.9 444.5,453.3 C442.2,448.6 444,441.7 446,437.2 C448.1,432.8 452.6,429.5 456.9,426.8 C461.2,424.1 466.5,421.3 472,421.1 C477.5,420.8 484.9,422.4 490,425.1 C495.2,427.9 500.4,432.7 503,437.4 C505.6,442.1 507.4,448.8 505.9,453.3 Z" />
-                                <path class="map-greenery" d="M492.6,449.7 C492.3,452.7 491.5,457 488.9,459 C486.3,461 481,462 477.1,461.8 C473.2,461.5 468.7,459.6 465.5,457.6 C462.3,455.5 459.2,452.6 457.8,449.7 C456.4,446.8 456.4,443.1 457.2,440.2 C457.9,437.3 459.8,434.4 462.4,432.3 C465,430.2 469,427.6 472.8,427.5 C476.6,427.3 482.2,429.3 485.2,431.6 C488.1,433.8 489.4,437.7 490.6,440.8 C491.8,443.8 492.9,446.7 492.6,449.7 Z" />
-                                <!-- Andes Spine -->
-                                <path class="map-sand" d="M385.1,449 C383,455.2 379.5,460 376.4,464.8 C373.3,469.6 369.9,475.4 366.4,477.7 C362.9,480 357.7,481.2 355.3,478.5 C352.9,475.7 352.1,467.4 352.1,461.2 C352.1,454.9 353.7,447.5 355.5,441.1 C357.3,434.8 359.9,427.7 362.9,423 C365.9,418.3 370.1,414.4 373.5,413 C377,411.5 380.9,411.7 383.6,414.1 C386.2,416.6 389,421.8 389.2,427.7 C389.5,433.5 387.2,442.9 385.1,449 Z" />
-                                <!-- Southern Cone Argentina -->
-                                <path class="map-sand" d="M440.6,523.6 C439.4,530.1 438.6,537.4 435.5,542.9 C432.4,548.4 426.7,555.2 421.9,556.6 C417.1,558 410.7,554.8 406.8,551.3 C402.8,547.8 399.9,541.5 398.3,535.7 C396.7,529.8 396,522.3 397.1,516 C398.2,509.7 401.4,502.9 405,497.9 C408.5,492.9 413.4,488 418.3,486 C423.2,484.1 430.3,483.3 434.3,486.2 C438.3,489.2 441.3,497.6 442.4,503.9 C443.4,510.1 441.7,517.1 440.6,523.6 Z" />
-                                <!-- Tierra del Fuego Isle -->
-                                <path class="map-sand" d="M421.5,577.4 C421.6,579.3 420.8,582.1 419,583.4 C417.2,584.8 413.5,585.4 410.7,585.4 C407.9,585.4 404.6,584.6 402.2,583.5 C399.8,582.4 397.3,580.5 396.2,578.7 C395,576.9 394.8,574.7 395.1,572.7 C395.4,570.8 396.1,568.6 397.7,567.1 C399.4,565.6 402.4,563.8 405.1,563.7 C407.8,563.6 411.7,565 413.9,566.3 C416.2,567.7 417.4,569.8 418.6,571.7 C419.9,573.5 421.4,575.4 421.5,577.4 Z" />
-                                <!-- Great Britain -->
-                                <path class="map-sand" d="M545.4,185.9 C546.7,190 546.5,195.8 545.6,199.7 C544.7,203.6 542.5,207.4 540,209.2 C537.6,211.1 533.9,211.8 530.9,211 C528,210.1 524.9,207.1 522.3,204.3 C519.8,201.5 517,198 515.5,193.9 C513.9,189.7 512.3,183.4 513,179.5 C513.8,175.6 517.2,172 519.9,170.6 C522.6,169.2 526.1,170.4 529.2,171.1 C532.2,171.8 535.4,172.4 538.1,174.9 C540.8,177.3 544.2,181.7 545.4,185.9 Z" />
-                                <!-- Ireland Isle -->
-                                <path class="map-sand" d="M501.2,200 C500.7,202.8 499.3,206.1 497.6,208 C495.9,209.9 493.1,211.3 491,211.6 C488.9,211.8 486.8,210.4 484.9,209.3 C483.1,208.1 481.1,206.7 479.9,204.5 C478.8,202.2 477.4,198.6 477.8,195.8 C478.2,193.1 480.5,189.7 482.4,188 C484.3,186.3 486.9,186.1 489.1,185.7 C491.2,185.4 493.5,185.1 495.4,186 C497.4,186.9 499.7,188.8 500.6,191.2 C501.6,193.5 501.7,197.2 501.2,200 Z" />
-                                <!-- Scandinavia Peninsula -->
-                                <path class="map-sand" d="M604.9,147.2 C602.8,152.8 598.1,159.1 594.2,162.2 C590.3,165.2 585.5,165.4 581.5,165.7 C577.4,166 573.3,166.2 569.9,164 C566.5,161.8 561.9,157.6 561.1,152.4 C560.4,147.2 562.8,138.3 565.4,132.9 C568,127.4 572.7,123.2 576.6,119.8 C580.5,116.4 584.7,113.1 588.8,112.3 C592.8,111.5 597.8,112.2 600.8,114.9 C603.8,117.6 606.1,123.3 606.8,128.7 C607.4,134.1 607,141.7 604.9,147.2 Z" />
-                                <path class="map-greenery" d="M595.9,144 C594.9,147.6 593.6,152.5 591.3,155.2 C589,157.9 584.9,160.2 582.2,160.3 C579.5,160.5 576.8,158.1 575,155.9 C573.2,153.7 571.9,150.3 571.6,147 C571.3,143.6 572,139.2 573.3,135.7 C574.6,132.3 576.8,128.8 579.3,126.2 C581.7,123.5 585,120.4 587.8,119.8 C590.6,119.2 594.3,120.3 596,122.5 C597.7,124.8 597.7,129.8 597.7,133.4 C597.7,137 597,140.4 595.9,144 Z" />
-                                <!-- European Summit Hub -->
-                                <path class="map-sand" d="M599.5,228 C598.3,231.8 592.6,234.8 588.2,237.4 C583.9,240.1 579.5,242.7 573.4,244 C567.3,245.3 557.9,246.6 551.5,245.1 C545.1,243.6 538.1,238.6 535.1,234.8 C532.1,231 532.6,226.1 533.3,222.2 C534.1,218.3 535.9,214.3 539.7,211.5 C543.5,208.6 550,206.1 556.3,205.3 C562.5,204.5 570.7,205.1 577.3,206.7 C583.9,208.3 592,211.4 595.7,214.9 C599.4,218.5 600.7,224.3 599.5,228 Z" />
-                                <path class="map-greenery" d="M587.8,227 C588.1,229.5 586.2,233 583.3,234.8 C580.5,236.6 575.1,237.7 570.8,238 C566.4,238.3 561.1,237.9 557.2,236.6 C553.3,235.4 549.6,233 547.5,230.7 C545.3,228.5 544.4,225.8 544.3,223.2 C544.1,220.6 544.2,217.2 546.6,215.1 C549,213.1 554.4,210.9 558.7,210.8 C563,210.6 568.5,212.6 572.3,214.1 C576.1,215.6 578.9,217.4 581.5,219.6 C584.1,221.7 587.5,224.5 587.8,227 Z" />
-                                <!-- Iberia Isle -->
-                                <path class="map-sand" d="M530.6,265.2 C530.9,268.1 531.1,270.9 530,273.8 C528.8,276.7 526.8,280.7 523.7,282.4 C520.7,284.1 515.3,284.5 511.8,283.9 C508.3,283.3 505,280.9 502.7,278.8 C500.4,276.6 498.4,273.8 497.9,271 C497.4,268.2 498.1,264.7 499.6,262 C501.2,259.4 503.9,256.7 507,254.9 C510.2,253.2 514.7,251.3 518.3,251.6 C521.8,251.8 526.2,254.1 528.3,256.4 C530.3,258.7 530.3,262.3 530.6,265.2 Z" />
-                                <!-- Italy Peninsula Boot -->
-                                <path class="map-sand" d="M574.2,281.4 C572.4,284.4 569.8,288.6 567,290.4 C564.3,292.2 560.3,292.7 557.8,292 C555.4,291.4 553.4,289 552.4,286.7 C551.3,284.4 550.8,281.1 551.3,278 C551.9,275 553.7,271.3 555.7,268.5 C557.7,265.7 560.4,262.9 563.1,261 C565.9,259.1 569.9,256.9 572.5,257.2 C575,257.4 577.7,260 578.5,262.5 C579.3,265 578.1,269.1 577.4,272.3 C576.7,275.4 575.9,278.4 574.2,281.4 Z" />
-                                <!-- Greece and Aegean -->
-                                <path class="map-sand" d="M621.4,274.4 C620.9,277.3 618.3,280.7 615.7,282.5 C613.2,284.3 609.3,285.2 606.1,285.2 C602.9,285.2 599.1,284.1 596.6,282.4 C594.1,280.7 592.3,277.5 591.3,274.8 C590.2,272.1 589.7,269 590.1,266 C590.5,263 591.4,258.9 593.7,256.9 C596,254.8 600.7,253.6 603.8,253.9 C607,254.3 610.1,256.9 612.6,258.8 C615.1,260.7 617.3,262.6 618.7,265.2 C620.2,267.8 621.9,271.5 621.4,274.4 Z" />
-                                <!-- Eastern Europe Plains -->
-                                <path class="map-sand" d="M661.6,214.7 C660.9,218.7 657.9,223.1 654.2,225.7 C650.5,228.3 644.6,230.3 639.7,230.3 C634.7,230.3 629.1,228 624.7,225.9 C620.4,223.8 616.5,221 613.5,217.5 C610.5,214 606.4,209 606.7,205 C606.9,201 610.8,195.8 614.9,193.6 C618.9,191.3 625.7,191.6 630.8,191.7 C635.9,191.7 640.8,192.2 645.4,193.9 C650,195.6 655.9,198.3 658.6,201.8 C661.3,205.2 662.4,210.7 661.6,214.7 Z" />
-                                <!-- Sahara North Core -->
-                                <path class="map-sand" d="M619.4,340 C619.5,344.8 614.9,351.1 608.3,354.5 C601.6,358 589.3,359.6 579.6,360.8 C569.9,361.9 560.2,362.1 550.1,361.2 C539.9,360.3 525.7,359 518.7,355.5 C511.8,352 507.3,344.8 508.5,340 C509.7,335.2 519,330.4 525.9,326.9 C532.8,323.4 540.8,320.4 550,318.8 C559.3,317.1 571.6,315.7 581.3,316.8 C591,318 601.8,321.7 608.1,325.5 C614.5,329.4 619.4,335.2 619.4,340 Z" />
-                                <!-- West Africa Bulge -->
-                                <path class="map-sand" d="M529.3,388.5 C529.6,391.6 526.6,395.7 524.2,398.7 C521.9,401.7 518.9,404.3 515.1,406.7 C511.4,409.1 506.1,412.5 501.5,413.1 C496.8,413.7 490.3,412.4 487.2,410.4 C484.1,408.4 483.3,404.1 483,400.9 C482.6,397.7 483.3,394.3 485.1,391.2 C486.9,388.1 490.1,384.5 494,382.3 C497.8,380.2 503.5,378.7 508.2,378.3 C513,377.9 518.8,378.3 522.3,380 C525.8,381.7 529,385.4 529.3,388.5 Z" />
-                                <!-- Congo Rainforest Core -->
-                                <path class="map-sand" d="M621.3,423.2 C620,428.1 617.1,432.2 612.9,436.3 C608.7,440.4 603.2,446 595.9,447.6 C588.6,449.2 576.5,448.2 569.2,445.6 C562,443.1 556.1,436.9 552.4,432 C548.7,427.2 546.6,421.6 547,416.7 C547.4,411.7 550.2,406.1 554.9,402.4 C559.5,398.7 567.4,395.9 575,394.7 C582.6,393.4 592.8,392.8 600.5,394.8 C608.1,396.8 617.4,402 620.9,406.7 C624.4,411.5 622.6,418.3 621.3,423.2 Z" />
-                                <path class="map-greenery" d="M612.6,422.4 C612.4,425.7 609.1,429.6 605.6,432 C602.2,434.5 596.7,436.5 591.7,437 C586.7,437.4 580.3,436.4 575.9,434.8 C571.5,433.2 568,430.2 565.1,427.4 C562.2,424.5 558.9,421.1 558.5,417.7 C558,414.2 559,409.2 562.4,406.8 C565.7,404.4 573.3,403.5 578.4,403.4 C583.6,403.4 588.6,405.1 593.3,406.5 C598,407.9 603.3,409.4 606.6,412 C609.8,414.7 612.7,419.1 612.6,422.4 Z" />
-                                <!-- Horn of Africa -->
-                                <path class="map-sand" d="M665.5,399 C663.7,402.8 661.5,408 658,410.4 C654.5,412.7 648.4,413.9 644.5,412.9 C640.5,412 636.7,408.2 634.3,404.9 C631.9,401.6 630.3,397.1 630.1,393 C629.9,388.9 631.3,384 633.4,380.4 C635.5,376.8 639,373.6 642.7,371.4 C646.4,369.2 651.4,366.8 655.5,367.2 C659.6,367.6 665,370.3 667.2,373.7 C669.4,377 669.1,382.9 668.8,387.1 C668.5,391.4 667.3,395.1 665.5,399 Z" />
-                                <!-- Southern Africa Cape -->
-                                <path class="map-sand" d="M630.1,503.1 C630.5,508.1 627.3,515.1 622.9,518.9 C618.4,522.6 610.1,525 603.4,525.8 C596.6,526.5 588.4,525.8 582.5,523.6 C576.5,521.3 571,516.6 567.7,512.2 C564.5,507.8 563.2,502.4 563.1,497.2 C563,492 563.2,485.3 567,481.1 C570.8,476.8 579.2,472.4 585.8,471.8 C592.5,471.3 600.9,475.1 606.7,477.9 C612.6,480.7 616.8,484.3 620.7,488.5 C624.6,492.7 629.8,498 630.1,503.1 Z" />
-                                <!-- Madagascar Isle -->
-                                <path class="map-sand" d="M683.9,470 C685.6,474.8 686.4,481.2 686.2,485.7 C686.1,490.3 684.7,495 682.7,497.1 C680.7,499.2 677.1,499.2 674.1,498.3 C671.2,497.4 668.1,494.8 665,491.8 C662,488.7 658,484.9 655.9,480.1 C653.8,475.4 652,467.6 652.3,463.3 C652.7,459.1 655.9,456.2 658.2,454.4 C660.4,452.7 663.2,452.5 666.1,452.8 C669,453.1 672.6,453.6 675.5,456.4 C678.5,459.3 682.1,465.1 683.9,470 Z" />
-                                <path class="map-greenery" d="M678.5,471.9 C679.4,475 679.1,478.1 679,481 C678.9,483.8 679,486.9 678,488.9 C677,490.9 675.1,493.2 673.2,493 C671.3,492.7 668.2,489.7 666.4,487.2 C664.5,484.7 663.1,481 662,477.9 C661,474.8 660,471.2 660,468.4 C660,465.6 660.8,462.7 662,461 C663.1,459.4 665.1,458.4 667.1,458.6 C669.1,458.8 671.9,459.9 673.8,462.1 C675.7,464.4 677.7,468.8 678.5,471.9 Z" />
-                                <!-- Siberia West Core -->
-                                <path class="map-sand" d="M756.7,145 C756.4,149.4 752,154.8 745,157.4 C737.9,160.1 724.5,161 714.2,161 C703.9,161 693.5,159.4 683.1,157.5 C672.7,155.5 659.2,153.3 651.8,149.5 C644.4,145.7 637.6,138.9 638.7,134.6 C639.8,130.4 650.5,126.4 658.4,123.9 C666.4,121.4 676.2,120.3 686.3,119.7 C696.4,119.2 708.7,118.8 718.8,120.6 C728.9,122.4 740.6,126.6 746.9,130.7 C753.2,134.8 757,140.5 756.7,145 Z" />
-                                <!-- Siberia East Core -->
-                                <path class="map-sand" d="M867.4,125.8 C867.5,130.1 860.7,136.2 854.8,140.4 C848.8,144.6 840.4,147.7 831.7,150.9 C823.1,154.1 812.7,158.4 802.9,159.4 C793.1,160.4 779,159.7 773,157.1 C767,154.4 766.3,148.1 766.8,143.5 C767.3,138.9 771.3,134.1 776.2,129.7 C781.1,125.4 788,120.3 796.4,117.3 C804.8,114.3 817.1,112 826.7,111.5 C836.3,111 847.4,112 854.2,114.4 C861,116.8 867.3,121.4 867.4,125.8 Z" />
-                                <!-- Kamchatka Peninsula -->
-                                <path class="map-sand" d="M896.6,156.7 C894.3,159.8 891.4,161.8 888.4,163.9 C885.5,166 882.1,168.9 879.1,169.2 C876,169.6 871.9,168.4 870.3,165.9 C868.6,163.5 868.8,158.2 869.4,154.5 C869.9,150.7 871.6,146.7 873.6,143.4 C875.6,140.1 878.3,136.5 881.2,134.5 C884,132.6 887.7,131.6 890.7,131.7 C893.6,131.8 896.9,132.8 898.8,135.1 C900.7,137.3 902.4,141.5 902,145.1 C901.7,148.7 898.8,153.5 896.6,156.7 Z" />
-                                <!-- Central Asia Steppe -->
-                                <path class="map-sand" d="M739.7,215 C739.9,218.5 741,222.6 738,225.8 C734.9,228.9 728,232.8 721.6,233.8 C715.1,234.9 705.7,233.7 699.4,232.3 C693.1,230.8 687.2,228.1 683.5,225.2 C679.8,222.3 677,218.4 677.1,215 C677.1,211.6 680,207.8 683.6,204.9 C687.3,201.9 692.7,198.6 699.1,197.2 C705.4,195.7 715.4,194.8 721.6,196.1 C727.8,197.4 733.5,201.6 736.5,204.8 C739.5,208 739.5,211.5 739.7,215 Z" />
-                                <!-- Arabian Peninsula -->
-                                <path class="map-sand" d="M696.8,314.8 C699,318 700.6,323.6 699.5,327.7 C698.3,331.7 693.9,336.5 690.1,339.4 C686.2,342.3 680.8,344.5 676.3,345.1 C671.8,345.8 666.4,345 662.8,343.2 C659.2,341.4 656.5,337.9 654.7,334.5 C652.8,331 651,326.7 651.6,322.5 C652.3,318.3 654.8,312.1 658.5,309.2 C662.2,306.3 669.1,305.2 673.7,305.1 C678.3,305 682.2,306.9 686,308.5 C689.9,310.1 694.5,311.7 696.8,314.8 Z" />
-                                <!-- Indian Subcontinent -->
-                                <path class="map-sand" d="M783.8,317.7 C782.3,323.8 777.2,330.6 772.5,334.7 C767.8,338.8 761,341.8 755.5,342.1 C750,342.4 743.4,339.8 739.3,336.3 C735.1,332.8 732.6,326.8 730.6,321.2 C728.6,315.6 726.4,309 727.3,302.6 C728.2,296.2 731.3,286.9 735.8,282.9 C740.4,278.9 748.9,278.1 754.5,278.6 C760.1,279.1 764.8,282.8 769.3,286 C773.8,289.2 779,292.6 781.4,297.8 C783.8,303.1 785.3,311.6 783.8,317.7 Z" />
-                                <path class="map-greenery" d="M773.2,314.9 C771.7,318.6 767.8,321.5 764.9,323.9 C761.9,326.3 758.9,328.3 755.3,329.2 C751.7,330.1 746.5,331.3 743.3,329.5 C740.2,327.7 737.2,322.6 736.4,318.6 C735.6,314.6 737.1,309.5 738.5,305.6 C739.8,301.7 741.8,297.8 744.5,295.2 C747.2,292.5 751.2,290.1 754.7,289.6 C758.2,289.1 762.5,290.2 765.6,292.2 C768.8,294.2 772.4,297.6 773.6,301.4 C774.9,305.2 774.7,311.1 773.2,314.9 Z" />
-                                <!-- Sri Lanka Isle -->
-                                <path class="map-sand" d="M779.1,366.6 C778.7,368.8 777.7,371.5 776.3,372.9 C774.9,374.4 772.6,375.4 770.9,375.5 C769.2,375.6 767.5,374.7 765.9,373.8 C764.4,372.9 762.6,371.9 761.6,370.2 C760.6,368.4 759.6,365.4 760,363.2 C760.4,361.1 762.4,358.6 763.9,357.3 C765.4,356 767.4,355.7 769.2,355.3 C770.9,355 772.9,354.7 774.5,355.4 C776,356.1 777.8,357.8 778.6,359.7 C779.4,361.6 779.5,364.4 779.1,366.6 Z" />
-                                <!-- Asian Innovation Hub Core -->
-                                <path class="map-sand" d="M868.8,239.3 C868,244.7 861.5,251 855.1,254.3 C848.7,257.7 839,258.5 830.4,259.5 C821.9,260.5 812.5,261.8 803.6,260.2 C794.6,258.6 781.7,254.7 776.6,249.8 C771.5,244.9 771.4,236.4 773.2,230.9 C775.1,225.5 781.6,220.9 787.5,217.1 C793.4,213.3 800.3,209.4 808.5,208.1 C816.7,206.8 828.2,207.1 836.7,209.4 C845.2,211.6 854.2,216.5 859.6,221.5 C864.9,226.5 869.5,233.8 868.8,239.3 Z" />
-                                <path class="map-greenery" d="M847.2,237.4 C847.6,240.9 848,245.9 844.8,248.7 C841.7,251.5 834.1,253.9 828.2,254.3 C822.3,254.7 814.9,253 809.4,251.2 C804,249.4 798.6,246.4 795.6,243.3 C792.6,240.2 791.3,236 791.6,232.5 C791.9,229.1 794.2,225.5 797.5,222.6 C800.8,219.7 805.9,216.2 811.6,215.3 C817.3,214.4 826.3,215.4 831.5,217.4 C836.6,219.4 839.9,224 842.5,227.3 C845.1,230.6 846.8,233.8 847.2,237.4 Z" />
-                                <!-- Korea Peninsula -->
-                                <path class="map-sand" d="M890.3,233.8 C889,236.5 886.5,238.5 884.5,240.4 C882.5,242.3 880.3,244.5 878,245.2 C875.7,245.9 872.3,246.2 870.6,244.7 C868.9,243.2 868.1,239 868.1,236 C868,232.9 869.2,229.4 870.3,226.5 C871.5,223.6 873.1,220.5 875,218.5 C877,216.5 879.7,215 882,214.7 C884.2,214.4 886.8,215.1 888.6,216.6 C890.3,218.1 892.3,220.9 892.6,223.7 C892.9,226.6 891.7,231 890.3,233.8 Z" />
-                                <!-- Japan Hokkaido -->
-                                <path class="map-sand" d="M925.7,196.1 C926.4,198.5 927.4,200.9 927.1,203.5 C926.8,206 925.8,209.6 923.8,211.3 C921.9,213 918.1,213.7 915.5,213.5 C912.8,213.3 910.1,211.9 908,210.3 C906,208.8 904,206.6 903.2,204.3 C902.3,202 902.3,199 903,196.5 C903.6,194.1 905,191.4 906.9,189.6 C908.8,187.8 911.9,185.8 914.5,185.7 C917.1,185.6 920.5,187.4 922.4,189.1 C924.2,190.8 924.9,193.7 925.7,196.1 Z" />
-                                <!-- Japan Honshu Arc -->
-                                <path class="map-sand" d="M925.2,247.1 C922.8,251.1 919,256.7 915.6,259.1 C912.2,261.6 907.6,262.4 904.8,261.9 C902,261.4 899.9,258.9 898.9,256.1 C897.9,253.4 897.7,249.2 898.7,245.4 C899.7,241.5 902.4,236.8 905,233 C907.6,229.2 911,225.2 914.5,222.4 C918,219.7 923,216.5 925.9,216.6 C928.8,216.7 931.2,220.1 931.8,223.2 C932.5,226.2 930.7,231.2 929.6,235.2 C928.5,239.2 927.5,243.1 925.2,247.1 Z" />
-                                <!-- Indochina Peninsula -->
-                                <path class="map-sand" d="M862.6,326.1 C861.9,329.9 858.2,334.2 854.7,336.6 C851.2,339 846,340.4 841.7,340.3 C837.3,340.3 832.1,338.7 828.7,336.4 C825.3,334 823,329.9 821.4,326.2 C819.8,322.5 818.7,318.4 819.1,314.4 C819.6,310.4 821,304.7 824.2,302.1 C827.4,299.6 833.9,298.5 838.3,299 C842.6,299.5 846.7,302.9 850.2,305.3 C853.7,307.7 857.1,310.1 859.2,313.6 C861.3,317.1 863.4,322.2 862.6,326.1 Z" />
-                                <!-- Indonesia Archipelago -->
-                                <path class="map-sand" d="M893,368 C894,370.9 892.9,375.2 889.8,378.8 C886.8,382.5 880.5,387.1 874.8,389.8 C869,392.6 861.6,394.2 855.5,395.4 C849.3,396.6 843.2,397.5 837.9,397.1 C832.7,396.7 825.6,395.7 824.2,393 C822.8,390.4 825.8,384.8 829.5,381.2 C833.3,377.5 840.9,374 846.7,371.2 C852.6,368.3 858.5,365.5 864.7,363.9 C870.9,362.3 879.1,360.9 883.8,361.6 C888.5,362.2 892,365.1 893,368 Z" />
-                                <path class="map-greenery" d="M879.3,373 C879.4,374.9 878.2,377.1 876.7,379.4 C875.1,381.6 873.5,384.6 870.1,386.7 C866.8,388.9 860.5,391.4 856.4,392.2 C852.3,392.9 848.1,392.1 845.5,391.3 C842.8,390.4 841,388.9 840.3,387.2 C839.7,385.4 840,383 841.7,380.7 C843.4,378.5 846.9,375.8 850.6,373.7 C854.2,371.7 859.2,369.3 863.4,368.3 C867.7,367.3 873.4,366.8 876,367.6 C878.7,368.4 879.2,371 879.3,373 Z" />
-                                <!-- Australia Mainland Hub -->
-                                <path class="map-sand" d="M970.6,475 C970.6,481.4 965.7,489.6 959.5,494.1 C953.3,498.7 942.2,500.6 933.3,502.3 C924.4,503.9 915.3,504.9 905.9,503.9 C896.5,502.8 882.9,500.8 876.7,496 C870.5,491.2 867.6,481.4 868.9,475 C870.1,468.6 878.1,462.5 884.3,457.7 C890.5,452.9 897.5,448.5 906,446.2 C914.4,444 926.1,442.5 935.1,444.1 C944,445.6 953.8,450.6 959.7,455.7 C965.7,460.9 970.6,468.6 970.6,475 Z" />
-                                <path class="map-greenery" d="M947.5,475 C948,479 949.1,484.1 946.2,487.7 C943.4,491.3 936.5,495.4 930.5,496.6 C924.6,497.8 916.2,496.4 910.4,494.7 C904.6,493.1 899,490.1 895.6,486.8 C892.1,483.5 889.9,478.9 889.9,475 C889.9,471.1 892.5,466.8 895.8,463.3 C899.1,459.8 904,455.7 909.8,454 C915.6,452.4 924.9,451.7 930.6,453.3 C936.2,454.9 940.9,459.9 943.7,463.5 C946.5,467.1 947.1,471 947.5,475 Z" />
-                                <!-- Tasmania Isle -->
-                                <path class="map-sand" d="M956.4,535 C956.1,536.7 954.3,538.4 952.9,539.7 C951.6,541 950.1,542.2 948.2,543 C946.2,543.8 943.4,544.8 941.2,544.5 C939.1,544.1 936.6,542.2 935.5,540.7 C934.4,539.1 934.5,536.8 934.7,535 C934.8,533.2 935.4,531.4 936.5,530 C937.7,528.6 939.6,527.1 941.6,526.5 C943.6,525.9 946.3,525.9 948.4,526.4 C950.6,526.8 953.2,527.9 954.5,529.3 C955.9,530.8 956.6,533.3 956.4,535 Z" />
-                                <!-- New Zealand North -->
-                                <path class="map-sand" d="M1023,499.4 C1024.7,502 1026,504.5 1026.7,507.4 C1027.5,510.2 1028.4,514.3 1027.5,516.5 C1026.7,518.6 1023.8,520.3 1021.4,520.5 C1019,520.6 1015.7,518.9 1013.2,517.3 C1010.7,515.8 1008.1,513.5 1006.3,511.1 C1004.6,508.6 1003.1,505.2 1002.7,502.5 C1002.2,499.7 1002.6,496.8 1003.6,494.6 C1004.6,492.4 1006.3,489.9 1008.6,489.4 C1010.8,488.9 1014.6,489.8 1017,491.5 C1019.4,493.2 1021.4,496.7 1023,499.4 Z" />
-                                <!-- New Zealand South -->
-                                <path class="map-sand" d="M1013.7,537 C1015.7,539.9 1018.3,543.9 1018.9,547.1 C1019.5,550.2 1018.7,554.2 1017.3,556 C1015.9,557.9 1013,558.4 1010.5,558.3 C1008.1,558.2 1005.1,557.1 1002.6,555.3 C1000.2,553.4 997.6,550.2 995.9,547.2 C994.2,544.3 992.9,540.7 992.4,537.4 C991.8,534.2 991.3,529.9 992.4,527.7 C993.5,525.5 996.5,524 999,524.3 C1001.4,524.7 1004.7,527.6 1007.2,529.8 C1009.6,531.9 1011.8,534.1 1013.7,537 Z" />
-                                <!-- Antarctica Ice 1 -->
-                                <path class="map-sand-light" d="M493.1,600 C493.6,602.1 491.6,605.1 488.9,606.8 C486.1,608.6 481.1,609.9 476.8,610.5 C472.6,611.1 467.2,611.1 463.2,610.4 C459.3,609.6 455.7,607.8 453.3,606.1 C450.9,604.3 449.5,602.2 449.1,600 C448.6,597.8 448.3,594.8 450.5,592.9 C452.8,591 458.3,589.1 462.6,588.6 C466.9,588.2 472.3,589.6 476.2,590.5 C480.1,591.4 483.4,592.5 486.2,594.1 C489,595.7 492.7,597.9 493.1,600 Z" />
-                                <!-- Antarctica Ice 2 -->
-                                <path class="map-sand-light" d="M555.1,595 C555.1,597.4 552.8,600.3 549.9,602.2 C547,604.2 542,606 537.5,606.6 C533.1,607.1 527.4,606.4 523.1,605.6 C518.8,604.8 515.1,603.3 511.9,601.6 C508.7,599.8 504.4,597.4 503.8,595 C503.3,592.6 505.5,589 508.7,587.3 C511.9,585.5 518.5,584.9 523.1,584.4 C527.8,584 532.3,584 536.8,584.6 C541.2,585.1 547,586 550,587.7 C553.1,589.5 555.1,592.6 555.1,595 Z" />
-                                <!-- Antarctic Dome Hub -->
-                                <path class="map-sand-light" d="M622.1,592 C622.1,594.6 620.1,598 616.8,599.9 C613.5,601.8 607.3,602.9 602.4,603.4 C597.6,604 592.7,603.8 587.7,603.3 C582.6,602.8 575.8,602.2 572.2,600.3 C568.7,598.4 565.8,594.6 566.3,592 C566.8,589.4 571.6,586.7 575.2,584.8 C578.7,582.9 583,581.5 587.6,580.6 C592.3,579.8 598.3,578.9 603.1,579.5 C608,580.1 613.5,582.1 616.6,584.1 C619.8,586.2 622,589.4 622.1,592 Z" />
-                                <!-- Antarctica Ice 4 -->
-                                <path class="map-sand-light" d="M685.4,595 C685,597.3 681.1,599.8 677.9,601.5 C674.8,603.2 671,604.3 666.7,605.3 C662.4,606.2 656.7,607.6 652.1,607.2 C647.4,606.8 641.1,604.8 638.5,602.8 C636,600.8 636.4,597.4 636.9,595 C637.5,592.6 639.3,590.3 641.9,588.4 C644.5,586.5 648.4,584.5 652.6,583.7 C656.9,582.9 662.8,582.9 667.5,583.5 C672.1,584.2 677.4,585.7 680.4,587.6 C683.4,589.5 685.8,592.7 685.4,595 Z" />
-                                <!-- Antarctica Ice 5 -->
-                                <path class="map-sand-light" d="M740.4,600 C739.9,602.1 738,603.9 735.8,605.7 C733.6,607.6 731.1,610.1 727.2,611 C723.3,612 716.6,612.3 712.5,611.5 C708.4,610.7 704.8,608.3 702.6,606.3 C700.3,604.4 699.1,602.1 699.2,600 C699.2,597.9 700.3,595.4 702.6,593.7 C705,592 709.2,590.5 713.3,589.7 C717.4,588.9 722.9,588.4 727.2,588.9 C731.5,589.5 737,591.2 739.2,593 C741.4,594.9 741,597.9 740.4,600 Z" />
-                            </g>
-                            <!-- Continental Hub Pavilions and Features -->
-                            <rect x="369" y="216" width="32" height="18" rx="3" class="map-urban" />
-                            <rect x="551" y="217" width="28" height="16" rx="3" class="map-urban" />
-                            <rect x="802" y="226" width="36" height="18" rx="3" class="map-urban" />
-                            <ellipse cx="595" cy="592" rx="24" ry="9" fill="#38bdf8" stroke="#ffffff" stroke-width="1.6" opacity="0.85" />
-                            <!-- Inter-Island Arched Footbridges -->
-                            <g stroke="#ffffff" stroke-width="2.2" stroke-linecap="round">
-                                <line x1="355" y1="140" x2="385" y2="225" />
-                                <line x1="430" y1="380" x2="475" y2="445" />
-                                <line x1="530" y1="190" x2="565" y2="225" />
-                                <line x1="565" y1="340" x2="585" y2="420" />
-                                <line x1="700" y1="140" x2="820" y2="235" />
-                                <line x1="840" y1="320" x2="860" y2="380" />
-                            </g>
-                            <!-- Continental Teleferic (Sky-Way Aerial Cable Car) -->
-                            <path class="map-cableway" d="M385,225 L565,225 L820,235 L920,475" />
-                            <circle cx="385" cy="225" r="5" fill="#f43f5e" stroke="#ffffff" stroke-width="1.8" />
-                            <circle cx="565" cy="225" r="5" fill="#f43f5e" stroke="#ffffff" stroke-width="1.8" />
-                            <circle cx="820" cy="235" r="5" fill="#f43f5e" stroke="#ffffff" stroke-width="1.8" />
-                            <circle cx="920" cy="475" r="5" fill="#f43f5e" stroke="#ffffff" stroke-width="1.8" />
-                            <!-- Electric Water Taxi Marine Corridors from the Storm Gates -->
-                            <g class="map-ferry">
-                                <path d="M600,650 L595,605 L595,530" />
-                                <path d="M565,340 Q515,310 445,295" />
-                                <path d="M60,345 C140,345 220,300 295,235" />
-                                <path d="M1140,345 C1060,380 980,440 920,475" />
-                                <path d="M600,40 L600,120" />
-                            </g>
-                            <!-- Submerged Reef Observation Suites -->
-                            <g transform="translate(678, 400)">
-                                <circle cx="0" cy="0" r="7" fill="#0284c7" stroke="#38bdf8" stroke-width="2" />
-                                <circle cx="0" cy="0" r="2.6" fill="#ffffff" class="twinkle" />
-                            </g>
-                            <g transform="translate(704, 422)">
-                                <circle cx="0" cy="0" r="7" fill="#0284c7" stroke="#38bdf8" stroke-width="2" />
-                                <circle cx="0" cy="0" r="2.6" fill="#ffffff" class="twinkle" />
-                            </g>
-                            <!-- Geographic Map Labels -->
-                            <g class="map-label-group">
-                                <text class="map-label-text" x="600" y="690">Külső Védelmi Zátony és Vihargát</text>
-                                <text class="map-label-text" x="130" y="328">Csendes-óceáni Kapu</text>
-                                <text class="map-label-text" x="1060" y="328">Észak-Atlanti Kapu</text>
-                            </g>
-                            <!-- 8 INTERACTIVE HOTSPOT PINS -->
-                            <!-- Hotspot 1: NA Casino and Theme Park -->
-                            <g class="map-hotspot" data-spot="1" transform="translate(385, 225)">
-                                <circle class="hotspot-pulse" r="16" fill="#f43f5e" opacity="0.6" />
-                                <circle class="hotspot-core" r="11" />
-                                <text>1</text>
-                            </g>
-                            <!-- Hotspot 2: European Summit and Diplomatic Pavilions -->
-                            <g class="map-hotspot" data-spot="2" transform="translate(565, 225)">
-                                <circle class="hotspot-pulse" r="16" fill="#c29a57" opacity="0.6" />
-                                <circle class="hotspot-core" r="11" />
-                                <text>2</text>
-                            </g>
-                            <!-- Hotspot 3: Asian Innovation Hub -->
-                            <g class="map-hotspot" data-spot="3" transform="translate(820, 235)">
-                                <circle class="hotspot-pulse" r="16" fill="#38bdf8" opacity="0.6" />
-                                <circle class="hotspot-core" r="11" />
-                                <text>3</text>
-                            </g>
-                            <!-- Hotspot 4: Continental Teleferic -->
-                            <g class="map-hotspot" data-spot="4" transform="translate(692.5, 230)">
-                                <circle class="hotspot-pulse" r="16" fill="#f43f5e" opacity="0.6" />
-                                <circle class="hotspot-core" r="11" />
-                                <text>4</text>
-                            </g>
-                            <!-- Hotspot 5: Submerged Reef Suites -->
-                            <g class="map-hotspot" data-spot="5" transform="translate(690, 410)">
-                                <circle class="hotspot-pulse" r="16" fill="#0284c7" opacity="0.6" />
-                                <circle class="hotspot-core" r="11" />
-                                <text>5</text>
-                            </g>
-                            <!-- Hotspot 6: Antarctic Climate Dome -->
-                            <g class="map-hotspot" data-spot="6" transform="translate(595, 592)">
-                                <circle class="hotspot-pulse" r="16" fill="#38bdf8" opacity="0.6" />
-                                <circle class="hotspot-core" r="11" />
-                                <text>6</text>
-                            </g>
-                            <!-- Hotspot 7: Oceania Dolphin Sanctuary -->
-                            <g class="map-hotspot" data-spot="7" transform="translate(920, 475)">
-                                <circle class="hotspot-pulse" r="16" fill="#22c55e" opacity="0.6" />
-                                <circle class="hotspot-core" r="11" />
-                                <text>7</text>
-                            </g>
-                            <!-- Hotspot 8: Flood Barrier Storm Gates -->
-                            <g class="map-hotspot" data-spot="8" transform="translate(600, 40)">
-                                <circle class="hotspot-pulse" r="16" fill="#2ba29e" opacity="0.6" />
-                                <circle class="hotspot-core" r="11" />
-                                <text>8</text>
-                            </g>
-                        </svg>
+<defs>
+<linearGradient id="world-sea" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#0a2a4e" />
+<stop offset="50%" stop-color="#144d85" />
+<stop offset="100%" stop-color="#236ca9" />
+</linearGradient>
+<radialGradient id="world-lagoon" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="#69c3eb" stop-opacity="0.45" />
+<stop offset="85%" stop-color="#124b82" stop-opacity="0.12" />
+<stop offset="100%" stop-color="#0a2a4e" stop-opacity="0" />
+</radialGradient>
+</defs>
+<!-- Deep Water Base -->
+<rect width="1200" height="700" fill="url(#world-sea)" />
+<!-- Lagoon Shallows -->
+<ellipse cx="600" cy="345" rx="540" ry="305" fill="url(#world-lagoon)" />
+<!-- Wave Break Line -->
+<ellipse cx="600" cy="345" rx="565" ry="328" fill="none" stroke="rgba(255,255,255,0.14)" stroke-dasharray="6 8" />
+<!-- Outer Oval Flood Defense Breakwater (4 Storm Gates: N, S, E, W) -->
+<path d="M1137.9,371.6 A540,305 0 0 1 647.1,648.8 M552.9,648.8 A540,305 0 0 1 62.1,371.6 M62.1,318.4 A540,305 0 0 1 552.9,41.2 M647.1,41.2 A540,305 0 0 1 1137.9,318.4" fill="none" stroke="#2ba29e" stroke-width="26" stroke-linecap="round" opacity="0.45" />
+<path class="map-frond-edge" d="M1137.9,371.6 A540,305 0 0 1 647.1,648.8 M552.9,648.8 A540,305 0 0 1 62.1,371.6 M62.1,318.4 A540,305 0 0 1 552.9,41.2 M647.1,41.2 A540,305 0 0 1 1137.9,318.4" stroke-width="15" />
+<path class="map-frond" d="M1137.9,371.6 A540,305 0 0 1 647.1,648.8 M552.9,648.8 A540,305 0 0 1 62.1,371.6 M62.1,318.4 A540,305 0 0 1 552.9,41.2 M647.1,41.2 A540,305 0 0 1 1137.9,318.4" stroke-width="12.5" />
+<g class="twinkle">
+<circle cx="1137.9" cy="318.4" r="3.5" fill="#ef4444" />
+<circle cx="1137.9" cy="371.6" r="3.5" fill="#22c55e" />
+<circle cx="647.1" cy="648.8" r="3.5" fill="#ef4444" />
+<circle cx="552.9" cy="648.8" r="3.5" fill="#22c55e" />
+<circle cx="62.1" cy="371.6" r="3.5" fill="#ef4444" />
+<circle cx="62.1" cy="318.4" r="3.5" fill="#22c55e" />
+<circle cx="552.9" cy="41.2" r="3.5" fill="#ef4444" />
+<circle cx="647.1" cy="41.2" r="3.5" fill="#22c55e" />
+</g>
+<!-- RECOGNIZABLE WORLD CONTINENTS (ZERO OVERLAPS, CLEAR WATERWAYS) -->
+<g id="world-islands-group">
+<!-- Canada Arctic Core -->
+<path class="map-sand" d="M412.3,135 C412.7,139 407.9,144.2 401.5,148 C395.1,151.8 384,155.9 373.9,157.7 C363.7,159.5 350.7,159.5 340.8,159 C330.9,158.5 322.3,156.8 314.7,154.5 C307.2,152.2 297,149.1 295.4,145.2 C293.8,141.4 298.1,135 305.2,131.4 C312.2,127.8 327.1,125.5 337.8,123.8 C348.4,122.1 358.6,121.4 368.9,121.4 C379.2,121.4 392.3,121.7 399.6,124 C406.8,126.2 412,131 412.3,135 Z" />
+<path class="map-greenery" d="M389.8,137 C389,139.5 384.5,142 380.7,144.4 C377,146.9 373.3,149.7 367.2,151.4 C361,153.2 350.7,155 343.9,154.8 C337.1,154.7 330.2,152.3 326.5,150.3 C322.8,148.3 321.7,145.5 321.7,142.9 C321.6,140.4 322.8,137.4 326.3,135 C329.9,132.7 336.6,130.3 343.1,128.8 C349.6,127.4 358.2,126.3 365.2,126.3 C372.3,126.3 381.5,127.2 385.6,129 C389.7,130.8 390.6,134.4 389.8,137 Z" />
+<!-- Alaska Peninsula -->
+<path class="map-sand" d="M288.1,157.5 C289.1,161 288.2,166.1 285.5,169.5 C282.8,173 276.7,176.1 271.8,178.2 C267,180.3 261.8,181.4 256.4,182.1 C251,182.8 243.7,183.9 239.3,182.4 C234.9,180.9 230.5,176.6 230.1,173 C229.7,169.4 233.7,164.4 236.7,160.9 C239.8,157.4 243.7,154.4 248.3,151.9 C252.8,149.4 258.7,146.6 264,146 C269.2,145.5 275.7,146.6 279.7,148.5 C283.7,150.4 287.2,154 288.1,157.5 Z" />
+<path class="map-greenery" d="M275.3,160.9 C275.9,163.1 276.9,165.4 275.9,167.8 C274.8,170.2 272.3,173.7 269.2,175.3 C266.1,176.9 260.9,177.5 257.4,177.5 C253.9,177.5 250.5,176.4 248.1,175 C245.6,173.7 243.5,171.7 242.9,169.6 C242.4,167.4 243.2,164.6 244.6,162.3 C246.1,159.9 248.5,157.3 251.5,155.5 C254.5,153.7 259.3,151.6 262.8,151.5 C266.3,151.4 270.2,153.1 272.3,154.7 C274.4,156.2 274.7,158.7 275.3,160.9 Z" />
+<!-- Greenland Isle -->
+<path class="map-sand-light" d="M489.6,126.6 C487.8,131.7 482.5,136.4 478.4,139.4 C474.4,142.4 470,143.8 465.2,144.8 C460.5,145.8 454.3,147.6 450,145.4 C445.7,143.3 440.7,137.3 439.5,132 C438.3,126.8 440.7,119.3 442.7,114 C444.7,108.8 447.8,104.1 451.5,100.5 C455.2,97 460.1,93.3 464.7,92.6 C469.3,91.8 475.1,93.4 479.2,96 C483.2,98.7 487.4,103.5 489.2,108.6 C490.9,113.7 491.3,121.4 489.6,126.6 Z" />
+<!-- US Pacific Coast -->
+<path class="map-sand" d="M317,245.2 C313.9,250.2 309.8,253.6 305.3,257.1 C300.8,260.5 295.2,265.4 290,265.8 C284.7,266.3 277.2,263.7 273.7,259.8 C270.2,255.8 269.1,247.8 269,242 C268.8,236.1 270.2,229.8 272.7,224.6 C275.1,219.4 279.2,213.8 283.7,210.7 C288.2,207.7 294.4,206.1 299.7,206.2 C305,206.3 311.4,207.8 315.4,211.3 C319.4,214.8 323.4,221.7 323.6,227.3 C323.9,233 320,240.3 317,245.2 Z" />
+<!-- North America Mainland Hub -->
+<path class="map-sand" d="M423.6,221.6 C424.6,226.6 426.7,232.7 423.1,237.6 C419.6,242.4 410.4,248.4 402.2,250.6 C393.9,252.8 382,252.1 373.6,250.8 C365.3,249.5 357.1,246.4 352,242.7 C346.8,239.1 343.1,233.6 342.7,228.7 C342.3,223.8 345.4,218.1 349.7,213.4 C354,208.6 360.4,203 368.4,200.2 C376.4,197.4 389.4,195.4 397.5,196.6 C405.6,197.9 412.8,203.6 417.1,207.7 C421.5,211.9 422.6,216.6 423.6,221.6 Z" />
+<path class="map-greenery" d="M414.4,222.4 C414.7,225.9 413,230.2 409.8,233.2 C406.6,236.1 400.3,238.9 395.1,240.1 C389.9,241.2 383.7,240.6 378.3,240.1 C373,239.5 367.4,238.8 363.1,236.7 C358.9,234.7 353.3,231.1 352.9,227.8 C352.4,224.5 356.5,219.6 360.3,216.9 C364.1,214.1 370.6,212.7 375.9,211.4 C381.2,210 386.7,208.7 392.1,208.9 C397.5,209.1 404.4,210.3 408.1,212.6 C411.8,214.8 414.1,219 414.4,222.4 Z" />
+<!-- Florida and Bahamas -->
+<path class="map-sand" d="M459.1,286.8 C460.7,288.6 461.6,292 460.9,294.6 C460.2,297.2 457.5,300.4 455.1,302.5 C452.7,304.6 449.3,306.5 446.4,307.2 C443.5,308 440,307.9 437.6,307.1 C435.2,306.3 433.4,304.4 432,302.5 C430.7,300.5 429.2,298 429.5,295.4 C429.8,292.8 431.5,288.8 433.9,286.7 C436.2,284.7 440.7,283.7 443.6,283.2 C446.6,282.7 449.2,283.3 451.8,283.9 C454.4,284.5 457.6,285.1 459.1,286.8 Z" />
+<!-- Mexico and Central America -->
+<path class="map-sand" d="M345,326.6 C343.8,329.4 339.7,331.5 335.7,332.3 C331.8,333.1 326,333 321.3,331.6 C316.5,330.2 310.9,327 307.3,324.1 C303.6,321.2 301.2,317.6 299.2,314.2 C297.2,310.7 294.8,306.5 295.4,303.5 C296,300.5 298.9,296.8 302.8,296 C306.7,295.3 313.9,297.4 318.8,299.2 C323.6,300.9 327.8,303.8 331.8,306.5 C335.8,309.3 340.7,312.6 342.9,315.9 C345.1,319.3 346.2,323.9 345,326.6 Z" />
+<!-- Amazon Basin Core -->
+<path class="map-sand" d="M478.7,371.4 C479.8,377 477.9,384.6 472.8,389.9 C467.8,395.1 457.1,400 448.5,402.7 C439.8,405.3 430.2,405.6 421.1,405.8 C411.9,406 400.8,406.5 393.4,403.7 C386,401 377.4,394.9 376.7,389.4 C376.1,383.9 383.5,375.8 389.5,370.7 C395.5,365.6 404.3,361.9 412.7,358.7 C421.1,355.5 430.9,351.9 439.9,351.5 C448.9,351.1 460.2,352.9 466.7,356.2 C473.2,359.5 477.7,365.8 478.7,371.4 Z" />
+<path class="map-greenery" d="M457.1,375.2 C457.3,378.8 457.4,382.2 455.2,385.8 C453,389.4 449.1,394.6 443.7,396.9 C438.4,399.2 429.1,400.2 423.1,399.8 C417.2,399.3 411.7,396.7 407.9,394.3 C404.1,391.9 401,388.6 400.3,385.2 C399.7,381.9 401.3,377.5 404.2,374 C407,370.6 412,367.1 417.5,364.6 C423,362.2 431,359.5 437.1,359.5 C443.2,359.5 450.5,361.9 453.8,364.6 C457.1,367.2 456.8,371.7 457.1,375.2 Z" />
+<!-- Brazil Atlantic Coast -->
+<path class="map-sand" d="M505.9,453.3 C504.4,457.7 498.8,462 494.1,464.2 C489.4,466.5 483.4,466.4 477.7,466.6 C472,466.7 465.4,467.3 459.8,465.1 C454.3,462.8 446.8,457.9 444.5,453.3 C442.2,448.6 444,441.7 446,437.2 C448.1,432.8 452.6,429.5 456.9,426.8 C461.2,424.1 466.5,421.3 472,421.1 C477.5,420.8 484.9,422.4 490,425.1 C495.2,427.9 500.4,432.7 503,437.4 C505.6,442.1 507.4,448.8 505.9,453.3 Z" />
+<path class="map-greenery" d="M492.6,449.7 C492.3,452.7 491.5,457 488.9,459 C486.3,461 481,462 477.1,461.8 C473.2,461.5 468.7,459.6 465.5,457.6 C462.3,455.5 459.2,452.6 457.8,449.7 C456.4,446.8 456.4,443.1 457.2,440.2 C457.9,437.3 459.8,434.4 462.4,432.3 C465,430.2 469,427.6 472.8,427.5 C476.6,427.3 482.2,429.3 485.2,431.6 C488.1,433.8 489.4,437.7 490.6,440.8 C491.8,443.8 492.9,446.7 492.6,449.7 Z" />
+<!-- Andes Spine -->
+<path class="map-sand" d="M385.1,449 C383,455.2 379.5,460 376.4,464.8 C373.3,469.6 369.9,475.4 366.4,477.7 C362.9,480 357.7,481.2 355.3,478.5 C352.9,475.7 352.1,467.4 352.1,461.2 C352.1,454.9 353.7,447.5 355.5,441.1 C357.3,434.8 359.9,427.7 362.9,423 C365.9,418.3 370.1,414.4 373.5,413 C377,411.5 380.9,411.7 383.6,414.1 C386.2,416.6 389,421.8 389.2,427.7 C389.5,433.5 387.2,442.9 385.1,449 Z" />
+<!-- Southern Cone Argentina -->
+<path class="map-sand" d="M440.6,523.6 C439.4,530.1 438.6,537.4 435.5,542.9 C432.4,548.4 426.7,555.2 421.9,556.6 C417.1,558 410.7,554.8 406.8,551.3 C402.8,547.8 399.9,541.5 398.3,535.7 C396.7,529.8 396,522.3 397.1,516 C398.2,509.7 401.4,502.9 405,497.9 C408.5,492.9 413.4,488 418.3,486 C423.2,484.1 430.3,483.3 434.3,486.2 C438.3,489.2 441.3,497.6 442.4,503.9 C443.4,510.1 441.7,517.1 440.6,523.6 Z" />
+<!-- Tierra del Fuego Isle -->
+<path class="map-sand" d="M421.5,577.4 C421.6,579.3 420.8,582.1 419,583.4 C417.2,584.8 413.5,585.4 410.7,585.4 C407.9,585.4 404.6,584.6 402.2,583.5 C399.8,582.4 397.3,580.5 396.2,578.7 C395,576.9 394.8,574.7 395.1,572.7 C395.4,570.8 396.1,568.6 397.7,567.1 C399.4,565.6 402.4,563.8 405.1,563.7 C407.8,563.6 411.7,565 413.9,566.3 C416.2,567.7 417.4,569.8 418.6,571.7 C419.9,573.5 421.4,575.4 421.5,577.4 Z" />
+<!-- Great Britain -->
+<path class="map-sand" d="M545.4,185.9 C546.7,190 546.5,195.8 545.6,199.7 C544.7,203.6 542.5,207.4 540,209.2 C537.6,211.1 533.9,211.8 530.9,211 C528,210.1 524.9,207.1 522.3,204.3 C519.8,201.5 517,198 515.5,193.9 C513.9,189.7 512.3,183.4 513,179.5 C513.8,175.6 517.2,172 519.9,170.6 C522.6,169.2 526.1,170.4 529.2,171.1 C532.2,171.8 535.4,172.4 538.1,174.9 C540.8,177.3 544.2,181.7 545.4,185.9 Z" />
+<!-- Ireland Isle -->
+<path class="map-sand" d="M501.2,200 C500.7,202.8 499.3,206.1 497.6,208 C495.9,209.9 493.1,211.3 491,211.6 C488.9,211.8 486.8,210.4 484.9,209.3 C483.1,208.1 481.1,206.7 479.9,204.5 C478.8,202.2 477.4,198.6 477.8,195.8 C478.2,193.1 480.5,189.7 482.4,188 C484.3,186.3 486.9,186.1 489.1,185.7 C491.2,185.4 493.5,185.1 495.4,186 C497.4,186.9 499.7,188.8 500.6,191.2 C501.6,193.5 501.7,197.2 501.2,200 Z" />
+<!-- Scandinavia Peninsula -->
+<path class="map-sand" d="M604.9,147.2 C602.8,152.8 598.1,159.1 594.2,162.2 C590.3,165.2 585.5,165.4 581.5,165.7 C577.4,166 573.3,166.2 569.9,164 C566.5,161.8 561.9,157.6 561.1,152.4 C560.4,147.2 562.8,138.3 565.4,132.9 C568,127.4 572.7,123.2 576.6,119.8 C580.5,116.4 584.7,113.1 588.8,112.3 C592.8,111.5 597.8,112.2 600.8,114.9 C603.8,117.6 606.1,123.3 606.8,128.7 C607.4,134.1 607,141.7 604.9,147.2 Z" />
+<path class="map-greenery" d="M595.9,144 C594.9,147.6 593.6,152.5 591.3,155.2 C589,157.9 584.9,160.2 582.2,160.3 C579.5,160.5 576.8,158.1 575,155.9 C573.2,153.7 571.9,150.3 571.6,147 C571.3,143.6 572,139.2 573.3,135.7 C574.6,132.3 576.8,128.8 579.3,126.2 C581.7,123.5 585,120.4 587.8,119.8 C590.6,119.2 594.3,120.3 596,122.5 C597.7,124.8 597.7,129.8 597.7,133.4 C597.7,137 597,140.4 595.9,144 Z" />
+<!-- European Summit Hub -->
+<path class="map-sand" d="M599.5,228 C598.3,231.8 592.6,234.8 588.2,237.4 C583.9,240.1 579.5,242.7 573.4,244 C567.3,245.3 557.9,246.6 551.5,245.1 C545.1,243.6 538.1,238.6 535.1,234.8 C532.1,231 532.6,226.1 533.3,222.2 C534.1,218.3 535.9,214.3 539.7,211.5 C543.5,208.6 550,206.1 556.3,205.3 C562.5,204.5 570.7,205.1 577.3,206.7 C583.9,208.3 592,211.4 595.7,214.9 C599.4,218.5 600.7,224.3 599.5,228 Z" />
+<path class="map-greenery" d="M587.8,227 C588.1,229.5 586.2,233 583.3,234.8 C580.5,236.6 575.1,237.7 570.8,238 C566.4,238.3 561.1,237.9 557.2,236.6 C553.3,235.4 549.6,233 547.5,230.7 C545.3,228.5 544.4,225.8 544.3,223.2 C544.1,220.6 544.2,217.2 546.6,215.1 C549,213.1 554.4,210.9 558.7,210.8 C563,210.6 568.5,212.6 572.3,214.1 C576.1,215.6 578.9,217.4 581.5,219.6 C584.1,221.7 587.5,224.5 587.8,227 Z" />
+<!-- Iberia Isle -->
+<path class="map-sand" d="M530.6,265.2 C530.9,268.1 531.1,270.9 530,273.8 C528.8,276.7 526.8,280.7 523.7,282.4 C520.7,284.1 515.3,284.5 511.8,283.9 C508.3,283.3 505,280.9 502.7,278.8 C500.4,276.6 498.4,273.8 497.9,271 C497.4,268.2 498.1,264.7 499.6,262 C501.2,259.4 503.9,256.7 507,254.9 C510.2,253.2 514.7,251.3 518.3,251.6 C521.8,251.8 526.2,254.1 528.3,256.4 C530.3,258.7 530.3,262.3 530.6,265.2 Z" />
+<!-- Italy Peninsula Boot -->
+<path class="map-sand" d="M574.2,281.4 C572.4,284.4 569.8,288.6 567,290.4 C564.3,292.2 560.3,292.7 557.8,292 C555.4,291.4 553.4,289 552.4,286.7 C551.3,284.4 550.8,281.1 551.3,278 C551.9,275 553.7,271.3 555.7,268.5 C557.7,265.7 560.4,262.9 563.1,261 C565.9,259.1 569.9,256.9 572.5,257.2 C575,257.4 577.7,260 578.5,262.5 C579.3,265 578.1,269.1 577.4,272.3 C576.7,275.4 575.9,278.4 574.2,281.4 Z" />
+<!-- Greece and Aegean -->
+<path class="map-sand" d="M621.4,274.4 C620.9,277.3 618.3,280.7 615.7,282.5 C613.2,284.3 609.3,285.2 606.1,285.2 C602.9,285.2 599.1,284.1 596.6,282.4 C594.1,280.7 592.3,277.5 591.3,274.8 C590.2,272.1 589.7,269 590.1,266 C590.5,263 591.4,258.9 593.7,256.9 C596,254.8 600.7,253.6 603.8,253.9 C607,254.3 610.1,256.9 612.6,258.8 C615.1,260.7 617.3,262.6 618.7,265.2 C620.2,267.8 621.9,271.5 621.4,274.4 Z" />
+<!-- Eastern Europe Plains -->
+<path class="map-sand" d="M661.6,214.7 C660.9,218.7 657.9,223.1 654.2,225.7 C650.5,228.3 644.6,230.3 639.7,230.3 C634.7,230.3 629.1,228 624.7,225.9 C620.4,223.8 616.5,221 613.5,217.5 C610.5,214 606.4,209 606.7,205 C606.9,201 610.8,195.8 614.9,193.6 C618.9,191.3 625.7,191.6 630.8,191.7 C635.9,191.7 640.8,192.2 645.4,193.9 C650,195.6 655.9,198.3 658.6,201.8 C661.3,205.2 662.4,210.7 661.6,214.7 Z" />
+<!-- Sahara North Core -->
+<path class="map-sand" d="M619.4,340 C619.5,344.8 614.9,351.1 608.3,354.5 C601.6,358 589.3,359.6 579.6,360.8 C569.9,361.9 560.2,362.1 550.1,361.2 C539.9,360.3 525.7,359 518.7,355.5 C511.8,352 507.3,344.8 508.5,340 C509.7,335.2 519,330.4 525.9,326.9 C532.8,323.4 540.8,320.4 550,318.8 C559.3,317.1 571.6,315.7 581.3,316.8 C591,318 601.8,321.7 608.1,325.5 C614.5,329.4 619.4,335.2 619.4,340 Z" />
+<!-- West Africa Bulge -->
+<path class="map-sand" d="M529.3,388.5 C529.6,391.6 526.6,395.7 524.2,398.7 C521.9,401.7 518.9,404.3 515.1,406.7 C511.4,409.1 506.1,412.5 501.5,413.1 C496.8,413.7 490.3,412.4 487.2,410.4 C484.1,408.4 483.3,404.1 483,400.9 C482.6,397.7 483.3,394.3 485.1,391.2 C486.9,388.1 490.1,384.5 494,382.3 C497.8,380.2 503.5,378.7 508.2,378.3 C513,377.9 518.8,378.3 522.3,380 C525.8,381.7 529,385.4 529.3,388.5 Z" />
+<!-- Congo Rainforest Core -->
+<path class="map-sand" d="M621.3,423.2 C620,428.1 617.1,432.2 612.9,436.3 C608.7,440.4 603.2,446 595.9,447.6 C588.6,449.2 576.5,448.2 569.2,445.6 C562,443.1 556.1,436.9 552.4,432 C548.7,427.2 546.6,421.6 547,416.7 C547.4,411.7 550.2,406.1 554.9,402.4 C559.5,398.7 567.4,395.9 575,394.7 C582.6,393.4 592.8,392.8 600.5,394.8 C608.1,396.8 617.4,402 620.9,406.7 C624.4,411.5 622.6,418.3 621.3,423.2 Z" />
+<path class="map-greenery" d="M612.6,422.4 C612.4,425.7 609.1,429.6 605.6,432 C602.2,434.5 596.7,436.5 591.7,437 C586.7,437.4 580.3,436.4 575.9,434.8 C571.5,433.2 568,430.2 565.1,427.4 C562.2,424.5 558.9,421.1 558.5,417.7 C558,414.2 559,409.2 562.4,406.8 C565.7,404.4 573.3,403.5 578.4,403.4 C583.6,403.4 588.6,405.1 593.3,406.5 C598,407.9 603.3,409.4 606.6,412 C609.8,414.7 612.7,419.1 612.6,422.4 Z" />
+<!-- Horn of Africa -->
+<path class="map-sand" d="M665.5,399 C663.7,402.8 661.5,408 658,410.4 C654.5,412.7 648.4,413.9 644.5,412.9 C640.5,412 636.7,408.2 634.3,404.9 C631.9,401.6 630.3,397.1 630.1,393 C629.9,388.9 631.3,384 633.4,380.4 C635.5,376.8 639,373.6 642.7,371.4 C646.4,369.2 651.4,366.8 655.5,367.2 C659.6,367.6 665,370.3 667.2,373.7 C669.4,377 669.1,382.9 668.8,387.1 C668.5,391.4 667.3,395.1 665.5,399 Z" />
+<!-- Southern Africa Cape -->
+<path class="map-sand" d="M630.1,503.1 C630.5,508.1 627.3,515.1 622.9,518.9 C618.4,522.6 610.1,525 603.4,525.8 C596.6,526.5 588.4,525.8 582.5,523.6 C576.5,521.3 571,516.6 567.7,512.2 C564.5,507.8 563.2,502.4 563.1,497.2 C563,492 563.2,485.3 567,481.1 C570.8,476.8 579.2,472.4 585.8,471.8 C592.5,471.3 600.9,475.1 606.7,477.9 C612.6,480.7 616.8,484.3 620.7,488.5 C624.6,492.7 629.8,498 630.1,503.1 Z" />
+<!-- Madagascar Isle -->
+<path class="map-sand" d="M683.9,470 C685.6,474.8 686.4,481.2 686.2,485.7 C686.1,490.3 684.7,495 682.7,497.1 C680.7,499.2 677.1,499.2 674.1,498.3 C671.2,497.4 668.1,494.8 665,491.8 C662,488.7 658,484.9 655.9,480.1 C653.8,475.4 652,467.6 652.3,463.3 C652.7,459.1 655.9,456.2 658.2,454.4 C660.4,452.7 663.2,452.5 666.1,452.8 C669,453.1 672.6,453.6 675.5,456.4 C678.5,459.3 682.1,465.1 683.9,470 Z" />
+<path class="map-greenery" d="M678.5,471.9 C679.4,475 679.1,478.1 679,481 C678.9,483.8 679,486.9 678,488.9 C677,490.9 675.1,493.2 673.2,493 C671.3,492.7 668.2,489.7 666.4,487.2 C664.5,484.7 663.1,481 662,477.9 C661,474.8 660,471.2 660,468.4 C660,465.6 660.8,462.7 662,461 C663.1,459.4 665.1,458.4 667.1,458.6 C669.1,458.8 671.9,459.9 673.8,462.1 C675.7,464.4 677.7,468.8 678.5,471.9 Z" />
+<!-- Siberia West Core -->
+<path class="map-sand" d="M756.7,145 C756.4,149.4 752,154.8 745,157.4 C737.9,160.1 724.5,161 714.2,161 C703.9,161 693.5,159.4 683.1,157.5 C672.7,155.5 659.2,153.3 651.8,149.5 C644.4,145.7 637.6,138.9 638.7,134.6 C639.8,130.4 650.5,126.4 658.4,123.9 C666.4,121.4 676.2,120.3 686.3,119.7 C696.4,119.2 708.7,118.8 718.8,120.6 C728.9,122.4 740.6,126.6 746.9,130.7 C753.2,134.8 757,140.5 756.7,145 Z" />
+<!-- Siberia East Core -->
+<path class="map-sand" d="M867.4,125.8 C867.5,130.1 860.7,136.2 854.8,140.4 C848.8,144.6 840.4,147.7 831.7,150.9 C823.1,154.1 812.7,158.4 802.9,159.4 C793.1,160.4 779,159.7 773,157.1 C767,154.4 766.3,148.1 766.8,143.5 C767.3,138.9 771.3,134.1 776.2,129.7 C781.1,125.4 788,120.3 796.4,117.3 C804.8,114.3 817.1,112 826.7,111.5 C836.3,111 847.4,112 854.2,114.4 C861,116.8 867.3,121.4 867.4,125.8 Z" />
+<!-- Kamchatka Peninsula -->
+<path class="map-sand" d="M896.6,156.7 C894.3,159.8 891.4,161.8 888.4,163.9 C885.5,166 882.1,168.9 879.1,169.2 C876,169.6 871.9,168.4 870.3,165.9 C868.6,163.5 868.8,158.2 869.4,154.5 C869.9,150.7 871.6,146.7 873.6,143.4 C875.6,140.1 878.3,136.5 881.2,134.5 C884,132.6 887.7,131.6 890.7,131.7 C893.6,131.8 896.9,132.8 898.8,135.1 C900.7,137.3 902.4,141.5 902,145.1 C901.7,148.7 898.8,153.5 896.6,156.7 Z" />
+<!-- Central Asia Steppe -->
+<path class="map-sand" d="M739.7,215 C739.9,218.5 741,222.6 738,225.8 C734.9,228.9 728,232.8 721.6,233.8 C715.1,234.9 705.7,233.7 699.4,232.3 C693.1,230.8 687.2,228.1 683.5,225.2 C679.8,222.3 677,218.4 677.1,215 C677.1,211.6 680,207.8 683.6,204.9 C687.3,201.9 692.7,198.6 699.1,197.2 C705.4,195.7 715.4,194.8 721.6,196.1 C727.8,197.4 733.5,201.6 736.5,204.8 C739.5,208 739.5,211.5 739.7,215 Z" />
+<!-- Arabian Peninsula -->
+<path class="map-sand" d="M696.8,314.8 C699,318 700.6,323.6 699.5,327.7 C698.3,331.7 693.9,336.5 690.1,339.4 C686.2,342.3 680.8,344.5 676.3,345.1 C671.8,345.8 666.4,345 662.8,343.2 C659.2,341.4 656.5,337.9 654.7,334.5 C652.8,331 651,326.7 651.6,322.5 C652.3,318.3 654.8,312.1 658.5,309.2 C662.2,306.3 669.1,305.2 673.7,305.1 C678.3,305 682.2,306.9 686,308.5 C689.9,310.1 694.5,311.7 696.8,314.8 Z" />
+<!-- Indian Subcontinent -->
+<path class="map-sand" d="M783.8,317.7 C782.3,323.8 777.2,330.6 772.5,334.7 C767.8,338.8 761,341.8 755.5,342.1 C750,342.4 743.4,339.8 739.3,336.3 C735.1,332.8 732.6,326.8 730.6,321.2 C728.6,315.6 726.4,309 727.3,302.6 C728.2,296.2 731.3,286.9 735.8,282.9 C740.4,278.9 748.9,278.1 754.5,278.6 C760.1,279.1 764.8,282.8 769.3,286 C773.8,289.2 779,292.6 781.4,297.8 C783.8,303.1 785.3,311.6 783.8,317.7 Z" />
+<path class="map-greenery" d="M773.2,314.9 C771.7,318.6 767.8,321.5 764.9,323.9 C761.9,326.3 758.9,328.3 755.3,329.2 C751.7,330.1 746.5,331.3 743.3,329.5 C740.2,327.7 737.2,322.6 736.4,318.6 C735.6,314.6 737.1,309.5 738.5,305.6 C739.8,301.7 741.8,297.8 744.5,295.2 C747.2,292.5 751.2,290.1 754.7,289.6 C758.2,289.1 762.5,290.2 765.6,292.2 C768.8,294.2 772.4,297.6 773.6,301.4 C774.9,305.2 774.7,311.1 773.2,314.9 Z" />
+<!-- Sri Lanka Isle -->
+<path class="map-sand" d="M779.1,366.6 C778.7,368.8 777.7,371.5 776.3,372.9 C774.9,374.4 772.6,375.4 770.9,375.5 C769.2,375.6 767.5,374.7 765.9,373.8 C764.4,372.9 762.6,371.9 761.6,370.2 C760.6,368.4 759.6,365.4 760,363.2 C760.4,361.1 762.4,358.6 763.9,357.3 C765.4,356 767.4,355.7 769.2,355.3 C770.9,355 772.9,354.7 774.5,355.4 C776,356.1 777.8,357.8 778.6,359.7 C779.4,361.6 779.5,364.4 779.1,366.6 Z" />
+<!-- Asian Innovation Hub Core -->
+<path class="map-sand" d="M868.8,239.3 C868,244.7 861.5,251 855.1,254.3 C848.7,257.7 839,258.5 830.4,259.5 C821.9,260.5 812.5,261.8 803.6,260.2 C794.6,258.6 781.7,254.7 776.6,249.8 C771.5,244.9 771.4,236.4 773.2,230.9 C775.1,225.5 781.6,220.9 787.5,217.1 C793.4,213.3 800.3,209.4 808.5,208.1 C816.7,206.8 828.2,207.1 836.7,209.4 C845.2,211.6 854.2,216.5 859.6,221.5 C864.9,226.5 869.5,233.8 868.8,239.3 Z" />
+<path class="map-greenery" d="M847.2,237.4 C847.6,240.9 848,245.9 844.8,248.7 C841.7,251.5 834.1,253.9 828.2,254.3 C822.3,254.7 814.9,253 809.4,251.2 C804,249.4 798.6,246.4 795.6,243.3 C792.6,240.2 791.3,236 791.6,232.5 C791.9,229.1 794.2,225.5 797.5,222.6 C800.8,219.7 805.9,216.2 811.6,215.3 C817.3,214.4 826.3,215.4 831.5,217.4 C836.6,219.4 839.9,224 842.5,227.3 C845.1,230.6 846.8,233.8 847.2,237.4 Z" />
+<!-- Korea Peninsula -->
+<path class="map-sand" d="M890.3,233.8 C889,236.5 886.5,238.5 884.5,240.4 C882.5,242.3 880.3,244.5 878,245.2 C875.7,245.9 872.3,246.2 870.6,244.7 C868.9,243.2 868.1,239 868.1,236 C868,232.9 869.2,229.4 870.3,226.5 C871.5,223.6 873.1,220.5 875,218.5 C877,216.5 879.7,215 882,214.7 C884.2,214.4 886.8,215.1 888.6,216.6 C890.3,218.1 892.3,220.9 892.6,223.7 C892.9,226.6 891.7,231 890.3,233.8 Z" />
+<!-- Japan Hokkaido -->
+<path class="map-sand" d="M925.7,196.1 C926.4,198.5 927.4,200.9 927.1,203.5 C926.8,206 925.8,209.6 923.8,211.3 C921.9,213 918.1,213.7 915.5,213.5 C912.8,213.3 910.1,211.9 908,210.3 C906,208.8 904,206.6 903.2,204.3 C902.3,202 902.3,199 903,196.5 C903.6,194.1 905,191.4 906.9,189.6 C908.8,187.8 911.9,185.8 914.5,185.7 C917.1,185.6 920.5,187.4 922.4,189.1 C924.2,190.8 924.9,193.7 925.7,196.1 Z" />
+<!-- Japan Honshu Arc -->
+<path class="map-sand" d="M925.2,247.1 C922.8,251.1 919,256.7 915.6,259.1 C912.2,261.6 907.6,262.4 904.8,261.9 C902,261.4 899.9,258.9 898.9,256.1 C897.9,253.4 897.7,249.2 898.7,245.4 C899.7,241.5 902.4,236.8 905,233 C907.6,229.2 911,225.2 914.5,222.4 C918,219.7 923,216.5 925.9,216.6 C928.8,216.7 931.2,220.1 931.8,223.2 C932.5,226.2 930.7,231.2 929.6,235.2 C928.5,239.2 927.5,243.1 925.2,247.1 Z" />
+<!-- Indochina Peninsula -->
+<path class="map-sand" d="M862.6,326.1 C861.9,329.9 858.2,334.2 854.7,336.6 C851.2,339 846,340.4 841.7,340.3 C837.3,340.3 832.1,338.7 828.7,336.4 C825.3,334 823,329.9 821.4,326.2 C819.8,322.5 818.7,318.4 819.1,314.4 C819.6,310.4 821,304.7 824.2,302.1 C827.4,299.6 833.9,298.5 838.3,299 C842.6,299.5 846.7,302.9 850.2,305.3 C853.7,307.7 857.1,310.1 859.2,313.6 C861.3,317.1 863.4,322.2 862.6,326.1 Z" />
+<!-- Indonesia Archipelago -->
+<path class="map-sand" d="M893,368 C894,370.9 892.9,375.2 889.8,378.8 C886.8,382.5 880.5,387.1 874.8,389.8 C869,392.6 861.6,394.2 855.5,395.4 C849.3,396.6 843.2,397.5 837.9,397.1 C832.7,396.7 825.6,395.7 824.2,393 C822.8,390.4 825.8,384.8 829.5,381.2 C833.3,377.5 840.9,374 846.7,371.2 C852.6,368.3 858.5,365.5 864.7,363.9 C870.9,362.3 879.1,360.9 883.8,361.6 C888.5,362.2 892,365.1 893,368 Z" />
+<path class="map-greenery" d="M879.3,373 C879.4,374.9 878.2,377.1 876.7,379.4 C875.1,381.6 873.5,384.6 870.1,386.7 C866.8,388.9 860.5,391.4 856.4,392.2 C852.3,392.9 848.1,392.1 845.5,391.3 C842.8,390.4 841,388.9 840.3,387.2 C839.7,385.4 840,383 841.7,380.7 C843.4,378.5 846.9,375.8 850.6,373.7 C854.2,371.7 859.2,369.3 863.4,368.3 C867.7,367.3 873.4,366.8 876,367.6 C878.7,368.4 879.2,371 879.3,373 Z" />
+<!-- Australia Mainland Hub -->
+<path class="map-sand" d="M970.6,475 C970.6,481.4 965.7,489.6 959.5,494.1 C953.3,498.7 942.2,500.6 933.3,502.3 C924.4,503.9 915.3,504.9 905.9,503.9 C896.5,502.8 882.9,500.8 876.7,496 C870.5,491.2 867.6,481.4 868.9,475 C870.1,468.6 878.1,462.5 884.3,457.7 C890.5,452.9 897.5,448.5 906,446.2 C914.4,444 926.1,442.5 935.1,444.1 C944,445.6 953.8,450.6 959.7,455.7 C965.7,460.9 970.6,468.6 970.6,475 Z" />
+<path class="map-greenery" d="M947.5,475 C948,479 949.1,484.1 946.2,487.7 C943.4,491.3 936.5,495.4 930.5,496.6 C924.6,497.8 916.2,496.4 910.4,494.7 C904.6,493.1 899,490.1 895.6,486.8 C892.1,483.5 889.9,478.9 889.9,475 C889.9,471.1 892.5,466.8 895.8,463.3 C899.1,459.8 904,455.7 909.8,454 C915.6,452.4 924.9,451.7 930.6,453.3 C936.2,454.9 940.9,459.9 943.7,463.5 C946.5,467.1 947.1,471 947.5,475 Z" />
+<!-- Tasmania Isle -->
+<path class="map-sand" d="M956.4,535 C956.1,536.7 954.3,538.4 952.9,539.7 C951.6,541 950.1,542.2 948.2,543 C946.2,543.8 943.4,544.8 941.2,544.5 C939.1,544.1 936.6,542.2 935.5,540.7 C934.4,539.1 934.5,536.8 934.7,535 C934.8,533.2 935.4,531.4 936.5,530 C937.7,528.6 939.6,527.1 941.6,526.5 C943.6,525.9 946.3,525.9 948.4,526.4 C950.6,526.8 953.2,527.9 954.5,529.3 C955.9,530.8 956.6,533.3 956.4,535 Z" />
+<!-- New Zealand North -->
+<path class="map-sand" d="M1023,499.4 C1024.7,502 1026,504.5 1026.7,507.4 C1027.5,510.2 1028.4,514.3 1027.5,516.5 C1026.7,518.6 1023.8,520.3 1021.4,520.5 C1019,520.6 1015.7,518.9 1013.2,517.3 C1010.7,515.8 1008.1,513.5 1006.3,511.1 C1004.6,508.6 1003.1,505.2 1002.7,502.5 C1002.2,499.7 1002.6,496.8 1003.6,494.6 C1004.6,492.4 1006.3,489.9 1008.6,489.4 C1010.8,488.9 1014.6,489.8 1017,491.5 C1019.4,493.2 1021.4,496.7 1023,499.4 Z" />
+<!-- New Zealand South -->
+<path class="map-sand" d="M1013.7,537 C1015.7,539.9 1018.3,543.9 1018.9,547.1 C1019.5,550.2 1018.7,554.2 1017.3,556 C1015.9,557.9 1013,558.4 1010.5,558.3 C1008.1,558.2 1005.1,557.1 1002.6,555.3 C1000.2,553.4 997.6,550.2 995.9,547.2 C994.2,544.3 992.9,540.7 992.4,537.4 C991.8,534.2 991.3,529.9 992.4,527.7 C993.5,525.5 996.5,524 999,524.3 C1001.4,524.7 1004.7,527.6 1007.2,529.8 C1009.6,531.9 1011.8,534.1 1013.7,537 Z" />
+<!-- Antarctica Ice 1 -->
+<path class="map-sand-light" d="M493.1,600 C493.6,602.1 491.6,605.1 488.9,606.8 C486.1,608.6 481.1,609.9 476.8,610.5 C472.6,611.1 467.2,611.1 463.2,610.4 C459.3,609.6 455.7,607.8 453.3,606.1 C450.9,604.3 449.5,602.2 449.1,600 C448.6,597.8 448.3,594.8 450.5,592.9 C452.8,591 458.3,589.1 462.6,588.6 C466.9,588.2 472.3,589.6 476.2,590.5 C480.1,591.4 483.4,592.5 486.2,594.1 C489,595.7 492.7,597.9 493.1,600 Z" />
+<!-- Antarctica Ice 2 -->
+<path class="map-sand-light" d="M555.1,595 C555.1,597.4 552.8,600.3 549.9,602.2 C547,604.2 542,606 537.5,606.6 C533.1,607.1 527.4,606.4 523.1,605.6 C518.8,604.8 515.1,603.3 511.9,601.6 C508.7,599.8 504.4,597.4 503.8,595 C503.3,592.6 505.5,589 508.7,587.3 C511.9,585.5 518.5,584.9 523.1,584.4 C527.8,584 532.3,584 536.8,584.6 C541.2,585.1 547,586 550,587.7 C553.1,589.5 555.1,592.6 555.1,595 Z" />
+<!-- Antarctic Dome Hub -->
+<path class="map-sand-light" d="M622.1,592 C622.1,594.6 620.1,598 616.8,599.9 C613.5,601.8 607.3,602.9 602.4,603.4 C597.6,604 592.7,603.8 587.7,603.3 C582.6,602.8 575.8,602.2 572.2,600.3 C568.7,598.4 565.8,594.6 566.3,592 C566.8,589.4 571.6,586.7 575.2,584.8 C578.7,582.9 583,581.5 587.6,580.6 C592.3,579.8 598.3,578.9 603.1,579.5 C608,580.1 613.5,582.1 616.6,584.1 C619.8,586.2 622,589.4 622.1,592 Z" />
+<!-- Antarctica Ice 4 -->
+<path class="map-sand-light" d="M685.4,595 C685,597.3 681.1,599.8 677.9,601.5 C674.8,603.2 671,604.3 666.7,605.3 C662.4,606.2 656.7,607.6 652.1,607.2 C647.4,606.8 641.1,604.8 638.5,602.8 C636,600.8 636.4,597.4 636.9,595 C637.5,592.6 639.3,590.3 641.9,588.4 C644.5,586.5 648.4,584.5 652.6,583.7 C656.9,582.9 662.8,582.9 667.5,583.5 C672.1,584.2 677.4,585.7 680.4,587.6 C683.4,589.5 685.8,592.7 685.4,595 Z" />
+<!-- Antarctica Ice 5 -->
+<path class="map-sand-light" d="M740.4,600 C739.9,602.1 738,603.9 735.8,605.7 C733.6,607.6 731.1,610.1 727.2,611 C723.3,612 716.6,612.3 712.5,611.5 C708.4,610.7 704.8,608.3 702.6,606.3 C700.3,604.4 699.1,602.1 699.2,600 C699.2,597.9 700.3,595.4 702.6,593.7 C705,592 709.2,590.5 713.3,589.7 C717.4,588.9 722.9,588.4 727.2,588.9 C731.5,589.5 737,591.2 739.2,593 C741.4,594.9 741,597.9 740.4,600 Z" />
+</g>
+<!-- Continental Hub Pavilions and Features -->
+<rect x="369" y="216" width="32" height="18" rx="3" class="map-urban" />
+<rect x="551" y="217" width="28" height="16" rx="3" class="map-urban" />
+<rect x="802" y="226" width="36" height="18" rx="3" class="map-urban" />
+<ellipse cx="595" cy="592" rx="24" ry="9" fill="#38bdf8" stroke="#ffffff" stroke-width="1.6" opacity="0.85" />
+<!-- Inter-Island Arched Footbridges -->
+<g stroke="#ffffff" stroke-width="2.2" stroke-linecap="round">
+<line x1="355" y1="140" x2="385" y2="225" />
+<line x1="430" y1="380" x2="475" y2="445" />
+<line x1="530" y1="190" x2="565" y2="225" />
+<line x1="565" y1="340" x2="585" y2="420" />
+<line x1="700" y1="140" x2="820" y2="235" />
+<line x1="840" y1="320" x2="860" y2="380" />
+</g>
+<!-- Continental Teleferic (Sky-Way Aerial Cable Car) -->
+<path class="map-cableway" d="M385,225 L565,225 L820,235 L920,475" />
+<circle cx="385" cy="225" r="5" fill="#f43f5e" stroke="#ffffff" stroke-width="1.8" />
+<circle cx="565" cy="225" r="5" fill="#f43f5e" stroke="#ffffff" stroke-width="1.8" />
+<circle cx="820" cy="235" r="5" fill="#f43f5e" stroke="#ffffff" stroke-width="1.8" />
+<circle cx="920" cy="475" r="5" fill="#f43f5e" stroke="#ffffff" stroke-width="1.8" />
+<!-- Electric Water Taxi Marine Corridors from the Storm Gates -->
+<g class="map-ferry">
+<path d="M600,650 L595,605 L595,530" />
+<path d="M565,340 Q515,310 445,295" />
+<path d="M60,345 C140,345 220,300 295,235" />
+<path d="M1140,345 C1060,380 980,440 920,475" />
+<path d="M600,40 L600,120" />
+</g>
+<!-- Submerged Reef Observation Suites -->
+<g transform="translate(678, 400)">
+<circle cx="0" cy="0" r="7" fill="#0284c7" stroke="#38bdf8" stroke-width="2" />
+<circle cx="0" cy="0" r="2.6" fill="#ffffff" class="twinkle" />
+</g>
+<g transform="translate(704, 422)">
+<circle cx="0" cy="0" r="7" fill="#0284c7" stroke="#38bdf8" stroke-width="2" />
+<circle cx="0" cy="0" r="2.6" fill="#ffffff" class="twinkle" />
+</g>
+<!-- Geographic Map Labels -->
+<g class="map-label-group">
+<text class="map-label-text" x="600" y="690">Külső Védelmi Zátony és Vihargát</text>
+<text class="map-label-text" x="130" y="328">Csendes-óceáni Kapu</text>
+<text class="map-label-text" x="1060" y="328">Észak-Atlanti Kapu</text>
+</g>
+<!-- 8 INTERACTIVE HOTSPOT PINS -->
+<!-- Hotspot 1: NA Casino and Theme Park -->
+<g class="map-hotspot" data-spot="1" transform="translate(385, 225)">
+<circle class="hotspot-pulse" r="16" fill="#f43f5e" opacity="0.6" />
+<circle class="hotspot-core" r="11" />
+<text>1</text>
+</g>
+<!-- Hotspot 2: European Summit and Diplomatic Pavilions -->
+<g class="map-hotspot" data-spot="2" transform="translate(565, 225)">
+<circle class="hotspot-pulse" r="16" fill="#c29a57" opacity="0.6" />
+<circle class="hotspot-core" r="11" />
+<text>2</text>
+</g>
+<!-- Hotspot 3: Asian Innovation Hub -->
+<g class="map-hotspot" data-spot="3" transform="translate(820, 235)">
+<circle class="hotspot-pulse" r="16" fill="#38bdf8" opacity="0.6" />
+<circle class="hotspot-core" r="11" />
+<text>3</text>
+</g>
+<!-- Hotspot 4: Continental Teleferic -->
+<g class="map-hotspot" data-spot="4" transform="translate(692.5, 230)">
+<circle class="hotspot-pulse" r="16" fill="#f43f5e" opacity="0.6" />
+<circle class="hotspot-core" r="11" />
+<text>4</text>
+</g>
+<!-- Hotspot 5: Submerged Reef Suites -->
+<g class="map-hotspot" data-spot="5" transform="translate(690, 410)">
+<circle class="hotspot-pulse" r="16" fill="#0284c7" opacity="0.6" />
+<circle class="hotspot-core" r="11" />
+<text>5</text>
+</g>
+<!-- Hotspot 6: Antarctic Climate Dome -->
+<g class="map-hotspot" data-spot="6" transform="translate(595, 592)">
+<circle class="hotspot-pulse" r="16" fill="#38bdf8" opacity="0.6" />
+<circle class="hotspot-core" r="11" />
+<text>6</text>
+</g>
+<!-- Hotspot 7: Oceania Dolphin Sanctuary -->
+<g class="map-hotspot" data-spot="7" transform="translate(920, 475)">
+<circle class="hotspot-pulse" r="16" fill="#22c55e" opacity="0.6" />
+<circle class="hotspot-core" r="11" />
+<text>7</text>
+</g>
+<!-- Hotspot 8: Flood Barrier Storm Gates -->
+<g class="map-hotspot" data-spot="8" transform="translate(600, 40)">
+<circle class="hotspot-pulse" r="16" fill="#2ba29e" opacity="0.6" />
+<circle class="hotspot-core" r="11" />
+<text>8</text>
+</g>
+</svg>
                     </div>
                 </div>
                 <div class="island-hotspots-grid">
@@ -2011,235 +2011,235 @@
                     </div>
                     <div class="island-map-canvas">
                         <svg class="ill" viewBox="0 0 1200 700" role="img" aria-label="A Kaméleon-szigetek részletes infrastruktúra-térképe: több különálló szigetből álló óriás kaméleon alakú szigetcsoport">
-                            <defs>
-                                <linearGradient id="cham-sea" x1="0" y1="0" x2="0" y2="1">
-                                    <stop offset="0%" stop-color="#093153" />
-                                    <stop offset="45%" stop-color="#114e7a" />
-                                    <stop offset="100%" stop-color="#1d739d" />
-                                </linearGradient>
-                                <radialGradient id="cham-glow" cx="50%" cy="50%" r="50%">
-                                    <stop offset="0%" stop-color="#4ade80" stop-opacity="0.32" />
-                                    <stop offset="60%" stop-color="#38bdf8" stop-opacity="0.2" />
-                                    <stop offset="100%" stop-color="#093153" stop-opacity="0" />
-                                </radialGradient>
-                                <filter id="glass-glow" x="-20%" y="-20%" width="140%" height="140%">
-                                    <feGaussianBlur stdDeviation="4" result="blur" />
-                                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                                </filter>
-                            </defs>
-                            <!-- Coastal Bay Water Background -->
-                            <rect width="1200" height="700" fill="url(#cham-sea)" />
-                            <!-- Biological Eco-Glow in Lagoon -->
-                            <ellipse cx="640" cy="360" rx="520" ry="290" fill="url(#cham-glow)" />
-                            <!-- Outer Protective Bio-Dyke Reef Buffer -->
-                            <ellipse cx="650" cy="365" rx="535" ry="275" class="map-reef" opacity="0.45" stroke-dasharray="10 8" stroke-width="2.5" fill="none" />
-                            <!-- Mainland Nova Aurelia Coastline (Bottom) -->
-                            <path class="map-sand" d="M0,656 Q300,642 600,646 Q900,642 1200,656 L1200,700 L0,700 Z" />
-                            <rect x="0" y="670" width="1200" height="30" class="map-urban" />
-                            <line x1="0" y1="670" x2="1200" y2="670" stroke="#ffffff" stroke-width="2.5" />
-                            <!-- 35 DISTINCT ISLANDS FORMING AN ICONIC CHAMELEON (ZERO OVERLAPS) -->
-                            <g id="chameleon-islands-group">
-                                <!-- Tail Base Isle -->
-                                <path class="map-sand" d="M453,385.7 C451.4,388.2 446.6,389.4 442.9,390 C439.1,390.6 435,390.2 430.6,389.4 C426.2,388.7 420.4,387.9 416.4,385.5 C412.3,383 407.6,378.1 406.4,374.8 C405.2,371.4 407.3,367.7 409,365.2 C410.8,362.8 413.7,361 417.1,359.9 C420.5,358.9 425,358.2 429.3,359.1 C433.6,359.9 439,362.4 442.8,365.1 C446.7,367.8 450.7,371.8 452.4,375.2 C454.1,378.7 454.6,383.3 453,385.7 Z" />
-                                <!-- Tail Arc 1 -->
-                                <path class="map-sand" d="M399.5,434.5 C397.2,436 394.2,436.2 391,436.3 C387.8,436.4 383.8,436.9 380.1,435 C376.5,433.1 371.5,428.7 369.3,425.1 C367.1,421.5 366.8,416.7 366.9,413.4 C367.1,410.1 368.4,407.2 370.3,405.3 C372.2,403.4 375.2,401.9 378.4,402 C381.6,402.2 385.9,403.8 389.5,406 C393.1,408.2 397.5,411.6 400,415.1 C402.6,418.7 405,424.1 404.9,427.3 C404.8,430.5 401.8,433 399.5,434.5 Z" />
-                                <!-- Tail Arc 2 -->
-                                <path class="map-sand" d="M348.7,460 C348.3,462.7 348.2,466.2 345.6,468 C343.1,469.8 337.7,471.3 333.4,471 C329.1,470.7 323.7,468.2 320,466.1 C316.3,464 313.1,461 311.3,458.2 C309.6,455.5 308.8,452 309.5,449.5 C310.2,447 312.7,444.6 315.6,443 C318.4,441.3 322.5,439.6 326.7,439.5 C330.9,439.5 337.4,440.8 341,442.8 C344.6,444.9 346.9,449 348.2,451.9 C349.5,454.7 349.2,457.3 348.7,460 Z" />
-                                <!-- Tail South Curl -->
-                                <path class="map-sand" d="M291.1,452.3 C292.6,454.7 292.7,458.8 291.1,461.8 C289.4,464.8 284.9,468.2 281.1,470.3 C277.3,472.5 272.3,474.2 268.2,474.7 C264.1,475.2 259.6,474.5 256.7,473.2 C253.7,472 251.9,469.5 250.7,467 C249.5,464.5 248.2,461.3 249.4,458.3 C250.6,455.2 254.1,450.7 257.8,448.7 C261.5,446.6 267.7,446 271.8,445.8 C275.8,445.7 279,446.7 282.3,447.8 C285.5,448.9 289.6,450 291.1,452.3 Z" />
-                                <!-- Tail Outer West 1 -->
-                                <path class="map-sand" d="M232.2,412.6 C234.5,414.2 236,417.9 236.4,421.3 C236.8,424.6 236.3,429.1 234.7,432.6 C233.1,436.1 229.9,439.8 227,442.1 C224.2,444.5 220.9,445.6 217.7,446.4 C214.5,447.3 210.6,448.3 208,447.1 C205.4,446 202.3,442.9 202,439.6 C201.7,436.3 204.1,431 206,427.5 C207.9,424 210.7,421.3 213.5,418.7 C216.2,416.1 219.4,413 222.5,412 C225.7,410.9 229.8,411.1 232.2,412.6 Z" />
-                                <!-- Tail Outer West 2 -->
-                                <path class="map-sand" d="M206.6,356.5 C209.5,356.7 212.9,358.3 214.9,360.6 C216.8,363 217.9,367.4 218.2,370.8 C218.5,374.2 217.4,377.7 216.4,381 C215.4,384.3 214.4,388.4 212.2,390.7 C210,393.1 206,395.6 203.2,395.2 C200.5,394.8 197.4,391.3 195.7,388.6 C193.9,385.9 193.2,382.3 192.6,378.9 C192.1,375.6 191.5,371.7 192.3,368.4 C193.2,365.1 195.4,361.2 197.8,359.2 C200.2,357.2 203.8,356.3 206.6,356.5 Z" />
-                                <!-- Tail Inner West -->
-                                <path class="map-sand" d="M214,309.3 C216.2,308 220.1,308.3 223,309.2 C225.8,310.1 228.5,312.5 231.1,314.7 C233.7,316.9 236.9,319.3 238.6,322.4 C240.3,325.5 242,330.6 241.4,333.5 C240.9,336.4 237.7,338.7 235.3,339.7 C232.9,340.8 229.8,340.5 226.9,339.9 C224.1,339.4 220.8,338.5 218.2,336.4 C215.6,334.3 212.9,330.8 211.5,327.6 C210.1,324.4 209.5,320.2 209.9,317.2 C210.3,314.2 211.8,310.6 214,309.3 Z" />
-                                <!-- Tail Inner Top -->
-                                <path class="map-sand" d="M259.9,301 C261,298.7 263.6,297.2 265.8,295.6 C268.1,294.1 270.4,292.1 273.4,291.7 C276.4,291.3 281.2,291.5 283.9,293.1 C286.6,294.6 288.7,298.3 289.7,300.9 C290.6,303.5 290.2,306.5 289.5,308.9 C288.7,311.3 287.4,313.9 285.2,315.4 C283.1,317 279.6,317.9 276.6,318 C273.5,318.1 269.7,317.4 266.8,316 C263.9,314.6 260.4,311.9 259.3,309.4 C258.1,306.9 258.8,303.2 259.9,301 Z" />
-                                <!-- Tail Spiral Marina Isle -->
-                                <path class="map-sand" d="M306.1,345.7 C304.1,344 301.8,342.5 300.9,340 C300.1,337.4 299.8,333.2 301,330.4 C302.3,327.6 305.8,324.6 308.6,323 C311.3,321.4 314.6,320.7 317.4,320.8 C320.1,320.8 323.1,321.5 325,323.1 C326.8,324.7 328.1,327.5 328.6,330.2 C329.1,332.9 329.1,336.3 328,339.3 C326.9,342.2 324.5,346.2 322,348 C319.4,349.7 315.2,350.1 312.6,349.7 C309.9,349.3 308,347.3 306.1,345.7 Z" />
-                                <!-- Dorsal Crest Isle 1 -->
-                                <path class="map-sand" d="M510.3,273.3 C512.5,275.6 514.4,279.7 513.4,283.3 C512.4,286.9 508.2,291.7 504.5,294.8 C500.8,297.8 495.5,300.4 491.2,301.6 C486.8,302.9 481.7,303.3 478.2,302.4 C474.8,301.5 472.2,298.9 470.5,296.2 C468.9,293.6 467.5,290.2 468.2,286.6 C468.8,282.9 470.9,277.5 474.3,274.4 C477.8,271.3 484.4,268.9 488.8,268 C493.2,267.2 497,268.5 500.6,269.4 C504.2,270.3 508.2,270.9 510.3,273.3 Z" />
-                                <!-- Dorsal Crest Isle 2 -->
-                                <path class="map-sand" d="M578.8,242.3 C579.9,245.4 578,250.4 575.3,253.9 C572.6,257.5 567.6,261.3 562.7,263.5 C557.8,265.8 551,267.4 545.9,267.5 C540.9,267.6 536.2,265.9 532.3,264.2 C528.5,262.5 524.6,260.3 522.9,257.3 C521.3,254.2 520.1,249.2 522.5,245.7 C524.8,242.3 532,238.3 537.2,236.4 C542.4,234.5 548.4,234.5 553.7,234.3 C558.9,234 564.5,233.7 568.7,235 C572.9,236.3 577.7,239.1 578.8,242.3 Z" />
-                                <!-- Dorsal Crest Isle 3 -->
-                                <path class="map-sand" d="M650.9,235 C650.9,238.7 648.8,243.1 645.2,246 C641.5,248.8 634.8,251.2 629.2,251.9 C623.6,252.7 617.2,251.5 611.7,250.4 C606.2,249.3 600.3,248 596.1,245.4 C591.8,242.9 586.4,238.6 586.2,235 C586,231.4 590.7,226.6 594.9,224.1 C599.2,221.5 606,220.6 611.7,219.7 C617.4,218.8 623.3,217.8 628.9,218.6 C634.5,219.3 641.6,221.2 645.3,224 C649,226.7 651,231.3 650.9,235 Z" />
-                                <!-- Dorsal Crest Isle 4 -->
-                                <path class="map-sand" d="M718.7,252.7 C717.7,255.9 713.5,259.2 709.3,260.6 C705.2,261.9 699,261.3 693.7,260.8 C688.4,260.4 683,259.9 677.8,258 C672.6,256.1 665.2,252.7 662.5,249.3 C659.8,245.8 660.1,240.5 661.8,237.4 C663.4,234.4 668.3,232.4 672.4,230.8 C676.4,229.2 680.9,227.8 686,227.9 C691.1,228 697.9,229.2 702.7,231.4 C707.6,233.6 712.4,237.6 715.1,241.1 C717.7,244.7 719.6,249.4 718.7,252.7 Z" />
-                                <!-- Torso Posterior Isle -->
-                                <path class="map-sand" d="M526.5,348.4 C524.5,352.7 518.5,355.4 513.8,357.9 C509.1,360.4 504.5,362.9 498.5,363.5 C492.5,364.2 483.4,364.4 477.8,361.7 C472.2,359 466.8,352.2 464.8,347.3 C462.9,342.4 464.5,336.7 466.1,332.3 C467.7,327.8 470.3,323.3 474.5,320.5 C478.7,317.7 485.4,315.7 491.4,315.6 C497.4,315.6 504.9,317.4 510.7,320.2 C516.4,323.1 523.3,327.8 525.9,332.5 C528.6,337.2 528.5,344.2 526.5,348.4 Z" />
-                                <path class="map-greenery" d="M515.7,345.5 C514.9,348.6 512.5,352.1 509.4,353.7 C506.4,355.4 501.2,356 497.3,355.6 C493.4,355.2 489.5,353.2 486,351.3 C482.5,349.5 478.4,347.5 476.2,344.6 C473.9,341.7 471.5,336.9 472.3,333.9 C473.1,330.9 477.6,328.1 481,326.7 C484.5,325.3 488.9,325.5 492.9,325.7 C496.8,325.8 501.2,326 504.8,327.6 C508.4,329.2 512.6,332.3 514.4,335.3 C516.2,338.3 516.5,342.5 515.7,345.5 Z" />
-                                <!-- Grand Pavilion Master Core -->
-                                <path class="map-sand" d="M620.2,305 C619.7,310.4 619.1,315.6 615.5,320.5 C611.9,325.4 605.8,332.2 598.6,334.3 C591.3,336.4 579.4,335.4 571.9,333.1 C564.5,330.9 558.2,325.5 554,320.8 C549.7,316.1 546.4,310.3 546.4,305 C546.3,299.7 549.3,293.5 553.7,289.1 C558.1,284.6 565.2,280.6 572.6,278.4 C580.1,276.2 590.9,274.3 598.5,275.9 C606.2,277.5 614.9,283.1 618.5,288 C622.1,292.8 620.7,299.6 620.2,305 Z" />
-                                <path class="map-greenery" d="M612.7,305 C612.5,308.6 609.1,313 605.7,315.5 C602.3,318.1 596.9,319.1 592.1,320.3 C587.3,321.4 582.1,322.8 577,322.3 C571.9,321.7 564.4,319.9 561.3,317.1 C558.2,314.2 557.7,308.6 558.5,305 C559.2,301.4 562.7,298 565.8,295.2 C568.9,292.4 572.6,289.5 577.2,288.2 C581.8,286.9 588.2,286.5 593.1,287.4 C598.1,288.4 603.4,291.1 606.6,294 C609.9,296.9 612.8,301.4 612.7,305 Z" />
-                                <!-- Torso Anterior Shoulder -->
-                                <path class="map-sand" d="M708.5,307.1 C709.9,312 711,319.1 707.8,323.7 C704.5,328.4 695.9,333.1 689,335 C682,336.9 673.1,336.4 666.2,335.2 C659.4,333.9 652.2,331 648,327.3 C643.8,323.6 641.5,317.9 641.1,313 C640.6,308 642,302.4 645.2,297.5 C648.4,292.7 653.9,286.3 660.4,283.9 C666.9,281.5 677.9,281.3 684.4,283.1 C690.9,284.8 695.5,290.3 699.5,294.3 C703.5,298.3 707.1,302.2 708.5,307.1 Z" />
-                                <path class="map-greenery" d="M698.3,308 C697.9,311.3 694.7,314.4 692.2,317.2 C689.8,320.1 687.4,323.2 683.5,325.1 C679.5,327 673,329.1 668.5,328.6 C664,328.1 659,324.7 656.4,321.9 C653.9,319.1 653.3,315.2 653.2,311.9 C653.1,308.6 653.7,304.9 655.9,302 C658.1,299.2 662.3,296.3 666.5,294.8 C670.7,293.3 676.3,292.5 680.9,293 C685.6,293.4 691.6,295 694.5,297.5 C697.4,300 698.6,304.7 698.3,308 Z" />
-                                <!-- Abdomen Metro Hub Isle -->
-                                <path class="map-sand" d="M629.5,375 C630.2,379.3 625.9,385.1 620.7,388.6 C615.4,392.1 606.2,394.9 598.1,396.1 C590,397.3 579.6,397.2 572.1,395.7 C564.7,394.2 558,390.5 553.4,387 C548.8,383.6 545.5,379.4 544.5,375 C543.5,370.6 542.9,364.4 547.4,360.7 C551.8,357 562.9,353.4 571.2,352.7 C579.4,351.9 589.1,354.5 596.6,356.2 C604.2,358 611,359.9 616.5,363 C622,366.1 628.8,370.7 629.5,375 Z" />
-                                <!-- Head Core Isle -->
-                                <path class="map-sand" d="M801.9,263.5 C802.7,268.7 800.8,275.4 797.2,280.3 C793.6,285.1 786.8,290.3 780.4,292.6 C774,294.9 765.6,294.7 758.9,294.1 C752.2,293.5 745.9,291.9 740.4,289 C734.9,286.2 727.3,281.9 725.8,276.9 C724.2,272 727,263.8 731.2,259.2 C735.4,254.7 744.4,251.8 751.1,249.6 C757.8,247.3 764.4,245.7 771.2,245.6 C778,245.6 786.9,246.2 792,249.1 C797.1,252.1 801,258.3 801.9,263.5 Z" />
-                                <path class="map-greenery" d="M787.1,266.1 C788.3,269.2 789.1,273.9 787.1,277.1 C785.2,280.2 779.7,283.6 775.3,285.2 C770.9,286.8 765.2,287.2 760.7,286.8 C756.3,286.4 751.4,284.9 748.5,282.7 C745.6,280.6 744,277 743.3,273.8 C742.7,270.6 742.9,266.9 744.7,263.5 C746.4,260.2 749.8,255.6 754,253.8 C758.1,251.9 765.1,251.6 769.4,252.4 C773.8,253.2 776.9,256.3 779.8,258.5 C782.8,260.8 785.8,263 787.1,266.1 Z" />
-                                <!-- Casque Helmet Spire -->
-                                <path class="map-sand" d="M778.6,191.7 C779.5,197.3 779.3,204.7 777.7,209.1 C776.1,213.4 772.3,216.1 769.2,218 C766.1,219.8 762.8,220.6 759.2,220.2 C755.6,219.9 750.5,219.2 747.4,215.6 C744.3,212 741.3,204 740.7,198.4 C740.2,192.8 742.4,186.8 744,182.3 C745.7,177.8 747.8,174 750.6,171.5 C753.4,169 757.3,166.7 760.9,167.4 C764.4,168.1 768.8,171.7 771.8,175.8 C774.7,179.8 777.6,186.2 778.6,191.7 Z" />
-                                <!-- Turret Eye Dome Isle -->
-                                <path class="map-sand" d="M818.9,230 C818.5,233.5 815.5,237 813.2,239.6 C810.9,242.2 808.3,244.1 805.1,245.6 C801.9,247.1 797.4,249.3 793.9,248.6 C790.5,248 786,244.6 784.1,241.5 C782.3,238.4 782.5,233.6 782.9,230 C783.3,226.4 784.4,222.9 786.3,220.1 C788.2,217.2 791.3,214.2 794.5,213 C797.7,211.8 802.1,211.8 805.6,212.8 C809.1,213.7 813.2,215.9 815.5,218.8 C817.7,221.6 819.3,226.5 818.9,230 Z" />
-                                <!-- Snout and Mouth Isle -->
-                                <path class="map-sand" d="M861.5,288.8 C860.5,291.7 858.5,294.1 855.8,296.4 C853,298.7 849.4,301.9 845,302.5 C840.6,303.1 833.4,301.9 829.2,299.9 C825,298 821.8,293.9 819.9,290.7 C817.9,287.6 816.9,284 817.5,281 C818,278 820,274.7 823,272.7 C825.9,270.7 830.8,269.4 835.4,269 C840,268.6 846.2,268.7 850.7,270.3 C855.1,272 860.4,275.6 862.2,278.7 C864,281.8 862.6,285.8 861.5,288.8 Z" />
-                                <!-- Hindlimb West Thigh -->
-                                <path class="map-sand" d="M458.2,444.2 C456.9,446.7 455.4,449.9 452.6,450.9 C449.9,451.9 444.9,451.6 441.7,450.3 C438.4,448.9 435.1,445.4 432.9,442.6 C430.8,439.8 429.2,436.4 428.8,433.4 C428.5,430.5 429.3,427.3 430.9,425.1 C432.4,422.9 435.1,421.3 438.1,420.5 C441,419.6 444.9,418.8 448.3,419.8 C451.7,420.9 456.3,423.8 458.3,426.6 C460.3,429.4 460.3,433.5 460.3,436.5 C460.3,439.4 459.5,441.8 458.2,444.2 Z" />
-                                <!-- Floating Eco-District Foot -->
-                                <path class="map-sand" d="M422.6,520.5 C421.6,523.9 417.9,527.7 414,529 C410.2,530.4 404.1,529.9 399.5,528.8 C394.8,527.7 389.5,525.2 386.1,522.3 C382.7,519.4 380.2,515 379.1,511.3 C378,507.7 378.4,503.9 379.5,500.5 C380.7,497 382.4,492.7 385.9,490.9 C389.4,489 396.1,488.2 400.6,489.4 C405.1,490.7 409.8,495.3 413,498.5 C416.2,501.7 418.1,505.1 419.7,508.8 C421.3,512.4 423.5,517.1 422.6,520.5 Z" />
-                                <!-- Hindlimb East Thigh -->
-                                <path class="map-sand" d="M548.3,449.9 C547.6,452.6 544.9,455.4 542.2,457 C539.5,458.6 535.4,459.7 532,459.5 C528.5,459.3 524.5,457.5 521.7,455.8 C518.9,454 516.8,451.5 515.1,448.8 C513.4,446.2 511.1,442.8 511.4,440 C511.7,437.2 513.9,433.4 516.7,432 C519.5,430.5 524.6,431 528.2,431.5 C531.7,431.9 534.9,433.2 537.9,434.7 C541,436.3 544.8,438.2 546.5,440.7 C548.2,443.3 549,447.2 548.3,449.9 Z" />
-                                <!-- Marine Power Hub Foot -->
-                                <path class="map-sand" d="M529.5,529.3 C528.9,532.9 526.4,537.2 523,539.4 C519.6,541.5 513.6,542.1 509.1,542.1 C504.5,542 500.1,540.6 495.7,539 C491.4,537.4 485.7,535.6 482.8,532.5 C479.9,529.4 477.6,523.8 478.6,520.3 C479.5,516.9 484.6,513.7 488.4,511.7 C492.1,509.8 496.6,508.9 501.1,508.5 C505.6,508.1 511,507.9 515.3,509.4 C519.6,510.9 524.3,514.4 526.6,517.7 C529,521 530.1,525.7 529.5,529.3 Z" />
-                                <!-- Forelimb West Shoulder -->
-                                <path class="map-sand" d="M728,383.4 C728.7,386.1 727.1,389.9 725.6,392.6 C724,395.3 721.4,397.3 718.7,399.4 C716,401.5 712.8,404.3 709.3,405.1 C705.8,405.9 700.5,405.7 697.8,404.2 C695.2,402.7 694,398.8 693.4,396 C692.9,393.2 693.6,390.2 694.8,387.5 C695.9,384.7 697.7,381.5 700.3,379.5 C703,377.5 707.2,375.9 710.7,375.5 C714.2,375 718.4,375.4 721.3,376.8 C724.2,378.1 727.3,380.8 728,383.4 Z" />
-                                <!-- Marine Biology Foot -->
-                                <path class="map-sand" d="M747.1,474.1 C747.3,477.6 745.5,481.1 743.9,484.6 C742.2,488.1 740.6,492.4 737,495.1 C733.3,497.7 726.6,500.5 722,500.5 C717.3,500.5 712.2,497.6 709.1,495.2 C705.9,492.7 704,489.2 703.2,485.8 C702.3,482.5 702.3,478.3 704,474.9 C705.8,471.6 709.6,468 713.6,465.6 C717.6,463.3 723.1,461.1 727.9,460.7 C732.7,460.4 739.2,461.2 742.4,463.4 C745.6,465.7 746.8,470.6 747.1,474.1 Z" />
-                                <!-- Forelimb East Shoulder -->
-                                <path class="map-sand" d="M807.9,361 C809.5,363.1 811.8,365.4 811.9,368.4 C812,371.3 810.7,375.8 808.4,378.5 C806.1,381.1 801.5,383.2 798.1,384.2 C794.7,385.2 791,385.2 788.1,384.5 C785.2,383.8 782.2,382.2 780.7,380 C779.2,377.8 778.8,374.6 779,371.5 C779.3,368.5 780.2,364.8 782.3,362 C784.4,359.1 788.3,355.5 791.6,354.4 C794.9,353.3 799.2,354.4 801.9,355.4 C804.7,356.5 806.2,358.8 807.9,361 Z" />
-                                <!-- Youth Innovation Foot -->
-                                <path class="map-sand" d="M861.8,439.8 C863.9,442.7 865.2,447.7 863.9,451.5 C862.7,455.3 858.1,459.8 854.2,462.6 C850.3,465.5 845,467.7 840.5,468.4 C836,469.2 830.8,468.7 827.3,467.2 C823.9,465.7 821.4,462.6 819.7,459.5 C818,456.4 816.4,452.5 817.2,448.6 C817.9,444.7 820.7,439 824.4,436.2 C828.1,433.4 835,432.1 839.5,431.8 C844,431.5 847.8,433.1 851.5,434.4 C855.2,435.8 859.7,437 861.8,439.8 Z" />
-                                <!-- Tongue Stepping Isle 1 -->
-                                <path class="map-sand" d="M909.6,298.1 C909.2,300 907.2,302.1 905.1,303.3 C903.1,304.5 900,305.4 897.3,305.4 C894.6,305.3 891.2,304.3 889,303.1 C886.7,301.9 885.1,300 883.8,298.1 C882.4,296.2 881,294.1 881,292 C881,290 881.9,287.1 883.9,285.9 C885.9,284.7 890,284.6 892.8,284.9 C895.5,285.2 898.1,286.5 900.5,287.6 C902.9,288.7 905.6,289.9 907.2,291.6 C908.7,293.4 909.9,296.1 909.6,298.1 Z" />
-                                <!-- Tongue Stepping Isle 2 -->
-                                <path class="map-sand" d="M948.9,313.7 C948.4,315.7 946.8,317.9 944.8,319 C942.8,320 939.3,320.3 936.7,320 C934,319.8 931.4,318.4 929.1,317.2 C926.7,316 924,314.7 922.4,312.8 C920.8,310.9 919.2,307.8 919.7,305.9 C920.2,304 923.2,302.2 925.5,301.3 C927.8,300.5 930.8,300.6 933.5,300.8 C936.1,300.9 939.1,301.1 941.5,302.1 C943.9,303.2 946.7,305.2 948,307.1 C949.2,309.1 949.5,311.8 948.9,313.7 Z" />
-                                <!-- Tongue Stepping Isle 3 -->
-                                <path class="map-sand" d="M995.2,334.9 C994.4,337 991.8,338.9 989.4,339.7 C987,340.6 983.9,340.2 981,340 C978.2,339.8 975.1,339.7 972.4,338.5 C969.7,337.3 965.9,334.9 964.7,332.7 C963.6,330.5 964.4,327.2 965.4,325.3 C966.5,323.3 969.1,322 971.3,321 C973.5,319.9 976.1,318.9 978.9,319 C981.6,319 985.2,319.9 987.8,321.4 C990.3,322.8 992.7,325.3 993.9,327.5 C995.2,329.8 995.9,332.9 995.2,334.9 Z" />
-                                <!-- Tongue Stepping Isle 4 -->
-                                <path class="map-sand" d="M1044.8,361 C1043.5,362.9 1040.6,363.9 1038.2,365 C1035.8,366 1033.3,367.2 1030.3,367.2 C1027.3,367.2 1022.7,366.5 1020.1,364.8 C1017.5,363 1015.6,359.3 1014.9,356.7 C1014.2,354.2 1015.1,351.5 1016.1,349.4 C1017.2,347.3 1018.7,345.1 1020.9,344 C1023.2,342.9 1026.7,342.4 1029.7,342.7 C1032.7,343.1 1036.4,344.3 1039.1,346.1 C1041.8,347.8 1044.9,350.7 1045.9,353.2 C1046.8,355.6 1046.1,359 1044.8,361 Z" />
-                                <!-- Tongue Stepping Isle 5 -->
-                                <path class="map-sand" d="M1099.2,391.6 C1098.1,393.9 1097.1,396.3 1094.7,397.7 C1092.3,399.1 1088.2,400.6 1084.8,400 C1081.4,399.4 1076.9,396.6 1074.3,394.2 C1071.7,391.8 1070.1,388.5 1069.3,385.7 C1068.4,383 1068.2,379.9 1069.2,377.6 C1070.2,375.4 1072.7,373.5 1075.4,372.4 C1078.1,371.3 1081.7,370.8 1085.2,371.3 C1088.7,371.8 1093.6,373.1 1096.3,375.2 C1099.1,377.4 1101.1,381.5 1101.6,384.2 C1102.1,387 1100.4,389.4 1099.2,391.6 Z" />
-                                <!-- Paradise Atoll Lagoon Tip -->
-                                <path class="map-sand" d="M1169,431.4 C1168.6,436.1 1166.8,442.6 1163.1,445.7 C1159.4,448.8 1152.2,450.3 1146.9,450.1 C1141.7,450 1135.8,447.5 1131.6,444.6 C1127.3,441.8 1123.3,437.3 1121.6,433 C1119.9,428.7 1120.3,423.2 1121.4,418.7 C1122.5,414.2 1124.8,409.4 1128.4,406 C1132,402.5 1137.8,398.4 1142.9,398.1 C1148.1,397.9 1155.2,401.2 1159,404.5 C1162.9,407.8 1164.3,413.3 1166,417.8 C1167.7,422.3 1169.5,426.8 1169,431.4 Z" />
-                            </g>
-                            <!-- Dorsal Ridge Crest Spikes on the Back Islands -->
-                            <g class="map-reef" opacity="0.85">
-                                <polygon points="482,274 490,259 498,274" />
-                                <polygon points="542,238 550,223 558,238" />
-                                <polygon points="612,222 620,207 628,222" />
-                                <polygon points="682,233 690,218 698,233" />
-                            </g>
-                            <!-- Golden Casque Crest Spire -->
-                            <path class="map-reef" d="M752,175 L760,135 L768,175 Z" />
-                            <circle cx="760" cy="135" r="3.5" fill="#c29a57" class="twinkle" />
-                            <!-- Spiral Tail Deepwater Harbor Basin -->
-                            <ellipse cx="270" cy="380" rx="36" ry="36" class="map-sea-deep" />
-                            <g stroke="#ffffff" stroke-width="1.8">
-                                <line x1="250" y1="380" x2="290" y2="380" />
-                                <line x1="270" y1="360" x2="270" y2="400" />
-                            </g>
-                            <!-- Glass-Domed Central Grand Pavilion -->
-                            <g transform="translate(585, 305)">
-                                <ellipse cx="0" cy="0" rx="36" ry="20" fill="#002244" opacity="0.8" />
-                                <ellipse cx="0" cy="0" rx="30" ry="16" fill="#38bdf8" filter="url(#glass-glow)" opacity="0.85" />
-                                <ellipse cx="0" cy="0" rx="20" ry="11" fill="none" stroke="#ffffff" stroke-width="1.4" />
-                                <line x1="-30" y1="0" x2="30" y2="0" stroke="#ffffff" stroke-width="1.6" />
-                                <line x1="0" y1="-16" x2="0" y2="16" stroke="#ffffff" stroke-width="1.6" />
-                                <circle cx="0" cy="0" r="4.5" fill="#f5c46e" class="twinkle" />
-                            </g>
-                            <!-- Revolving 360 Degree Observation Eye Dome -->
-                            <g transform="translate(800, 230)">
-                                <circle cx="0" cy="0" r="16" fill="#0f172a" stroke="#ffffff" stroke-width="1.5" />
-                                <circle cx="0" cy="0" r="11" fill="#38bdf8" opacity="0.9" />
-                                <circle cx="3" cy="-3" r="3.5" fill="#ffffff" />
-                            </g>
-                            <!-- International Youth Innovation Center Campus -->
-                            <rect x="826" y="442" width="28" height="16" rx="3" class="map-urban" />
-                            <rect x="832" y="446" width="16" height="8" rx="2" class="map-greenery" />
-                            <!-- Marine Biology and Dolphin Station -->
-                            <circle cx="725" cy="480" r="12" class="map-sea-lagoon" stroke="#ffffff" stroke-width="1.6" />
-                            <path d="M721,477 C729,473 732,484 725,486" stroke="#0284c7" stroke-width="2" fill="none" />
-                            <!-- Experimental Floating Eco-Communities -->
-                            <g fill="#2dd4bf" stroke="#ffffff" stroke-width="1">
-                                <rect x="388" y="500" width="10" height="10" rx="2" />
-                                <rect x="404" y="502" width="10" height="10" rx="2" />
-                                <rect x="394" y="514" width="10" height="10" rx="2" />
-                            </g>
-                            <!-- Renewable Marine Power Hub -->
-                            <g transform="translate(505, 525)">
-                                <circle cx="0" cy="0" r="11" fill="#0284c7" stroke="#ffffff" stroke-width="1.4" />
-                                <path d="M0,-8 L0,8 M-8,0 L8,0" stroke="#ffffff" stroke-width="1.8" class="spin" />
-                            </g>
-                            <!-- Paradise Islands Overwater Bungalows and Coral Nursery -->
-                            <ellipse cx="1145" cy="425" rx="28" ry="24" fill="none" stroke="#c29a57" stroke-width="2.5" stroke-dasharray="3 4" />
-                            <ellipse cx="1145" cy="425" rx="14" ry="12" class="map-sea-lagoon" stroke="#2dd4bf" stroke-width="1.6" />
-                            <circle cx="1145" cy="425" r="3.5" fill="#38bdf8" class="bob" />
-                            <!-- Overwater Boardwalk linking Tongue Atolls -->
-                            <path d="M840,285 L895,295 L935,310 L980,330 L1030,355 L1085,385 L1145,425" fill="none" stroke="#c29a57" stroke-width="2" stroke-linecap="round" />
-                            <!-- Sub-Sea Metro Tunnel (Nova Aurelia to Portal, Pavilion, Eye Dome and Spiral Marina) -->
-                            <g fill="none" stroke="#f5c46e" stroke-dasharray="8 4">
-                                <path d="M585,670 L585,375 L585,305" stroke-width="3" />
-                                <path d="M585,305 C680,290 740,260 800,230" stroke-width="2.5" />
-                                <path d="M585,375 C490,380 400,350 315,335" stroke-width="2.5" />
-                            </g>
-                            <circle cx="585" cy="375" r="5" fill="#f5c46e" stroke="#ffffff" stroke-width="2" />
-                            <circle cx="585" cy="305" r="5" fill="#f5c46e" stroke="#ffffff" stroke-width="2" />
-                            <circle cx="800" cy="230" r="5" fill="#f5c46e" stroke="#ffffff" stroke-width="2" />
-                            <circle cx="315" cy="335" r="5" fill="#f5c46e" stroke="#ffffff" stroke-width="2" />
-                            <!-- Autonomous Electric Water Taxi Marine Paths -->
-                            <g class="map-ferry">
-                                <path d="M205,375 C160,460 250,580 400,510" />
-                                <path d="M725,480 C840,550 980,500 1085,385" />
-                                <path d="M760,195 C860,140 1020,200 1085,385" />
-                            </g>
-                            <!-- Geographic Labels -->
-                            <g class="map-label-group">
-                                <text class="map-label-text" x="585" y="341">Központi Nagypavilon</text>
-                                <text class="map-label-text" x="270" y="445">Spirál Farok Jachtkikötő</text>
-                                <text class="map-label-text" x="1080" y="315">Paradise Islands Villák</text>
-                            </g>
-                            <!-- 8 INTERACTIVE HOTSPOT PINS -->
-                            <!-- Hotspot 1: Glass-Domed Central Grand Pavilion -->
-                            <g class="map-hotspot" data-spot="1" transform="translate(585, 305)">
-                                <circle class="hotspot-pulse" r="17" fill="#38bdf8" opacity="0.6" />
-                                <circle class="hotspot-core" r="12" />
-                                <text>1</text>
-                            </g>
-                            <!-- Hotspot 2: Revolving 360 Degree Eye Dome -->
-                            <g class="map-hotspot" data-spot="2" transform="translate(800, 230)">
-                                <circle class="hotspot-pulse" r="16" fill="#f5c46e" opacity="0.6" />
-                                <circle class="hotspot-core" r="11" />
-                                <text>2</text>
-                            </g>
-                            <!-- Hotspot 3: Youth Innovation Center -->
-                            <g class="map-hotspot" data-spot="3" transform="translate(840, 450)">
-                                <circle class="hotspot-pulse" r="16" fill="#38bdf8" opacity="0.6" />
-                                <circle class="hotspot-core" r="11" />
-                                <text>3</text>
-                            </g>
-                            <!-- Hotspot 4: Spiral Tail Marina -->
-                            <g class="map-hotspot" data-spot="4" transform="translate(270, 380)">
-                                <circle class="hotspot-pulse" r="16" fill="#0284c7" opacity="0.6" />
-                                <circle class="hotspot-core" r="11" />
-                                <text>4</text>
-                            </g>
-                            <!-- Hotspot 5: Paradise Islands Overwater Villas -->
-                            <g class="map-hotspot" data-spot="5" transform="translate(1145, 425)">
-                                <circle class="hotspot-pulse" r="16" fill="#c29a57" opacity="0.6" />
-                                <circle class="hotspot-core" r="11" />
-                                <text>5</text>
-                            </g>
-                            <!-- Hotspot 6: Marine Biology and Dolphin Station -->
-                            <g class="map-hotspot" data-spot="6" transform="translate(725, 480)">
-                                <circle class="hotspot-pulse" r="16" fill="#22c55e" opacity="0.6" />
-                                <circle class="hotspot-core" r="11" />
-                                <text>6</text>
-                            </g>
-                            <!-- Hotspot 7: Floating Eco-District -->
-                            <g class="map-hotspot" data-spot="7" transform="translate(400, 510)">
-                                <circle class="hotspot-pulse" r="16" fill="#2dd4bf" opacity="0.6" />
-                                <circle class="hotspot-core" r="11" />
-                                <text>7</text>
-                            </g>
-                            <!-- Hotspot 8: Sub-Sea Metro Tunnel Portal -->
-                            <g class="map-hotspot" data-spot="8" transform="translate(585, 375)">
-                                <circle class="hotspot-pulse" r="16" fill="#f5c46e" opacity="0.6" />
-                                <circle class="hotspot-core" r="11" />
-                                <text>8</text>
-                            </g>
-                        </svg>
+<defs>
+<linearGradient id="cham-sea" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#093153" />
+<stop offset="45%" stop-color="#114e7a" />
+<stop offset="100%" stop-color="#1d739d" />
+</linearGradient>
+<radialGradient id="cham-glow" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="#4ade80" stop-opacity="0.32" />
+<stop offset="60%" stop-color="#38bdf8" stop-opacity="0.2" />
+<stop offset="100%" stop-color="#093153" stop-opacity="0" />
+</radialGradient>
+<filter id="glass-glow" x="-20%" y="-20%" width="140%" height="140%">
+<feGaussianBlur stdDeviation="4" result="blur" />
+<feComposite in="SourceGraphic" in2="blur" operator="over" />
+</filter>
+</defs>
+<!-- Coastal Bay Water Background -->
+<rect width="1200" height="700" fill="url(#cham-sea)" />
+<!-- Biological Eco-Glow in Lagoon -->
+<ellipse cx="640" cy="360" rx="520" ry="290" fill="url(#cham-glow)" />
+<!-- Outer Protective Bio-Dyke Reef Buffer -->
+<ellipse cx="650" cy="365" rx="535" ry="275" class="map-reef" opacity="0.45" stroke-dasharray="10 8" stroke-width="2.5" fill="none" />
+<!-- Mainland Nova Aurelia Coastline (Bottom) -->
+<path class="map-sand" d="M0,656 Q300,642 600,646 Q900,642 1200,656 L1200,700 L0,700 Z" />
+<rect x="0" y="670" width="1200" height="30" class="map-urban" />
+<line x1="0" y1="670" x2="1200" y2="670" stroke="#ffffff" stroke-width="2.5" />
+<!-- 35 DISTINCT ISLANDS FORMING AN ICONIC CHAMELEON (ZERO OVERLAPS) -->
+<g id="chameleon-islands-group">
+<!-- Tail Base Isle -->
+<path class="map-sand" d="M453,385.7 C451.4,388.2 446.6,389.4 442.9,390 C439.1,390.6 435,390.2 430.6,389.4 C426.2,388.7 420.4,387.9 416.4,385.5 C412.3,383 407.6,378.1 406.4,374.8 C405.2,371.4 407.3,367.7 409,365.2 C410.8,362.8 413.7,361 417.1,359.9 C420.5,358.9 425,358.2 429.3,359.1 C433.6,359.9 439,362.4 442.8,365.1 C446.7,367.8 450.7,371.8 452.4,375.2 C454.1,378.7 454.6,383.3 453,385.7 Z" />
+<!-- Tail Arc 1 -->
+<path class="map-sand" d="M399.5,434.5 C397.2,436 394.2,436.2 391,436.3 C387.8,436.4 383.8,436.9 380.1,435 C376.5,433.1 371.5,428.7 369.3,425.1 C367.1,421.5 366.8,416.7 366.9,413.4 C367.1,410.1 368.4,407.2 370.3,405.3 C372.2,403.4 375.2,401.9 378.4,402 C381.6,402.2 385.9,403.8 389.5,406 C393.1,408.2 397.5,411.6 400,415.1 C402.6,418.7 405,424.1 404.9,427.3 C404.8,430.5 401.8,433 399.5,434.5 Z" />
+<!-- Tail Arc 2 -->
+<path class="map-sand" d="M348.7,460 C348.3,462.7 348.2,466.2 345.6,468 C343.1,469.8 337.7,471.3 333.4,471 C329.1,470.7 323.7,468.2 320,466.1 C316.3,464 313.1,461 311.3,458.2 C309.6,455.5 308.8,452 309.5,449.5 C310.2,447 312.7,444.6 315.6,443 C318.4,441.3 322.5,439.6 326.7,439.5 C330.9,439.5 337.4,440.8 341,442.8 C344.6,444.9 346.9,449 348.2,451.9 C349.5,454.7 349.2,457.3 348.7,460 Z" />
+<!-- Tail South Curl -->
+<path class="map-sand" d="M291.1,452.3 C292.6,454.7 292.7,458.8 291.1,461.8 C289.4,464.8 284.9,468.2 281.1,470.3 C277.3,472.5 272.3,474.2 268.2,474.7 C264.1,475.2 259.6,474.5 256.7,473.2 C253.7,472 251.9,469.5 250.7,467 C249.5,464.5 248.2,461.3 249.4,458.3 C250.6,455.2 254.1,450.7 257.8,448.7 C261.5,446.6 267.7,446 271.8,445.8 C275.8,445.7 279,446.7 282.3,447.8 C285.5,448.9 289.6,450 291.1,452.3 Z" />
+<!-- Tail Outer West 1 -->
+<path class="map-sand" d="M232.2,412.6 C234.5,414.2 236,417.9 236.4,421.3 C236.8,424.6 236.3,429.1 234.7,432.6 C233.1,436.1 229.9,439.8 227,442.1 C224.2,444.5 220.9,445.6 217.7,446.4 C214.5,447.3 210.6,448.3 208,447.1 C205.4,446 202.3,442.9 202,439.6 C201.7,436.3 204.1,431 206,427.5 C207.9,424 210.7,421.3 213.5,418.7 C216.2,416.1 219.4,413 222.5,412 C225.7,410.9 229.8,411.1 232.2,412.6 Z" />
+<!-- Tail Outer West 2 -->
+<path class="map-sand" d="M206.6,356.5 C209.5,356.7 212.9,358.3 214.9,360.6 C216.8,363 217.9,367.4 218.2,370.8 C218.5,374.2 217.4,377.7 216.4,381 C215.4,384.3 214.4,388.4 212.2,390.7 C210,393.1 206,395.6 203.2,395.2 C200.5,394.8 197.4,391.3 195.7,388.6 C193.9,385.9 193.2,382.3 192.6,378.9 C192.1,375.6 191.5,371.7 192.3,368.4 C193.2,365.1 195.4,361.2 197.8,359.2 C200.2,357.2 203.8,356.3 206.6,356.5 Z" />
+<!-- Tail Inner West -->
+<path class="map-sand" d="M214,309.3 C216.2,308 220.1,308.3 223,309.2 C225.8,310.1 228.5,312.5 231.1,314.7 C233.7,316.9 236.9,319.3 238.6,322.4 C240.3,325.5 242,330.6 241.4,333.5 C240.9,336.4 237.7,338.7 235.3,339.7 C232.9,340.8 229.8,340.5 226.9,339.9 C224.1,339.4 220.8,338.5 218.2,336.4 C215.6,334.3 212.9,330.8 211.5,327.6 C210.1,324.4 209.5,320.2 209.9,317.2 C210.3,314.2 211.8,310.6 214,309.3 Z" />
+<!-- Tail Inner Top -->
+<path class="map-sand" d="M259.9,301 C261,298.7 263.6,297.2 265.8,295.6 C268.1,294.1 270.4,292.1 273.4,291.7 C276.4,291.3 281.2,291.5 283.9,293.1 C286.6,294.6 288.7,298.3 289.7,300.9 C290.6,303.5 290.2,306.5 289.5,308.9 C288.7,311.3 287.4,313.9 285.2,315.4 C283.1,317 279.6,317.9 276.6,318 C273.5,318.1 269.7,317.4 266.8,316 C263.9,314.6 260.4,311.9 259.3,309.4 C258.1,306.9 258.8,303.2 259.9,301 Z" />
+<!-- Tail Spiral Marina Isle -->
+<path class="map-sand" d="M306.1,345.7 C304.1,344 301.8,342.5 300.9,340 C300.1,337.4 299.8,333.2 301,330.4 C302.3,327.6 305.8,324.6 308.6,323 C311.3,321.4 314.6,320.7 317.4,320.8 C320.1,320.8 323.1,321.5 325,323.1 C326.8,324.7 328.1,327.5 328.6,330.2 C329.1,332.9 329.1,336.3 328,339.3 C326.9,342.2 324.5,346.2 322,348 C319.4,349.7 315.2,350.1 312.6,349.7 C309.9,349.3 308,347.3 306.1,345.7 Z" />
+<!-- Dorsal Crest Isle 1 -->
+<path class="map-sand" d="M510.3,273.3 C512.5,275.6 514.4,279.7 513.4,283.3 C512.4,286.9 508.2,291.7 504.5,294.8 C500.8,297.8 495.5,300.4 491.2,301.6 C486.8,302.9 481.7,303.3 478.2,302.4 C474.8,301.5 472.2,298.9 470.5,296.2 C468.9,293.6 467.5,290.2 468.2,286.6 C468.8,282.9 470.9,277.5 474.3,274.4 C477.8,271.3 484.4,268.9 488.8,268 C493.2,267.2 497,268.5 500.6,269.4 C504.2,270.3 508.2,270.9 510.3,273.3 Z" />
+<!-- Dorsal Crest Isle 2 -->
+<path class="map-sand" d="M578.8,242.3 C579.9,245.4 578,250.4 575.3,253.9 C572.6,257.5 567.6,261.3 562.7,263.5 C557.8,265.8 551,267.4 545.9,267.5 C540.9,267.6 536.2,265.9 532.3,264.2 C528.5,262.5 524.6,260.3 522.9,257.3 C521.3,254.2 520.1,249.2 522.5,245.7 C524.8,242.3 532,238.3 537.2,236.4 C542.4,234.5 548.4,234.5 553.7,234.3 C558.9,234 564.5,233.7 568.7,235 C572.9,236.3 577.7,239.1 578.8,242.3 Z" />
+<!-- Dorsal Crest Isle 3 -->
+<path class="map-sand" d="M650.9,235 C650.9,238.7 648.8,243.1 645.2,246 C641.5,248.8 634.8,251.2 629.2,251.9 C623.6,252.7 617.2,251.5 611.7,250.4 C606.2,249.3 600.3,248 596.1,245.4 C591.8,242.9 586.4,238.6 586.2,235 C586,231.4 590.7,226.6 594.9,224.1 C599.2,221.5 606,220.6 611.7,219.7 C617.4,218.8 623.3,217.8 628.9,218.6 C634.5,219.3 641.6,221.2 645.3,224 C649,226.7 651,231.3 650.9,235 Z" />
+<!-- Dorsal Crest Isle 4 -->
+<path class="map-sand" d="M718.7,252.7 C717.7,255.9 713.5,259.2 709.3,260.6 C705.2,261.9 699,261.3 693.7,260.8 C688.4,260.4 683,259.9 677.8,258 C672.6,256.1 665.2,252.7 662.5,249.3 C659.8,245.8 660.1,240.5 661.8,237.4 C663.4,234.4 668.3,232.4 672.4,230.8 C676.4,229.2 680.9,227.8 686,227.9 C691.1,228 697.9,229.2 702.7,231.4 C707.6,233.6 712.4,237.6 715.1,241.1 C717.7,244.7 719.6,249.4 718.7,252.7 Z" />
+<!-- Torso Posterior Isle -->
+<path class="map-sand" d="M526.5,348.4 C524.5,352.7 518.5,355.4 513.8,357.9 C509.1,360.4 504.5,362.9 498.5,363.5 C492.5,364.2 483.4,364.4 477.8,361.7 C472.2,359 466.8,352.2 464.8,347.3 C462.9,342.4 464.5,336.7 466.1,332.3 C467.7,327.8 470.3,323.3 474.5,320.5 C478.7,317.7 485.4,315.7 491.4,315.6 C497.4,315.6 504.9,317.4 510.7,320.2 C516.4,323.1 523.3,327.8 525.9,332.5 C528.6,337.2 528.5,344.2 526.5,348.4 Z" />
+<path class="map-greenery" d="M515.7,345.5 C514.9,348.6 512.5,352.1 509.4,353.7 C506.4,355.4 501.2,356 497.3,355.6 C493.4,355.2 489.5,353.2 486,351.3 C482.5,349.5 478.4,347.5 476.2,344.6 C473.9,341.7 471.5,336.9 472.3,333.9 C473.1,330.9 477.6,328.1 481,326.7 C484.5,325.3 488.9,325.5 492.9,325.7 C496.8,325.8 501.2,326 504.8,327.6 C508.4,329.2 512.6,332.3 514.4,335.3 C516.2,338.3 516.5,342.5 515.7,345.5 Z" />
+<!-- Grand Pavilion Master Core -->
+<path class="map-sand" d="M620.2,305 C619.7,310.4 619.1,315.6 615.5,320.5 C611.9,325.4 605.8,332.2 598.6,334.3 C591.3,336.4 579.4,335.4 571.9,333.1 C564.5,330.9 558.2,325.5 554,320.8 C549.7,316.1 546.4,310.3 546.4,305 C546.3,299.7 549.3,293.5 553.7,289.1 C558.1,284.6 565.2,280.6 572.6,278.4 C580.1,276.2 590.9,274.3 598.5,275.9 C606.2,277.5 614.9,283.1 618.5,288 C622.1,292.8 620.7,299.6 620.2,305 Z" />
+<path class="map-greenery" d="M612.7,305 C612.5,308.6 609.1,313 605.7,315.5 C602.3,318.1 596.9,319.1 592.1,320.3 C587.3,321.4 582.1,322.8 577,322.3 C571.9,321.7 564.4,319.9 561.3,317.1 C558.2,314.2 557.7,308.6 558.5,305 C559.2,301.4 562.7,298 565.8,295.2 C568.9,292.4 572.6,289.5 577.2,288.2 C581.8,286.9 588.2,286.5 593.1,287.4 C598.1,288.4 603.4,291.1 606.6,294 C609.9,296.9 612.8,301.4 612.7,305 Z" />
+<!-- Torso Anterior Shoulder -->
+<path class="map-sand" d="M708.5,307.1 C709.9,312 711,319.1 707.8,323.7 C704.5,328.4 695.9,333.1 689,335 C682,336.9 673.1,336.4 666.2,335.2 C659.4,333.9 652.2,331 648,327.3 C643.8,323.6 641.5,317.9 641.1,313 C640.6,308 642,302.4 645.2,297.5 C648.4,292.7 653.9,286.3 660.4,283.9 C666.9,281.5 677.9,281.3 684.4,283.1 C690.9,284.8 695.5,290.3 699.5,294.3 C703.5,298.3 707.1,302.2 708.5,307.1 Z" />
+<path class="map-greenery" d="M698.3,308 C697.9,311.3 694.7,314.4 692.2,317.2 C689.8,320.1 687.4,323.2 683.5,325.1 C679.5,327 673,329.1 668.5,328.6 C664,328.1 659,324.7 656.4,321.9 C653.9,319.1 653.3,315.2 653.2,311.9 C653.1,308.6 653.7,304.9 655.9,302 C658.1,299.2 662.3,296.3 666.5,294.8 C670.7,293.3 676.3,292.5 680.9,293 C685.6,293.4 691.6,295 694.5,297.5 C697.4,300 698.6,304.7 698.3,308 Z" />
+<!-- Abdomen Metro Hub Isle -->
+<path class="map-sand" d="M629.5,375 C630.2,379.3 625.9,385.1 620.7,388.6 C615.4,392.1 606.2,394.9 598.1,396.1 C590,397.3 579.6,397.2 572.1,395.7 C564.7,394.2 558,390.5 553.4,387 C548.8,383.6 545.5,379.4 544.5,375 C543.5,370.6 542.9,364.4 547.4,360.7 C551.8,357 562.9,353.4 571.2,352.7 C579.4,351.9 589.1,354.5 596.6,356.2 C604.2,358 611,359.9 616.5,363 C622,366.1 628.8,370.7 629.5,375 Z" />
+<!-- Head Core Isle -->
+<path class="map-sand" d="M801.9,263.5 C802.7,268.7 800.8,275.4 797.2,280.3 C793.6,285.1 786.8,290.3 780.4,292.6 C774,294.9 765.6,294.7 758.9,294.1 C752.2,293.5 745.9,291.9 740.4,289 C734.9,286.2 727.3,281.9 725.8,276.9 C724.2,272 727,263.8 731.2,259.2 C735.4,254.7 744.4,251.8 751.1,249.6 C757.8,247.3 764.4,245.7 771.2,245.6 C778,245.6 786.9,246.2 792,249.1 C797.1,252.1 801,258.3 801.9,263.5 Z" />
+<path class="map-greenery" d="M787.1,266.1 C788.3,269.2 789.1,273.9 787.1,277.1 C785.2,280.2 779.7,283.6 775.3,285.2 C770.9,286.8 765.2,287.2 760.7,286.8 C756.3,286.4 751.4,284.9 748.5,282.7 C745.6,280.6 744,277 743.3,273.8 C742.7,270.6 742.9,266.9 744.7,263.5 C746.4,260.2 749.8,255.6 754,253.8 C758.1,251.9 765.1,251.6 769.4,252.4 C773.8,253.2 776.9,256.3 779.8,258.5 C782.8,260.8 785.8,263 787.1,266.1 Z" />
+<!-- Casque Helmet Spire -->
+<path class="map-sand" d="M778.6,191.7 C779.5,197.3 779.3,204.7 777.7,209.1 C776.1,213.4 772.3,216.1 769.2,218 C766.1,219.8 762.8,220.6 759.2,220.2 C755.6,219.9 750.5,219.2 747.4,215.6 C744.3,212 741.3,204 740.7,198.4 C740.2,192.8 742.4,186.8 744,182.3 C745.7,177.8 747.8,174 750.6,171.5 C753.4,169 757.3,166.7 760.9,167.4 C764.4,168.1 768.8,171.7 771.8,175.8 C774.7,179.8 777.6,186.2 778.6,191.7 Z" />
+<!-- Turret Eye Dome Isle -->
+<path class="map-sand" d="M818.9,230 C818.5,233.5 815.5,237 813.2,239.6 C810.9,242.2 808.3,244.1 805.1,245.6 C801.9,247.1 797.4,249.3 793.9,248.6 C790.5,248 786,244.6 784.1,241.5 C782.3,238.4 782.5,233.6 782.9,230 C783.3,226.4 784.4,222.9 786.3,220.1 C788.2,217.2 791.3,214.2 794.5,213 C797.7,211.8 802.1,211.8 805.6,212.8 C809.1,213.7 813.2,215.9 815.5,218.8 C817.7,221.6 819.3,226.5 818.9,230 Z" />
+<!-- Snout and Mouth Isle -->
+<path class="map-sand" d="M861.5,288.8 C860.5,291.7 858.5,294.1 855.8,296.4 C853,298.7 849.4,301.9 845,302.5 C840.6,303.1 833.4,301.9 829.2,299.9 C825,298 821.8,293.9 819.9,290.7 C817.9,287.6 816.9,284 817.5,281 C818,278 820,274.7 823,272.7 C825.9,270.7 830.8,269.4 835.4,269 C840,268.6 846.2,268.7 850.7,270.3 C855.1,272 860.4,275.6 862.2,278.7 C864,281.8 862.6,285.8 861.5,288.8 Z" />
+<!-- Hindlimb West Thigh -->
+<path class="map-sand" d="M458.2,444.2 C456.9,446.7 455.4,449.9 452.6,450.9 C449.9,451.9 444.9,451.6 441.7,450.3 C438.4,448.9 435.1,445.4 432.9,442.6 C430.8,439.8 429.2,436.4 428.8,433.4 C428.5,430.5 429.3,427.3 430.9,425.1 C432.4,422.9 435.1,421.3 438.1,420.5 C441,419.6 444.9,418.8 448.3,419.8 C451.7,420.9 456.3,423.8 458.3,426.6 C460.3,429.4 460.3,433.5 460.3,436.5 C460.3,439.4 459.5,441.8 458.2,444.2 Z" />
+<!-- Floating Eco-District Foot -->
+<path class="map-sand" d="M422.6,520.5 C421.6,523.9 417.9,527.7 414,529 C410.2,530.4 404.1,529.9 399.5,528.8 C394.8,527.7 389.5,525.2 386.1,522.3 C382.7,519.4 380.2,515 379.1,511.3 C378,507.7 378.4,503.9 379.5,500.5 C380.7,497 382.4,492.7 385.9,490.9 C389.4,489 396.1,488.2 400.6,489.4 C405.1,490.7 409.8,495.3 413,498.5 C416.2,501.7 418.1,505.1 419.7,508.8 C421.3,512.4 423.5,517.1 422.6,520.5 Z" />
+<!-- Hindlimb East Thigh -->
+<path class="map-sand" d="M548.3,449.9 C547.6,452.6 544.9,455.4 542.2,457 C539.5,458.6 535.4,459.7 532,459.5 C528.5,459.3 524.5,457.5 521.7,455.8 C518.9,454 516.8,451.5 515.1,448.8 C513.4,446.2 511.1,442.8 511.4,440 C511.7,437.2 513.9,433.4 516.7,432 C519.5,430.5 524.6,431 528.2,431.5 C531.7,431.9 534.9,433.2 537.9,434.7 C541,436.3 544.8,438.2 546.5,440.7 C548.2,443.3 549,447.2 548.3,449.9 Z" />
+<!-- Marine Power Hub Foot -->
+<path class="map-sand" d="M529.5,529.3 C528.9,532.9 526.4,537.2 523,539.4 C519.6,541.5 513.6,542.1 509.1,542.1 C504.5,542 500.1,540.6 495.7,539 C491.4,537.4 485.7,535.6 482.8,532.5 C479.9,529.4 477.6,523.8 478.6,520.3 C479.5,516.9 484.6,513.7 488.4,511.7 C492.1,509.8 496.6,508.9 501.1,508.5 C505.6,508.1 511,507.9 515.3,509.4 C519.6,510.9 524.3,514.4 526.6,517.7 C529,521 530.1,525.7 529.5,529.3 Z" />
+<!-- Forelimb West Shoulder -->
+<path class="map-sand" d="M728,383.4 C728.7,386.1 727.1,389.9 725.6,392.6 C724,395.3 721.4,397.3 718.7,399.4 C716,401.5 712.8,404.3 709.3,405.1 C705.8,405.9 700.5,405.7 697.8,404.2 C695.2,402.7 694,398.8 693.4,396 C692.9,393.2 693.6,390.2 694.8,387.5 C695.9,384.7 697.7,381.5 700.3,379.5 C703,377.5 707.2,375.9 710.7,375.5 C714.2,375 718.4,375.4 721.3,376.8 C724.2,378.1 727.3,380.8 728,383.4 Z" />
+<!-- Marine Biology Foot -->
+<path class="map-sand" d="M747.1,474.1 C747.3,477.6 745.5,481.1 743.9,484.6 C742.2,488.1 740.6,492.4 737,495.1 C733.3,497.7 726.6,500.5 722,500.5 C717.3,500.5 712.2,497.6 709.1,495.2 C705.9,492.7 704,489.2 703.2,485.8 C702.3,482.5 702.3,478.3 704,474.9 C705.8,471.6 709.6,468 713.6,465.6 C717.6,463.3 723.1,461.1 727.9,460.7 C732.7,460.4 739.2,461.2 742.4,463.4 C745.6,465.7 746.8,470.6 747.1,474.1 Z" />
+<!-- Forelimb East Shoulder -->
+<path class="map-sand" d="M807.9,361 C809.5,363.1 811.8,365.4 811.9,368.4 C812,371.3 810.7,375.8 808.4,378.5 C806.1,381.1 801.5,383.2 798.1,384.2 C794.7,385.2 791,385.2 788.1,384.5 C785.2,383.8 782.2,382.2 780.7,380 C779.2,377.8 778.8,374.6 779,371.5 C779.3,368.5 780.2,364.8 782.3,362 C784.4,359.1 788.3,355.5 791.6,354.4 C794.9,353.3 799.2,354.4 801.9,355.4 C804.7,356.5 806.2,358.8 807.9,361 Z" />
+<!-- Youth Innovation Foot -->
+<path class="map-sand" d="M861.8,439.8 C863.9,442.7 865.2,447.7 863.9,451.5 C862.7,455.3 858.1,459.8 854.2,462.6 C850.3,465.5 845,467.7 840.5,468.4 C836,469.2 830.8,468.7 827.3,467.2 C823.9,465.7 821.4,462.6 819.7,459.5 C818,456.4 816.4,452.5 817.2,448.6 C817.9,444.7 820.7,439 824.4,436.2 C828.1,433.4 835,432.1 839.5,431.8 C844,431.5 847.8,433.1 851.5,434.4 C855.2,435.8 859.7,437 861.8,439.8 Z" />
+<!-- Tongue Stepping Isle 1 -->
+<path class="map-sand" d="M909.6,298.1 C909.2,300 907.2,302.1 905.1,303.3 C903.1,304.5 900,305.4 897.3,305.4 C894.6,305.3 891.2,304.3 889,303.1 C886.7,301.9 885.1,300 883.8,298.1 C882.4,296.2 881,294.1 881,292 C881,290 881.9,287.1 883.9,285.9 C885.9,284.7 890,284.6 892.8,284.9 C895.5,285.2 898.1,286.5 900.5,287.6 C902.9,288.7 905.6,289.9 907.2,291.6 C908.7,293.4 909.9,296.1 909.6,298.1 Z" />
+<!-- Tongue Stepping Isle 2 -->
+<path class="map-sand" d="M948.9,313.7 C948.4,315.7 946.8,317.9 944.8,319 C942.8,320 939.3,320.3 936.7,320 C934,319.8 931.4,318.4 929.1,317.2 C926.7,316 924,314.7 922.4,312.8 C920.8,310.9 919.2,307.8 919.7,305.9 C920.2,304 923.2,302.2 925.5,301.3 C927.8,300.5 930.8,300.6 933.5,300.8 C936.1,300.9 939.1,301.1 941.5,302.1 C943.9,303.2 946.7,305.2 948,307.1 C949.2,309.1 949.5,311.8 948.9,313.7 Z" />
+<!-- Tongue Stepping Isle 3 -->
+<path class="map-sand" d="M995.2,334.9 C994.4,337 991.8,338.9 989.4,339.7 C987,340.6 983.9,340.2 981,340 C978.2,339.8 975.1,339.7 972.4,338.5 C969.7,337.3 965.9,334.9 964.7,332.7 C963.6,330.5 964.4,327.2 965.4,325.3 C966.5,323.3 969.1,322 971.3,321 C973.5,319.9 976.1,318.9 978.9,319 C981.6,319 985.2,319.9 987.8,321.4 C990.3,322.8 992.7,325.3 993.9,327.5 C995.2,329.8 995.9,332.9 995.2,334.9 Z" />
+<!-- Tongue Stepping Isle 4 -->
+<path class="map-sand" d="M1044.8,361 C1043.5,362.9 1040.6,363.9 1038.2,365 C1035.8,366 1033.3,367.2 1030.3,367.2 C1027.3,367.2 1022.7,366.5 1020.1,364.8 C1017.5,363 1015.6,359.3 1014.9,356.7 C1014.2,354.2 1015.1,351.5 1016.1,349.4 C1017.2,347.3 1018.7,345.1 1020.9,344 C1023.2,342.9 1026.7,342.4 1029.7,342.7 C1032.7,343.1 1036.4,344.3 1039.1,346.1 C1041.8,347.8 1044.9,350.7 1045.9,353.2 C1046.8,355.6 1046.1,359 1044.8,361 Z" />
+<!-- Tongue Stepping Isle 5 -->
+<path class="map-sand" d="M1099.2,391.6 C1098.1,393.9 1097.1,396.3 1094.7,397.7 C1092.3,399.1 1088.2,400.6 1084.8,400 C1081.4,399.4 1076.9,396.6 1074.3,394.2 C1071.7,391.8 1070.1,388.5 1069.3,385.7 C1068.4,383 1068.2,379.9 1069.2,377.6 C1070.2,375.4 1072.7,373.5 1075.4,372.4 C1078.1,371.3 1081.7,370.8 1085.2,371.3 C1088.7,371.8 1093.6,373.1 1096.3,375.2 C1099.1,377.4 1101.1,381.5 1101.6,384.2 C1102.1,387 1100.4,389.4 1099.2,391.6 Z" />
+<!-- Paradise Atoll Lagoon Tip -->
+<path class="map-sand" d="M1169,431.4 C1168.6,436.1 1166.8,442.6 1163.1,445.7 C1159.4,448.8 1152.2,450.3 1146.9,450.1 C1141.7,450 1135.8,447.5 1131.6,444.6 C1127.3,441.8 1123.3,437.3 1121.6,433 C1119.9,428.7 1120.3,423.2 1121.4,418.7 C1122.5,414.2 1124.8,409.4 1128.4,406 C1132,402.5 1137.8,398.4 1142.9,398.1 C1148.1,397.9 1155.2,401.2 1159,404.5 C1162.9,407.8 1164.3,413.3 1166,417.8 C1167.7,422.3 1169.5,426.8 1169,431.4 Z" />
+</g>
+<!-- Dorsal Ridge Crest Spikes on the Back Islands -->
+<g class="map-reef" opacity="0.85">
+<polygon points="482,274 490,259 498,274" />
+<polygon points="542,238 550,223 558,238" />
+<polygon points="612,222 620,207 628,222" />
+<polygon points="682,233 690,218 698,233" />
+</g>
+<!-- Golden Casque Crest Spire -->
+<path class="map-reef" d="M752,175 L760,135 L768,175 Z" />
+<circle cx="760" cy="135" r="3.5" fill="#c29a57" class="twinkle" />
+<!-- Spiral Tail Deepwater Harbor Basin -->
+<ellipse cx="270" cy="380" rx="36" ry="36" class="map-sea-deep" />
+<g stroke="#ffffff" stroke-width="1.8">
+<line x1="250" y1="380" x2="290" y2="380" />
+<line x1="270" y1="360" x2="270" y2="400" />
+</g>
+<!-- Glass-Domed Central Grand Pavilion -->
+<g transform="translate(585, 305)">
+<ellipse cx="0" cy="0" rx="36" ry="20" fill="#002244" opacity="0.8" />
+<ellipse cx="0" cy="0" rx="30" ry="16" fill="#38bdf8" filter="url(#glass-glow)" opacity="0.85" />
+<ellipse cx="0" cy="0" rx="20" ry="11" fill="none" stroke="#ffffff" stroke-width="1.4" />
+<line x1="-30" y1="0" x2="30" y2="0" stroke="#ffffff" stroke-width="1.6" />
+<line x1="0" y1="-16" x2="0" y2="16" stroke="#ffffff" stroke-width="1.6" />
+<circle cx="0" cy="0" r="4.5" fill="#f5c46e" class="twinkle" />
+</g>
+<!-- Revolving 360 Degree Observation Eye Dome -->
+<g transform="translate(800, 230)">
+<circle cx="0" cy="0" r="16" fill="#0f172a" stroke="#ffffff" stroke-width="1.5" />
+<circle cx="0" cy="0" r="11" fill="#38bdf8" opacity="0.9" />
+<circle cx="3" cy="-3" r="3.5" fill="#ffffff" />
+</g>
+<!-- International Youth Innovation Center Campus -->
+<rect x="826" y="442" width="28" height="16" rx="3" class="map-urban" />
+<rect x="832" y="446" width="16" height="8" rx="2" class="map-greenery" />
+<!-- Marine Biology and Dolphin Station -->
+<circle cx="725" cy="480" r="12" class="map-sea-lagoon" stroke="#ffffff" stroke-width="1.6" />
+<path d="M721,477 C729,473 732,484 725,486" stroke="#0284c7" stroke-width="2" fill="none" />
+<!-- Experimental Floating Eco-Communities -->
+<g fill="#2dd4bf" stroke="#ffffff" stroke-width="1">
+<rect x="388" y="500" width="10" height="10" rx="2" />
+<rect x="404" y="502" width="10" height="10" rx="2" />
+<rect x="394" y="514" width="10" height="10" rx="2" />
+</g>
+<!-- Renewable Marine Power Hub -->
+<g transform="translate(505, 525)">
+<circle cx="0" cy="0" r="11" fill="#0284c7" stroke="#ffffff" stroke-width="1.4" />
+<path d="M0,-8 L0,8 M-8,0 L8,0" stroke="#ffffff" stroke-width="1.8" class="spin" />
+</g>
+<!-- Paradise Islands Overwater Bungalows and Coral Nursery -->
+<ellipse cx="1145" cy="425" rx="28" ry="24" fill="none" stroke="#c29a57" stroke-width="2.5" stroke-dasharray="3 4" />
+<ellipse cx="1145" cy="425" rx="14" ry="12" class="map-sea-lagoon" stroke="#2dd4bf" stroke-width="1.6" />
+<circle cx="1145" cy="425" r="3.5" fill="#38bdf8" class="bob" />
+<!-- Overwater Boardwalk linking Tongue Atolls -->
+<path d="M840,285 L895,295 L935,310 L980,330 L1030,355 L1085,385 L1145,425" fill="none" stroke="#c29a57" stroke-width="2" stroke-linecap="round" />
+<!-- Sub-Sea Metro Tunnel (Nova Aurelia to Portal, Pavilion, Eye Dome and Spiral Marina) -->
+<g fill="none" stroke="#f5c46e" stroke-dasharray="8 4">
+<path d="M585,670 L585,375 L585,305" stroke-width="3" />
+<path d="M585,305 C680,290 740,260 800,230" stroke-width="2.5" />
+<path d="M585,375 C490,380 400,350 315,335" stroke-width="2.5" />
+</g>
+<circle cx="585" cy="375" r="5" fill="#f5c46e" stroke="#ffffff" stroke-width="2" />
+<circle cx="585" cy="305" r="5" fill="#f5c46e" stroke="#ffffff" stroke-width="2" />
+<circle cx="800" cy="230" r="5" fill="#f5c46e" stroke="#ffffff" stroke-width="2" />
+<circle cx="315" cy="335" r="5" fill="#f5c46e" stroke="#ffffff" stroke-width="2" />
+<!-- Autonomous Electric Water Taxi Marine Paths -->
+<g class="map-ferry">
+<path d="M205,375 C160,460 250,580 400,510" />
+<path d="M725,480 C840,550 980,500 1085,385" />
+<path d="M760,195 C860,140 1020,200 1085,385" />
+</g>
+<!-- Geographic Labels -->
+<g class="map-label-group">
+<text class="map-label-text" x="585" y="341">Központi Nagypavilon</text>
+<text class="map-label-text" x="270" y="445">Spirál Farok Jachtkikötő</text>
+<text class="map-label-text" x="1080" y="315">Paradise Islands Villák</text>
+</g>
+<!-- 8 INTERACTIVE HOTSPOT PINS -->
+<!-- Hotspot 1: Glass-Domed Central Grand Pavilion -->
+<g class="map-hotspot" data-spot="1" transform="translate(585, 305)">
+<circle class="hotspot-pulse" r="17" fill="#38bdf8" opacity="0.6" />
+<circle class="hotspot-core" r="12" />
+<text>1</text>
+</g>
+<!-- Hotspot 2: Revolving 360 Degree Eye Dome -->
+<g class="map-hotspot" data-spot="2" transform="translate(800, 230)">
+<circle class="hotspot-pulse" r="16" fill="#f5c46e" opacity="0.6" />
+<circle class="hotspot-core" r="11" />
+<text>2</text>
+</g>
+<!-- Hotspot 3: Youth Innovation Center -->
+<g class="map-hotspot" data-spot="3" transform="translate(840, 450)">
+<circle class="hotspot-pulse" r="16" fill="#38bdf8" opacity="0.6" />
+<circle class="hotspot-core" r="11" />
+<text>3</text>
+</g>
+<!-- Hotspot 4: Spiral Tail Marina -->
+<g class="map-hotspot" data-spot="4" transform="translate(270, 380)">
+<circle class="hotspot-pulse" r="16" fill="#0284c7" opacity="0.6" />
+<circle class="hotspot-core" r="11" />
+<text>4</text>
+</g>
+<!-- Hotspot 5: Paradise Islands Overwater Villas -->
+<g class="map-hotspot" data-spot="5" transform="translate(1145, 425)">
+<circle class="hotspot-pulse" r="16" fill="#c29a57" opacity="0.6" />
+<circle class="hotspot-core" r="11" />
+<text>5</text>
+</g>
+<!-- Hotspot 6: Marine Biology and Dolphin Station -->
+<g class="map-hotspot" data-spot="6" transform="translate(725, 480)">
+<circle class="hotspot-pulse" r="16" fill="#22c55e" opacity="0.6" />
+<circle class="hotspot-core" r="11" />
+<text>6</text>
+</g>
+<!-- Hotspot 7: Floating Eco-District -->
+<g class="map-hotspot" data-spot="7" transform="translate(400, 510)">
+<circle class="hotspot-pulse" r="16" fill="#2dd4bf" opacity="0.6" />
+<circle class="hotspot-core" r="11" />
+<text>7</text>
+</g>
+<!-- Hotspot 8: Sub-Sea Metro Tunnel Portal -->
+<g class="map-hotspot" data-spot="8" transform="translate(585, 375)">
+<circle class="hotspot-pulse" r="16" fill="#f5c46e" opacity="0.6" />
+<circle class="hotspot-core" r="11" />
+<text>8</text>
+</g>
+</svg>
                     </div>
                 </div>
                 <div class="island-hotspots-grid">
