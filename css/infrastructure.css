@@ -1034,8 +1034,6 @@
 
 .island-map-canvas .map-sand {
   fill: #eeddb2;
-  stroke: #ddc792;
-  stroke-width: 0.8;
 }
 
 .island-map-canvas .map-sand-light {
@@ -1113,11 +1111,6 @@
   fill: none;
   stroke-linecap: round;
   stroke-linejoin: round;
-}
-
-.island-map-canvas .map-frond-edge {
-  stroke: #ddc792;
-  stroke-width: 21;
 }
 
 .island-map-canvas .map-frond {
@@ -1383,7 +1376,7 @@
 /* Interactive Hotspot Feature Cards Grid */
 .island-hotspots-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 1.25rem;
   margin-top: 2rem;
 }
