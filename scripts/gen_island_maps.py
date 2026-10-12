@@ -6,9 +6,9 @@ Design principles (Dubai-inspired artificial islands):
   with trunk and roads seamlessly connected.
 - World Islands: archipelago of multiple distinct islands (larger continent cores + smaller islands)
   forming an instantly recognizable world map with zero overlapping islands.
-- Chameleon Islands: archipelago of multiple distinct islands (larger body/head/limbs + smaller stepping stones)
-  forming an instantly recognizable chameleon silhouette (spiral tail, arched back, casque, turret eye, tongue)
-  with zero overlapping islands.
+- Chameleon Islands: a chameleon gripping a branch, modelled as one continuous silhouette (snout, casque,
+  turret eye, arched back, spiral tail, four limbs) cut by narrow channels into many tightly grouped larger
+  and smaller islands, plus crest islets, tongue stepping stones and a branch breakwater (zero overlaps).
 """
 import math
 import re
@@ -95,7 +95,7 @@ L = {
     "en": {
         "palm_aria": "Detailed map of Palm Island infrastructure: curved palm leaves branching from central spine, trunk and protective crescent",
         "world_aria": "Detailed map of World Islands infrastructure: archipelago of multiple distinct islands arranged into the seven continents",
-        "cham_aria": "Detailed map of Chameleon Islands infrastructure: archipelago of multiple distinct islands forming a giant chameleon silhouette",
+        "cham_aria": "Detailed map of Chameleon Islands infrastructure: tightly grouped larger and smaller islands forming a chameleon gripping a branch",
         "crescent": "Crescent Barrier",
         "mainland": "Nova Aurelia Mainland",
         "hotel": "Hotel Khalifa",
@@ -107,11 +107,12 @@ L = {
         "pavilion": "Grand Central Pavilion",
         "marina": "Spiral Tail Marina",
         "villas": "Paradise Islands Villas",
+        "branch": "Branch Breakwater",
     },
     "hu": {
         "palm_aria": "A Pálma-sziget részletes infrastruktúra-térképe: központi törzsből kinyíló ívelt pálmalevelek, törzs és védő félhold",
         "world_aria": "A Világ-szigetek részletes infrastruktúra-térképe: több különálló szigetből álló kontinens alakú szigetcsoport",
-        "cham_aria": "A Kaméleon-szigetek részletes infrastruktúra-térképe: több különálló szigetből álló óriás kaméleon alakú szigetcsoport",
+        "cham_aria": "A Kaméleon-szigetek részletes infrastruktúra-térképe: szorosan csoportosuló kisebb és nagyobb szigetekből álló, ágon kapaszkodó kaméleon",
         "crescent": "Félhold védőgát",
         "mainland": "Nova Aurelia szárazföld",
         "hotel": "Hotel Khalifa",
@@ -123,6 +124,7 @@ L = {
         "pavilion": "Központi Nagypavilon",
         "marina": "Spirál Farok Jachtkikötő",
         "villas": "Paradise Islands Villák",
+        "branch": "Ág-hullámtörő",
     },
 }
 
@@ -788,61 +790,337 @@ def world_svg(t):
 
 
 # ==========================================================================
-# 3. CHAMELEON ISLANDS (RECOGNIZABLE CHAMELEON SILHOUETTE: ZERO OVERLAPS)
+# 3. CHAMELEON ISLANDS (CHAMELEON ON A BRANCH: TIGHTLY GROUPED ARCHIPELAGO)
 # ==========================================================================
-CHAM_ISLES = [
-    # === 1. SPIRAL TAIL HARBOR (10 distinct curving islands in an inward circular spiral) ===
-    {"name": "Tail Rump Base", "cx": 415, "cy": 385, "rx": 26, "ry": 18, "rot": 30, "shape": "taper"},
-    {"name": "Tail Arc 1", "cx": 365, "cy": 435, "rx": 24, "ry": 16, "rot": 45, "shape": "arc"},
-    {"name": "Tail Arc 2", "cx": 305, "cy": 465, "rx": 22, "ry": 15, "rot": 15, "shape": "arc"},
-    {"name": "Tail South Turn", "cx": 240, "cy": 455, "rx": 20, "ry": 14, "rot": -25, "shape": "arc"},
-    {"name": "Tail Outer West 1", "cx": 190, "cy": 405, "rx": 18, "ry": 14, "rot": -65, "shape": "arc"},
-    {"name": "Tail Outer West 2", "cx": 190, "cy": 340, "rx": 18, "ry": 13, "rot": -105, "shape": "arc"},
-    {"name": "Tail Inner Top 1", "cx": 230, "cy": 290, "rx": 17, "ry": 13, "rot": -145, "shape": "arc"},
-    {"name": "Tail Inner Top 2", "cx": 290, "cy": 285, "rx": 16, "ry": 12, "rot": -175, "shape": "arc"},
-    {"name": "Tail Inner Coil Isle", "cx": 335, "cy": 330, "rx": 15, "ry": 12, "rot": 135, "shape": "arc"},
-    {"name": "Tail Spiral Center Marina", "cx": 285, "cy": 365, "rx": 18, "ry": 16, "rot": 0, "hub": "marina"},
+# The chameleon silhouette is modelled as a continuous "tube" (snout -> body -> spiral tail)
+# with a per-point dorsal / ventral half-width. The tube is then cut into many separate
+# islands by narrow dredged channels (transverse cuts + a lateral belly channel), so the
+# islands sit tightly together like the World continents and read as one animal.
+CH_GAP = 7  # width of the dredged channels between neighbouring islands
 
-    # === 2. MAIN BODY (Arched Back, Dorsal Ridge, Grand Pavilion Core) ===
-    {"name": "Dorsal Crest 1", "cx": 450, "cy": 280, "rx": 19, "ry": 14, "rot": -25, "dorsal": True, "shape": "spine"},
-    {"name": "Dorsal Crest 2", "cx": 510, "cy": 245, "rx": 21, "ry": 15, "rot": -12, "dorsal": True, "shape": "spine"},
-    {"name": "Dorsal Crest 3", "cx": 570, "cy": 230, "rx": 23, "ry": 16, "rot": 0, "dorsal": True, "shape": "spine"},
-    {"name": "Dorsal Crest 4", "cx": 630, "cy": 240, "rx": 21, "ry": 15, "rot": 12, "dorsal": True, "shape": "spine"},
-    {"name": "Dorsal Crest 5", "cx": 690, "cy": 260, "rx": 19, "ry": 14, "rot": 25, "dorsal": True, "shape": "spine"},
 
-    {"name": "Torso Posterior Rump", "cx": 470, "cy": 345, "rx": 36, "ry": 26, "rot": 10, "green": True},
-    {"name": "Grand Pavilion Master Core", "cx": 565, "cy": 320, "rx": 50, "ry": 33, "rot": 0, "green": True, "hub": "pavilion"},
-    {"name": "Torso Anterior Shoulder", "cx": 675, "cy": 325, "rx": 36, "ry": 27, "rot": -5, "green": True},
-    {"name": "Abdomen Metro Hub Isle", "cx": 570, "cy": 395, "rx": 44, "ry": 22, "rot": 0, "hub": "metro"},
+def _catmull_dense(knots, step=3.0):
+    """Densely sample a Catmull-Rom spline through knots (x, y, wt, wb); widths interpolate linearly."""
+    pad = [knots[0]] + list(knots) + [knots[-1]]
+    out = []
+    for i in range(1, len(pad) - 2):
+        p0, p1, p2, p3 = pad[i - 1], pad[i], pad[i + 1], pad[i + 2]
+        m = max(2, int(math.hypot(p2[0] - p1[0], p2[1] - p1[1]) / step))
+        for j in range(m):
+            u = j / m
 
-    # === 3. HEAD, CASQUE & REVOLVING TURRET EYE ===
-    {"name": "Casque Helmet Spire", "cx": 745, "cy": 185, "rx": 16, "ry": 32, "rot": -25, "casque": True, "shape": "casque"},
-    {"name": "Turret Eye Dome Isle", "cx": 810, "cy": 225, "rx": 18, "ry": 18, "rot": 0, "hub": "eye"},
-    {"name": "Head Core Isle", "cx": 760, "cy": 280, "rx": 34, "ry": 25, "rot": -10, "green": True},
-    {"name": "Snout and Mouth Isle", "cx": 845, "cy": 285, "rx": 26, "ry": 18, "rot": 10, "shape": "taper"},
-    {"name": "Gular Throat Pouch", "cx": 765, "cy": 360, "rx": 24, "ry": 16, "rot": 25, "shape": "arc"},
+            def cr(a, b, c, d):
+                return 0.5 * (2 * b + (c - a) * u + (2 * a - 5 * b + 4 * c - d) * u * u + (3 * b - a - 3 * c + d) * u ** 3)
 
-    # === 4. FOUR DISTINCT LIMBS & CLAWS ===
-    {"name": "Hindlimb Upper Thigh", "cx": 450, "cy": 430, "rx": 16, "ry": 22, "rot": 30, "shape": "arc"},
-    {"name": "Hindlimb Foot Eco-District", "cx": 420, "cy": 505, "rx": 24, "ry": 18, "rot": 15, "hub": "eco"},
-    {"name": "Hindlimb Toe West", "cx": 390, "cy": 545, "rx": 10, "ry": 8, "rot": 20},
-    {"name": "Hindlimb Toe East", "cx": 445, "cy": 545, "rx": 10, "ry": 8, "rot": -10},
+            out.append((
+                cr(p0[0], p1[0], p2[0], p3[0]),
+                cr(p0[1], p1[1], p2[1], p3[1]),
+                p1[2] + (p2[2] - p1[2]) * u,
+                p1[3] + (p2[3] - p1[3]) * u,
+            ))
+    out.append(tuple(knots[-1]))
+    return out
 
-    {"name": "Forelimb Upper Arm", "cx": 715, "cy": 395, "rx": 16, "ry": 22, "rot": -25, "shape": "arc"},
-    {"name": "Forelimb Foot Innovation Campus", "cx": 755, "cy": 475, "rx": 24, "ry": 18, "rot": -15, "hub": "youth"},
-    {"name": "Forelimb Toe West", "cx": 730, "cy": 525, "rx": 10, "ry": 8, "rot": -30},
-    {"name": "Forelimb Toe East", "cx": 785, "cy": 515, "rx": 10, "ry": 8, "rot": 15},
 
-    # === 5. PROJECTING TONGUE ARCHIPELAGO (Stepping stones to Paradise Villas) ===
-    {"name": "Tongue Stepping Isle 1", "cx": 905, "cy": 295, "rx": 14, "ry": 10, "rot": 12},
-    {"name": "Tongue Stepping Isle 2", "cx": 950, "cy": 315, "rx": 15, "ry": 11, "rot": 18},
-    {"name": "Tongue Stepping Isle 3", "cx": 1000, "cy": 340, "rx": 16, "ry": 12, "rot": 22},
-    {"name": "Tongue Stepping Isle 4", "cx": 1055, "cy": 370, "rx": 18, "ry": 13, "rot": 25},
-    {"name": "Paradise Atoll Lagoon Tip", "cx": 1125, "cy": 415, "rx": 28, "ry": 24, "rot": 15, "hub": "villas"},
-]
+class Tube:
+    """A centre-line with dorsal (wt) and ventral (wb) half-widths, addressable by arc length."""
+
+    def __init__(self, knots):
+        self.p = _catmull_dense(knots)
+        self.s = [0.0]
+        for a, b in zip(self.p, self.p[1:]):
+            self.s.append(self.s[-1] + math.hypot(b[0] - a[0], b[1] - a[1]))
+        self.L = self.s[-1]
+        k = len(self.p)
+        self.nrm = []
+        for i in range(k):
+            a, b = self.p[max(0, i - 1)], self.p[min(k - 1, i + 1)]
+            tx, ty = b[0] - a[0], b[1] - a[1]
+            ln = math.hypot(tx, ty) or 1.0
+            self.nrm.append((-ty / ln, tx / ln))  # points to the dorsal side
+
+    def at(self, s):
+        s = min(max(s, 0.0), self.L)
+        lo, hi = 0, len(self.s) - 1
+        while hi - lo > 1:
+            mid = (lo + hi) // 2
+            if self.s[mid] <= s:
+                lo = mid
+            else:
+                hi = mid
+        seg = (self.s[hi] - self.s[lo]) or 1.0
+        u = (s - self.s[lo]) / seg
+        a, b = self.p[lo], self.p[hi]
+        na, nb = self.nrm[lo], self.nrm[hi]
+        nx, ny = na[0] + (nb[0] - na[0]) * u, na[1] + (nb[1] - na[1]) * u
+        ln = math.hypot(nx, ny) or 1.0
+        return (a[0] + (b[0] - a[0]) * u, a[1] + (b[1] - a[1]) * u,
+                a[2] + (b[2] - a[2]) * u, a[3] + (b[3] - a[3]) * u, nx / ln, ny / ln)
+
+    def off(self, s, f):
+        x, y, wt, wb, nx, ny = self.at(s)
+        d = f(wt, wb) if callable(f) else f
+        return (x + nx * d, y + ny * d)
+
+    def s_at_x(self, x_target):
+        """First arc length where the (westward running) centre-line crosses x_target."""
+        for i in range(1, len(self.p)):
+            x0, x1 = self.p[i - 1][0], self.p[i][0]
+            if (x0 - x_target) * (x1 - x_target) <= 0 and x0 != x1:
+                return self.s[i - 1] + (self.s[i] - self.s[i - 1]) * (x0 - x_target) / (x0 - x1)
+        return self.L
+
+    def piece(self, s0, s1, lo=None, hi=None, inset=0.0, step=8.0):
+        """Closed outline of the tube between s0..s1 and lateral offsets lo..hi (functions of wt, wb)."""
+        lo = lo or (lambda wt, wb: -wb)
+        hi = hi or (lambda wt, wb: wt)
+        s0, s1 = s0 + inset, s1 - inset
+        if s1 - s0 < 2:
+            return None
+        flo = (lambda wt, wb: lo(wt, wb) + inset)
+        fhi = (lambda wt, wb: hi(wt, wb) - inset)
+        _, _, wt, wb, _, _ = self.at((s0 + s1) / 2)
+        if fhi(wt, wb) - flo(wt, wb) < 3:
+            return None
+        n_s = max(2, int((s1 - s0) / step))
+        ss = [s0 + (s1 - s0) * i / n_s for i in range(n_s + 1)]
+        top = [self.off(s, fhi) for s in ss]
+        bot = [self.off(s, flo) for s in reversed(ss)]
+
+        def cap(s, f_from, f_to):
+            x, y, wt, wb, nx, ny = self.at(s)
+            a, b = f_from(wt, wb), f_to(wt, wb)
+            k = max(1, int(abs(b - a) / step))
+            return [(x + nx * (a + (b - a) * j / k), y + ny * (a + (b - a) * j / k)) for j in range(1, k)]
+
+        return top + cap(s1, fhi, flo) + bot + cap(s0, flo, fhi)
+
+
+def _chaikin(pts, it=1):
+    for _ in range(it):
+        q = []
+        for i in range(len(pts)):
+            a, b = pts[i], pts[(i + 1) % len(pts)]
+            q.append((0.75 * a[0] + 0.25 * b[0], 0.75 * a[1] + 0.25 * b[1]))
+            q.append((0.25 * a[0] + 0.75 * b[0], 0.25 * a[1] + 0.75 * b[1]))
+        pts = q
+    return pts
+
+
+def smooth_closed(pts, rounds=1):
+    """Round the corners (Chaikin) and emit a smooth closed cubic Bezier path."""
+    pts = _chaikin(pts, rounds)
+    k = len(pts)
+    d = [f"M{pt(pts[0])}"]
+    for i in range(k):
+        p0, p1, p2, p3 = pts[(i - 1) % k], pts[i], pts[(i + 1) % k], pts[(i + 2) % k]
+        c1 = (p1[0] + (p2[0] - p0[0]) / 6.0, p1[1] + (p2[1] - p0[1]) / 6.0)
+        c2 = (p2[0] - (p3[0] - p1[0]) / 6.0, p2[1] - (p3[1] - p1[1]) / 6.0)
+        d.append(f"C{pt(c1)} {pt(c2)} {pt(p2)}")
+    return " ".join(d) + " Z"
+
+
+def circle_d(cx, cy, r):
+    return f"M{n(cx - r)},{n(cy)} a{n(r)},{n(r)} 0 1 0 {n(2 * r)},0 a{n(r)},{n(r)} 0 1 0 {n(-2 * r)},0 Z"
+
+
+def _spiral_knots(cx, cy, r0, r1, w0, w1, turns_rad, step=0.26):
+    """Logarithmic spiral starting due north of (cx, cy), heading west and curling inward (ventrally)."""
+    k_r = math.log(r0 / r1) / turns_rad
+    k_w = math.log(w0 / w1) / turns_rad
+    out = []
+    phi = 0.0
+    while phi <= turns_rad + 1e-6:
+        th = 1.5 * math.pi - phi
+        r = r0 * math.exp(-k_r * phi)
+        w = w0 * math.exp(-k_w * phi)
+        out.append((cx + r * math.cos(th), cy + r * math.sin(th), w, w))
+        phi += step
+    return out
+
+
+# Head -> body -> tail centre-line knots (x, y, dorsal half-width, ventral half-width)
+CH_SPIRAL = (368, 418)
+CH_BODY_KNOTS = [
+    (962, 269, 7, 8),      # blunt snout tip
+    (946, 264, 17, 20),
+    (908, 255, 30, 35),
+    (868, 252, 36, 44),    # head (turret eye)
+    (826, 257, 36, 44),    # back of the head
+    (786, 267, 31, 38),    # neck
+    (742, 262, 44, 51),    # shoulder
+    (682, 248, 54, 58),
+    (612, 242, 58, 60),    # crest of the arched back
+    (542, 250, 55, 57),
+    (476, 270, 45, 48),    # hip
+    (428, 288, 30, 31),    # tail base
+] + _spiral_knots(CH_SPIRAL[0], CH_SPIRAL[1], 124, 24, 28, 6, 7.2)
+
+# Limbs (shoulder / hip -> elbow / knee -> wrist / ankle): thigh and shin are separate islands
+CH_LIMBS = {
+    "hind": [(520, 320, 16, 16), (566, 394, 13, 13), (536, 476, 10, 10)],
+    "fore": [(744, 326, 16, 16), (704, 400, 13, 13), (746, 476, 10, 10)],
+}
+
+
+def branch_y(x):
+    """Gently arched branch breakwater running beneath the chameleon."""
+    return 545 - 35 * math.sin(math.pi * (x - 110) / 1000)
 
 
 def chameleon_svg(t):
+    g = CH_GAP
+    body = Tube(CH_BODY_KNOTS)
+    sx = body.s_at_x
+
+    sand, green = [], []
+
+    def add(poly, name, kind="sand", green_poly=None, hole=None):
+        if not poly:
+            return
+        d = smooth_closed(poly)
+        if hole:
+            d += " " + circle_d(*hole)
+        sand.append((name, d, kind, hole is not None))
+        if green_poly:
+            dg = smooth_closed(green_poly)
+            if hole:
+                dg += " " + circle_d(hole[0], hole[1], hole[2] + 6)
+            green.append((name, dg, hole is not None))
+
+    # ---- Transverse cuts along the head, body and tail ----------------------------------
+    cuts = [0.0, sx(886), sx(806), sx(754), sx(682), sx(546), sx(470)]
+    s = sx(470) + 70
+    seg_len = 66.0
+    while s < body.L - 30:
+        cuts.append(s)
+        seg_len = max(32.0, seg_len * 0.9)
+        s += seg_len
+    cuts.append(body.L)
+
+    lateral = lambda frac: (lambda wt, wb: wt - frac * (wt + wb))  # noqa: E731
+    split_mouth = lateral(0.55)
+    split_belly = lateral(0.62)
+    hg = g / 2.0
+
+    def above(f):
+        return lambda wt, wb: f(wt, wb) + hg
+
+    def below(f):
+        return lambda wt, wb: f(wt, wb) - hg
+
+    names_tail = iter(range(1, 40))
+    eye = (858, 242, 12)
+    hole = (eye[0], eye[1], eye[2] + 6)
+    road_ranges = []
+    bridge_lines = []
+
+    for i in range(len(cuts) - 1):
+        a = cuts[i] + (hg if i > 0 else 0)
+        b = cuts[i + 1] - (hg if i + 1 < len(cuts) - 1 else 0)
+        mid = (a + b) / 2
+        if i == 0:  # jaws: upper and lower, divided by the mouth channel
+            add(body.piece(a, b, lo=above(split_mouth)), "Upper Jaw Isle", green_poly=body.piece(a, b, lo=above(split_mouth), inset=7))
+            add(body.piece(a, b, hi=below(split_mouth)), "Lower Jaw Isle")
+        elif i == 1:  # back of the head, ringed lagoon around the turret eye
+            add(body.piece(a, b), "Head Crown Isle", green_poly=body.piece(a, b, inset=9), hole=hole)
+        elif i == 2:
+            add(body.piece(a, b), "Neck Isle", green_poly=body.piece(a, b, inset=9))
+        elif i in (3, 4, 5):  # shoulder, mid-back, rump: dorsal island + belly islands
+            label = {3: "Shoulder", 4: "Grand Pavilion Back", 5: "Rump"}[i]
+            add(body.piece(a, b, lo=above(split_belly)), f"{label} Dorsal Isle", green_poly=body.piece(a, b, lo=above(split_belly), inset=9))
+            belly_cuts = [a, b] if i != 4 else [a, (a + b) / 2, b]
+            for j in range(len(belly_cuts) - 1):
+                ba = belly_cuts[j] + (hg if j > 0 else 0)
+                bb = belly_cuts[j + 1] - (hg if j + 1 < len(belly_cuts) - 1 else 0)
+                add(body.piece(ba, bb, hi=below(split_belly)), f"{label} Belly Isle {j + 1}")
+                bm = (ba + bb) / 2
+                bridge_lines.append((body.off(bm, lambda wt, wb: split_belly(wt, wb) + hg + 5),
+                                     body.off(bm, lambda wt, wb: split_belly(wt, wb) - hg - 5)))
+        else:
+            k = next(names_tail)
+            _, _, wt, wb, _, _ = body.at(mid)
+            gp = body.piece(a, b, inset=8) if wt + wb > 26 else None
+            add(body.piece(a, b), f"Spiral Tail Isle {k}", green_poly=gp)
+        road_ranges.append((a, b))
+
+    # ---- Casque helmet and dorsal crest islets ---------------------------------------------
+    s_c0, s_c1 = sx(880), sx(796)
+    casque = [body.off(s_c0 + (s_c1 - s_c0) * j / 10, lambda wt, wb: wt + g) for j in range(11)]
+    casque_peak = (800, 172)
+    casque_poly = casque + [(casque_peak[0] - 4, casque_peak[1] + 6), casque_peak, (casque_peak[0] + 10, casque_peak[1] + 2)]
+    add(casque_poly, "Casque Helmet Isle")
+    casque_core = [(828, 208), (810, 186), (850, 209)]
+    green.append(("Casque Helmet Isle", smooth_closed(casque_core, 2), False))
+
+    for k, xc in enumerate(range(764, 470, -30), 1):
+        sc = sx(xc)
+        base_l = body.off(sc - 8, lambda wt, wb: wt + g)
+        base_r = body.off(sc + 8, lambda wt, wb: wt + g)
+        tip = body.off(sc, lambda wt, wb: wt + g + 15)
+        add([base_r, tip, base_l], f"Dorsal Crest Islet {k}", kind="crest")
+
+    # ---- Limbs: thigh / upper arm, shin / forearm and gripping claws ------------------------
+    limb_meta = {}
+    for limb, knots in CH_LIMBS.items():
+        tube = Tube(knots)
+        knee = tube.s[min(range(len(tube.p)), key=lambda q: math.hypot(tube.p[q][0] - knots[1][0], tube.p[q][1] - knots[1][1]))]
+        upper = "Hindlimb Thigh" if limb == "hind" else "Forelimb Upper Arm"
+        lower = "Hindlimb Shin" if limb == "hind" else "Forelimb Forearm"
+        add(tube.piece(0, knee - hg), f"{upper} Isle", green_poly=tube.piece(0, knee - hg, inset=7))
+        add(tube.piece(knee + hg, tube.L), f"{lower} Isle")
+        bridge_lines.append((tube.off(knee - hg - 5, 0), tube.off(knee + hg + 5, 0)))
+        top = tube.off(0, 0)
+        bridge_lines.append((top, (top[0], top[1] - 14)))
+        ax, ay = knots[-1][0], knots[-1][1]
+        for side in (-1, 1):  # zygodactyl foot: two claw bundles straddling the branch
+            ck = [(ax + side * 6, ay + 6, 5, 5), (ax + side * 18, ay + 12, 4.5, 4.5), (ax + side * 27, ay + 19, 2.5, 2.5)]
+            ct = Tube(ck)
+            add(ct.piece(0, ct.L), f"{lower} Claw {'East' if side > 0 else 'West'}")
+        limb_meta[limb] = {"upper_mid": tube.off(knee / 2, 0)}
+
+    # ---- Branch breakwater (with navigation channels) and leaf islets ----------------------
+    br_knots = [(x, branch_y(x), 9, 9) for x in range(110, 1111, 50)]
+    br_knots[0] = (110, branch_y(110), 4, 4)
+    br_knots[-1] = (1110, branch_y(1110), 4, 4)
+    branch = Tube(br_knots)
+    br_cut_x = [300, 640, 900]
+    br_cut_s = []
+    for xc in br_cut_x:
+        for q in range(1, len(branch.p)):
+            if branch.p[q - 1][0] <= xc <= branch.p[q][0]:
+                br_cut_s.append(branch.s[q])
+                break
+    br_cuts = [0.0] + br_cut_s + [branch.L]
+    gate_pts = []
+    for i in range(len(br_cuts) - 1):
+        a = br_cuts[i] + (5 if i > 0 else 0)
+        b = br_cuts[i + 1] - (5 if i + 1 < len(br_cuts) - 1 else 0)
+        add(branch.piece(a, b), f"Branch Breakwater {i + 1}", green_poly=branch.piece(a, b, inset=5.5))
+        if i > 0:
+            gate_pts.append((branch.off(a, 0), branch.off(br_cuts[i] - 5, 0)))
+
+    twig_r = Tube([(1006, branch_y(1006) - 13, 5, 5), (1034, 500, 4.5, 4.5), (1060, 482, 4, 4)])
+    add(twig_r.piece(0, twig_r.L), "East Twig Isle")
+    leaf_r = (1092, 458)
+    sand.append(("Marine Station Leaf Isle", smooth_island(leaf_r[0], leaf_r[1], 26, 13, rot=-38, seed=5), "sand", False))
+    green.append(("Marine Station Leaf Isle", smooth_island(leaf_r[0], leaf_r[1], 15, 6, rot=-38, seed=9), False))
+    twig_l = Tube([(176, branch_y(176) + 14, 5, 5), (160, 574, 4.5, 4.5), (146, 586, 4, 4)])
+    add(twig_l.piece(0, twig_l.L), "West Twig Isle")
+    leaf_l = (122, 604)
+    sand.append(("Power Hub Leaf Isle", smooth_island(leaf_l[0], leaf_l[1], 24, 12, rot=35, seed=7), "sand", False))
+    green.append(("Power Hub Leaf Isle", smooth_island(leaf_l[0], leaf_l[1], 14, 6, rot=35, seed=11), False))
+
+    # ---- Projecting tongue: stepping-stone islets to the Paradise atoll --------------------
+    tongue = [(990, 275, 11, 5, 8), (1018, 280, 11, 5, 10), (1046, 285, 11, 5.5, 10), (1074, 289, 11, 6, 8)]
+    for k, (x, y, rx, ry, rot) in enumerate(tongue):
+        sand.append((f"Tongue Stepping Islet {k + 1}", smooth_island(x, y, rx, ry, rot=rot, seed=k + 2), "sand", False))
+    villas = (1122, 294)
+    sand.append(("Paradise Atoll", smooth_island(villas[0], villas[1], 27, 25, rot=10, seed=4) + " " + circle_d(villas[0], villas[1], 13), "sand", True))
+
+    # ---------------------------------------------------------------------------------------
+    # SVG OUTPUT
+    # ---------------------------------------------------------------------------------------
     o = []
     o.append(f'<svg class="ill" viewBox="0 0 1200 700" role="img" aria-label="{t["cham_aria"]}">')
     o += [
@@ -853,8 +1131,8 @@ def chameleon_svg(t):
         '<stop offset="100%" stop-color="#1d739d" />',
         "</linearGradient>",
         '<radialGradient id="cham-glow" cx="50%" cy="50%" r="50%">',
-        '<stop offset="0%" stop-color="#4ade80" stop-opacity="0.32" />',
-        '<stop offset="60%" stop-color="#38bdf8" stop-opacity="0.2" />',
+        '<stop offset="0%" stop-color="#4ade80" stop-opacity="0.3" />',
+        '<stop offset="60%" stop-color="#38bdf8" stop-opacity="0.18" />',
         '<stop offset="100%" stop-color="#093153" stop-opacity="0" />',
         "</radialGradient>",
         '<filter id="glass-glow" x="-20%" y="-20%" width="140%" height="140%">',
@@ -865,59 +1143,92 @@ def chameleon_svg(t):
         "<!-- Coastal Bay Water Background -->",
         '<rect width="1200" height="700" fill="url(#cham-sea)" />',
         "<!-- Biological Eco-Glow in Lagoon -->",
-        '<ellipse cx="640" cy="360" rx="520" ry="290" fill="url(#cham-glow)" />',
+        '<ellipse cx="620" cy="370" rx="540" ry="290" fill="url(#cham-glow)" />',
         "<!-- Outer Protective Bio-Dyke Reef Buffer -->",
-        '<ellipse cx="650" cy="365" rx="535" ry="275" class="map-reef" opacity="0.45" stroke-dasharray="10 8" stroke-width="2.5" fill="none" />',
+        '<ellipse cx="620" cy="372" rx="560" ry="290" class="map-reef" opacity="0.45" stroke-dasharray="10 8" stroke-width="2.5" fill="none" />',
+        "<!-- Shallow Reef Halo hugging the Archipelago -->",
+        '<g fill="none" stroke="#2ba29e" stroke-linecap="round" stroke-linejoin="round" opacity="0.35">',
+        f'<path d="{poly_path([body.off(s, lambda wt, wb: wt + 4) for s in [body.L * q / 120 for q in range(121)]], close=False)}" stroke-width="16" />',
+        "</g>",
         "<!-- Mainland Nova Aurelia Coastline (Bottom) -->",
         '<path class="map-sand" d="M0,656 Q300,642 600,646 Q900,642 1200,656 L1200,700 L0,700 Z" />',
         '<rect x="0" y="670" width="1200" height="30" class="map-urban" />',
         '<line x1="0" y1="670" x2="1200" y2="670" stroke="#ffffff" stroke-width="2.5" />',
     ]
 
-    # MULTIPLE DISTINCT CHAMELEON ISLANDS (VARIED SHAPES, ZERO OVERLAPS)
-    o.append("<!-- 37 DISTINCT ISLANDS FORMING AN ICONIC CHAMELEON (ZERO OVERLAPS) -->")
+    o.append(f"<!-- {len(sand)} DISTINCT ISLANDS FORMING A CHAMELEON ON A BRANCH (ZERO OVERLAPS) -->")
     o.append('<g id="chameleon-islands-group">')
-    for i, isle in enumerate(CHAM_ISLES):
-        shape = isle.get("shape", "organic")
-        d = smooth_island(isle["cx"], isle["cy"], isle["rx"], isle["ry"], rot=isle.get("rot", 0), seed=i + 3, shape=shape)
-        o.append(f'<!-- {isle["name"]} -->')
-        o.append(f'<path class="map-sand" d="{d}" />')
-        if isle.get("green"):
-            d_grn = smooth_island(isle["cx"], isle["cy"], isle["rx"] * 0.65, isle["ry"] * 0.65, rot=isle.get("rot", 0), seed=i + 20, shape=shape)
-            o.append(f'<path class="map-greenery" d="{d_grn}" />')
+    for name, d, kind, has_hole in sand:
+        cls = "map-reef" if kind == "crest" else "map-sand"
+        rule = ' fill-rule="evenodd"' if has_hole else ""
+        o.append(f"<!-- {name} -->")
+        o.append(f'<path class="{cls}" d="{d}"{rule} />')
+    o.append("</g>")
+    o.append("<!-- Island Greenery Cores -->")
+    o.append('<g id="chameleon-greenery-group">')
+    for name, d, has_hole in green:
+        rule = ' fill-rule="evenodd"' if has_hole else ""
+        o.append(f'<path class="map-greenery" d="{d}"{rule} />')
     o.append("</g>")
 
-    # Dorsal solar spikes along the back islands
-    o.append("<!-- Dorsal Ridge Crest Spikes on the Back Islands -->")
-    o.append('<g class="map-reef" opacity="0.85">')
-    for isle in CHAM_ISLES:
-        if isle.get("dorsal"):
-            x, y = isle["cx"], isle["cy"] - isle["ry"] + 2
-            o.append(f'<polygon points="{x - 8},{y + 3} {x},{y - 12} {x + 8},{y + 3}" />')
-    o.append("</g>")
-
-    # Casque Peak Spire on Head
+    # Waterfront villas dotted along the outer coast of the spiral tail
+    villa_paths = []
+    for a, b in road_ranges[6:]:
+        _, _, wt, wb, _, _ = body.at((a + b) / 2)
+        if wt < 9:
+            continue
+        pts = [body.off(a + (b - a) * q / 8, lambda wt, wb: wt - 4) for q in range(1, 8)]
+        villa_paths.append(poly_path(pts, close=False))
     o += [
-        "<!-- Golden Casque Crest Spire -->",
-        '<path class="map-reef" d="M740,165 L745,125 L750,165 Z" />',
-        '<circle cx="745" cy="125" r="3.5" fill="#c29a57" class="twinkle" />',
+        "<!-- Spiral Tail Waterfront Villas -->",
+        f'<path class="map-frond-villas" d="{" ".join(villa_paths)}" stroke-width="2.6" stroke-dasharray="0.1 7" />',
     ]
 
-    # Spiral Tail Marina Basin inside the spiral curl
+    # Chameleon Boulevard: continuous road from snout to tail tip, bridging every channel
+    s_road_end = body.L - 26
+    road_pts = [body.off(sx(930) + (s_road_end - sx(930)) * q / 160, lambda wt, wb: 0.28 * wt) for q in range(161)]
     o += [
-        "<!-- Spiral Tail Deepwater Harbor Basin -->",
-        '<ellipse cx="285" cy="365" rx="32" ry="32" class="map-sea-deep" />',
-        '<g stroke="#ffffff" stroke-width="1.8">',
-        '<line x1="265" y1="365" x2="305" y2="365" />',
-        '<line x1="285" y1="345" x2="285" y2="385" />',
+        "<!-- Chameleon Boulevard (bridges every channel from the snout to the spiral tail) -->",
+        f'<path class="map-road" d="{poly_path(road_pts, close=False)}" />',
+        "<!-- Inter-Island Footbridges (belly channel, knees and limb causeways) -->",
+        '<g stroke="#ffffff" stroke-width="2.2" stroke-linecap="round">',
+    ]
+    for p1, p2 in bridge_lines:
+        o.append(f'<line x1="{n(p1[0])}" y1="{n(p1[1])}" x2="{n(p2[0])}" y2="{n(p2[1])}" />')
+    cq = body.off(sx(838), lambda wt, wb: wt - 3)
+    o.append(f'<line x1="{n(cq[0])}" y1="{n(cq[1])}" x2="{n(cq[0] - 4)}" y2="{n(cq[1] - 18)}" />')
+    o.append("</g>")
+
+    # Branch navigation gates
+    o.append('<g class="twinkle">')
+    for p1, p2 in gate_pts:
+        o.append(f'<circle cx="{n(p1[0])}" cy="{n(p1[1])}" r="3.5" fill="#22c55e" />')
+        o.append(f'<circle cx="{n(p2[0])}" cy="{n(p2[1])}" r="3.5" fill="#ef4444" />')
+    o.append("</g>")
+
+    # Casque spire beacon
+    o += [
+        "<!-- Golden Casque Crest Beacon -->",
+        f'<circle cx="{casque_peak[0]}" cy="{casque_peak[1]}" r="3.5" fill="#c29a57" class="twinkle" />',
+    ]
+
+    # Spiral Tail Marina inside the coil
+    mar = (CH_SPIRAL[0] + 4, CH_SPIRAL[1] + 2)
+    o += [
+        "<!-- Spiral Tail Deepwater Harbor Pontoons -->",
+        '<g stroke="#ffffff" stroke-width="1.8" stroke-linecap="round">',
+        f'<line x1="{mar[0] - 22}" y1="{mar[1] + 30}" x2="{mar[0] - 22}" y2="{mar[1] + 14}" />',
+        f'<line x1="{mar[0] + 22}" y1="{mar[1] - 34}" x2="{mar[0] + 22}" y2="{mar[1] - 18}" />',
         "</g>",
     ]
 
-    # Glass-Domed Central Grand Pavilion (Hotspot 1) on the central body island
-    pav = (565, 320)
+    # Glass-Domed Grand Pavilion on the mid-back island
+    pav_s = (sx(682) + sx(546)) / 2
+    pav = body.off(pav_s, lambda wt, wb: 0.3 * wt)
+    pav = (round(pav[0], 1), round(pav[1], 1))
     o += [
         "<!-- Glass-Domed Central Grand Pavilion -->",
-        f'<g transform="translate({pav[0]}, {pav[1]})">',
+        f'<g transform="translate({n(pav[0])}, {n(pav[1])})">',
         '<ellipse cx="0" cy="0" rx="36" ry="20" fill="#002244" opacity="0.8" />',
         '<ellipse cx="0" cy="0" rx="30" ry="16" fill="#38bdf8" filter="url(#glass-glow)" opacity="0.85" />',
         '<ellipse cx="0" cy="0" rx="20" ry="11" fill="none" stroke="#ffffff" stroke-width="1.4" />',
@@ -927,97 +1238,90 @@ def chameleon_svg(t):
         "</g>",
     ]
 
-    # Revolving 360° Observation Eye Dome (Hotspot 2) on the eye island
-    eye = (810, 225)
+    # Revolving 360 Degree Observation Eye Dome inside its ringed lagoon
     o += [
-        "<!-- Revolving 360 Degree Observation Eye Dome -->",
+        "<!-- Revolving 360 Degree Observation Eye Dome (Turret Eye Islet) -->",
+        f'<circle cx="{eye[0]}" cy="{eye[1]}" r="{eye[2]}" class="map-sand" />',
         f'<g transform="translate({eye[0]}, {eye[1]})">',
-        '<circle cx="0" cy="0" r="16" fill="#0f172a" stroke="#ffffff" stroke-width="1.5" />',
-        '<circle cx="0" cy="0" r="11" fill="#38bdf8" opacity="0.9" />',
-        '<circle cx="3" cy="-3" r="3.5" fill="#ffffff" />',
+        '<circle cx="0" cy="0" r="9" fill="#0f172a" stroke="#ffffff" stroke-width="1.5" />',
+        '<circle cx="0" cy="0" r="6" fill="#38bdf8" opacity="0.9" />',
+        '<circle cx="2" cy="-2" r="2.2" fill="#ffffff" />',
         "</g>",
     ]
 
-    # Foot District Features
-    # Youth Innovation Center (Hotspot 3)
-    youth = (755, 475)
+    # International Youth Innovation Center on the forelimb
+    youth = limb_meta["fore"]["upper_mid"]
+    youth = (round(youth[0], 1), round(youth[1], 1))
     o += [
         "<!-- International Youth Innovation Center Campus -->",
-        f'<rect x="{youth[0] - 14}" y="{youth[1] - 8}" width="28" height="16" rx="3" class="map-urban" />',
-        f'<rect x="{youth[0] - 8}" y="{youth[1] - 4}" width="16" height="8" rx="2" class="map-greenery" />',
+        f'<rect x="{n(youth[0] - 9)}" y="{n(youth[1] - 12)}" width="18" height="24" rx="3" class="map-urban" />',
     ]
 
-    # Marine Biology and Dolphin Station (Hotspot 6)
-    bio = (740, 520)
+    # Marine Biology and Dolphin Station on the east leaf islet
+    bio = leaf_r
     o += [
         "<!-- Marine Biology and Dolphin Station -->",
-        f'<circle cx="{bio[0]}" cy="{bio[1]}" r="12" class="map-sea-lagoon" stroke="#ffffff" stroke-width="1.6" />',
-        f'<path d="M{bio[0] - 4},{bio[1] - 3} C{bio[0] + 4},{bio[1] - 7} {bio[0] + 7},{bio[1] + 4} {bio[0]},{bio[1] + 6}" stroke="#0284c7" stroke-width="2" fill="none" />',
+        f'<circle cx="{bio[0]}" cy="{bio[1]}" r="9" class="map-sea-lagoon" stroke="#ffffff" stroke-width="1.6" />',
+        f'<path d="M{bio[0] - 3},{bio[1] - 2} C{bio[0] + 3},{bio[1] - 5} {bio[0] + 5},{bio[1] + 3} {bio[0]},{bio[1] + 4}" stroke="#0284c7" stroke-width="2" fill="none" />',
     ]
 
-    # Floating Eco-District (Hotspot 7)
-    eco = (420, 505)
-    o += [
-        "<!-- Experimental Floating Eco-Communities -->",
-        '<g fill="#2dd4bf" stroke="#ffffff" stroke-width="1">',
-        f'<rect x="{eco[0] - 12}" y="{eco[1] - 10}" width="10" height="10" rx="2" />',
-        f'<rect x="{eco[0] + 4}" y="{eco[1] - 8}" width="10" height="10" rx="2" />',
-        f'<rect x="{eco[0] - 6}" y="{eco[1] + 4}" width="10" height="10" rx="2" />',
-        "</g>",
-    ]
+    # Floating Eco-District moored in the sheltered lagoon between the legs
+    eco = (632, 420)
+    o += ["<!-- Experimental Floating Eco-Communities (Sheltered Belly Lagoon) -->", '<g fill="#2dd4bf" stroke="#ffffff" stroke-width="1">']
+    for dx, dy in ((-30, -22), (-12, -30), (8, -24), (26, -12), (-24, 2), (22, 10), (-8, 24), (12, 30)):
+        o.append(f'<rect x="{eco[0] + dx - 5}" y="{eco[1] + dy - 5}" width="10" height="10" rx="2" />')
+    o.append("</g>")
 
-    # Tidal Power Hub
-    power = (495, 525)
+    # Tidal Power Hub on the west leaf islet
     o += [
         "<!-- Renewable Marine Power Hub -->",
-        f'<g transform="translate({power[0]}, {power[1]})">',
-        '<circle cx="0" cy="0" r="11" fill="#0284c7" stroke="#ffffff" stroke-width="1.4" />',
-        '<path d="M0,-8 L0,8 M-8,0 L8,0" stroke="#ffffff" stroke-width="1.8" class="spin" />',
+        f'<g transform="translate({leaf_l[0]}, {leaf_l[1]})">',
+        '<circle cx="0" cy="0" r="8" fill="#0284c7" stroke="#ffffff" stroke-width="1.4" />',
+        '<path d="M0,-6 L0,6 M-6,0 L6,0" stroke="#ffffff" stroke-width="1.8" class="spin" />',
         "</g>",
     ]
 
-    # Paradise Islands Overwater Villas on the Tongue Tip (Hotspot 5)
-    villas = (1125, 415)
+    # Paradise Islands Overwater Villas on the tongue-tip atoll
     o += [
         "<!-- Paradise Islands Overwater Bungalows and Coral Nursery -->",
-        f'<ellipse cx="{villas[0]}" cy="{villas[1]}" rx="28" ry="24" fill="none" stroke="#c29a57" stroke-width="2.5" stroke-dasharray="3 4" />',
-        f'<ellipse cx="{villas[0]}" cy="{villas[1]}" rx="14" ry="12" class="map-sea-lagoon" stroke="#2dd4bf" stroke-width="1.6" />',
+        f'<circle cx="{villas[0]}" cy="{villas[1]}" r="19" fill="none" stroke="#c29a57" stroke-width="2.5" stroke-dasharray="3 4" />',
+        f'<circle cx="{villas[0]}" cy="{villas[1]}" r="13" class="map-sea-lagoon" stroke="#2dd4bf" stroke-width="1.6" />',
         f'<circle cx="{villas[0]}" cy="{villas[1]}" r="3.5" fill="#38bdf8" class="bob" />',
     ]
-
-    # Boardwalk connecting the tongue stepping stones
-    tongue_pts = [(845, 285), (905, 295), (950, 315), (1000, 340), (1055, 370), villas]
+    tongue_pts = [body.off(sx(962) + 1, 0)] + [(x, y) for x, y, *_ in tongue] + [(villas[0] - 27, villas[1])]
     o += [
-        "<!-- Overwater Boardwalk linking Tongue Atolls -->",
+        "<!-- Overwater Boardwalk linking the Tongue Islets -->",
         f'<path d="{poly_path(tongue_pts, close=False)}" fill="none" stroke="#c29a57" stroke-width="2" stroke-linecap="round" />',
     ]
 
-    # Sub-Sea Metro Tunnel Track
-    metro_portal = (570, 395)
+    # Sub-Sea Metro Tunnel
+    metro = body.off((sx(682) + sx(546)) / 2 + 30, lambda wt, wb: split_belly(wt, wb) - 0.5 * (split_belly(wt, wb) + wb))
+    metro = (round(metro[0], 1), round(metro[1], 1))
     o += [
         "<!-- Sub-Sea Metro Tunnel (Nova Aurelia to Portal, Pavilion, Eye Dome and Spiral Marina) -->",
         '<g fill="none" stroke="#f5c46e" stroke-dasharray="8 4">',
-        f'<path d="M570,670 L{metro_portal[0]},{metro_portal[1]} L{pav[0]},{pav[1]}" stroke-width="3" />',
-        f'<path d="M{pav[0]},{pav[1]} C660,300 740,250 {eye[0]},{eye[1]}" stroke-width="2.5" />',
-        f'<path d="M{metro_portal[0]},{metro_portal[1]} C470,400 380,360 285,365" stroke-width="2.5" />',
+        f'<path d="M{n(metro[0])},670 L{n(metro[0])},{n(metro[1])} L{n(pav[0])},{n(pav[1])}" stroke-width="3" />',
+        f'<path d="M{n(pav[0])},{n(pav[1])} C700,200 790,200 {eye[0]},{eye[1]}" stroke-width="2.5" />',
+        f'<path d="M{n(metro[0])},{n(metro[1])} C520,330 430,360 {mar[0]},{mar[1]}" stroke-width="2.5" />',
         "</g>",
     ]
-    for x, y in (metro_portal, pav, eye, (285, 365)):
+    for x, y in (metro, pav, (eye[0], eye[1]), mar):
         o.append(f'<circle cx="{n(x)}" cy="{n(y)}" r="5" fill="#f5c46e" stroke="#ffffff" stroke-width="2" />')
 
-    # Water-Taxi Paths
+    # Water taxis and labels
     o += [
         "<!-- Autonomous Electric Water Taxi Marine Paths -->",
         '<g class="map-ferry">',
-        '<path d="M190,405 C150,470 240,580 420,505" />',
-        '<path d="M755,475 C850,550 990,490 1055,370" />',
-        '<path d="M745,185 C840,140 1000,190 1055,370" />',
+        f'<path d="M{mar[0] - 60},{mar[1] + 40} C200,560 170,620 300,640" />',
+        f'<path d="M{eco[0]},{eco[1] + 40} C640,560 700,610 760,640" />',
+        f'<path d="M{villas[0]},{villas[1] + 28} C1130,380 1120,520 1060,640" />',
         "</g>",
         "<!-- Geographic Labels -->",
         '<g class="map-label-group">',
-        f'<text class="map-label-text" x="{pav[0]}" y="{pav[1] + 36}">{t["pavilion"]}</text>',
-        f'<text class="map-label-text" x="285" y="435">{t["marina"]}</text>',
-        f'<text class="map-label-text" x="1060" y="315">{t["villas"]}</text>',
+        f'<text class="map-label-text" x="{n(pav[0])}" y="148">{t["pavilion"]}</text>',
+        f'<text class="map-label-text" x="{mar[0]}" y="502">{t["marina"]}</text>',
+        f'<text class="map-label-text" x="{villas[0] - 20}" y="250">{t["villas"]}</text>',
+        f'<text class="map-label-text" x="300" y="566">{t["branch"]}</text>',
         "</g>",
     ]
 
@@ -1026,11 +1330,11 @@ def chameleon_svg(t):
         (1, pav[0], pav[1], "#38bdf8", "Glass-Domed Central Grand Pavilion", 12),
         (2, eye[0], eye[1], "#f5c46e", "Revolving 360 Degree Eye Dome", 11),
         (3, youth[0], youth[1], "#38bdf8", "Youth Innovation Center", 11),
-        (4, 285, 365, "#0284c7", "Spiral Tail Marina", 11),
+        (4, mar[0], mar[1], "#0284c7", "Spiral Tail Marina", 11),
         (5, villas[0], villas[1], "#c29a57", "Paradise Islands Overwater Villas", 11),
         (6, bio[0], bio[1], "#22c55e", "Marine Biology and Dolphin Station", 11),
         (7, eco[0], eco[1], "#2dd4bf", "Floating Eco-District", 11),
-        (8, metro_portal[0], metro_portal[1], "#f5c46e", "Sub-Sea Metro Tunnel Portal", 11),
+        (8, metro[0], metro[1], "#f5c46e", "Sub-Sea Metro Tunnel Portal", 11),
     ]
     o.append("<!-- 8 INTERACTIVE HOTSPOT PINS -->")
     for i, x, y, col, name, r in spots:
