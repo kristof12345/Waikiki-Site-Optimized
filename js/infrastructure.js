@@ -60,7 +60,6 @@
         tip.innerHTML = `
             <div class="map-tooltip-top">
                 <span class="map-tooltip-badge"></span>
-                <span class="map-tooltip-tag"></span>
                 <button type="button" class="map-tooltip-close" aria-label="${i18n.close}">×</button>
             </div>
             <h4 class="map-tooltip-title"></h4>
@@ -69,7 +68,6 @@
         canvas.appendChild(tip);
         const els = {
             badge: tip.querySelector('.map-tooltip-badge'),
-            tag: tip.querySelector('.map-tooltip-tag'),
             title: tip.querySelector('.map-tooltip-title'),
             text: tip.querySelector('.map-tooltip-text'),
             close: tip.querySelector('.map-tooltip-close'),
@@ -124,11 +122,7 @@
             const id = spot.getAttribute('data-spot');
             const card = cardFor(id);
             if (!card) return;
-            const tag = card.querySelector('.tag');
             els.badge.textContent = id;
-            els.tag.textContent = tag ? tag.textContent.trim() : '';
-            els.tag.className = `map-tooltip-tag ${tag ? tag.className.replace(/\btag\b/, '').trim() : ''}`;
-            els.tag.hidden = !tag;
             els.title.textContent = card.querySelector('h4').textContent.trim();
             els.text.textContent = card.querySelector('p').textContent.trim();
             current = spot;

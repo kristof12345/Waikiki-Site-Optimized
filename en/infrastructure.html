@@ -10,14 +10,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />
     <script>
-        (function (d) {
+        (function(d) {
             var h = d.documentElement;
             h.classList.add('js');
             try {
                 if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
                 if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
-            } catch (e) { }
-            setTimeout(function () {
+            } catch (e) {}
+            setTimeout(function() {
                 if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
             }, 3500)
         })(document);
@@ -2059,7 +2059,7 @@
                                 <text class="map-label-text" x="130" y="328">Pacific Gate</text>
                                 <text class="map-label-text" x="1060" y="328">North Atlantic Gate</text>
                             </g>
-                            <!-- 8 INTERACTIVE HOTSPOT PINS -->
+                            <!-- INTERACTIVE HOTSPOT PINS -->
                             <!-- Hotspot 1: NA Casino and Theme Park -->
                             <g class="map-hotspot" data-spot="1" transform="translate(331.1, 213.7)">
                                 <circle class="hotspot-pulse" r="16" fill="#f43f5e" opacity="0.6" />
@@ -2174,13 +2174,13 @@
             <div class="island-panel" id="tab-panel-chameleon" role="tabpanel" aria-labelledby="tab-btn-chameleon">
                 <div class="island-specs-banner">
                     <div class="island-spec-item">
-                        <span class="island-spec-label">Island Domain</span>
-                        <span class="island-spec-value">18.5 km²</span>
+                        <span class="island-spec-label">Archipelago Area</span>
+                        <span class="island-spec-value">24.3 km²</span>
                         <span class="island-spec-note">Nova Aurelia / New Mavericks</span>
                     </div>
                     <div class="island-spec-item">
-                        <span class="island-spec-label">Completion Year</span>
-                        <span class="island-spec-value">2026</span>
+                        <span class="island-spec-label">Number of Islands</span>
+                        <span class="island-spec-value">42 Islands</span>
                         <span class="island-spec-note">Third national archipelago</span>
                     </div>
                     <div class="island-spec-item">
@@ -2189,9 +2189,9 @@
                         <span class="island-spec-note">Undersea rail and autonomous boats</span>
                     </div>
                     <div class="island-spec-item">
-                        <span class="island-spec-label">Design Concept</span>
-                        <span class="island-spec-value">Giant Chameleon</span>
-                        <span class="island-spec-note">Symbol of national adaptability</span>
+                        <span class="island-spec-label">Total Coastline</span>
+                        <span class="island-spec-value">89 km</span>
+                        <span class="island-spec-note">Inner lagoon and outer barrier</span>
                     </div>
                 </div>
                 <div class="island-map-container">
@@ -2365,7 +2365,7 @@
                                 <!-- Spiral Tail Waterfront Villas -->
                                 <path class="map-frond-villas" d="M443.5,244.6 L437.9,249.5 L433.1,254 L428.6,257.9 L424.1,261.4 L419.2,263.4 L413.4,264.4 M389.8,267 L383.7,267.5 L377.4,268.2 L370.6,269.1 L363.1,270.5 L356.3,272.2 L349.2,274.4 M324.4,287 L319.1,290.4 L314.1,294 L309.3,297.7 L304.6,301.7 L300.1,305.9 L295.8,310.3 M280.2,330.7 L277.5,335.3 L274.9,340 L272.6,344.9 L270.5,349.8 L268.6,354.8 L267,359.8 M262.4,383.6 L262.1,388.2 L262,392.8 L262.1,397.5 L262.4,402.1 L262.8,406.7 L263.5,411.3 M269.6,433.2 L271.2,436.8 L272.9,440.4 L274.7,443.9 L276.7,447.4 L278.8,450.8 L281.1,454 M295.5,469.9 L298.1,472.1 L300.8,474.2 L303.5,476.1 L306.3,478 L309.2,479.8 L312.2,481.4 M331.2,488.8 L334,489.4 L336.9,490 L339.8,490.4 L342.7,490.8 L345.6,491 L348.5,491.2 M368.2,489.1 L371.1,488.4 L373.9,487.5 L376.6,486.5 L379.3,485.5 L382,484.3 L384.6,483 M400.5,471.3 L402.5,469.3 L404.4,467.1 L406.2,464.8 L407.9,462.5 L409.5,460.1 L410.9,457.6 M417.4,439.1 L417.8,436.3 L418.1,433.4 L418.2,430.5 L418.1,427.7 L417.9,424.8 L417.5,422 M410.8,403.9 L409.2,401.5 L407.5,399.3 L405.6,397.1 L403.6,395.1 L401.5,393.3 L399.3,391.5" stroke-width="2.6" stroke-dasharray="0.1 7" />
                                 <!-- Chameleon Boulevard (bridges every channel from the snout to the spiral tail) -->
-                                <path class="map-road" d="M931.6,253.5 L925.6,251.5 L919.5,249.5 L913.3,247.7 L907,246.3 L900.7,245.1 L894.3,244.1 L887.9,243.3 L881.5,242.6 L875,242.2 L868.4,241.9 L861.8,242.2 L855.3,242.6 L848.9,243.3 L842.5,244.1 L836.2,245 L829.9,246.1 L823.6,247.2 L816.9,249 L810.6,251 L804.7,253.2 L799.1,255.1 L793.7,256.8 L788.5,257.9 L783.1,258.2 L777.5,257.6 L771.9,256.7 L766.2,255.5 L760.5,254.1 L754.6,252.6 L748.6,251 L742.8,249.5 L737.1,248 L731.5,246.3 L725.6,244.5 L719.8,242.6 L713.8,240.7 L707.7,238.9 L701.5,237.1 L695.1,235.5 L688.6,234 L682.2,232.7 L675.9,231.7 L669.7,230.7 L663.4,229.8 L657,229 L650.7,228.2 L644.3,227.5 L637.8,226.9 L631.4,226.4 L624.9,226.1 L618.3,225.8 L611.7,225.8 L605.2,226 L598.7,226.4 L592.2,226.8 L585.8,227.4 L579.3,228.1 L572.9,228.9 L566.5,229.8 L560.1,230.8 L553.8,231.9 L547.5,233.1 L541.2,234.4 L534.8,236 L528.4,237.7 L522.2,239.6 L516,241.6 L510,243.7 L504,245.8 L498,248 L492.1,250.2 L486.3,252.5 L480.5,254.7 L474.7,257 L468.8,259.4 L462.8,262.2 L456.9,265.1 L451.3,268.1 L445.9,271.1 L440.7,273.8 L435.5,276.3 L430.2,278.4 L424.8,280.1 L419.2,281.1 L413.3,281.9 L407.4,282.5 L401.3,283 L395.2,283.4 L388.9,283.8 L382.7,284.3 L376.3,284.9 L369.7,285.7 L363.1,287 L356.7,288.7 L350.2,290.8 L344,293.6 L338.1,296.5 L332.5,299.6 L326.9,303 L321.4,306.7 L316.2,310.7 L311.1,314.9 L306.3,319.4 L301.8,324.2 L297.5,329.2 L293.5,334.5 L289.9,339.9 L286.5,345.6 L283.5,351.5 L280.9,357.6 L278.6,363.7 L276.7,370 L275.2,376.5 L274.1,383 L273.4,389.5 L273.2,396.1 L273.4,402.7 L274.1,409.3 L275.1,415.8 L276.6,422.2 L278.6,428.5 L281.1,434.6 L283.9,440.6 L287.2,446.3 L290.9,451.8 L295.1,456.9 L299.6,461.7 L304.5,466.2 L309.7,470.2 L315.2,473.8 L321,476.9 L327.1,479.5 L333.4,481.6 L339.8,483.1 L346.3,484 L352.9,484.3 L359.5,484 L366.1,483.1 L372.5,481.5 L378.7,479.2 L384.6,476.4 L390.3,472.9 L395.4,468.8 L400.2,464.2 L404.3,459.1 L407.9,453.5 L410.7,447.5 L412.8,441.3 L414,434.8 L414.4,428.2 L413.9,421.6 L412.5,415.1 L410.1,408.9 L406.9,403.2 L402.8,398 L398,393.5 L392.4,389.9 L386.3,387.3 L379.9,385.9 L373.3,385.6" />
+                                <path class="map-road" d="M962,269 L956.7,266.9 L951.3,265 L945.8,263.3 L940.4,261.7 L934.9,260 L929.4,258.4 L923.9,256.8 L918.4,255.4 L912.8,254 L907.1,252.9 L901.5,251.9 L895.8,251 L890.1,250.3 L884.3,249.7 L878.6,249.3 L872.8,249 L867,248.9 L861.2,249.1 L855.4,249.5 L849.6,250 L843.9,250.6 L838.2,251.4 L832.5,252.2 L826.8,253.1 L821,254.3 L815.3,255.8 L809.8,257.6 L804.4,259.3 L799.1,260.9 L793.8,262.2 L788.5,263.1 L783.1,263.4 L777.6,263.1 L772.2,262.4 L766.7,261.6 L761.2,260.5 L755.8,259.3 L750.2,258 L744.7,256.7 L739.3,255.4 L733.9,254 L728.5,252.5 L723.1,250.8 L717.7,249.2 L712.2,247.5 L706.6,245.9 L701,244.3 L695.4,242.8 L689.6,241.4 L683.8,240.2 L678.1,239.2 L672.4,238.3 L666.7,237.4 L661,236.5 L655.3,235.8 L649.5,235 L643.7,234.4 L637.9,233.8 L632.1,233.3 L626.2,232.9 L620.3,232.6 L614.4,232.5 L608.6,232.5 L602.7,232.6 L596.8,232.9 L591,233.3 L585.1,233.7 L579.3,234.3 L573.5,234.9 L567.7,235.6 L561.9,236.5 L556.1,237.3 L550.4,238.3 L544.6,239.4 L538.9,240.5 L533.1,241.9 L527.4,243.4 L521.7,245 L516.1,246.7 L510.6,248.5 L505.1,250.3 L499.6,252.2 L494.2,254.1 L488.8,256 L483.4,258 L478.1,259.9 L472.7,261.9 L467.2,264.1 L461.7,266.5 L456.4,269.1 L451.3,271.7 L446.3,274.2 L441.3,276.6 L436.4,278.7 L431.3,280.6 L426.2,282.1 L421,283.1 L415.6,283.8 L410,284.4 L404.5,284.8 L398.8,285.2 L393.2,285.5 L387.5,285.9 L381.7,286.3 L375.8,286.8 L369.9,287.6 L363.9,288.7 L358.1,290.1 L352.2,291.9 L346.5,294.2 L341.1,296.8 L335.9,299.5 L330.7,302.4 L325.7,305.6 L320.7,309 L316,312.6 L311.4,316.5 L307,320.5 L302.9,324.9 L299,329.4 L295.3,334.1 L291.9,339 L288.7,344.1 L285.8,349.4 L283.2,354.8 L280.9,360.3 L278.9,366 L277.2,371.8 L275.9,377.6 L275,383.5 L274.3,389.5 L274.1,395.5 L274.1,401.5 L274.6,407.5 L275.5,413.4 L276.7,419.3 L278.3,425.2 L280.2,430.8 L282.6,436.4 L285.3,441.7 L288.3,446.9 L291.8,451.9 L295.5,456.6 L299.6,461 L304,465.1 L308.7,468.9 L313.7,472.3 L318.9,475.4 L324.3,478 L330,480.1 L335.7,481.9 L341.7,483.1 L347.6,483.8 L353.7,484 L359.7,483.7 L365.7,482.8 L371.6,481.5 L377.3,479.5 L382.8,477.1 L388.1,474.1 L393,470.6 L397.6,466.6 L401.7,462.2 L405.3,457.4 L408.4,452.1 L410.9,446.6 L412.8,440.9 L413.9,434.9 L414.3,428.8 L414,422.8 L412.9,416.9 L411,411.1 L408.4,405.6 L405,400.6 L400.9,396.1 L396.2,392.2 L391,389.2 L385.3,387 L379.4,385.8 L373.3,385.6" />
                                 <!-- Inter-Island Footbridges (belly channel, knees and limb causeways) -->
                                 <g stroke="#ffffff" stroke-width="2.2" stroke-linecap="round">
                                     <line x1="716.9" y1="260.2" x2="711.2" y2="281.5" />
@@ -2373,10 +2373,10 @@
                                     <line x1="580.2" y1="247.8" x2="582.6" y2="269.7" />
                                     <line x1="508.4" y1="261.8" x2="515.1" y2="282.8" />
                                     <line x1="563.4" y1="383.3" x2="565.6" y2="405" />
-                                    <line x1="520" y1="320" x2="520" y2="306" />
+                                    <line x1="527.2" y1="329.6" x2="539.9" y2="300.9" />
                                     <line x1="705.6" y1="389.2" x2="705.9" y2="410.8" />
-                                    <line x1="744" y1="326" x2="744" y2="312" />
-                                    <line x1="832.9" y1="222.3" x2="828.9" y2="204.3" />
+                                    <line x1="737.3" y1="336" x2="727.7" y2="305.7" />
+                                    <line x1="829.9" y1="223.9" x2="826.3" y2="202.1" />
                                 </g>
                                 <!-- Glass-Domed Central Grand Pavilion -->
                                 <g transform="translate(613.8, 224.6)">
@@ -2419,8 +2419,8 @@
                                 <circle cx="920" cy="410" r="18" fill="none" stroke="#c29a57" stroke-width="2.5" stroke-dasharray="3 4" />
                                 <circle cx="920" cy="410" r="12" class="map-sea-lagoon" stroke="#2dd4bf" stroke-width="1.6" />
                                 <circle cx="920" cy="410" r="3.5" fill="#38bdf8" class="bob" />
-                                <!-- Overwater Boardwalk linking the Tongue Islets -->
-                                <path d="M961.1,268.7 L965,292 L968,318 L960,346 L944,375 L920,388" fill="none" stroke="#c29a57" stroke-width="2" stroke-linecap="round" />
+                                <!-- Overwater Road linking the Tongue Islets (continuation of the spine) -->
+                                <path class="map-road" d="M962,269 L965,292 L968,318 L960,346 L944,375 L920,390" />
                                 <!-- Sub-Sea Metro Tunnel (Nova Aurelia to Portal, Pavilion, Eye Dome and Spiral Marina) -->
                                 <g fill="none" stroke="#f5c46e" stroke-dasharray="8 4">
                                     <path d="M587.6,670 L587.6,280.3 L613.8,224.6" stroke-width="3" />

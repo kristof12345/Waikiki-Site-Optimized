@@ -762,7 +762,7 @@ def world_svg(t):
         (7, oc_hub[0], oc_hub[1], "#22c55e", "Oceania Dolphin Sanctuary"),
         (8, ecx, ecy - ery, "#2ba29e", "Flood Barrier Storm Gates"),
     ]
-    o.append("<!-- 8 INTERACTIVE HOTSPOT PINS -->")
+    o.append("<!-- INTERACTIVE HOTSPOT PINS -->")
     for i, x, y, col, name in spots:
         o.append(f"<!-- Hotspot {i}: {name} -->")
         o += hotspot(i, x, y, col)
@@ -1040,8 +1040,9 @@ def chameleon_svg(t):
         add(tube.piece(0, knee - hg), f"{upper} Isle", green_poly=tube.piece(0, knee - hg, inset=7))
         add(tube.piece(knee + hg, tube.L), f"{lower} Isle")
         bridge_lines.append((tube.off(knee - hg - 5, 0), tube.off(knee + hg + 5, 0)))
-        top = tube.off(0, 0)
-        bridge_lines.append((top, (top[0], top[1] - 14)))
+        p_limb = tube.off(12, 0)
+        p_belly = body.off(sx(p_limb[0]), lambda wt, wb: -wb + 6)
+        bridge_lines.append((p_limb, p_belly))
         ax, ay = knots[-1][0], knots[-1][1]
         for side in (-1, 1):  # zygodactyl foot: two claw bundles straddling the branch
             ck = [(ax + side * 6, ay + 6, 5, 5), (ax + side * 18, ay + 12, 4.5, 4.5), (ax + side * 27, ay + 19, 2.5, 2.5)]
@@ -1114,7 +1115,7 @@ def chameleon_svg(t):
 
     # Chameleon Boulevard: continuous road from snout to tail tip, bridging every channel
     s_road_end = body.L - 26
-    road_pts = [body.off(sx(930) + (s_road_end - sx(930)) * q / 160, lambda wt, wb: 0.28 * wt) for q in range(161)]
+    road_pts = [body.off(s_road_end * q / 180, lambda wt, wb: 0.28 * wt * (q / 180)**0.5 if q > 0 else 0) for q in range(181)]
     o += [
         "<!-- Chameleon Boulevard (bridges every channel from the snout to the spiral tail) -->",
         f'<path class="map-road" d="{poly_path(road_pts, close=False)}" />',
@@ -1123,8 +1124,9 @@ def chameleon_svg(t):
     ]
     for p1, p2 in bridge_lines:
         o.append(f'<line x1="{n(p1[0])}" y1="{n(p1[1])}" x2="{n(p2[0])}" y2="{n(p2[1])}" />')
-    cq = body.off(sx(838), lambda wt, wb: wt - 3)
-    o.append(f'<line x1="{n(cq[0])}" y1="{n(cq[1])}" x2="{n(cq[0] - 4)}" y2="{n(cq[1] - 18)}" />')
+    p_head = body.off(sx(835), lambda wt, wb: wt - 4)
+    p_casque = body.off(sx(835), lambda wt, wb: wt + g + 6)
+    o.append(f'<line x1="{n(p_head[0])}" y1="{n(p_head[1])}" x2="{n(p_casque[0])}" y2="{n(p_casque[1])}" />')
     o.append("</g>")
 
     # Spiral Tail Marina inside the coil
@@ -1196,10 +1198,10 @@ def chameleon_svg(t):
         f'<circle cx="{villas[0]}" cy="{villas[1]}" r="12" class="map-sea-lagoon" stroke="#2dd4bf" stroke-width="1.6" />',
         f'<circle cx="{villas[0]}" cy="{villas[1]}" r="3.5" fill="#38bdf8" class="bob" />',
     ]
-    tongue_pts = [body.off(sx(962) + 1, 0)] + [(x, y) for x, y, *_ in tongue] + [(villas[0], villas[1] - 22)]
+    tongue_pts = [body.off(0, 0)] + [(x, y) for x, y, *_ in tongue] + [(villas[0], villas[1] - 20)]
     o += [
-        "<!-- Overwater Boardwalk linking the Tongue Islets -->",
-        f'<path d="{poly_path(tongue_pts, close=False)}" fill="none" stroke="#c29a57" stroke-width="2" stroke-linecap="round" />',
+        "<!-- Overwater Road linking the Tongue Islets (continuation of the spine) -->",
+        f'<path class="map-road" d="{poly_path(tongue_pts, close=False)}" />',
     ]
 
     # Sub-Sea Metro Tunnel
@@ -1224,7 +1226,7 @@ def chameleon_svg(t):
         "</g>",
     ]
 
-    # 8 Interactive Hotspots
+    # Interactive Hotspots
     spots = [
         (1, pav[0], pav[1], "#38bdf8", "Glass-Domed Central Grand Pavilion", 12),
         (2, eye[0], eye[1], "#f5c46e", "Revolving 360 Degree Eye Dome", 11),
