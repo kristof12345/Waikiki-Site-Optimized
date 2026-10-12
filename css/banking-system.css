@@ -125,10 +125,6 @@
     animation: illDash 2s linear infinite;
 }
 
-.ill .twinkle {
-    animation: illTwinkle 3.2s ease-in-out infinite;
-}
-
 .ill .glow {
     animation: illGlow 3s ease-in-out infinite alternate;
 }
@@ -153,11 +149,6 @@
 
 @keyframes illDashFast {
     to { stroke-dashoffset: -22; }
-}
-
-@keyframes illTwinkle {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 1; }
 }
 
 @keyframes illGlow {

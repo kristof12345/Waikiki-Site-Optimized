@@ -96,19 +96,9 @@
   stroke: var(--ill-coral);
 }
 
-.ill .k-sea {
-  fill: none;
-  stroke: var(--ill-sea);
-}
-
 .ill .k-white {
   fill: none;
   stroke: var(--ill-white);
-}
-
-.ill .k-line {
-  fill: none;
-  stroke: var(--ill-line);
 }
 
 .ill text {
@@ -119,16 +109,6 @@
 }
 
 /* Ambient motion */
-.ill .spin {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: illSpin 6s linear infinite;
-}
-
-.ill .spin.slow {
-  animation-duration: 11s;
-}
-
 .ill .bob {
   animation: illBob 5s var(--ease-in-out) infinite;
 }
@@ -158,12 +138,6 @@
 
 .ill .twinkle:nth-of-type(3n) {
   animation-delay: 2s;
-}
-
-@keyframes illSpin {
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 @keyframes illBob {
@@ -271,42 +245,6 @@
   }
 }
 
-/* Shared Layout and Components */
-.wrap {
-  width: 100%;
-  max-width: 1320px;
-  margin: 0 auto;
-}
-
-.split {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-  gap: clamp(2rem, 5vw, 5rem);
-  align-items: center;
-  max-width: 1320px;
-  margin: 0 auto;
-}
-
-.ill-panel {
-  position: relative;
-  padding: clamp(1rem, 2.5vw, 2rem);
-  border: var(--border-width) solid var(--line);
-  border-radius: var(--radius-lg);
-  background:
-    radial-gradient(600px 300px at 0% 0%, rgba(107, 164, 217, 0.16), transparent 60%),
-    radial-gradient(500px 300px at 100% 100%, rgba(227, 115, 90, 0.1), transparent 60%),
-    var(--surface);
-  box-shadow: var(--shadow-md);
-}
-
-.ill-caption {
-  margin-top: 1rem;
-  color: var(--muted);
-  font-size: 0.82rem;
-  letter-spacing: 0.04em;
-  text-align: center;
-}
-
 .card-icon svg {
   width: 30px;
   height: 30px;
@@ -394,12 +332,6 @@
 
 .body-dark .filter-chip[aria-pressed="true"] {
   color: var(--neutral-900);
-}
-
-.filter-chip .count {
-  opacity: 0.6;
-  margin-left: 0.35rem;
-  font-weight: 600;
 }
 
 [data-filter-item][hidden] {
@@ -828,15 +760,8 @@
 }
 
 /* Responsive and Motion Preferences */
-@media (max-width: 900px) {
-  .split {
-    grid-template-columns: 1fr;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
 
-  .ill .spin,
   .ill .bob,
   .ill .drift,
   .ill .dash,
@@ -846,7 +771,6 @@
   }
 }
 
-html.no-reveal .ill .spin,
 html.no-reveal .ill .bob,
 html.no-reveal .ill .drift,
 html.no-reveal .ill .dash,

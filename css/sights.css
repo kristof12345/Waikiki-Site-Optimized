@@ -230,12 +230,6 @@
     color: var(--neutral-900);
 }
 
-.filter-chip .count {
-    opacity: 0.6;
-    margin-left: 0.35rem;
-    font-weight: 600;
-}
-
 [data-filter-item][hidden] {
     display: none !important;
 }

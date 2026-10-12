@@ -1153,8 +1153,7 @@ html.menu-open .menu-aside {
 }
 
 .hero-title em,
-.section-title em,
-.display em {
+.section-title em {
   font-style: italic;
   font-weight: 300;
   color: var(--accent);
@@ -1376,37 +1375,6 @@ html.menu-open .menu-aside {
   text-align: center;
 }
 
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  color: var(--accent);
-  font: 700 0.74rem/1.4 var(--font-sans);
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-}
-
-.eyebrow::before {
-  content: "";
-  width: 32px;
-  height: var(--border-width);
-  background: currentColor;
-}
-
-.display {
-  color: var(--heading);
-  font-family: var(--font-display);
-  font-size: clamp(2.2rem, 4.6vw, 3.8rem);
-  font-weight: 330;
-  line-height: 1.06;
-  letter-spacing: -0.02em;
-  text-wrap: balance;
-}
-
-.display em {
-  color: var(--accent-hover);
-}
-
 .light-bg {
   background:
     radial-gradient(1100px 420px at 8% 0%, rgba(107, 164, 217, 0.14), transparent 60%),
@@ -1591,20 +1559,17 @@ html.menu-open .menu-aside {
   font-size: 1.05rem;
 }
 
-.liquid {
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.08);
-  border: var(--border-width-hairline) solid rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(var(--blur-md));
-  -webkit-backdrop-filter: blur(var(--blur-md));
-}
-
 .timeline-period:last-child,
 .timeline-item:last-child {
   margin-bottom: 0;
 }
 
 /* 9. NARRATIVE AND TABLES */
+#narrative {
+  padding-top: clamp(3rem, 6vw, 5rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
 .narrative-content {
   max-width: var(--width-s);
   margin: 0 auto;
@@ -1768,10 +1733,6 @@ html.menu-open .menu-aside {
   font-size: clamp(1.7rem, 2.6vw, 2.3rem);
   font-weight: 380;
   text-align: left;
-}
-
-.faq-title {
-  margin-top: 0;
 }
 
 .faq-item {
@@ -1950,7 +1911,6 @@ html.menu-open .menu-aside {
 }
 
 /* 11. BUTTONS AND LINKS */
-.btn,
 .section-link-btn,
 .hero-btn {
   position: relative;
@@ -1976,7 +1936,6 @@ html.menu-open .menu-aside {
     color 0.4s;
 }
 
-.btn::before,
 .section-link-btn::before,
 .hero-btn::before {
   content: "";
@@ -1989,13 +1948,11 @@ html.menu-open .menu-aside {
   transition: transform 0.6s var(--ease-out);
 }
 
-.btn:hover::before,
 .section-link-btn:hover::before,
 .hero-btn:hover::before {
   transform: none;
 }
 
-.btn:hover,
 .section-link-btn:hover,
 .hero-btn:hover {
   box-shadow: var(--shadow-btn-hover);
@@ -2042,27 +1999,6 @@ video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-/* Marquee ticker */
-.marquee {
-  position: relative;
-  overflow: hidden;
-  padding: 1.35rem 0;
-  background: var(--secondary);
-  color: var(--neutral-150);
-  -webkit-mask: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
-  mask: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
-}
-
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: marquee 48s linear infinite;
-}
-
-.marquee:hover .marquee-track {
-  animation-play-state: paused;
 }
 
 /* 13. SUB-NAVIGATION (royal couple pages) */
@@ -2541,13 +2477,11 @@ html.header-hidden .subnav {
   background: var(--dark-surface-3);
 }
 
-.body-dark .btn,
 .body-dark .section-link-btn {
   background: var(--tertiary);
   color: var(--primary-dark);
 }
 
-.body-dark .btn:hover,
 .body-dark .section-link-btn:hover {
   color: var(--neutral-50);
 }
@@ -2555,10 +2489,6 @@ html.header-hidden .subnav {
 .body-dark .subnav-list a[aria-current="page"] {
   background: var(--tertiary);
   color: var(--primary-dark);
-}
-
-.body-dark .marquee {
-  background: var(--dark-surface-2);
 }
 
 /* Utility-class pages (Tailwind) in night mode */
@@ -2878,12 +2808,6 @@ html.header-hidden .subnav {
   }
 }
 
-@keyframes marquee {
-  to {
-    transform: translate3d(-50%, 0, 0);
-  }
-}
-
 @keyframes faqOpen {
   from {
     opacity: 0;
@@ -2916,53 +2840,5 @@ html.header-hidden .subnav {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes slideInFromTop {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInFromLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-20px);
   }
 }
