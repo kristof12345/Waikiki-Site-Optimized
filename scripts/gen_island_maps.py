@@ -95,7 +95,7 @@ L = {
         "west_gate": "Pacific Gate",
         "east_gate": "North Atlantic Gate",
         "pavilion": "Grand Central Pavilion",
-        "marina": "Spiral Tail Marina",
+        "marina": "Spiral Marina",
         "villas": "Paradise Islands Villas",
     },
     "hu": {
@@ -111,7 +111,7 @@ L = {
         "west_gate": "Csendes-óceáni Kapu",
         "east_gate": "Észak-Atlanti Kapu",
         "pavilion": "Központi Nagypavilon",
-        "marina": "Spirál Farok Jachtkikötő",
+        "marina": "Spirál Jachtkikötő",
         "villas": "Paradise Islands Villák",
     },
 }
@@ -163,7 +163,7 @@ def palm_svg(t):
         "</g>",
     ]
 
-    # Crescent Breakwater with two navigation channels (East and West)
+    # Crescent Breakwater with two navigation channels
     def arc_d(deg1, deg2, r):
         a1, a2 = math.radians(deg1), math.radians(deg2)
         p1 = (cx + r * math.cos(a1), cy + r * math.sin(a1))
@@ -178,8 +178,7 @@ def palm_svg(t):
     outer_west = arc_d(146, 264, outer_r)
     outer_east = arc_d(276, 394, outer_r)
 
-    # 18 CURVED PALM LEAVES (9 West, 9 East)
-    # Merged Quadratic Bezier curves fanning out smoothly into the crown
+    # 18 CURVED PALM LEAVES
     palm_frond_paths = []
     frond_roads = []
     frond_villas = []
@@ -551,7 +550,7 @@ def world_svg(t):
             o.append(f'<circle cx="{n(ecx + erx * math.cos(a))}" cy="{n(ecy + ery * math.sin(a))}" r="3.5" fill="{col}" />')
     o.append("</g>")
 
-    # MULTIPLE DISTINCT NON-OVERLAPPING ISLANDS
+    # MULTIPLE ISLANDS
     o.append("<!-- RECOGNIZABLE WORLD CONTINENTS (VARIED SHAPES, ZERO OVERLAPS) -->")
     o.append('<g id="world-islands-group">')
     for i, isle in enumerate(WORLD_ISLES):
@@ -721,7 +720,7 @@ def world_svg(t):
         o.append(f'<line x1="{b1[0]}" y1="{b1[1]}" x2="{b2[0]}" y2="{b2[1]}" />')
     o.append("</g>")
 
-    # Continental Cable Car connecting major continental hubs
+    # Continental Cable Car
     tele_path = [us_hub, eu_hub]
     o += [
         "<!-- Continental Cable Car) -->",
@@ -730,7 +729,7 @@ def world_svg(t):
     for p in tele_path:
         o.append(f'<circle cx="{n(p[0])}" cy="{n(p[1])}" r="5" fill="#f43f5e" stroke="#ffffff" stroke-width="1.8" />')
 
-    # Submerged suites in coral lagoon (Indian Ocean)
+    # Submerged suites in coral lagoon
     sub_suites = (695, 405)
     o += ["<!-- Submerged Reef Observation Suites -->"]
     for ddx, ddy in ((-12, -10), (14, 12)):
@@ -774,15 +773,10 @@ def world_svg(t):
 # ==========================================================================
 # 3. CHAMELEON ISLANDS (CHAMELEON ON A BRANCH: TIGHTLY GROUPED ARCHIPELAGO)
 # ==========================================================================
-# The chameleon silhouette is modelled as a continuous "tube" (snout -> body -> spiral tail)
-# with a per-point dorsal / ventral half-width. The tube is then cut into many separate
-# islands by narrow dredged channels (transverse cuts + a lateral belly channel), so the
-# islands sit tightly together like the World continents and read as one animal.
+
 CH_GAP = 12  # width of the dredged channels between neighbouring islands
 
-
 def _catmull_dense(knots, step=3.0):
-    """Densely sample a Catmull-Rom spline through knots (x, y, wt, wb); widths interpolate linearly."""
     pad = [knots[0]] + list(knots) + [knots[-1]]
     out = []
     for i in range(1, len(pad) - 2):
@@ -806,7 +800,6 @@ def _catmull_dense(knots, step=3.0):
 
 class Tube:
     """A centre-line with dorsal (wt) and ventral (wb) half-widths, addressable by arc length."""
-
     def __init__(self, knots):
         self.p = _catmull_dense(knots)
         self.s = [0.0]
@@ -1127,21 +1120,8 @@ def chameleon_svg(t):
     o.append(f'<line x1="{n(cq[0])}" y1="{n(cq[1])}" x2="{n(cq[0] - 4)}" y2="{n(cq[1] - 18)}" />')
     o.append("</g>")
 
-    # Casque spire beacon
-    o += [
-        "<!-- Golden Casque Crest Beacon -->",
-        f'<circle cx="{casque_peak[0]}" cy="{casque_peak[1]}" r="3.5" fill="#c29a57" class="twinkle" />',
-    ]
-
     # Spiral Tail Marina inside the coil
     mar = (CH_SPIRAL[0] + 4, CH_SPIRAL[1] + 2)
-    o += [
-        "<!-- Spiral Tail Deepwater Harbor Pontoons -->",
-        '<g stroke="#ffffff" stroke-width="1.8" stroke-linecap="round">',
-        f'<line x1="{mar[0] - 22}" y1="{mar[1] + 30}" x2="{mar[0] - 22}" y2="{mar[1] + 14}" />',
-        f'<line x1="{mar[0] + 22}" y1="{mar[1] - 34}" x2="{mar[0] + 22}" y2="{mar[1] - 18}" />',
-        "</g>",
-    ]
 
     # Glass-Domed Grand Pavilion on the mid-back island
     pav_s = (sx(682) + sx(546)) / 2
@@ -1210,10 +1190,6 @@ def chameleon_svg(t):
         f'<circle cx="{villas[0]}" cy="{villas[1]}" r="3.5" fill="#38bdf8" class="bob" />',
     ]
     tongue_pts = [body.off(sx(962) + 1, 0)] + [(x, y) for x, y, *_ in tongue] + [(villas[0] - 27, villas[1])]
-    o += [
-        "<!-- Overwater Boardwalk linking the Tongue Islets -->",
-        f'<path d="{poly_path(tongue_pts, close=False)}" fill="none" stroke="#c29a57" stroke-width="2" stroke-linecap="round" />',
-    ]
 
     # Sub-Sea Metro Tunnel
     metro = body.off((sx(682) + sx(546)) / 2 + 30, lambda wt, wb: split_belly(wt, wb) - 0.5 * (split_belly(wt, wb) + wb))
@@ -1222,8 +1198,6 @@ def chameleon_svg(t):
         "<!-- Sub-Sea Metro Tunnel (Nova Aurelia to Portal, Pavilion, Eye Dome and Spiral Marina) -->",
         '<g fill="none" stroke="#f5c46e" stroke-dasharray="8 4">',
         f'<path d="M{n(metro[0])},670 L{n(metro[0])},{n(metro[1])} L{n(pav[0])},{n(pav[1])}" stroke-width="3" />',
-        f'<path d="M{n(pav[0])},{n(pav[1])} C700,200 790,200 {eye[0]},{eye[1]}" stroke-width="2.5" />',
-        f'<path d="M{n(metro[0])},{n(metro[1])} C520,330 430,360 {mar[0]},{mar[1]}" stroke-width="2.5" />',
         "</g>",
     ]
     for x, y in (metro, pav, (eye[0], eye[1]), mar):
