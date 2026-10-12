@@ -612,7 +612,9 @@ def world_svg(t):
 
         # --- South America ---
         ((354.0, 382.0), (390.0, 370.0)),  # Colombia and Northern Andes to Venezuela and Orinoco
+        ((354.0, 382.0), (385.5, 409.0)),  # Colombia and Northern Andes to Amazon Basin Heart
         ((390.0, 370.0), (424.0, 378.0)),  # Venezuela and Orinoco to Guyana Coast
+        ((385.5, 409.0), (379.8, 448.5)),  # Amazon Basin Heart to Bolivia and Pantanal
         ((385.5, 409.0), (446.8, 415.4)),  # Amazon Basin Heart to Brazil Northeast Bulge
         ((385.5, 409.0), (415.1, 438.5)),  # Amazon Basin Heart to Central Brazil and Cerrado Plateau
         ((415.1, 438.5), (436.4, 469.3)),  # Central Brazil and Cerrado Plateau to Brazil Southeast Coast
@@ -640,6 +642,7 @@ def world_svg(t):
         ((540.2, 326.2), (581.0, 326.0)),  # Sahara Core Northwest to Libya and Central Sahara
         ((581.0, 326.0), (622.0, 318.0)),  # Libya and Central Sahara to Egypt and Nile Delta
         ((514.0, 368.0), (558.0, 364.0)),  # Gulf of Guinea Ivory Coast to Nigeria and Sahel
+        ((558.0, 364.0), (581.0, 326.0)),  # Nigeria and Sahel to Libya and Central Sahara
         ((558.0, 364.0), (616.0, 362.0)),  # Nigeria and Sahel to Sudan and Nubia Basin
         ((558.0, 364.0), (576.3, 408.3)),  # Nigeria and Sahel to Congo Basin Rainforest
         ((576.3, 408.3), (619.1, 410.0)),  # Congo Basin Rainforest to East Africa Rift and Lakes
@@ -688,21 +691,14 @@ def world_svg(t):
         ((396.5, 592.3), (446.0, 602.0)),  # Antarctic Peninsula Graham Land to Weddell Sea Ice Shelf
         ((446.0, 602.0), (516.0, 602.0)),  # Weddell Sea Ice Shelf to Queen Maud Land Shelf
         ((516.0, 602.0), (595.0, 595.0)),  # Queen Maud Land Shelf to Antarctic Polar Dome Hub
-        ((595.0, 595.0), (674.0, 602.0)),  # Antarctic Polar Dome Hub to Wilkes Land Ice Shelf
-        ((674.0, 602.0), (748.0, 602.0)),  # Wilkes Land Ice Shelf to Ross Ice Shelf East
-        ((748.0, 602.0), (812.1, 592.0)),  # Ross Ice Shelf East to Ross Sea Ice Shelf West
-        ((812.1, 592.0), (863.7, 575.6)),  # Ross Sea Ice Shelf West to Marie Byrd Land Shelf
 
         # ==================== INTER-CONTINENTAL BRIDGES ====================
         # 1. North America <-> South America & Caribbean
         ((328.0, 352.0), (354.0, 382.0)),  # Central America Isthmus to Colombia and Northern Andes (Panama Bridge)
         ((382.0, 268.0), (398.0, 304.0)),  # Florida Peninsula to Cuba and Greater Antilles
         ((398.0, 304.0), (424.0, 322.0)),  # Cuba and Greater Antilles to Bahamas and Caribbean Chain
-        ((424.0, 322.0), (424.0, 378.0)),  # Bahamas and Caribbean Chain to Guyana Coast
-        ((398.0, 304.0), (390.0, 370.0)),  # Cuba and Greater Antilles to Venezuela and Orinoco
 
         # 2. Europe <-> Africa
-        ((500.0, 260.1), (503.2, 319.7)),  # Iberian Peninsula to Morocco and Atlas (Strait of Gibraltar Bridge)
         ((564.0, 260.0), (562.0, 288.0)),  # Italy Boot Peninsula to Sicily and Malta
         ((562.0, 288.0), (581.0, 326.0)),  # Sicily and Malta to Libya and Central Sahara
 
@@ -725,17 +721,14 @@ def world_svg(t):
         ((836.0, 372.0), (878.0, 392.0)),  # Sumatra Island to Java Island (Sunda Strait Bridge)
         ((878.0, 392.0), (892.0, 346.0)),  # Java Island to Borneo Heart
         ((924.0, 358.0), (948.0, 386.0)),  # Sulawesi and Moluccas to Papua New Guinea
-        ((948.0, 386.0), (966.0, 442.0)),  # Papua New Guinea to Queensland and Barrier Reef (Torres Strait Bridge)
         ((948.0, 386.0), (924.0, 432.0)),  # Papua New Guinea to Northern Territory Australia (Arafura Sea Bridge)
         ((948.0, 386.0), (996.0, 396.0)),  # Papua New Guinea to Solomon Islands
 
         # 6. South America <-> Antarctica
         ((379.3, 572.1), (396.5, 592.3)),  # Tierra del Fuego to Antarctic Peninsula Graham Land (Drake Passage Bridge)
-        ((402.0, 565.0), (396.5, 592.3)),  # Falkland Islands to Antarctic Peninsula Graham Land
 
         # 7. North America <-> Europe (Stepping Stones)
         ((358.8, 122.9), (424.0, 112.0)),  # Baffin Island to Greenland Isle
-        ((424.0, 112.0), (494.0, 128.0)),  # Greenland Isle to Iceland (Denmark Strait Bridge)
         ((494.0, 128.0), (524.0, 166.0)),  # Iceland to Great Britain
     ]
     o.append("<!-- Inter-Island Arched Footbridges -->")
@@ -745,25 +738,13 @@ def world_svg(t):
     o.append("</g>")
 
     # Continental Teleferic (Sky-Way Aerial Cable Car) connecting major continental hubs
-    tele_path = [us_hub, eu_hub, asia_hub, oc_hub]
+    tele_path = [us_hub, eu_hub]
     o += [
         "<!-- Continental Teleferic (Sky-Way Aerial Cable Car) -->",
         f'<path class="map-cableway" d="{poly_path(tele_path, close=False)}" />',
     ]
     for p in tele_path:
         o.append(f'<circle cx="{n(p[0])}" cy="{n(p[1])}" r="5" fill="#f43f5e" stroke="#ffffff" stroke-width="1.8" />')
-
-    # Water-Taxi routes connecting through the storm gates
-    o += [
-        "<!-- Electric Water Taxi Marine Corridors from the Storm Gates -->",
-        '<g class="map-ferry">',
-        f'<path d="M{ecx},{ecy + ery} L{an_hub[0]},{an_hub[1] + 16}" />',
-        f'<path d="M{ecx - erx},{ecy} C140,345 200,340 328,350" />',
-        f'<path d="M{ecx + erx},{ecy} C1080,380 1020,410 970,410" />',
-        f'<path d="M{ecx},{ecy - ery} L520,100 Q500,150 480,210" />',
-        '<path d="M530,285 Q620,290 680,335" />',
-        "</g>",
-    ]
 
     # Submerged suites in coral lagoon (Indian Ocean)
     sub_suites = (695, 405)
