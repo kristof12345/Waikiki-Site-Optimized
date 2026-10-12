@@ -1,15 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerate the three artificial-island SVG maps on en/hu infrastructure pages.
 
-Design principles (Dubai-inspired artificial islands):
-- Palm Island: real palm tree crown (16 curved fronds fanning from the central spine as leaves),
-  with trunk and roads seamlessly connected.
-- World Islands: archipelago of multiple distinct islands (larger continent cores + smaller islands)
-  forming an instantly recognizable world map with zero overlapping islands.
-- Chameleon Islands: a chameleon gripping a branch, modelled as one continuous silhouette (snout, casque,
-  turret eye, arched back, spiral tail, four limbs) cut by narrow channels into many tightly grouped larger
-  and smaller islands, plus crest islets, tongue stepping stones and a branch breakwater (zero overlaps).
-"""
 import math
 import re
 import sys
@@ -129,17 +119,11 @@ L = {
 }
 
 
-# ==========================================================================
-# 1. PALM ISLAND (REAL PALM TREE LEAVES BRANCHING UPWARD FROM MAIN STEM)
-# ==========================================================================
-def palm_svg(t):
-    cx, cy = 600, 350
-    R_CRES = 315
-    o = []
-    o.append(f'<svg class="ill" viewBox="0 0 1200 700" role="img" aria-label="{t["palm_aria"]}">')
-    o += [
+def map_header(aria_label):
+    return [
+        f'<svg class="ill" viewBox="0 0 1200 700" role="img" aria-label="{aria_label}">',
         "<defs>",
-        '<linearGradient id="palm-sea" x1="0" y1="0" x2="0" y2="1">',
+        '<linearGradient id="island-sea" x1="0" y1="0" x2="0" y2="1">',
         '<stop offset="0%" stop-color="#0c3461" />',
         '<stop offset="40%" stop-color="#185694" />',
         '<stop offset="100%" stop-color="#2c7ebd" />',
@@ -152,9 +136,24 @@ def palm_svg(t):
         '<feGaussianBlur stdDeviation="3" result="blur" />',
         '<feComposite in="SourceGraphic" in2="blur" operator="over" />',
         "</filter>",
+        '<filter id="glass-glow" x="-20%" y="-20%" width="140%" height="140%">',
+        '<feGaussianBlur stdDeviation="4" result="blur" />',
+        '<feComposite in="SourceGraphic" in2="blur" operator="over" />',
+        "</filter>",
         "</defs>",
         "<!-- Deep Ocean Water Base -->",
-        '<rect width="1200" height="700" fill="url(#palm-sea)" />',
+        '<rect width="1200" height="700" fill="url(#island-sea)" />',
+    ]
+
+
+# ==========================================================================
+# 1. PALM ISLAND (REAL PALM TREE LEAVES BRANCHING UPWARD FROM MAIN STEM)
+# ==========================================================================
+def palm_svg(t):
+    cx, cy = 600, 350
+    R_CRES = 315
+    o = map_header(t["palm_aria"])
+    o += [
         "<!-- Shallow Lagoon inside the Crescent -->",
         f'<circle cx="{cx}" cy="{cy}" r="310" fill="url(#lagoon-glow)" />',
         "<!-- Bathymetric and Navigational Grid Lines -->",
@@ -181,7 +180,7 @@ def palm_svg(t):
     outer_west = arc_d(146, 264, outer_r)
     outer_east = arc_d(276, 394, outer_r)
 
-    # 16 CURVED PALM LEAVES (8 West, 8 East)
+    # 18 CURVED PALM LEAVES (9 West, 9 East)
     # Merged Quadratic Bezier curves fanning out smoothly into the crown
     palm_frond_paths = []
     frond_roads = []
@@ -521,25 +520,10 @@ WORLD_ISLES = [
 
 def world_svg(t):
     ecx, ecy, erx, ery = 600, 345, 540, 305
-    o = []
-    o.append(f'<svg class="ill" viewBox="0 0 1200 700" role="img" aria-label="{t["world_aria"]}">')
+    o = map_header(t["world_aria"])
     o += [
-        "<defs>",
-        '<linearGradient id="world-sea" x1="0" y1="0" x2="0" y2="1">',
-        '<stop offset="0%" stop-color="#0a2a4e" />',
-        '<stop offset="50%" stop-color="#144d85" />',
-        '<stop offset="100%" stop-color="#236ca9" />',
-        "</linearGradient>",
-        '<radialGradient id="world-lagoon" cx="50%" cy="50%" r="50%">',
-        '<stop offset="0%" stop-color="#69c3eb" stop-opacity="0.45" />',
-        '<stop offset="85%" stop-color="#124b82" stop-opacity="0.12" />',
-        '<stop offset="100%" stop-color="#0a2a4e" stop-opacity="0" />',
-        "</radialGradient>",
-        "</defs>",
-        "<!-- Deep Water Base -->",
-        '<rect width="1200" height="700" fill="url(#world-sea)" />',
         "<!-- Lagoon Shallows -->",
-        f'<ellipse cx="{ecx}" cy="{ecy}" rx="{erx}" ry="{ery}" fill="url(#world-lagoon)" />',
+        f'<ellipse cx="{ecx}" cy="{ecy}" rx="{erx}" ry="{ery}" fill="url(#lagoon-glow)" />',
         "<!-- Wave Break Line -->",
         f'<ellipse cx="{ecx}" cy="{ecy}" rx="{erx + 25}" ry="{ery + 23}" fill="none" stroke="rgba(255,255,255,0.14)" stroke-dasharray="6 8" />',
     ]
@@ -598,7 +582,7 @@ def world_svg(t):
         f'<ellipse cx="{an_hub[0]}" cy="{an_hub[1]}" rx="24" ry="9" fill="#38bdf8" stroke="#ffffff" stroke-width="1.6" opacity="0.85" />',
     ]
 
-    # Inter-island footbridges connecting close satellite pairs and inter-continental spans
+    # Inter-island footbridges
     bridges = [
         # --- North America ---
         ((308.1, 174.0), (331.1, 213.7)),  # Canadian Shield Ontario to US Midwest and Great Lakes
@@ -739,10 +723,10 @@ def world_svg(t):
         o.append(f'<line x1="{b1[0]}" y1="{b1[1]}" x2="{b2[0]}" y2="{b2[1]}" />')
     o.append("</g>")
 
-    # Continental Teleferic (Sky-Way Aerial Cable Car) connecting major continental hubs
+    # Continental Cable Car connecting major continental hubs
     tele_path = [us_hub, eu_hub]
     o += [
-        "<!-- Continental Teleferic (Sky-Way Aerial Cable Car) -->",
+        "<!-- Continental Cable Car) -->",
         f'<path class="map-cableway" d="{poly_path(tele_path, close=False)}" />',
     ]
     for p in tele_path:
@@ -796,7 +780,7 @@ def world_svg(t):
 # with a per-point dorsal / ventral half-width. The tube is then cut into many separate
 # islands by narrow dredged channels (transverse cuts + a lateral belly channel), so the
 # islands sit tightly together like the World continents and read as one animal.
-CH_GAP = 7  # width of the dredged channels between neighbouring islands
+CH_GAP = 12  # width of the dredged channels between neighbouring islands
 
 
 def _catmull_dense(knots, step=3.0):
@@ -1093,20 +1077,12 @@ def chameleon_svg(t):
                 break
     br_cuts = [0.0] + br_cut_s + [branch.L]
     gate_pts = []
-    for i in range(len(br_cuts) - 1):
-        a = br_cuts[i] + (5 if i > 0 else 0)
-        b = br_cuts[i + 1] - (5 if i + 1 < len(br_cuts) - 1 else 0)
-        add(branch.piece(a, b), f"Branch Breakwater {i + 1}", green_poly=branch.piece(a, b, inset=5.5))
-        if i > 0:
-            gate_pts.append((branch.off(a, 0), branch.off(br_cuts[i] - 5, 0)))
 
     twig_r = Tube([(1006, branch_y(1006) - 13, 5, 5), (1034, 500, 4.5, 4.5), (1060, 482, 4, 4)])
-    add(twig_r.piece(0, twig_r.L), "East Twig Isle")
     leaf_r = (1092, 458)
     sand.append(("Marine Station Leaf Isle", smooth_island(leaf_r[0], leaf_r[1], 26, 13, rot=-38, seed=5), "sand", False))
     green.append(("Marine Station Leaf Isle", smooth_island(leaf_r[0], leaf_r[1], 15, 6, rot=-38, seed=9), False))
     twig_l = Tube([(176, branch_y(176) + 14, 5, 5), (160, 574, 4.5, 4.5), (146, 586, 4, 4)])
-    add(twig_l.piece(0, twig_l.L), "West Twig Isle")
     leaf_l = (122, 604)
     sand.append(("Power Hub Leaf Isle", smooth_island(leaf_l[0], leaf_l[1], 24, 12, rot=35, seed=7), "sand", False))
     green.append(("Power Hub Leaf Isle", smooth_island(leaf_l[0], leaf_l[1], 14, 6, rot=35, seed=11), False))
@@ -1121,39 +1097,14 @@ def chameleon_svg(t):
     # ---------------------------------------------------------------------------------------
     # SVG OUTPUT
     # ---------------------------------------------------------------------------------------
-    o = []
-    o.append(f'<svg class="ill" viewBox="0 0 1200 700" role="img" aria-label="{t["cham_aria"]}">')
+    o = map_header(t["cham_aria"])
     o += [
-        "<defs>",
-        '<linearGradient id="cham-sea" x1="0" y1="0" x2="0" y2="1">',
-        '<stop offset="0%" stop-color="#093153" />',
-        '<stop offset="45%" stop-color="#114e7a" />',
-        '<stop offset="100%" stop-color="#1d739d" />',
-        "</linearGradient>",
-        '<radialGradient id="cham-glow" cx="50%" cy="50%" r="50%">',
-        '<stop offset="0%" stop-color="#4ade80" stop-opacity="0.3" />',
-        '<stop offset="60%" stop-color="#38bdf8" stop-opacity="0.18" />',
-        '<stop offset="100%" stop-color="#093153" stop-opacity="0" />',
-        "</radialGradient>",
-        '<filter id="glass-glow" x="-20%" y="-20%" width="140%" height="140%">',
-        '<feGaussianBlur stdDeviation="4" result="blur" />',
-        '<feComposite in="SourceGraphic" in2="blur" operator="over" />',
-        "</filter>",
-        "</defs>",
-        "<!-- Coastal Bay Water Background -->",
-        '<rect width="1200" height="700" fill="url(#cham-sea)" />',
-        "<!-- Biological Eco-Glow in Lagoon -->",
-        '<ellipse cx="620" cy="370" rx="540" ry="290" fill="url(#cham-glow)" />',
-        "<!-- Outer Protective Bio-Dyke Reef Buffer -->",
-        '<ellipse cx="620" cy="372" rx="560" ry="290" class="map-reef" opacity="0.45" stroke-dasharray="10 8" stroke-width="2.5" fill="none" />',
+        "<!-- Shallow Lagoon -->",
+        '<ellipse cx="620" cy="370" rx="540" ry="290" fill="url(#lagoon-glow)" />',
         "<!-- Shallow Reef Halo hugging the Archipelago -->",
         '<g fill="none" stroke="#2ba29e" stroke-linecap="round" stroke-linejoin="round" opacity="0.35">',
         f'<path d="{poly_path([body.off(s, lambda wt, wb: wt + 4) for s in [body.L * q / 120 for q in range(121)]], close=False)}" stroke-width="16" />',
         "</g>",
-        "<!-- Mainland Nova Aurelia Coastline (Bottom) -->",
-        '<path class="map-sand" d="M0,656 Q300,642 600,646 Q900,642 1200,656 L1200,700 L0,700 Z" />',
-        '<rect x="0" y="670" width="1200" height="30" class="map-urban" />',
-        '<line x1="0" y1="670" x2="1200" y2="670" stroke="#ffffff" stroke-width="2.5" />',
     ]
 
     o.append(f"<!-- {len(sand)} DISTINCT ISLANDS FORMING A CHAMELEON ON A BRANCH (ZERO OVERLAPS) -->")
@@ -1308,14 +1259,8 @@ def chameleon_svg(t):
     for x, y in (metro, pav, (eye[0], eye[1]), mar):
         o.append(f'<circle cx="{n(x)}" cy="{n(y)}" r="5" fill="#f5c46e" stroke="#ffffff" stroke-width="2" />')
 
-    # Water taxis and labels
+    # Labels
     o += [
-        "<!-- Autonomous Electric Water Taxi Marine Paths -->",
-        '<g class="map-ferry">',
-        f'<path d="M{mar[0] - 60},{mar[1] + 40} C200,560 170,620 300,640" />',
-        f'<path d="M{eco[0]},{eco[1] + 40} C640,560 700,610 760,640" />',
-        f'<path d="M{villas[0]},{villas[1] + 28} C1130,380 1120,520 1060,640" />',
-        "</g>",
         "<!-- Geographic Labels -->",
         '<g class="map-label-group">',
         f'<text class="map-label-text" x="{n(pav[0])}" y="148">{t["pavilion"]}</text>',
