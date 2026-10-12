@@ -453,16 +453,19 @@ WORLD_ISLES = [
     {'name': 'South Africa Cape', 'cx': 594.0, 'cy': 512.0, 'rx': 19, 'ry': 15, 'rot': 5, 'shape': 'taper'},
     {'name': 'Madagascar Island', 'cx': 664.0, 'cy': 472.0, 'rx': 11, 'ry': 22, 'rot': -20, 'green': True},
 
-    # === ASIA AND MIDDLE EAST (32 Islands: Russia, Urals, Siberia, Kamchatka, Levant, Arabia, Central Asia, Iran, India, Tibet, China, Korea, Japan, Indochina, Indonesia) ===
+    # === ASIA AND MIDDLE EAST (35 Islands: Russia, Urals, Siberia, Baikal, Kamchatka, Levant, Arabia, Central Asia, Kazakhstan, Pamir, Iran, India, Tibet, China, Korea, Japan, Indochina, Indonesia) ===
     {'name': 'European Russia Core', 'cx': 671.1, 'cy': 156.2, 'rx': 20, 'ry': 16, 'rot': 5, 'green': True},
     {'name': 'Ural Mountains and West Siberia', 'cx': 718.5, 'cy': 142.1, 'rx': 25, 'ry': 16, 'rot': 0},
     {'name': 'Central Siberia Plateau', 'cx': 776.8, 'cy': 130.8, 'rx': 30, 'ry': 16, 'rot': 0},
+    {'name': 'Lake Baikal and Sayan Range', 'cx': 825.0, 'cy': 142.0, 'rx': 16, 'ry': 12, 'rot': -5, 'green': True},
     {'name': 'East Siberia and Yakutia', 'cx': 868.0, 'cy': 130.0, 'rx': 27, 'ry': 16, 'rot': -5},
     {'name': 'Kamchatka and Bering Shore', 'cx': 926.4, 'cy': 141.4, 'rx': 13, 'ry': 16, 'rot': 25, 'shape': 'arc'},
     {'name': 'Sakhalin Island Arc', 'cx': 947.9, 'cy': 162.8, 'rx': 7, 'ry': 13, 'rot': 10, 'shape': 'arc'},
     {'name': 'Levant and Mesopotamia', 'cx': 662.0, 'cy': 270.0, 'rx': 15, 'ry': 12, 'rot': 15},
     {'name': 'Arabian Peninsula', 'cx': 670.0, 'cy': 312.0, 'rx': 20, 'ry': 16, 'rot': -25},
     {'name': 'Central Asian Steppes', 'cx': 724.0, 'cy': 198.0, 'rx': 20, 'ry': 14, 'rot': 5},
+    {'name': 'Kazakhstan and Altai Steppes', 'cx': 766.0, 'cy': 185.0, 'rx': 18, 'ry': 13, 'rot': 10},
+    {'name': 'Pamir and Hindu Kush Plateau', 'cx': 752.0, 'cy': 234.0, 'rx': 16, 'ry': 13, 'rot': 25},
     {'name': 'Persian Plateau', 'cx': 712.0, 'cy': 256.0, 'rx': 17, 'ry': 14, 'rot': 20},
     {'name': 'Pakistan and Indus Basin', 'cx': 745.0, 'cy': 278.0, 'rx': 14, 'ry': 15, 'rot': 20},
     {'name': 'Northern India and Himalayas', 'cx': 782.0, 'cy': 264.0, 'rx': 19, 'ry': 13, 'rot': 15},
@@ -593,8 +596,9 @@ def world_svg(t):
         f'<ellipse cx="{an_hub[0]}" cy="{an_hub[1]}" rx="24" ry="9" fill="#38bdf8" stroke="#ffffff" stroke-width="1.6" opacity="0.85" />',
     ]
 
-    # Inter-island footbridges connecting close satellite pairs
+    # Inter-island footbridges connecting close satellite pairs and inter-continental spans
     bridges = [
+        # --- North America ---
         ((308.1, 174.0), (331.1, 213.7)),  # Canadian Shield Ontario to US Midwest and Great Lakes
         ((331.1, 213.7), (374.0, 212.0)),  # US Midwest and Great Lakes to US East Coast and New England
         ((331.1, 213.7), (342.0, 256.0)),  # US Midwest and Great Lakes to US South and Gulf Coast
@@ -603,7 +607,10 @@ def world_svg(t):
         ((298.0, 260.0), (278.0, 296.0)),  # Texas and Southern Great Plains to Northern Mexico
         ((278.0, 296.0), (298.0, 328.0)),  # Northern Mexico to Southern Mexico
         ((298.0, 328.0), (338.0, 318.0)),  # Southern Mexico to Yucatan Peninsula
+        ((298.0, 328.0), (328.0, 352.0)),  # Southern Mexico to Central America Isthmus
         ((361.2, 164.0), (404.0, 178.0)),  # Quebec and Labrador to Newfoundland and Maritimes
+
+        # --- South America ---
         ((354.0, 382.0), (390.0, 370.0)),  # Colombia and Northern Andes to Venezuela and Orinoco
         ((390.0, 370.0), (424.0, 378.0)),  # Venezuela and Orinoco to Guyana Coast
         ((385.5, 409.0), (446.8, 415.4)),  # Amazon Basin Heart to Brazil Northeast Bulge
@@ -613,6 +620,10 @@ def world_svg(t):
         ((366.3, 479.4), (384.6, 511.7)),  # Paraguay and Gran Chaco Basin to Argentina Pampas Core
         ((384.6, 511.7), (417.8, 505.1)),  # Argentina Pampas Core to Uruguay and Rio de la Plata
         ((384.6, 511.7), (369.4, 546.7)),  # Argentina Pampas Core to Patagonia Southern Wedge
+        ((369.4, 546.7), (379.3, 572.1)),  # Patagonia Southern Wedge to Tierra del Fuego
+        ((379.3, 572.1), (402.0, 565.0)),  # Tierra del Fuego to Falkland Islands
+
+        # --- Europe ---
         ((498.0, 176.0), (524.0, 166.0)),  # Ireland to Great Britain
         ((524.0, 166.0), (544.0, 214.0)),  # Great Britain to Western Europe Mainland Core
         ((544.0, 214.0), (512.6, 229.7)),  # Western Europe Mainland Core to France and Biscay Bay
@@ -621,6 +632,10 @@ def world_svg(t):
         ((582.0, 204.0), (564.0, 168.0)),  # Central Europe Germany and Alps to Denmark and Jutland Peninsula
         ((582.0, 204.0), (614.8, 224.6)),  # Central Europe Germany and Alps to Danube Basin and Romania
         ((582.0, 204.0), (618.0, 178.0)),  # Central Europe Germany and Alps to Poland and Baltic States
+        ((614.8, 224.6), (646.6, 209.7)),  # Danube Basin and Romania to Eastern Europe Ukraine Plains
+        ((618.0, 178.0), (646.6, 209.7)),  # Poland and Baltic States to Eastern Europe Ukraine Plains
+
+        # --- Africa ---
         ((503.2, 319.7), (540.2, 326.2)),  # Morocco and Atlas to Sahara Core Northwest
         ((540.2, 326.2), (581.0, 326.0)),  # Sahara Core Northwest to Libya and Central Sahara
         ((581.0, 326.0), (622.0, 318.0)),  # Libya and Central Sahara to Egypt and Nile Delta
@@ -631,9 +646,24 @@ def world_svg(t):
         ((576.3, 408.3), (582.0, 456.0)),  # Congo Basin Rainforest to Zambia and Zimbabwe Plateau
         ((582.0, 456.0), (622.0, 460.0)),  # Zambia and Zimbabwe Plateau to Mozambique Channel Coast
         ((582.0, 456.0), (594.0, 512.0)),  # Zambia and Zimbabwe Plateau to South Africa Cape
+
+        # --- Asia ---
         ((671.1, 156.2), (718.5, 142.1)),  # European Russia Core to Ural Mountains and West Siberia
         ((718.5, 142.1), (776.8, 130.8)),  # Ural Mountains and West Siberia to Central Siberia Plateau
-        ((776.8, 130.8), (868.0, 130.0)),  # Central Siberia Plateau to East Siberia and Yakutia
+        ((776.8, 130.8), (825.0, 142.0)),  # Central Siberia Plateau to Lake Baikal and Sayan Range
+        ((825.0, 142.0), (868.0, 130.0)),  # Lake Baikal and Sayan Range to East Siberia and Yakutia
+        ((825.0, 142.0), (807.4, 179.3)),  # Lake Baikal and Sayan Range to Mongolia Steppes
+        ((718.5, 142.1), (724.0, 198.0)),  # Ural Mountains to Central Asian Steppes
+        ((724.0, 198.0), (766.0, 185.0)),  # Central Asian Steppes to Kazakhstan and Altai Steppes
+        ((766.0, 185.0), (807.4, 179.3)),  # Kazakhstan and Altai Steppes to Mongolia Steppes
+        ((766.0, 185.0), (776.8, 130.8)),  # Kazakhstan and Altai Steppes to Central Siberia Plateau
+        ((724.0, 198.0), (752.0, 234.0)),  # Central Asian Steppes to Pamir and Hindu Kush Plateau
+        ((752.0, 234.0), (782.0, 264.0)),  # Pamir and Hindu Kush Plateau to Northern India and Himalayas
+        ((752.0, 234.0), (745.0, 278.0)),  # Pamir and Hindu Kush Plateau to Pakistan and Indus Basin
+        ((712.0, 256.0), (752.0, 234.0)),  # Persian Plateau to Pamir and Hindu Kush Plateau
+        ((752.0, 234.0), (816.2, 225.8)),  # Pamir and Hindu Kush Plateau to Tibetan High Plateau
+        ((807.4, 179.3), (855.2, 200.7)),  # Mongolia Steppes to North China Core
+        ((816.2, 225.8), (855.2, 200.7)),  # Tibetan High Plateau to North China Core
         ((855.2, 200.7), (886.0, 174.0)),  # North China Core to Manchuria and Amur River Basin
         ((855.2, 200.7), (908.0, 209.6)),  # North China Core to Korean Peninsula
         ((855.2, 200.7), (895.3, 240.0)),  # North China Core to East China Coast and Shanghai
@@ -642,14 +672,71 @@ def world_svg(t):
         ((782.0, 264.0), (816.0, 288.0)),  # Northern India and Himalayas to Bengal and Ganges Delta
         ((816.0, 288.0), (854.0, 298.0)),  # Bengal and Ganges Delta to Indochina Peninsula Vietnam/Thailand
         ((854.0, 298.0), (846.0, 336.0)),  # Indochina Peninsula Vietnam/Thailand to Malay Peninsula
-        ((846.0, 336.0), (892.0, 346.0)),  # Malay Peninsula to Borneo Heart
         ((892.0, 346.0), (924.0, 358.0)),  # Borneo Heart to Sulawesi and Moluccas
+
+        # --- Oceania ---
         ((884.0, 456.0), (924.0, 478.0)),  # Western Australia Outback to Central and South Australia
         ((924.0, 432.0), (924.0, 478.0)),  # Northern Territory Australia to Central and South Australia
         ((924.0, 478.0), (966.0, 442.0)),  # Central and South Australia to Queensland and Barrier Reef
         ((924.0, 478.0), (892.0, 497.2)),  # Central and South Australia to Great Australian Bight and Adelaide
         ((924.0, 478.0), (964.0, 488.0)),  # Central and South Australia to New South Wales and Victoria
+        ((964.0, 488.0), (959.6, 529.6)),  # New South Wales and Victoria to Tasmania (Bass Strait Bridge)
         ((1018.0, 482.0), (992.2, 507.2)),  # New Zealand North Island to New Zealand South Island
+
+        # --- Antarctica Chain ---
+        ((348.9, 581.7), (396.5, 592.3)),  # Ellsworth Land to Antarctic Peninsula Graham Land
+        ((396.5, 592.3), (446.0, 602.0)),  # Antarctic Peninsula Graham Land to Weddell Sea Ice Shelf
+        ((446.0, 602.0), (516.0, 602.0)),  # Weddell Sea Ice Shelf to Queen Maud Land Shelf
+        ((516.0, 602.0), (595.0, 595.0)),  # Queen Maud Land Shelf to Antarctic Polar Dome Hub
+        ((595.0, 595.0), (674.0, 602.0)),  # Antarctic Polar Dome Hub to Wilkes Land Ice Shelf
+        ((674.0, 602.0), (748.0, 602.0)),  # Wilkes Land Ice Shelf to Ross Ice Shelf East
+        ((748.0, 602.0), (812.1, 592.0)),  # Ross Ice Shelf East to Ross Sea Ice Shelf West
+        ((812.1, 592.0), (863.7, 575.6)),  # Ross Sea Ice Shelf West to Marie Byrd Land Shelf
+
+        # ==================== INTER-CONTINENTAL BRIDGES ====================
+        # 1. North America <-> South America & Caribbean
+        ((328.0, 352.0), (354.0, 382.0)),  # Central America Isthmus to Colombia and Northern Andes (Panama Bridge)
+        ((382.0, 268.0), (398.0, 304.0)),  # Florida Peninsula to Cuba and Greater Antilles
+        ((398.0, 304.0), (424.0, 322.0)),  # Cuba and Greater Antilles to Bahamas and Caribbean Chain
+        ((424.0, 322.0), (424.0, 378.0)),  # Bahamas and Caribbean Chain to Guyana Coast
+        ((398.0, 304.0), (390.0, 370.0)),  # Cuba and Greater Antilles to Venezuela and Orinoco
+
+        # 2. Europe <-> Africa
+        ((500.0, 260.1), (503.2, 319.7)),  # Iberian Peninsula to Morocco and Atlas (Strait of Gibraltar Bridge)
+        ((564.0, 260.0), (562.0, 288.0)),  # Italy Boot Peninsula to Sicily and Malta
+        ((562.0, 288.0), (581.0, 326.0)),  # Sicily and Malta to Libya and Central Sahara
+
+        # 3. Africa <-> Asia & Middle East
+        ((622.0, 318.0), (670.0, 312.0)),  # Egypt and Nile Delta to Arabian Peninsula (Sinai/Red Sea Bridge)
+        ((622.0, 318.0), (662.0, 270.0)),  # Egypt and Nile Delta to Levant and Mesopotamia (Suez Bridge)
+        ((658.0, 366.0), (670.0, 312.0)),  # Horn of Africa Somalia to Arabian Peninsula (Bab-el-Mandeb Strait Bridge)
+
+        # 4. Europe <-> Asia
+        ((602.0, 256.0), (662.0, 270.0)),  # Balkans and Greece to Levant and Mesopotamia (Bosphorus Bridge)
+        ((646.6, 209.7), (662.0, 270.0)),  # Eastern Europe Ukraine Plains to Levant and Mesopotamia (Caucasus Bridge)
+        ((646.6, 209.7), (671.1, 156.2)),  # Eastern Europe Ukraine Plains to European Russia Core
+        ((618.0, 178.0), (671.1, 156.2)),  # Poland and Baltic States to European Russia Core
+        ((662.0, 270.0), (712.0, 256.0)),  # Levant and Mesopotamia to Persian Plateau
+        ((712.0, 256.0), (745.0, 278.0)),  # Persian Plateau to Pakistan and Indus Basin
+        ((745.0, 278.0), (782.0, 264.0)),  # Pakistan and Indus Basin to Northern India and Himalayas
+
+        # 5. Asia <-> Oceania & Australia
+        ((846.0, 336.0), (836.0, 372.0)),  # Malay Peninsula to Sumatra Island (Malacca Strait Bridge)
+        ((836.0, 372.0), (878.0, 392.0)),  # Sumatra Island to Java Island (Sunda Strait Bridge)
+        ((878.0, 392.0), (892.0, 346.0)),  # Java Island to Borneo Heart
+        ((924.0, 358.0), (948.0, 386.0)),  # Sulawesi and Moluccas to Papua New Guinea
+        ((948.0, 386.0), (966.0, 442.0)),  # Papua New Guinea to Queensland and Barrier Reef (Torres Strait Bridge)
+        ((948.0, 386.0), (924.0, 432.0)),  # Papua New Guinea to Northern Territory Australia (Arafura Sea Bridge)
+        ((948.0, 386.0), (996.0, 396.0)),  # Papua New Guinea to Solomon Islands
+
+        # 6. South America <-> Antarctica
+        ((379.3, 572.1), (396.5, 592.3)),  # Tierra del Fuego to Antarctic Peninsula Graham Land (Drake Passage Bridge)
+        ((402.0, 565.0), (396.5, 592.3)),  # Falkland Islands to Antarctic Peninsula Graham Land
+
+        # 7. North America <-> Europe (Stepping Stones)
+        ((358.8, 122.9), (424.0, 112.0)),  # Baffin Island to Greenland Isle
+        ((424.0, 112.0), (494.0, 128.0)),  # Greenland Isle to Iceland (Denmark Strait Bridge)
+        ((494.0, 128.0), (524.0, 166.0)),  # Iceland to Great Britain
     ]
     o.append("<!-- Inter-Island Arched Footbridges -->")
     o.append('<g stroke="#ffffff" stroke-width="2.2" stroke-linecap="round">')
