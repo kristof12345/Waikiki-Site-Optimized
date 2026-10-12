@@ -694,7 +694,7 @@ def create_empty_page(
     <!-- @chrome:head --><!-- /@chrome:head -->
     <title>{esc(page_title)}</title>
     <link rel="icon" href="{root_prefix}icons/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="1024x1024" href="{root_prefix}icons/logo-green.png" />
+    <link rel="apple-touch-icon" sizes="1024x1024" href="{root_prefix}icons/logo-blue.png" />
     <link href="{root_prefix}manifest.json" rel="manifest" />
     <link rel="stylesheet" href="{root_prefix}css/common.css" />
 </head>
