@@ -3,6 +3,7 @@ import xml.etree.ElementTree as ET
 import sys
 import os
 import math
+import subprocess
 
 # ==============================================================================
 # CONST ARRAY OF CITIES
@@ -337,17 +338,31 @@ def make_curved_path(p1, p2, bend=0.0):
 
     return f"M{x1:.0f} {y1:.0f} C{cx1:.0f} {cy1:.0f}, {cx2:.0f} {cy2:.0f}, {x2:.0f} {y2:.0f}"
 
+def merge_path_d(d_list):
+    """Normalizes and combines multiple SVG path d strings into one compound path."""
+    res = []
+    for d in d_list:
+        d = d.strip()
+        if not d:
+            continue
+        # Convert initial relative moveto 'm X,Y' to absolute 'M X,Y l '
+        # so multiple subpaths can be cleanly concatenated without offsetting each other
+        d_norm = re.sub(r'^[mM]\s*([-\d.]+)[,\s]+([-\d.]+)\s*', r'M \1,\2 l ', d)
+        res.append(d_norm)
+    return ' '.join(res)
+
 def get_cuba_group():
-    with open('en/infrastructure.html', 'r', encoding='utf-8') as f:
-        content = f.read()
-    m = re.search(r'<g class="cuba-archipelago"[^>]*>(.*?)</g>\s*<!-- Cuban Cays', content, re.DOTALL)
-    if not m:
-        m = re.search(r'(<g class="cuba-archipelago".*?</g>)', content, re.DOTALL)
-        if not m:
-            raise ValueError("Could not find cuba-archipelago in en/infrastructure.html")
-        return m.group(1)
-    inner = m.group(1).strip()
-    return f'<g class="cuba-archipelago" transform="translate(90, 240) scale(1.15)">\n{inner}\n                        </g>'
+    tree = ET.parse('content/Maps/cuba.svg')
+    ns = {'svg': 'http://www.w3.org/2000/svg'}
+    paths = tree.findall('.//svg:path', ns) or tree.findall('.//path')
+    d_list = [p.attrib.get('d', '') for p in paths]
+    merged_d = merge_path_d(d_list)
+    return (
+        '                        <!-- ==================== CUBA ARCHIPELAGO ==================== -->\n'
+        '                        <g class="cuba-archipelago" transform="translate(90, 240) scale(1.15)">\n'
+        f'                            <path class="f-sand province-path" vector-effect="non-scaling-stroke" d="{merged_d}" />\n'
+        '                        </g>'
+    )
 
 def is_florida_county_visible(d, tx=88, ty=-157.4, scale=4.0, vw=1800, vh=650):
     tokens = re.findall(r'([a-zA-Z])|([-+]?(?:\d*\.\d+|\d+))', d)
@@ -395,75 +410,56 @@ def is_florida_county_visible(d, tx=88, ty=-157.4, scale=4.0, vw=1800, vh=650):
         if gy > max_y: max_y = gy
     return max_x >= 0 and min_x <= vw and max_y >= 0 and min_y <= vh
 
-def get_florida_group(is_hu=False):
+def get_florida_group():
     tree = ET.parse('content/Maps/usa-fl.svg')
     ns = {'svg': 'http://www.w3.org/2000/svg'}
     paths = tree.findall('.//svg:path', ns) or tree.findall('.//path')
-    lines = []
-    for p in paths:
-        d = p.attrib.get('d', '')
-        if not is_florida_county_visible(d):
-            continue
-        cid = p.attrib.get('id', '')
-        title_base = cid.replace(' FL', '')
-        title = f'Florida · {title_base}'
-        # Use florida-path (no internal borders)
-        lines.append(f'                            <path class="f-sand florida-path" d="{d}" id="FL-{cid}" title="{title}" />')
-    return '                        <!-- ==================== FLORIDA (REAL-SCALE COASTLINE) ==================== -->\n' + \
-           '                        <g id="florida-regions" transform="translate(88, -157.4) scale(4.0)">\n' + \
-           '\n'.join(lines) + '\n' + \
-           '                        </g>'
+    d_list = [
+        p.attrib.get('d', '')
+        for p in paths
+        if is_florida_county_visible(p.attrib.get('d', ''))
+    ]
+    merged_d = merge_path_d(d_list)
+    return (
+        '                        <!-- ==================== FLORIDA ==================== -->\n'
+        '                        <g transform="translate(88, -157.4) scale(4.0)">\n'
+        f'                            <path class="f-sand florida-path" d="{merged_d}" />\n'
+        '                        </g>'
+    )
 
-def get_jamaica_group(is_hu=False):
+def get_jamaica_group():
     tree = ET.parse('content/Maps/jamaica.svg')
     ns = {'svg': 'http://www.w3.org/2000/svg'}
     paths = tree.findall('.//svg:path', ns) or tree.findall('.//path')
-    lines = []
-    for p in paths:
-        cid = p.attrib.get('id', '')
-        title_base = p.attrib.get('title', '')
-        title = f'Jamaica · {title_base}' if is_hu else f'Jamaica · {title_base} Parish'
-        d = p.attrib.get('d', '')
-        lines.append(f'                            <path class="f-sand province-path" vector-effect="non-scaling-stroke" d="{d}" id="{cid}" title="{title}" />')
-    return '                        <!-- ==================== JAMAICA (DETAILED PARISHES) ==================== -->\n' + \
-           '                        <g id="jamaica-regions" transform="translate(752.5, 566.3) scale(0.1915)">\n' + \
-           '\n'.join(lines) + '\n' + \
-           '                        </g>'
+    d_list = [p.attrib.get('d', '') for p in paths]
+    merged_d = merge_path_d(d_list)
+    return (
+        '                        <!-- ==================== JAMAICA ==================== -->\n'
+        '                        <g transform="translate(752.5, 566.3) scale(0.1915)">\n'
+        f'                            <path class="f-sand province-path" vector-effect="non-scaling-stroke" d="{merged_d}" />\n'
+        '                        </g>'
+    )
 
-def get_hispaniola_group(is_hu=False):
+def get_hispaniola_group():
     tree_ht = ET.parse('content/Maps/haiti.svg')
     tree_do = ET.parse('content/Maps/dominican-republic.svg')
     ns = {'svg': 'http://www.w3.org/2000/svg'}
-    
-    ht_lines = []
-    for p in tree_ht.findall('.//svg:path', ns) or tree_ht.findall('.//path'):
-        cid = p.attrib.get('id', '')
-        title_base = p.attrib.get('title', '')
-        title = f'Haiti · {title_base}'
-        d = p.attrib.get('d', '')
-        ht_lines.append(f'                                <path class="f-sand province-path" vector-effect="non-scaling-stroke" d="{d}" id="{cid}" title="{title}" />')
-        
-    do_lines = []
-    for p in tree_do.findall('.//svg:path', ns) or tree_do.findall('.//path'):
-        cid = p.attrib.get('id', '')
-        title_base = p.attrib.get('title', '')
-        if cid == 'DO-15 Monte' and title_base == 'Cristi':
-            cid = 'DO-15'
-            title_base = 'Monte Cristi'
-        title = f'Dominikai Köztársaság · {title_base}' if is_hu else f'Dominican Republic · {title_base}'
-        d = p.attrib.get('d', '')
-        do_lines.append(f'                                <path class="f-sand province-path" vector-effect="non-scaling-stroke" d="{d}" id="{cid}" title="{title}" />')
-        
-    xml = f'''                        <!-- ==================== HISPANIOLA (DETAILED HAITI AND DOMINICAN REP.) ==================== -->
-                        <g id="hispaniola-regions" transform="translate(1000, 425) scale(0.247)">
-                            <g id="haiti-departments">
-{chr(10).join(ht_lines)}
-                            </g>
-                            <g id="dominican-republic-provinces" transform="translate(670.97, 45.06) scale(1.25826, 1.26938)">
-{chr(10).join(do_lines)}
-                            </g>
-                        </g>'''
-    return xml
+
+    ht_paths = tree_ht.findall('.//svg:path', ns) or tree_ht.findall('.//path')
+    ht_d = merge_path_d([p.attrib.get('d', '') for p in ht_paths])
+
+    do_paths = tree_do.findall('.//svg:path', ns) or tree_do.findall('.//path')
+    do_d = merge_path_d([p.attrib.get('d', '') for p in do_paths])
+
+    return (
+        '                        <!-- ==================== HISPANIOLA ==================== -->\n'
+        '                        <g transform="translate(1000, 425) scale(0.247)">\n'
+        f'                            <path class="f-sand province-path" vector-effect="non-scaling-stroke" d="{ht_d}" />\n'
+        '                            <g transform="translate(670.97, 45.06) scale(1.25826, 1.26938)">\n'
+        f'                                <path class="f-sand province-path" vector-effect="non-scaling-stroke" d="{do_d}" />\n'
+        '                            </g>\n'
+        '                        </g>'
+    )
 
 def generate_transport_corridors():
     """Generates all transport corridor lines and animated traffic dots solely based on CONNECTIONS."""
@@ -577,9 +573,10 @@ def build_svg(lang="en", cuba_xml=""):
         "Schematic map of Waikiki transport corridors connecting Florida, Cuba, and Haiti"
     )
     
-    fl_xml = get_florida_group(is_hu)
-    jm_xml = get_jamaica_group(is_hu)
-    hi_xml = get_hispaniola_group(is_hu)
+    fl_xml = get_florida_group()
+    jm_xml = get_jamaica_group()
+    hi_xml = get_hispaniola_group()
+    cuba_xml = cuba_xml or get_cuba_group()
     
     # Legend labels
     lbl_maglev = "MAGLEV"
@@ -627,8 +624,8 @@ def build_svg(lang="en", cuba_xml=""):
                             <path d="M382 192 c12 -4 26 -2 32 4 c3 3 0 7 -4 7 c-12 1 -24 -2 -28 -6 z" />
                             <circle cx="430" cy="226" r="2.8" />
                         </g>
-                        <!-- ==================== CUBA ARCHIPELAGO (DETAILED) ==================== -->
-                        {cuba_xml}
+                        <!-- ==================== CUBA ARCHIPELAGO ==================== -->
+{cuba_xml}
 {jm_xml}
 {hi_xml}
 {corridors_xml}
@@ -683,6 +680,8 @@ def main():
         with open(filepath, 'w', encoding='utf-8') as f:
             f.write(new_content)
         print(f"Updated {filepath} successfully!")
+        
+        subprocess.run(["node", "scripts/format_document.js", filepath], check=False)
 
 if __name__ == '__main__':
     main()
