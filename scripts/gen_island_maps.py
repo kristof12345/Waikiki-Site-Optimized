@@ -97,7 +97,6 @@ L = {
         "pavilion": "Grand Central Pavilion",
         "marina": "Spiral Tail Marina",
         "villas": "Paradise Islands Villas",
-        "branch": "Branch Breakwater",
     },
     "hu": {
         "palm_aria": "A Pálma-sziget részletes infrastruktúra-térképe: központi törzsből kinyíló ívelt pálmalevelek, törzs és védő félhold",
@@ -114,7 +113,6 @@ L = {
         "pavilion": "Központi Nagypavilon",
         "marina": "Spirál Farok Jachtkikötő",
         "villas": "Paradise Islands Villák",
-        "branch": "Ág-hullámtörő",
     },
 }
 
@@ -947,11 +945,6 @@ CH_LIMBS = {
 }
 
 
-def branch_y(x):
-    """Gently arched branch breakwater running beneath the chameleon."""
-    return 545 - 35 * math.sin(math.pi * (x - 110) / 1000)
-
-
 def chameleon_svg(t):
     g = CH_GAP
     body = Tube(CH_BODY_KNOTS)
@@ -1063,26 +1056,10 @@ def chameleon_svg(t):
             add(ct.piece(0, ct.L), f"{lower} Claw {'East' if side > 0 else 'West'}")
         limb_meta[limb] = {"upper_mid": tube.off(knee / 2, 0)}
 
-    # ---- Branch breakwater (with navigation channels) and leaf islets ----------------------
-    br_knots = [(x, branch_y(x), 9, 9) for x in range(110, 1111, 50)]
-    br_knots[0] = (110, branch_y(110), 4, 4)
-    br_knots[-1] = (1110, branch_y(1110), 4, 4)
-    branch = Tube(br_knots)
-    br_cut_x = [300, 640, 900]
-    br_cut_s = []
-    for xc in br_cut_x:
-        for q in range(1, len(branch.p)):
-            if branch.p[q - 1][0] <= xc <= branch.p[q][0]:
-                br_cut_s.append(branch.s[q])
-                break
-    br_cuts = [0.0] + br_cut_s + [branch.L]
-    gate_pts = []
-
-    twig_r = Tube([(1006, branch_y(1006) - 13, 5, 5), (1034, 500, 4.5, 4.5), (1060, 482, 4, 4)])
+    # ---- Marine biology and renewable power satellite islets -------------------------------
     leaf_r = (1092, 458)
     sand.append(("Marine Station Leaf Isle", smooth_island(leaf_r[0], leaf_r[1], 26, 13, rot=-38, seed=5), "sand", False))
     green.append(("Marine Station Leaf Isle", smooth_island(leaf_r[0], leaf_r[1], 15, 6, rot=-38, seed=9), False))
-    twig_l = Tube([(176, branch_y(176) + 14, 5, 5), (160, 574, 4.5, 4.5), (146, 586, 4, 4)])
     leaf_l = (122, 604)
     sand.append(("Power Hub Leaf Isle", smooth_island(leaf_l[0], leaf_l[1], 24, 12, rot=35, seed=7), "sand", False))
     green.append(("Power Hub Leaf Isle", smooth_island(leaf_l[0], leaf_l[1], 14, 6, rot=35, seed=11), False))
@@ -1148,13 +1125,6 @@ def chameleon_svg(t):
         o.append(f'<line x1="{n(p1[0])}" y1="{n(p1[1])}" x2="{n(p2[0])}" y2="{n(p2[1])}" />')
     cq = body.off(sx(838), lambda wt, wb: wt - 3)
     o.append(f'<line x1="{n(cq[0])}" y1="{n(cq[1])}" x2="{n(cq[0] - 4)}" y2="{n(cq[1] - 18)}" />')
-    o.append("</g>")
-
-    # Branch navigation gates
-    o.append('<g class="twinkle">')
-    for p1, p2 in gate_pts:
-        o.append(f'<circle cx="{n(p1[0])}" cy="{n(p1[1])}" r="3.5" fill="#22c55e" />')
-        o.append(f'<circle cx="{n(p2[0])}" cy="{n(p2[1])}" r="3.5" fill="#ef4444" />')
     o.append("</g>")
 
     # Casque spire beacon
@@ -1266,7 +1236,6 @@ def chameleon_svg(t):
         f'<text class="map-label-text" x="{n(pav[0])}" y="148">{t["pavilion"]}</text>',
         f'<text class="map-label-text" x="{mar[0]}" y="502">{t["marina"]}</text>',
         f'<text class="map-label-text" x="{villas[0] - 20}" y="250">{t["villas"]}</text>',
-        f'<text class="map-label-text" x="300" y="566">{t["branch"]}</text>',
         "</g>",
     ]
 
