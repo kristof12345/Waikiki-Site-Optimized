@@ -1049,20 +1049,25 @@ def chameleon_svg(t):
             add(ct.piece(0, ct.L), f"{lower} Claw {'East' if side > 0 else 'West'}")
         limb_meta[limb] = {"upper_mid": tube.off(knee / 2, 0)}
 
-    # ---- Marine biology and renewable power satellite islets -------------------------------
-    leaf_r = (1092, 458)
-    sand.append(("Marine Station Leaf Isle", smooth_island(leaf_r[0], leaf_r[1], 26, 13, rot=-38, seed=5), "sand", False))
-    green.append(("Marine Station Leaf Isle", smooth_island(leaf_r[0], leaf_r[1], 15, 6, rot=-38, seed=9), False))
-    leaf_l = (122, 604)
-    sand.append(("Power Hub Leaf Isle", smooth_island(leaf_l[0], leaf_l[1], 24, 12, rot=35, seed=7), "sand", False))
-    green.append(("Power Hub Leaf Isle", smooth_island(leaf_l[0], leaf_l[1], 14, 6, rot=35, seed=11), False))
-
-    # ---- Projecting tongue: stepping-stone islets to the Paradise atoll --------------------
-    tongue = [(990, 275, 11, 5, 8), (1018, 280, 11, 5, 10), (1046, 285, 11, 5.5, 10), (1074, 289, 11, 6, 8)]
+    # ---- Curved tongue: stepping-stone islets to the Paradise atoll -----------------------
+    tongue = [
+        (965, 292, 10, 5, 30),
+        (968, 318, 10, 5, 55),
+        (960, 346, 10, 5, 75),
+        (944, 375, 10, 5.5, 95),
+    ]
     for k, (x, y, rx, ry, rot) in enumerate(tongue):
         sand.append((f"Tongue Stepping Islet {k + 1}", smooth_island(x, y, rx, ry, rot=rot, seed=k + 2), "sand", False))
-    villas = (1122, 294)
-    sand.append(("Paradise Atoll", smooth_island(villas[0], villas[1], 27, 25, rot=10, seed=4) + " " + circle_d(villas[0], villas[1], 13), "sand", True))
+    villas = (920, 410)
+    sand.append(("Paradise Atoll", smooth_island(villas[0], villas[1], 25, 23, rot=10, seed=4) + " " + circle_d(villas[0], villas[1], 12), "sand", True))
+
+    # ---- Marine biology and renewable power satellite islets -------------------------------
+    leaf_r = (912, 492)
+    sand.append(("Marine Station Leaf Isle", smooth_island(leaf_r[0], leaf_r[1], 22, 11, rot=-30, seed=5), "sand", False))
+    green.append(("Marine Station Leaf Isle", smooth_island(leaf_r[0], leaf_r[1], 13, 5, rot=-30, seed=9), False))
+    leaf_l = (268, 486)
+    sand.append(("Power Hub Leaf Isle", smooth_island(leaf_l[0], leaf_l[1], 22, 11, rot=40, seed=7), "sand", False))
+    green.append(("Power Hub Leaf Isle", smooth_island(leaf_l[0], leaf_l[1], 13, 5, rot=40, seed=11), False))
 
     # ---------------------------------------------------------------------------------------
     # SVG OUTPUT
@@ -1070,14 +1075,16 @@ def chameleon_svg(t):
     o = map_header(t["cham_aria"])
     o += [
         "<!-- Shallow Lagoon -->",
-        '<ellipse cx="620" cy="370" rx="540" ry="290" fill="url(#lagoon-glow)" />',
+        '<ellipse cx="600" cy="345" rx="540" ry="290" fill="url(#lagoon-glow)" />',
+        "<!-- Chameleon Archipelago Group (enlarged to fit full area like other islands) -->",
+        '<g id="chameleon-group" transform="translate(585, 350) scale(1.45) translate(-585, -350)">',
         "<!-- Shallow Reef Halo hugging the Archipelago -->",
         '<g fill="none" stroke="#2ba29e" stroke-linecap="round" stroke-linejoin="round" opacity="0.35">',
         f'<path d="{poly_path([body.off(s, lambda wt, wb: wt + 4) for s in [body.L * q / 120 for q in range(121)]], close=False)}" stroke-width="16" />',
         "</g>",
     ]
 
-    o.append(f"<!-- {len(sand)} DISTINCT ISLANDS FORMING A CHAMELEON ON A BRANCH (ZERO OVERLAPS) -->")
+    o.append(f"<!-- {len(sand)} DISTINCT ISLANDS FORMING A CHAMELEON (ZERO OVERLAPS) -->")
     o.append('<g id="chameleon-islands-group">')
     for name, d, kind, has_hole in sand:
         cls = "map-reef" if kind == "crest" else "map-sand"
@@ -1185,11 +1192,15 @@ def chameleon_svg(t):
     # Paradise Islands Overwater Villas on the tongue-tip atoll
     o += [
         "<!-- Paradise Islands Overwater Bungalows and Coral Nursery -->",
-        f'<circle cx="{villas[0]}" cy="{villas[1]}" r="19" fill="none" stroke="#c29a57" stroke-width="2.5" stroke-dasharray="3 4" />',
-        f'<circle cx="{villas[0]}" cy="{villas[1]}" r="13" class="map-sea-lagoon" stroke="#2dd4bf" stroke-width="1.6" />',
+        f'<circle cx="{villas[0]}" cy="{villas[1]}" r="18" fill="none" stroke="#c29a57" stroke-width="2.5" stroke-dasharray="3 4" />',
+        f'<circle cx="{villas[0]}" cy="{villas[1]}" r="12" class="map-sea-lagoon" stroke="#2dd4bf" stroke-width="1.6" />',
         f'<circle cx="{villas[0]}" cy="{villas[1]}" r="3.5" fill="#38bdf8" class="bob" />',
     ]
-    tongue_pts = [body.off(sx(962) + 1, 0)] + [(x, y) for x, y, *_ in tongue] + [(villas[0] - 27, villas[1])]
+    tongue_pts = [body.off(sx(962) + 1, 0)] + [(x, y) for x, y, *_ in tongue] + [(villas[0], villas[1] - 22)]
+    o += [
+        "<!-- Overwater Boardwalk linking the Tongue Islets -->",
+        f'<path d="{poly_path(tongue_pts, close=False)}" fill="none" stroke="#c29a57" stroke-width="2" stroke-linecap="round" />',
+    ]
 
     # Sub-Sea Metro Tunnel
     metro = body.off((sx(682) + sx(546)) / 2 + 30, lambda wt, wb: split_belly(wt, wb) - 0.5 * (split_belly(wt, wb) + wb))
@@ -1209,7 +1220,7 @@ def chameleon_svg(t):
         '<g class="map-label-group">',
         f'<text class="map-label-text" x="{n(pav[0])}" y="148">{t["pavilion"]}</text>',
         f'<text class="map-label-text" x="{mar[0]}" y="502">{t["marina"]}</text>',
-        f'<text class="map-label-text" x="{villas[0] - 20}" y="250">{t["villas"]}</text>',
+        f'<text class="map-label-text" x="{villas[0]}" y="{villas[1] + 34}">{t["villas"]}</text>',
         "</g>",
     ]
 
@@ -1228,6 +1239,7 @@ def chameleon_svg(t):
     for i, x, y, col, name, r in spots:
         o.append(f"<!-- Hotspot {i}: {name} -->")
         o += hotspot(i, x, y, col, r)
+    o.append("</g>")
     o.append("</svg>")
     return o
 
