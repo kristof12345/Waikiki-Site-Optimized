@@ -1,0 +1,175 @@
+/* ==========================================================================
+   WAIKIKI — STYLE OVERRIDE: OCEANIC RIVIERA
+   Theme: Caribbean Azure, Crystal Lagoon & Living Reef Coral
+   Loaded dynamically via common.js when the Oceanic style is active.
+   ========================================================================== */
+
+:root {
+  /* Primary — Deep Marine Cerulean */
+  --primary: #09527a;
+  --primary-hover: #053d5c;
+  --primary-light: #1476ab;
+  --primary-dark: #032538;
+  --primary-subtle: rgba(9, 82, 122, 0.12);
+
+  /* Secondary — Abyssal Navy */
+  --secondary: #063752;
+  --secondary-hover: #032437;
+  --secondary-light: #0d4e73;
+  --secondary-dark: #021624;
+  --secondary-subtle: rgba(6, 55, 82, 0.12);
+
+  /* Tertiary — Tropical Lagoon Turquoise */
+  --tertiary: #14b8a6;
+  --tertiary-hover: #0d9488;
+  --tertiary-light: #99f6e4;
+  --tertiary-dark: #0f766e;
+  --tertiary-subtle: rgba(20, 184, 166, 0.16);
+
+  /* Accent — Vivid Reef Coral */
+  --accent: #e05a47;
+  --accent-hover: #c4412f;
+  --accent-light: #fca595;
+  --accent-dark: #912718;
+  --accent-subtle: rgba(224, 90, 71, 0.14);
+
+  /* Neutrals — Crisp Sea Breeze Mist & Deep Slate */
+  --neutral-50: #ffffff;
+  --neutral-100: #f6fafc;
+  --neutral-150: #eff6fa;
+  --neutral-200: #e0eef7;
+  --neutral-300: #cbe0ee;
+  --neutral-400: #adcbe0;
+  --neutral-500: #7293aa;
+  --neutral-600: #4f7188;
+  --neutral-700: #2e4d61;
+  --neutral-800: #122736;
+  --neutral-900: #051420;
+
+  /* Semantic Theme Tokens */
+  --bg: var(--neutral-150);
+  --surface: #ffffff;
+  --surface-2: var(--neutral-200);
+  --surface-card: var(--surface);
+  --heading: var(--neutral-800);
+  --text: var(--neutral-700);
+  --text-muted: var(--neutral-600);
+  --text-primary: var(--text);
+  --text-secondary: var(--text-muted);
+  --muted: var(--neutral-600);
+  --line: rgba(18, 39, 54, 0.1);
+  --line-strong: rgba(18, 39, 54, 0.18);
+  --glass: rgba(239, 246, 250, 0.78);
+  --dark-bg: var(--neutral-900);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(3, 37, 56, 0.06), 0 8px 24px -16px rgba(3, 37, 56, 0.25);
+  --shadow-md: 0 2px 6px rgba(3, 37, 56, 0.06), 0 24px 48px -28px rgba(3, 37, 56, 0.38);
+  --shadow-lg: 0 4px 12px rgba(3, 37, 56, 0.08), 0 40px 80px -36px rgba(3, 37, 56, 0.5);
+  --shadow-btn: 0 12px 30px -16px rgba(3, 37, 56, 0.7);
+  --shadow-btn-hover: 0 18px 40px -16px rgba(224, 90, 71, 0.7);
+  --shadow-xl: 0 8px 24px rgba(3, 37, 56, 0.12), 0 60px 100px -40px rgba(3, 37, 56, 0.6);
+
+  /* Illustrations & Accents */
+  --ill-sky: #e1f1fa;
+  --ill-sun: #e05a47;
+  --ill-sun-2: #fca595;
+  --ill-sea: #09527a;
+  --ill-sea-2: #1476ab;
+  --ill-sea-3: #99f6e4;
+  --ill-sand: #d1e7f5;
+  --ill-ink: #063752;
+  --ill-ink-2: #09527a;
+  --ill-gold: #e5933a;
+  --ill-coral: #e05a47;
+  --ill-glass: #d8edf8;
+}
+
+/* --------------------------------------------------------------------------
+   LIGHT MODE COMPONENT OVERRIDES
+   -------------------------------------------------------------------------- */
+.light-bg {
+  background:
+    radial-gradient(1100px 420px at 8% 0%, rgba(20, 184, 166, 0.16), transparent 60%),
+    radial-gradient(900px 420px at 100% 100%, rgba(224, 90, 71, 0.12), transparent 60%),
+    var(--surface-2);
+}
+
+.site-footer {
+  background: var(--primary-dark);
+}
+
+.footer-wave {
+  fill: var(--primary-dark);
+}
+
+.page-curtain {
+  background: var(--primary-dark);
+}
+
+.page-curtain::after,
+.scroll-progress {
+  background: linear-gradient(90deg, var(--tertiary), var(--accent));
+}
+
+.hero--compact::before {
+  background: radial-gradient(circle at 35% 35%, var(--accent-light), var(--accent) 70%);
+}
+
+.to-top .ring {
+  stroke: var(--tertiary);
+}
+
+/* --------------------------------------------------------------------------
+   NIGHT MODE (BODY-DARK) OVERRIDES
+   -------------------------------------------------------------------------- */
+.body-dark {
+  --bg: #04111c;
+  --dark-surface: #0a1e2d;
+  --dark-surface-2: #061521;
+  --dark-surface-3: #102a3d;
+  --dark-heading: #e2f2fc;
+  --dark-text: #b2d3e7;
+  --dark-moon: #9ecbe6;
+  --surface: var(--dark-surface);
+  --surface-2: var(--dark-surface-2);
+  --heading: var(--dark-heading);
+  --text: var(--dark-text);
+  --muted: #6994ad;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --glass: rgba(4, 17, 28, 0.78);
+
+  --primary: #38bdf8;
+  --primary-hover: #0ea5e9;
+  --secondary: var(--dark-heading);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 30px -18px rgba(0, 0, 0, 0.75);
+  --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.35), 0 24px 48px -28px rgba(0, 0, 0, 0.88);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.4), 0 40px 80px -36px rgba(0, 0, 0, 0.95);
+  --shadow-btn-hover: 0 18px 40px -16px rgba(56, 189, 248, 0.5);
+
+  --ill-dark-sky: #061624;
+  --ill-dark-sea-3: #0c2538;
+  --ill-dark-sand: #13334d;
+  --ill-dark-ink-2: #38bdf8;
+  --ill-dark-glass: #0b2234;
+}
+
+.body-dark .hero--compact::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120' preserveAspectRatio='none'%3E%3Cpath d='M0 60c120 0 120-30 240-30s120 30 240 30 120-30 240-30 120 30 240 30v60H0z' fill='%2304111c'/%3E%3C/svg%3E");
+}
+
+.body-dark .table thead th {
+  background: var(--dark-surface-3);
+}
+
+.body-dark .faq-item:hover {
+  border-color: rgba(56, 189, 248, 0.55);
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.25), var(--shadow-md);
+}
+
+.body-dark .faq-item[open] {
+  border-color: rgba(224, 90, 71, 0.6);
+  box-shadow: 0 0 0 1px rgba(224, 90, 71, 0.25), var(--shadow-md);
+}

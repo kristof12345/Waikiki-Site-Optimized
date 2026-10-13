@@ -1,0 +1,175 @@
+/* ==========================================================================
+   WAIKIKI — STYLE OVERRIDE: SUNSET TERRACOTTA
+   Theme: Caribbean Dusk, Burnt Terracotta & Warm Sunlit Amber
+   Loaded dynamically via common.js when the Sunset style is active.
+   ========================================================================== */
+
+:root {
+  /* Primary — Burnt Terracotta Sienna */
+  --primary: #a34426;
+  --primary-hover: #85341b;
+  --primary-light: #cc5b37;
+  --primary-dark: #5e2110;
+  --primary-subtle: rgba(163, 68, 38, 0.12);
+
+  /* Secondary — Deep Sunset Sienna */
+  --secondary: #6b2816;
+  --secondary-hover: #4f1a0c;
+  --secondary-light: #8a3720;
+  --secondary-dark: #380d05;
+  --secondary-subtle: rgba(107, 40, 22, 0.12);
+
+  /* Tertiary — Warm Sunset Glow */
+  --tertiary: #f39c5b;
+  --tertiary-hover: #e4833c;
+  --tertiary-light: #fcd6b8;
+  --tertiary-dark: #c2631f;
+  --tertiary-subtle: rgba(243, 156, 91, 0.16);
+
+  /* Accent — Sunlit Amber */
+  --accent: #d97706;
+  --accent-hover: #b45309;
+  --accent-light: #fde68a;
+  --accent-dark: #853b02;
+  --accent-subtle: rgba(217, 119, 6, 0.14);
+
+  /* Neutrals — Warm Sunset Sand & Twilight Umber */
+  --neutral-50: #ffffff;
+  --neutral-100: #fdf8f4;
+  --neutral-150: #fcf4ed;
+  --neutral-200: #faeae0;
+  --neutral-300: #f4dac9;
+  --neutral-400: #ecc2a8;
+  --neutral-500: #a57f6b;
+  --neutral-600: #7d5a48;
+  --neutral-700: #553a2c;
+  --neutral-800: #2a1a11;
+  --neutral-900: #140904;
+
+  /* Semantic Theme Tokens */
+  --bg: var(--neutral-150);
+  --surface: #ffffff;
+  --surface-2: var(--neutral-200);
+  --surface-card: var(--surface);
+  --heading: var(--neutral-800);
+  --text: var(--neutral-700);
+  --text-muted: var(--neutral-600);
+  --text-primary: var(--text);
+  --text-secondary: var(--text-muted);
+  --muted: var(--neutral-600);
+  --line: rgba(42, 26, 17, 0.1);
+  --line-strong: rgba(42, 26, 17, 0.18);
+  --glass: rgba(252, 244, 237, 0.78);
+  --dark-bg: var(--neutral-900);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(94, 33, 16, 0.06), 0 8px 24px -16px rgba(94, 33, 16, 0.25);
+  --shadow-md: 0 2px 6px rgba(94, 33, 16, 0.06), 0 24px 48px -28px rgba(94, 33, 16, 0.38);
+  --shadow-lg: 0 4px 12px rgba(94, 33, 16, 0.08), 0 40px 80px -36px rgba(94, 33, 16, 0.5);
+  --shadow-btn: 0 12px 30px -16px rgba(94, 33, 16, 0.7);
+  --shadow-btn-hover: 0 18px 40px -16px rgba(217, 119, 6, 0.7);
+  --shadow-xl: 0 8px 24px rgba(94, 33, 16, 0.12), 0 60px 100px -40px rgba(94, 33, 16, 0.6);
+
+  /* Illustrations & Accents */
+  --ill-sky: #faeae0;
+  --ill-sun: #d97706;
+  --ill-sun-2: #fde68a;
+  --ill-sea: #a34426;
+  --ill-sea-2: #cc5b37;
+  --ill-sea-3: #fcd6b8;
+  --ill-sand: #f4dac9;
+  --ill-ink: #6b2816;
+  --ill-ink-2: #a34426;
+  --ill-gold: #d97706;
+  --ill-coral: #e0603a;
+  --ill-glass: #f7e0d2;
+}
+
+/* --------------------------------------------------------------------------
+   LIGHT MODE COMPONENT OVERRIDES
+   -------------------------------------------------------------------------- */
+.light-bg {
+  background:
+    radial-gradient(1100px 420px at 8% 0%, rgba(243, 156, 91, 0.16), transparent 60%),
+    radial-gradient(900px 420px at 100% 100%, rgba(217, 119, 6, 0.12), transparent 60%),
+    var(--surface-2);
+}
+
+.site-footer {
+  background: var(--primary-dark);
+}
+
+.footer-wave {
+  fill: var(--primary-dark);
+}
+
+.page-curtain {
+  background: var(--primary-dark);
+}
+
+.page-curtain::after,
+.scroll-progress {
+  background: linear-gradient(90deg, var(--tertiary), var(--accent));
+}
+
+.hero--compact::before {
+  background: radial-gradient(circle at 35% 35%, var(--accent-light), var(--accent) 70%);
+}
+
+.to-top .ring {
+  stroke: var(--tertiary);
+}
+
+/* --------------------------------------------------------------------------
+   NIGHT MODE (BODY-DARK) OVERRIDES
+   -------------------------------------------------------------------------- */
+.body-dark {
+  --bg: #190e09;
+  --dark-surface: #261610;
+  --dark-surface-2: #1d100b;
+  --dark-surface-3: #361f17;
+  --dark-heading: #fcedea;
+  --dark-text: #dbc1b7;
+  --dark-moon: #d8b7aa;
+  --surface: var(--dark-surface);
+  --surface-2: var(--dark-surface-2);
+  --heading: var(--dark-heading);
+  --text: var(--dark-text);
+  --muted: #9a7a6f;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --glass: rgba(25, 14, 9, 0.78);
+
+  --primary: #fb923c;
+  --primary-hover: #f97316;
+  --secondary: var(--dark-heading);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 30px -18px rgba(0, 0, 0, 0.75);
+  --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.35), 0 24px 48px -28px rgba(0, 0, 0, 0.88);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.4), 0 40px 80px -36px rgba(0, 0, 0, 0.95);
+  --shadow-btn-hover: 0 18px 40px -16px rgba(251, 146, 60, 0.5);
+
+  --ill-dark-sky: #21120b;
+  --ill-dark-sea-3: #331c11;
+  --ill-dark-sand: #452618;
+  --ill-dark-ink-2: #fb923c;
+  --ill-dark-glass: #2f190f;
+}
+
+.body-dark .hero--compact::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120' preserveAspectRatio='none'%3E%3Cpath d='M0 60c120 0 120-30 240-30s120 30 240 30 120-30 240-30 120 30 240 30v60H0z' fill='%23190e09'/%3E%3C/svg%3E");
+}
+
+.body-dark .table thead th {
+  background: var(--dark-surface-3);
+}
+
+.body-dark .faq-item:hover {
+  border-color: rgba(251, 146, 60, 0.55);
+  box-shadow: 0 0 0 1px rgba(251, 146, 60, 0.25), var(--shadow-md);
+}
+
+.body-dark .faq-item[open] {
+  border-color: rgba(217, 119, 6, 0.6);
+  box-shadow: 0 0 0 1px rgba(217, 119, 6, 0.25), var(--shadow-md);
+}

@@ -1,0 +1,175 @@
+/* ==========================================================================
+   WAIKIKI — STYLE OVERRIDE: ROYAL VELVET
+   Theme: Imperial Dynasty, Sovereign Burgundy & Crown Gold
+   Loaded dynamically via common.js when the Royal style is active.
+   ========================================================================== */
+
+:root {
+  /* Primary — Imperial Velvet Wine */
+  --primary: #6e1b34;
+  --primary-hover: #521225;
+  --primary-light: #9c2c4d;
+  --primary-dark: #380917;
+  --primary-subtle: rgba(110, 27, 52, 0.12);
+
+  /* Secondary — Deep Dynasty Obsidian */
+  --secondary: #450e1f;
+  --secondary-hover: #2f0814;
+  --secondary-light: #63162c;
+  --secondary-dark: #1f030b;
+  --secondary-subtle: rgba(69, 14, 31, 0.12);
+
+  /* Tertiary — Rose Velvet & Crimson Glow */
+  --tertiary: #d4738c;
+  --tertiary-hover: #bf5973;
+  --tertiary-light: #f8cfd9;
+  --tertiary-dark: #8c2440;
+  --tertiary-subtle: rgba(212, 115, 140, 0.16);
+
+  /* Accent — Crown Sovereign Gold */
+  --accent: #c99738;
+  --accent-hover: #a87a24;
+  --accent-light: #f5d58a;
+  --accent-dark: #7d5917;
+  --accent-subtle: rgba(201, 151, 56, 0.14);
+
+  /* Neutrals — Antique Imperial Parchment & Velvet Shadows */
+  --neutral-50: #ffffff;
+  --neutral-100: #fcf7f6;
+  --neutral-150: #fbf4f2;
+  --neutral-200: #f5e9e5;
+  --neutral-300: #ebd8d2;
+  --neutral-400: #dec0b7;
+  --neutral-500: #9c7b74;
+  --neutral-600: #745750;
+  --neutral-700: #503731;
+  --neutral-800: #291512;
+  --neutral-900: #140807;
+
+  /* Semantic Theme Tokens */
+  --bg: var(--neutral-150);
+  --surface: #ffffff;
+  --surface-2: var(--neutral-200);
+  --surface-card: var(--surface);
+  --heading: var(--neutral-800);
+  --text: var(--neutral-700);
+  --text-muted: var(--neutral-600);
+  --text-primary: var(--text);
+  --text-secondary: var(--text-muted);
+  --muted: var(--neutral-600);
+  --line: rgba(41, 21, 18, 0.1);
+  --line-strong: rgba(41, 21, 18, 0.18);
+  --glass: rgba(251, 244, 242, 0.78);
+  --dark-bg: var(--neutral-900);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(56, 9, 23, 0.06), 0 8px 24px -16px rgba(56, 9, 23, 0.25);
+  --shadow-md: 0 2px 6px rgba(56, 9, 23, 0.06), 0 24px 48px -28px rgba(56, 9, 23, 0.38);
+  --shadow-lg: 0 4px 12px rgba(56, 9, 23, 0.08), 0 40px 80px -36px rgba(56, 9, 23, 0.5);
+  --shadow-btn: 0 12px 30px -16px rgba(56, 9, 23, 0.7);
+  --shadow-btn-hover: 0 18px 40px -16px rgba(201, 151, 56, 0.7);
+  --shadow-xl: 0 8px 24px rgba(56, 9, 23, 0.12), 0 60px 100px -40px rgba(56, 9, 23, 0.6);
+
+  /* Illustrations & Accents */
+  --ill-sky: #faecea;
+  --ill-sun: #c99738;
+  --ill-sun-2: #f5d58a;
+  --ill-sea: #6e1b34;
+  --ill-sea-2: #9c2c4d;
+  --ill-sea-3: #f8cfd9;
+  --ill-sand: #f0ded8;
+  --ill-ink: #450e1f;
+  --ill-ink-2: #6e1b34;
+  --ill-gold: #c99738;
+  --ill-coral: #d44d6a;
+  --ill-glass: #f6e2dd;
+}
+
+/* --------------------------------------------------------------------------
+   LIGHT MODE COMPONENT OVERRIDES
+   -------------------------------------------------------------------------- */
+.light-bg {
+  background:
+    radial-gradient(1100px 420px at 8% 0%, rgba(212, 115, 140, 0.16), transparent 60%),
+    radial-gradient(900px 420px at 100% 100%, rgba(201, 151, 56, 0.12), transparent 60%),
+    var(--surface-2);
+}
+
+.site-footer {
+  background: var(--primary-dark);
+}
+
+.footer-wave {
+  fill: var(--primary-dark);
+}
+
+.page-curtain {
+  background: var(--primary-dark);
+}
+
+.page-curtain::after,
+.scroll-progress {
+  background: linear-gradient(90deg, var(--tertiary), var(--accent));
+}
+
+.hero--compact::before {
+  background: radial-gradient(circle at 35% 35%, var(--accent-light), var(--accent) 70%);
+}
+
+.to-top .ring {
+  stroke: var(--tertiary);
+}
+
+/* --------------------------------------------------------------------------
+   NIGHT MODE (BODY-DARK) OVERRIDES
+   -------------------------------------------------------------------------- */
+.body-dark {
+  --bg: #15070c;
+  --dark-surface: #240c15;
+  --dark-surface-2: #1a080f;
+  --dark-surface-3: #32111d;
+  --dark-heading: #fbeeed;
+  --dark-text: #e0c0c8;
+  --dark-moon: #dcb3bd;
+  --surface: var(--dark-surface);
+  --surface-2: var(--dark-surface-2);
+  --heading: var(--dark-heading);
+  --text: var(--dark-text);
+  --muted: #9d7580;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --glass: rgba(21, 7, 12, 0.78);
+
+  --primary: #f472b6;
+  --primary-hover: #ec4899;
+  --secondary: var(--dark-heading);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 30px -18px rgba(0, 0, 0, 0.75);
+  --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.35), 0 24px 48px -28px rgba(0, 0, 0, 0.88);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.4), 0 40px 80px -36px rgba(0, 0, 0, 0.95);
+  --shadow-btn-hover: 0 18px 40px -16px rgba(244, 114, 182, 0.5);
+
+  --ill-dark-sky: #1c0910;
+  --ill-dark-sea-3: #2d0e1b;
+  --ill-dark-sand: #3b1424;
+  --ill-dark-ink-2: #f472b6;
+  --ill-dark-glass: #290c18;
+}
+
+.body-dark .hero--compact::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120' preserveAspectRatio='none'%3E%3Cpath d='M0 60c120 0 120-30 240-30s120 30 240 30 120-30 240-30 120 30 240 30v60H0z' fill='%2315070c'/%3E%3C/svg%3E");
+}
+
+.body-dark .table thead th {
+  background: var(--dark-surface-3);
+}
+
+.body-dark .faq-item:hover {
+  border-color: rgba(244, 114, 182, 0.55);
+  box-shadow: 0 0 0 1px rgba(244, 114, 182, 0.25), var(--shadow-md);
+}
+
+.body-dark .faq-item[open] {
+  border-color: rgba(201, 151, 56, 0.6);
+  box-shadow: 0 0 0 1px rgba(201, 151, 56, 0.25), var(--shadow-md);
+}

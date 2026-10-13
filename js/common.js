@@ -5,6 +5,7 @@
 
    Modules:
      theme        Night-mode toggle (persisted in localStorage)
+     style        Site style switcher and override linker (persisted in localStorage)
      curtain      Page enter/leave transition
      header       Scrolled / hidden / on-hero header states
      menu         Full-screen overlay menu + live capital clock
@@ -88,6 +89,472 @@
             });
         });
     }
+
+    /* ---------------------------------------------------------------- style */
+    const STYLE_STORAGE_KEY = 'waikikiSiteStyle';
+    const STYLE_LINK_ID = 'waikiki-style-override';
+    const STYLES = [
+        {
+            id: 'default',
+            name: { en: 'Classic', hu: 'Klasszikus' },
+            desc: { en: 'Tropical Luxe · Ivory and Navy', hu: 'Tr\u00f3pusi luxus \u00b7 Elef\u00e1ntcsont \u00e9s tengerk\u00e9k' },
+            colors: ['#003366', '#c28a29', '#fbf7f0']
+        },
+        {
+            id: 'amazonia',
+            name: { en: 'Amazonia', hu: 'Amaz\u00f3nia' },
+            desc: { en: 'Rainforest · Emerald and Jade', hu: 'Es\u0151erd\u0151 \u00b7 Smaragd \u00e9s j\u00e1de' },
+            file: 'style-amazonia.css',
+            colors: ['#185a3e', '#c4933f', '#f1f7f2']
+        },
+        {
+            id: 'oceanic',
+            name: { en: 'Oceanic', hu: '\u00d3ce\u00e1n' },
+            desc: { en: 'Caribbean · Azure and Coral', hu: 'Karib-tenger \u00b7 Az\u00far \u00e9s korall' },
+            file: 'style-oceanic.css',
+            colors: ['#09527a', '#e05a47', '#eff6fa']
+        },
+        {
+            id: 'royal',
+            name: { en: 'Royal', hu: 'Kir\u00e1lyi' },
+            desc: { en: 'Dynasty · Velvet and Crown Gold', hu: 'Dinasztia \u00b7 B\u00e1rsony \u00e9s arany' },
+            file: 'style-royal.css',
+            colors: ['#6e1b34', '#c99738', '#fbf4f2']
+        },
+        {
+            id: 'sunset',
+            name: { en: 'Sunset', hu: 'Naplemente' },
+            desc: { en: 'Caribbean Dusk · Terracotta and Amber', hu: 'Karibi alkony \u00b7 Terrakotta \u00e9s borosty\u00e1n' },
+            file: 'style-sunset.css',
+            colors: ['#a34426', '#d97706', '#fcf4ed']
+        },
+        {
+            id: 'slate',
+            name: { en: 'Slate', hu: 'Tit\u00e1n' },
+            desc: { en: 'High-Tech · Titanium and Cobalt', hu: 'Cs\u00facstechnika \u00b7 Tit\u00e1n \u00e9s kobalt' },
+            file: 'style-slate.css',
+            colors: ['#1e293b', '#06b6d4', '#f1f5f9']
+        }
+    ];
+
+    const PALETTE_ICON = '<svg class="style-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C22 6.5 17.5 2 12 2z"/><circle cx="12" cy="7" r="1.5" fill="currentColor"/><circle cx="7.5" cy="11.5" r="1.5" fill="currentColor"/><circle cx="16.5" cy="11.5" r="1.5" fill="currentColor"/><circle cx="10" cy="16.5" r="1.5" fill="currentColor"/></svg>';
+
+    function getLocale() {
+        return (document.documentElement.lang || 'en').toLowerCase().startsWith('hu') ? 'hu' : 'en';
+    }
+
+    function getCssBasePath() {
+        const commonLink = $('link[rel="stylesheet"][href*="common.css"]');
+        if (commonLink) {
+            const href = commonLink.getAttribute('href');
+            return href.substring(0, href.lastIndexOf('/') + 1);
+        }
+        const commonScript = $('script[src*="common.js"]');
+        if (commonScript) {
+            const src = commonScript.getAttribute('src');
+            const scriptBase = src.substring(0, src.lastIndexOf('/') + 1);
+            return scriptBase.replace(/js\/$/, 'css/');
+        }
+        return '../css/';
+    }
+
+    function getActiveStyle() {
+        return root.getAttribute('data-site-style') || 'default';
+    }
+
+    function applyStyle(styleId, animate = false) {
+        const target = STYLES.some((s) => s.id === styleId) ? styleId : 'default';
+        const styleDef = STYLES.find((s) => s.id === target);
+
+        if (animate) {
+            root.classList.add('theme-transition');
+        }
+
+        let link = document.getElementById(STYLE_LINK_ID);
+
+        if (target === 'default') {
+            if (link) link.remove();
+            root.removeAttribute('data-site-style');
+        } else {
+            const basePath = getCssBasePath();
+            const targetHref = basePath + styleDef.file;
+            if (!link) {
+                link = document.createElement('link');
+                link.id = STYLE_LINK_ID;
+                link.rel = 'stylesheet';
+                document.head.appendChild(link);
+            }
+            if (link.getAttribute('href') !== targetHref) {
+                link.href = targetHref;
+            }
+            root.setAttribute('data-site-style', target);
+        }
+
+        try {
+            localStorage.setItem(STYLE_STORAGE_KEY, target);
+        } catch (e) { /* storage unavailable */ }
+
+        const meta = $('meta[name="theme-color"]');
+        if (meta) {
+            requestAnimationFrame(() => {
+                const bg = getComputedStyle(root).getPropertyValue('--bg').trim();
+                if (bg) meta.setAttribute('content', bg);
+            });
+        }
+
+        updateStyleSwitcherUI(target);
+        document.dispatchEvent(new CustomEvent('stylechange', { detail: { style: target } }));
+    }
+
+    window.setStyle = function (styleId) {
+        applyStyle(styleId, true);
+    };
+
+    window.getStyle = getActiveStyle;
+
+    function updateStyleSwitcherUI(activeId) {
+        const loc = getLocale();
+        const activeDef = STYLES.find((s) => s.id === activeId) || STYLES[0];
+
+        const toggleBtn = $('#style-toggle');
+        if (toggleBtn) {
+            toggleBtn.setAttribute('title', `${loc === 'hu' ? 'St\u00edlus' : 'Style'}: ${activeDef.name[loc]}`);
+            toggleBtn.classList.toggle('has-custom-style', activeId !== 'default');
+        }
+
+        $$('[data-style-select]').forEach((button) => {
+            const sid = button.getAttribute('data-style-select');
+            const isActive = sid === activeId;
+            button.classList.toggle('is-active', isActive);
+            button.setAttribute('aria-pressed', String(isActive));
+        });
+    }
+
+    function initStyle() {
+        let stored = null;
+        try {
+            stored = localStorage.getItem(STYLE_STORAGE_KEY);
+        } catch (e) { /* storage unavailable */ }
+        applyStyle(stored || 'default', false);
+    }
+
+    function injectStyleSwitcherStyles() {
+        if ($('#waikiki-style-switcher-css')) return;
+        const style = document.createElement('style');
+        style.id = 'waikiki-style-switcher-css';
+        style.textContent = `
+            .style-toggle {
+                position: relative;
+            }
+            .style-toggle svg {
+                width: 20px;
+                height: 20px;
+                transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            }
+            .style-toggle:hover svg {
+                transform: rotate(20deg) scale(1.1);
+            }
+            .style-toggle.is-active svg,
+            .style-toggle.has-custom-style svg {
+                color: var(--accent);
+            }
+            .style-popover {
+                position: fixed;
+                top: calc(var(--header-h-compact) + 10px);
+                right: var(--gutter);
+                z-index: calc(var(--z-header) + 20);
+                width: min(340px, calc(100vw - 2rem));
+                background: var(--surface);
+                border: var(--border-width) solid var(--line-strong);
+                border-radius: var(--radius);
+                box-shadow: var(--shadow-xl);
+                backdrop-filter: blur(var(--blur-lg));
+                -webkit-backdrop-filter: blur(var(--blur-lg));
+                padding: 1.15rem;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-8px) scale(0.96);
+                transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s;
+                pointer-events: none;
+            }
+            .style-popover.is-open {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0) scale(1);
+                pointer-events: auto;
+            }
+            .style-popover-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 0.85rem;
+                padding-bottom: 0.65rem;
+                border-bottom: 1px solid var(--line);
+            }
+            .style-popover-title {
+                font-family: var(--font-display);
+                font-size: 1.12rem;
+                font-weight: 600;
+                color: var(--heading);
+                margin: 0;
+                line-height: 1.2;
+            }
+            .style-popover-subtitle {
+                font-size: 0.74rem;
+                color: var(--muted);
+                margin: 0.15rem 0 0 0;
+            }
+            .style-popover-close {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 28px;
+                height: 28px;
+                border-radius: 50%;
+                background: var(--surface-2);
+                color: var(--text);
+                border: none;
+                cursor: pointer;
+                font-size: 1.1rem;
+                line-height: 1;
+                transition: background 0.2s, color 0.2s, transform 0.2s;
+            }
+            .style-popover-close:hover {
+                background: var(--accent);
+                color: #ffffff;
+                transform: scale(1.08);
+            }
+            .style-options-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 0.45rem;
+                max-height: 380px;
+                overflow-y: auto;
+                overscroll-behavior: contain;
+                padding-right: 2px;
+            }
+            .style-option-btn {
+                display: flex;
+                align-items: center;
+                gap: 0.85rem;
+                padding: 0.65rem 0.85rem;
+                border-radius: var(--radius-sm);
+                background: var(--surface-2);
+                border: 1px solid transparent;
+                color: var(--heading);
+                cursor: pointer;
+                text-align: left;
+                width: 100%;
+                font-family: var(--font-sans);
+                transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s, border-color 0.2s, box-shadow 0.2s;
+            }
+            .style-option-btn:hover {
+                background: var(--surface);
+                border-color: var(--line-strong);
+                transform: translateX(3px);
+            }
+            .style-option-btn.is-active {
+                background: var(--surface);
+                border-color: var(--primary);
+                box-shadow: 0 0 0 2px var(--primary-subtle);
+            }
+            .style-swatch {
+                display: flex;
+                align-items: center;
+                gap: 3px;
+                padding: 3px 5px;
+                background: rgba(0, 0, 0, 0.05);
+                border-radius: 20px;
+                flex-shrink: 0;
+            }
+            .body-dark .style-swatch {
+                background: rgba(255, 255, 255, 0.1);
+            }
+            .style-dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: 1px solid rgba(0, 0, 0, 0.15);
+                flex-shrink: 0;
+            }
+            .style-option-info {
+                flex: 1;
+                min-width: 0;
+            }
+            .style-option-name {
+                display: block;
+                font-size: 0.86rem;
+                font-weight: 700;
+                color: var(--heading);
+                line-height: 1.2;
+            }
+            .style-option-desc {
+                display: block;
+                font-size: 0.71rem;
+                color: var(--muted);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                line-height: 1.3;
+                margin-top: 1px;
+            }
+            .style-option-check {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                background: var(--primary);
+                color: #ffffff;
+                font-size: 0.68rem;
+                opacity: 0;
+                transform: scale(0.5);
+                transition: opacity 0.2s, transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+                flex-shrink: 0;
+            }
+            .style-option-btn.is-active .style-option-check {
+                opacity: 1;
+                transform: scale(1);
+            }
+        `;
+        document.head.appendChild(style);
+    }
+
+    function initStyleUI() {
+        injectStyleSwitcherStyles();
+        const loc = getLocale();
+
+        // 1. Header action button
+        const headerActions = $('.header-actions');
+        let styleBtn = $('#style-toggle');
+        if (headerActions && !styleBtn) {
+            styleBtn = document.createElement('button');
+            styleBtn.className = 'icon-btn style-toggle';
+            styleBtn.id = 'style-toggle';
+            styleBtn.type = 'button';
+            styleBtn.setAttribute('aria-haspopup', 'dialog');
+            styleBtn.setAttribute('aria-expanded', 'false');
+            styleBtn.setAttribute('aria-label', loc === 'hu' ? 'St\u00edlus v\u00e1laszt\u00e1sa' : 'Choose site style');
+            styleBtn.innerHTML = PALETTE_ICON;
+
+            const menuToggle = $('#menu-toggle', headerActions);
+            if (menuToggle) {
+                headerActions.insertBefore(styleBtn, menuToggle);
+            } else {
+                headerActions.appendChild(styleBtn);
+            }
+        }
+
+        // 2. Popover dialog
+        let popover = $('#style-popover');
+        if (!popover) {
+            popover = document.createElement('div');
+            popover.className = 'style-popover';
+            popover.id = 'style-popover';
+            popover.setAttribute('role', 'dialog');
+            popover.setAttribute('aria-label', loc === 'hu' ? 'St\u00edlus v\u00e1laszt\u00f3' : 'Style switcher');
+
+            const optionsHtml = STYLES.map((s) => {
+                const dots = s.colors.map((c) => `<span class="style-dot" style="background:${c}"></span>`).join('');
+                return `
+                    <button class="style-option-btn" type="button" data-style-select="${s.id}" aria-pressed="false">
+                        <span class="style-swatch">${dots}</span>
+                        <span class="style-option-info">
+                            <span class="style-option-name">${s.name[loc]}</span>
+                            <span class="style-option-desc">${s.desc[loc]}</span>
+                        </span>
+                        <span class="style-option-check" aria-hidden="true">\u2713</span>
+                    </button>
+                `;
+            }).join('');
+
+            popover.innerHTML = `
+                <div class="style-popover-header">
+                    <div>
+                        <h2 class="style-popover-title">${loc === 'hu' ? 'St\u00edlus' : 'Site Style'}</h2>
+                        <p class="style-popover-subtitle">${loc === 'hu' ? 'Alkalmazkodik az eg\u00e9sz oldalhoz' : 'Adapts the whole nation'}</p>
+                    </div>
+                    <button class="style-popover-close" id="style-popover-close" type="button" aria-label="${loc === 'hu' ? 'Bez\u00e1r\u00e1s' : 'Close'}">\u00d7</button>
+                </div>
+                <div class="style-options-grid">
+                    ${optionsHtml}
+                </div>
+            `;
+            document.body.appendChild(popover);
+
+            popover.querySelectorAll('[data-style-select]').forEach((button) => {
+                button.addEventListener('click', () => {
+                    const sid = button.getAttribute('data-style-select');
+                    applyStyle(sid, true);
+                    setTimeout(() => {
+                        popover.classList.remove('is-open');
+                        if (styleBtn) {
+                            styleBtn.setAttribute('aria-expanded', 'false');
+                            styleBtn.classList.remove('is-active');
+                        }
+                    }, 220);
+                });
+            });
+
+            const closeBtn = $('#style-popover-close', popover);
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => {
+                    popover.classList.remove('is-open');
+                    if (styleBtn) {
+                        styleBtn.setAttribute('aria-expanded', 'false');
+                        styleBtn.classList.remove('is-active');
+                        styleBtn.focus();
+                    }
+                });
+            }
+        }
+
+        if (styleBtn && !styleBtn._hasStyleListener) {
+            styleBtn._hasStyleListener = true;
+            styleBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = popover.classList.toggle('is-open');
+                styleBtn.setAttribute('aria-expanded', String(isOpen));
+                styleBtn.classList.toggle('is-active', isOpen);
+            });
+        }
+
+        if (!document._hasStyleGlobalListeners) {
+            document._hasStyleGlobalListeners = true;
+            document.addEventListener('click', (e) => {
+                const pop = $('#style-popover');
+                const btn = $('#style-toggle');
+                if (pop && pop.classList.contains('is-open')) {
+                    if (!pop.contains(e.target) && (!btn || !btn.contains(e.target))) {
+                        pop.classList.remove('is-open');
+                        if (btn) {
+                            btn.setAttribute('aria-expanded', 'false');
+                            btn.classList.remove('is-active');
+                        }
+                    }
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                const pop = $('#style-popover');
+                const btn = $('#style-toggle');
+                if (e.key === 'Escape' && pop && pop.classList.contains('is-open')) {
+                    pop.classList.remove('is-open');
+                    if (btn) {
+                        btn.setAttribute('aria-expanded', 'false');
+                        btn.classList.remove('is-active');
+                        btn.focus();
+                    }
+                }
+            });
+        }
+
+        updateStyleSwitcherUI(getActiveStyle());
+    }
+
+    // Early link injection before DOM ready
+    initStyle();
 
     /* -------------------------------------------------------------- animate */
     const ANIMATION_STORAGE_KEY = 'isAnimationDisabled';
@@ -758,6 +1225,7 @@
     /* ----------------------------------------------------------------- boot */
     function init() {
         initTheme();
+        initStyleUI();
         initAnimate();
         initCurtain();
         initHeader();

@@ -1,0 +1,175 @@
+/* ==========================================================================
+   WAIKIKI — STYLE OVERRIDE: MODERN SLATE
+   Theme: High-Tech Sovereign, Titanium Slate & Electric Cobalt
+   Loaded dynamically via common.js when the Slate style is active.
+   ========================================================================== */
+
+:root {
+  /* Primary — High-Tech Titanium Graphite */
+  --primary: #1e293b;
+  --primary-hover: #0f172a;
+  --primary-light: #334155;
+  --primary-dark: #020617;
+  --primary-subtle: rgba(30, 41, 59, 0.12);
+
+  /* Secondary — Deep Carbon Obsidian */
+  --secondary: #0f172a;
+  --secondary-hover: #020617;
+  --secondary-light: #1e293b;
+  --secondary-dark: #000000;
+  --secondary-subtle: rgba(15, 23, 42, 0.12);
+
+  /* Tertiary — Electric Cobalt Indigo */
+  --tertiary: #4f46e5;
+  --tertiary-hover: #4338ca;
+  --tertiary-light: #a5b4fc;
+  --tertiary-dark: #3730a3;
+  --tertiary-subtle: rgba(79, 70, 229, 0.16);
+
+  /* Accent — High-Tech Cyber Cyan */
+  --accent: #06b6d4;
+  --accent-hover: #0891b2;
+  --accent-light: #67e8f9;
+  --accent-dark: #0e7490;
+  --accent-subtle: rgba(6, 182, 212, 0.14);
+
+  /* Neutrals — Crisp Architectural Slate & Carbon */
+  --neutral-50: #ffffff;
+  --neutral-100: #f8fafc;
+  --neutral-150: #f1f5f9;
+  --neutral-200: #e2e8f0;
+  --neutral-300: #cbd5e1;
+  --neutral-400: #94a3b8;
+  --neutral-500: #64748b;
+  --neutral-600: #475569;
+  --neutral-700: #334155;
+  --neutral-800: #1e293b;
+  --neutral-900: #0f172a;
+
+  /* Semantic Theme Tokens */
+  --bg: var(--neutral-150);
+  --surface: #ffffff;
+  --surface-2: var(--neutral-200);
+  --surface-card: var(--surface);
+  --heading: var(--neutral-800);
+  --text: var(--neutral-700);
+  --text-muted: var(--neutral-600);
+  --text-primary: var(--text);
+  --text-secondary: var(--text-muted);
+  --muted: var(--neutral-600);
+  --line: rgba(15, 23, 42, 0.1);
+  --line-strong: rgba(15, 23, 42, 0.18);
+  --glass: rgba(241, 245, 249, 0.78);
+  --dark-bg: var(--neutral-900);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(2, 6, 23, 0.06), 0 8px 24px -16px rgba(2, 6, 23, 0.25);
+  --shadow-md: 0 2px 6px rgba(2, 6, 23, 0.06), 0 24px 48px -28px rgba(2, 6, 23, 0.38);
+  --shadow-lg: 0 4px 12px rgba(2, 6, 23, 0.08), 0 40px 80px -36px rgba(2, 6, 23, 0.5);
+  --shadow-btn: 0 12px 30px -16px rgba(2, 6, 23, 0.7);
+  --shadow-btn-hover: 0 18px 40px -16px rgba(6, 182, 212, 0.7);
+  --shadow-xl: 0 8px 24px rgba(2, 6, 23, 0.12), 0 60px 100px -40px rgba(2, 6, 23, 0.6);
+
+  /* Illustrations & Accents */
+  --ill-sky: #e2e8f0;
+  --ill-sun: #06b6d4;
+  --ill-sun-2: #67e8f9;
+  --ill-sea: #1e293b;
+  --ill-sea-2: #334155;
+  --ill-sea-3: #a5b4fc;
+  --ill-sand: #cbd5e1;
+  --ill-ink: #0f172a;
+  --ill-ink-2: #1e293b;
+  --ill-gold: #06b6d4;
+  --ill-coral: #6366f1;
+  --ill-glass: #e2e8f0;
+}
+
+/* --------------------------------------------------------------------------
+   LIGHT MODE COMPONENT OVERRIDES
+   -------------------------------------------------------------------------- */
+.light-bg {
+  background:
+    radial-gradient(1100px 420px at 8% 0%, rgba(79, 70, 229, 0.14), transparent 60%),
+    radial-gradient(900px 420px at 100% 100%, rgba(6, 182, 212, 0.12), transparent 60%),
+    var(--surface-2);
+}
+
+.site-footer {
+  background: var(--primary-dark);
+}
+
+.footer-wave {
+  fill: var(--primary-dark);
+}
+
+.page-curtain {
+  background: var(--primary-dark);
+}
+
+.page-curtain::after,
+.scroll-progress {
+  background: linear-gradient(90deg, var(--tertiary), var(--accent));
+}
+
+.hero--compact::before {
+  background: radial-gradient(circle at 35% 35%, var(--accent-light), var(--accent) 70%);
+}
+
+.to-top .ring {
+  stroke: var(--tertiary);
+}
+
+/* --------------------------------------------------------------------------
+   NIGHT MODE (BODY-DARK) OVERRIDES
+   -------------------------------------------------------------------------- */
+.body-dark {
+  --bg: #0a0e17;
+  --dark-surface: #131926;
+  --dark-surface-2: #0e131d;
+  --dark-surface-3: #1c2436;
+  --dark-heading: #f8fafc;
+  --dark-text: #cbd5e1;
+  --dark-moon: #94a3b8;
+  --surface: var(--dark-surface);
+  --surface-2: var(--dark-surface-2);
+  --heading: var(--dark-heading);
+  --text: var(--dark-text);
+  --muted: #64748b;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --glass: rgba(10, 14, 23, 0.78);
+
+  --primary: #818cf8;
+  --primary-hover: #6366f1;
+  --secondary: var(--dark-heading);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 30px -18px rgba(0, 0, 0, 0.75);
+  --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.35), 0 24px 48px -28px rgba(0, 0, 0, 0.88);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.4), 0 40px 80px -36px rgba(0, 0, 0, 0.95);
+  --shadow-btn-hover: 0 18px 40px -16px rgba(129, 140, 248, 0.5);
+
+  --ill-dark-sky: #0e131f;
+  --ill-dark-sea-3: #161e30;
+  --ill-dark-sand: #1e2840;
+  --ill-dark-ink-2: #818cf8;
+  --ill-dark-glass: #141b2b;
+}
+
+.body-dark .hero--compact::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120' preserveAspectRatio='none'%3E%3Cpath d='M0 60c120 0 120-30 240-30s120 30 240 30 120-30 240-30 120 30 240 30v60H0z' fill='%230a0e17'/%3E%3C/svg%3E");
+}
+
+.body-dark .table thead th {
+  background: var(--dark-surface-3);
+}
+
+.body-dark .faq-item:hover {
+  border-color: rgba(129, 140, 248, 0.55);
+  box-shadow: 0 0 0 1px rgba(129, 140, 248, 0.25), var(--shadow-md);
+}
+
+.body-dark .faq-item[open] {
+  border-color: rgba(6, 182, 212, 0.6);
+  box-shadow: 0 0 0 1px rgba(6, 182, 212, 0.25), var(--shadow-md);
+}

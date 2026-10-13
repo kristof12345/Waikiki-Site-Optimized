@@ -1,0 +1,175 @@
+/* ==========================================================================
+   WAIKIKI — STYLE OVERRIDE: EMERALD AMAZONIA
+   Theme: Lush Amazonian Rainforest Sanctuary & Botanical Jade
+   Loaded dynamically via common.js when the Amazonia style is active.
+   ========================================================================== */
+
+:root {
+  /* Primary — Deep Rainforest Emerald */
+  --primary: #185a3e;
+  --primary-hover: #11422d;
+  --primary-light: #2e8b57;
+  --primary-dark: #0a291b;
+  --primary-subtle: rgba(24, 90, 62, 0.12);
+
+  /* Secondary — Dark Jungle Canopy */
+  --secondary: #0e3524;
+  --secondary-hover: #082317;
+  --secondary-light: #1b583c;
+  --secondary-dark: #051910;
+  --secondary-subtle: rgba(14, 53, 36, 0.12);
+
+  /* Tertiary — Radiant Mint Jade */
+  --tertiary: #48b884;
+  --tertiary-hover: #369c6c;
+  --tertiary-light: #a3e2c3;
+  --tertiary-dark: #185a3e;
+  --tertiary-subtle: rgba(72, 184, 132, 0.16);
+
+  /* Accent — Warm Botanical Gold */
+  --accent: #c4933f;
+  --accent-hover: #ab7b2c;
+  --accent-light: #edd695;
+  --accent-dark: #7d591c;
+  --accent-subtle: rgba(196, 147, 63, 0.14);
+
+  /* Neutrals — Fresh Ivory Sage & Forest Obsidian */
+  --neutral-50: #ffffff;
+  --neutral-100: #f7faf7;
+  --neutral-150: #f1f7f2;
+  --neutral-200: #e4efe6;
+  --neutral-300: #d0e2d4;
+  --neutral-400: #b3ceb9;
+  --neutral-500: #74967d;
+  --neutral-600: #507259;
+  --neutral-700: #314b39;
+  --neutral-800: #14291c;
+  --neutral-900: #07170e;
+
+  /* Semantic Theme Tokens */
+  --bg: var(--neutral-150);
+  --surface: #ffffff;
+  --surface-2: var(--neutral-200);
+  --surface-card: var(--surface);
+  --heading: var(--neutral-800);
+  --text: var(--neutral-700);
+  --text-muted: var(--neutral-600);
+  --text-primary: var(--text);
+  --text-secondary: var(--text-muted);
+  --muted: var(--neutral-600);
+  --line: rgba(20, 41, 28, 0.1);
+  --line-strong: rgba(20, 41, 28, 0.18);
+  --glass: rgba(241, 247, 242, 0.78);
+  --dark-bg: var(--neutral-900);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(10, 41, 28, 0.06), 0 8px 24px -16px rgba(10, 41, 28, 0.25);
+  --shadow-md: 0 2px 6px rgba(10, 41, 28, 0.06), 0 24px 48px -28px rgba(10, 41, 28, 0.38);
+  --shadow-lg: 0 4px 12px rgba(10, 41, 28, 0.08), 0 40px 80px -36px rgba(10, 41, 28, 0.5);
+  --shadow-btn: 0 12px 30px -16px rgba(10, 41, 28, 0.7);
+  --shadow-btn-hover: 0 18px 40px -16px rgba(196, 147, 63, 0.7);
+  --shadow-xl: 0 8px 24px rgba(10, 41, 28, 0.12), 0 60px 100px -40px rgba(10, 41, 28, 0.6);
+
+  /* Illustrations & Accents */
+  --ill-sky: #e7f3ea;
+  --ill-sun: #c4933f;
+  --ill-sun-2: #edd695;
+  --ill-sea: #185a3e;
+  --ill-sea-2: #2e8b57;
+  --ill-sea-3: #a3e2c3;
+  --ill-sand: #dceada;
+  --ill-ink: #0e3524;
+  --ill-ink-2: #185a3e;
+  --ill-gold: #c4933f;
+  --ill-coral: #d46b4f;
+  --ill-glass: #d8eee0;
+}
+
+/* --------------------------------------------------------------------------
+   LIGHT MODE COMPONENT OVERRIDES
+   -------------------------------------------------------------------------- */
+.light-bg {
+  background:
+    radial-gradient(1100px 420px at 8% 0%, rgba(72, 184, 132, 0.16), transparent 60%),
+    radial-gradient(900px 420px at 100% 100%, rgba(196, 147, 63, 0.12), transparent 60%),
+    var(--surface-2);
+}
+
+.site-footer {
+  background: var(--primary-dark);
+}
+
+.footer-wave {
+  fill: var(--primary-dark);
+}
+
+.page-curtain {
+  background: var(--primary-dark);
+}
+
+.page-curtain::after,
+.scroll-progress {
+  background: linear-gradient(90deg, var(--tertiary), var(--accent));
+}
+
+.hero--compact::before {
+  background: radial-gradient(circle at 35% 35%, var(--accent-light), var(--accent) 70%);
+}
+
+.to-top .ring {
+  stroke: var(--tertiary);
+}
+
+/* --------------------------------------------------------------------------
+   NIGHT MODE (BODY-DARK) OVERRIDES
+   -------------------------------------------------------------------------- */
+.body-dark {
+  --bg: #06150e;
+  --dark-surface: #0d2418;
+  --dark-surface-2: #091b12;
+  --dark-surface-3: #123322;
+  --dark-heading: #e5f4eb;
+  --dark-text: #b5d3c0;
+  --dark-moon: #9ec3ab;
+  --surface: var(--dark-surface);
+  --surface-2: var(--dark-surface-2);
+  --heading: var(--dark-heading);
+  --text: var(--dark-text);
+  --muted: #6f977c;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --glass: rgba(6, 21, 14, 0.78);
+
+  --primary: var(--tertiary);
+  --primary-hover: var(--tertiary-hover);
+  --secondary: var(--dark-heading);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 30px -18px rgba(0, 0, 0, 0.75);
+  --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.35), 0 24px 48px -28px rgba(0, 0, 0, 0.88);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.4), 0 40px 80px -36px rgba(0, 0, 0, 0.95);
+  --shadow-btn-hover: 0 18px 40px -16px rgba(72, 184, 132, 0.5);
+
+  --ill-dark-sky: #071c12;
+  --ill-dark-sea-3: #0f2e20;
+  --ill-dark-sand: #143d2a;
+  --ill-dark-ink-2: #48b884;
+  --ill-dark-glass: #0d2a1c;
+}
+
+.body-dark .hero--compact::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120' preserveAspectRatio='none'%3E%3Cpath d='M0 60c120 0 120-30 240-30s120 30 240 30 120-30 240-30 120 30 240 30 120-30 240-30 120 30 240 30v60H0z' fill='%2306150e'/%3E%3C/svg%3E");
+}
+
+.body-dark .table thead th {
+  background: var(--dark-surface-3);
+}
+
+.body-dark .faq-item:hover {
+  border-color: rgba(72, 184, 132, 0.55);
+  box-shadow: 0 0 0 1px rgba(72, 184, 132, 0.25), var(--shadow-md);
+}
+
+.body-dark .faq-item[open] {
+  border-color: rgba(196, 147, 63, 0.6);
+  box-shadow: 0 0 0 1px rgba(196, 147, 63, 0.25), var(--shadow-md);
+}
