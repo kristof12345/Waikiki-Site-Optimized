@@ -440,6 +440,42 @@ def get_jamaica_group():
         '                        </g>'
     )
 
+def transform_path_d(d, tx=0.0, ty=0.0, sx=1.0, sy=1.0):
+    """Transforms coordinates in an SVG path d string by translation and scaling."""
+    tokens = re.findall(r'([a-zA-Z])|([-+]?(?:\d*\.\d+|\d+))', d)
+    out = []
+    cmd = None
+    is_relative = False
+    coord_idx = 0
+    i = 0
+    while i < len(tokens):
+        t = tokens[i]
+        if t[0]:
+            cmd = t[0]
+            out.append(cmd)
+            is_relative = cmd.islower()
+            coord_idx = 0
+            i += 1
+            continue
+        num = float(t[1])
+        if cmd in ['H', 'h']:
+            new_num = (num * sx) if is_relative else (tx + num * sx)
+        elif cmd in ['V', 'v']:
+            new_num = (num * sy) if is_relative else (ty + num * sy)
+        else:
+            if coord_idx == 0:
+                new_num = (num * sx) if is_relative else (tx + num * sx)
+                coord_idx = 1
+            else:
+                new_num = (num * sy) if is_relative else (ty + num * sy)
+                coord_idx = 0
+        s = f'{new_num:.2f}'.rstrip('0').rstrip('.')
+        if s == '-0' or s == '':
+            s = '0'
+        out.append(s)
+        i += 1
+    return ' '.join(out)
+
 def get_hispaniola_group():
     tree_ht = ET.parse('content/Maps/haiti.svg')
     tree_do = ET.parse('content/Maps/dominican-republic.svg')
@@ -450,14 +486,13 @@ def get_hispaniola_group():
 
     do_paths = tree_do.findall('.//svg:path', ns) or tree_do.findall('.//path')
     do_d = merge_path_d([p.attrib.get('d', '') for p in do_paths])
+    do_d_transformed = transform_path_d(do_d, tx=670.97, ty=45.06, sx=1.25826, sy=1.26938)
+    hispaniola_d = f"{ht_d} {do_d_transformed}"
 
     return (
         '                        <!-- ==================== HISPANIOLA ==================== -->\n'
         '                        <g transform="translate(1000, 425) scale(0.247)">\n'
-        f'                            <path class="f-sand province-path" vector-effect="non-scaling-stroke" d="{ht_d}" />\n'
-        '                            <g transform="translate(670.97, 45.06) scale(1.25826, 1.26938)">\n'
-        f'                                <path class="f-sand province-path" vector-effect="non-scaling-stroke" d="{do_d}" />\n'
-        '                            </g>\n'
+        f'                            <path class="f-sand province-path" vector-effect="non-scaling-stroke" d="{hispaniola_d}" />\n'
         '                        </g>'
     )
 
@@ -624,7 +659,6 @@ def build_svg(lang="en", cuba_xml=""):
                             <path d="M382 192 c12 -4 26 -2 32 4 c3 3 0 7 -4 7 c-12 1 -24 -2 -28 -6 z" />
                             <circle cx="430" cy="226" r="2.8" />
                         </g>
-                        <!-- ==================== CUBA ARCHIPELAGO ==================== -->
 {cuba_xml}
 {jm_xml}
 {hi_xml}

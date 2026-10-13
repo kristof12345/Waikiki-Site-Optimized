@@ -628,7 +628,7 @@
 
 .milestones li {
   position: relative;
-  padding: 2.6rem 1.5rem 1.6rem;
+  padding: 2.6rem 1rem 1.6rem;
   border: var(--border-width) solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);
