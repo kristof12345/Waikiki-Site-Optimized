@@ -13,7 +13,7 @@ except ImportError:
 
 
 def palm_svg(t):
-    cx, cy = 600, 350
+    cx, cy = 600, 380
     R_CRES = 315
     o = map_header(t["palm_aria"])
     o += [
@@ -24,7 +24,7 @@ def palm_svg(t):
         f'<circle cx="{cx}" cy="{cy}" r="200" />',
         f'<circle cx="{cx}" cy="{cy}" r="380" />',
         f'<circle cx="{cx}" cy="{cy}" r="470" />',
-        '<line x1="150" y1="350" x2="1050" y2="350" />',
+        '<line x1="150" y1="380" x2="1050" y2="380" />',
         "</g>",
     ]
 
@@ -33,15 +33,15 @@ def palm_svg(t):
         a1, a2 = math.radians(deg1), math.radians(deg2)
         p1 = (cx + r * math.cos(a1), cy + r * math.sin(a1))
         p2 = (cx + r * math.cos(a2), cy + r * math.sin(a2))
-        return f"M{pt(p1)} A{r},{r} 0 0 1 {pt(p2)}"
+        large_arc = 1 if abs(deg2 - deg1) > 180 else 0
+        return f"M{pt(p1)} A{r},{r} 0 {large_arc} 1 {pt(p2)}"
 
     west_cres = arc_d(150, 264, R_CRES)
     east_cres = arc_d(276, 390, R_CRES)
     cres_all = f"{west_cres} {east_cres}"
 
     outer_r = R_CRES + 34
-    outer_west = arc_d(146, 264, outer_r)
-    outer_east = arc_d(276, 394, outer_r)
+    outer_reef = arc_d(146, 394, outer_r)
 
     # 18 CURVED PALM LEAVES
     palm_frond_paths = []
@@ -49,22 +49,22 @@ def palm_svg(t):
     frond_villas = []
 
     tips = [
-        (360, 480),  # 0
-        (350, 440),  # 1
-        (340, 400),  # 2
-        (330, 360),  # 3
-        (340, 320),  # 4
-        (350, 280),  # 5
-        (360, 240),  # 6
-        (370, 200),  # 7
-        (400, 150),  # 8
-        (480, 100),   # 9
+        (360, 510),  # 0
+        (350, 470),  # 1
+        (340, 430),  # 2
+        (330, 390),  # 3
+        (340, 350),  # 4
+        (350, 310),  # 5
+        (360, 270),  # 6
+        (370, 230),  # 7
+        (400, 180),  # 8
+        (480, 130),   # 9
     ]
 
-    y_bases = [465, 430, 395, 360, 325, 290, 255, 220, 180, 150]
+    y_bases = [495, 460, 425, 390, 355, 320, 285, 250, 210, 180]
 
-    w_mid_spot = (410, 320)
-    e_mid_spot = (790, 320)
+    w_mid_spot = (410, 350)
+    e_mid_spot = (790, 350)
 
     for k in range(len(tips)):
         y0 = y_bases[k]
@@ -102,7 +102,7 @@ def palm_svg(t):
     # --------------------------------------------------------------------------
     o += [
         "<!-- Outer Coral Reef outside the Crescent Breakwater -->",
-        f'<path d="{outer_west} {outer_east}" fill="none" stroke="#2ba29e" stroke-width="2.5" stroke-dasharray="8 6" opacity="0.65" />',
+        f'<path d="{outer_reef}" fill="none" stroke="#2ba29e" stroke-width="2.5" stroke-dasharray="8 6" opacity="0.65" />',
         f'<path d="{cres_all}" fill="none" stroke="#2ba29e" stroke-width="40" stroke-linecap="round" opacity="0.45" />',
     ]
 
@@ -117,21 +117,21 @@ def palm_svg(t):
         "<!-- Crescent Apex Crown Platform Sand -->",
         f'<ellipse cx="{hx}" cy="{hy}" rx="54" ry="24" class="map-sand" />',
         "<!-- Central Trunk Sand reaching all the way to the barrier -->",
-        '<path class="map-sand" d="M570,648 L570,465 Q572,240 582,38 L618,38 Q628,240 630,465 L630,648 Z" />',
+        '<path class="map-sand" d="M570,678 L570,495 Q572,270 582,68 L618,68 Q628,270 630,495 L630,678 Z" />',
         "<!-- Gateway Marina Lobe (West) and Golden Mile Lobe (East) on Trunk -->",
-        '<path class="map-sand" d="M572,550 L532,550 C514,550 506,562 506,578 L506,598 C506,612 516,618 532,618 L572,618 Z" />',
-        '<path class="map-sand" d="M628,550 L668,550 C686,550 694,562 694,578 L694,598 C694,612 684,618 668,618 L628,618 Z" />',
-        '<rect x="518" y="560" width="44" height="48" rx="6" class="map-sea-deep" />',
+        '<path class="map-sand" d="M572,580 L532,580 C514,580 506,592 506,608 L506,628 C506,642 516,648 532,648 L572,648 Z" />',
+        '<path class="map-sand" d="M628,580 L668,580 C686,580 694,592 694,608 L694,628 C694,642 684,648 668,648 L628,648 Z" />',
+        '<rect x="518" y="590" width="44" height="48" rx="6" class="map-sea-deep" />',
         '<g stroke="#ffffff" stroke-width="1.6">',
-        '<line x1="524" y1="572" x2="556" y2="572" />',
-        '<line x1="524" y1="584" x2="556" y2="584" />',
-        '<line x1="524" y1="596" x2="556" y2="596" />',
+        '<line x1="524" y1="602" x2="556" y2="602" />',
+        '<line x1="524" y1="614" x2="556" y2="614" />',
+        '<line x1="524" y1="626" x2="556" y2="626" />',
         "</g>",
         "<!-- 16 Palm Fronds Sand -->",
         f'<path class="map-frond-edge" d="{fronds_d}" stroke-width="21" />',
         f'<path class="map-frond" d="{fronds_d}" stroke-width="17" />',
         "<!-- Mainland Nova Aurelia Coastline Sand -->",
-        '<path class="map-sand" d="M0,650 Q300,634 600,638 Q900,634 1200,650 L1200,700 L0,700 Z" />',
+        '<path class="map-sand" d="M0,680 Q300,664 600,668 Q900,664 1200,680 L1200,700 L0,700 Z" />',
     ]
 
     # --------------------------------------------------------------------------
@@ -144,7 +144,7 @@ def palm_svg(t):
         "<!-- Crescent Apex Crown Platform Greenery -->",
         f'<ellipse cx="{hx}" cy="{hy}" rx="42" ry="16" class="map-greenery" />',
         "<!-- Central Trunk Green Park Spine reaching to the barrier -->",
-        '<rect x="588" y="38" width="24" height="610" rx="8" class="map-greenery" />',
+        '<rect x="588" y="68" width="24" height="610" rx="8" class="map-greenery" />',
         "<!-- 16 Palm Fronds Green Core -->",
         f'<path class="map-frond-core" d="{fronds_d}" stroke-width="4.5" />',
     ]
@@ -159,13 +159,13 @@ def palm_svg(t):
         "<!-- Crescent Waterfront Villas -->",
         f'<path class="map-frond-villas" d="{cres_all}" stroke-width="2.6" stroke-dasharray="0.1 7" />',
         "<!-- Connected Road Network (Mainland through Trunk to Barrier and Fronds) -->",
-        '<path class="map-road" d="M592,664 L592,42 M608,664 L608,42" />',
-        '<path class="map-road" d="M592,42 C592,30 608,30 608,42" />',
+        '<path class="map-road" d="M592,694 L592,72 M608,694 L608,72" />',
+        '<path class="map-road" d="M592,72 C592,60 608,60 608,72" />',
         f'<path class="map-road" d="{roads_d}" stroke-width="2.2" />',
         "<!-- The Elevated Monorail Line along the central spine to the barrier -->",
-        '<path class="map-rail" d="M600,690 L600,42" />',
+        '<path class="map-rail" d="M600,700 L600,72" />',
     ]
-    for y in (664, 580, 465, 325, 210, 42):
+    for y in (694, 610, 495, 355, 240, 72):
         o.append(f'<circle cx="600" cy="{y}" r="5" fill="#c29a57" stroke="#ffffff" stroke-width="1.8" />')
 
     o += [
@@ -174,13 +174,10 @@ def palm_svg(t):
     ]
     for r in range(3):
         for c in range(3):
-            o.append(f'<rect x="{640 + c * 14}" y="{566 + r * 14}" width="11" height="11" rx="1.5" />')
+            o.append(f'<rect x="{640 + c * 14}" y="{596 + r * 14}" width="11" height="11" rx="1.5" />')
     o.append("</g>")
 
     o += [
-        "<!-- Mainland Waterfront Urban Strip -->",
-        '<rect x="0" y="664" width="1200" height="36" class="map-urban" />',
-        '<line x1="0" y1="664" x2="1200" y2="664" stroke="#ffffff" stroke-width="2.5" />',
         "<!-- Crescent Apex Hotel Architecture (Hotel Khalifa) -->",
         f'<g transform="translate({hx}, {hy})">',
         '<ellipse cx="0" cy="2" rx="22" ry="9" fill="#002244" opacity="0.75" />',
@@ -204,12 +201,12 @@ def palm_svg(t):
     spots = [
         (1, hx, hy, "#c29a57", "Hotel Khalifa"),
         (2, wx, wy, "#38bdf8", "Waterpark"),
-        (3, 600, 480, "#c29a57", "Elevated Monorail Spine"),
+        (3, 600, 510, "#c29a57", "Elevated Monorail Spine"),
         (4, cx + R_CRES * math.cos(a4), cy + R_CRES * math.sin(a4), "#2ba29e", "Crescent Barrier Reef"),
         (5, w_mid_spot[0], w_mid_spot[1], "#c29a57", "West Fronds Estates"),
         (6, e_mid_spot[0], e_mid_spot[1], "#c29a57", "East Fronds Villas"),
-        (7, 540, 582, "#38bdf8", "Gateway Marina"),
-        (8, 660, 582, "#22c55e", "Solar and Seawater Cooling Hub"),
+        (7, 540, 612, "#38bdf8", "Gateway Marina"),
+        (8, 660, 612, "#22c55e", "Solar and Seawater Cooling Hub"),
     ]
     o.append("<!-- 8 INTERACTIVE HOTSPOT PINS -->")
     for i, x, y, col, name in spots:

@@ -6,10 +6,10 @@ import sys
 from pathlib import Path
 
 try:
-    from map_common import n, pt, poly_path, smooth_island, hotspot, map_header, L, update_island_map
+    from map_common import n, pt, poly_path, smooth_island, hotspot, map_header, update_island_map
 except ImportError:
     sys.path.insert(0, str(Path(__file__).resolve().parent))
-    from map_common import n, pt, poly_path, smooth_island, hotspot, map_header, L, update_island_map
+    from map_common import n, pt, poly_path, smooth_island, hotspot, map_header, update_island_map
 
 
 # ==========================================================================
@@ -221,7 +221,7 @@ def chameleon_svg(t):
     sand, green = [], []
     seed_counter = 1
 
-    def add(poly, name, kind="sand", green_poly=None, hole=None, rounds=3):
+    def add(poly, name, kind="sand", green_poly=None, hole=None, rounds=1):
         if not poly:
             return
         d = smooth_closed(poly, rounds=rounds)
@@ -446,7 +446,7 @@ def chameleon_svg(t):
     # ---------------------------------------------------------------------------------------
     # SVG OUTPUT
     # ---------------------------------------------------------------------------------------
-    o = map_header(t["cham_aria"])
+    o = map_header("cham_aria")
     o += [
         "<!-- Shallow Lagoon -->",
         '<ellipse cx="600" cy="345" rx="540" ry="290" fill="url(#lagoon-glow)" />',
@@ -523,10 +523,9 @@ def chameleon_svg(t):
     # Spiral Tail Marina inside the coil
     mar = (CH_SPIRAL[0] + 4, CH_SPIRAL[1] + 2)
 
-    # Glass-Domed Grand Pavilion on the mid-back island
     pav_s = (sx(682) + sx(546)) / 2
     pav = body.off(pav_s, lambda wt, wb: 0.3 * wt)
-    pav = (round(pav[0], 1), round(pav[1], 1))
+    pav = (int(round(pav[0])), int(round(pav[1])))
     o += [
         "<!-- Glass-Domed Central Grand Pavilion -->",
         f'<g transform="translate({n(pav[0])}, {n(pav[1])})">',
@@ -552,7 +551,7 @@ def chameleon_svg(t):
 
     # International Youth Innovation Center on the forelimb
     youth = limb_meta["fore"]["upper_mid"]
-    youth = (round(youth[0], 1), round(youth[1], 1))
+    youth = (int(round(youth[0])), int(round(youth[1])))
     o += [
         "<!-- International Youth Innovation Center Campus -->",
         f'<rect x="{n(youth[0] - 9)}" y="{n(youth[1] - 12)}" width="18" height="24" rx="3" class="map-urban" />',
@@ -592,7 +591,7 @@ def chameleon_svg(t):
 
     # Sub-Sea Metro Tunnel
     metro = body.off((sx(682) + sx(546)) / 2 + 30, lambda wt, wb: split_belly(wt, wb) - 0.5 * (split_belly(wt, wb) + wb))
-    metro = (round(metro[0], 1), round(metro[1], 1))
+    metro = (int(round(metro[0])), int(round(metro[1])))
     o += [
         "<!-- Sub-Sea Metro Tunnel (Nova Aurelia to Portal, Pavilion, Eye Dome and Spiral Marina) -->",
         '<g fill="none" stroke="#f5c46e" stroke-dasharray="8 4">',
@@ -621,10 +620,8 @@ def chameleon_svg(t):
     o.append("</svg>")
     return o
 
-
 def main():
     update_island_map(2, chameleon_svg)
-
 
 if __name__ == "__main__":
     main()

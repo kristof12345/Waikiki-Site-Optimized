@@ -14,9 +14,12 @@ SCRIPT_RE = re.compile(r'(<script src="\.\./js/common\.js"></script>)\s*<script>
 
 
 def n(v):
-    s = f"{v:.1f}"
-    if s.endswith(".0"):
-        s = s[:-2]
+    if isinstance(v, int):
+        return str(v)
+    rv = round(v, 1)
+    if rv == int(rv):
+        return str(int(rv))
+    s = f"{rv:.1f}"
     return "0" if s == "-0" else s
 
 
@@ -29,7 +32,7 @@ def poly_path(points, close=True):
     return d + (" Z" if close else "")
 
 
-def smooth_island(cx, cy, rx, ry, rot=0, seed=1, shape="organic", n_pts=16):
+def smooth_island(cx, cy, rx, ry, rot=0, seed=1, shape="organic", n_pts=16, iters=2):
     """Generate rich, varied organic dredged islands with natural coastlines."""
     rad = math.radians(rot)
     cr, sr = math.cos(rad), math.sin(rad)
@@ -64,9 +67,9 @@ def smooth_island(cx, cy, rx, ry, rot=0, seed=1, shape="organic", n_pts=16):
         gy = cy + (lx * sr + ly * cr)
         pts.append((gx, gy))
 
-    # Dense Chaikin smoothing
+    # Chaikin smoothing
     smoothed = pts
-    for _ in range(3):
+    for _ in range(iters):
         n_p = len(smoothed)
         s2 = []
         for j in range(n_p):
@@ -76,11 +79,10 @@ def smooth_island(cx, cy, rx, ry, rot=0, seed=1, shape="organic", n_pts=16):
             s2.append((0.25 * p0[0] + 0.75 * p1[0], 0.25 * p0[1] + 0.75 * p1[1]))
         smoothed = s2
 
-    # Cubic Bezier Path
+    # Quadratic Bezier Path
     d_parts = [f"M{pt(smoothed[0])}"]
     m = len(smoothed)
     for i in range(0, m, 2):
-        p0 = smoothed[i]
         p1 = smoothed[(i + 1) % m]
         p2 = smoothed[(i + 2) % m]
         d_parts.append(f"Q{pt(p1)} {pt(p2)}")
@@ -97,7 +99,6 @@ def hotspot(i, x, y, color, r=11):
         "</g>",
     ]
 
-
 L = {
     "en": {
         "palm_aria": "Detailed map of Palm Island infrastructure: curved palm leaves branching from central spine, trunk and protective crescent",
@@ -109,6 +110,12 @@ L = {
         "world_aria": "A Világ-szigetek részletes infrastruktúra-térképe: több különálló szigetből álló kontinens alakú szigetcsoport",
         "cham_aria": "A Kaméleon-szigetek részletes infrastruktúra-térképe: szorosan csoportosuló kisebb és nagyobb szigetekből álló, ágon kapaszkodó kaméleon",
     },
+}
+
+MAP_NAMES = {
+    0: "Palm Island",
+    1: "World Islands",
+    2: "Chameleon Islands",
 }
 
 
@@ -147,6 +154,7 @@ def update_island_map(map_index: int, svg_generator):
         sys.path.insert(0, str(Path(__file__).resolve().parent))
         from build_pages import format_and_remove_empty_lines
 
+    map_name = MAP_NAMES.get(map_index, f"map {map_index}")
     for lang in ("en", "hu"):
         path = ROOT / lang / "infrastructure.html"
         html = path.read_text(encoding="utf-8")
@@ -161,4 +169,6 @@ def update_island_map(map_index: int, svg_generator):
         updated_html, _ = SCRIPT_RE.subn(r'\1\n<script src="../js/infrastructure.js"></script>', updated_html)
         cleaned = format_and_remove_empty_lines(updated_html)
         path.write_text(cleaned, encoding="utf-8")
-        print(f"Updated map {map_index} in {path}")
+        rel_path = path.relative_to(ROOT)
+        size_kb = len(new_svg.encode("utf-8")) / 1024
+        print(f"Updated map {map_index} ({map_name}) in {rel_path} ({size_kb:.1f} KB)")
