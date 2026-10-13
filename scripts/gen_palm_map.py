@@ -215,10 +215,8 @@ def palm_svg(t):
     o.append("</svg>")
     return o
 
-
 def main():
     update_island_map(0, palm_svg)
-
 
 if __name__ == "__main__":
     main()
