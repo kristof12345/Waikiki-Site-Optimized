@@ -681,7 +681,7 @@ def main():
             f.write(new_content)
         print(f"Updated {filepath} successfully!")
         
-        subprocess.run(["python3", "scripts/format_document.py", filepath], check=False)
+        subprocess.run(["python3", "scripts/build_pages.py", "--format", filepath], check=False)
 
 if __name__ == '__main__':
     main()

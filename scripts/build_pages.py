@@ -609,31 +609,81 @@ def all_pages() -> list[Path]:
     return pages
 
 
-def format_and_clean_html(text: str) -> str:
-    """1. Format document (4-space indent), 2. Remove empty lines in document."""
+# Embedded Node script for exact js-beautify HTML formatting
+NODE_FORMAT_SCRIPT = """
+const fs = require('fs');
+const beautify = require('js-beautify').html;
+const opts = {
+    indent_size: 4,
+    indent_char: ' ',
+    max_preserve_newlines: 0,
+    preserve_newlines: false,
+    extra_liners: [],
+    end_with_newline: true,
+    wrap_line_length: 0,
+    indent_inner_html: false
+};
+let input = fs.readFileSync(0, 'utf8');
+let out = beautify(input, opts);
+let lines = out.split(/\\r?\\n/).filter(l => l.trim().length > 0);
+process.stdout.write(lines.join('\\n') + '\\n');
+"""
+
+
+def format_and_remove_empty_lines(html_content: str) -> str:
+    """Format document with 4-space indent and remove all empty lines."""
     try:
-        sys.path.insert(0, str(ROOT / "scripts"))
-        from format_document import format_and_remove_empty_lines
-        return format_and_remove_empty_lines(text)
+        proc = subprocess.run(
+            ["node", "-e", NODE_FORMAT_SCRIPT],
+            input=html_content,
+            text=True,
+            capture_output=True,
+            check=True,
+            cwd=str(ROOT),
+        )
+        if proc.stdout.strip():
+            return proc.stdout
     except Exception:
         pass
-    py_script = ROOT / "scripts" / "format_document.py"
-    if py_script.exists():
-        try:
-            proc = subprocess.run(
-                ["python3", str(py_script), "-"],
-                input=text,
-                capture_output=True,
-                text=True,
-                check=True,
-            )
-            if proc.stdout.strip():
-                return proc.stdout
-        except Exception:
-            pass
-    # Fallback: remove empty lines
-    lines = [line for line in text.splitlines() if line.strip()]
+
+    # Fallback if node or js-beautify is unavailable
+    lines = [line for line in html_content.splitlines() if line.strip()]
     return "\n".join(lines) + "\n"
+
+
+# Alias for internal build processing
+format_and_clean_html = format_and_remove_empty_lines
+
+
+def format_file(file_path: Path) -> bool:
+    """Format and strip blank lines for a single file in-place."""
+    try:
+        original = file_path.read_text(encoding="utf-8")
+        processed = format_and_remove_empty_lines(original)
+        if original != processed:
+            file_path.write_text(processed, encoding="utf-8")
+            try:
+                rel = file_path.relative_to(ROOT)
+            except ValueError:
+                rel = file_path
+            print(f"Formatted and cleaned: {rel}")
+            return True
+    except Exception as err:
+        print(f"Error processing {file_path}: {err}", file=sys.stderr)
+    return False
+
+
+def get_all_html_files(directory: Path) -> list[Path]:
+    """Recursively collect all .html files excluding node_modules and .git."""
+    results = []
+    if not directory.exists():
+        return results
+    for item in directory.rglob("*.html"):
+        parts = item.parts
+        if "node_modules" in parts or ".git" in parts:
+            continue
+        results.append(item)
+    return sorted(results)
 
 
 def process(path: Path, meta: dict) -> str:
@@ -763,7 +813,57 @@ def main() -> int:
         default="both",
         help="locale to generate (default: both)",
     )
+    parser.add_argument(
+        "--format",
+        nargs="*",
+        metavar="FILE",
+        help="format and clean specified HTML file(s), or '-' for stdin",
+    )
+    parser.add_argument(
+        "--all",
+        action="store_true",
+        help="format all HTML files across en/, hu/, and root",
+    )
+    parser.add_argument(
+        "files",
+        nargs="*",
+        metavar="FILE",
+        help="optional HTML file(s) to format and clean",
+    )
     args = parser.parse_args()
+
+    # Direct formatting mode
+    formatting_files = None
+    if args.format is not None:
+        formatting_files = args.format
+    elif args.files:
+        formatting_files = args.files
+    elif args.all:
+        formatting_files = []
+
+    if formatting_files is not None:
+        if formatting_files == ["-"] or (len(formatting_files) == 1 and formatting_files[0] == "-"):
+            stdin_content = sys.stdin.read()
+            sys.stdout.write(format_and_remove_empty_lines(stdin_content))
+            return 0
+
+        target_files = []
+        if args.all or not formatting_files:
+            target_files += get_all_html_files(ROOT / "en")
+            target_files += get_all_html_files(ROOT / "hu")
+            root_index = ROOT / "index.html"
+            if root_index.exists():
+                target_files.append(root_index)
+        else:
+            for f in formatting_files:
+                target_files.append(Path(f).resolve())
+
+        changed = 0
+        for p in target_files:
+            if format_file(p):
+                changed += 1
+        print(f"Done. Processed {len(target_files)} file(s), updated {changed}.")
+        return 0
 
     # Generate template / empty page if requested
     if args.new or args.empty_flag:

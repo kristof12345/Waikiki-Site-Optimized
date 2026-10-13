@@ -14,8 +14,8 @@ After building or editing any HTML page:
 ### Automation Utilities
 
 - Format and clean a specific file:
-  `python3 scripts/format_document.py <file.html>`
+  `python3 scripts/build_pages.py --format <file.html>`
 - Format and clean all pages:
-  `python3 scripts/format_document.py --all`
+  `python3 scripts/build_pages.py --format --all`
 - Build pages (automatically formats and strips empty lines):
   `python3 scripts/build_pages.py`

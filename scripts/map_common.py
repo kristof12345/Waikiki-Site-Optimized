@@ -164,10 +164,10 @@ def map_header(aria_label):
 def update_island_map(map_index: int, svg_generator):
     """Update a single island map (0: Palm, 1: World, 2: Chameleon) in both en and hu infrastructure pages."""
     try:
-        from format_document import format_and_remove_empty_lines
+        from build_pages import format_and_remove_empty_lines
     except ImportError:
         sys.path.insert(0, str(Path(__file__).resolve().parent))
-        from format_document import format_and_remove_empty_lines
+        from build_pages import format_and_remove_empty_lines
 
     for lang in ("en", "hu"):
         path = ROOT / lang / "infrastructure.html"
