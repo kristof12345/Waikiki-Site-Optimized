@@ -164,8 +164,8 @@ WORLD_ISLES = [
     {'name': 'Marie Byrd Land Shelf', 'cx': 863.7, 'cy': 575.6, 'rx': 18, 'ry': 11, 'rot': -10, 'sand_light': True},
 ]
 
-    # Inter-island footbridges
-    bridges = [
+# Inter-island footbridges
+bridges = [
         # --- North America ---
         ((286.0, 224.0), (331.1, 213.7)),  # US Rocky Mountains and Plains to US Midwest and Great Lakes
         ((308.1, 174.0), (331.1, 213.7)),  # Canadian Shield Ontario to US Midwest and Great Lakes
@@ -306,7 +306,7 @@ WORLD_ISLES = [
         # 7. North America <-> Europe (Stepping Stones)
         ((358.8, 122.9), (424.0, 112.0)),  # Baffin Island to Greenland Isle
         ((494.0, 128.0), (524.0, 166.0)),  # Iceland to Great Britain
-    ]
+]
 
 def world_svg(t):
     ecx, ecy, erx, ery = 600, 345, 540, 305
@@ -397,17 +397,7 @@ def world_svg(t):
             '<circle cx="0" cy="0" r="2.6" fill="#ffffff" class="twinkle" />',
             "</g>",
         ]
-
-    # Geographic Map Labels
-    o += [
-        "<!-- Geographic Map Labels -->",
-        '<g class="map-label-group">',
-        f'<text class="map-label-text" x="600" y="690">{t["perimeter"]}</text>',
-        f'<text class="map-label-text" x="130" y="328">{t["west_gate"]}</text>',
-        f'<text class="map-label-text" x="1060" y="328">{t["east_gate"]}</text>',
-        "</g>",
-    ]
-
+    
     # 8 Interactive Hotspots
     tele_mid = ((eu_hub[0] + asia_hub[0]) / 2, (eu_hub[1] + asia_hub[1]) / 2)
     spots = [

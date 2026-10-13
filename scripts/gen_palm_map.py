@@ -197,14 +197,6 @@ def palm_svg(t):
         "<!-- Marine Navigation Beacons at the Crescent Passages -->",
         f'<circle cx="{n(p1[0])}" cy="{n(p1[1])}" r="4.5" fill="#22c55e" class="twinkle" />',
         f'<circle cx="{n(p2[0])}" cy="{n(p2[1])}" r="4.5" fill="#ef4444" class="twinkle" />',
-        "<!-- Map Geographic Labels -->",
-        '<g class="map-label-group">',
-        f'<text class="map-label-text" x="260" y="104">{t["crescent"]}</text>',
-        f'<text class="map-label-text" x="600" y="690">{t["mainland"]}</text>',
-        f'<text class="map-label-text" x="600" y="84">{t["hotel"]}</text>',
-        f'<text class="map-label-text" x="280" y="470">{t["west_fronds"]}</text>',
-        f'<text class="map-label-text" x="920" y="470">{t["east_fronds"]}</text>',
-        "</g>",
     ]
 
     # Hotspots

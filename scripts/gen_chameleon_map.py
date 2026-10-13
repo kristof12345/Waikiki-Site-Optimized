@@ -602,16 +602,6 @@ def chameleon_svg(t):
     for x, y in (metro, pav, (eye[0], eye[1]), mar):
         o.append(f'<circle cx="{n(x)}" cy="{n(y)}" r="5" fill="#f5c46e" stroke="#ffffff" stroke-width="2" />')
 
-    # Labels
-    o += [
-        "<!-- Geographic Labels -->",
-        '<g class="map-label-group">',
-        f'<text class="map-label-text" x="{n(pav[0])}" y="148">{t["pavilion"]}</text>',
-        f'<text class="map-label-text" x="{mar[0]}" y="502">{t["marina"]}</text>',
-        f'<text class="map-label-text" x="{villas[0]}" y="{villas[1] + 34}">{t["villas"]}</text>',
-        "</g>",
-    ]
-
     # Interactive Hotspots
     spots = [
         (1, pav[0], pav[1], "#38bdf8", "Glass-Domed Central Grand Pavilion", 12),
