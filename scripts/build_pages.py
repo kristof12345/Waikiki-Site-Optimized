@@ -611,11 +611,17 @@ def all_pages() -> list[Path]:
 
 def format_and_clean_html(text: str) -> str:
     """1. Format document (4-space indent), 2. Remove empty lines in document."""
-    js_script = ROOT / "scripts" / "format_document.js"
-    if js_script.exists():
+    try:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from format_document import format_and_remove_empty_lines
+        return format_and_remove_empty_lines(text)
+    except Exception:
+        pass
+    py_script = ROOT / "scripts" / "format_document.py"
+    if py_script.exists():
         try:
             proc = subprocess.run(
-                ["node", str(js_script), "-"],
+                ["python3", str(py_script), "-"],
                 input=text,
                 capture_output=True,
                 text=True,

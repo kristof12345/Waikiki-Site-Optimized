@@ -903,6 +903,39 @@ def smooth_closed(pts, rounds=1):
     return " ".join(d) + " Z"
 
 
+def catmull_rom_open(knots, n_per_seg=25, alpha=0.5):
+    """Centripetal Catmull-Rom spline sampling for open paths."""
+    pts = []
+    for i in range(1, len(knots) - 2):
+        p0, p1, p2, p3 = knots[i - 1], knots[i], knots[i + 1], knots[i + 2]
+
+        def dist(pa, pb):
+            return max(1e-4, math.hypot(pb[0] - pa[0], pb[1] - pa[1]) ** alpha)
+
+        t0 = 0.0
+        t1 = t0 + dist(p0, p1)
+        t2 = t1 + dist(p1, p2)
+        t3 = t2 + dist(p2, p3)
+        for s in range(n_per_seg):
+            t = t1 + (t2 - t1) * (s / float(n_per_seg))
+            a1_x = (t1 - t) / (t1 - t0) * p0[0] + (t - t0) / (t1 - t0) * p1[0]
+            a1_y = (t1 - t) / (t1 - t0) * p0[1] + (t - t0) / (t1 - t0) * p1[1]
+            a2_x = (t2 - t) / (t2 - t1) * p1[0] + (t - t1) / (t2 - t1) * p2[0]
+            a2_y = (t2 - t) / (t2 - t1) * p1[1] + (t - t1) / (t2 - t1) * p2[1]
+            a3_x = (t3 - t) / (t3 - t2) * p2[0] + (t - t2) / (t3 - t2) * p3[0]
+            a3_y = (t3 - t) / (t3 - t2) * p2[1] + (t - t2) / (t3 - t2) * p3[1]
+            b1_x = (t2 - t) / (t2 - t0) * a1_x + (t - t0) / (t2 - t0) * a2_x
+            b1_y = (t2 - t) / (t2 - t0) * a1_y + (t - t0) / (t2 - t0) * a2_y
+            b2_x = (t3 - t) / (t3 - t1) * a2_x + (t - t1) / (t3 - t1) * a3_x
+            b2_y = (t3 - t) / (t3 - t1) * a2_y + (t - t1) / (t3 - t1) * a3_y
+            cx = (t2 - t) / (t2 - t1) * b1_x + (t - t1) / (t2 - t1) * b2_x
+            cy = (t2 - t) / (t2 - t1) * b1_y + (t - t1) / (t2 - t1) * b2_y
+            pts.append((round(cx, 2), round(cy, 2)))
+    pts.append(knots[-2])
+    return pts
+
+
+
 def circle_d(cx, cy, r):
     return f"M{n(cx - r)},{n(cy)} a{n(r)},{n(r)} 0 1 0 {n(2 * r)},0 a{n(r)},{n(r)} 0 1 0 {n(-2 * r)},0 Z"
 
@@ -952,33 +985,68 @@ def chameleon_svg(t):
     sx = body.s_at_x
 
     sand, green = [], []
+    seed_counter = 1
 
-    def add(poly, name, kind="sand", green_poly=None, hole=None):
+    def add(poly, name, kind="sand", green_poly=None, hole=None, rounds=3):
         if not poly:
             return
-        d = smooth_closed(poly)
+        d = smooth_closed(poly, rounds=rounds)
         if hole:
             d += " " + circle_d(*hole)
         sand.append((name, d, kind, hole is not None))
         if green_poly:
-            dg = smooth_closed(green_poly)
+            dg = smooth_closed(green_poly, rounds=rounds)
             if hole:
                 dg += " " + circle_d(hole[0], hole[1], hole[2] + 6)
             green.append((name, dg, hole is not None))
 
-    # ---- Transverse cuts along the head, body and tail ----------------------------------
-    cuts = [0.0, sx(886), sx(806), sx(754), sx(682), sx(546), sx(470)]
-    s = sx(470) + 70
-    seg_len = 66.0
-    while s < body.L - 30:
-        cuts.append(s)
-        seg_len = max(32.0, seg_len * 0.9)
-        s += seg_len
-    cuts.append(body.L)
+    def organic_piece(tube, s0, s1, lo=None, hi=None, inset=0.0, step=5.0, seed=None):
+        nonlocal seed_counter
+        if seed is None:
+            seed = seed_counter
+            seed_counter += 1
+        lo = lo or (lambda wt, wb: -wb)
+        hi = hi or (lambda wt, wb: wt)
+        s0, s1 = s0 + inset, s1 - inset
+        if s1 - s0 < 2:
+            return None
+        flo = (lambda wt, wb: lo(wt, wb) + inset)
+        fhi = (lambda wt, wb: hi(wt, wb) - inset)
+        _, _, wt, wb, _, _ = tube.at((s0 + s1) / 2)
+        if fhi(wt, wb) - flo(wt, wb) < 2.5:
+            return None
+        n_s = max(4, int((s1 - s0) / step))
+        ss = [s0 + (s1 - s0) * i / n_s for i in range(n_s + 1)]
+
+        top = []
+        for idx, s in enumerate(ss):
+            rel = (s - s0) / (s1 - s0)
+            w = 2.2 * math.sin(math.pi * rel) * (0.6 * math.sin(2.5 * math.pi * rel + seed) + 0.4 * math.cos(4 * math.pi * rel))
+            top.append(tube.off(s, lambda wt, wb: fhi(wt, wb) + w))
+
+        bot = []
+        for idx, s in enumerate(reversed(ss)):
+            rel = (s - s0) / (s1 - s0)
+            w = 2.0 * math.sin(math.pi * rel) * (0.6 * math.cos(2.5 * math.pi * rel + seed * 2) - 0.4 * math.sin(3.5 * math.pi * rel))
+            bot.append(tube.off(s, lambda wt, wb: flo(wt, wb) - w))
+
+        def cap(s, f_from, f_to, is_end=False):
+            x, y, wt, wb, nx, ny = tube.at(s)
+            a, b = f_from(wt, wb), f_to(wt, wb)
+            k = max(2, int(abs(b - a) / step))
+            pts = []
+            for j in range(1, k):
+                u = j / float(k)
+                bow = 1.8 * math.sin(math.pi * u) * (-1 if is_end else 1)
+                d = a + (b - a) * u
+                pts.append((x + nx * d + (-ny) * bow, y + ny * d + nx * bow))
+            return pts
+
+        return top + cap(s1, fhi, flo, is_end=True) + bot + cap(s0, flo, fhi, is_end=False)
 
     lateral = lambda frac: (lambda wt, wb: wt - frac * (wt + wb))  # noqa: E731
     split_mouth = lateral(0.55)
-    split_belly = lateral(0.62)
+    split_belly = lateral(0.58)
     hg = g / 2.0
 
     def above(f):
@@ -987,90 +1055,153 @@ def chameleon_svg(t):
     def below(f):
         return lambda wt, wb: f(wt, wb) - hg
 
-    names_tail = iter(range(1, 40))
     eye = (858, 242, 12)
     hole = (eye[0], eye[1], eye[2] + 6)
     road_ranges = []
     bridge_lines = []
 
-    for i in range(len(cuts) - 1):
-        a = cuts[i] + (hg if i > 0 else 0)
-        b = cuts[i + 1] - (hg if i + 1 < len(cuts) - 1 else 0)
-        mid = (a + b) / 2
-        if i == 0:  # jaws: upper and lower, divided by the mouth channel
-            add(body.piece(a, b, lo=above(split_mouth)), "Upper Jaw Isle", green_poly=body.piece(a, b, lo=above(split_mouth), inset=7))
-            add(body.piece(a, b, hi=below(split_mouth)), "Lower Jaw Isle")
-        elif i == 1:  # back of the head, ringed lagoon around the turret eye
-            add(body.piece(a, b), "Head Crown Isle", green_poly=body.piece(a, b, inset=9), hole=hole)
-        elif i == 2:
-            add(body.piece(a, b), "Neck Isle", green_poly=body.piece(a, b, inset=9))
-        elif i in (3, 4, 5):  # shoulder, mid-back, rump: dorsal island + belly islands
-            label = {3: "Shoulder", 4: "Grand Pavilion Back", 5: "Rump"}[i]
-            add(body.piece(a, b, lo=above(split_belly)), f"{label} Dorsal Isle", green_poly=body.piece(a, b, lo=above(split_belly), inset=9))
-            belly_cuts = [a, b] if i != 4 else [a, (a + b) / 2, b]
-            for j in range(len(belly_cuts) - 1):
-                ba = belly_cuts[j] + (hg if j > 0 else 0)
-                bb = belly_cuts[j + 1] - (hg if j + 1 < len(belly_cuts) - 1 else 0)
-                add(body.piece(ba, bb, hi=below(split_belly)), f"{label} Belly Isle {j + 1}")
-                bm = (ba + bb) / 2
-                bridge_lines.append((body.off(bm, lambda wt, wb: split_belly(wt, wb) + hg + 5),
-                                     body.off(bm, lambda wt, wb: split_belly(wt, wb) - hg - 5)))
-        else:
-            k = next(names_tail)
-            _, _, wt, wb, _, _ = body.at(mid)
-            gp = body.piece(a, b, inset=8) if wt + wb > 26 else None
-            add(body.piece(a, b), f"Spiral Tail Isle {k}", green_poly=gp)
+    # 1. Jaws: split into 2 cuts (Snout and Mid-Jaw) -> 4 islands
+    s_j0 = 0.0
+    s_j1 = 36.0
+    s_j2 = sx(886)
+    for a, b, tag in [(s_j0, s_j1 - hg, "Snout"), (s_j1 + hg, s_j2 - hg, "Mid-Jaw")]:
+        add(organic_piece(body, a, b, lo=above(split_mouth)), f"Upper {tag} Isle", green_poly=organic_piece(body, a, b, lo=above(split_mouth), inset=6))
+        add(organic_piece(body, a, b, hi=below(split_mouth)), f"Lower {tag} Isle")
         road_ranges.append((a, b))
 
-    # ---- Casque helmet and dorsal crest islets ---------------------------------------------
+    # 2. Head Crown around Eye: 2 islands
+    s_c0 = sx(886)
+    s_c1 = (sx(886) + sx(806)) / 2
+    s_c2 = sx(806)
+    add(organic_piece(body, s_c0 + hg, s_c1 - hg), "Head Crown Isle East", green_poly=organic_piece(body, s_c0 + hg, s_c1 - hg, inset=8), hole=hole)
+    add(organic_piece(body, s_c1 + hg, s_c2 - hg), "Head Crown Isle West", green_poly=organic_piece(body, s_c1 + hg, s_c2 - hg, inset=8))
+    road_ranges.extend([(s_c0 + hg, s_c1 - hg), (s_c1 + hg, s_c2 - hg)])
+
+    # 3. Neck: 2 islands
+    s_n0 = sx(806)
+    s_n1 = (sx(806) + sx(754)) / 2
+    s_n2 = sx(754)
+    add(organic_piece(body, s_n0 + hg, s_n1 - hg), "Neck Isle 1", green_poly=organic_piece(body, s_n0 + hg, s_n1 - hg, inset=7))
+    add(organic_piece(body, s_n1 + hg, s_n2 - hg), "Neck Isle 2", green_poly=organic_piece(body, s_n1 + hg, s_n2 - hg, inset=7))
+    road_ranges.extend([(s_n0 + hg, s_n1 - hg), (s_n1 + hg, s_n2 - hg)])
+
+    # 4. Shoulder (sx 754 to 682): 2 dorsal + 2 belly = 4 islands
+    s_sh0 = sx(754)
+    s_sh1 = (sx(754) + sx(682)) / 2
+    s_sh2 = sx(682)
+    sh_cuts = [(s_sh0 + hg, s_sh1 - hg), (s_sh1 + hg, s_sh2 - hg)]
+    for idx, (a, b) in enumerate(sh_cuts, 1):
+        add(organic_piece(body, a, b, lo=above(split_belly)), f"Shoulder Dorsal Isle {idx}", green_poly=organic_piece(body, a, b, lo=above(split_belly), inset=8))
+        add(organic_piece(body, a, b, hi=below(split_belly)), f"Shoulder Belly Isle {idx}")
+        road_ranges.append((a, b))
+        m = (a + b) / 2
+        bridge_lines.append((body.off(m, lambda wt, wb: split_belly(wt, wb) + hg + 4),
+                             body.off(m, lambda wt, wb: split_belly(wt, wb) - hg - 4)))
+
+    # 5. Mid-Back (Pavilion, sx 682 to 546): 3 dorsal + 3 belly = 6 islands
+    s_mb0 = sx(682)
+    s_mb1 = s_mb0 + (sx(546) - s_mb0) / 3.0
+    s_mb2 = s_mb0 + (sx(546) - s_mb0) * 2.0 / 3.0
+    s_mb3 = sx(546)
+    mb_cuts = [(s_mb0 + hg, s_mb1 - hg), (s_mb1 + hg, s_mb2 - hg), (s_mb2 + hg, s_mb3 - hg)]
+    for idx, (a, b) in enumerate(mb_cuts, 1):
+        add(organic_piece(body, a, b, lo=above(split_belly)), f"Pavilion Dorsal Isle {idx}", green_poly=organic_piece(body, a, b, lo=above(split_belly), inset=8))
+        add(organic_piece(body, a, b, hi=below(split_belly)), f"Pavilion Belly Isle {idx}")
+        road_ranges.append((a, b))
+        m = (a + b) / 2
+        bridge_lines.append((body.off(m, lambda wt, wb: split_belly(wt, wb) + hg + 4),
+                             body.off(m, lambda wt, wb: split_belly(wt, wb) - hg - 4)))
+
+    # 6. Rump (sx 546 to 470): 2 dorsal + 2 belly = 4 islands
+    s_r0 = sx(546)
+    s_r1 = (sx(546) + sx(470)) / 2
+    s_r2 = sx(470)
+    r_cuts = [(s_r0 + hg, s_r1 - hg), (s_r1 + hg, s_r2 - hg)]
+    for idx, (a, b) in enumerate(r_cuts, 1):
+        add(organic_piece(body, a, b, lo=above(split_belly)), f"Rump Dorsal Isle {idx}", green_poly=organic_piece(body, a, b, lo=above(split_belly), inset=8))
+        add(organic_piece(body, a, b, hi=below(split_belly)), f"Rump Belly Isle {idx}")
+        road_ranges.append((a, b))
+        m = (a + b) / 2
+        bridge_lines.append((body.off(m, lambda wt, wb: split_belly(wt, wb) + hg + 4),
+                             body.off(m, lambda wt, wb: split_belly(wt, wb) - hg - 4)))
+
+    # 7. Spiral Tail: 24 finely segmented organic pebble islands
+    s = sx(470) + hg
+    t_idx = 1
+    t_seg_len = 38.0
+    while s < body.L - 20:
+        a = s
+        b = min(body.L, s + t_seg_len - g)
+        mid = (a + b) / 2
+        _, _, wt, wb, _, _ = body.at(mid)
+        gp = organic_piece(body, a, b, inset=7) if wt + wb > 24 else None
+        add(organic_piece(body, a, b), f"Spiral Tail Isle {t_idx}", green_poly=gp)
+        road_ranges.append((a, b))
+        s += t_seg_len
+        t_seg_len = max(22.0, t_seg_len * 0.94)
+        t_idx += 1
+
+    # 8. Casque Helmet: 2 graceful sweeping crest islands
     s_c0, s_c1 = sx(880), sx(796)
-    casque = [body.off(s_c0 + (s_c1 - s_c0) * j / 10, lambda wt, wb: wt + g) for j in range(11)]
-    casque_peak = (800, 172)
-    casque_poly = casque + [(casque_peak[0] - 4, casque_peak[1] + 6), casque_peak, (casque_peak[0] + 10, casque_peak[1] + 2)]
-    add(casque_poly, "Casque Helmet Isle")
-    casque_core = [(828, 208), (810, 186), (850, 209)]
-    green.append(("Casque Helmet Isle", smooth_closed(casque_core, 2), False))
+    sc_m = (s_c0 + s_c1) / 2
+    arc1 = [body.off(s_c0 + (sc_m - s_c0) * j / 6, lambda wt, wb: wt + g) for j in range(7)]
+    add(arc1 + [(838, 204), (826, 186), (820, 196)], "Casque Crown Isle East")
+    arc2 = [body.off(sc_m + (s_c1 - sc_m) * j / 6, lambda wt, wb: wt + g) for j in range(7)]
+    add(arc2 + [(804, 176), (794, 178), (808, 198)], "Casque Peak Isle West")
+    green.append(("Casque Helmet Core", smooth_closed([(828, 208), (810, 190), (842, 210)], 3), False))
 
-    for k, xc in enumerate(range(764, 470, -30), 1):
+    # 9. Dorsal Crest Islets: 16 rounded tooth islets
+    for k, xc in enumerate(range(768, 465, -19), 1):
         sc = sx(xc)
-        base_l = body.off(sc - 8, lambda wt, wb: wt + g)
-        base_r = body.off(sc + 8, lambda wt, wb: wt + g)
-        tip = body.off(sc, lambda wt, wb: wt + g + 15)
-        add([base_r, tip, base_l], f"Dorsal Crest Islet {k}", kind="crest")
+        base_l = body.off(sc - 6, lambda wt, wb: wt + g)
+        base_r = body.off(sc + 6, lambda wt, wb: wt + g)
+        tip_h = 12 + 3 * math.sin(k * 1.1)
+        tip = body.off(sc, lambda wt, wb: wt + g + tip_h)
+        add([base_r, tip, base_l], f"Dorsal Crest Islet {k}", kind="crest", rounds=2)
 
-    # ---- Limbs: thigh / upper arm, shin / forearm and gripping claws ------------------------
+    # 10. Limbs: Upper limb and Lower limb each split into 2 smaller articulated islands
     limb_meta = {}
     for limb, knots in CH_LIMBS.items():
         tube = Tube(knots)
         knee = tube.s[min(range(len(tube.p)), key=lambda q: math.hypot(tube.p[q][0] - knots[1][0], tube.p[q][1] - knots[1][1]))]
-        upper = "Hindlimb Thigh" if limb == "hind" else "Forelimb Upper Arm"
-        lower = "Hindlimb Shin" if limb == "hind" else "Forelimb Forearm"
-        add(tube.piece(0, knee - hg), f"{upper} Isle", green_poly=tube.piece(0, knee - hg, inset=7))
-        add(tube.piece(knee + hg, tube.L), f"{lower} Isle")
-        bridge_lines.append((tube.off(knee - hg - 5, 0), tube.off(knee + hg + 5, 0)))
+        upper_name = "Hindlimb Thigh" if limb == "hind" else "Forelimb Upper Arm"
+        lower_name = "Hindlimb Shin" if limb == "hind" else "Forelimb Forearm"
+
+        u_mid = knee / 2.0
+        add(organic_piece(tube, 0, u_mid - hg), f"{upper_name} Isle 1", green_poly=organic_piece(tube, 0, u_mid - hg, inset=6))
+        add(organic_piece(tube, u_mid + hg, knee - hg), f"{upper_name} Isle 2", green_poly=organic_piece(tube, u_mid + hg, knee - hg, inset=6))
+        bridge_lines.append((tube.off(u_mid - hg - 3, 0), tube.off(u_mid + hg + 3, 0)))
+
+        l_mid = (knee + tube.L) / 2.0
+        add(organic_piece(tube, knee + hg, l_mid - hg), f"{lower_name} Isle 1")
+        add(organic_piece(tube, l_mid + hg, tube.L), f"{lower_name} Isle 2")
+        bridge_lines.append((tube.off(knee - hg - 4, 0), tube.off(knee + hg + 4, 0)))
+        bridge_lines.append((tube.off(l_mid - hg - 3, 0), tube.off(l_mid + hg + 3, 0)))
+
         p_limb = tube.off(12, 0)
         p_belly = body.off(sx(p_limb[0]), lambda wt, wb: -wb + 6)
         bridge_lines.append((p_limb, p_belly))
         ax, ay = knots[-1][0], knots[-1][1]
-        for side in (-1, 1):  # zygodactyl foot: two claw bundles straddling the branch
+        for side in (-1, 1):
             ck = [(ax + side * 6, ay + 6, 5, 5), (ax + side * 18, ay + 12, 4.5, 4.5), (ax + side * 27, ay + 19, 2.5, 2.5)]
             ct = Tube(ck)
-            add(ct.piece(0, ct.L), f"{lower} Claw {'East' if side > 0 else 'West'}")
+            add(organic_piece(ct, 0, ct.L), f"{lower_name} Claw {'East' if side > 0 else 'West'}")
         limb_meta[limb] = {"upper_mid": tube.off(knee / 2, 0)}
 
-    # ---- Curved tongue: stepping-stone islets to the Paradise atoll -----------------------
+    # 11. Curved tongue: 5 stepping-stone islets to Paradise Atoll
     tongue = [
         (965, 292, 10, 5, 30),
         (968, 318, 10, 5, 55),
-        (960, 346, 10, 5, 75),
-        (944, 375, 10, 5.5, 95),
+        (964, 344, 9.5, 5, 75),
+        (952, 368, 9.5, 5.2, 95),
+        (936, 386, 9.5, 5.5, 115),
     ]
     for k, (x, y, rx, ry, rot) in enumerate(tongue):
         sand.append((f"Tongue Stepping Islet {k + 1}", smooth_island(x, y, rx, ry, rot=rot, seed=k + 2), "sand", False))
     villas = (920, 410)
     sand.append(("Paradise Atoll", smooth_island(villas[0], villas[1], 25, 23, rot=10, seed=4) + " " + circle_d(villas[0], villas[1], 12), "sand", True))
 
-    # ---- Marine biology and renewable power satellite islets -------------------------------
+    # 12. Marine biology and renewable power satellite islets
     leaf_r = (912, 492)
     sand.append(("Marine Station Leaf Isle", smooth_island(leaf_r[0], leaf_r[1], 22, 11, rot=-30, seed=5), "sand", False))
     green.append(("Marine Station Leaf Isle", smooth_island(leaf_r[0], leaf_r[1], 13, 5, rot=-30, seed=9), False))
@@ -1110,7 +1241,7 @@ def chameleon_svg(t):
 
     # Waterfront villas dotted along the outer coast of the spiral tail
     villa_paths = []
-    for a, b in road_ranges[6:]:
+    for a, b in road_ranges[13:]:
         _, _, wt, wb, _, _ = body.at((a + b) / 2)
         if wt < 9:
             continue
@@ -1121,11 +1252,29 @@ def chameleon_svg(t):
         f'<path class="map-frond-villas" d="{" ".join(villa_paths)}" stroke-width="2.6" stroke-dasharray="0.1 7" />',
     ]
 
-    # Chameleon Boulevard: continuous road from snout to tail tip, bridging every channel
+    # Chameleon Boulevard and Overwater Tongue Road: continuous road from Paradise Atoll
+    # across the Tongue Islets, Snout, Head, Body and through every channel to the Spiral Tail tip
     s_road_end = body.L - 26
-    road_pts = [body.off(s_road_end * q / 180, lambda wt, wb: 0.28 * wt * (q / 180)**0.5 if q > 0 else 0) for q in range(181)]
+    spine_road = [body.off(s_road_end * q / 180, lambda wt, wb: 0.28 * wt * (q / 180)**0.5 if q > 0 else 0) for q in range(181)]
+    atoll_pier = (villas[0], villas[1] - 20)
+    tongue_knots = [
+        (910, 393),
+        atoll_pier,
+        (936, 386),
+        (952, 368),
+        (964, 344),
+        (968, 318),
+        (965, 292),
+        (962, 269),
+        spine_road[2],
+        spine_road[5],
+        spine_road[9],
+    ]
+    tongue_spline = catmull_rom_open(tongue_knots, n_per_seg=25, alpha=0.5)
+    idx_junc = min(range(len(tongue_spline)), key=lambda k: math.hypot(tongue_spline[k][0] - spine_road[5][0], tongue_spline[k][1] - spine_road[5][1]))
+    road_pts = tongue_spline[:idx_junc] + spine_road[5:]
     o += [
-        "<!-- Chameleon Boulevard (bridges every channel from the snout to the spiral tail) -->",
+        "<!-- Chameleon Boulevard and Overwater Tongue Road (bridges every channel from Paradise Atoll to the spiral tail) -->",
         f'<path class="map-road" d="{poly_path(road_pts, close=False)}" />',
         "<!-- Inter-Island Footbridges (belly channel, knees and limb causeways) -->",
         '<g stroke="#ffffff" stroke-width="2.2" stroke-linecap="round">',
@@ -1205,11 +1354,6 @@ def chameleon_svg(t):
         f'<circle cx="{villas[0]}" cy="{villas[1]}" r="18" fill="none" stroke="#c29a57" stroke-width="2.5" stroke-dasharray="3 4" />',
         f'<circle cx="{villas[0]}" cy="{villas[1]}" r="12" class="map-sea-lagoon" stroke="#2dd4bf" stroke-width="1.6" />',
         f'<circle cx="{villas[0]}" cy="{villas[1]}" r="3.5" fill="#38bdf8" class="bob" />',
-    ]
-    tongue_pts = [body.off(0, 0)] + [(x, y) for x, y, *_ in tongue] + [(villas[0], villas[1] - 20)]
-    o += [
-        "<!-- Overwater Road linking the Tongue Islets (continuation of the spine) -->",
-        f'<path class="map-road" d="{poly_path(tongue_pts, close=False)}" />',
     ]
 
     # Sub-Sea Metro Tunnel

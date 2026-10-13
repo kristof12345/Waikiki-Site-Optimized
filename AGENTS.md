@@ -14,8 +14,8 @@ After building or editing any HTML page:
 ### Automation Utilities
 
 - Format and clean a specific file:
-  `node scripts/format_document.js <file.html>`
+  `python3 scripts/format_document.py <file.html>`
 - Format and clean all pages:
-  `node scripts/format_document.js --all`
+  `python3 scripts/format_document.py --all`
 - Build pages (automatically formats and strips empty lines):
   `python3 scripts/build_pages.py`
