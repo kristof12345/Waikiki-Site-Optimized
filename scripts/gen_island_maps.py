@@ -582,7 +582,10 @@ def world_svg(t):
     # Inter-island footbridges
     bridges = [
         # --- North America ---
+        ((286.0, 224.0), (331.1, 213.7)),  # US Rocky Mountains and Plains to US Midwest and Great Lakes
         ((308.1, 174.0), (331.1, 213.7)),  # Canadian Shield Ontario to US Midwest and Great Lakes
+        ((331.1, 213.7), (361.2, 164.0)),  # US Midwest and Great Lakes to Quebec and Labrador
+        ((361.2, 164.0), (358.8, 122.9)),  # Quebec and Labrador to Baffin Island
         ((331.1, 213.7), (374.0, 212.0)),  # US Midwest and Great Lakes to US East Coast and New England
         ((331.1, 213.7), (342.0, 256.0)),  # US Midwest and Great Lakes to US South and Gulf Coast
         ((342.0, 256.0), (382.0, 268.0)),  # US South and Gulf Coast to Florida Peninsula
@@ -596,12 +599,14 @@ def world_svg(t):
         # --- South America ---
         ((354.0, 382.0), (390.0, 370.0)),  # Colombia and Northern Andes to Venezuela and Orinoco
         ((354.0, 382.0), (385.5, 409.0)),  # Colombia and Northern Andes to Amazon Basin Heart
+        ((342.0, 420.0), (385.5, 409.0)),  # Peru and Central Andes to Amazon Basin Heart
         ((390.0, 370.0), (424.0, 378.0)),  # Venezuela and Orinoco to Guyana Coast
         ((385.5, 409.0), (379.8, 448.5)),  # Amazon Basin Heart to Bolivia and Pantanal
         ((385.5, 409.0), (446.8, 415.4)),  # Amazon Basin Heart to Brazil Northeast Bulge
         ((385.5, 409.0), (415.1, 438.5)),  # Amazon Basin Heart to Central Brazil and Cerrado Plateau
         ((415.1, 438.5), (436.4, 469.3)),  # Central Brazil and Cerrado Plateau to Brazil Southeast Coast
         ((379.8, 448.5), (366.3, 479.4)),  # Bolivia and Pantanal to Paraguay and Gran Chaco Basin
+        ((338.2, 489.1), (366.3, 479.4)),  # Chile Andes Strip to Paraguay and Gran Chaco Basin
         ((366.3, 479.4), (384.6, 511.7)),  # Paraguay and Gran Chaco Basin to Argentina Pampas Core
         ((384.6, 511.7), (417.8, 505.1)),  # Argentina Pampas Core to Uruguay and Rio de la Plata
         ((384.6, 511.7), (369.4, 546.7)),  # Argentina Pampas Core to Patagonia Southern Wedge
@@ -615,6 +620,8 @@ def world_svg(t):
         ((512.6, 229.7), (500.0, 260.1)),  # France and Biscay Bay to Iberian Peninsula
         ((544.0, 214.0), (582.0, 204.0)),  # Western Europe Mainland Core to Central Europe Germany and Alps
         ((582.0, 204.0), (564.0, 168.0)),  # Central Europe Germany and Alps to Denmark and Jutland Peninsula
+        ((564.0, 168.0), (592.0, 134.0)),  # Denmark and Jutland Peninsula to Sweden and Finland
+        ((564.0, 168.0), (558.0, 130.0)),  # Denmark and Jutland Peninsula to Norway Fjord Coast
         ((582.0, 204.0), (614.8, 224.6)),  # Central Europe Germany and Alps to Danube Basin and Romania
         ((582.0, 204.0), (618.0, 178.0)),  # Central Europe Germany and Alps to Poland and Baltic States
         ((614.8, 224.6), (646.6, 209.7)),  # Danube Basin and Romania to Eastern Europe Ukraine Plains
@@ -658,6 +665,7 @@ def world_svg(t):
         ((782.0, 264.0), (816.0, 288.0)),  # Northern India and Himalayas to Bengal and Ganges Delta
         ((816.0, 288.0), (854.0, 298.0)),  # Bengal and Ganges Delta to Indochina Peninsula Vietnam/Thailand
         ((854.0, 298.0), (846.0, 336.0)),  # Indochina Peninsula Vietnam/Thailand to Malay Peninsula
+        ((892.0, 346.0), (854.0, 298.0)),  # Borneo Heart to Indochina Peninsula Vietnam/Thailand
         ((892.0, 346.0), (924.0, 358.0)),  # Borneo Heart to Sulawesi and Moluccas
 
         # --- Oceania ---
