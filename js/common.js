@@ -104,35 +104,35 @@
             id: 'amazonia',
             name: { en: 'Amazonia', hu: 'Amaz\u00f3nia' },
             desc: { en: 'Rainforest · Emerald and Jade', hu: 'Es\u0151erd\u0151 \u00b7 Smaragd \u00e9s j\u00e1de' },
-            file: 'style-amazonia.css',
+            file: 'themes/style-amazonia.css',
             colors: ['#185a3e', '#c4933f', '#f1f7f2']
         },
         {
             id: 'oceanic',
             name: { en: 'Oceanic', hu: '\u00d3ce\u00e1n' },
             desc: { en: 'Caribbean · Azure and Coral', hu: 'Karib-tenger \u00b7 Az\u00far \u00e9s korall' },
-            file: 'style-oceanic.css',
+            file: 'themes/style-oceanic.css',
             colors: ['#09527a', '#e05a47', '#eff6fa']
         },
         {
             id: 'royal',
             name: { en: 'Royal', hu: 'Kir\u00e1lyi' },
             desc: { en: 'Dynasty · Velvet and Crown Gold', hu: 'Dinasztia \u00b7 B\u00e1rsony \u00e9s arany' },
-            file: 'style-royal.css',
+            file: 'themes/style-royal.css',
             colors: ['#6e1b34', '#c99738', '#fbf4f2']
         },
         {
             id: 'sunset',
             name: { en: 'Sunset', hu: 'Naplemente' },
             desc: { en: 'Caribbean Dusk · Terracotta and Amber', hu: 'Karibi alkony \u00b7 Terrakotta \u00e9s borosty\u00e1n' },
-            file: 'style-sunset.css',
+            file: 'themes/style-sunset.css',
             colors: ['#a34426', '#d97706', '#fcf4ed']
         },
         {
             id: 'slate',
             name: { en: 'Slate', hu: 'Tit\u00e1n' },
             desc: { en: 'High-Tech · Titanium and Cobalt', hu: 'Cs\u00facstechnika \u00b7 Tit\u00e1n \u00e9s kobalt' },
-            file: 'style-slate.css',
+            file: 'themes/style-slate.css',
             colors: ['#1e293b', '#06b6d4', '#f1f5f9']
         }
     ];
