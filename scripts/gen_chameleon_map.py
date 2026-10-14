@@ -18,7 +18,6 @@ except ImportError:
 
 CH_GAP = 12  # width of the dredged channels between neighbouring islands
 
-
 def _catmull_dense(knots, step=3.0):
     pad = [knots[0]] + list(knots) + [knots[-1]]
     out = []
@@ -299,7 +298,13 @@ def chameleon_svg(t):
     s_j1 = 36.0
     s_j2 = sx(886)
     for a, b, tag in [(s_j0, s_j1 - hg, "Snout"), (s_j1 + hg, s_j2 - hg, "Mid-Jaw")]:
-        add(organic_piece(body, a, b, lo=above(split_mouth)), f"Upper {tag} Isle", green_poly=organic_piece(body, a, b, lo=above(split_mouth), inset=6))
+        poly_upper = organic_piece(body, a, b, lo=above(split_mouth))
+        if poly_upper:
+            poly_upper = [(x, y + 7) for x, y in poly_upper]
+        gp_upper = organic_piece(body, a, b, lo=above(split_mouth), inset=6)
+        if gp_upper:
+            gp_upper = [(x, y + 7) for x, y in gp_upper]
+        add(poly_upper, f"Upper {tag} Isle", green_poly=gp_upper)
         add(organic_piece(body, a, b, hi=below(split_mouth)), f"Lower {tag} Isle")
         road_ranges.append((a, b))
 
@@ -492,7 +497,6 @@ def chameleon_svg(t):
     spine_road = [body.off(s_road_end * q / 180, lambda wt, wb: 0.28 * wt * (q / 180)**0.5 if q > 0 else 0) for q in range(181)]
     atoll_pier = (villas[0], villas[1] - 20)
     tongue_knots = [
-        (910, 393),
         atoll_pier,
         (936, 386),
         (952, 368),
