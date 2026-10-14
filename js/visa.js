@@ -37,7 +37,7 @@
                         'Proof of return or onward transportation booking',
                         'Contactless pass through SmartBorder biometric e-gates'
                     ],
-                stay: isHungarian ? 'Legfeljebb 90 nap' : 'Up to 90 Days',
+                stay: isHungarian ? 'Legfeljebb 30 nap' : 'Up to 30 Days',
                 fee: isHungarian ? '0 WUD (Díjmentes)' : '0 WUD (Free)',
                 time: isHungarian ? 'Azonnali engedély' : 'Instant Clearance'
             },
