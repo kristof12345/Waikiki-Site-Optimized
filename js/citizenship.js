@@ -172,14 +172,14 @@ const questionsData = [
 // --- COMPONENTS ---
 
 const colors = {
-    primary: '#0071BC',
-    secondary: '#0E308E',
-    tertiary: '#00B0C3',
-    gold: '#BC9200',
+    primary: '#003366',
+    secondary: '#002244',
+    tertiary: '#4FB3A9',
+    gold: '#C95A41',
     silver: '#9CA3AF',
     bronze: '#B45309',
-    dark: '#0A1930',
-    light: '#F5F9FC',
+    dark: '#001830',
+    light: '#F5EDE1',
     white: '#FFFFFF',
     danger: '#DC2626'
 };
@@ -228,30 +228,30 @@ const AssessmentForm = ({ onClose }) => {
     const progress = (currentQ / questionsData.length) * 100;
 
     const renderIntro = () => (
-        <div className="text-center p-6">
-            <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6">
-                <i className="fas fa-scale-balanced text-4xl" style={{ color: colors.gold }}></i>
+        <div className="text-center p-4 sm:p-6">
+            <div className="w-14 h-14 sm:w-20 sm:h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-6">
+                <i className="fas fa-scale-balanced text-2xl sm:text-4xl" style={{ color: colors.gold }}></i>
             </div>
-            <h3 className="text-3xl font-bold mb-4" style={{ color: colors.secondary }}>W-MAP Protokoll</h3>
-            <p className="text-gray-600 mb-6">A Waikiki Merit Assessment Protocol egy többszintű értékelési rendszer. Célunk nem csak a vagyon, hanem a tehetség és az elkötelezettség mérése. A rendszer 4 jogosultsági szintet különböztet meg.</p>
-            <div className="bg-yellow-50 border border-yellow-200 p-4 rounded-lg text-sm text-left mb-8">
-                <p className="font-bold text-yellow-800 mb-2"><i className="fas fa-triangle-exclamation mr-2"></i>Figyelmeztetés</p>
+            <h3 className="text-xl sm:text-3xl font-bold mb-2 sm:mb-4" style={{ color: colors.secondary }}>W-MAP Protokoll</h3>
+            <p className="text-gray-600 text-sm sm:text-base mb-3 sm:mb-6">A Waikiki Merit Assessment Protocol egy többszintű értékelési rendszer. Célunk nem csak a vagyon, hanem a tehetség és az elkötelezettség mérése. A rendszer 4 jogosultsági szintet különböztet meg.</p>
+            <div className="bg-yellow-50 border border-yellow-200 p-3 sm:p-4 rounded-lg text-xs sm:text-sm text-left mb-4 sm:mb-6">
+                <p className="font-bold text-yellow-800 mb-1 sm:mb-2"><i className="fas fa-triangle-exclamation mr-1.5"></i>Figyelmeztetés</p>
                 <ul className="list-disc list-inside text-yellow-700 space-y-1">
                     <li>A válaszai jogi kötelezettségvállalásnak minősülnek.</li>
                     <li>A "The Watcher" AI minden adatot ellenőriz a háttérben.</li>
                     <li>A hamis adatszolgáltatás automatikus kitiltással jár.</li>
                 </ul>
             </div>
-            <button onClick={() => setStage('quiz')} className="w-full py-4 rounded-lg text-white font-bold text-lg shadow-lg hover:scale-[1.02] transition-transform" style={{ backgroundColor: colors.primary }}>Értékelés Indítása</button>
+            <button onClick={() => setStage('quiz')} className="w-full py-3 sm:py-4 rounded-lg text-white font-bold text-base sm:text-lg shadow-lg hover:scale-[1.01] active:scale-[0.99] transition-transform" style={{ backgroundColor: colors.primary }}>Értékelés Indítása</button>
         </div>
     );
 
     const renderQuiz = () => {
         const q = questionsData[currentQ];
         return (
-            <div className="p-6">
-                <div className="mb-6">
-                    <div className="flex justify-between text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">
+            <div className="p-4 sm:p-6">
+                <div className="mb-4 sm:mb-6">
+                    <div className="flex justify-between text-xs font-bold text-gray-400 uppercase tracking-widest mb-1.5 sm:mb-2">
                         <span>{q.section}</span>
                         <span>{currentQ + 1} / {questionsData.length}</span>
                     </div>
@@ -260,12 +260,12 @@ const AssessmentForm = ({ onClose }) => {
                     </div>
                 </div>
 
-                <h4 className="text-xl md:text-2xl font-bold mb-8 text-gray-800 leading-snug">{q.text}</h4>
+                <h4 className="text-lg sm:text-2xl font-bold mb-4 sm:mb-6 text-gray-800 leading-snug">{q.text}</h4>
 
-                <div className="space-y-3">
+                <div className="space-y-2.5 sm:space-y-3">
                     {q.options.map((opt, idx) => (
-                        <button key={idx} onClick={() => handleOptionClick(opt.points, opt.fatal)} className="w-full text-left p-4 rounded-xl border border-gray-200 hover:border-blue-500 hover:bg-blue-50 transition-all group flex items-start gap-3">
-                            <div className="w-6 h-6 rounded-full border-2 border-gray-300 group-hover:border-blue-500 flex-shrink-0 mt-0.5"></div>
+                        <button key={idx} onClick={() => handleOptionClick(opt.points, opt.fatal)} className="w-full text-left p-3 sm:p-4 rounded-xl border border-gray-200 hover:border-blue-500 hover:bg-blue-50 transition-all group flex items-start gap-2.5 sm:gap-3 text-sm sm:text-base">
+                            <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border-2 border-gray-300 group-hover:border-blue-500 flex-shrink-0 mt-0.5"></div>
                             <span className="text-gray-700 font-medium group-hover:text-blue-900">{opt.label}</span>
                         </button>
                     ))}
@@ -275,10 +275,10 @@ const AssessmentForm = ({ onClose }) => {
     };
 
     const renderAnalyzing = () => (
-        <div className="text-center p-12 flex flex-col items-center justify-center h-full">
-            <div className="w-24 h-24 rounded-full border-4 border-t-transparent animate-spin mb-8" style={{ borderColor: `${colors.gold} transparent ${colors.gold} ${colors.gold}` }}></div>
-            <h3 className="text-2xl font-bold mb-2 animate-pulse" style={{ color: colors.secondary }}>The Watcher Elemzése...</h3>
-            <p className="text-gray-500 text-sm">Biometrikus adatok ellenőrzése...<br />Pénzügyi háttér validálása...<br />Social Credit pontszámítás...</p>
+        <div className="text-center p-6 sm:p-12 flex flex-col items-center justify-center min-h-[300px]">
+            <div className="w-16 h-16 sm:w-24 sm:h-24 rounded-full border-4 border-t-transparent animate-spin mb-4 sm:mb-8" style={{ borderColor: `${colors.gold} transparent ${colors.gold} ${colors.gold}` }}></div>
+            <h3 className="text-xl sm:text-2xl font-bold mb-2 animate-pulse" style={{ color: colors.secondary }}>The Watcher Elemzése...</h3>
+            <p className="text-gray-500 text-xs sm:text-sm">Biometrikus adatok ellenőrzése...<br />Pénzügyi háttér validálása...<br />Social Credit pontszámítás...</p>
         </div>
     );
 
@@ -290,7 +290,7 @@ const AssessmentForm = ({ onClose }) => {
                 title = 'GOLD TIER: Stratégiai Vagyontárgy';
                 desc = 'Azonnali állampolgárság. Ön a tökéletes jelölt. Nincs várakozási idő, nincs ingatlanminimum, VIP ügyintézés.';
                 icon = 'fas fa-crown';
-                bgClass = 'bg-gradient-to-b from-yellow-50 to-white border-yellow-400';
+                bgClass = 'border-yellow-400';
                 btnText = 'Hivatalos Kérelem ($5,000)';
                 badge = '90+ PONT';
                 break;
@@ -298,7 +298,7 @@ const AssessmentForm = ({ onClose }) => {
                 title = 'SILVER TIER: Kiemelt Befektető';
                 desc = 'Gyorsított eljárás. Állampolgárság 1 év után, feltéve, hogy teljesíti a $1M kötvényvásárlást és az ingatlanbefektetést.';
                 icon = 'fas fa-medal';
-                bgClass = 'bg-gray-50 border-gray-400';
+                bgClass = 'border-gray-400';
                 btnText = 'Befektetési Terv Indítása';
                 badge = '75-89 PONT';
                 break;
@@ -306,7 +306,7 @@ const AssessmentForm = ({ onClose }) => {
                 title = 'BRONZE TIER: Szakképzett Rezidens';
                 desc = 'Letelepedési engedély (Residency). Állampolgárság 5 év után kérvényezhető. Biztonsági letét ($100k) és igazolt munkaviszony szükséges.';
                 icon = 'fas fa-user-shield';
-                bgClass = 'bg-orange-50 border-orange-300';
+                bgClass = 'border-orange-300';
                 btnText = 'Letelepedési Kérelem';
                 badge = '60-74 PONT';
                 break;
@@ -314,7 +314,7 @@ const AssessmentForm = ({ onClose }) => {
                 title = 'BLUE TIER: Talent / Nomad Vízum';
                 desc = 'Ideiglenes munkavállalói státusz. Fiatal tehetségeknek, akik nem rendelkeznek nagy vagyonnal, de kritikus tudással igen. 10 éves út az állampolgárságig.';
                 icon = 'fas fa-laptop-code';
-                bgClass = 'bg-blue-50 border-blue-300';
+                bgClass = 'border-blue-300';
                 btnText = 'Talent Program Jelentkezés';
                 badge = '45-59 PONT';
                 break;
@@ -322,44 +322,46 @@ const AssessmentForm = ({ onClose }) => {
                 title = 'ELUTASÍTVA: High Risk';
                 desc = isFatal ? 'A rendszer KIZÁRÓ OKOT (Red Flag) azonosított. Kérelmét elutasítottuk.' : 'Pontszáma (45 alatt) nem éri el a minimális belépési küszöböt.';
                 icon = 'fas fa-ban';
-                bgClass = 'bg-red-50 border-red-200';
+                bgClass = 'border-red-200';
                 btnText = 'Bezárás';
                 badge = 'ELÉGTELEN';
         }
 
         return (
-            <div className="p-8 text-center animate-fade-up">
-                <div className={`w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl text-3xl ${tier === 'REJECTED' ? 'bg-red-100 text-red-600' : 'bg-white'}`} style={{ color: tier === 'GOLD' ? colors.gold : tier === 'SILVER' ? colors.silver : tier === 'BRONZE' ? colors.bronze : tier === 'BLUE' ? colors.primary : '' }}>
+            <div className="p-4 sm:p-8 text-center animate-fade-up">
+                <div className={`w-14 h-14 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-6 shadow-xl text-2xl sm:text-3xl ${tier === 'REJECTED' ? 'bg-red-100 text-red-600' : 'bg-white'}`} style={{ color: tier === 'GOLD' ? colors.gold : tier === 'SILVER' ? colors.silver : tier === 'BRONZE' ? colors.bronze : tier === 'BLUE' ? colors.primary : '' }}>
                     <i className={icon}></i>
                 </div>
 
-                <div className={`p-6 rounded-xl border-2 mb-8 relative overflow-hidden ${bgClass}`}>
-                    <div className="absolute top-0 right-0 px-3 py-1 bg-black/10 text-xs font-bold rounded-bl-lg">{badge}</div>
-                    <h3 className="text-2xl font-bold mb-2 text-gray-900">{title}</h3>
-                    <div className="text-4xl font-extrabold mb-4" style={{ color: tier === 'REJECTED' ? colors.danger : colors.primary }}>{score} / 100</div>
-                    <p className="text-gray-700 leading-relaxed text-sm">{desc}</p>
+                <div className={`p-4 sm:p-6 rounded-xl border-2 mb-4 sm:mb-6 relative overflow-hidden ${bgClass}`}>
+                    <div className="absolute top-0 right-0 px-2.5 py-0.5 sm:px-3 sm:py-1 bg-black/10 text-[10px] sm:text-xs font-bold rounded-bl-lg">{badge}</div>
+                    <h3 className="text-xl sm:text-2xl font-bold mb-1.5 sm:mb-2 text-gray-900">{title}</h3>
+                    <div className="text-3xl sm:text-4xl font-extrabold mb-2 sm:mb-4" style={{ color: tier === 'REJECTED' ? colors.danger : colors.primary }}>{score} / 100</div>
+                    <p className="text-gray-700 leading-relaxed text-xs sm:text-sm">{desc}</p>
                 </div>
 
                 {tier !== 'REJECTED' && (
-                    <div className="text-left bg-gray-50 p-4 rounded-lg mb-6 text-sm text-gray-600">
+                    <div className="text-left bg-gray-50 p-3 sm:p-4 rounded-lg mb-4 sm:mb-6 text-xs sm:text-sm text-gray-600">
                         <p><strong>Következő lépés:</strong> A besorolása alapján Ön jogosult a fenti program elindítására. Kérjük, foglaljon időpontot a biometrikus azonosításra.</p>
                     </div>
                 )}
 
-                <button onClick={onClose} className={`w-full py-4 rounded-lg text-white font-bold text-lg shadow-lg transition-transform hover:scale-[1.02] ${tier === 'REJECTED' ? 'bg-gray-500' : 'bg-[#BC9200]'}`}>{btnText}</button>
+                <button onClick={onClose} className={`w-full py-3 sm:py-4 rounded-lg text-white font-bold text-base sm:text-lg shadow-lg transition-transform hover:scale-[1.01] active:scale-[0.99] ${tier === 'REJECTED' ? 'bg-gray-500' : 'bg-[#C95A41]'}`}>{btnText}</button>
             </div>
         );
     };
 
     return (
-        <div className="assessment-modal-overlay fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
-            <div className="assessment-modal bg-white rounded-2xl w-full max-w-5xl max-h-[90vh] overflow-y-auto shadow-2xl relative">
-                <div className="assessment-modal-header sticky top-0 bg-white/95 backdrop-blur px-6 py-4 border-b flex justify-between items-center z-10">
-                    <span className="assessment-modal-meta font-bold text-gray-400 text-xs tracking-widest">W-MAP v2.1 PROTOCOL</span>
-                    <button onClick={onClose} className="assessment-modal-close text-gray-400 hover:text-red-500 transition-colors"><i className="fas fa-times text-xl"></i></button>
+        <div className="assessment-modal-overlay fixed inset-0 z-[9999] flex items-center justify-center p-2 sm:p-4 bg-black/80 backdrop-blur-md">
+            <div className="assessment-modal bg-white rounded-xl sm:rounded-2xl w-full max-w-4xl max-h-[92dvh] sm:max-h-[90vh] flex flex-col shadow-2xl relative overflow-hidden">
+                <div className="assessment-modal-header flex-shrink-0 bg-white/95 backdrop-blur px-4 py-3 sm:px-6 sm:py-4 border-b flex justify-between items-center z-10">
+                    <span className="assessment-modal-meta font-bold text-gray-400 text-[11px] sm:text-xs tracking-widest">W-MAP v2.1 PROTOCOL</span>
+                    <button onClick={onClose} className="assessment-modal-close text-gray-400 hover:text-red-500 transition-colors" aria-label="Close modal">
+                        <i className="fas fa-times text-lg sm:text-xl"></i>
+                    </button>
                 </div>
 
-                <div className="min-h-[400px]">
+                <div className="assessment-modal-body flex-1 overflow-y-auto overscroll-contain">
                     {stage === 'intro' && renderIntro()}
                     {stage === 'quiz' && renderQuiz()}
                     {stage === 'analyzing' && renderAnalyzing()}

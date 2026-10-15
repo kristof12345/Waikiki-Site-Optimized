@@ -1,0 +1,201 @@
+/* Banking System Stylesheet — Sovereign Nation of Waikiki */
+
+.bank-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr));
+
+    strong {
+        text-align: end;
+    }
+}
+
+.pillar-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    background: var(--accent-subtle);
+    border: 1px solid rgba(194, 154, 87, 0.3);
+    color: var(--accent-dark);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 1rem;
+}
+
+.body-dark .pillar-badge {
+    background: rgba(223, 186, 118, 0.12);
+    border-color: rgba(223, 186, 118, 0.25);
+    color: var(--accent);
+}
+
+.financial-specs {
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0 0;
+    border-top: 1px solid var(--line);
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.financial-specs li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.92rem;
+    color: var(--text);
+}
+
+.financial-specs li strong {
+    color: var(--heading);
+    font-weight: 600;
+}
+
+.rate-indicator-card {
+    border-left: 4px solid var(--primary);
+}
+
+.rate-indicator-card.accent-coral,
+.rate-indicator-card.accent-gold {
+    border-left-color: var(--accent);
+}
+
+/* Illustrated Panels */
+.ill-panel {
+    margin: 2.5rem auto;
+    max-width: var(--width-s, 1160px);
+    width: 100%;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--line-strong);
+    background: var(--surface);
+    box-shadow: var(--shadow-md);
+    position: relative;
+}
+
+.ill-caption {
+    padding: 1rem 1.5rem;
+    background: var(--surface-2);
+    border-top: 1px solid var(--line);
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.ill-caption strong {
+    color: var(--heading);
+}
+
+/* SVG helpers and animations */
+.ill {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.ill .pulse {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: illPulse 2.8s var(--ease-out, ease-out) infinite;
+}
+
+.ill .pulse-slow {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: illPulse 4s var(--ease-out, ease-out) infinite;
+}
+
+.ill .spin {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: illSpin 14s linear infinite;
+}
+
+.ill .dash {
+    stroke-dasharray: 6 8;
+    animation: illDash 2.4s linear infinite;
+}
+
+.ill .dash-fast {
+    stroke-dasharray: 5 6;
+    animation: illDashFast 1.4s linear infinite;
+}
+
+.ill .dash-gold {
+    stroke-dasharray: 6 8;
+    animation: illDash 2s linear infinite;
+}
+
+.ill .glow {
+    animation: illGlow 3s ease-in-out infinite alternate;
+}
+
+.ill .corridor-pulse {
+    animation: illCorridorPulse 4s ease-in-out infinite alternate;
+}
+
+@keyframes illSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes illPulse {
+    0% {
+        transform: scale(0.96);
+        opacity: 0.95;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 0.35;
+    }
+
+    100% {
+        transform: scale(0.96);
+        opacity: 0.95;
+    }
+}
+
+@keyframes illDash {
+    to {
+        stroke-dashoffset: -28;
+    }
+}
+
+@keyframes illDashFast {
+    to {
+        stroke-dashoffset: -22;
+    }
+}
+
+@keyframes illGlow {
+    from {
+        opacity: 0.5;
+        filter: drop-shadow(0 0 2px var(--accent));
+    }
+
+    to {
+        opacity: 1;
+        filter: drop-shadow(0 0 8px var(--accent));
+    }
+}
+
+@keyframes illCorridorPulse {
+    0% {
+        opacity: 0.25;
+        stroke-width: 1.5;
+    }
+
+    100% {
+        opacity: 0.55;
+        stroke-width: 2.5;
+    }
+}

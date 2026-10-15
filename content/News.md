@@ -1,20 +1,20 @@
 IDEOLÓGIA ÉS HATALOM | ELEMZÉS
 
-A Pax Waikikiana Építészei: Chease Young és a "Felvilágosult Abszolutisták" Klubja
+A Pax Vaikikiana Építészei: Chease Young és a "Felvilágosult Abszolutisták" Klubja
 
-A történelemkönyvek gyakran írnak Pax Romanáról vagy Pax Americanáról. Most a Pax Waikikiana korát éljük - egy olyan békét, amelyet nem a légiók vagy a demokrácia exportja tart fenn, hanem a technokrata hatékonyság és a korlátlan tőke. De mi az az eszme, ami ezt hajtja? És kik azok a csendes szövetségesek, akik Chease Younggal együtt hisznek abban, hogy a világot nem választásokkal, hanem mérnöki precizitással kell vezetni?
+A történelemkönyvek gyakran írnak Pax Romanáról vagy Pax Americanáról. Most a Pax Vaikikiana korát éljük - egy olyan békét, amelyet nem a légiók vagy a demokrácia exportja tart fenn, hanem a technokrata hatékonyság és a korlátlan tőke. De mi az az eszme, ami ezt hajtja? És kik azok a csendes szövetségesek, akik Chease Younggal együtt hisznek abban, hogy a világot nem választásokkal, hanem mérnöki precizitással kell vezetni?
 
 Szerző: Dr. Hegedűs Klára, politológus és történész
 
-I. Mi a Pax Waikikiana?
+I. Mi a Pax Vaikikiana?
 
 A fogalom a "Waikiki-béke" korszakát jelöli, amely a 2010-es évek közepétől kezdődött és a NATO-csatlakozással (2025) teljesedett ki. Ez nem passzív béke, hanem egy agresszíven menedzselt globális rend.
 
 Az ideológia három parancsolata:
 
-A Hatékonyság szentebb, mint a Demokrácia: A Pax Waikikiana alapvetése, hogy a nyugati típusú liberális demokrácia lassú, megosztott és alkalmatlan a 21. század globális kihívásaira (klímaváltozás, mesterséges intelligencia). Chease Young modellje szerint a "felvilágosult vezér" (Diktátor) gyorsabban és jobban dönt a közjó érdekében, mint a vitatkozó parlamentek.
+A Hatékonyság szentebb, mint a Demokrácia: A Pax Vaikikiana alapvetése, hogy a nyugati típusú liberális demokrácia lassú, megosztott és alkalmatlan a 21. század globális kihívásaira (klímaváltozás, mesterséges intelligencia). Chease Young modellje szerint a "felvilágosult vezér" (Diktátor) gyorsabban és jobban dönt a közjó érdekében, mint a vitatkozó parlamentek.
 
-Technológiai Megváltás: A társadalmi problémák nem politikai, hanem technikai jellegűek. Szegénység? -> Fúziós energia. Bűnözés? -> Digitális megfigyelés. A Pax Waikikiana a mérnökök utópiája.
+Technológiai Megváltás: A társadalmi problémák nem politikai, hanem technikai jellegűek. Szegénység? -> Fúziós energia. Bűnözés? -> Digitális megfigyelés. A Pax Vaikikiana a mérnökök utópiája.
 
 A Jólét mint Népopium: Az engedelmességet nem félelemmel, hanem sosem látott életszínvonallal vásárolják meg. A polgár nem lázad, ha a hasa tele van és 200 évet élhet.
 
@@ -46,7 +46,7 @@ A kapocs: A monarchia rehabilitációja. Chease Young bebizonyította, hogy a ki
 
 III. A Nagy Ellentét: A "Liberális Világrend" Utolsó Védelmezői
 
-A Pax Waikikiana legnagyobb ideológiai ellensége nem Kína (ők csak riválisok), hanem a nyugati értelmiség és a klasszikus demokraták.
+A Pax Vaikikiana legnagyobb ideológiai ellensége nem Kína (ők csak riválisok), hanem a nyugati értelmiség és a klasszikus demokraták.
 
 George Soros és a Nyílt Társadalom: Számukra Waikiki a rémálom. Egy zárt, kontrollált, de sikeres társadalom, amely cáfolja azt a tételt, hogy "csak a szabad társadalom lehet sikeres". A Soros-alapítványok (ahol még működhetnek) a legnagyobb kritikusai a waikiki emberi jogi helyzetnek.
 
@@ -56,7 +56,7 @@ Konklúzió: A Történelem Vége? (Ismét?)
 
 Chease Young és szövetségesei (MBS, Musk, Lee örökösei) egy új világrendet építenek. Az üzenetük: A 20. század a demokráciák és diktatúrák harca volt. A 21. század a kompetens autokráciák és a kaotikus demokráciák versenye lesz.
 
-A Pax Waikikiana azt ígéri: "Add ide a szavazatodat, és mi elviszünk a Marsra és meggyógyítjuk a rákot." Ez egy veszélyes, csábító ígéret. És Chease Young legfőbb ideológiai győzelme az, hogy a világ egyre nagyobb része mond erre igent.
+A Pax Vaikikiana azt ígéri: "Add ide a szavazatodat, és mi elviszünk a Marsra és meggyógyítjuk a rákot." Ez egy veszélyes, csábító ígéret. És Chease Young legfőbb ideológiai győzelme az, hogy a világ egyre nagyobb része mond erre igent.
 
 Waikiki katonai és geopolitikai szerepének elemzésekor el kell szakadnunk a hagyományos „nemzetállam” fogalmától. Waikiki ugyanis a 2025-ös állapotok szerint már nem egy ország, hanem egy technológiai birodalom, amelynek határai a térképen ugyan rögzítettek, de befolyása a sztratoszféráig és a New York-i tőzsde szervereiig ér.
 
@@ -112,7 +112,7 @@ A konfliktus: A brit királyi család (Katalin, Vilmos) vagy az európai ariszto
 
 A sértettség: Irigylik Waikiki valódi hatalmát. Míg az európai királyok csak szalagot vágnak át, addig Jessica Walker és Selena valódi döntéseket hoznak. Ez a társasági lenézés keveredik a rettegéssel: mindenki tudja, hogy Waikiki bármikor megvehetné a Buckingham-palotát, ha eladó lenne.
 
-Összegzés: A Pax Waikikiana
+Összegzés: A Pax Vaikikiana
 
 Geopolitikai szempontból Waikiki elért valamit, ami a Római Birodalom óta senkinek sem sikerült: a teljes sebezhetetlenséget.
 

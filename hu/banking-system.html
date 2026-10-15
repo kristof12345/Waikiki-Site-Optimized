@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- @chrome:head -->
+    <meta name="theme-color" content="#fbf7f0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
+    <!-- /@chrome:head -->
+    <title>Waikiki Bankrendszer</title>
+    <link rel="icon" href="../icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo-blue.png" />
+    <link href="../manifest.json" rel="manifest" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/banking-system.css" />
+</head>
+<body class="page-banking-system group-prosperity">
+    <!-- @chrome:header -->
+    <div class="page-curtain" aria-hidden="true"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="64" height="64" loading="eager" decoding="async" /></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <header class="site-header">
+        <a href="index.html" class="brand"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" decoding="async" /><span class="brand-word">Waikiki</span></a>
+        <nav class="primary-nav">
+            <a href="tourism.html">Utazás</a><a href="society.html">Társadalom</a><a href="economy.html">Gazdaság</a><a href="government.html">Kormány</a><a href="history.html">Történelem</a><a href="dynasty.html">Királyi Család</a>
+        </nav>
+        <div class="header-actions">
+            <a class="lang-pill" href="../en/banking-system.html" hreflang="en" lang="en" title="English">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg>
+                <span>EN</span>
+            </a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+                <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg>
+            </button>
+            <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+                <span class="menu-lines" aria-hidden="true"></span>
+                <span class="menu-label-open">Menü</span>
+                <span class="menu-label-close">Bezárás</span>
+                <span class="visually-hidden">Menü</span>
+            </button>
+        </div>
+    </header>
+    <div class="site-menu" id="site-menu" aria-hidden="true" inert>
+        <div class="site-menu-inner">
+            <aside class="menu-aside">
+                <div class="menu-clock-block">
+                    <div class="menu-clock-header">
+                        <p class="menu-clock-label">Helyi idő a fővárosban</p>
+                        <div class="menu-weather" data-capital-weather><span class="weather-icon" aria-hidden="true">☀️</span> <span class="weather-temp">28°C</span> <span class="weather-desc">Napos</span></div>
+                    </div>
+                    <p class="menu-clock" data-capital-clock>--:--</p>
+                    <p class="menu-clock-city">Nova Aurelia, Waikiki tartomány</p>
+                </div>
+                <p class="menu-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
+                <div class="menu-aside-row">
+                    <a class="menu-chip" href="../en/banking-system.html" hreflang="en" lang="en">English</a><a class="menu-chip is-active" href="../hu/banking-system.html" hreflang="hu" lang="hu">Magyar</a>
+                    <button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Éjszakai mód</button>
+                    <button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animáció</button>
+                </div>
+            </aside>
+            <div class="menu-group">
+                <h2>Nemzet</h2>
+                <ul>
+                    <li><a href="index.html">Főoldal</a></li>
+                    <li><a href="overview.html">Áttekintés</a></li>
+                    <li><a href="history.html">Történelem</a></li>
+                    <li><a href="society.html">Társadalom</a></li>
+                    <li><a href="culture.html">Kultúra</a></li>
+                    <li><a href="ideology.html">Ideológia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Kormányzás</h2>
+                <ul>
+                    <li><a href="government.html">Kormány</a></li>
+                    <li><a href="leadership.html">Vezetés</a></li>
+                    <li><a href="parties.html">Politika</a></li>
+                    <li><a href="constitution.html">Alkotmány</a></li>
+                    <li><a href="military.html">Hadsereg</a></li>
+                    <li><a href="diplomacy.html">Diplomácia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Jólét</h2>
+                <ul>
+                    <li><a href="economy.html">Gazdaság</a></li>
+                    <li><a href="banking-system.html" aria-current="page">Bankrendszer</a></li>
+                    <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                    <li><a href="citizenship.html">Állampolgárság</a></li>
+                    <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                    <li><a href="space-research.html">Űrkutatás</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Királyi Család</h2>
+                <ul>
+                    <li><a href="dynasty.html">A Dinasztia</a></li>
+                    <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                    <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Látogatás</h2>
+                <ul>
+                    <li><a href="tourism.html">Turizmus</a></li>
+                    <li><a href="sights.html">Látnivalók</a></li>
+                    <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                    <li><a href="visa.html">Vízum és belépés</a></li>
+                    <li><a href="faq.html">GYIK</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /@chrome:header -->
+    <main id="main">
+        <section class="hero" data-hero>
+            <div class="hero-media"><img src="../images/UniversalUpscaler_Pro_Precise_2_1f1c235a-8739-6b80-818f-9814e906014a.jpg" alt="Waikiki Bankrendszer" fetchpriority="high" decoding="async" /></div>
+            <div class="hero-veil"></div>
+            <div class="hero-content"><span class="hero-eyebrow">Jólét · Bankrendszer</span>
+                <h1 class="hero-title">Bankrendszer</h1>
+                <p class="hero-lead">Waikiki pénzügyi rendszere a Szuverén Pénzrendszer alapjaira épül. Kizárólag a Nemzeti Bank teremthet pénzt, a betétekre teljes állami garancia vonatkozik, és a szigorú 0%-os inflációs célérték a világ legstabilabb bankrendszerét hozta létre.</p>
+                <div class="hero-stats">
+                    <div class="stat-item"><span class="stat-number">0%</span><span class="stat-label">Inflációs célérték</span></div>
+                    <div class="stat-item"><span class="stat-number">4 000 t</span><span class="stat-label">Aranytartalék</span></div>
+                    <div class="stat-item"><span class="stat-number">2,5x+</span><span class="stat-label">WUD / USD árfolyam</span></div>
+                    <div class="stat-item"><span class="stat-number">25 000+</span><span class="stat-label">Forgalmazott értékpapír</span></div>
+                </div>
+            </div>
+        </section>
+        <!-- @chrome:subnav --><!-- /@chrome:subnav -->
+        <section id="pillars" class="fade-in">
+            <h2 class="section-title">A Pénzügyi Rendszer Három Pillére</h2>
+            <p class="section-intro">Waikiki pénzügyi architektúrája szigorúan elválasztja az állami pénzkibocsátást a kereskedelmi hitelnyújtástól és a tőkepiaci befektetésektől. Ezzel teljes mértékben kiküszöböli a magánpénzteremtésből fakadó pénzügyi válságokat és bankcsődöket.</p>
+            <div class="ill-panel">
+                <svg class="ill" viewBox="0 0 1160 480" width="1160" height="480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A Szuverén Hármas Pénzügyi Hálózat">
+                    <defs>
+                        <linearGradient id="bk-teal-hu" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#003366" />
+                            <stop offset="100%" stop-color="#051f1e" />
+                        </linearGradient>
+                        <linearGradient id="bk-gold-hu" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#fcedc7" />
+                            <stop offset="50%" stop-color="#dfba76" />
+                            <stop offset="100%" stop-color="#966c24" />
+                        </linearGradient>
+                        <linearGradient id="bk-flow-teal-hu" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#dfba76" />
+                            <stop offset="100%" stop-color="#6BA4D9" />
+                        </linearGradient>
+                    </defs>
+                    <g transform="translate(0, 0)">
+                        <path d="M 580 180 L 240 310" stroke="url(#bk-flow-teal-hu)" stroke-width="2.5" fill="none" class="dash" />
+                        <path d="M 580 180 L 920 310" stroke="url(#bk-flow-teal-hu)" stroke-width="2.5" fill="none" class="dash" />
+                        <path d="M 240 370 L 580 430" stroke="#6BA4D9" stroke-width="1.8" stroke-dasharray="5 5" fill="none" class="dash-fast" />
+                        <path d="M 920 370 L 580 430" stroke="#dfba76" stroke-width="1.8" stroke-dasharray="5 5" fill="none" class="dash-fast" />
+                        <g transform="translate(580, 150)">
+                            <circle class="pulse-slow" cx="0" cy="0" r="82" fill="none" stroke="rgba(223, 186, 118, 0.3)" stroke-width="1.5" />
+                            <circle cx="0" cy="0" r="70" fill="url(#bk-teal-hu)" stroke="#dfba76" stroke-width="2.5" />
+                            <g class="spin">
+                                <circle cx="0" cy="0" r="54" fill="none" stroke="#dfba76" stroke-width="6" stroke-dasharray="14 12" />
+                            </g>
+                            <circle cx="0" cy="0" r="44" fill="#001830" stroke="#fcedc7" stroke-width="1.5" />
+                            <circle cx="0" cy="0" r="28" fill="url(#bk-gold-hu)" />
+                            <text x="0" y="8" fill="#001830" font-family="Fraunces, serif" font-size="24" font-weight="800" text-anchor="middle">₩</text>
+                            <rect x="-140" y="-88" width="280" height="24" rx="12" fill="#061f1d" stroke="#dfba76" stroke-width="1" />
+                            <text x="0" y="-72" fill="#fcedc7" font-family="Manrope, sans-serif" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="1.5">WAIKIKI NEMZETI BANKJA</text>
+                            <text x="0" y="98" fill="#6BA4D9" font-family="Manrope, sans-serif" font-size="10" font-weight="700" text-anchor="middle">KIZÁRÓLAGOS KIBOCSÁTÓ</text>
+                        </g>
+                        <g transform="translate(240, 340)">
+                            <rect x="-110" y="-60" width="220" height="120" rx="14" fill="#082220" stroke="#1A528F" stroke-width="2" />
+                            <circle cx="-65" cy="-15" r="24" fill="#003366" stroke="#6BA4D9" stroke-width="1.5" />
+                            <path d="M-65 -30 L-54 -26 L-54 -15 C-54 -7 -65 0 -65 0 C-65 0 -76 -7 -76 -15 L-76 -26 Z" fill="#dfba76" />
+                            <text x="-10" y="-20" fill="#fbf7f0" font-family="Manrope, sans-serif" font-size="13" font-weight="700">KERESKEDELMI</text>
+                            <text x="-10" y="-5" fill="#fbf7f0" font-family="Manrope, sans-serif" font-size="13" font-weight="700">BANKOK</text>
+                            <text x="0" y="30" fill="#d5ede9" font-family="Manrope, sans-serif" font-size="9" text-anchor="middle">ICB · Bank of Waikiki · NACB</text>
+                        </g>
+                        <g transform="translate(920, 340)">
+                            <rect x="-110" y="-60" width="220" height="120" rx="14" fill="#082220" stroke="#c29a57" stroke-width="2" />
+                            <circle cx="-65" cy="-15" r="24" fill="#3d2a0d" stroke="#dfba76" stroke-width="1.5" />
+                            <path d="M-75 -8 L-69 -14 L-63 -10 L-55 -22" fill="none" stroke="#dfba76" stroke-width="2.5" stroke-linecap="round" />
+                            <polyline points="-59,-22 -55,-22 -55,-18" fill="none" stroke="#dfba76" stroke-width="2.5" />
+                            <text x="-10" y="-20" fill="#fbf7f0" font-family="Manrope, sans-serif" font-size="13" font-weight="700">BEFEKTETÉSI</text>
+                            <text x="-10" y="-5" fill="#fbf7f0" font-family="Manrope, sans-serif" font-size="13" font-weight="700">ALAPOK</text>
+                            <text x="0" y="30" fill="#d5ede9" font-family="Manrope, sans-serif" font-size="9" text-anchor="middle">Chease Investment Group, · Walker Finance</text>
+                        </g>
+                        <g transform="translate(580, 420)">
+                            <rect x="-170" y="-35" width="340" height="70" rx="12" fill="#061e1c" stroke="#6BA4D9" stroke-width="1.8" />
+                            <circle cx="-135" cy="0" r="18" fill="#003366" stroke="#6BA4D9" stroke-width="1.2" />
+                            <circle cx="-135" cy="-4" r="6" fill="#fbf7f0" />
+                            <path d="M-145 10 C-145 3 -125 3 -125 10" fill="#fbf7f0" />
+                            <text x="-105" y="-4" fill="#fbf7f0" font-family="Manrope, sans-serif" font-size="12" font-weight="700">UNIVERZÁLIS CBDC SZÁMLÁK</text>
+                            <text x="-105" y="14" fill="#6BA4D9" font-family="Manrope, sans-serif" font-size="10" font-weight="600">NAPI KAMATJÓVÁÍRÁS</text>
+                        </g>
+                        <g font-family="Manrope, sans-serif" font-size="10" font-weight="700" letter-spacing="1">
+                            <rect x="40" y="24" width="220" height="32" rx="16" fill="#061c1b" stroke="#1A528F" stroke-width="1" />
+                            <circle cx="58" cy="40" r="4" fill="#2ecc71" class="pulse" />
+                            <text x="74" y="44" fill="#fbf7f0">0%-OS INFLÁCIÓS CÉL</text>
+                            <rect x="900" y="24" width="220" height="32" rx="16" fill="#061c1b" stroke="#c29a57" stroke-width="1" />
+                            <circle cx="918" cy="40" r="4" fill="#f5c46e" class="pulse" />
+                            <text x="934" y="44" fill="#fbf7f0">100%-OS BETÉTBIZTOSÍTÁS</text>
+                        </g>
+                    </g>
+                </svg>
+                <div class="ill-caption">
+                    <span>A hármas pénzügyi hálózat szétválasztja az állami pénzteremtést a kereskedelmi hitelezéstől és a tőkepiaci befektetésektől. A Nemzeti bank által nyilvántartott 100%-os állami fedezetű CBDC, zéró frakcionális tartalékolási kockázatot jelent.</span>
+                </div>
+            </div>
+            <div class="card-grid bank-grid">
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/bank.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <span class="pillar-badge">I. Pillér · Központi Jegybank</span>
+                    <h3>Waikiki Nemzeti Bankja</h3>
+                    <p>A Nemzeti Bank kezeli az állam befektetéseit és költségvetési tartalékát, felelős a kizárólagos pénzkibocsátásért, folyószámlát vezet minden Waikiki dollárban tartott vagyonról és az alapkamatok révén szabályozza az inflációt. Továbbá közvetlen, 5 éves lejáratú, speciális kamatozású hiteleket is nyújt a stratégiai jelentőségű óriáscégeknek.</p>
+                    <ul class="financial-specs">
+                        <li><span>Monopólium</span><strong>Kizárólagos állami pénzteremtés</strong></li>
+                        <li><span>Betétvédelem</span><strong>100%-os korlátlan állami kezesség</strong></li>
+                        <li><span>Vállalati hitelezés</span><strong>Min. 1 milliárd WUD stratégiai forrás</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/handshake.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <span class="pillar-badge">II. Pillér · Kereskedelmi Hitelintézetek</span>
+                    <h3>Kereskedelmi Bankok</h3>
+                    <p>A kereskedelmi bankok lekötött betéteket gyűjtenek, amelyekből hiteleket helyeznek ki. A 2009-es banktörvény értelmében a kihelyezett hitelek legalább 50%-át saját tőkéből kell fedezniük, a betétek összege nem haladhatja meg a saját tőkét, és lejáratuknak fedeznie kell a kihelyezett hitelek lejáratát.</p>
+                    <ul class="financial-specs">
+                        <li><span>Tőkekövetelmény</span><strong>Legalább 50% saját tőkefedezet</strong></li>
+                        <li><span>Hitelkonstrukciók</span><strong>Csak szigorúan szabályozott típusok</strong></li>
+                        <li><span>Vezető intézmények</span><strong>International Credit Bank, Bank of Waikiki, Nova Aurelia Central Bank</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/chart-line.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <span class="pillar-badge">III. Pillér · Tőkebefektetés</span>
+                    <h3>Befektetési Bankok és Alapok</h3>
+                    <p>A befektetési bankok magasabb hozamot biztosító értékpapírokkal és derivatívákkal kereskednek. Betéteket nem gyűjthetnek, forrásaik kötvénykibocsátásból és befektetési jegyekből származnak, így a kockázatot közvetlenül a befektetők vállalják a magasabb profit reményében.</p>
+                    <ul class="financial-specs">
+                        <li><span>Forrásszerkezet</span><strong>Kizárólag kötvények és befektetési jegyek</strong></li>
+                        <li><span>Tevékenység</span><strong>Részvénykibocsátások, vagyonkezelés</strong></li>
+                        <li><span>Vezető csoportok</span><strong>Chease Investment Group, Walker Finance & Insurance Holding</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="monetary-policy" class="light-bg fade-in">
+            <h2 class="section-title">Szuverén Valuta és Monetáris Politika</h2>
+            <p class="section-intro">Waikiki 2009-től teljes állami pénzrendszert vezetett be. A pénzteremtés állami monopóliuma biztosítja a pénzpiaci stabilitást, a bankrendszer ellenálló-képességét és a költségvetési bevételek folyamatos növekedését.</p>
+            <div class="card-grid">
+                <div class="card rate-indicator-card"><span class="card-icon"><img src="https://api.iconify.design/mdi/currency-usd.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <h3>A Waikiki Dollár (WUD)</h3>
+                    <p>Chease Young javaslatára 2000-ben a Nemzeti Bank új valutát vezetett be Waikiki dollár néven. Az ország jelentős kőolaj- és technológiai exportja miatt külföldön is rendkívül keresetté vált, így az árfolyam a kezdeti 1:1 szintről 2022-re meghaladta a 2,5-ös átváltási arányt az amerikai dollárral szemben.</p>
+                </div>
+                <div class="card rate-indicator-card accent-coral"><span class="card-icon"><img src="https://api.iconify.design/mdi/cash-register.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <h3>Állami Pénzteremtés és Tartalék</h3>
+                    <p>A Nemzeti Bank Monetáris Tanácsa havonta határoz a forgalomban lévő pénzmennyiségről. A pénzkibocsátásból keletkező nyereséget a Nemzeti Bank értékpapírokba fekteti, vállalati hiteleket nyújt, vagy közvetlenül az állami költségvetésbe és vagyonalapba fizeti be a polgárok javára.</p>
+                </div>
+                <div class="card rate-indicator-card accent-gold"><span class="card-icon"><img src="https://api.iconify.design/mdi/gold.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <h3>A Világ Második Legnagyobb Aranytartaléka</h3>
+                    <p>Waikiki az Egyesült Államok után a világ második legnagyobb fizikai aranytartalékával büszkélkedhet. A mintegy 4 000 tonnányi nemesfém a devizatartalék harmadát teszi ki, és értéke 2021-ben átlépte a 100 milliárd WUD-t, sziklaszilárd menedéket nyújtva a nemzetközi válságok idején.</p>
+                </div>
+                <div class="card rate-indicator-card"><span class="card-icon"><img src="https://api.iconify.design/mdi/credit-card-outline.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <h3>Ingyenes Állami Számlavezetés</h3>
+                    <p>A Nemzeti Bank minden állampolgár és hazai vállalat számára díjmentes folyószámlát és értékpapírszámlát vezet. A számla fenntartása, az összes átutalás és a bankkártya-használat teljesen ingyenes, a lakossági betétek pedig azonos kedvező jegybanki kamatozásban részesülnek, mint a nagyvállalatok.</p>
+                </div>
+            </div>
+        </section>
+        <section id="rates-stability" class="fade-in">
+            <h2 class="section-title">Kamatok és Árstabilitás</h2>
+            <p class="section-intro">A Nemzeti Bank kettős alapkamatrendszert alkalmaz, és a világ legszigorúbb antiinflációs politikáját követve védi a lakosság vásárlóerejét és a megtakarítások értékét.</p>
+            <div class="ill-panel">
+                <svg class="ill" viewBox="0 0 1160 440" width="1160" height="440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kettős Alapkamat-Transzmisszió és Retroaktív Inflációs Stabilitási Folyosó">
+                    <defs>
+                        <linearGradient id="bk2-gold-bar-hu" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#fff5db" />
+                            <stop offset="35%" stop-color="#dfba76" />
+                            <stop offset="75%" stop-color="#b88937" />
+                            <stop offset="100%" stop-color="#694b15" />
+                        </linearGradient>
+                        <linearGradient id="bk2-corridor-glow-hu" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="rgba(46, 204, 113, 0.15)" />
+                            <stop offset="50%" stop-color="rgba(107, 164, 217, 0.25)" />
+                            <stop offset="100%" stop-color="rgba(46, 204, 113, 0.15)" />
+                        </linearGradient>
+                    </defs>
+                    <g transform="translate(190, 170)">
+                        <rect x="-140" y="-130" width="280" height="260" rx="16" fill="#061e1d" stroke="#dfba76" stroke-width="2" />
+                        <rect x="-138" y="-130" width="276" height="32" rx="16" fill="#092826" />
+                        <text x="0" y="-109" fill="#fcedc7" font-family="Manrope, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" letter-spacing="1">SZUVERÉN ARANYFEDEZET</text>
+                        <g transform="translate(0, -25)">
+                            <rect x="-80" y="15" width="36" height="18" rx="2" fill="url(#bk2-gold-bar-hu)" stroke="#694b15" stroke-width="0.8" />
+                            <rect x="-40" y="15" width="36" height="18" rx="2" fill="url(#bk2-gold-bar-hu)" stroke="#694b15" stroke-width="0.8" />
+                            <rect x="4" y="15" width="36" height="18" rx="2" fill="url(#bk2-gold-bar-hu)" stroke="#694b15" stroke-width="0.8" />
+                            <rect x="44" y="15" width="36" height="18" rx="2" fill="url(#bk2-gold-bar-hu)" stroke="#694b15" stroke-width="0.8" />
+                            <rect x="-60" y="-5" width="36" height="18" rx="2" fill="url(#bk2-gold-bar-hu)" stroke="#694b15" stroke-width="0.8" />
+                            <rect x="-18" y="-5" width="36" height="18" rx="2" fill="url(#bk2-gold-bar-hu)" stroke="#694b15" stroke-width="0.8" />
+                            <rect x="24" y="-5" width="36" height="18" rx="2" fill="url(#bk2-gold-bar-hu)" stroke="#694b15" stroke-width="0.8" />
+                            <rect x="-40" y="-25" width="36" height="18" rx="2" fill="url(#bk2-gold-bar-hu)" stroke="#694b15" stroke-width="0.8" />
+                            <rect x="4" y="-25" width="36" height="18" rx="2" fill="url(#bk2-gold-bar-hu)" stroke="#694b15" stroke-width="0.8" />
+                            <rect x="-18" y="-45" width="36" height="18" rx="2" fill="url(#bk2-gold-bar-hu)" stroke="#694b15" stroke-width="0.8" class="glow" />
+                        </g>
+                        <rect x="-130" y="32" width="260" height="24" rx="6" fill="#041615" stroke="rgba(223, 186, 118, 0.3)" stroke-width="1" />
+                        <text x="0" y="48" fill="#fcedc7" font-family="Manrope, sans-serif" font-size="11" font-weight="700" text-anchor="middle">4 000 TONNA ARANYTÖMB (#2 VILÁGSZINTEN)</text>
+                        <text x="0" y="80" fill="#6BA4D9" font-family="Manrope, sans-serif" font-size="12" font-weight="600" text-anchor="middle">ÉRTÉK: &gt; 100 MILLIÁRD WUD</text>
+                        <text x="0" y="100" fill="#dfba76" font-family="Manrope, sans-serif" font-size="12" text-anchor="middle">100%-BAN FÜGGETLEN PÉNZALAP</text>
+                    </g>
+                    <g>
+                        <path d="M330 110 L 410 110 L 410 150 L 440 150" fill="none" stroke="#dfba76" stroke-width="2.5" class="dash-gold" />
+                        <path d="M330 230 L 410 230 L 410 200 L 440 200" fill="none" stroke="#6BA4D9" stroke-width="2" class="dash" />
+                    </g>
+                    <g>
+                        <path d="M760 120 L 810 120 L 810 100 L 840 100" fill="none" stroke="#2ecc71" stroke-width="2.5" class="dash" />
+                        <path d="M760 220 L 810 220 L 810 240 L 840 240" fill="none" stroke="#dfba76" stroke-width="2.5" class="dash-gold" />
+                    </g>
+                    <g transform="translate(600, 170)">
+                        <rect x="-180" y="-130" width="360" height="260" rx="16" fill="#061e1d" stroke="#1A528F" stroke-width="2" />
+                        <rect x="-178" y="-130" width="356" height="32" rx="16" fill="#082826" />
+                        <text x="0" y="-109" fill="#fcedc7" font-family="Manrope, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" letter-spacing="1">0%-OS RETROAKTÍV INFLÁCIÓS CÉL</text>
+                        <rect x="-140" y="-30" width="280" height="60" fill="url(#bk2-corridor-glow-hu)" class="corridor-pulse" />
+                        <line x1="-140" y1="0" x2="140" y2="0" stroke="#dfba76" stroke-width="2" stroke-dasharray="6 4" />
+                        <text x="145" y="4" fill="#dfba76" font-family="Manrope, sans-serif" font-size="10.5" font-weight="700">0,0%</text>
+                        <line x1="-140" y1="-30" x2="140" y2="-30" stroke="rgba(107, 164, 217, 0.4)" stroke-width="1" />
+                        <text x="145" y="-26" fill="#6BA4D9" font-family="Manrope, sans-serif" font-size="9.5">+1,0%</text>
+                        <line x1="-140" y1="30" x2="140" y2="30" stroke="rgba(107, 164, 217, 0.4)" stroke-width="1" />
+                        <text x="145" y="34" fill="#6BA4D9" font-family="Manrope, sans-serif" font-size="9.5">-1,0%</text>
+                        <path d="M-135 14 C -105 -18, -80 22, -50 -12 C -20 -24, 10 16, 40 4 C 70 -8, 105 8, 135 0" fill="none" stroke="#2ecc71" stroke-width="2.5" />
+                        <g>
+                            <circle cx="-50" cy="-12" r="4" fill="#dfba76" class="pulse" />
+                            <circle cx="10" cy="16" r="4" fill="#6BA4D9" class="pulse" style="animation-delay: 0.8s;" />
+                            <circle cx="70" cy="-8" r="4" fill="#dfba76" class="pulse" style="animation-delay: 1.6s;" />
+                            <circle cx="135" cy="0" r="5" fill="#2ecc71" class="pulse" />
+                        </g>
+                        <text x="-135" y="56" fill="#bedbd6" font-family="Manrope, sans-serif" font-size="9.5" text-anchor="middle">2008</text>
+                        <text x="-70" y="56" fill="#bedbd6" font-family="Manrope, sans-serif" font-size="9.5" text-anchor="middle">2012</text>
+                        <text x="0" y="56" fill="#bedbd6" font-family="Manrope, sans-serif" font-size="9.5" text-anchor="middle">2016</text>
+                        <text x="70" y="56" fill="#bedbd6" font-family="Manrope, sans-serif" font-size="9.5" text-anchor="middle">2020</text>
+                        <text x="135" y="56" fill="#bedbd6" font-family="Manrope, sans-serif" font-size="9.5" text-anchor="middle">2024</text>
+                        <rect x="-175" y="73" width="350" height="50" rx="6" fill="#041615" stroke="rgba(107, 164, 217, 0.2)" stroke-width="1" />
+                        <text x="0" y="90" fill="#fcedc7" font-family="Manrope, sans-serif" font-size="11" font-weight="700" text-anchor="middle">TÖBBMÉRÉSI RETROAKTÍV KORREKCIÓ</text>
+                        <text x="0" y="110" fill="#6BA4D9" font-family="Manrope, sans-serif" font-size="10" text-anchor="middle">Az éves eltéréseket a következő periódusok automatikusan kompenzálják</text>
+                    </g>
+                    <g transform="translate(970, 170)">
+                        <g transform="translate(0, -68)">
+                            <rect x="-130" y="-55" width="260" height="105" rx="12" fill="#061e1d" stroke="#2ecc71" stroke-width="1.8" />
+                            <circle cx="-95" cy="-20" r="18" fill="#093836" stroke="#2ecc71" stroke-width="1.5" />
+                            <text x="-95" y="-14" fill="#2ecc71" font-family="Manrope, sans-serif" font-size="16" font-weight="800" text-anchor="middle">%</text>
+                            <text x="-65" y="-23" fill="#fbf7f0" font-family="Manrope, sans-serif" font-size="12.5" font-weight="700">BETÉTI ALAPKAMAT</text>
+                            <text x="-65" y="-5" fill="#2ecc71" font-family="Manrope, sans-serif" font-size="11" font-weight="600">NAPI AUTOMATIKUS HOZAM</text>
+                            <line x1="-115" y1="8" x2="115" y2="8" stroke="rgba(107, 164, 217, 0.2)" stroke-width="1" />
+                            <text x="0" y="24" fill="#d5ede9" font-family="Manrope, sans-serif" font-size="9.5" text-anchor="middle">Minden állampolgári CBDC számlára jóváírva</text>
+                            <text x="0" y="39" fill="#fcedc7" font-family="Manrope, sans-serif" font-size="9.5" font-weight="600" text-anchor="middle">Zéró partnerkockázat · Teljes állami kezesség</text>
+                        </g>
+                        <g transform="translate(0, 68)">
+                            <rect x="-130" y="-55" width="260" height="105" rx="12" fill="#061e1d" stroke="#dfba76" stroke-width="1.8" />
+                            <circle cx="-95" cy="-20" r="18" fill="#35260e" stroke="#dfba76" stroke-width="1.5" />
+                            <rect x="-102" y="-28" width="14" height="16" fill="none" stroke="#dfba76" stroke-width="1.2" />
+                            <line x1="-99" y1="-23" x2="-99" y2="-18" stroke="#dfba76" stroke-width="1" />
+                            <line x1="-94" y1="-23" x2="-94" y2="-18" stroke="#dfba76" stroke-width="1" />
+                            <text x="-65" y="-23" fill="#fbf7f0" font-family="Manrope, sans-serif" font-size="12.5" font-weight="700">HITEL ALAPKAMAT</text>
+                            <text x="-65" y="-5" fill="#dfba76" font-family="Manrope, sans-serif" font-size="11" font-weight="600">5 ÉVES KÖZVETLEN VÁLLALATI HITEL</text>
+                            <line x1="-115" y1="8" x2="115" y2="8" stroke="rgba(223, 186, 118, 0.2)" stroke-width="1" />
+                            <text x="0" y="24" fill="#d5ede9" font-family="Manrope, sans-serif" font-size="9.5" text-anchor="middle">Min. 1 milliárd WUD stratégiai nagyvállalatoknak</text>
+                            <text x="0" y="39" fill="#fcedc7" font-family="Manrope, sans-serif" font-size="9.5" font-weight="600" text-anchor="middle">5 kategóriás ESG, szolvencia és innovációs mátrix</text>
+                        </g>
+                    </g>
+                    <g font-family="Manrope, sans-serif" letter-spacing="1">
+                        <rect x="25" y="365" width="350" height="50" rx="8" fill="#061c1b" stroke="rgba(107, 164, 217, 0.4)" stroke-width="1" opacity=".9" />
+                        <text x="40" y="386" fill="#f5c46e" font-size="11.5" font-weight="700">MONETÁRIS TANÁCS RENDSZERE</text>
+                        <text x="40" y="403" fill="#bedbd6" font-size="11" font-weight="600">HAVI LIKVIDITÁSI SZELEP · KÉSZPÉNZMENTES WUD</text>
+                    </g>
+                    <g font-family="Manrope, sans-serif" letter-spacing="1" text-anchor="end">
+                        <rect x="785" y="365" width="350" height="50" rx="8" fill="#061c1b" stroke="rgba(107, 164, 217, 0.4)" stroke-width="1" opacity=".9" />
+                        <text x="1120" y="386" fill="#6BA4D9" font-size="11.5" font-weight="700">KETTŐS TRANSZMISSZIÓS REFERENCIA</text>
+                        <text x="1120" y="403" fill="#bedbd6" font-size="11" font-weight="600">NAPI BETÉTI HOZAM + 5 ÉVES FEJLESZTÉSI HITEL</text>
+                    </g>
+                </svg>
+                <div class="ill-caption">
+                    <span>A 4 000 tonnás szuverén aranytartalékkal biztosított kettős alapkamat-rendszer és a nulla százalékos retroaktív inflációs stabilitási folyosó.</span>
+                </div>
+            </div>
+            <div class="card-grid bank-grid">
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/percent.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <h3>Betéti Alapkamat</h3>
+                    <p>A betéti alapkamat az állam által minden WUD-ban tartott megtakarítás után fizetett hozam, amely minden lakossági és vállalati számlán naponta jóváírásra kerül. A betétekre az állam korlátlan garanciát vállal, így a megtakarítás teljesen kockázatmentes.</p>
+                    <ul class="financial-specs">
+                        <li><span>Jóváírás</span><strong>Napi automatikus kamatfizetés</strong></li>
+                        <li><span>Kockázati szint</span><strong>Teljesen kockázatmentes állami garancia</strong></li>
+                        <li><span>Jogosultság</span><strong>Minden polgár és vállalat</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/finance.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <h3>Hitel Alapkamat</h3>
+                    <p>A hitel alapkamaton a Nemzeti Bank 5 éves lejáratú közvetlen kölcsönöket nyújt a legmegbízhatóbb, legmagasabb minősítésű vállalatoknak. A cégeket 5 főkategóriában és 3-3 alkategóriában értékelik a pénzügyi stabilitás, fenntarthatóság és társadalmi hasznosság alapján.</p>
+                    <ul class="financial-specs">
+                        <li><span>Futamidő</span><strong>5 éves közvetlen állami hitel</strong></li>
+                        <li><span>Minimális hitelösszeg</span><strong>1 milliárd WUD keretösszeg</strong></li>
+                        <li><span>Minősítési szempontok</span><strong>Pénzügyi stabilitás és ESG mutatók</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/target.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <h3>0%-os Inflációs Célkitűzés</h3>
+                    <p>Megalakulása óta a Nemzeti Bank elsődleges feladata a 0%-os inflációs cél elérése. A toleranciasáv 2012-től ±1%-ra szűkült. Egyedülálló módon több periódusú visszamenőleges korrekciót alkalmaznak, így ha valamelyik évben eltérés történik, a jegybank a következő években ellensúlyozza azt.</p>
+                    <ul class="financial-specs">
+                        <li><span>Célérték</span><strong>Szigorú 0%-os éves infláció</strong></li>
+                        <li><span>Toleranciasáv</span><strong>Szűk ±1%-os intervallum 2012 óta</strong></li>
+                        <li><span>Korrekciós mechanizmus</span><strong>Több periódusú mozgóátlag</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/trending-up.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <h3>Reálárak és Jóléti Növekedés</h3>
+                    <p>Miközben WUD-ban kifejezve a belföldi árak 20 év alatt mindössze 2%-kal nőttek, addig az USD-ben mért relatív árak megduplázódtak az árfolyam erősödése miatt. Ezzel párhuzamosan a waikiki fizetések WUD-ban négyszeresükre, dollárban kifejezve tízszeresükre emelkedtek 2020-ra.</p>
+                    <ul class="financial-specs">
+                        <li><span>WUD áremelkedés</span><strong>~2% összesen 20 év alatt</strong></li>
+                        <li><span>Bérek növekedése (WUD)</span><strong>Négyszeres reálbér-bővülés</strong></li>
+                        <li><span>Bérek növekedése (USD)</span><strong>Tízszeres gyarapodás 2020-ra</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="stock-exchange" class="light-bg fade-in">
+            <h2 class="section-title">A Waikiki Tőzsde és Tőkepiacok</h2>
+            <p class="section-intro">A hiperfejlett tőkepiac közvetlen hidat képez a polgárok megtakarításai és a gazdasági szereplők beruházásai között. A Nemzeti Bank által biztosított likviditás és a díjmentes digitális kereskedés nemzeti összefogássá teszi a növekedést.</p>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/desktop-mac.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <h3>Díjmentes Lakossági Kereskedés</h3>
+                    <p>A kormány felismerte, hogy a lakossági megtakarítások és a vállalati forrásigény összekapcsolása óriási lendületet ad a gazdaságnak. Ennek köszönhetően minden állampolgár teljesen ingyenesen, közvetítői díjak nélkül kereskedhet részvényekkel, kötvényekkel és valutákkal.</p>
+                    <ul class="financial-specs">
+                        <li><span>Kereskedési felület</span><strong>Digitális portál és mobil hozzáférés</strong></li>
+                        <li><span>Tranzakciós költségek</span><strong>0% jutalékmentes elszámolás</strong></li>
+                        <li><span>Likviditás-támogatás</span><strong>Jegybanki árjegyzői garancia</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/view-grid.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <h3>Gazdag Értékpapír-Kínálat</h3>
+                    <p>A Waikiki Tőzsdén (WSE) több mint 7 000 vállalat részvénye és 18 000 különféle kötvénycsomag közül válogathatnak a befektetők. A robotikai, repülőgépgyártási, gyógyszerészeti és energetikai cégek mellett a legnagyobb nemzetközi vállalatok papírjai is elérhetők.</p>
+                    <ul class="financial-specs">
+                        <li><span>Részvénykínálat</span><strong>7 000+ jegyzett vállalat</strong></li>
+                        <li><span>Kötvénykínálat</span><strong>18 000+ hitelviszonyt megtestesítő papír</strong></li>
+                        <li><span>Fő ágazatok</span><strong>Csúcstechnológia, űripar, zöldenergia</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/certificate.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <h3>Szuverén Örökjáradék Államkötvény</h3>
+                    <p>Waikiki kormánya egyedülálló állampapírt bocsát ki, amely teljesen kockázatmentesen, lejárat nélkül, havi fix összegű kifizetést biztosít a befektetőknek. A kötvényt belföldi és külföldi vásárlók egyaránt jegyezhetik 1 000 WUD névértékű csomagokban, 1,2%-os garantált kamattal.</p>
+                    <ul class="financial-specs">
+                        <li><span>Névérték</span><strong>1 000 WUD egységcsomagok</strong></li>
+                        <li><span>Kamat</span><strong>1,2% fix, garantált éves hozam</strong></li>
+                        <li><span>Kifizetés</span><strong>Lejárat nélküli havi hozamjövedelem</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/clipboard-check-outline.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <h3>Nyilvános ESG Vállalati Minősítés</h3>
+                    <p>A piaci szereplők tisztánlátását segítve a Nemzeti Bank periodikusan felülvizsgálja és nyilvánosan minősíti a tőzsdén szereplő cégeket. A minősítés során a pénzügyi mutatók mellett a környezeti lábnyom és a társadalmi felelősségvállalás is döntő súllyal esik latba.</p>
+                    <ul class="financial-specs">
+                        <li><span>Minősítési skála</span><strong>5 főkategória és 3-3 alkategória</strong></li>
+                        <li><span>Értékelési szempontok</span><strong>Stabilitás, fenntarthatóság és társadalom</strong></li>
+                        <li><span>Közzététel</span><strong>Negyedéves transzparens jegyzék</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- @chrome:next -->
+        <section class="next-chapter">
+            <a class="next-card" href="wealth-fund.html">
+                <div class="next-media"><img src="../images/UniversalUpscaler_bf37d6ff-f24d-4406-a81f-01204372ebb1.jpg" alt="" loading="lazy" decoding="async" /></div>
+                <span class="next-body">
+                    <span class="next-eyebrow">Folytassa az utazást · Jólét</span>
+                    <span class="next-title">Vagyonalap</span>
+                    <span class="next-arrow" aria-hidden="true">→</span>
+                </span>
+            </a>
+        </section>
+        <!-- /@chrome:next -->
+    </main>
+    <!-- @chrome:footer -->
+    <footer class="site-footer">
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="lazy" decoding="async" /><span class="brand-word">Waikiki</span></a>
+                    <p class="footer-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
+                    <p class="footer-about">Waikiki Állam hivatalos portálja. Alapítva 1999. március 10-én · Nova Aurelia. Ez az oldal mesterséges intelligenciával készült, bármilyen hasonlóság valós személyekhez, országokhoz vagy intézményekhez pusztán a véletlen műve.</p>
+                </div>
+                <div class="footer-col">
+                    <h2>Nemzet</h2>
+                    <ul>
+                        <li><a href="index.html">Főoldal</a></li>
+                        <li><a href="overview.html">Áttekintés</a></li>
+                        <li><a href="history.html">Történelem</a></li>
+                        <li><a href="society.html">Társadalom</a></li>
+                        <li><a href="culture.html">Kultúra</a></li>
+                        <li><a href="ideology.html">Ideológia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Kormányzás</h2>
+                    <ul>
+                        <li><a href="government.html">Kormány</a></li>
+                        <li><a href="leadership.html">Vezetés</a></li>
+                        <li><a href="parties.html">Politika</a></li>
+                        <li><a href="constitution.html">Alkotmány</a></li>
+                        <li><a href="military.html">Hadsereg</a></li>
+                        <li><a href="diplomacy.html">Diplomácia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Jólét</h2>
+                    <ul>
+                        <li><a href="economy.html">Gazdaság</a></li>
+                        <li><a href="banking-system.html">Bankrendszer</a></li>
+                        <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                        <li><a href="citizenship.html">Állampolgárság</a></li>
+                        <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                        <li><a href="space-research.html">Űrkutatás</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Királyi Család</h2>
+                    <ul>
+                        <li><a href="dynasty.html">A Dinasztia</a></li>
+                        <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Látogatás</h2>
+                    <ul>
+                        <li><a href="tourism.html">Turizmus</a></li>
+                        <li><a href="sights.html">Látnivalók</a></li>
+                        <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                        <li><a href="visa.html">Vízum és belépés</a></li>
+                        <li><a href="faq.html">GYIK</a></li>
+                    </ul>
+                </div>
+            </div>
+            <span class="footer-mega" aria-hidden="true">Waikiki</span>
+            <div class="footer-bottom">
+                <p>© 2026 Waikiki Szuverén Állam. Minden jog fenntartva.</p>
+                <nav>
+                    <a style="margin-right: 40px" href="../en/banking-system.html" hreflang="en" lang="en">English</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <button class="to-top" type="button">
+        <svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span>
+    </button>
+    <!-- /@chrome:footer -->
+    <script src="../js/common.js"></script>
+</body>
+</html>

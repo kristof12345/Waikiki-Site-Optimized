@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.card').forEach((el, index) => {
         el.style.opacity = "0";
         el.style.transform = "translateY(20px)";
-        el.style.transition = "all var(--transition-duration) var(--transition-easing)";
+        el.style.transition = "all var(--duration-normal) var(--ease-out)";
         el.style.setProperty('--delay', index);
         observer.observe(el);
     });
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!el.classList.contains('hero-content')) {
             el.style.opacity = "0";
             el.style.transform = "translateY(30px)";
-            el.style.transition = "all var(--entry-duration) var(--transition-easing)";
+            el.style.transition = "all var(--animation-duration) var(--ease-out)";
             observer.observe(el);
         }
     });

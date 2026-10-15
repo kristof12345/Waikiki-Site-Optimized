@@ -1,73 +1,308 @@
+/* Waikiki Citizenship and Immigration Stylesheet - Tropical Luxe and Lagoon Night Edition */
+
+h2,
 h3 {
-    color: var(--dark-bg);
-}
-
-.hover-card {
-    transition: transform .5s cubic-bezier(.4, 0, .2, 1), box-shadow .5s cubic-bezier(.4, 0, .2, 1);
-}
-
-.hover-card:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, .1), 0 10px 10px -5px rgba(0, 0, 0, .04);
-}
-
-.animate-fade-up {
-    animation: fadeInUp .8s cubic-bezier(.4, 0, .2, 1) forwards;
+    font-family: var(--font-display);
+    color: var(--primary-dark);
 }
 
 .text-gray-600 {
-    max-width: 1400px;
+    color: var(--text-slate);
+    max-width: var(--width-full);
     margin: auto;
 }
 
-/* Dark mode - Initial Screening Tiers */
+/* Hover Cards (Screening Tiers and Naturalization Process) */
+.hover-card {
+    transition: transform var(--duration-normal, 0.4s) var(--ease-out),
+        box-shadow var(--duration-normal, 0.4s) var(--ease-out),
+        border-color var(--duration-normal, 0.4s) var(--ease-out);
+    border-radius: var(--radius-lg);
+    background: var(--surface-card);
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+    will-change: transform, box-shadow;
+}
+
+.hover-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 24px 48px -12px rgba(0, 34, 68, 0.18), var(--shadow-md);
+    border-color: var(--accent);
+}
+
+.hover-card .w-12,
+.hover-card .w-14 {
+    transition: transform 0.4s var(--ease-spring);
+}
+
+.hover-card:hover .w-12,
+.hover-card:hover .w-14 {
+    transform: scale(1.08);
+}
+
+.hover-card h3 {
+    font-family: var(--font-display);
+    color: var(--primary-dark);
+    letter-spacing: -0.01em;
+}
+
+.hover-card p {
+    color: var(--text-slate);
+}
+
+.hover-card .opacity-60 {
+    opacity: 1;
+    color: var(--text-slate-muted);
+    font-weight: 700;
+}
+
+.animate-fade-up {
+    animation: fadeInUp 0.8s var(--ease-out) forwards;
+}
+
+/* Hero Assessment CTA Button */
+.open-assessment,
+button.open-assessment,
+.page-citizenship .open-assessment,
+.page-citizenship button.open-assessment {
+    background-color: #003366 !important;
+    color: #ffffff !important;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    transition: background-color var(--duration-normal, 0.3s) var(--ease-out),
+        transform var(--duration-normal, 0.3s) var(--ease-spring),
+        box-shadow var(--duration-normal, 0.3s) var(--ease-out);
+}
+
+.open-assessment:hover,
+button.open-assessment:hover,
+.page-citizenship .open-assessment:hover,
+.page-citizenship button.open-assessment:hover {
+    background-color: var(--accent-hover, #c95a41) !important;
+    background-image: none !important;
+    transform: translateY(-2px);
+    box-shadow: 0 16px 32px -8px rgba(201, 90, 65, 0.45), 0 8px 16px -4px rgba(0, 0, 0, 0.2);
+}
+
+.open-assessment:active,
+button.open-assessment:active,
+.page-citizenship .open-assessment:active,
+.page-citizenship button.open-assessment:active {
+    transform: translateY(0);
+}
+
+/* Section Containers */
+.screening-tiers-section,
+.naturalization-section {
+    padding: clamp(60px, 8vw, 100px) 0;
+    transition: background-color var(--duration-normal) var(--ease-out);
+}
+
+.screening-tiers-section h2,
+.naturalization-section h2 {
+    font-family: var(--font-display);
+    color: var(--primary-dark);
+}
+
+/* Modal Light Mode Contrast */
+.assessment-modal .text-gray-400 {
+    color: var(--text-slate-soft);
+}
+
+.assessment-modal .text-gray-500,
+.assessment-modal .text-gray-600 {
+    color: var(--text-slate);
+}
+
+.assessment-modal .text-gray-700 {
+    color: var(--neutral-800);
+}
+
+/* Assessment Modal */
+.assessment-modal-overlay {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(7, 28, 27, 0.72) !important;
+    transition: opacity var(--duration-normal) var(--ease-out);
+    z-index: 9999 !important;
+}
+
+.assessment-modal {
+    background: var(--neutral-100);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--border-subtle);
+    box-shadow: 0 32px 72px -16px rgba(0, 0, 0, 0.4);
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh;
+    max-height: 92dvh;
+    overflow: hidden;
+}
+
+.assessment-modal-body {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+}
+
+.assessment-modal-header {
+    background: var(--neutral-200);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 1.25rem 1.75rem;
+    flex-shrink: 0;
+}
+
+.assessment-modal-header h3 {
+    font-family: var(--font-display);
+    color: var(--primary-dark);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.assessment-modal-close {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 51, 102, 0.08);
+    color: var(--secondary);
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--duration-fast) var(--ease-out),
+        transform var(--duration-fast) var(--ease-out);
+}
+
+.assessment-modal-close:hover {
+    background: var(--accent);
+    color: var(--neutral-50);
+    transform: rotate(90deg);
+}
+
+@media (max-width: 640px) {
+    .assessment-modal-overlay {
+        padding: 0.5rem !important;
+    }
+
+    .assessment-modal {
+        border-radius: var(--radius-lg, 16px) !important;
+        max-height: calc(100vh - 1rem) !important;
+        max-height: calc(100dvh - 1rem) !important;
+        width: 100% !important;
+    }
+
+    .assessment-modal-header {
+        padding: 0.75rem 1rem !important;
+    }
+
+    .assessment-modal-meta {
+        font-size: 0.7rem !important;
+        letter-spacing: 0.08em !important;
+    }
+
+    .assessment-modal-close {
+        width: 34px !important;
+        height: 34px !important;
+    }
+}
+
+/* Lagoon Night (Dark Mode) */
+.body-dark h2 {
+    color: var(--tertiary-light) !important;
+}
+
+.body-dark h3 {
+    color: var(--neutral-100) !important;
+}
+
+.body-dark .text-gray-600 {
+    color: var(--neutral-300) !important;
+}
+
+.body-dark em {
+    color: var(--neutral-200) !important;
+}
+
 .body-dark .screening-tiers-section {
-    background: linear-gradient(180deg, #0d2238 0%, #0a1930 100%) !important;
+    background: linear-gradient(180deg, var(--dark-surface-2) 0%, var(--primary-dark) 100%) !important;
 }
 
-.body-dark .screening-tiers-section h2 {
-    color: #8fd3ff !important;
+.body-dark .screening-tiers-section h2,
+.body-dark .naturalization-section h2 {
+    color: var(--tertiary-light) !important;
 }
 
-.body-dark .screening-tiers-section .hover-card {
-    background-color: rgba(16, 33, 53, 0.9) !important;
-    border-color: rgba(143, 211, 255, 0.25) !important;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+/* All hover-cards in dark mode (screening tiers and naturalization process) */
+.body-dark .hover-card {
+    background: var(--surface-card) !important;
+    border-color: rgba(107, 164, 217, 0.18) !important;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
 }
 
-.body-dark .screening-tiers-section .hover-card:hover {
-    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.45);
+.body-dark .hover-card:hover {
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.55);
+    border-color: var(--accent) !important;
 }
 
-.body-dark .screening-tiers-section .hover-card h3,
-.body-dark .screening-tiers-section .hover-card p,
-.body-dark .screening-tiers-section .hover-card .text-xs {
-    color: #e7f3ff !important;
+.body-dark .hover-card h3 {
+    color: var(--neutral-100) !important;
 }
 
-.body-dark .screening-tiers-section .hover-card .opacity-60 {
-    opacity: 0.75;
+.body-dark .hover-card p,
+.body-dark .hover-card .text-xs,
+.body-dark .hover-card .text-sm {
+    color: var(--neutral-300) !important;
 }
 
-.body-dark .screening-tiers-section .hover-card .w-12.h-12.bg-white {
-    background-color: rgba(255, 255, 255, 0.1) !important;
-    color: #f3f8ff !important;
+.body-dark .hover-card .opacity-60 {
+    opacity: 1 !important;
+    color: var(--tertiary-light) !important;
+    font-weight: 700;
+}
+
+.body-dark .hover-card .w-12.h-12.bg-white {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    color: var(--neutral-100) !important;
+    border: 1px solid rgba(107, 164, 217, 0.2);
+}
+
+.body-dark .hover-card .w-12.h-12.bg-white i,
+.body-dark .hover-card .text-gray-700 {
+    color: var(--neutral-200) !important;
+}
+
+.body-dark .hover-card .w-14.h-14.bg-blue-50 {
+    background-color: rgba(201, 90, 65, 0.16) !important;
+    border: 1px solid rgba(201, 90, 65, 0.35) !important;
+    color: var(--accent) !important;
 }
 
 /* Dark mode - Assessment modal */
 .body-dark .assessment-modal-overlay {
-    background: rgba(3, 10, 18, 0.84) !important;
+    background: rgba(2, 10, 18, 0.86) !important;
 }
 
 .body-dark .assessment-modal {
-    background: linear-gradient(180deg, #11243a 0%, #0d1b2c 100%) !important;
-    color: #edf6ff;
-    border: 1px solid rgba(143, 211, 255, 0.25);
+    background: linear-gradient(180deg, var(--dark-surface) 0%, var(--neutral-900) 100%) !important;
+    color: var(--neutral-200);
+    border: 1px solid rgba(107, 164, 217, 0.22);
 }
 
 .body-dark .assessment-modal-header {
-    background: rgba(10, 25, 48, 0.9) !important;
-    border-bottom-color: rgba(143, 211, 255, 0.25);
+    background: rgba(0, 24, 48, 0.95) !important;
+    border-bottom-color: rgba(107, 164, 217, 0.2);
+}
+
+.body-dark .assessment-modal h3,
+.body-dark .assessment-modal h4,
+.body-dark .assessment-modal-header h3 {
+    color: var(--neutral-100) !important;
 }
 
 .body-dark .assessment-modal-meta,
@@ -78,7 +313,7 @@ h3 {
 .body-dark .assessment-modal .text-gray-700,
 .body-dark .assessment-modal .text-gray-800,
 .body-dark .assessment-modal .text-gray-900 {
-    color: #dcecff !important;
+    color: var(--neutral-300) !important;
 }
 
 .body-dark .assessment-modal .border,
@@ -86,29 +321,30 @@ h3 {
 .body-dark .assessment-modal .border-gray-100,
 .body-dark .assessment-modal .border-gray-200,
 .body-dark .assessment-modal .bg-gray-100 {
-    border-color: rgba(143, 211, 255, 0.25) !important;
+    border-color: rgba(107, 164, 217, 0.2) !important;
 }
 
 .body-dark .assessment-modal .bg-white,
 .body-dark .assessment-modal .bg-white\/95,
 .body-dark .assessment-modal .bg-gray-50,
 .body-dark .assessment-modal .bg-blue-50,
-.body-dark .assessment-modal .bg-yellow-50,
-.body-dark .assessment-modal .from-yellow-50 {
-    background-color: rgba(255, 255, 255, 0.08) !important;
+.body-dark .assessment-modal .bg-yellow-50 {
+    background-color: rgba(255, 255, 255, 0.05) !important;
     background-image: none !important;
 }
 
 .body-dark .assessment-modal .space-y-3>button {
-    background: rgba(10, 25, 48, 0.65);
-    border-color: rgba(143, 211, 255, 0.25);
+    background: rgba(0, 24, 48, 0.7);
+    border-color: rgba(107, 164, 217, 0.22);
+    color: var(--neutral-200);
 }
 
 .body-dark .assessment-modal .space-y-3>button:hover {
-    background: rgba(0, 113, 188, 0.28) !important;
-    border-color: var(--tertiary) !important;
+    background: rgba(0, 51, 102, 0.35) !important;
+    border-color: var(--tertiary-light) !important;
+    color: var(--neutral-100);
 }
 
 .body-dark .assessment-modal .space-y-3>button .rounded-full {
-    border-color: rgba(143, 211, 255, 0.6);
+    border-color: rgba(107, 164, 217, 0.5);
 }

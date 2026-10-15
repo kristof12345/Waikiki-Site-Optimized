@@ -1,0 +1,485 @@
+/* Visa and Entry Requirements Stylesheet — Sovereign Nation of Waikiki */
+
+/* 1. Category and Spec Cards */
+.visa-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    background: var(--accent-subtle);
+    border: 1px solid rgba(194, 154, 87, 0.3);
+    color: var(--accent-dark);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 1rem;
+}
+
+.body-dark .visa-badge {
+    background: rgba(223, 186, 118, 0.12);
+    border-color: rgba(223, 186, 118, 0.25);
+    color: var(--accent);
+}
+
+.visa-badge.is-green {
+    background: rgba(26, 82, 143, 0.12);
+    border-color: rgba(26, 82, 143, 0.3);
+    color: var(--waikiki);
+}
+
+.visa-badge.is-blue {
+    background: rgba(26, 82, 143, 0.12);
+    border-color: rgba(26, 82, 143, 0.3);
+    color: var(--primary-light);
+}
+
+.visa-badge.is-red {
+    background: rgba(192, 57, 43, 0.12);
+    border-color: rgba(192, 57, 43, 0.3);
+    color: #c0392b;
+}
+
+.body-dark .visa-badge.is-green {
+    background: rgba(58, 167, 156, 0.16);
+    border-color: rgba(58, 167, 156, 0.35);
+    color: var(--waikiki-hover);
+}
+
+.body-dark .visa-badge.is-blue {
+    background: rgba(107, 164, 217, 0.16);
+    border-color: rgba(107, 164, 217, 0.35);
+    color: var(--tertiary);
+}
+
+.body-dark .visa-badge.is-red {
+    background: rgba(235, 94, 85, 0.16);
+    border-color: rgba(235, 94, 85, 0.35);
+    color: #eb5e55;
+}
+
+.visa-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.visa-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg, 16px);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.visa-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    border-color: var(--accent);
+}
+
+.body-dark .visa-card:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+.visa-card-header {
+    margin-bottom: 1rem;
+}
+
+.visa-card-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--heading);
+    margin: 0.35rem 0 0.5rem;
+    line-height: 1.3;
+}
+
+.visa-card-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+}
+
+.visa-specs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid var(--line);
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.visa-specs li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.visa-specs li strong {
+    color: var(--heading);
+    font-weight: 600;
+    text-align: right;
+}
+
+/* 2. Interactive Eligibility Checker */
+.checker-wrapper {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-xl, 20px);
+    padding: 2.5rem;
+    margin-top: 2rem;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.04);
+}
+
+.checker-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 860px) {
+    .checker-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.checker-control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.checker-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--heading);
+    letter-spacing: 0.02em;
+}
+
+.checker-select {
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius-md, 10px);
+    border: 1.5px solid var(--line);
+    background: var(--surface);
+    color: var(--text);
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.checker-select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-subtle);
+}
+
+.purpose-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.purpose-pill {
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    border: 1.5px solid var(--line);
+    background: var(--surface);
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.purpose-pill:hover {
+    border-color: var(--accent);
+    color: var(--heading);
+}
+
+.purpose-pill.is-active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #ffffff;
+}
+
+.body-dark .purpose-pill.is-active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--neutral-900);
+}
+
+.checker-result-panel {
+    background: var(--surface-alt, rgba(0, 51, 102, 0.03));
+    border: 1.5px solid var(--line);
+    border-radius: var(--radius-lg, 16px);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.body-dark .checker-result-panel {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.result-status-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.result-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.result-tag.tag-free {
+    background: rgba(26, 82, 143, 0.15);
+    color: #1d726b;
+    border: 1px solid rgba(26, 82, 143, 0.3);
+}
+
+.body-dark .result-tag.tag-free {
+    background: rgba(58, 167, 156, 0.2);
+    color: #4ed1c3;
+    border-color: rgba(58, 167, 156, 0.4);
+}
+
+.result-tag.tag-evisa {
+    background: rgba(194, 138, 41, 0.15);
+    color: #8c6015;
+    border: 1px solid rgba(194, 138, 41, 0.3);
+}
+
+.body-dark .result-tag.tag-evisa {
+    background: rgba(223, 186, 118, 0.2);
+    color: #f7d28b;
+    border-color: rgba(223, 186, 118, 0.4);
+}
+
+.result-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--heading);
+    margin: 0 0 0.5rem;
+}
+
+.result-lead {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.result-items {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.result-items li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: var(--text);
+}
+
+.result-items svg {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    color: var(--waikiki);
+}
+
+.body-dark .result-items svg {
+    color: var(--waikiki-hover);
+}
+
+.result-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    border-top: 1px solid var(--line);
+    padding-top: 1.25rem;
+}
+
+.result-stat-pill {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.result-stat-pill strong {
+    color: var(--heading);
+    font-weight: 700;
+}
+
+/* 3. Four-Step Arrival Flow */
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    position: relative;
+}
+
+.process-step-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg, 16px);
+    padding: 2rem 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.process-step-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+}
+
+.step-num {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--accent-subtle);
+    line-height: 1;
+    margin-bottom: 1rem;
+    font-family: var(--font-heading, "Fraunces", serif);
+    letter-spacing: -0.04em;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.step-badge {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    background: var(--surface-alt, rgba(0, 0, 0, 0.04));
+    color: var(--text-muted);
+    font-family: var(--font-body, "Manrope", sans-serif);
+}
+
+.process-step-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--heading);
+    margin: 0 0 0.5rem;
+}
+
+.process-step-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* 4. Customs and Allowances Grid */
+.customs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.customs-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg, 16px);
+    padding: 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.customs-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--primary-subtle);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.body-dark .customs-icon {
+    background: rgba(107, 164, 217, 0.15);
+    color: var(--tertiary-light);
+}
+
+.customs-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--heading);
+    margin: 0;
+}
+
+.customs-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.customs-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.customs-list li {
+    font-size: 0.88rem;
+    color: var(--text);
+    padding-left: 1.25rem;
+    position: relative;
+    line-height: 1.5;
+}
+
+.customs-list li::before {
+    content: "•";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+    line-height: 1;
+    top: -1px;
+}
+

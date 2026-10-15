@@ -549,8 +549,8 @@ Waikiki által exportált termékek értéke (1,9 trilliárd USD) jóval meghala
 
 | Forrás | Arány |
 | --- | --- |
-| **Nukleáris energia** | **40%** |
-| — Hidrogénerőmű | 20% |
+| **Nukleáris és fúziós energia** | **40%** |
+| — Hidrogénfúziós erőmű | 20% |
 | — Atomenergia | 20% |
 | **Megújuló energia** | **50%** |
 | — Napenergia | 25% |
@@ -1108,7 +1108,7 @@ A főváros üzleti negyedében a világ legnagyobb vállalatainak központjai f
 
 # XIV. Nemzetközi Sajtóvisszhang és Elemzések
 
-## A Pax Waikikiana
+## A Pax Vaikikiana
 
 A fogalom a „Waikiki-béke" korszakát jelöli, amely a 2010-es évek közepétől kezdődött és a NATO-csatlakozással teljesedett ki. Ez nem passzív béke, hanem agresszíven menedzselt globális rend. Három parancsolata: a hatékonyság szentebb mint a demokrácia; a társadalmi problémák technikai jellegűek; a jólétet engedelmességért cserébe biztosítják.
 
@@ -1384,7 +1384,7 @@ Brazília súlyos pénzügyi válsága idején Chease Young államadósság-átv
 
 ## Az Amerikai Unió és a technológiai ugrás (2007)
 
-2007. március 15-én Chease és George Bush vezetésével megalakult az Amerikai Unió, amely a kontinens államainak gazdasági koordinációját célozta. Ezzel párhuzamosan Waikiki megkezdte saját űrállomása építését, üzembe helyezte az első hidrogénerőművet, és Brazíliában megépítette a világ legnagyobb hadronütköztetőjét.
+2007. március 15-én Chease és George Bush vezetésével megalakult az Amerikai Unió, amely a kontinens államainak gazdasági koordinációját célozta. Ezzel párhuzamosan Waikiki megkezdte saját űrállomása építését, elindította a hidrogénfúziós energetikai kutatásokat (amelyek nyomán az első kereskedelmi erőmű 2017-ben állt üzembe), és Brazíliában megépítette a világ legnagyobb hadronütköztetőjét.
 
 ## Állami befektetések és Jessica színészi karrierje
 

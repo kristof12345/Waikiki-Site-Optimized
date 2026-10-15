@@ -1,4 +1,98 @@
-// Wealth Fund Page JavaScript
+// Wealth Fund Page JavaScript - Waikiki Government Site
+
+// Chart.js default configuration
+Chart.defaults.font.family = "'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
+Chart.defaults.font.size = 13;
+Chart.defaults.color = '#555555';
+
+// Color constants
+const COLORS = {
+    primary: '#0071BC',
+    secondary: '#0E308E',
+    tertiary: '#00B0C3',
+    gold: '#BC9200',
+    error: '#AD1A24',
+    success: '#008000'
+};
+
+// Common chart options for responsive behavior
+const commonOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: {
+        mode: 'index',
+        intersect: false,
+    },
+    plugins: {
+        legend: {
+            display: true,
+            position: 'bottom',
+            labels: {
+                padding: 15,
+                usePointStyle: true,
+                font: {
+                    size: 14,
+                    weight: '500'
+                }
+            }
+        },
+        tooltip: {
+            backgroundColor: 'rgba(14, 48, 142, 0.95)',
+            padding: 12,
+            titleFont: {
+                size: 15,
+                weight: '600'
+            },
+            bodyFont: {
+                size: 14
+            },
+            cornerRadius: 8,
+            displayColors: true,
+            callbacks: {
+                label: function (context) {
+                    let label = context.dataset.label || '';
+                    if (label) {
+                        label += ': ';
+                    }
+                    if (context.parsed.y !== null) {
+                        label += context.dataset.formatter
+                            ? context.dataset.formatter(context.parsed.y)
+                            : context.parsed.y;
+                    }
+                    return label;
+                }
+            }
+        }
+    },
+    scales: {
+        y: {
+            beginAtZero: true,
+            grid: {
+                color: 'rgba(0, 0, 0, 0.05)',
+                drawBorder: false
+            },
+            ticks: {
+                padding: 10,
+                font: {
+                    size: 14
+                }
+            }
+        },
+        x: {
+            grid: {
+                display: false,
+                drawBorder: false
+            },
+            ticks: {
+                padding: 10,
+                font: {
+                    size: 14,
+                    weight: '500'
+                }
+            }
+        }
+    }
+};
 
 /**
  * Initialize wealth fund page specific features
@@ -28,115 +122,55 @@ function initFundGrowthChart() {
                 {
                     label: 'Fund Assets (Trillion WUD)',
                     data: [0.03, 0.51, 3.16, 6.56, 9.46, 11.12],
-                    borderColor: '#BC9200',
+                    borderColor: COLORS.gold,
                     backgroundColor: 'rgba(188, 146, 0, 0.1)',
                     borderWidth: 3,
                     tension: 0.4,
                     fill: true,
                     pointRadius: 6,
                     pointHoverRadius: 8,
-                    pointBackgroundColor: '#BC9200',
+                    pointBackgroundColor: COLORS.gold,
                     pointBorderColor: '#fff',
-                    pointBorderWidth: 2
+                    pointBorderWidth: 2,
+                    formatter: (value) => value.toFixed(2) + 'T'
                 },
                 {
                     label: 'Fund Assets (Trillion USD)',
                     data: [0.03, 0.61, 4.93, 13.13, 21.39, 25.58],
-                    borderColor: '#0071BC',
+                    borderColor: COLORS.primary,
                     backgroundColor: 'rgba(0, 113, 188, 0.1)',
                     borderWidth: 3,
                     tension: 0.4,
                     fill: true,
                     pointRadius: 6,
                     pointHoverRadius: 8,
-                    pointBackgroundColor: '#0071BC',
+                    pointBackgroundColor: COLORS.primary,
                     pointBorderColor: '#fff',
-                    pointBorderWidth: 2
+                    pointBorderWidth: 2,
+                    formatter: (value) => value.toFixed(2) + 'T'
                 }
             ]
         };
 
-        const config = {
+        new Chart(ctx, {
             type: 'line',
             data: data,
             options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        display: true,
-                        position: 'top',
-                        labels: {
-                            font: {
-                                size: 14,
-                                family: "'Inter', sans-serif"
-                            },
-                            padding: 15,
-                            usePointStyle: true
-                        }
-                    },
-                    tooltip: {
-                        mode: 'index',
-                        intersect: false,
-                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                        padding: 12,
-                        titleFont: {
-                            size: 14,
-                            family: "'Inter', sans-serif"
-                        },
-                        bodyFont: {
-                            size: 13,
-                            family: "'Inter', sans-serif"
-                        },
-                        callbacks: {
-                            label: function (context) {
-                                let label = context.dataset.label || '';
-                                if (label) {
-                                    label += ': ';
-                                }
-                                label += context.parsed.y.toFixed(2) + 'T';
-                                return label;
-                            }
-                        }
-                    }
-                },
+                ...commonOptions,
                 scales: {
-                    x: {
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.05)'
-                        },
-                        ticks: {
-                            font: {
-                                size: 12,
-                                family: "'Inter', sans-serif"
-                            }
-                        }
-                    },
+                    ...commonOptions.scales,
                     y: {
-                        beginAtZero: true,
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.05)'
-                        },
+                        ...commonOptions.scales.y,
                         ticks: {
-                            font: {
-                                size: 12,
-                                family: "'Inter', sans-serif"
-                            },
+                            ...commonOptions.scales.y.ticks,
                             callback: function (value) {
                                 return '₩ ' + value + 'T';
                             }
                         }
                     }
-                },
-                interaction: {
-                    mode: 'nearest',
-                    axis: 'x',
-                    intersect: false
                 }
             }
-        };
-
-        new Chart(ctx, config);
+        });
     } catch (error) {
         console.error('Failed to initialize fund growth chart:', error);
     }
@@ -162,70 +196,38 @@ function initGDPRatioChart() {
                     'rgba(14, 48, 142, 0.8)'
                 ],
                 borderColor: [
-                    '#0071BC',
-                    '#0E308E',
-                    '#00B0C3',
-                    '#BC9200',
-                    '#0071BC',
-                    '#0E308E'
+                    COLORS.primary,
+                    COLORS.secondary,
+                    COLORS.tertiary,
+                    COLORS.gold,
+                    COLORS.primary,
+                    COLORS.secondary
                 ],
                 borderWidth: 2,
                 borderRadius: 8,
-                borderSkipped: false
+                borderSkipped: false,
+                formatter: (value) => value + '%'
             }]
         };
 
-        const config = {
+        new Chart(ctx, {
             type: 'bar',
             data: data,
             options: {
-                responsive: true,
-                maintainAspectRatio: false,
+                ...commonOptions,
                 plugins: {
+                    ...commonOptions.plugins,
                     legend: {
                         display: false
-                    },
-                    tooltip: {
-                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                        padding: 12,
-                        titleFont: {
-                            size: 14,
-                            family: "'Inter', sans-serif"
-                        },
-                        bodyFont: {
-                            size: 13,
-                            family: "'Inter', sans-serif"
-                        },
-                        callbacks: {
-                            label: function (context) {
-                                return 'Fund/GDP: ' + context.parsed.y + '%';
-                            }
-                        }
                     }
                 },
                 scales: {
-                    x: {
-                        grid: {
-                            display: false
-                        },
-                        ticks: {
-                            font: {
-                                size: 12,
-                                family: "'Inter', sans-serif"
-                            }
-                        }
-                    },
+                    ...commonOptions.scales,
                     y: {
-                        beginAtZero: true,
+                        ...commonOptions.scales.y,
                         max: 70,
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.05)'
-                        },
                         ticks: {
-                            font: {
-                                size: 12,
-                                family: "'Inter', sans-serif"
-                            },
+                            ...commonOptions.scales.y.ticks,
                             callback: function (value) {
                                 return value + '%';
                             }
@@ -233,9 +235,7 @@ function initGDPRatioChart() {
                     }
                 }
             }
-        };
-
-        new Chart(ctx, config);
+        });
     } catch (error) {
         console.error('Failed to initialize GDP ratio chart:', error);
     }
@@ -253,79 +253,27 @@ function initProjectionChart() {
                 {
                     label: 'Projected Assets (Trillion WUD)',
                     data: [11.12, 11.82, 12.91, 13.68, 14.27, 15.08, 16.14, 16.58],
-                    borderColor: '#BC9200',
+                    borderColor: COLORS.gold,
                     backgroundColor: 'rgba(188, 146, 0, 0.7)',
                     borderWidth: 2,
                     borderRadius: 8,
-                    borderSkipped: false
+                    borderSkipped: false,
+                    formatter: (value) => value.toFixed(2) + 'T'
                 }
             ]
         };
 
-        const config = {
+        new Chart(ctx, {
             type: 'bar',
             data: data,
             options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        display: true,
-                        position: 'top',
-                        labels: {
-                            font: {
-                                size: 14,
-                                family: "'Inter', sans-serif"
-                            },
-                            padding: 15,
-                            usePointStyle: true
-                        }
-                    },
-                    tooltip: {
-                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                        padding: 12,
-                        titleFont: {
-                            size: 14,
-                            family: "'Inter', sans-serif"
-                        },
-                        bodyFont: {
-                            size: 13,
-                            family: "'Inter', sans-serif"
-                        },
-                        callbacks: {
-                            label: function (context) {
-                                let label = context.dataset.label || '';
-                                if (label) {
-                                    label += ': ';
-                                }
-                                label += context.parsed.y.toFixed(2) + 'T';
-                                return label;
-                            }
-                        }
-                    }
-                },
+                ...commonOptions,
                 scales: {
-                    x: {
-                        grid: {
-                            display: false
-                        },
-                        ticks: {
-                            font: {
-                                size: 12,
-                                family: "'Inter', sans-serif"
-                            }
-                        }
-                    },
+                    ...commonOptions.scales,
                     y: {
-                        beginAtZero: true,
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.05)'
-                        },
+                        ...commonOptions.scales.y,
                         ticks: {
-                            font: {
-                                size: 12,
-                                family: "'Inter', sans-serif"
-                            },
+                            ...commonOptions.scales.y.ticks,
                             callback: function (value) {
                                 return '₩ ' + value + 'T';
                             }
@@ -333,9 +281,7 @@ function initProjectionChart() {
                     }
                 }
             }
-        };
-
-        new Chart(ctx, config);
+        });
     } catch (error) {
         console.error('Failed to initialize projection chart:', error);
     }

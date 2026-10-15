@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- @chrome:head -->
+    <meta name="theme-color" content="#fbf7f0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
+    <!-- /@chrome:head -->
+    <title>Waikiki Űrkutatás</title>
+    <link rel="icon" href="../icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo-blue.png" />
+    <link href="../manifest.json" rel="manifest" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/space-research.css" />
+</head>
+<body class="page-space-research group-prosperity">
+    <!-- @chrome:header -->
+    <div class="page-curtain" aria-hidden="true"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="64" height="64" loading="eager" decoding="async" /></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <header class="site-header">
+        <a href="index.html" class="brand"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" decoding="async" /><span class="brand-word">Waikiki</span></a>
+        <nav class="primary-nav">
+            <a href="tourism.html">Utazás</a><a href="society.html">Társadalom</a><a href="economy.html">Gazdaság</a><a href="government.html">Kormány</a><a href="history.html">Történelem</a><a href="dynasty.html">Királyi Család</a>
+        </nav>
+        <div class="header-actions">
+            <a class="lang-pill" href="../en/space-research.html" hreflang="en" lang="en" title="English">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg>
+                <span>EN</span>
+            </a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+                <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg>
+            </button>
+            <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+                <span class="menu-lines" aria-hidden="true"></span>
+                <span class="menu-label-open">Menü</span>
+                <span class="menu-label-close">Bezárás</span>
+                <span class="visually-hidden">Menü</span>
+            </button>
+        </div>
+    </header>
+    <div class="site-menu" id="site-menu" aria-hidden="true" inert>
+        <div class="site-menu-inner">
+            <aside class="menu-aside">
+                <div class="menu-clock-block">
+                    <div class="menu-clock-header">
+                        <p class="menu-clock-label">Helyi idő a fővárosban</p>
+                        <div class="menu-weather" data-capital-weather><span class="weather-icon" aria-hidden="true">☀️</span> <span class="weather-temp">28°C</span> <span class="weather-desc">Napos</span></div>
+                    </div>
+                    <p class="menu-clock" data-capital-clock>--:--</p>
+                    <p class="menu-clock-city">Nova Aurelia, Waikiki tartomány</p>
+                </div>
+                <p class="menu-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
+                <div class="menu-aside-row">
+                    <a class="menu-chip" href="../en/space-research.html" hreflang="en" lang="en">English</a><a class="menu-chip is-active" href="../hu/space-research.html" hreflang="hu" lang="hu">Magyar</a>
+                    <button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Éjszakai mód</button>
+                    <button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animáció</button>
+                </div>
+            </aside>
+            <div class="menu-group">
+                <h2>Nemzet</h2>
+                <ul>
+                    <li><a href="index.html">Főoldal</a></li>
+                    <li><a href="overview.html">Áttekintés</a></li>
+                    <li><a href="history.html">Történelem</a></li>
+                    <li><a href="society.html">Társadalom</a></li>
+                    <li><a href="culture.html">Kultúra</a></li>
+                    <li><a href="ideology.html">Ideológia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Kormányzás</h2>
+                <ul>
+                    <li><a href="government.html">Kormány</a></li>
+                    <li><a href="leadership.html">Vezetés</a></li>
+                    <li><a href="parties.html">Politika</a></li>
+                    <li><a href="constitution.html">Alkotmány</a></li>
+                    <li><a href="military.html">Hadsereg</a></li>
+                    <li><a href="diplomacy.html">Diplomácia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Jólét</h2>
+                <ul>
+                    <li><a href="economy.html">Gazdaság</a></li>
+                    <li><a href="banking-system.html">Bankrendszer</a></li>
+                    <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                    <li><a href="citizenship.html">Állampolgárság</a></li>
+                    <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                    <li><a href="space-research.html" aria-current="page">Űrkutatás</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Királyi Család</h2>
+                <ul>
+                    <li><a href="dynasty.html">A Dinasztia</a></li>
+                    <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                    <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Látogatás</h2>
+                <ul>
+                    <li><a href="tourism.html">Turizmus</a></li>
+                    <li><a href="sights.html">Látnivalók</a></li>
+                    <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                    <li><a href="visa.html">Vízum és belépés</a></li>
+                    <li><a href="faq.html">GYIK</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /@chrome:header -->
+    <main id="main">
+        <section class="hero" data-hero>
+            <div class="hero-media"><img src="../images/UniversalUpscaler_Pro_Precise_2_1f1c2357-5be5-6860-9aa6-0dca8e8888b7.jpg" alt="Waikiki Űrkutatás" fetchpriority="high" decoding="async" /></div>
+            <div class="hero-veil"></div>
+            <div class="hero-content"><span class="hero-eyebrow">Jólét · Űrkutatás</span>
+                <h1 class="hero-title">Űrkutatás</h1>
+                <p class="hero-lead">Waikiki még magasabbra tört, meg sem állt a csillagos égig, így a világ legfejlettebb gazdasági hatalma immár átvette a vezető szerepet az űrkutatás területén is.</p>
+                <div class="hero-stats">
+                    <div class="stat-item"><span class="stat-number">200+ Mrd $</span><span class="stat-label">Űrállomás költségvetés</span></div>
+                    <div class="stat-item"><span class="stat-number">270 t</span><span class="stat-label">Delta IV teherbírás</span></div>
+                    <div class="stat-item"><span class="stat-number">2030</span><span class="stat-label">Emberes Mars-misszió</span></div>
+                    <div class="stat-item"><span class="stat-number">12 fő</span><span class="stat-label">Állandó kutatói legénység</span></div>
+                </div>
+            </div>
+        </section>
+        <!-- @chrome:subnav --><!-- /@chrome:subnav -->
+        <section id="station" class="fade-in">
+            <h2 class="section-title">Waikiki Nemzeti Űrállomás (WNSS)</h2>
+            <p class="section-intro">Waikiki megteremtette az űrkutatás biztonságos bázisát. Előretolt helyőrségünk, a Waikiki Nemzeti Űrállomás (WNSS) a legmodernebb technológia felhasználásával készült. Az ott folyó kísérletek és kutatások pedig egyedülálló lehetőséget teremtenek a további innovációra.</p>
+            <div class="ill-panel">
+                <svg class="ill" viewBox="0 0 1160 520" role="img" aria-label="Waikiki Nemzeti Űrállomás pályamenti felépítése és telemetriai ábrája">
+                    <defs>
+                        <clipPath id="sr-hu-clip1">
+                            <rect width="1160" height="520" rx="20" />
+                        </clipPath>
+                        <radialGradient id="sr-hu-space-bg" cx="50%" cy="30%" r="70%">
+                            <stop offset="0%" stop-color="#0c2f2b" />
+                            <stop offset="45%" stop-color="#061a19" />
+                            <stop offset="100%" stop-color="#020d0d" />
+                        </radialGradient>
+                        <radialGradient id="sr-hu-earth-glow" cx="50%" cy="0%" r="80%">
+                            <stop offset="0%" stop-color="#5eb8ab" />
+                            <stop offset="25%" stop-color="#24877e" />
+                            <stop offset="60%" stop-color="#0f4944" />
+                            <stop offset="100%" stop-color="#06201f" />
+                        </radialGradient>
+                        <linearGradient id="sr-hu-solar-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#ffdc89" />
+                            <stop offset="40%" stop-color="#d9a74a" />
+                            <stop offset="80%" stop-color="#b07d2b" />
+                            <stop offset="100%" stop-color="#7a5416" />
+                        </linearGradient>
+                        <linearGradient id="sr-hu-hull-light" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#ffffff" />
+                            <stop offset="40%" stop-color="#e2efec" />
+                            <stop offset="80%" stop-color="#b5d3ce" />
+                            <stop offset="100%" stop-color="#80a8a2" />
+                        </linearGradient>
+                    </defs>
+                    <g clip-path="url(#sr-hu-clip1)">
+                        <rect width="1160" height="520" fill="url(#sr-hu-space-bg)" />
+                        <!-- Kozmikus gázködök -->
+                        <ellipse cx="320" cy="140" rx="380" ry="110" fill="#14514c" opacity=".25" />
+                        <ellipse cx="860" cy="160" rx="340" ry="120" fill="#1b5a54" opacity=".22" />
+                        <ellipse cx="580" cy="80" rx="280" ry="70" fill="#6BA4D9" opacity=".12" />
+                        <!-- Csillagmező animált villódzással -->
+                        <g fill="#fbf7f0">
+                            <circle class="twinkle" cx="50" cy="50" r="1.5" />
+                            <circle class="twinkle" cx="120" cy="120" r="1.2" />
+                            <circle class="twinkle" cx="190" cy="60" r="1.8" />
+                            <circle class="twinkle" cx="280" cy="100" r="1.1" />
+                            <circle class="twinkle" cx="370" cy="45" r="1.6" />
+                            <circle class="twinkle" cx="460" cy="85" r="1.3" />
+                            <circle class="twinkle" cx="550" cy="35" r="2.0" />
+                            <circle class="twinkle" cx="640" cy="90" r="1.2" />
+                            <circle class="twinkle" cx="730" cy="40" r="1.7" />
+                            <circle class="twinkle" cx="820" cy="95" r="1.1" />
+                            <circle class="twinkle" cx="910" cy="50" r="1.9" />
+                            <circle class="twinkle" cx="1000" cy="80" r="1.3" />
+                            <circle class="twinkle" cx="1090" cy="45" r="1.8" />
+                            <circle class="twinkle" cx="80" cy="190" r="1.2" />
+                            <circle class="twinkle" cx="240" cy="170" r="1.5" />
+                            <circle class="twinkle" cx="950" cy="180" r="1.4" />
+                            <circle class="twinkle" cx="1060" cy="200" r="1.2" />
+                            <circle class="twinkle" cx="1130" cy="130" r="1.5" />
+                        </g>
+                        <!-- Földi horizont és légkör íve -->
+                        <path d="M-60 610 C 260 410, 900 410, 1220 610 L 1220 660 L -60 660 Z" fill="url(#sr-hu-earth-glow)" />
+                        <path d="M-60 610 C 260 410, 900 410, 1220 610" fill="none" stroke="#6BA4D9" stroke-width="26" opacity=".18" />
+                        <path d="M-60 610 C 260 410, 900 410, 1220 610" fill="none" stroke="#66c9bc" stroke-width="12" opacity=".35" />
+                        <path d="M-60 610 C 260 410, 900 410, 1220 610" fill="none" stroke="#e0f8f5" stroke-width="2.5" opacity=".8" />
+                        <!-- Kontinens és tengerparti ívek -->
+                        <path d="M180 500 c60-25 150-30 220-10 c40 12 90 8 130-15 c30-18 80-20 120-4 c50 20 120 15 170-12 c40-22 90-18 130 5" fill="none" stroke="#3db6a6" stroke-width="14" stroke-linecap="round" opacity=".5" />
+                        <path d="M160 505 c50-20 130-24 190-8 c35 10 75 6 110-14 c28-16 70-18 105-3 c45 18 105 14 150-10 c38-20 85-15 120 8" fill="none" stroke="#4a8b60" stroke-width="8" stroke-linecap="round" opacity=".75" />
+                        <!-- Városi éjszakai fények -->
+                        <g fill="#f5c46e" opacity=".85">
+                            <circle cx="240" cy="495" r="1.4" />
+                            <circle cx="280" cy="488" r="1.5" />
+                            <circle cx="350" cy="482" r="1.6" />
+                            <circle cx="390" cy="478" r="1.8" />
+                            <circle cx="520" cy="458" r="1.8" />
+                            <circle cx="640" cy="460" r="1.6" />
+                            <circle cx="740" cy="470" r="1.5" />
+                        </g>
+                        <!-- Pályamenti megközelítési vonal -->
+                        <path id="sr-hu-docking-path" d="M60 310 C 320 180, 840 180, 1100 310" fill="none" stroke="#f5c46e" stroke-width="1.8" stroke-dasharray="6 8" opacity=".75" class="dash" />
+                        <!-- Érkező waikiki űrhajó -->
+                        <g>
+                            <path d="M-12 -5 h16 l8 5 l-8 5 h-16 l4 -5 z" fill="#ffffff" stroke="#003366" stroke-width="1" />
+                            <polygon points="-12,-5 -16,-9 -8,-5" fill="#c95a41" />
+                            <polygon points="-12,5 -16,9 -8,5" fill="#c95a41" />
+                            <circle cx="4" cy="0" r="2.5" fill="#6BA4D9" />
+                            <animateMotion dur="18s" repeatCount="indefinite" rotate="auto">
+                                <mpath href="#sr-hu-docking-path" />
+                            </animateMotion>
+                        </g>
+                        <!-- WNSS ÁLLOMÁSSZERKEZET -->
+                        <!-- Főtartó rácsos híd -->
+                        <rect x="260" y="226" width="640" height="12" rx="3" fill="#3a5c57" stroke="#6BA4D9" stroke-width="1" />
+                        <line x1="260" y1="232" x2="900" y2="232" stroke="#d5ede9" stroke-width="2" stroke-dasharray="8 6" opacity=".8" />
+                        <!-- Bal oldali napelemszárnyak -->
+                        <g transform="translate(190, 140)">
+                            <rect x="0" y="0" width="70" height="80" rx="3" fill="url(#sr-hu-solar-gold)" stroke="#7a5416" stroke-width="1.2" class="pulse-glow" />
+                            <rect x="0" y="92" width="70" height="80" rx="3" fill="url(#sr-hu-solar-gold)" stroke="#7a5416" stroke-width="1.2" class="pulse-glow" />
+                            <line x1="23" y1="0" x2="23" y2="172" stroke="#4a300a" stroke-width="0.8" opacity=".6" />
+                            <line x1="47" y1="0" x2="47" y2="172" stroke="#4a300a" stroke-width="0.8" opacity=".6" />
+                            <line x1="0" y1="26" x2="70" y2="26" stroke="#4a300a" stroke-width="0.8" opacity=".6" />
+                            <line x1="0" y1="53" x2="70" y2="53" stroke="#4a300a" stroke-width="0.8" opacity=".6" />
+                            <line x1="0" y1="118" x2="70" y2="118" stroke="#4a300a" stroke-width="0.8" opacity=".6" />
+                            <line x1="0" y1="145" x2="70" y2="145" stroke="#4a300a" stroke-width="0.8" opacity=".6" />
+                            <rect x="68" y="82" width="16" height="8" fill="#cbe0dc" />
+                        </g>
+                        <!-- Jobb oldali napelemszárnyak -->
+                        <g transform="translate(900, 140)">
+                            <rect x="0" y="0" width="70" height="80" rx="3" fill="url(#sr-hu-solar-gold)" stroke="#7a5416" stroke-width="1.2" class="pulse-glow" />
+                            <rect x="0" y="92" width="70" height="80" rx="3" fill="url(#sr-hu-solar-gold)" stroke="#7a5416" stroke-width="1.2" class="pulse-glow" />
+                            <line x1="23" y1="0" x2="23" y2="172" stroke="#4a300a" stroke-width="0.8" opacity=".6" />
+                            <line x1="47" y1="0" x2="47" y2="172" stroke="#4a300a" stroke-width="0.8" opacity=".6" />
+                            <line x1="0" y1="26" x2="70" y2="26" stroke="#4a300a" stroke-width="0.8" opacity=".6" />
+                            <line x1="0" y1="53" x2="70" y2="53" stroke="#4a300a" stroke-width="0.8" opacity=".6" />
+                            <line x1="0" y1="118" x2="70" y2="118" stroke="#4a300a" stroke-width="0.8" opacity=".6" />
+                            <line x1="0" y1="145" x2="70" y2="145" stroke="#4a300a" stroke-width="0.8" opacity=".6" />
+                            <rect x="-14" y="82" width="16" height="8" fill="#cbe0dc" />
+                        </g>
+                        <!-- Központi forgó lakógyűrű -->
+                        <g transform="translate(580, 232)">
+                            <g class="spin-rev">
+                                <circle cx="0" cy="0" r="88" fill="none" stroke="#2a6f68" stroke-width="18" opacity=".35" />
+                                <circle cx="0" cy="0" r="88" fill="none" stroke="#e0f2ef" stroke-width="14" stroke-dasharray="16 12" />
+                                <circle cx="0" cy="0" r="95" fill="none" stroke="#f5c46e" stroke-width="1.5" />
+                                <circle cx="0" cy="0" r="81" fill="none" stroke="#6BA4D9" stroke-width="1.2" />
+                                <line x1="0" y1="-88" x2="0" y2="88" stroke="#bedbd6" stroke-width="3" />
+                                <line x1="-88" y1="0" x2="88" y2="0" stroke="#bedbd6" stroke-width="3" />
+                                <line x1="-62" y1="-62" x2="62" y2="62" stroke="#bedbd6" stroke-width="2" />
+                                <line x1="-62" y1="62" x2="62" y2="-62" stroke="#bedbd6" stroke-width="2" />
+                                <circle cx="0" cy="-88" r="8" fill="#fbf7f0" stroke="#003366" stroke-width="1.5" />
+                                <circle cx="0" cy="88" r="8" fill="#fbf7f0" stroke="#003366" stroke-width="1.5" />
+                                <circle cx="-88" cy="0" r="8" fill="#fbf7f0" stroke="#003366" stroke-width="1.5" />
+                                <circle cx="88" cy="0" r="8" fill="#fbf7f0" stroke="#003366" stroke-width="1.5" />
+                            </g>
+                            <!-- Központi állomásmag -->
+                            <circle cx="0" cy="0" r="32" fill="url(#sr-hu-hull-light)" stroke="#003366" stroke-width="2.5" />
+                            <circle cx="0" cy="0" r="22" fill="#002244" stroke="#6BA4D9" stroke-width="1.5" />
+                            <circle cx="0" cy="0" r="8" fill="#f5c46e" />
+                        </g>
+                        <!-- Nyomás alatt álló kutatómodulok -->
+                        <g transform="translate(430, 218)">
+                            <rect x="0" y="0" width="85" height="28" rx="6" fill="url(#sr-hu-hull-light)" stroke="#003366" stroke-width="1.5" />
+                            <line x1="28" y1="0" x2="28" y2="28" stroke="#003366" stroke-width="1" />
+                            <line x1="56" y1="0" x2="56" y2="28" stroke="#003366" stroke-width="1" />
+                            <rect x="15" y="-18" width="55" height="18" rx="2" fill="#c4ded9" stroke="#6BA4D9" stroke-width="0.8" opacity=".8" />
+                        </g>
+                        <g transform="translate(645, 218)">
+                            <rect x="0" y="0" width="85" height="28" rx="6" fill="url(#sr-hu-hull-light)" stroke="#003366" stroke-width="1.5" />
+                            <line x1="28" y1="0" x2="28" y2="28" stroke="#003366" stroke-width="1" />
+                            <line x1="56" y1="0" x2="56" y2="28" stroke="#003366" stroke-width="1" />
+                            <rect x="15" y="28" width="55" height="18" rx="2" fill="#c4ded9" stroke="#6BA4D9" stroke-width="0.8" opacity=".8" />
+                        </g>
+                        <!-- Dokkolt siklóhajó -->
+                        <g transform="translate(390, 232)">
+                            <polygon points="0,-10 32,-4 32,4 0,10" fill="#ffffff" stroke="#003366" stroke-width="1.2" />
+                            <polygon points="12,-4 32,-18 32,-4" fill="#c95a41" />
+                            <polygon points="12,4 32,18 32,4" fill="#c95a41" />
+                            <circle cx="16" cy="0" r="2" fill="#6BA4D9" />
+                        </g>
+                        <!-- Telemetriai antenna pulzáló rádióhullámokkal -->
+                        <g transform="translate(580, 110)">
+                            <line x1="0" y1="34" x2="0" y2="12" stroke="#bedbd6" stroke-width="2" />
+                            <path d="M-18 6 C -10 -6, 10 -6, 18 6" fill="none" stroke="#f5c46e" stroke-width="2.5" />
+                            <line x1="0" y1="12" x2="0" y2="-2" stroke="#ffffff" stroke-width="1.5" />
+                            <circle class="pulse" cx="0" cy="-4" r="14" fill="none" stroke="#6BA4D9" stroke-width="1.8" />
+                            <circle class="pulse" cx="0" cy="-4" r="26" fill="none" stroke="#6BA4D9" stroke-width="1.2" style="animation-delay: 1.2s;" />
+                        </g>
+                        <!-- Felső telemetriai fejléc -->
+                        <g font-family="Manrope, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">
+                            <rect x="280" y="18" width="600" height="32" rx="16" fill="#061c1b" stroke="#6BA4D9" stroke-width="1.2" opacity=".95" />
+                            <circle cx="304" cy="34" r="4" fill="#2ecc71" class="pulse" />
+                            <text x="320" y="38" fill="#fbf7f0">WNSS-1 ORBITÁLIS ERŐD</text>
+                            <text x="515" y="38" fill="#6BA4D9">MAGASSÁG: 420.4 KM</text>
+                            <text x="660" y="38" fill="#f5c46e">SEBESSÉG: 7.66 KM/S</text>
+                            <text x="795" y="38" fill="#2ecc71">12 FŐ AKTÍV</text>
+                        </g>
+                        <!-- Bal alsó telemetria -->
+                        <g font-family="Manrope, sans-serif" font-size="10" font-weight="600" letter-spacing="1">
+                            <rect x="30" y="445" width="230" height="50" rx="8" fill="#061c1b" stroke="rgba(107, 164, 217, 0.4)" stroke-width="1" opacity=".9" />
+                            <text x="44" y="468" fill="#f5c46e">WSA ŰRÁLLOMÁS LOGISZTIKA</text>
+                            <text x="44" y="484" fill="#bedbd6">NAPELEMES TELJESÍTMÉNY: 140 KW</text>
+                        </g>
+                        <!-- Jobb alsó telemetria -->
+                        <g font-family="Manrope, sans-serif" font-size="10" font-weight="600" letter-spacing="1" text-anchor="end">
+                            <rect x="900" y="445" width="230" height="50" rx="8" fill="#061c1b" stroke="rgba(107, 164, 217, 0.4)" stroke-width="1" opacity=".9" />
+                            <text x="1116" y="468" fill="#6BA4D9">DOKKOLÓKAPUK: 6 AKTÍV</text>
+                            <text x="1116" y="484" fill="#bedbd6">AUTOMATIKUS KÖZELÍTÉS KÉSZ</text>
+                        </g>
+                    </g>
+                </svg>
+                <div class="ill-caption">
+                    <span><strong>1.1. Ábra:</strong> A Waikiki Nemzeti Űrállomás (WNSS) valós idejű pályamenti felépítése és telemetriája.</span>
+                    <span>420 km Föld körüli pálya · Automatikus Napkövető Rendszer</span>
+                </div>
+            </div>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/space-station.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <span class="spec-badge">Orbitális Zászlóshajó</span>
+                    <h3>A WNSS Tudományos Laboratórium</h3>
+                    <p>A Waikiki Nemzeti Űrállomás építése 2007-ben kezdődött, az alapkomplexum 2012-ben készült el, az utolsó modul pedig 2016-ban került a helyére. Az építés teljes költségvetése meghaladja a Nemzetközi Űrállomásét és eléri a 200 milliárd USA dollárt. A WNSS büszkén viseli a legnagyobb ember által épített űrobjektum címet.</p>
+                    <ul class="spec-list">
+                        <li><span>Állandó személyzet</span><strong>12 asztronauta és kutató</strong></li>
+                        <li><span>Pályamagasság</span><strong>420 km Föld körüli pálya</strong></li>
+                        <li><span>Energiaellátás</span><strong>Többgenerációs napelemtáblák</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/rocket-launch.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <span class="spec-badge">Mélyűri Kikötő</span>
+                    <h3>Kiindulópont a Naprendszerbe</h3>
+                    <p>A WNSS nem csupán kutatólaboratórium, hanem a jövőbeli mélyűri küldetések logisztikai központja. A tervek szerint innen indulnak majd a Holdat megkerülő, illetve a Marsra tartó űrhajók, kriogenikus üzemanyag-utántöltést és műszaki ellenőrzést követően.</p>
+                    <ul class="spec-list">
+                        <li><span>Dokkolóegységek</span><strong>6 univerzális androgün kapu</strong></li>
+                        <li><span>Küldetési profil</span><strong>Hold- és Mars-expedíciók</strong></li>
+                        <li><span>Bővítések</span><strong>Folyamatos korszerűsítés 2028-ig</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/ticket-confirmation.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <span class="spec-badge">Polgári Űrrepülés</span>
+                    <h3>Űrturizmus az Állomáson</h3>
+                    <p>2018-tól nem csak a hivatásos asztronautáké a kiváltság, hogy meglátogassák ezt a lélegzetelállító mérnöki remekművet. Bármely felkészült űrturista a fedélzetre léphet és űrsétán vehet részt, ami világszerte az elit élmények csúcsává vált.</p>
+                    <ul class="spec-list">
+                        <li><span>Első kereskedelmi út</span><strong>2018-as orbitális látogatás</strong></li>
+                        <li><span>Program</span><strong>10 napos űrállomás és űrséta</strong></li>
+                        <li><span>Szállítóeszköz</span><strong>Dragon kapszulák és űrsiklók</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/orbit.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <span class="spec-badge">Új Távlatok</span>
+                    <h3>Hold Körüli Állandó Űrállomás</h3>
+                    <p>A WNSS rendkívüli sikere miatt a kormány a WSA és a NASA közös projektjeként egy másik, Hold körüli pályára állítandó állomás építését is tervezi. Ez olyan súlytalanságban végzett kísérletek elvégzését teszi lehetővé, amelyekre a Föld közelében nincs lehetőség.</p>
+                    <ul class="spec-list">
+                        <li><span>Tervezett pálya</span><strong>Hold körüli halópálya</strong></li>
+                        <li><span>Partnerintézmények</span><strong>WSA és NASA közös fejlesztés</strong></li>
+                        <li><span>Célkitűzés</span><strong>Extrém mélyűri kísérletek</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="lunar-mars" class="light-bg fade-in">
+            <h2 class="section-title">Hold- és Mars-küldetések</h2>
+            <p class="section-intro">A WSA tudósai és mérnökei a nemzetközi űrvállalatokkal karöltve az emberiség határait tágítják: a holdbázis megteremtése után a Mars felszíne a következő meghódítandó állomás.</p>
+            <div class="ill-panel">
+                <svg class="ill" viewBox="0 0 1160 480" role="img" aria-label="Föld, Hold és Mars bolygóközi közlekedési folyosók térképe">
+                    <defs>
+                        <clipPath id="sr-hu-clip2">
+                            <rect width="1160" height="480" rx="20" />
+                        </clipPath>
+                        <radialGradient id="sr-hu-deep-space" cx="50%" cy="40%" r="65%">
+                            <stop offset="0%" stop-color="#0e2423" />
+                            <stop offset="50%" stop-color="#081817" />
+                            <stop offset="100%" stop-color="#030c0c" />
+                        </radialGradient>
+                        <radialGradient id="sr-hu-mars-sphere" cx="40%" cy="35%" r="65%">
+                            <stop offset="0%" stop-color="#e3735a" />
+                            <stop offset="60%" stop-color="#c95a41" />
+                            <stop offset="100%" stop-color="#7a2b1c" />
+                        </radialGradient>
+                        <radialGradient id="sr-hu-moon-sphere" cx="40%" cy="35%" r="65%">
+                            <stop offset="0%" stop-color="#e8f3f1" />
+                            <stop offset="50%" stop-color="#bfd6d2" />
+                            <stop offset="100%" stop-color="#6e8f89" />
+                        </radialGradient>
+                        <radialGradient id="sr-hu-earth-sphere" cx="40%" cy="35%" r="65%">
+                            <stop offset="0%" stop-color="#6BA4D9" />
+                            <stop offset="40%" stop-color="#1A528F" />
+                            <stop offset="80%" stop-color="#003366" />
+                            <stop offset="100%" stop-color="#001830" />
+                        </radialGradient>
+                    </defs>
+                    <g clip-path="url(#sr-hu-clip2)">
+                        <rect width="1160" height="480" fill="url(#sr-hu-deep-space)" />
+                        <!-- Csillagmező -->
+                        <g fill="#fbf7f0" opacity=".7">
+                            <circle class="twinkle" cx="80" cy="70" r="1.3" />
+                            <circle class="twinkle" cx="220" cy="110" r="1.5" />
+                            <circle class="twinkle" cx="380" cy="50" r="1.2" />
+                            <circle class="twinkle" cx="490" cy="90" r="1.6" />
+                            <circle class="twinkle" cx="620" cy="60" r="1.1" />
+                            <circle class="twinkle" cx="740" cy="120" r="1.4" />
+                            <circle class="twinkle" cx="860" cy="70" r="1.7" />
+                            <circle class="twinkle" cx="1020" cy="110" r="1.3" />
+                            <circle class="twinkle" cx="1110" cy="50" r="1.5" />
+                            <circle class="twinkle" cx="140" cy="410" r="1.4" />
+                            <circle class="twinkle" cx="320" cy="380" r="1.2" />
+                            <circle class="twinkle" cx="680" cy="420" r="1.5" />
+                            <circle class="twinkle" cx="820" cy="390" r="1.3" />
+                            <circle class="twinkle" cx="1080" cy="420" r="1.6" />
+                        </g>
+                        <!-- Pályamenti pályák -->
+                        <path id="sr-hu-path-moon" d="M180 240 C 300 130, 440 140, 540 190" fill="none" stroke="#f5c46e" stroke-width="2.5" stroke-dasharray="8 6" class="dash" />
+                        <path id="sr-hu-path-mars" d="M180 240 C 420 40, 780 40, 960 240" fill="none" stroke="#e3735a" stroke-width="2.5" stroke-dasharray="10 8" class="dash" />
+                        <path d="M540 190 C 680 180, 840 200, 960 240" fill="none" stroke="#6BA4D9" stroke-width="1.5" stroke-dasharray="4 6" opacity=".6" />
+                        <!-- 1. FÖLD ÉS WNSS -->
+                        <g transform="translate(180, 240)">
+                            <circle cx="0" cy="0" r="74" fill="none" stroke="#6BA4D9" stroke-width="1.5" stroke-dasharray="6 4" class="spin" />
+                            <circle cx="0" cy="0" r="62" fill="url(#sr-hu-earth-sphere)" />
+                            <circle cx="0" cy="0" r="62" fill="none" stroke="#6BA4D9" stroke-width="6" opacity=".4" />
+                            <circle cx="0" cy="0" r="62" fill="none" stroke="#e0f8f5" stroke-width="1.5" opacity=".8" />
+                            <path d="M-30 -20 c20-15 45-5 50 15 c-10 20-30 25-45 10 z" fill="#4e8b5a" opacity=".85" />
+                            <path d="M-10 15 c15 5 25 25 10 30 c-15 -5 -15 -25 -10 -30 z" fill="#4e8b5a" opacity=".85" />
+                            <circle cx="0" cy="0" r="82" fill="none" stroke="#f5c46e" stroke-width="1" stroke-dasharray="4 4" />
+                            <circle cx="58" cy="-58" r="4" fill="#fbf7f0" stroke="#003366" stroke-width="1.2" />
+                            <text x="0" y="105" fill="#fbf7f0" font-family="Manrope, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1.5">FÖLD · WNSS</text>
+                            <text x="0" y="122" fill="#6BA4D9" font-family="Manrope, sans-serif" font-size="10" font-weight="600" text-anchor="middle">INDÍTÁSI BÁZIS</text>
+                        </g>
+                        <!-- 2. HOLD ÉS HOLDBÁZIS -->
+                        <g transform="translate(540, 190)">
+                            <circle cx="0" cy="0" r="44" fill="none" stroke="#d5ede9" stroke-width="1" stroke-dasharray="4 4" class="spin-rev" />
+                            <circle cx="0" cy="0" r="34" fill="url(#sr-hu-moon-sphere)" />
+                            <circle cx="0" cy="0" r="34" fill="none" stroke="#d5ede9" stroke-width="1" opacity=".7" />
+                            <circle cx="-12" cy="-8" r="6" fill="#88a8a2" opacity=".6" />
+                            <circle cx="10" cy="6" r="8" fill="#88a8a2" opacity=".5" />
+                            <circle cx="-6" cy="14" r="4" fill="#88a8a2" opacity=".6" />
+                            <!-- Autonóm felszíni jeladó -->
+                            <circle cx="8" cy="-14" r="3" fill="#2ecc71" />
+                            <circle class="pulse" cx="8" cy="-14" r="12" fill="none" stroke="#2ecc71" stroke-width="1.5" />
+                            <text x="0" y="65" fill="#fbf7f0" font-family="Manrope, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1.5">HOLDBÁZIS</text>
+                            <text x="0" y="82" fill="#f5c46e" font-family="Manrope, sans-serif" font-size="10" font-weight="600" text-anchor="middle">12 SATURN X KÜLDETÉS</text>
+                        </g>
+                        <!-- 3. MARS ÉS BÁZISÁLLOMÁS -->
+                        <g transform="translate(960, 240)">
+                            <circle cx="0" cy="0" r="76" fill="none" stroke="#e3735a" stroke-width="1.5" stroke-dasharray="6 4" class="spin" />
+                            <circle cx="0" cy="0" r="58" fill="url(#sr-hu-mars-sphere)" />
+                            <circle cx="0" cy="0" r="58" fill="none" stroke="#e3735a" stroke-width="6" opacity=".4" />
+                            <circle cx="0" cy="0" r="58" fill="none" stroke="#ffdcd3" stroke-width="1.5" opacity=".8" />
+                            <path d="M-30 0 c20-10 40 5 45 20 c-20 15 -45 5 -45 -20 z" fill="#692417" opacity=".6" />
+                            <!-- Lockheed Martin keringő állomás -->
+                            <g transform="translate(0, -76)">
+                                <circle cx="0" cy="0" r="6" fill="#fbf7f0" stroke="#c95a41" stroke-width="1.5" />
+                                <line x1="-14" y1="0" x2="14" y2="0" stroke="#f5c46e" stroke-width="2" />
+                                <circle class="pulse" cx="0" cy="0" r="14" fill="none" stroke="#e3735a" stroke-width="1.2" />
+                            </g>
+                            <polygon points="-8,-12 0,-24 8,-12" fill="#f5c46e" />
+                            <circle cx="0" cy="-14" r="2" fill="#003366" />
+                            <text x="0" y="105" fill="#fbf7f0" font-family="Manrope, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1.5">MARS KOLÓNIA</text>
+                            <text x="0" y="122" fill="#e3735a" font-family="Manrope, sans-serif" font-size="10" font-weight="600" text-anchor="middle">CÉL: 2030 EMBERES</text>
+                        </g>
+                        <!-- Marsra tartó űrhajó -->
+                        <g>
+                            <path d="M-14 -6 h18 l8 6 l-8 6 h-18 l5 -6 z" fill="#fbf7f0" stroke="#c95a41" stroke-width="1.2" />
+                            <polygon points="-14,-6 -20,-12 -8,-6" fill="#f5c46e" />
+                            <polygon points="-14,6 -20,12 -8,6" fill="#f5c46e" />
+                            <circle cx="6" cy="0" r="3" fill="#2ecc71" />
+                            <animateMotion dur="14s" repeatCount="indefinite" rotate="auto">
+                                <mpath href="#sr-hu-path-mars" />
+                            </animateMotion>
+                        </g>
+                        <!-- Holdra tartó szállítóhajó -->
+                        <g>
+                            <polygon points="10,0 -8,-7 -4,0 -8,7" fill="#ffffff" stroke="#003366" stroke-width="1" />
+                            <animateMotion dur="9s" repeatCount="indefinite" rotate="auto">
+                                <mpath href="#sr-hu-path-moon" />
+                            </animateMotion>
+                        </g>
+                        <!-- Küldetésfejléc -->
+                        <g font-family="Manrope, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">
+                            <rect x="310" y="20" width="540" height="32" rx="16" fill="#081817" stroke="#e3735a" stroke-width="1.2" opacity=".95" />
+                            <text x="580" y="41" fill="#fbf7f0" text-anchor="middle">CISLUNÁRIS ÉS MARSI BOLYGÓKÖZI FOLYOSÓ</text>
+                        </g>
+                    </g>
+                </svg>
+                <div class="ill-caption">
+                    <span><strong>1.2. Ábra:</strong> Mélyűri repülési folyosók: Föld-WNSS bázis, Autonóm Holdbázis és a 2030-as Mars-misszió.</span>
+                    <span>Hohmann-féle bolygóközi pálya · Autonóm rádiórelé</span>
+                </div>
+            </div>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/moon-waxing-crescent.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <span class="spec-badge">Felszíni Bázis</span>
+                    <h3>A Waikiki Holdbázis</h3>
+                    <p>A NASA és a WSA közös projektjeként épült holdbázishoz 12 Saturn X rakéta szállította az asztronautákat és az alkatrészeket egy éven keresztül. A holdbázis jelenleg autonóm távvezérléssel működik, folyamatos geológiai mintavételezést és sugárzásmérést végezve.</p>
+                    <ul class="spec-list">
+                        <li><span>Logisztika</span><strong>12 Saturn X nehézrakéta-indítás</strong></li>
+                        <li><span>Jelenlegi állapot</span><strong class="mission-status-pill status-active">Aktív távvezérelt működés</strong></li>
+                        <li><span>Helyszín</span><strong>Déli sarki Aitken-medence</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/earth.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <span class="spec-badge">Bolygóközi Cél</span>
+                    <h3>Emberes Mars-misszió 2030 előtt</h3>
+                    <p>A WSA kutatóinak eltökélt célja, hogy még 2030 előtt embereket küldjenek a Marsra, és biztonságban vissza is hozzák őket. A tervek szerint az űrhajósokat a SpaceX által kifejlesztett forradalmi bolygóközi rakétarendszer juttatja el a vörös bolygóra.</p>
+                    <ul class="spec-list">
+                        <li><span>Időkeret</span><strong>2030 előtti indítási ablak</strong></li>
+                        <li><span>Hordozórendszer</span><strong>SpaceX nehéz bolygóközi technológia</strong></li>
+                        <li><span>Fő feladat</span><strong>Felszíni kutatás és bázisépítés</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/satellite-variant.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <span class="spec-badge">Pályamenti Koncepció</span>
+                    <h3>Lockheed Martin Marsi Bázisállomás</h3>
+                    <p>A Lockheed Martin által megálmodott koncepció szerint az asztronauták egy folyamatosan keringő bázisállomás és kapcsolódó leszállóegységek révén érik el a Marsot. Nem szükséges a nehéz lakómodulokat a felszínre vinni és újra felbocsátani, így az út lényegesen kevesebb üzemanyagot igényel.</p>
+                    <ul class="spec-list">
+                        <li><span>Kapacitás</span><strong>8 asztronauta (2 leszállóegység)</strong></li>
+                        <li><span>Energiaforrás</span><strong>Napelemek és palládium-reaktor</strong></li>
+                        <li><span>Előny</span><strong>Fenntartható bolygóközi logisztika</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/robot-industrial.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <span class="spec-badge">Robotikus Felderítés</span>
+                    <h3>A Spirit II Marsjáró</h3>
+                    <p>Waikiki második marsjárója, a Spirit II 2018-ban indult útnak a negyedik bolygó felé. Megérkezése óta folyamatosan kőzetmintákat elemez, spektrometriás méréseket végez és páratlan részletességű felvételeket készít a marsi tájról.</p>
+                    <ul class="spec-list">
+                        <li><span>Indítás éve</span><strong>2018-as interplanetáris transzfer</strong></li>
+                        <li><span>Műszerek</span><strong>Kőzetelemzés és panorámakamerák</strong></li>
+                        <li><span>Küldetés státusza</span><strong>Kiterjesztett aktív működés</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="deep-space" class="fade-in">
+            <h2 class="section-title">Kozmikus Megfigyelés és Űrtávcsövek</h2>
+            <p class="section-intro">Az orbitális űrteleszkópoktól a Brazília tartomány hegyvidékein épülő földi rádióantennákig Waikiki a világegyetem legmélyebb titkait kutatja és idegen életformák nyomait keresi.</p>
+            <div class="ill-panel">
+                <svg class="ill" viewBox="0 0 1160 520" width="1160" height="520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mélyűri Megfigyelőhálózat és a Minas Gerais Rádióteleszkóp">
+                    <defs>
+                        <radialGradient id="ds-sky-hu" cx="50%" cy="30%" r="75%">
+                            <stop offset="0%" stop-color="#0a2c2a" />
+                            <stop offset="50%" stop-color="#041817" />
+                            <stop offset="100%" stop-color="#020a0a" />
+                        </radialGradient>
+                        <linearGradient id="ds-dish-metal-hu" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#e0f2ef" />
+                            <stop offset="50%" stop-color="#6BA4D9" />
+                            <stop offset="100%" stop-color="#003366" />
+                        </linearGradient>
+                        <linearGradient id="ds-gold-mesh-hu" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#fcedc7" />
+                            <stop offset="100%" stop-color="#b88937" />
+                        </linearGradient>
+                        <linearGradient id="ds-beam-glow-hu" x1="0%" y1="100%" x2="0%" y2="0%">
+                            <stop offset="0%" stop-color="rgba(107, 164, 217, 0)" />
+                            <stop offset="60%" stop-color="rgba(107, 164, 217, 0.25)" />
+                            <stop offset="100%" stop-color="rgba(245, 196, 110, 0.8)" />
+                        </linearGradient>
+                        <linearGradient id="ds-kepler-foil-hu" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#dfba76" />
+                            <stop offset="50%" stop-color="#fff2d6" />
+                            <stop offset="100%" stop-color="#c29a57" />
+                        </linearGradient>
+                    </defs>
+                    <rect width="1160" height="520" fill="url(#ds-sky-hu)" />
+                    <g fill="#ffffff">
+                        <circle cx="85" cy="70" r="1.5" class="twinkle" opacity=".8" />
+                        <circle cx="170" cy="115" r="1" class="twinkle" opacity=".6" />
+                        <circle cx="310" cy="65" r="1.8" class="twinkle" opacity=".9" />
+                        <circle cx="440" cy="95" r="1" class="twinkle" opacity=".5" />
+                        <circle cx="560" cy="50" r="2" class="twinkle" opacity=".95" />
+                        <circle cx="680" cy="110" r="1.2" class="twinkle" opacity=".7" />
+                        <circle cx="790" cy="45" r="1.6" class="twinkle" opacity=".8" />
+                        <circle cx="910" cy="90" r="1" class="twinkle" opacity=".6" />
+                        <circle cx="1060" cy="60" r="2.2" class="twinkle" opacity=".9" />
+                        <circle cx="1120" cy="130" r="1.2" class="twinkle" opacity=".7" />
+                        <circle cx="210" cy="180" r="1.4" class="twinkle" opacity=".6" />
+                        <circle cx="490" cy="170" r="1.2" class="twinkle" opacity=".75" />
+                        <circle cx="850" cy="160" r="1.5" class="twinkle" opacity=".7" />
+                        <circle cx="1010" cy="210" r="1.8" class="twinkle" opacity=".85" />
+                    </g>
+                    <g transform="translate(600, 130) rotate(-22)" opacity=".35">
+                        <ellipse cx="0" cy="0" rx="95" ry="34" fill="none" stroke="#6BA4D9" stroke-width="1.5" stroke-dasharray="10 8" />
+                        <ellipse cx="0" cy="0" rx="60" ry="20" fill="none" stroke="#dfba76" stroke-width="2" />
+                        <circle cx="0" cy="0" r="14" fill="#ffffff" filter="blur(3px)" />
+                        <circle cx="0" cy="0" r="6" fill="#fcedc7" />
+                    </g>
+                    <g transform="translate(420, 110)">
+                        <circle cx="0" cy="0" r="4" fill="#6BA4D9" />
+                        <circle cx="0" cy="0" r="18" fill="none" stroke="#6BA4D9" stroke-width="1" class="pulse" />
+                        <circle cx="0" cy="0" r="32" fill="none" stroke="#dfba76" stroke-width="0.8" class="pulse" style="animation-delay: 1.4s;" />
+                        <line x1="-30" y1="0" x2="30" y2="0" stroke="#6BA4D9" stroke-width="0.8" stroke-dasharray="2 3" />
+                        <line x1="0" y1="-30" x2="0" y2="30" stroke="#6BA4D9" stroke-width="0.8" stroke-dasharray="2 3" />
+                    </g>
+                    <path d="M0 450 Q 110 390 220 420 T 450 440 L 450 520 L 0 520 Z" fill="#031413" />
+                    <path d="M120 460 Q 240 410 360 445 T 560 470 L 560 520 L 120 520 Z" fill="#061c1a" opacity=".8" />
+                    <g transform="translate(260, 410)">
+                        <rect x="-45" y="20" width="90" height="40" rx="4" fill="#082826" stroke="#1A528F" stroke-width="1.5" />
+                        <polygon points="-55,60 -45,20 -30,20 -38,60" fill="#0c3532" />
+                        <polygon points="55,60 45,20 30,20 38,60" fill="#0c3532" />
+                        <path d="M-35 20 L-30 -10 L-15 -10 L-20 20 Z" fill="#003366" stroke="#6BA4D9" stroke-width="1" />
+                        <path d="M35 20 L30 -10 L15 -10 L20 20 Z" fill="#003366" stroke="#6BA4D9" stroke-width="1" />
+                        <circle cx="0" cy="-10" r="16" fill="#082220" stroke="#dfba76" stroke-width="2" />
+                        <g transform="rotate(-24, 0, -10)">
+                            <path d="M-125 -65 Q 0 10 125 -65" fill="none" stroke="url(#ds-dish-metal-hu)" stroke-width="6" />
+                            <path d="M-120 -60 Q 0 12 120 -60" fill="none" stroke="#041615" stroke-width="14" />
+                            <path d="M-115 -52 Q 0 16 115 -52" fill="none" stroke="#1A528F" stroke-width="2" stroke-dasharray="8 6" />
+                            <line x1="-95" y1="-50" x2="0" y2="-130" stroke="#c2ded8" stroke-width="2" />
+                            <line x1="95" y1="-50" x2="0" y2="-130" stroke="#c2ded8" stroke-width="2" />
+                            <circle cx="0" cy="-130" r="10" fill="#dfba76" stroke="#ffffff" stroke-width="1.5" />
+                            <polygon points="-8,-128 8,-128 0,-142" fill="#fcedc7" />
+                            <path d="M-50 -100 Q 0 -115 50 -100" fill="none" stroke="#6BA4D9" stroke-width="2" class="pulse" />
+                            <path d="M-80 -80 Q 0 -100 80 -80" fill="none" stroke="#dfba76" stroke-width="1.5" class="pulse" style="animation-delay: 1.2s;" />
+                            <polygon points="-25,-140 25,-140 180,-420 -180,-420" fill="url(#ds-beam-glow-hu)" />
+                        </g>
+                        <rect x="-140" y="48" width="55" height="22" rx="4" fill="#082220" stroke="#6BA4D9" stroke-width="1" />
+                        <circle cx="-128" cy="59" r="3" fill="#2ecc71" class="pulse" />
+                        <line x1="-128" y1="48" x2="-128" y2="30" stroke="#dfba76" stroke-width="1.5" />
+                        <polygon points="-132,30 -124,30 -128,24" fill="#dfba76" />
+                    </g>
+                    <g transform="translate(860, 250)">
+                        <ellipse cx="0" cy="0" rx="190" ry="70" fill="none" stroke="rgba(107, 164, 217, 0.2)" stroke-width="1" stroke-dasharray="6 6" />
+                        <g class="bob">
+                            <polygon points="-110,35 110,35 130,55 -130,55" fill="url(#ds-kepler-foil-hu)" stroke="#dfba76" stroke-width="1" />
+                            <polygon points="-100,42 100,42 120,60 -120,60" fill="#966c24" opacity=".8" />
+                            <rect x="-35" y="-65" width="70" height="100" rx="6" fill="#0a2826" stroke="#c2ded8" stroke-width="2" />
+                            <line x1="-35" y1="-20" x2="35" y2="-20" stroke="#1A528F" stroke-width="1.5" />
+                            <polygon points="-38,-65 38,-65 52,-115 -24,-115" fill="#061c1b" stroke="#6BA4D9" stroke-width="2" />
+                            <ellipse cx="14" cy="-88" rx="22" ry="12" fill="url(#ds-gold-mesh-hu)" stroke="#ffffff" stroke-width="1" />
+                            <circle cx="-38" cy="0" r="7" fill="#dfba76" />
+                            <circle cx="38" cy="0" r="7" fill="#dfba76" />
+                            <g class="spin-fast">
+                                <line x1="-38" y1="-6" x2="-38" y2="6" stroke="#082220" stroke-width="2" />
+                                <line x1="38" y1="-6" x2="38" y2="6" stroke="#082220" stroke-width="2" />
+                            </g>
+                            <rect x="-95" y="-15" width="55" height="30" rx="2" fill="#0e3a38" stroke="#dfba76" stroke-width="1.2" class="pulse-glow" />
+                            <line x1="-68" y1="-15" x2="-68" y2="15" stroke="#dfba76" stroke-width="1" />
+                            <rect x="40" y="-15" width="55" height="30" rx="2" fill="#0e3a38" stroke="#dfba76" stroke-width="1.2" class="pulse-glow" />
+                            <line x1="68" y1="-15" x2="68" y2="15" stroke="#dfba76" stroke-width="1" />
+                            <line x1="0" y1="35" x2="0" y2="65" stroke="#c2ded8" stroke-width="2" />
+                            <path d="M-18 65 Q 0 54 18 65" fill="none" stroke="#dfba76" stroke-width="2.5" />
+                            <line x1="0" y1="65" x2="-580" y2="160" stroke="#6BA4D9" stroke-width="1.5" class="dash-rev" stroke-dasharray="6 8" opacity=".7" />
+                        </g>
+                    </g>
+                    <g transform="translate(580, 360)">
+                        <rect x="-190" y="-60" width="380" height="120" rx="10" fill="#061e1d" stroke="#1A528F" stroke-width="1.5" opacity=".95" />
+                        <rect x="-190" y="-60" width="380" height="24" rx="10" fill="#082826" />
+                        <circle cx="-172" cy="-48" r="4" fill="#2ecc71" class="pulse" />
+                        <text x="-154" y="-44" fill="#fcedc7" font-family="Manrope, sans-serif" font-size="10" font-weight="700" letter-spacing="1">HIDROGÉNVONAL SPEKTRÁLIS MONITOR · 1,420 GHZ</text>
+                        <g transform="translate(-165, 30)">
+                            <rect x="0" y="-45" width="8" height="45" rx="2" fill="#1A528F" class="freq-bar-1" />
+                            <rect x="14" y="-35" width="8" height="35" rx="2" fill="#1A528F" class="freq-bar-2" />
+                            <rect x="28" y="-55" width="8" height="55" rx="2" fill="#6BA4D9" class="freq-bar-3" />
+                            <rect x="42" y="-28" width="8" height="28" rx="2" fill="#1A528F" class="freq-bar-4" />
+                            <rect x="56" y="-68" width="8" height="68" rx="2" fill="#dfba76" class="freq-bar-5" />
+                            <rect x="70" y="-82" width="10" height="82" rx="2" fill="#f5c46e" class="freq-bar-3" />
+                            <rect x="86" y="-48" width="8" height="48" rx="2" fill="#6BA4D9" class="freq-bar-2" />
+                            <rect x="100" y="-30" width="8" height="30" rx="2" fill="#1A528F" class="freq-bar-1" />
+                            <rect x="114" y="-20" width="8" height="20" rx="2" fill="#1A528F" class="freq-bar-4" />
+                            <rect x="128" y="-40" width="8" height="40" rx="2" fill="#1A528F" class="freq-bar-5" />
+                        </g>
+                        <g transform="translate(10, 5)">
+                            <rect x="0" y="-32" width="165" height="65" rx="4" fill="#041615" stroke="rgba(107, 164, 217, 0.3)" stroke-width="1" />
+                            <text x="8" y="-18" fill="#6BA4D9" font-family="Manrope, sans-serif" font-size="9" font-weight="700">KEPLER-452B ÁTVONULÁS</text>
+                            <path d="M10 8 L 50 8 Q 65 8 72 24 L 92 24 Q 99 8 114 8 L 155 8" fill="none" stroke="#dfba76" stroke-width="2" />
+                            <circle cx="82" cy="24" r="3" fill="#f5c46e" class="pulse" />
+                            <text x="8" y="28" fill="#d5ede9" font-family="Manrope, sans-serif" font-size="8">FÉNYÁLLANDÓ: -0,84% (LÉGKÖR ÉSZLELVE)</text>
+                        </g>
+                    </g>
+                    <g font-family="Manrope, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">
+                        <rect x="230" y="18" width="700" height="32" rx="16" fill="#061c1b" stroke="#6BA4D9" stroke-width="1.2" opacity=".95" />
+                        <circle cx="252" cy="34" r="4" fill="#2ecc71" class="pulse" />
+                        <text x="268" y="38" fill="#fbf7f0">MINAS GERAIS ÉS KEPLER MÉLYŰRI MEGFIGYELŐRENDSZER</text>
+                        <text x="690" y="38" fill="#dfba76">SETI 1,420 GHZ</text>
+                        <text x="815" y="38" fill="#2ecc71">JEL: 100%</text>
+                    </g>
+                    <g font-family="Manrope, sans-serif" font-size="10" font-weight="600" letter-spacing="1">
+                        <rect x="30" y="445" width="230" height="50" rx="8" fill="#061c1b" stroke="rgba(107, 164, 217, 0.4)" stroke-width="1" opacity=".9" />
+                        <text x="44" y="468" fill="#f5c46e">MINAS GERAIS RÁDIÓTELESZKÓP</text>
+                        <text x="44" y="484" fill="#bedbd6">AZ: 214,6° · EL: 68,2° · ZENIT RADAR</text>
+                    </g>
+                    <g font-family="Manrope, sans-serif" font-size="10" font-weight="600" letter-spacing="1" text-anchor="end">
+                        <rect x="900" y="445" width="230" height="50" rx="8" fill="#061c1b" stroke="rgba(107, 164, 217, 0.4)" stroke-width="1" opacity=".9" />
+                        <text x="1116" y="468" fill="#6BA4D9">KEPLER ŰRMEGFIGYELŐ</text>
+                        <text x="1116" y="484" fill="#bedbd6">PÁLYA: 720 KM · EXOBOLYGÓ KUTATÁS</text>
+                    </g>
+                </svg>
+                <div class="ill-caption">
+                    <span><strong>1.3. Ábra:</strong> A mélyűri megfigyelőhálózat összekapcsolja a Minas Gerais-i óriási rádióteleszkópot a Kepler Föld körüli távcsövével.</span>
+                    <span>1,420 GHz-es hidrogénvivő szinkron · Exobolygó légköri spektrometria</span>
+                </div>
+            </div>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/telescope.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <span class="spec-badge">Orbitális Obszervatórium</span>
+                    <h3>A Kepler Űrtávcső</h3>
+                    <p>Hatalmas fizikai mérete miatt a Kepler űrtávcsövet két különálló darabban állították Föld körüli pályára Delta III hordozórakétákkal, és 2017-ben a világűrben szerelték össze. A légköri zavaroktól mentes környezetből vizsgálja az exobolygókat és az Androméda-galaxist.</p>
+                    <ul class="spec-list">
+                        <li><span>Összeszerelés</span><strong>2017-es űrbéli dokkolás</strong></li>
+                        <li><span>Hordozórakéták</span><strong>2x Delta III típusú rakéta</strong></li>
+                        <li><span>Fő kutatási terület</span><strong>Exobolygók és távoli galaxisok</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/antenna.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <span class="spec-badge">Óriás Földi Antenna</span>
+                    <h3>A Minas Gerais Rádióteleszkóp</h3>
+                    <p>Brazília tartományban, a Minas Gerais dombság lankái között épül a világ legnagyobb rádióteleszkópja. Elkészülésekor az univerzum máig ismeretlen szegleteit térképezi fel és rádiófrekvenciás jelek után kutatva földönkívüli életformák létezését keresi.</p>
+                    <ul class="spec-list">
+                        <li><span>Elhelyezkedés</span><strong>Minas Gerais, Brazília tartomány</strong></li>
+                        <li><span>Antenna mérete</span><strong>A világ legnagyobb tányérantennája</strong></li>
+                        <li><span>Küldetés</span><strong>SETI és ismeretlen mélyűr-térképezés</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/shield-star.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <span class="spec-badge">Bolygóvédelem</span>
+                    <h3>Kozmikus Megfigyelőhálózat</h3>
+                    <p>Waikiki mélyűri érzékelőhálózata a Föld-közeli aszteroidák és űrszemét-pályák korai modellezését végzi. Ez az orbitális radarrendszer biztosítja az állami infrastruktúra sérthetetlenségét és a bolygószintű védelmi készenlétet.</p>
+                    <ul class="spec-list">
+                        <li><span>Radarrendszer</span><strong>Orbitális és hegyvidéki fúzió</strong></li>
+                        <li><span>Reakcióidő</span><strong>Valós idejű pálya-előrejelzés</strong></li>
+                        <li><span>Lefedettség</span><strong>360 fokos cislunáris tér</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="propulsion" class="light-bg fade-in">
+            <h2 class="section-title">Új Generációs Hordozórakéták és Hajtóművek</h2>
+            <p class="section-intro">A technológiai fölény alapját az állami és magán űrvállalatok által közösen kifejlesztett, világrekordot döntő nehézrakéták és tiszta energiájú űrkikötők biztosítják.</p>
+            <div class="ill-panel">
+                <svg class="ill" viewBox="0 0 1160 520" width="1160" height="520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Delta IV Szupernehéz Hordozórakéta és Mélyűri Bolygóközi Meghajtórendszer">
+                    <defs>
+                        <radialGradient id="pr-sky-hu" cx="50%" cy="40%" r="70%">
+                            <stop offset="0%" stop-color="#0a2a26" />
+                            <stop offset="60%" stop-color="#051715" />
+                            <stop offset="100%" stop-color="#020a09" />
+                        </radialGradient>
+                        <linearGradient id="pr-booster-skin-hu" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#fdfdfd" />
+                            <stop offset="50%" stop-color="#e2efed" />
+                            <stop offset="100%" stop-color="#b1d1cc" />
+                        </linearGradient>
+                        <linearGradient id="pr-cryo-tank-hu" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#003366" />
+                            <stop offset="50%" stop-color="#1A528F" />
+                            <stop offset="100%" stop-color="#093836" />
+                        </linearGradient>
+                        <linearGradient id="pr-flame-hu" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#ffffff" />
+                            <stop offset="25%" stop-color="#ffb142" />
+                            <stop offset="65%" stop-color="#ff5252" />
+                            <stop offset="100%" stop-color="rgba(255, 82, 82, 0)" />
+                        </linearGradient>
+                        <linearGradient id="pr-ion-plume-hu" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#ffffff" />
+                            <stop offset="25%" stop-color="#6BA4D9" />
+                            <stop offset="70%" stop-color="#003366" />
+                            <stop offset="100%" stop-color="rgba(0, 51, 102, 0)" />
+                        </linearGradient>
+                        <radialGradient id="pr-palladium-glow-hu" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="#ffffff" />
+                            <stop offset="40%" stop-color="#dfba76" />
+                            <stop offset="80%" stop-color="#1A528F" />
+                            <stop offset="100%" stop-color="rgba(26, 82, 143, 0)" />
+                        </radialGradient>
+                    </defs>
+                    <rect width="1160" height="520" fill="url(#pr-sky-hu)" />
+                    <g stroke="rgba(107, 164, 217, 0.08)" stroke-width="1">
+                        <line x1="0" y1="130" x2="1160" y2="130" />
+                        <line x1="0" y1="260" x2="1160" y2="260" />
+                        <line x1="0" y1="390" x2="1160" y2="390" />
+                        <line x1="290" y1="0" x2="290" y2="520" />
+                        <line x1="580" y1="0" x2="580" y2="520" />
+                        <line x1="870" y1="0" x2="870" y2="520" />
+                    </g>
+                    <g transform="translate(260, 240)">
+                        <polygon points="0,-165 -32,-115 32,-115" fill="url(#pr-booster-skin-hu)" stroke="#003366" stroke-width="2" />
+                        <rect x="-32" y="-115" width="64" height="40" fill="url(#pr-booster-skin-hu)" stroke="#003366" stroke-width="2" />
+                        <text x="0" y="-90" fill="#093836" font-family="Manrope, sans-serif" font-size="8" font-weight="800" text-anchor="middle" letter-spacing="1">270 T RAKOMÁNY</text>
+                        <rect x="-32" y="-75" width="64" height="155" fill="url(#pr-booster-skin-hu)" stroke="#003366" stroke-width="2" />
+                        <rect x="-24" y="-65" width="48" height="55" rx="8" fill="url(#pr-cryo-tank-hu)" stroke="#6BA4D9" stroke-width="1.2" />
+                        <text x="0" y="-35" fill="#fcedc7" font-family="Manrope, sans-serif" font-size="8" font-weight="700" text-anchor="middle">FOLYÉKONY O2</text>
+                        <rect x="-24" y="-2" width="48" height="68" rx="8" fill="url(#pr-cryo-tank-hu)" stroke="#6BA4D9" stroke-width="1.2" />
+                        <text x="0" y="35" fill="#fcedc7" font-family="Manrope, sans-serif" font-size="8" font-weight="700" text-anchor="middle">FOLYÉKONY H2</text>
+                        <g transform="translate(-56, 0)">
+                            <polygon points="0,-115 -18,-80 18,-80" fill="url(#pr-booster-skin-hu)" stroke="#003366" stroke-width="1.5" />
+                            <rect x="-18" y="-80" width="36" height="155" rx="3" fill="url(#pr-booster-skin-hu)" stroke="#003366" stroke-width="1.5" />
+                            <line x1="18" y1="-40" x2="24" y2="-40" stroke="#dfba76" stroke-width="3" />
+                            <line x1="18" y1="50" x2="24" y2="50" stroke="#dfba76" stroke-width="3" />
+                            <polygon points="-12,75 12,75 16,92 -16,92" fill="#2b2b2b" stroke="#dfba76" stroke-width="1.5" />
+                            <polygon points="-14,92 14,92 0,165" fill="url(#pr-flame-hu)" class="flame-pulse" />
+                        </g>
+                        <g transform="translate(56, 0)">
+                            <polygon points="0,-115 -18,-80 18,-80" fill="url(#pr-booster-skin-hu)" stroke="#003366" stroke-width="1.5" />
+                            <rect x="-18" y="-80" width="36" height="155" rx="3" fill="url(#pr-booster-skin-hu)" stroke="#003366" stroke-width="1.5" />
+                            <line x1="-18" y1="-40" x2="-24" y2="-40" stroke="#dfba76" stroke-width="3" />
+                            <line x1="-18" y1="50" x2="-24" y2="50" stroke="#dfba76" stroke-width="3" />
+                            <polygon points="-12,75 12,75 16,92 -16,92" fill="#2b2b2b" stroke="#dfba76" stroke-width="1.5" />
+                            <polygon points="-14,92 14,92 0,165" fill="url(#pr-flame-hu)" class="flame-pulse" />
+                        </g>
+                        <g transform="translate(0, 80)">
+                            <polygon points="-24,0 -8,0 -6,18 -26,18" fill="#1b1b1b" stroke="#dfba76" stroke-width="1.2" />
+                            <polygon points="-6,0 10,0 12,18 -4,18" fill="#1b1b1b" stroke="#dfba76" stroke-width="1.2" />
+                            <polygon points="10,0 26,0 28,18 8,18" fill="#1b1b1b" stroke="#dfba76" stroke-width="1.2" />
+                            <polygon points="-26,18 -6,18 -16,115" fill="url(#pr-flame-hu)" class="flame-pulse" />
+                            <polygon points="-4,18 12,18 4,125" fill="url(#pr-flame-hu)" class="flame-pulse" style="animation-delay: 0.1s;" />
+                            <polygon points="8,18 28,18 18,115" fill="url(#pr-flame-hu)" class="flame-pulse" style="animation-delay: 0.18s;" />
+                        </g>
+                    </g>
+                    <g transform="translate(860, 240)">
+                        <rect x="-195" y="-12" width="390" height="24" rx="4" fill="#0b2c2a" stroke="#6BA4D9" stroke-width="2" />
+                        <line x1="-180" y1="-12" x2="-160" y2="12" stroke="#1A528F" stroke-width="1.5" />
+                        <line x1="-140" y1="-12" x2="-120" y2="12" stroke="#1A528F" stroke-width="1.5" />
+                        <line x1="-100" y1="-12" x2="-80" y2="12" stroke="#1A528F" stroke-width="1.5" />
+                        <line x1="80" y1="-12" x2="100" y2="12" stroke="#1A528F" stroke-width="1.5" />
+                        <line x1="120" y1="-12" x2="140" y2="12" stroke="#1A528F" stroke-width="1.5" />
+                        <line x1="160" y1="-12" x2="180" y2="12" stroke="#1A528F" stroke-width="1.5" />
+                        <circle cx="0" cy="0" r="48" fill="#061e1d" stroke="#dfba76" stroke-width="2" />
+                        <circle cx="0" cy="0" r="38" fill="url(#pr-palladium-glow-hu)" class="pulse" />
+                        <g class="spin">
+                            <circle cx="0" cy="0" r="34" fill="none" stroke="#fcedc7" stroke-width="3" stroke-dasharray="14 10" />
+                        </g>
+                        <text x="0" y="4" fill="#061e1d" font-family="Manrope, sans-serif" font-size="9" font-weight="800" text-anchor="middle">Pd-MAG</text>
+                        <g transform="translate(0, -70)">
+                            <rect x="-55" y="0" width="110" height="42" rx="3" fill="#082220" stroke="#6BA4D9" stroke-width="1.2" opacity=".9" />
+                            <line x1="-55" y1="14" x2="55" y2="14" stroke="#6BA4D9" stroke-width="1" />
+                            <line x1="-55" y1="28" x2="55" y2="28" stroke="#6BA4D9" stroke-width="1" />
+                        </g>
+                        <g transform="translate(0, 28)">
+                            <rect x="-55" y="0" width="110" height="42" rx="3" fill="#082220" stroke="#6BA4D9" stroke-width="1.2" opacity=".9" />
+                            <line x1="-55" y1="14" x2="55" y2="14" stroke="#6BA4D9" stroke-width="1" />
+                            <line x1="-55" y1="28" x2="55" y2="28" stroke="#6BA4D9" stroke-width="1" />
+                        </g>
+                        <g transform="translate(140, 0)">
+                            <ellipse cx="40" cy="0" rx="35" ry="24" fill="url(#pr-booster-skin-hu)" stroke="#003366" stroke-width="1.8" />
+                            <g transform="translate(15, -45)">
+                                <polygon points="-16,0 16,0 22,-22 -22,-22" fill="#fbf7f0" stroke="#003366" stroke-width="1.2" />
+                                <rect x="-10" y="0" width="20" height="8" fill="#dfba76" />
+                                <text x="0" y="-10" fill="#093836" font-family="Manrope, sans-serif" font-size="7" font-weight="700" text-anchor="middle">1. LESZÁLLÓ</text>
+                            </g>
+                            <g transform="translate(15, 45)">
+                                <polygon points="-16,0 16,0 22,22 -22,22" fill="#fbf7f0" stroke="#003366" stroke-width="1.2" />
+                                <rect x="-10" y="-8" width="20" height="8" fill="#dfba76" />
+                                <text x="0" y="14" fill="#093836" font-family="Manrope, sans-serif" font-size="7" font-weight="700" text-anchor="middle">2. LESZÁLLÓ</text>
+                            </g>
+                        </g>
+                        <g transform="translate(-195, 0)">
+                            <rect x="-14" y="-30" width="14" height="20" rx="2" fill="#2b2b2b" stroke="#6BA4D9" stroke-width="1.5" />
+                            <rect x="-14" y="10" width="14" height="20" rx="2" fill="#2b2b2b" stroke="#6BA4D9" stroke-width="1.5" />
+                            <polygon points="-14,-28 -95,-20 -14,-12" fill="url(#pr-ion-plume-hu)" class="pulse" />
+                            <polygon points="-14,12 -95,20 -14,28" fill="url(#pr-ion-plume-hu)" class="pulse" style="animation-delay: 0.5s;" />
+                            <line x1="-14" y1="-20" x2="-140" y2="-20" stroke="#6BA4D9" stroke-width="2" class="dash-rev" stroke-dasharray="6 8" />
+                            <line x1="-14" y1="20" x2="-140" y2="20" stroke="#6BA4D9" stroke-width="2" class="dash-rev" stroke-dasharray="6 8" />
+                        </g>
+                    </g>
+                    <g transform="translate(560, 240)">
+                        <rect x="-110" y="-95" width="220" height="190" rx="12" fill="#061e1d" stroke="#1A528F" stroke-width="1.5" opacity=".95" />
+                        <rect x="-110" y="-95" width="220" height="28" rx="12" fill="#082826" />
+                        <text x="0" y="-76" fill="#fcedc7" font-family="Manrope, sans-serif" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="1">MEGHAJTÁSI DINAMIKA</text>
+                        <text x="-92" y="-45" fill="#6BA4D9" font-family="Manrope, sans-serif" font-size="9" font-weight="700">DELTA IV SZUPERNEHÉZ</text>
+                        <rect x="-92" y="-38" width="184" height="8" rx="4" fill="#041615" />
+                        <rect x="-92" y="-38" width="175" height="8" rx="4" fill="#dfba76" />
+                        <text x="-92" y="-18" fill="#d5ede9" font-family="Manrope, sans-serif" font-size="8">TOLÓERŐ: 38 500 KN · LEO: 270 T</text>
+                        <text x="-92" y="8" fill="#6BA4D9" font-family="Manrope, sans-serif" font-size="9" font-weight="700">IONHAJTÓMŰ SPECIFIKUS IMPULZUS</text>
+                        <rect x="-92" y="15" width="184" height="8" rx="4" fill="#041615" />
+                        <rect x="-92" y="15" width="168" height="8" rx="4" fill="#2ecc71" />
+                        <text x="-92" y="35" fill="#d5ede9" font-family="Manrope, sans-serif" font-size="8">ISP: 4 800 S · PALLÁDIUM HIBRID</text>
+                        <line x1="-92" y1="48" x2="92" y2="48" stroke="rgba(107, 164, 217, 0.2)" stroke-width="1" />
+                        <text x="0" y="65" fill="#fcedc7" font-family="Manrope, sans-serif" font-size="9" font-weight="700" text-anchor="middle">TRANZIT: 118 NAP A MARSIG</text>
+                        <text x="0" y="79" fill="#6BA4D9" font-family="Manrope, sans-serif" font-size="8" text-anchor="middle">NULLA VESZTESÉGŰ KRIOGÉN CIKLUS</text>
+                    </g>
+                    <g font-family="Manrope, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">
+                        <rect x="220" y="18" width="720" height="32" rx="16" fill="#061c1b" stroke="#6BA4D9" stroke-width="1.2" opacity=".95" />
+                        <circle cx="242" cy="34" r="4" fill="#2ecc71" class="pulse" />
+                        <text x="258" y="38" fill="#fbf7f0">DELTA IV SZUPERNEHÉZ RAKÉTA ÉS MARS-CYCLER MEGHAJTÁS</text>
+                        <text x="750" y="38" fill="#dfba76">TEHER: 270 T</text>
+                        <text x="865" y="38" fill="#2ecc71">ISP: 4800 S</text>
+                    </g>
+                    <g font-family="Manrope, sans-serif" font-size="10" font-weight="600" letter-spacing="1">
+                        <rect x="30" y="445" width="240" height="50" rx="8" fill="#061c1b" stroke="rgba(107, 164, 217, 0.4)" stroke-width="1" opacity=".9" />
+                        <text x="44" y="468" fill="#f5c46e">DELTA IV INDÍTÓRENDSZER</text>
+                        <text x="44" y="484" fill="#bedbd6">4 VEKTORÁLT GIMBAL FÚVÓKA · 60 T SIKLÓ</text>
+                    </g>
+                    <g font-family="Manrope, sans-serif" font-size="10" font-weight="600" letter-spacing="1" text-anchor="end">
+                        <rect x="890" y="445" width="240" height="50" rx="8" fill="#061c1b" stroke="rgba(107, 164, 217, 0.4)" stroke-width="1" opacity=".9" />
+                        <text x="1116" y="468" fill="#6BA4D9">LOCKHEED MARS-CYCLER</text>
+                        <text x="1116" y="484" fill="#bedbd6">8 FŐS LEGÉNYSÉG · 2 LESZÁLLÓ · Pd MEGHAJTÁS</text>
+                    </g>
+                </svg>
+                <div class="ill-caption">
+                    <span><strong>1.4. Ábra:</strong> A többmagos Delta IV szupernehéz hordozórakéta fokozatválasztása és a Lockheed palládium-reaktoros mélyűri Mars-cycler egysége.</span>
+                    <span>270 tonna hasznos teher Föld körüli pályára · Magas hatásfokú xenon ionhajtómű</span>
+                </div>
+            </div>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/fire.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <span class="spec-badge">Szupernehéz Teherbírás</span>
+                    <h3>Delta IV Űrrakéta</h3>
+                    <p>A fejlesztés alatt álló Delta IV a világ legerősebb hordozórakétájának készül. A pontos mérnöki számítások szerint több mint 270 tonnányi szállítmányt lesz képes magával vinni az űrbéli útjára, megnyitva a kaput az interplanetáris nehézlogisztika előtt.</p>
+                    <ul class="spec-list">
+                        <li><span>Hasznos teher</span><strong>270+ tonna pályára állítási kapacitás</strong></li>
+                        <li><span>Felépítés</span><strong>Több fokozatú kriogenikus hajtás</strong></li>
+                        <li><span>Elsődleges feladat</span><strong>Mélyűri és marsi nehézrakomány</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/engine.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <span class="spec-badge">Irányított Tolóerő</span>
+                    <h3>Négyfúvókás Gyorsítórakéták</h3>
+                    <p>A tesztelés alatt álló új hordozórakéták négy különálló gyorsító fúvókával rendelkeznek, ami ugrásszerűen megnöveli a teljesítményüket. Használatukkal a waikiki űrsiklók akár 60 tonnányi felszerelést is képesek alacsony Föld körüli pályára juttatni.</p>
+                    <ul class="spec-list">
+                        <li><span>Fúvóka-kialakítás</span><strong>4 vektoros tolóerőkamra</strong></li>
+                        <li><span>Sikló teherbírása</span><strong>Akár 60 tonna LEO pályán</strong></li>
+                        <li><span>Hatékonyságnövekedés</span><strong>+35% üzemanyag-optimalizálás</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/lightning-bolt.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <span class="spec-badge">Ionmeghajtás</span>
+                    <h3>Expeditioner Osztályú Űrsiklók</h3>
+                    <p>Az Expeditioner osztályú űrhajók korszerű ionhajtóműveikkel páratlan hatékonyságot érnek el a hosszútávú bolygóközi utazások során. Alacsony üzemanyag-fogyasztásuk révén könnyedén képesek megkerülni a Holdat és visszatérni a Föld körüli állomásra.</p>
+                    <ul class="spec-list">
+                        <li><span>Hajtóműtípus</span><strong>Nagy teljesítményű xenon-ion hajtás</strong></li>
+                        <li><span>Hatótávolság</span><strong>Hold- és földközeli aszteroidák</strong></li>
+                        <li><span>Üzemeltetés</span><strong>Hosszú távú autonóm repülés</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="https://api.iconify.design/mdi/solar-power.svg?color=%23003366&width=56&height=56" alt="" /></span>
+                    <span class="spec-badge">Zöld Űrközpont</span>
+                    <h3>Nova Aurelia Kilövőkomplexum</h3>
+                    <p>A SpaceX-szel közösen 2018-ban átadott Nova Aurelia Launch Complex a világ első, teljesen megújuló energiával üzemelő rakétaindító bázisa. Nap- és szélenergiával táplált hidrogénbontó üzemei közvetlenül a helyszínen állítják elő a zöld rakéta-üzemanyagot.</p>
+                    <ul class="spec-list">
+                        <li><span>Elhelyezkedés</span><strong>Nova Aurelia tengerparti szektor</strong></li>
+                        <li><span>Energiaellátás</span><strong>100% nap- és tengeri szélenergia</strong></li>
+                        <li><span>Átadás dátuma</span><strong>2018-as ünnepélyes megnyitó</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="digital-space" class="fade-in">
+            <h2 class="section-title">Digitális állam, orbitális elérés</h2>
+            <p class="section-intro">Waikiki legnagyratörőbb infrastruktúrája az utcáról láthatatlan: biztonságos digitális gerinchálózat minden állampolgár számára és állandó jelenlét 200 kilométerrel a Föld felett.</p>
+            <figure class="ill-panel" data-reveal="zoom">
+                <svg class="ill" viewBox="0 0 1160 540" role="img" aria-label="A Waikiki Nemzeti Űrállomás alacsony Föld körüli pályán">
+                    <defs>
+                        <clipPath id="sp-clip">
+                            <rect width="1160" height="540" rx="28" />
+                        </clipPath>
+                        <radialGradient id="sp-space-glow" cx="50%" cy="35%" r="65%">
+                            <stop offset="0%" stop-color="#092825" />
+                            <stop offset="55%" stop-color="#051717" />
+                            <stop offset="100%" stop-color="#020d0d" />
+                        </radialGradient>
+                        <radialGradient id="sp-earth" cx="50%" cy="0%" r="85%">
+                            <stop offset="0%" stop-color="#5eb8ab" />
+                            <stop offset="25%" stop-color="#24877e" />
+                            <stop offset="60%" stop-color="#0f4944" />
+                            <stop offset="100%" stop-color="#051f1e" />
+                        </radialGradient>
+                        <linearGradient id="sp-solar" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#ffdc89" />
+                            <stop offset="35%" stop-color="#d9a74a" />
+                            <stop offset="70%" stop-color="#b07d2b" />
+                            <stop offset="100%" stop-color="#7a5416" />
+                        </linearGradient>
+                        <linearGradient id="sp-mod-h" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#ffffff" />
+                            <stop offset="35%" stop-color="#eaf3f1" />
+                            <stop offset="75%" stop-color="#cbe0dc" />
+                            <stop offset="100%" stop-color="#99b6b1" />
+                        </linearGradient>
+                        <linearGradient id="sp-mod-v" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#ffffff" />
+                            <stop offset="40%" stop-color="#eaf3f1" />
+                            <stop offset="75%" stop-color="#cbe0dc" />
+                            <stop offset="100%" stop-color="#99b6b1" />
+                        </linearGradient>
+                        <linearGradient id="sp-rad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#f0f7f6" />
+                            <stop offset="50%" stop-color="#d4e8e4" />
+                            <stop offset="100%" stop-color="#a8cac4" />
+                        </linearGradient>
+                        <linearGradient id="sp-shut" x1="0%" y1="0%" x2="100%" y2="40%">
+                            <stop offset="0%" stop-color="#ffffff" />
+                            <stop offset="50%" stop-color="#edf6f4" />
+                            <stop offset="100%" stop-color="#bed6d1" />
+                        </linearGradient>
+                    </defs>
+                    <g clip-path="url(#sp-clip)">
+                        <!-- Space Canvas és Nebula Background -->
+                        <rect width="1160" height="540" fill="url(#sp-space-glow)" />
+                        <ellipse cx="280" cy="130" rx="360" ry="110" fill="#14514c" opacity=".22" />
+                        <ellipse cx="880" cy="160" rx="320" ry="120" fill="#1a5a54" opacity=".18" />
+                        <ellipse cx="580" cy="70" rx="260" ry="60" fill="#6BA4D9" opacity=".08" />
+                        <!-- Starfield -->
+                        <g fill="#fbf7f0">
+                            <circle class="twinkle" cx="45" cy="45" r="1.5" />
+                            <circle class="twinkle" cx="95" cy="110" r="1" />
+                            <circle class="twinkle" cx="160" cy="50" r="1.8" />
+                            <circle class="twinkle" cx="230" cy="95" r="1.2" />
+                            <circle class="twinkle" cx="310" cy="40" r="1.6" />
+                            <circle class="twinkle" cx="390" cy="85" r="1" />
+                            <circle class="twinkle" cx="460" cy="30" r="2" />
+                            <circle class="twinkle" cx="520" cy="70" r="1.3" />
+                            <circle class="twinkle" cx="620" cy="35" r="1.7" />
+                            <circle class="twinkle" cx="700" cy="80" r="1.1" />
+                            <circle class="twinkle" cx="780" cy="45" r="1.9" />
+                            <circle class="twinkle" cx="850" cy="90" r="1.2" />
+                            <circle class="twinkle" cx="930" cy="35" r="1.6" />
+                            <circle class="twinkle" cx="1010" cy="75" r="1.3" />
+                            <circle class="twinkle" cx="1080" cy="40" r="1.8" />
+                            <circle class="twinkle" cx="1120" cy="110" r="1" />
+                            <circle class="twinkle" cx="80" cy="170" r="1.2" />
+                            <circle class="twinkle" cx="190" cy="180" r="1.5" />
+                            <circle class="twinkle" cx="980" cy="160" r="1.4" />
+                            <circle class="twinkle" cx="1070" cy="190" r="1.1" />
+                            <circle class="twinkle" cx="50" cy="260" r="1" />
+                            <circle class="twinkle" cx="1110" cy="250" r="1.3" />
+                            <circle cx="130" cy="75" r="0.8" opacity=".6" />
+                            <circle cx="270" cy="65" r="0.9" opacity=".5" />
+                            <circle cx="360" cy="115" r="0.7" opacity=".7" />
+                            <circle cx="430" cy="60" r="0.8" opacity=".5" />
+                            <circle cx="650" cy="55" r="0.9" opacity=".6" />
+                            <circle cx="740" cy="110" r="0.8" opacity=".7" />
+                            <circle cx="820" cy="65" r="0.7" opacity=".6" />
+                            <circle cx="890" cy="115" r="0.9" opacity=".5" />
+                            <circle cx="1050" cy="110" r="0.8" opacity=".7" />
+                            <circle cx="30" cy="130" r="0.7" opacity=".6" />
+                        </g>
+                        <!-- Planet Earth Horizon Arc -->
+                        <path d="M-60 620 C 260 410, 900 410, 1220 620 L 1220 680 L -60 680 Z" fill="url(#sp-earth)" />
+                        <!-- Atmospheric Glow Layers -->
+                        <path d="M-60 620 C 260 410, 900 410, 1220 620" fill="none" stroke="#6BA4D9" stroke-width="26" opacity=".18" />
+                        <path d="M-60 620 C 260 410, 900 410, 1220 620" fill="none" stroke="#66c9bc" stroke-width="12" opacity=".38" />
+                        <path d="M-60 620 C 260 410, 900 410, 1220 620" fill="none" stroke="#d5f6f1" stroke-width="3" opacity=".85" />
+                        <!-- Earth Continents, Coastal Shelves és Ocean Patterns -->
+                        <path d="M180 500 c60-25 150-30 220-10 c40 12 90 8 130-15 c30-18 80-20 120-4 c50 20 120 15 170-12 c40-22 90-18 130 5" fill="none" stroke="#3db6a6" stroke-width="16" stroke-linecap="round" opacity=".55" />
+                        <path d="M160 505 c50-20 130-24 190-8 c35 10 75 6 110-14 c28-16 70-18 105-3 c45 18 105 14 150-10 c38-20 85-15 120 8" fill="none" stroke="#4a8b60" stroke-width="10" stroke-linecap="round" opacity=".8" />
+                        <path d="M290 480 c30-6 60 2 85 14 c-20 6-50 4-75-6 z" fill="#62a56f" opacity=".7" />
+                        <path d="M480 460 c40-10 80-8 115 6 c-30 8-70 6-105-4 z" fill="#62a56f" opacity=".7" />
+                        <path d="M680 470 c35-12 75-10 110 5 c-25 7-65 6-95-3 z" fill="#62a56f" opacity=".7" />
+                        <!-- City Night Lights Sparkling Below -->
+                        <g fill="#f5c46e" opacity=".85">
+                            <circle cx="230" cy="500" r="1.5" />
+                            <circle cx="245" cy="496" r="1.2" />
+                            <circle cx="260" cy="502" r="1" />
+                            <circle cx="280" cy="490" r="1.4" />
+                            <circle cx="340" cy="485" r="1.6" />
+                            <circle cx="355" cy="482" r="1.2" />
+                            <circle cx="370" cy="488" r="1.4" />
+                            <circle cx="390" cy="480" r="1.8" />
+                            <circle cx="510" cy="460" r="1.8" />
+                            <circle cx="530" cy="458" r="1.3" />
+                            <circle cx="550" cy="462" r="1.5" />
+                            <circle cx="620" cy="465" r="1.4" />
+                            <circle cx="640" cy="462" r="1.6" />
+                            <circle cx="665" cy="468" r="1.2" />
+                            <circle cx="730" cy="475" r="1.5" />
+                            <circle cx="750" cy="472" r="1.7" />
+                            <circle cx="780" cy="478" r="1.3" />
+                        </g>
+                        <!-- Cloud Bands -->
+                        <path d="M120 480 C 240 440, 360 460, 440 445 M 500 435 C 600 425, 720 440, 840 430 M 890 440 C 960 435, 1040 455, 1100 475" stroke="#f0fbf9" stroke-width="7" stroke-linecap="round" fill="none" opacity=".28" />
+                        <path d="M220 520 C 320 490, 420 500, 520 480 M 640 485 C 750 475, 860 490, 950 480" stroke="#f0fbf9" stroke-width="4" stroke-linecap="round" fill="none" opacity=".22" />
+                        <!-- Orbital Trajectory Line -->
+                        <path d="M40 330 C 300 200, 860 200, 1120 330" fill="none" stroke="#f5c46e" stroke-width="1.8" stroke-dasharray="6 8" opacity=".7" class="dash" />
+                        <!-- Approaching Spacecraft in Flight -->
+                        <g>
+                            <path d="M-10 -4h14l6 4-6 4h-14z" fill="#fbf7f0" />
+                            <path d="M-10 -4l-4-4h4zM-10 4l-4 4h4z" fill="#e3735a" />
+                            <circle cx="0" cy="0" r="2" fill="#6BA4D9" />
+                            <animateMotion dur="14s" repeatCount="indefinite" rotate="auto" path="M40 330 C 300 200, 860 200, 1120 330" />
+                        </g>
+                        <!-- Top HUD Header és Telemetry Data -->
+                        <g font-family="Manrope, sans-serif" letter-spacing="2">
+                            <rect x="380" y="16" width="400" height="28" rx="14" fill="#0b2c29" stroke="#f5c46e" stroke-width="1.2" opacity=".95" />
+                            <circle cx="402" cy="30" r="4" fill="#e3735a" class="pulse" />
+                            <text x="586" y="34" text-anchor="middle" font-size="11" font-weight="700" fill="#f5c46e">WAIKIKI NEMZETI ŰRÁLLOMÁS</text>
+                        </g>
+                        <g font-family="Manrope, sans-serif" font-size="9" fill="#bfe4de" letter-spacing="1.2">
+                            <text x="50" y="44" font-weight="700" fill="#f5c46e">WSA // ORBITÁLIS KUTATÓKOMPLEXUM</text>
+                            <text x="50" y="60" opacity=".85">PÁLYAMAGASSÁG: 200 KM · HAJLÁSSZÖG: 28,5°</text>
+                            <text x="50" y="76" opacity=".85">KERINGÉSI SEBESSÉG: 7,76 KM/S · PERIÓDUS: 88,4 PERC</text>
+                        </g>
+                        <g font-family="Manrope, sans-serif" font-size="9" fill="#bfe4de" letter-spacing="1.2" text-anchor="end">
+                            <text x="1110" y="44" font-weight="700" fill="#f5c46e">BERUHÁZÁS: $200B · ALAPÍTVA: 2006</text>
+                            <text x="1110" y="60" opacity=".85">MODULOK: ALAPMODUL · LABOROK · KUPOLA · ZSILIP</text>
+                            <text x="1110" y="76" opacity=".85">FLOTTA: ANDROMEDA · ALDRIN · COLUMBUS</text>
+                        </g>
+                        <!-- THE WAIKIKI NATIONAL SPACE STATION COMPLEX -->
+                        <g class="bob">
+                            <g transform="translate(580 230)">
+                                <!-- Integrated Truss Structure (ITS) Beam -->
+                                <rect x="-310" y="-8" width="620" height="16" rx="2" fill="#183633" stroke="#6BA4D9" stroke-width="1.2" />
+                                <path d="M-310-8 L-295 8 L-280-8 L-265 8 L-250-8 L-235 8 L-220-8 L-205 8 L-190-8 L-175 8 L-160-8 L-145 8 L-130-8 L-115 8 L-100-8 L-85 8 L-70-8 L-55 8 L-40-8 L-25 8 L-10-8 L5 8 L20-8 L35 8 L50-8 L65 8 L80-8 L95 8 L110-8 L125 8 L140-8 L155 8 L170-8 L185 8 L200-8 L215 8 L230-8 L245 8 L260-8 L275 8 L290-8 L305 8" stroke="#3c7f7a" stroke-width="1" fill="none" opacity=".85" />
+                                <path d="M-310 8 L-295-8 L-280 8 L-265-8 L-250 8 L-235-8 L-220 8 L-205-8 L-190 8 L-175-8 L-160 8 L-145-8 L-130 8 L-115-8 L-100 8 L-85-8 L-70 8 L-55-8 L-40 8 L-25-8 L-10 8 L5-8 L20 8 L35-8 L50 8 L65-8 L80 8 L95-8 L110 8 L125-8 L140 8 L155-8 L170 8 L185-8 L200 8 L215-8 L230 8 L245-8 L260 8 L275-8 L290 8 L305-8" stroke="#3c7f7a" stroke-width="1" fill="none" opacity=".85" />
+                                <line x1="-310" y1="0" x2="310" y2="0" stroke="#f5c46e" stroke-width="1.2" opacity=".6" />
+                                <!-- Solar Alpha Rotary Joints (SARJ) -->
+                                <rect x="-215" y="-14" width="16" height="28" rx="4" fill="#d9efeb" stroke="#003366" stroke-width="1.2" />
+                                <rect x="199" y="-14" width="16" height="28" rx="4" fill="#d9efeb" stroke="#003366" stroke-width="1.2" />
+                                <!-- Active Thermal Radiators (Heat Rejection Panels) -->
+                                <g transform="translate(-155 -10)">
+                                    <rect x="-20" y="-80" width="16" height="70" rx="2" fill="url(#sp-rad)" stroke="#1a4642" stroke-width="0.8" />
+                                    <rect x="0" y="-80" width="16" height="70" rx="2" fill="url(#sp-rad)" stroke="#1a4642" stroke-width="0.8" />
+                                    <rect x="20" y="-80" width="16" height="70" rx="2" fill="url(#sp-rad)" stroke="#1a4642" stroke-width="0.8" />
+                                    <path d="M-20-60h56M-20-40h56M-20-20h56" stroke="#1A528F" stroke-width="0.8" opacity=".5" />
+                                </g>
+                                <g transform="translate(135 -10)">
+                                    <rect x="-20" y="-80" width="16" height="70" rx="2" fill="url(#sp-rad)" stroke="#1a4642" stroke-width="0.8" />
+                                    <rect x="0" y="-80" width="16" height="70" rx="2" fill="url(#sp-rad)" stroke="#1a4642" stroke-width="0.8" />
+                                    <rect x="20" y="-80" width="16" height="70" rx="2" fill="url(#sp-rad)" stroke="#1a4642" stroke-width="0.8" />
+                                    <path d="M-20-60h56M-20-40h56M-20-20h56" stroke="#1A528F" stroke-width="0.8" opacity=".5" />
+                                </g>
+                                <!-- Port Upper Solar Wing -->
+                                <g transform="translate(-260 0)">
+                                    <line x1="0" y1="-16" x2="0" y2="-155" stroke="#f5c46e" stroke-width="3" />
+                                    <rect x="-65" y="-150" width="58" height="128" rx="2" fill="url(#sp-solar)" stroke="#061a1a" stroke-width="1.2" />
+                                    <rect x="6" y="-150" width="58" height="128" rx="2" fill="url(#sp-solar)" stroke="#061a1a" stroke-width="1.2" />
+                                    <path d="M-65-134h58M-65-118h58M-65-102h58M-65-86h58M-65-70h58M-65-54h58M-65-38h58 M6-134h58M6-118h58M6-102h58M6-86h58M6-70h58M6-54h58M6-38h58" stroke="#001830" stroke-width="0.9" opacity=".65" />
+                                    <path d="M-46-150v128M-26-150v128 M25-150v128M45-150v128" stroke="#001830" stroke-width="0.7" opacity=".55" />
+                                    <rect x="-68" y="-154" width="136" height="5" rx="1.5" fill="#fbf7f0" />
+                                </g>
+                                <!-- Port Lower Solar Wing -->
+                                <g transform="translate(-260 0)">
+                                    <line x1="0" y1="16" x2="0" y2="155" stroke="#f5c46e" stroke-width="3" />
+                                    <rect x="-65" y="22" width="58" height="128" rx="2" fill="url(#sp-solar)" stroke="#061a1a" stroke-width="1.2" />
+                                    <rect x="6" y="22" width="58" height="128" rx="2" fill="url(#sp-solar)" stroke="#061a1a" stroke-width="1.2" />
+                                    <path d="M-65 38h58M-65 54h58M-65 70h58M-65 86h58M-65 102h58M-65 118h58M-65 134h58 M6 38h58M6 54h58M6 70h58M6 86h58M6 102h58M6 118h58M6 134h58" stroke="#001830" stroke-width="0.9" opacity=".65" />
+                                    <path d="M-46 22v128M-26 22v128 M25 22v128M45 22v128" stroke="#001830" stroke-width="0.7" opacity=".55" />
+                                    <rect x="-68" y="149" width="136" height="5" rx="1.5" fill="#fbf7f0" />
+                                </g>
+                                <!-- Starboard Upper Solar Wing -->
+                                <g transform="translate(254 0)">
+                                    <line x1="0" y1="-16" x2="0" y2="-155" stroke="#f5c46e" stroke-width="3" />
+                                    <rect x="-65" y="-150" width="58" height="128" rx="2" fill="url(#sp-solar)" stroke="#061a1a" stroke-width="1.2" />
+                                    <rect x="6" y="-150" width="58" height="128" rx="2" fill="url(#sp-solar)" stroke="#061a1a" stroke-width="1.2" />
+                                    <path d="M-65-134h58M-65-118h58M-65-102h58M-65-86h58M-65-70h58M-65-54h58M-65-38h58 M6-134h58M6-118h58M6-102h58M6-86h58M6-70h58M6-54h58M6-38h58" stroke="#001830" stroke-width="0.9" opacity=".65" />
+                                    <path d="M-46-150v128M-26-150v128 M25-150v128M45-150v128" stroke="#001830" stroke-width="0.7" opacity=".55" />
+                                    <rect x="-68" y="-154" width="136" height="5" rx="1.5" fill="#fbf7f0" />
+                                </g>
+                                <!-- Starboard Lower Solar Wing -->
+                                <g transform="translate(254 0)">
+                                    <line x1="0" y1="16" x2="0" y2="155" stroke="#f5c46e" stroke-width="3" />
+                                    <rect x="-65" y="22" width="58" height="128" rx="2" fill="url(#sp-solar)" stroke="#061a1a" stroke-width="1.2" />
+                                    <rect x="6" y="22" width="58" height="128" rx="2" fill="url(#sp-solar)" stroke="#061a1a" stroke-width="1.2" />
+                                    <path d="M-65 38h58M-65 54h58M-65 70h58M-65 86h58M-65 102h58M-65 118h58M-65 134h58 M6 38h58M6 54h58M6 70h58M6 86h58M6 102h58M6 118h58M6 134h58" stroke="#001830" stroke-width="0.9" opacity=".65" />
+                                    <path d="M-46 22v128M-26 22v128 M25 22v128M45 22v128" stroke="#001830" stroke-width="0.7" opacity=".55" />
+                                    <rect x="-68" y="149" width="136" height="5" rx="1.5" fill="#fbf7f0" />
+                                </g>
+                                <!-- Central Habitation és Research Node 1 -->
+                                <rect x="-24" y="-22" width="48" height="44" rx="8" fill="url(#sp-mod-h)" stroke="#003366" stroke-width="1.4" />
+                                <circle cx="0" cy="0" r="10" fill="#1A528F" stroke="#f5c46e" stroke-width="1.2" />
+                                <!-- Core Module (Aurelia-1, 2006 Foundation) -->
+                                <rect x="-102" y="-18" width="78" height="36" rx="10" fill="url(#sp-mod-h)" stroke="#003366" stroke-width="1.4" />
+                                <path d="M-86-18v36M-70-18v36M-54-18v36M-38-18v36" stroke="#1A528F" stroke-width="1" opacity=".45" />
+                                <rect x="-82" y="-13" width="24" height="26" rx="3" fill="#d4af37" stroke="#9e7428" stroke-width="0.8" opacity=".9" />
+                                <circle cx="-54" cy="0" r="5" fill="#e3735a" stroke="#f5c46e" stroke-width="1" />
+                                <polygon points="-54,-3 -51,2 -57,2" fill="#fbf7f0" />
+                                <circle cx="-92" cy="-6" r="2.2" fill="#6BA4D9" />
+                                <circle cx="-92" cy="6" r="2.2" fill="#6BA4D9" />
+                                <rect x="-114" y="-10" width="12" height="20" rx="3" fill="#1b3936" stroke="#6BA4D9" stroke-width="1" />
+                                <polygon points="-114,-8 -124,-12 -124,12 -114,8" fill="#0d2623" stroke="#e3735a" stroke-width="1" />
+                                <!-- Aldrin Science Laboratory Module -->
+                                <rect x="24" y="-18" width="74" height="36" rx="9" fill="url(#sp-mod-h)" stroke="#003366" stroke-width="1.4" />
+                                <path d="M40-18v36M58-18v36M76-18v36" stroke="#1A528F" stroke-width="1" opacity=".45" />
+                                <rect x="36" y="-28" width="34" height="10" rx="2" fill="#1b4642" stroke="#f5c46e" stroke-width="1" />
+                                <rect x="40" y="-25" width="6" height="5" fill="#6BA4D9" />
+                                <rect x="50" y="-25" width="6" height="5" fill="#e3735a" />
+                                <rect x="60" y="-25" width="6" height="5" fill="#f5c46e" />
+                                <!-- Zenith EVA Airlock és Spacelab Module -->
+                                <rect x="-14" y="-74" width="28" height="52" rx="8" fill="url(#sp-mod-v)" stroke="#003366" stroke-width="1.4" />
+                                <circle cx="-16" cy="-48" r="6" fill="#f5c46e" stroke="#003366" stroke-width="0.8" />
+                                <circle cx="16" cy="-48" r="6" fill="#e3735a" stroke="#003366" stroke-width="0.8" />
+                                <circle cx="-16" cy="-34" r="6" fill="#6BA4D9" stroke="#003366" stroke-width="0.8" />
+                                <circle cx="16" cy="-34" r="6" fill="#f5c46e" stroke="#003366" stroke-width="0.8" />
+                                <circle cx="0" cy="-70" r="5" fill="#113533" stroke="#f5c46e" stroke-width="1.2" />
+                                <!-- Spacewalking Astronauts (Angelina és Taylor EVA) -->
+                                <path d="M0 -66 Q 25 -85, 38 -76" stroke="#f5c46e" stroke-width="0.9" stroke-dasharray="2 2" fill="none" />
+                                <g transform="translate(42 -76)">
+                                    <rect x="-4" y="-7" width="8" height="14" rx="3.5" fill="#ffffff" stroke="#003366" stroke-width="0.8" />
+                                    <circle cx="0" cy="-4" r="2.8" fill="#d4af37" />
+                                    <rect x="-5" y="-5" width="2" height="7" rx="1" fill="#e3735a" />
+                                    <rect x="3" y="-5" width="2" height="7" rx="1" fill="#ffffff" />
+                                </g>
+                                <g transform="translate(24 -56)">
+                                    <rect x="-3.5" y="-6" width="7" height="12" rx="3" fill="#ffffff" stroke="#003366" stroke-width="0.8" />
+                                    <circle cx="0" cy="-3.5" r="2.4" fill="#d4af37" />
+                                </g>
+                                <!-- Nadir Biology és Microgravity Habitat Module -->
+                                <rect x="-15" y="22" width="30" height="56" rx="8" fill="url(#sp-mod-v)" stroke="#003366" stroke-width="1.4" />
+                                <rect x="-8" y="36" width="16" height="20" rx="3" fill="#0d3b2e" stroke="#4e8b5a" stroke-width="1" />
+                                <circle cx="0" cy="46" r="4" fill="#62a56f" opacity=".85" />
+                                <!-- Earth Observation Cupola ("The Pearl") -->
+                                <path d="M-18 78 L-14 96 L14 96 L18 78 Z" fill="url(#sp-mod-h)" stroke="#003366" stroke-width="1.2" />
+                                <path d="M-14 96 C-12 104, 12 104, 14 96 Z" fill="#1A528F" stroke="#f5c46e" stroke-width="1.4" />
+                                <polygon points="-10,82 -6,94 -12,94" fill="#f5c46e" opacity=".9" />
+                                <polygon points="-5,82 5,82 4,94 -4,94" fill="#6BA4D9" opacity=".95" />
+                                <polygon points="10,82 12,94 6,94" fill="#f5c46e" opacity=".9" />
+                                <ellipse cx="0" cy="98" rx="7" ry="2.5" fill="#f5c46e" opacity=".85" />
+                                <!-- Robotic Manipulator Arm ("Mano" RMS) -->
+                                <g transform="translate(110 -8)">
+                                    <rect x="-8" y="-6" width="16" height="12" rx="2" fill="#d9efeb" stroke="#003366" stroke-width="1" />
+                                    <circle cx="0" cy="-6" r="4.5" fill="#e3735a" stroke="#003366" stroke-width="1" />
+                                    <path d="M0 -6 L36 -32" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" />
+                                    <path d="M14 -16 L22 -22" stroke="#003366" stroke-width="4.5" />
+                                    <circle cx="36" cy="-32" r="4" fill="#f5c46e" stroke="#003366" stroke-width="1" />
+                                    <path d="M36 -32 L74 -18" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
+                                    <circle cx="74" cy="-18" r="3.2" fill="#e3735a" />
+                                    <path d="M74 -18 L84 -14" stroke="#6BA4D9" stroke-width="2" stroke-linecap="round" />
+                                    <rect x="84" y="-22" width="16" height="16" rx="2" fill="#1b4642" stroke="#f5c46e" stroke-width="1" />
+                                    <circle cx="92" cy="-14" r="2.5" fill="#e3735a" />
+                                </g>
+                                <!-- Docking Adapter and WSA Space Shuttle "Andromeda" -->
+                                <rect x="98" y="-11" width="16" height="22" rx="3" fill="#a0c2bc" stroke="#003366" stroke-width="1.2" />
+                                <circle cx="106" cy="0" r="4" fill="#0d2623" stroke="#f5c46e" stroke-width="1" />
+                                <g transform="translate(114 0)">
+                                    <path d="M0 -8 L54 -14 L98 -7 L114 0 L98 7 L54 14 L0 8 Z" fill="url(#sp-shut)" stroke="#003366" stroke-width="1.4" />
+                                    <path d="M0 4 L54 10 L98 6 L114 0 L98 7 L54 14 L0 8 Z" fill="#122b28" opacity=".7" />
+                                    <polygon points="12,-8 48,-36 68,-36 56,-8" fill="url(#sp-shut)" stroke="#003366" stroke-width="1.2" />
+                                    <polygon points="12,8 48,36 68,36 56,8" fill="url(#sp-shut)" stroke="#003366" stroke-width="1.2" />
+                                    <path d="M12 -8 L48 -36 L52 -36 L16 -8 Z" fill="#0d2623" />
+                                    <path d="M12 8 L48 36 L52 36 L16 8 Z" fill="#0d2623" />
+                                    <polygon points="2,-4 22,-20 34,-20 18,-4" fill="#ffffff" stroke="#003366" stroke-width="1.2" />
+                                    <polygon points="86,-4 98,-2 98,2 86,4 82,0" fill="#6BA4D9" stroke="#003366" stroke-width="0.8" />
+                                    <path d="M10 -2 H80" stroke="#e3735a" stroke-width="2.2" />
+                                    <path d="M10 1 H80" stroke="#1A528F" stroke-width="1.4" />
+                                    <text x="48" y="-16" font-size="6.5" font-weight="700" fill="#003366">WSA</text>
+                                    <rect x="-4" y="-6" width="4" height="4" fill="#1b3936" stroke="#6BA4D9" stroke-width="0.6" />
+                                    <rect x="-4" y="2" width="4" height="4" fill="#1b3936" stroke="#6BA4D9" stroke-width="0.6" />
+                                    <circle cx="-2" cy="-4" r="1.5" fill="#6BA4D9" opacity=".9" />
+                                    <circle cx="-2" cy="4" r="1.5" fill="#6BA4D9" opacity=".9" />
+                                </g>
+                                <!-- High-Gain Communications Antenna -->
+                                <g transform="translate(-175 14)">
+                                    <path d="M0 0 L-22 36" stroke="#6BA4D9" stroke-width="2.5" stroke-linecap="round" />
+                                    <circle cx="-22" cy="36" r="3.5" fill="#f5c46e" />
+                                    <path d="M-38 30 C-32 44, -14 52, -6 48" fill="none" stroke="#fbf7f0" stroke-width="3" stroke-linecap="round" />
+                                    <line x1="-22" y1="36" x2="-22" y2="44" stroke="#e3735a" stroke-width="1.5" />
+                                    <circle cx="-22" cy="44" r="2" fill="#f5c46e" />
+                                    <line x1="-22" y1="46" x2="-35" y2="92" stroke="#6BA4D9" stroke-width="1.2" stroke-dasharray="3 3" opacity=".7" />
+                                </g>
+                                <!-- Navigation Strobes és Beacons -->
+                                <circle cx="-328" cy="0" r="4.5" fill="#e3735a" class="pulse" />
+                                <circle cx="-328" cy="0" r="2.5" fill="#ffffff" />
+                                <circle cx="322" cy="0" r="4.5" fill="#6BA4D9" class="pulse" />
+                                <circle cx="322" cy="0" r="2.5" fill="#ffffff" />
+                                <circle cx="0" cy="-78" r="3.5" fill="#f5c46e" class="pulse" />
+                                <circle cx="0" cy="-78" r="1.8" fill="#ffffff" />
+                            </g>
+                        </g>
+                        <!-- Annotation Callouts -->
+                        <g font-family="Manrope, sans-serif" letter-spacing="1">
+                            <!-- Callout 01: Solar Array -->
+                            <path d="M190 85 h100 l40 30" stroke="#f5c46e" stroke-width="1" fill="none" opacity=".8" />
+                            <circle cx="330" cy="115" r="2.5" fill="#f5c46e" />
+                            <text x="180" y="88" text-anchor="end" font-size="9" font-weight="700" fill="#f5c46e">01 · NAPELEMES RÁCSRENDSZER (84 M)</text>
+                            <!-- Callout 02: Core Module and Labs -->
+                            <path d="M190 380 h220 l80 -120" stroke="#f5c46e" stroke-width="1" fill="none" opacity=".8" />
+                            <circle cx="490" cy="260" r="2.5" fill="#f5c46e" />
+                            <text x="180" y="383" text-anchor="end" font-size="9" font-weight="700" fill="#f5c46e">02 · AURELIA ALAPMODUL ÉS LABOROK</text>
+                            <!-- Callout 03: Observation Cupola -->
+                            <path d="M580 385 v-40" stroke="#6BA4D9" stroke-width="1" fill="none" opacity=".8" />
+                            <circle cx="580" cy="345" r="2.5" fill="#6BA4D9" />
+                            <text x="580" y="405" text-anchor="middle" font-size="9" font-weight="700" fill="#6BA4D9">03 · FÖLDI PANORÁMA KUPOLA</text>
+                            <!-- Callout 04: EVA Airlock -->
+                            <path d="M580 85 h40 l20 45" stroke="#6BA4D9" stroke-width="1" fill="none" opacity=".8" />
+                            <circle cx="640" cy="130" r="2.5" fill="#6BA4D9" />
+                            <text x="580" y="80" text-anchor="middle" font-size="9" font-weight="700" fill="#6BA4D9">04 · EVA ZSILIPKAMRA ÉS ŰRSÉTA</text>
+                            <!-- Callout 05: Robotic Arm -->
+                            <path d="M970 85 h-120 l-40 60" stroke="#f5c46e" stroke-width="1" fill="none" opacity=".8" />
+                            <circle cx="810" cy="145" r="2.5" fill="#f5c46e" />
+                            <text x="980" y="88" text-anchor="start" font-size="9" font-weight="700" fill="#f5c46e">05 · ROBOTIKUS MANIPULÁTOR KAR</text>
+                            <!-- Callout 06: Shuttle Andromeda -->
+                            <path d="M970 380 h-160 l-50 -120" stroke="#f5c46e" stroke-width="1" fill="none" opacity=".8" />
+                            <circle cx="760" cy="260" r="2.5" fill="#f5c46e" />
+                            <text x="980" y="383" text-anchor="start" font-size="9" font-weight="700" fill="#f5c46e">06 · DOKKOLT WSA ANDROMEDA ŰRSIKLÓ</text>
+                        </g>
+                    </g>
+                </svg>
+                <figcaption class="ill-caption">A Waikiki Nemzeti Űrállomás alacsony Föld körüli pályán (200 km). Teljesen kiépített orbitális komplexum fejlett kutatólaboratóriumokkal, panoráma kupolával, robotkarral és a dokkolt WSA Andromeda űrsiklóval.</figcaption>
+            </figure>
+            <div class="card-grid">
+                <article class="card"><span class="card-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="7" y="2" width="10" height="20" rx="2.5" />
+                            <path d="M11 18h2" />
+                        </svg></span>
+                    <h3>Waikiki One</h3>
+                    <p>Az integrált állampolgári platform: személyazonosság, adóügyek, egészségügy, szavazás és fizetés egyetlen biztonságos alkalmazásban.</p>
+                </article>
+                <article class="card"><span class="card-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z" />
+                            <path d="M4 21V5M8 7h7" />
+                        </svg></span>
+                    <h3>Digitális Oktatási Híd</h3>
+                    <p>A 2020-ban indult program táblagépeket és hordozható modemeket juttatott el a távoli szigetek és Amazónia diákjaihoz.</p>
+                </article>
+                <article class="card"><span class="card-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 2c3 2 5 6 5 10l-2 4H9l-2-4c0-4 2-8 5-10z" />
+                            <circle cx="12" cy="9" r="1.6" />
+                            <path d="M9 16l-2 4M15 16l2 4M12 17v4" />
+                        </svg></span>
+                    <h3>Nemzeti Űrállomás</h3>
+                    <p>200 milliárd dolláros orbitális komplexum, amelyet a Waikiki Űrügynökség Andromeda, Aldrin és Columbus űrsiklói szolgálnak ki.</p>
+                </article>
+                <article class="card"><span class="card-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="5" y="11" width="14" height="10" rx="2" />
+                            <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+                        </svg></span>
+                    <h3>Kiberellenálló képesség</h3>
+                    <p>A választások tisztasága és a digitális biztonság intézményi prioritás, amelyet a NATO kibervédelmi együttműködése is erősít.</p>
+                </article>
+            </div>
+        </section>
+        <!-- @chrome:next -->
+        <section class="next-chapter">
+            <a class="next-card" href="dynasty.html">
+                <div class="next-media"><img src="../images/UniversalUpscaler_e38222ed-70b3-4c90-9777-c114aa60d527-U.jpg" alt="" loading="lazy" decoding="async" /></div>
+                <span class="next-body">
+                    <span class="next-eyebrow">Folytassa az utazást · Királyi Család</span>
+                    <span class="next-title">A Dinasztia</span>
+                    <span class="next-arrow" aria-hidden="true">→</span>
+                </span>
+            </a>
+        </section>
+        <!-- /@chrome:next -->
+    </main>
+    <!-- @chrome:footer -->
+    <footer class="site-footer">
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="lazy" decoding="async" /><span class="brand-word">Waikiki</span></a>
+                    <p class="footer-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
+                    <p class="footer-about">Waikiki Állam hivatalos portálja. Alapítva 1999. március 10-én · Nova Aurelia. Ez az oldal mesterséges intelligenciával készült, bármilyen hasonlóság valós személyekhez, országokhoz vagy intézményekhez pusztán a véletlen műve.</p>
+                </div>
+                <div class="footer-col">
+                    <h2>Nemzet</h2>
+                    <ul>
+                        <li><a href="index.html">Főoldal</a></li>
+                        <li><a href="overview.html">Áttekintés</a></li>
+                        <li><a href="history.html">Történelem</a></li>
+                        <li><a href="society.html">Társadalom</a></li>
+                        <li><a href="culture.html">Kultúra</a></li>
+                        <li><a href="ideology.html">Ideológia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Kormányzás</h2>
+                    <ul>
+                        <li><a href="government.html">Kormány</a></li>
+                        <li><a href="leadership.html">Vezetés</a></li>
+                        <li><a href="parties.html">Politika</a></li>
+                        <li><a href="constitution.html">Alkotmány</a></li>
+                        <li><a href="military.html">Hadsereg</a></li>
+                        <li><a href="diplomacy.html">Diplomácia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Jólét</h2>
+                    <ul>
+                        <li><a href="economy.html">Gazdaság</a></li>
+                        <li><a href="banking-system.html">Bankrendszer</a></li>
+                        <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                        <li><a href="citizenship.html">Állampolgárság</a></li>
+                        <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                        <li><a href="space-research.html">Űrkutatás</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Királyi Család</h2>
+                    <ul>
+                        <li><a href="dynasty.html">A Dinasztia</a></li>
+                        <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Látogatás</h2>
+                    <ul>
+                        <li><a href="tourism.html">Turizmus</a></li>
+                        <li><a href="sights.html">Látnivalók</a></li>
+                        <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                        <li><a href="visa.html">Vízum és belépés</a></li>
+                        <li><a href="faq.html">GYIK</a></li>
+                    </ul>
+                </div>
+            </div>
+            <span class="footer-mega" aria-hidden="true">Waikiki</span>
+            <div class="footer-bottom">
+                <p>© 2026 Waikiki Szuverén Állam. Minden jog fenntartva.</p>
+                <nav>
+                    <a style="margin-right: 40px" href="../en/space-research.html" hreflang="en" lang="en">English</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <button class="to-top" type="button">
+        <svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span>
+    </button>
+    <!-- /@chrome:footer -->
+    <script src="../js/common.js"></script>
+</body>
+</html>

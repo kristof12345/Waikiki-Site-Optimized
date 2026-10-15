@@ -344,8 +344,8 @@ Waikiki által exportált termékek értéke jóval meghaladja az importált ter
 ## Energiatermelés
 
 ### Energiaforrások megoszlása
-- Nukleáris energia (40%)
-  - Hidrogénerőmű: 20%
+- Nukleáris és fúziós energia (40%)
+  - Hidrogénfúziós erőmű: 20%
   - Atomenergia: 20%
 - Megújuló energia (50%)
   - Napenergia: 25%

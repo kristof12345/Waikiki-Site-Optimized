@@ -1,0 +1,21 @@
+# Agent Workflow & Rules for Sovereign Nation of Waikiki Site
+
+## Editorial & Content Guidelines
+
+1. **Prefer "and" / "és" over ampersand ("&")**: Use the word "and" (in English) and "és" (in Hungarian) instead of the "&" symbol in titles, section headings, card headers, labels, and copy.
+2. **Alternating Section Styles**: Top-level page sections must alternate between normal and `light-bg` styles.
+
+## HTML Page Builds and Edits
+
+After building or editing any HTML page:
+1. **Format document**: Format the HTML document with 4-space indentation.
+2. **Remove empty lines in document**: Ensure there are no empty/blank lines in the document.
+
+### Automation Utilities
+
+- Format and clean a specific file:
+  `python3 scripts/build_pages.py --format <file.html>`
+- Format and clean all pages:
+  `python3 scripts/build_pages.py --format --all`
+- Build pages (automatically formats and strips empty lines):
+  `python3 scripts/build_pages.py`

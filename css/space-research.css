@@ -1,0 +1,249 @@
+/* Space Research Stylesheet — Sovereign Nation of Waikiki */
+
+
+.spec-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    background: var(--primary-subtle);
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 1rem;
+}
+
+.body-dark .spec-badge {
+    background: rgba(107, 164, 217, 0.12);
+    border-color: rgba(107, 164, 217, 0.25);
+    color: var(--tertiary);
+}
+
+.spec-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0 0;
+    border-top: 1px solid var(--line);
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.spec-list li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.92rem;
+    color: var(--text);
+}
+
+.spec-list li strong {
+    color: var(--heading);
+    font-weight: 600;
+}
+
+.mission-status-pill {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    background: rgba(26, 82, 143, 0.15);
+    color: var(--primary-light);
+}
+
+.status-active {
+    background: var(--status-active-bg);
+    color: var(--status-active);
+}
+
+.body-dark .status-active {
+    background: rgba(107, 164, 217, 0.2);
+    color: var(--tertiary);
+}
+
+/* Illustrated Panels */
+.ill-panel {
+    margin: 2.5rem auto;
+    max-width: var(--width-s, 1160px);
+    width: 100%;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--line-strong);
+    background: var(--surface);
+    box-shadow: var(--shadow-md);
+    position: relative;
+}
+
+.ill-caption {
+    padding: 1rem 1.5rem;
+    background: var(--surface-2);
+    border-top: 1px solid var(--line);
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.ill-caption strong {
+    color: var(--heading);
+}
+
+/* SVG helpers and animations */
+.ill {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.ill .spin {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: illSpin 14s linear infinite;
+}
+
+.ill .spin-fast {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: illSpin 5s linear infinite;
+}
+
+.ill .spin-rev {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: illSpinRev 16s linear infinite;
+}
+
+.ill .pulse {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: illPulse 2.8s var(--ease-out, ease-out) infinite;
+}
+
+.ill .pulse-glow {
+    animation: illPulseGlow 3s ease-in-out infinite alternate;
+}
+
+.ill .dash {
+    stroke-dasharray: 6 8;
+    animation: illDash 2.4s linear infinite;
+}
+
+.ill .dash-rev {
+    stroke-dasharray: 6 8;
+    animation: illDashRev 2.4s linear infinite;
+}
+
+.ill .twinkle {
+    animation: illTwinkle 3.2s ease-in-out infinite;
+}
+
+.ill .twinkle:nth-of-type(2n) {
+    animation-delay: 0.9s;
+}
+
+.ill .twinkle:nth-of-type(3n) {
+    animation-delay: 1.8s;
+}
+
+.ill .bob {
+    animation: illBob 6s ease-in-out infinite;
+}
+
+.ill .flame-pulse {
+    transform-box: fill-box;
+    transform-origin: top center;
+    animation: illFlame 0.25s ease-in-out infinite alternate;
+}
+
+.ill .freq-bar-1 { animation: illFreq 1.2s ease-in-out infinite alternate; }
+.ill .freq-bar-2 { animation: illFreq 0.8s ease-in-out infinite alternate; animation-delay: 0.2s; }
+.ill .freq-bar-3 { animation: illFreq 1.5s ease-in-out infinite alternate; animation-delay: 0.4s; }
+.ill .freq-bar-4 { animation: illFreq 0.9s ease-in-out infinite alternate; animation-delay: 0.1s; }
+.ill .freq-bar-5 { animation: illFreq 1.3s ease-in-out infinite alternate; animation-delay: 0.3s; }
+
+@keyframes illSpin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes illSpinRev {
+    to { transform: rotate(-360deg); }
+}
+
+@keyframes illPulse {
+    0% { transform: scale(0.95); opacity: 0.95; }
+    50% { transform: scale(1.18); opacity: 0.35; }
+    100% { transform: scale(0.95); opacity: 0.95; }
+}
+
+@keyframes illPulseGlow {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+@keyframes illDash {
+    to { stroke-dashoffset: -28; }
+}
+
+@keyframes illDashRev {
+    to { stroke-dashoffset: 28; }
+}
+
+@keyframes illTwinkle {
+    0%, 100% { opacity: 0.25; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.25); }
+}
+
+@keyframes illBob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-7px); }
+}
+
+@keyframes illFlame {
+    0% { transform: scaleY(0.92) scaleX(0.96); opacity: 0.85; }
+    100% { transform: scaleY(1.08) scaleX(1.04); opacity: 1; }
+}
+
+@keyframes illFreq {
+    0% { transform: scaleY(0.3); transform-origin: bottom; }
+    100% { transform: scaleY(1.0); transform-origin: bottom; }
+}
+
+/* Digital State & Orbital Reach section */
+#digital-space .ill-panel {
+    max-width: var(--width-s, 1160px);
+    width: 100%;
+    margin: 2.5rem auto;
+}
+
+#digital-space .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    gap: var(--card-gap, 1.5rem);
+    max-width: var(--width-m);
+    margin: 0 auto;
+}
+
+#digital-space .card-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: var(--primary);
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.body-dark #digital-space .card-icon svg {
+    stroke: var(--tertiary);
+}
+
