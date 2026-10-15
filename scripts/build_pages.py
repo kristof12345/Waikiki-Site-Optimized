@@ -300,8 +300,15 @@ def build_header(page: Page) -> str:
                 {GLOBE_ICON}
                 <span>{other.upper()}</span>
             </a>
-            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false">{THEME_ICON}</button>
-            <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="menu-lines" aria-hidden="true"></span><span class="menu-label-open">{esc(T["menu"][loc])}</span><span class="menu-label-close">{esc(T["close"][loc])}</span><span class="visually-hidden">{esc(T["menu"][loc])}</span></button>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+                {THEME_ICON}
+            </button>
+            <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+                <span class="menu-lines" aria-hidden="true"></span>
+                <span class="menu-label-open">{esc(T["menu"][loc])}</span>
+                <span class="menu-label-close">{esc(T["close"][loc])}</span>
+                <span class="visually-hidden">{esc(T["menu"][loc])}</span>
+            </button>
         </div>
     </header>
     <div class="site-menu" id="site-menu" aria-hidden="true" inert>
