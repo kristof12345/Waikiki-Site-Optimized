@@ -619,7 +619,7 @@ const opts = {
 let input = fs.readFileSync(0, 'utf8');
 let out = beautify(input, opts);
 let lines = out.split(/\\r?\\n/).filter(l => l.trim().length > 0);
-process.stdout.write(lines.join('\\n') + '\\n');
+process.stdout.write(lines.join('\\n'));
 """
 
 def format_and_remove_empty_lines(html_content: str) -> str:
