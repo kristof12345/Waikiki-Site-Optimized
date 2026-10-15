@@ -978,7 +978,7 @@
 
     /* ----------------------------------------------------------------- rail */
     function initSectionRail() {
-        const sections = $$('main > section[id]').filter((section) => $('.section-title, h2', section));
+        const sections = $$('main > section[id]').filter((section) => $('.section-title, h2, h3', section));
         if (sections.length < 3) return;
 
         const rail = document.createElement('nav');
@@ -986,8 +986,8 @@
         rail.setAttribute('aria-label', root.lang === 'hu' ? 'Fejezetek' : 'Sections');
 
         const links = sections.map((section) => {
-            const heading = $('.section-title, h2', section);
-            const label = (heading.dataset.label || heading.textContent).replace(/\s+/g, ' ').trim();
+            const heading = $('.section-title, h2, h3', section);
+            const label = (section.dataset.label || heading.dataset.label || heading.textContent).replace(/\s+/g, ' ').trim();
             const link = document.createElement('a');
             link.href = `#${section.id}`;
             link.innerHTML = '<span class="rail-label"></span><span class="rail-dot"></span>';

@@ -438,7 +438,6 @@ html.no-reveal .page-curtain {
 /* Word-by-word headline reveal */
 .split-word {
   display: inline-block;
-  overflow: hidden;
   vertical-align: top;
   padding: 0.06em 0.02em 0.14em;
   margin: -0.06em -0.02em -0.14em;

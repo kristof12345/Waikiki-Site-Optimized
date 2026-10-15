@@ -67,6 +67,7 @@
     flex: 1;
 }
 
+.detail-text h2,
 .detail-text h3 {
     margin-bottom: 1.5rem;
     color: var(--neutral-150);
