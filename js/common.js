@@ -1025,14 +1025,6 @@
             toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' }));
         }
 
-        $$('.hero-scroll').forEach((button) => {
-            button.addEventListener('click', () => {
-                const hero = button.closest('.hero');
-                const next = hero && hero.nextElementSibling;
-                if (next) next.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' });
-            });
-        });
-
         const update = () => {
             const max = document.documentElement.scrollHeight - window.innerHeight;
             const progress = max > 0 ? Math.min(window.scrollY / max, 1) : 0;
