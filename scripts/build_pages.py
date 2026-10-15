@@ -357,11 +357,16 @@ def build_footer(page: Page) -> str:
             <span class="footer-mega" aria-hidden="true">Waikiki</span>
             <div class="footer-bottom">
                 <p>{esc(T["rights"][loc])}</p>
-                <nav><a href="{page.other_locale_href()}" hreflang="{other}" lang="{other}">{esc(T["lang_name"][other])}</a><a href="#main">{esc(T["to_top"][loc])} ↑</a></nav>
+                <nav>
+                    <a href="{page.other_locale_href()}" hreflang="{other}" lang="{other}">{esc(T["lang_name"][other])}</a>
+                    <a href="#main">{esc(T["to_top"][loc])} ↑</a>
+                </nav>
             </div>
         </div>
     </footer>
-    <button class="to-top" type="button"><svg viewBox="0 0 54 54" aria-hidden="true"><circle class="ring-bg" cx="27" cy="27" r="24"/><circle class="ring" cx="27" cy="27" r="24"/></svg><span aria-hidden="true">↑</span></button>
+    <button class="to-top" type="button">
+        <svg viewBox="0 0 54 54" aria-hidden="true"><circle class="ring-bg" cx="27" cy="27" r="24"/><circle class="ring" cx="27" cy="27" r="24"/></svg><span aria-hidden="true">↑</span>
+    </button>
     <!-- /@chrome:footer -->"""
 
 def build_subnav(page: Page) -> str:
