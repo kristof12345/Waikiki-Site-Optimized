@@ -120,18 +120,11 @@ COMPACT_LEADS = {
         "en": "Clear answers to the questions most often asked about Waikiki's government, economy, society and way of life.",
         "hu": "Világos válaszok a Waikiki kormányzatával, gazdaságával, társadalmával és életmódjával kapcsolatos leggyakoribb kérdésekre.",
     },
-    "visa": {
-        "en": "Official entry regulations, visa categories, biometric SmartBorder clearance and customs guidance for travelers entering the Sovereign Nation of Waikiki.",
-        "hu": "Hivatalos belépési szabályok, vízumkategóriák, biometrikus SmartBorder határátlépés és vámügyi útmutató Waikiki Szuverén Államba érkezőknek.",
-    },
 }
 
 T = {
-    "home": {"en": "Waikiki home", "hu": "Waikiki főoldal"},
-    "primary": {"en": "Primary", "hu": "Fő navigáció"},
     "menu": {"en": "Menu", "hu": "Menü"},
     "close": {"en": "Close", "hu": "Bezárás"},
-    "theme": {"en": "Toggle night mode", "hu": "Éjszakai mód váltása"},
     "night": {"en": "Night mode", "hu": "Éjszakai mód"},
     "clock_label": {"en": "Local time in the capital", "hu": "Helyi idő a fővárosban"},
     "clock_city": {"en": "Nova Aurelia, Waikiki Province", "hu": "Nova Aurelia, Waikiki tartomány"},
@@ -152,7 +145,6 @@ T = {
     "to_top": {"en": "Back to top", "hu": "Vissza a tetejére"},
     "scroll": {"en": "Scroll", "hu": "Görgetés"},
     "continue": {"en": "Continue the journey", "hu": "Folytassa az utazást"},
-    "royal_nav": {"en": "Royal couple pages", "hu": "A királyi pár oldalai"},
     "lang_name": {"en": "English", "hu": "Magyar"},
     "animate_chip": {"en": "Animate", "hu": "Animáció"},
 }
@@ -268,9 +260,19 @@ def build_head(page: Page) -> str:
         '<link rel="preconnect" href="https://fonts.googleapis.com" />',
         '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />',
         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />',
-        "<script>(function(d){var h=d.documentElement;h.classList.add('js');try{if(localStorage.getItem('isDarkMode')==='true')h.classList.add('body-dark');"
-        "if(localStorage.getItem('isAnimationDisabled')==='true')h.classList.add('no-reveal')}catch(e){}"
-        "setTimeout(function(){if(!h.classList.contains('reveal-ready'))h.classList.remove('js')},3500)})(document);</script>",
+        """<script>
+            (function (d) {
+                var h = d.documentElement;
+                h.classList.add('js');
+                try {
+                    if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                    if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+                } catch (e) { }
+                setTimeout(function () {
+                    if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+                }, 3500)
+            })(document);
+        </script>""",
         "<!-- /@chrome:head -->",
     ]
     return "\n    ".join(line for line in lines if line)
@@ -285,7 +287,7 @@ def build_header(page: Page) -> str:
         nav_links.append(f'<a href="{page.href(slug)}"{current}>{esc(labels[loc])}</a>')
 
     groups_html = []
-    for key, labels, pages in GROUPS:
+    for _, labels, pages in GROUPS:
         items = []
         for slug, page_labels in pages:
             current = ' aria-current="page"' if slug == page.slug or couple_for(page.slug) == slug else ""
@@ -303,11 +305,11 @@ def build_header(page: Page) -> str:
     <div class="page-curtain" aria-hidden="true">{page.brand_mark(curtain=True)}</div>
     <div class="scroll-progress" aria-hidden="true"></div>
     <header class="site-header">
-        <a href="{page.href("index")}" class="brand" aria-label="{esc(T["home"][loc])}">{page.brand_mark()}<span class="brand-word">Waikiki</span></a>
-        <nav class="primary-nav" aria-label="{esc(T["primary"][loc])}">{"".join(nav_links)}</nav>
+        <a href="{page.href("index")}" class="brand">{page.brand_mark()}<span class="brand-word">Waikiki</span></a>
+        <nav class="primary-nav">{"".join(nav_links)}</nav>
         <div class="header-actions">
             <a class="lang-pill" href="{page.other_locale_href()}" hreflang="{other}" lang="{other}" title="{esc(T["lang_name"][other])}">{GLOBE_ICON}<span>{other.upper()}</span></a>
-            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="{esc(T["theme"][loc])}">{THEME_ICON}</button>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false">{THEME_ICON}</button>
             <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="menu-lines" aria-hidden="true"></span><span class="menu-label-open">{esc(T["menu"][loc])}</span><span class="menu-label-close">{esc(T["close"][loc])}</span><span class="visually-hidden">{esc(T["menu"][loc])}</span></button>
         </div>
     </header>
@@ -344,7 +346,7 @@ def build_footer(page: Page) -> str:
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <a href="{page.href("index")}" class="brand" aria-label="{esc(T["home"][loc])}">{page.brand_mark(footer=True)}<span class="brand-word">Waikiki</span></a>
+                    <a href="{page.href("index")}" class="brand">{page.brand_mark(footer=True)}<span class="brand-word">Waikiki</span></a>
                     <p class="footer-motto">{esc(T["motto"][loc])}</p>
                     <p class="footer-about">{esc(T["about"][loc])}</p>
                 </div>
@@ -353,11 +355,11 @@ def build_footer(page: Page) -> str:
             <span class="footer-mega" aria-hidden="true">Waikiki</span>
             <div class="footer-bottom">
                 <p>{esc(T["rights"][loc])}</p>
-                <nav aria-label="Language"><a href="{page.other_locale_href()}" hreflang="{other}" lang="{other}">{esc(T["lang_name"][other])}</a><a href="#main">{esc(T["to_top"][loc])} ↑</a></nav>
+                <nav><a href="{page.other_locale_href()}" hreflang="{other}" lang="{other}">{esc(T["lang_name"][other])}</a><a href="#main">{esc(T["to_top"][loc])} ↑</a></nav>
             </div>
         </div>
     </footer>
-    <button class="to-top" type="button" aria-label="{esc(T["to_top"][loc])}"><svg viewBox="0 0 54 54" aria-hidden="true"><circle class="ring-bg" cx="27" cy="27" r="24"/><circle class="ring" cx="27" cy="27" r="24"/></svg><span aria-hidden="true">↑</span></button>
+    <button class="to-top" type="button"><svg viewBox="0 0 54 54" aria-hidden="true"><circle class="ring-bg" cx="27" cy="27" r="24"/><circle class="ring" cx="27" cy="27" r="24"/></svg><span aria-hidden="true">↑</span></button>
     <!-- /@chrome:footer -->"""
 
 
@@ -372,10 +374,13 @@ def build_subnav(page: Page) -> str:
             continue
         current = ' aria-current="page"' if slug == page.slug else ""
         items.append(f'<li><a href="{page.href(slug)}"{current}>{esc(labels[page.locale])}</a></li>')
-    return (
-        f'<!-- @chrome:subnav --><nav class="subnav" aria-label="{esc(T["royal_nav"][page.locale])}">'
-        f'<ul class="subnav-list">{"".join(items)}</ul></nav><!-- /@chrome:subnav -->'
-    )
+    return f"""<!-- @chrome:subnav -->
+    <nav class="subnav">
+        <ul class="subnav-list">
+            {"".join(items)}
+        </ul>
+    </nav>
+    <!-- /@chrome:subnav -->"""
 
 
 TARGET_NEXT_IMAGES = {
@@ -391,45 +396,42 @@ TARGET_NEXT_IMAGES = {
 
 
 def build_next(page: Page, meta: dict[str, dict]) -> str:
+    target = None
     if page.slug.endswith("-private"):
         target = "dynasty"
-        info = meta.get(f"{page.locale}/{target}")
-        if info:
-            title = label_for(target, page.locale) or info["title"]
-            image = info.get("image") or TARGET_NEXT_IMAGES.get(target) or meta.get(f"{page.locale}/index", {}).get("image")
-            img_html = f'<div class="next-media"><img src="{page.asset("images/" + image)}" alt="" loading="lazy" decoding="async" /></div>' if image else ""
-            eyebrow = f'{T["continue"][page.locale]} · {group_label(group_for(target), page.locale)}'
-            return (
-                f'<!-- @chrome:next --><section class="next-chapter"><a class="next-card" href="{page.href(target)}">{img_html}'
-                f'<span class="next-body"><span class="next-eyebrow">{esc(eyebrow)}</span>'
-                f'<span class="next-title">{esc(title)}</span><span class="next-arrow" aria-hidden="true">→</span></span></a></section><!-- /@chrome:next -->'
-            )
-
-    if page.slug not in SEQUENCE:
-        if page.slug == "raimondo-and-bailey-detailed":
-            target = "angelina-and-taylor"
-            info = meta.get(f"{page.locale}/{target}")
-        else:
-            return "<!-- @chrome:next --><!-- /@chrome:next -->"
-    else:
+    elif page.slug == "raimondo-and-bailey-detailed":
+        target = "angelina-and-taylor"
+    elif page.slug in SEQUENCE:
         index = SEQUENCE.index(page.slug)
         for offset in range(1, len(SEQUENCE)):
-            target = SEQUENCE[(index + offset) % len(SEQUENCE)]
-            info = meta.get(f"{page.locale}/{target}")
-            if info:
+            candidate = SEQUENCE[(index + offset) % len(SEQUENCE)]
+            if meta.get(f"{page.locale}/{candidate}"):
+                target = candidate
                 break
-        else:
-            return "<!-- @chrome:next --><!-- /@chrome:next -->"
+
+    if not target:
+        return "<!-- @chrome:next --><!-- /@chrome:next -->"
+
+    info = meta.get(f"{page.locale}/{target}")
+    if not info:
+        return "<!-- @chrome:next --><!-- /@chrome:next -->"
 
     title = label_for(target, page.locale) or info["title"]
     image = info.get("image") or TARGET_NEXT_IMAGES.get(target) or meta.get(f"{page.locale}/index", {}).get("image")
     img_html = f'<div class="next-media"><img src="{page.asset("images/" + image)}" alt="" loading="lazy" decoding="async" /></div>' if image else ""
     eyebrow = f'{T["continue"][page.locale]} · {group_label(group_for(target), page.locale)}'
-    return (
-        f'<!-- @chrome:next --><section class="next-chapter"><a class="next-card" href="{page.href(target)}">{img_html}'
-        f'<span class="next-body"><span class="next-eyebrow">{esc(eyebrow)}</span>'
-        f'<span class="next-title">{esc(title)}</span><span class="next-arrow" aria-hidden="true">→</span></span></a></section><!-- /@chrome:next -->'
-    )
+    return f"""<!-- @chrome:next -->
+    <section class="next-chapter">
+        <a class="next-card" href="{page.href(target)}">
+            {img_html}
+            <span class="next-body">
+                <span class="next-eyebrow">{esc(eyebrow)}</span>
+                <span class="next-title">{esc(title)}</span>
+                <span class="next-arrow" aria-hidden="true">→</span>
+            </span>
+        </a>
+    </section>
+    <!-- /@chrome:next -->"""
 
 
 # --------------------------------------------------------------------------- #
@@ -652,10 +654,6 @@ def format_and_remove_empty_lines(html_content: str) -> str:
     return "\n".join(lines) + "\n"
 
 
-# Alias for internal build processing
-format_and_clean_html = format_and_remove_empty_lines
-
-
 def format_file(file_path: Path) -> bool:
     """Format and strip blank lines for a single file in-place."""
     try:
@@ -694,20 +692,16 @@ def process(path: Path, meta: dict) -> str:
     if "<!-- @chrome:header -->" not in text:
         text = convert_legacy(page, text)
 
-
     # Body hooks used by CSS/JS.
     body_classes = f"page-{page.slug.replace('/', '-')} group-{page.group}"
     text = re.sub(r"<body[^>]*>", f'<body class="{body_classes}">', text, count=1)
-
-    # Legacy single-letter logo / font imports / liquid stats are obsolete.
-    text = text.replace(' class="stat-item liquid"', ' class="stat-item"')
 
     text = replace_block(text, "head", build_head(page))
     text = replace_block(text, "header", build_header(page))
     text = replace_block(text, "subnav", build_subnav(page))
     text = replace_block(text, "next", build_next(page, meta))
     text = replace_block(text, "footer", build_footer(page))
-    text = format_and_clean_html(text)
+    text = format_and_remove_empty_lines(text)
     return text
 
 
