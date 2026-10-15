@@ -292,7 +292,9 @@ def build_header(page: Page) -> str:
     <div class="scroll-progress" aria-hidden="true"></div>
     <header class="site-header">
         <a href="{page.href("index")}" class="brand">{page.brand_mark()}<span class="brand-word">Waikiki</span></a>
-        <nav class="primary-nav">{"".join(nav_links)}</nav>
+        <nav class="primary-nav">
+            {"".join(nav_links)}
+        </nav>
         <div class="header-actions">
             <a class="lang-pill" href="{page.other_locale_href()}" hreflang="{other}" lang="{other}" title="{esc(T["lang_name"][other])}">{GLOBE_ICON}<span>{other.upper()}</span></a>
             <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false">{THEME_ICON}</button>
@@ -348,7 +350,6 @@ def build_footer(page: Page) -> str:
     <button class="to-top" type="button"><svg viewBox="0 0 54 54" aria-hidden="true"><circle class="ring-bg" cx="27" cy="27" r="24"/><circle class="ring" cx="27" cy="27" r="24"/></svg><span aria-hidden="true">↑</span></button>
     <!-- /@chrome:footer -->"""
 
-
 def build_subnav(page: Page) -> str:
     couple = couple_for(page.slug)
     if not couple:
@@ -368,7 +369,6 @@ def build_subnav(page: Page) -> str:
     </nav>
     <!-- /@chrome:subnav -->"""
 
-
 TARGET_NEXT_IMAGES = {
     "overview": "UniversalUpscaler_Pro_Precise_2_1f1c19d5-4a8a-6240-8c96-a28f543c898c.jpg",
     "infrastructure": "UniversalUpscaler_Pro_Precise_2_1f1c1a29-2ad2-6700-ba29-0886f847836a.jpg",
@@ -379,7 +379,6 @@ TARGET_NEXT_IMAGES = {
     "visa": "UniversalUpscaler_Pro_Precise_2_1f1c8726-8cda-62d0-a130-3eed92bc8395.jpg",
     "faq": "UniversalUpscaler_82625004-8a28-4ed6-9515-e204957d9457.jpg",
 }
-
 
 def build_next(page: Page, meta: dict[str, dict]) -> str:
     target = None
@@ -419,7 +418,6 @@ def build_next(page: Page, meta: dict[str, dict]) -> str:
     </section>
     <!-- /@chrome:next -->"""
 
-
 # --------------------------------------------------------------------------- #
 # Legacy conversion
 # --------------------------------------------------------------------------- #
@@ -449,11 +447,9 @@ def hero_html(page: Page, *, eyebrow: str, title: str, lead: str | None, image: 
     parts.append("</section>")
     return "".join(parts)
 
-
 def tidy_title(title: str) -> str:
     title = re.sub(r'<span style="color:\s*#(?:BC9200|C95A41)"\s*>(.*?)</span>', r"<em>\1</em>", title, flags=re.I | re.S)
     return re.sub(r"\s+", " ", title).strip()
-
 
 def convert_hero(page: Page, body: str) -> tuple[str, str]:
     """Return (body, lead_text) with the first legacy hero replaced."""
@@ -505,17 +501,13 @@ def convert_hero(page: Page, body: str) -> tuple[str, str]:
 
     return body, ""
 
-
 FALLBACK_IMAGE = "UniversalUpscaler_93281a3c-f408-4f55-b29b-e8a6b87ab85d-U.jpg"
-
 
 def replace_block(text: str, name: str, content: str) -> str:
     pattern = re.compile(rf"<!-- @chrome:{name} -->.*?<!-- /@chrome:{name} -->", re.S)
     if pattern.search(text):
         return pattern.sub(lambda _: content, text, count=1)
     return text
-
-
 
 def convert_legacy(page: Page, text: str) -> str:
     """Turn a page with the old nav/hamburger/footer markup into the marker layout."""
@@ -548,7 +540,6 @@ def convert_legacy(page: Page, text: str) -> str:
         + body + "    </main>\n    <!-- @chrome:footer --><!-- /@chrome:footer -->"
         + text[footer_end:]
     )
-
 
 # --------------------------------------------------------------------------- #
 # Page metadata (titles, hero images, descriptions)
@@ -584,9 +575,6 @@ def page_meta(text: str) -> dict:
         "lead": strip_tags(lead.group(1)) if lead else "",
     }
 
-
-
-
 # --------------------------------------------------------------------------- #
 # Main
 # --------------------------------------------------------------------------- #
@@ -596,7 +584,6 @@ def all_pages() -> list[Path]:
         pages += sorted((ROOT / locale).glob("*.html"))
         pages += sorted((ROOT / locale / "bio").glob("*.html"))
     return pages
-
 
 # Embedded Node script for exact js-beautify HTML formatting
 NODE_FORMAT_SCRIPT = """
@@ -618,7 +605,6 @@ let lines = out.split(/\\r?\\n/).filter(l => l.trim().length > 0);
 process.stdout.write(lines.join('\\n') + '\\n');
 """
 
-
 def format_and_remove_empty_lines(html_content: str) -> str:
     """Format document with 4-space indent and remove all empty lines."""
     try:
@@ -639,7 +625,6 @@ def format_and_remove_empty_lines(html_content: str) -> str:
     lines = [line for line in html_content.splitlines() if line.strip()]
     return "\n".join(lines) + "\n"
 
-
 def format_file(file_path: Path) -> bool:
     """Format and strip blank lines for a single file in-place."""
     try:
@@ -657,7 +642,6 @@ def format_file(file_path: Path) -> bool:
         print(f"Error processing {file_path}: {err}", file=sys.stderr)
     return False
 
-
 def get_all_html_files(directory: Path) -> list[Path]:
     """Recursively collect all .html files excluding node_modules and .git."""
     results = []
@@ -669,7 +653,6 @@ def get_all_html_files(directory: Path) -> list[Path]:
             continue
         results.append(item)
     return sorted(results)
-
 
 def process(path: Path, meta: dict) -> str:
     page = Page(path)
@@ -689,7 +672,6 @@ def process(path: Path, meta: dict) -> str:
     text = replace_block(text, "footer", build_footer(page))
     text = format_and_remove_empty_lines(text)
     return text
-
 
 def create_empty_page(
     slug: str = "empty",
@@ -763,7 +745,6 @@ def create_empty_page(
 """
     target_file.write_text(template, encoding="utf-8")
     return target_file
-
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -878,7 +859,6 @@ def main() -> int:
 
     print(f"{'Would update' if args.check else 'Updated'} {changed} of {len(paths)} pages")
     return 0
-
 
 if __name__ == "__main__":
     sys.exit(main())
