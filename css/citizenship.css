@@ -15,8 +15,8 @@ h3 {
 /* Hover Cards (Screening Tiers and Naturalization Process) */
 .hover-card {
     transition: transform var(--duration-normal, 0.4s) var(--ease-out),
-                box-shadow var(--duration-normal, 0.4s) var(--ease-out),
-                border-color var(--duration-normal, 0.4s) var(--ease-out);
+        box-shadow var(--duration-normal, 0.4s) var(--ease-out),
+        border-color var(--duration-normal, 0.4s) var(--ease-out);
     border-radius: var(--radius-lg);
     background: var(--surface-card);
     border: 1px solid var(--border-subtle);
@@ -67,15 +67,14 @@ h3 {
 button.open-assessment,
 .page-citizenship .open-assessment,
 .page-citizenship button.open-assessment {
-    background-color: var(--primary, #003366) !important;
-    background-image: none !important;
+    background-color: #003366 !important;
     color: #ffffff !important;
     -webkit-appearance: none;
     appearance: none;
     cursor: pointer;
     transition: background-color var(--duration-normal, 0.3s) var(--ease-out),
-                transform var(--duration-normal, 0.3s) var(--ease-spring),
-                box-shadow var(--duration-normal, 0.3s) var(--ease-out);
+        transform var(--duration-normal, 0.3s) var(--ease-spring),
+        box-shadow var(--duration-normal, 0.3s) var(--ease-out);
 }
 
 .open-assessment:hover,
@@ -177,7 +176,7 @@ button.open-assessment:active,
     border: none;
     cursor: pointer;
     transition: background-color var(--duration-fast) var(--ease-out),
-                transform var(--duration-fast) var(--ease-out);
+        transform var(--duration-fast) var(--ease-out);
 }
 
 .assessment-modal-close:hover {
@@ -334,18 +333,18 @@ button.open-assessment:active,
     background-image: none !important;
 }
 
-.body-dark .assessment-modal .space-y-3 > button {
+.body-dark .assessment-modal .space-y-3>button {
     background: rgba(0, 24, 48, 0.7);
     border-color: rgba(107, 164, 217, 0.22);
     color: var(--neutral-200);
 }
 
-.body-dark .assessment-modal .space-y-3 > button:hover {
+.body-dark .assessment-modal .space-y-3>button:hover {
     background: rgba(0, 51, 102, 0.35) !important;
     border-color: var(--tertiary-light) !important;
     color: var(--neutral-100);
 }
 
-.body-dark .assessment-modal .space-y-3 > button .rounded-full {
+.body-dark .assessment-modal .space-y-3>button .rounded-full {
     border-color: rgba(107, 164, 217, 0.5);
 }
