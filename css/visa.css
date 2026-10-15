@@ -131,6 +131,8 @@
     color: var(--heading);
     font-weight: 600;
     text-align: right;
+}
+
 /* 2. Interactive Eligibility Checker */
 .checker-wrapper {
     background: var(--surface);

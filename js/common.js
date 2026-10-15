@@ -1174,18 +1174,6 @@
         const items = $$('[data-filter-item]', grid);
         const chips = $$('[data-filter]', bar);
 
-        // Show how many entries each chip reveals.
-        chips.forEach((chip) => {
-            const key = chip.dataset.filter;
-            const total = key === 'all'
-                ? items.length
-                : items.filter((item) => (item.dataset.cat || '').split(/\s+/).includes(key)).length;
-            const count = document.createElement('span');
-            count.className = 'count';
-            count.textContent = total;
-            chip.appendChild(count);
-        });
-
         bar.addEventListener('click', (event) => {
             const chip = event.target.closest('[data-filter]');
             if (!chip || chip.getAttribute('aria-pressed') === 'true') return;
