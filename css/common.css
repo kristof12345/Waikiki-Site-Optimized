@@ -1240,33 +1240,6 @@ html.menu-open .menu-aside {
   opacity: 0.72;
 }
 
-.hero-scroll {
-  display: none !important;
-  position: absolute;
-  right: var(--gutter);
-  bottom: clamp(2rem, 6vh, 3.5rem);
-  flex-direction: column;
-  align-items: center;
-  gap: 0.8rem;
-  background: none;
-  color: rgba(255, 255, 255, 0.75);
-  font: 700 0.66rem/1 var(--font-sans);
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  writing-mode: vertical-rl;
-  cursor: pointer;
-  animation: riseIn 1s var(--ease-out) 1.8s both;
-}
-
-.hero-scroll::after {
-  content: "";
-  width: 1.5px;
-  height: 64px;
-  background: linear-gradient(currentColor 50%, rgba(255, 255, 255, 0.15) 50%);
-  background-size: 100% 200%;
-  animation: scrollCue 2.2s var(--ease-in-out) infinite;
-}
-
 /* Compact hero for pages without photography */
 .hero--compact {
   min-height: 0;
@@ -2602,10 +2575,6 @@ html.header-hidden .subnav {
   .stat-item:nth-child(n + 3) {
     border-top: 1px solid rgba(255, 255, 255, 0.12);
     margin-top: 1rem;
-  }
-
-  .hero-scroll {
-    display: none;
   }
 
   .footer-top {

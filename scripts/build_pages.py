@@ -461,8 +461,6 @@ def hero_html(page: Page, *, eyebrow: str, title: str, lead: str | None, image: 
             f'<div class="stat-item"><span class="stat-number">{n}</span><span class="stat-label">{l}</span></div>' for n, l in stats
         ) + "</div>")
     parts.append("</div>")
-    if image:
-        parts.append(f'<button class="hero-scroll" type="button">{esc(T["scroll"][loc])}</button>')
     parts.append("</section>")
     return "".join(parts)
 
