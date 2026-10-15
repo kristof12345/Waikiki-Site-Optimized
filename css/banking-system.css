@@ -1,5 +1,13 @@
 /* Banking System Stylesheet — Sovereign Nation of Waikiki */
 
+.bank-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr));
+
+    strong {
+        text-align: end;
+    }
+}
+
 .pillar-badge {
     display: inline-flex;
     align-items: center;
@@ -134,29 +142,60 @@
 }
 
 @keyframes illSpin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes illPulse {
-    0% { transform: scale(0.96); opacity: 0.95; }
-    50% { transform: scale(1.15); opacity: 0.35; }
-    100% { transform: scale(0.96); opacity: 0.95; }
+    0% {
+        transform: scale(0.96);
+        opacity: 0.95;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 0.35;
+    }
+
+    100% {
+        transform: scale(0.96);
+        opacity: 0.95;
+    }
 }
 
 @keyframes illDash {
-    to { stroke-dashoffset: -28; }
+    to {
+        stroke-dashoffset: -28;
+    }
 }
 
 @keyframes illDashFast {
-    to { stroke-dashoffset: -22; }
+    to {
+        stroke-dashoffset: -22;
+    }
 }
 
 @keyframes illGlow {
-    from { opacity: 0.5; filter: drop-shadow(0 0 2px var(--accent)); }
-    to { opacity: 1; filter: drop-shadow(0 0 8px var(--accent)); }
+    from {
+        opacity: 0.5;
+        filter: drop-shadow(0 0 2px var(--accent));
+    }
+
+    to {
+        opacity: 1;
+        filter: drop-shadow(0 0 8px var(--accent));
+    }
 }
 
 @keyframes illCorridorPulse {
-    0% { opacity: 0.25; stroke-width: 1.5; }
-    100% { opacity: 0.55; stroke-width: 2.5; }
+    0% {
+        opacity: 0.25;
+        stroke-width: 1.5;
+    }
+
+    100% {
+        opacity: 0.55;
+        stroke-width: 2.5;
+    }
 }
