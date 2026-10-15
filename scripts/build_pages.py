@@ -163,12 +163,10 @@ THEME_ICON = (
     "</g></svg>"
 )
 
-
 FOOTER_WAVE = (
     '<svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">'
     '<path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z"/></svg>'
 )
-
 
 # --------------------------------------------------------------------------- #
 # Helpers
@@ -176,12 +174,10 @@ FOOTER_WAVE = (
 def esc(text: str) -> str:
     return html.escape(text, quote=True)
 
-
 def strip_tags(fragment: str) -> str:
     text = re.sub(r"<br\s*/?>", " ", fragment)
     text = re.sub(r"<[^>]+>", "", text)
     return html.unescape(re.sub(r"\s+", " ", text)).strip()
-
 
 def label_for(slug: str, locale: str) -> str | None:
     for _, _, pages in GROUPS:
@@ -189,7 +185,6 @@ def label_for(slug: str, locale: str) -> str | None:
             if page_slug == slug:
                 return labels[locale]
     return None
-
 
 def group_for(slug: str) -> str:
     base = slug.split("/")[-1]
@@ -203,20 +198,17 @@ def group_for(slug: str) -> str:
             return key
     return "nation"
 
-
 def group_label(key: str, locale: str) -> str:
     for group_key, labels, _ in GROUPS:
         if group_key == key:
             return labels[locale]
     return ""
 
-
 def couple_for(slug: str) -> str | None:
     for couple in COUPLES:
         if slug == couple or any(slug == f"{couple}{suffix}" for suffix, _ in COUPLE_TABS[1:]):
             return couple
     return None
-
 
 class Page:
     """A localized page and its path context."""
@@ -247,36 +239,30 @@ class Page:
         loading = "lazy" if footer else "eager"
         return f'<img class="brand-mark" src="{src}" alt="Waikiki" width="{size}" height="{size}" loading="{loading}" decoding="async" />'
 
-
 # --------------------------------------------------------------------------- #
 # Chrome builders
 # --------------------------------------------------------------------------- #
 def build_head(page: Page) -> str:
     other = "hu" if page.locale == "en" else "en"
-    lines = [
-        "<!-- @chrome:head -->",
-        '<meta name="theme-color" content="#fbf7f0" />',
-        f'<link rel="alternate" hreflang="{other}" href="{page.other_locale_href()}" />',
-        '<link rel="preconnect" href="https://fonts.googleapis.com" />',
-        '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />',
-        '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />',
-        """<script>
-            (function (d) {
-                var h = d.documentElement;
-                h.classList.add('js');
-                try {
-                    if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
-                    if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
-                } catch (e) { }
-                setTimeout(function () {
-                    if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
-                }, 3500)
-            })(document);
-        </script>""",
-        "<!-- /@chrome:head -->",
-    ]
-    return "\n    ".join(line for line in lines if line)
-
+    return """<!-- @chrome:head -->
+    <meta name="theme-color" content="#fbf7f0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />
+    <script>
+    (function (d) {
+        var h = d.documentElement;
+        h.classList.add('js');
+        try {
+            if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+            if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+        } catch (e) { }
+        setTimeout(function () {
+            if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+        }, 3500)
+    })(document);
+    </script>
+    <!-- /@chrome:head -->"""
 
 def build_header(page: Page) -> str:
     loc = page.locale
