@@ -316,7 +316,11 @@ def build_header(page: Page) -> str:
                     <p class="menu-clock-city">{esc(T["clock_city"][loc])}</p>
                 </div>
                 <p class="menu-motto">{esc(T["motto"][loc])}</p>
-                <div class="menu-aside-row">{lang_chips}<button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">{esc(T["night"][loc])}</button><button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">{esc(T["animate_chip"][loc])}</button></div>
+                <div class="menu-aside-row">
+                    {lang_chips}
+                    <button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">{esc(T["night"][loc])}</button>
+                    <button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">{esc(T["animate_chip"][loc])}</button>
+                </div>
             </aside>
             {"".join(groups_html)}
         </div>
