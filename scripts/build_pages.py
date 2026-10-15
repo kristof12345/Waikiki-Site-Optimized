@@ -358,8 +358,7 @@ def build_footer(page: Page) -> str:
             <div class="footer-bottom">
                 <p>{esc(T["rights"][loc])}</p>
                 <nav>
-                    <a href="{page.other_locale_href()}" hreflang="{other}" lang="{other}">{esc(T["lang_name"][other])}</a>
-                    <a href="#main">{esc(T["to_top"][loc])} ↑</a>
+                    <a style="margin-right: 40px" href="{page.other_locale_href()}" hreflang="{other}" lang="{other}">{esc(T["lang_name"][other])}</a>
                 </nav>
             </div>
         </div>
