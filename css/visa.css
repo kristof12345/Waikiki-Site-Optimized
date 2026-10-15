@@ -29,10 +29,34 @@
     color: var(--waikiki);
 }
 
+.visa-badge.is-blue {
+    background: rgba(26, 82, 143, 0.12);
+    border-color: rgba(26, 82, 143, 0.3);
+    color: var(--primary-light);
+}
+
+.visa-badge.is-red {
+    background: rgba(192, 57, 43, 0.12);
+    border-color: rgba(192, 57, 43, 0.3);
+    color: #c0392b;
+}
+
 .body-dark .visa-badge.is-green {
     background: rgba(58, 167, 156, 0.16);
     border-color: rgba(58, 167, 156, 0.35);
     color: var(--waikiki-hover);
+}
+
+.body-dark .visa-badge.is-blue {
+    background: rgba(107, 164, 217, 0.16);
+    border-color: rgba(107, 164, 217, 0.35);
+    color: var(--tertiary);
+}
+
+.body-dark .visa-badge.is-red {
+    background: rgba(235, 94, 85, 0.16);
+    border-color: rgba(235, 94, 85, 0.35);
+    color: #eb5e55;
 }
 
 .visa-grid {
@@ -107,107 +131,7 @@
     color: var(--heading);
     font-weight: 600;
     text-align: right;
-}
-
-/* 2. Dual Showcase for SmartBorder */
-.smartborder-showcase {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    align-items: center;
-    margin-top: 2.5rem;
-}
-
-@media (min-width: 900px) {
-    .smartborder-showcase {
-        grid-template-columns: 1.1fr 0.9fr;
-    }
-}
-
-.showcase-features {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.showcase-feature-item {
-    display: flex;
-    gap: 1.25rem;
-    align-items: flex-start;
-}
-
-.showcase-icon-box {
-    flex-shrink: 0;
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    background: var(--accent-subtle);
-    border: 1px solid rgba(194, 154, 87, 0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--accent-dark);
-}
-
-.body-dark .showcase-icon-box {
-    background: rgba(223, 186, 118, 0.12);
-    border-color: rgba(223, 186, 118, 0.25);
-    color: var(--accent);
-}
-
-.showcase-feature-item h3 {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: var(--heading);
-    margin: 0 0 0.35rem;
-}
-
-.showcase-feature-item p {
-    font-size: 0.92rem;
-    line-height: 1.6;
-    color: var(--text-muted);
-    margin: 0;
-}
-
-.showcase-media-card {
-    border-radius: var(--radius-lg, 16px);
-    overflow: hidden;
-    border: 1px solid var(--line);
-    background: var(--surface);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease;
-}
-
-.showcase-media-card:hover {
-    transform: translateY(-4px);
-}
-
-.showcase-media-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-}
-
-.showcase-media-caption {
-    padding: 1.25rem 1.5rem;
-}
-
-.showcase-media-caption h4 {
-    margin: 0 0 0.25rem;
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--heading);
-}
-
-.showcase-media-caption p {
-    margin: 0;
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    line-height: 1.5;
-}
-
-/* 3. Interactive Eligibility Checker */
+/* 2. Interactive Eligibility Checker */
 .checker-wrapper {
     background: var(--surface);
     border: 1px solid var(--line);
@@ -417,7 +341,7 @@
     font-weight: 700;
 }
 
-/* 4. Four-Step Arrival Flow */
+/* 3. Four-Step Arrival Flow */
 .process-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -481,7 +405,7 @@
     margin: 0;
 }
 
-/* 5. Customs and Allowances Grid */
+/* 4. Customs and Allowances Grid */
 .customs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
