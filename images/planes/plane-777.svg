@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%" fill="none" style="color: #003366;">
+  <defs>
+    <linearGradient id="b777Body" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="currentColor" stop-opacity="0.12" />
+      <stop offset="50%" stop-color="currentColor" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="currentColor" stop-opacity="0.12" />
+    </linearGradient>
+    <linearGradient id="b777Wing" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="currentColor" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="currentColor" stop-opacity="0.08" />
+    </linearGradient>
+  </defs>
+
+  <!-- Technical Axis and Grid -->
+  <g opacity="0.25" stroke="currentColor" stroke-width="0.75" stroke-dasharray="3 3">
+    <line x1="400" y1="30" x2="400" y2="770" />
+    <line x1="90" y1="490" x2="710" y2="490" />
+    <circle cx="400" cy="415" r="330" />
+    <circle cx="400" cy="415" r="170" />
+  </g>
+
+  <!-- Dimensions Callouts -->
+  <g opacity="0.55" stroke="currentColor" stroke-width="1">
+    <!-- Wingspan 60.9m bar -->
+    <line x1="95" y1="480" x2="95" y2="450" />
+    <line x1="705" y1="480" x2="705" y2="450" />
+    <line x1="95" y1="465" x2="705" y2="465" stroke-dasharray="4 4" />
+    <!-- Length 63.7m bar -->
+    <line x1="370" y1="90" x2="340" y2="90" />
+    <line x1="370" y1="730" x2="340" y2="730" />
+    <line x1="355" y1="90" x2="355" y2="730" stroke-dasharray="4 4" />
+  </g>
+  <text x="400" y="458" text-anchor="middle" fill="currentColor" font-family="monospace" font-size="11" letter-spacing="2" opacity="0.75">SPAN 60.9 M</text>
+  <text x="340" y="410" text-anchor="middle" fill="currentColor" font-family="monospace" font-size="11" letter-spacing="2" opacity="0.75" transform="rotate(-90 340 410)">LENGTH 63.7 M</text>
+
+  <!-- Left High-Aspect Wing -->
+  <path d="M 368 315 L 95 490 L 100 508 L 180 480 L 265 450 L 335 430 L 368 470 Z" fill="url(#b777Wing)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
+  <!-- Right High-Aspect Wing -->
+  <path d="M 432 315 L 705 490 L 700 508 L 620 480 L 535 450 L 465 430 L 432 470 Z" fill="url(#b777Wing)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
+
+  <!-- Wing Details and Flap Track Fairings Left -->
+  <g stroke="currentColor" stroke-width="1" opacity="0.65">
+    <line x1="145" y1="488" x2="225" y2="458" />
+    <line x1="235" y1="454" x2="315" y2="424" />
+    <!-- Flap track fairings -->
+    <line x1="180" y1="480" x2="175" y2="502" stroke-width="2.4" />
+    <line x1="250" y1="455" x2="245" y2="477" stroke-width="2.4" />
+    <line x1="315" y1="435" x2="310" y2="457" stroke-width="2.4" />
+  </g>
+  <!-- Wing Details and Flap Track Fairings Right -->
+  <g stroke="currentColor" stroke-width="1" opacity="0.65">
+    <line x1="655" y1="488" x2="575" y2="458" />
+    <line x1="565" y1="454" x2="485" y2="424" />
+    <!-- Flap track fairings -->
+    <line x1="620" y1="480" x2="625" y2="502" stroke-width="2.4" />
+    <line x1="550" y1="455" x2="555" y2="477" stroke-width="2.4" />
+    <line x1="485" y1="435" x2="490" y2="457" stroke-width="2.4" />
+  </g>
+
+  <!-- 2 Huge GE90-115B Turbofan Engines -->
+  <!-- Left Gigantic Engine -->
+  <g stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.35">
+    <rect x="235" y="370" width="32" height="72" rx="14" />
+    <line x1="251" y1="370" x2="251" y2="325" stroke-width="2.8" />
+    <circle cx="251" cy="382" r="6" fill="currentColor" />
+    <!-- Fan spinner and core exhaust -->
+    <circle cx="251" cy="382" r="2.5" fill="#ffffff" opacity="0.8" />
+    <path d="M 243 442 L 251 450 L 259 442" stroke-width="1.4" fill="none" />
+  </g>
+  <!-- Right Gigantic Engine -->
+  <g stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.35">
+    <rect x="533" y="370" width="32" height="72" rx="14" />
+    <line x1="549" y1="370" x2="549" y2="325" stroke-width="2.8" />
+    <circle cx="549" cy="382" r="6" fill="currentColor" />
+    <circle cx="549" cy="382" r="2.5" fill="#ffffff" opacity="0.8" />
+    <path d="M 541 442 L 549 450 L 557 442" stroke-width="1.4" fill="none" />
+  </g>
+
+  <!-- Horizontal Stabilizers (Tail) -->
+  <path d="M 383 630 L 260 710 L 265 728 L 345 708 L 383 690 Z" fill="url(#b777Wing)" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+  <path d="M 417 630 L 540 710 L 535 728 L 455 708 L 417 690 Z" fill="url(#b777Wing)" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+
+  <!-- Fuselage Body (Triple Seven Cylindrical with Chisel Tailcone) -->
+  <path d="M 400 90 C 385 110 368 150 368 210 L 368 620 C 368 670 388 715 400 730 C 412 715 432 670 432 620 L 432 210 C 432 150 415 110 400 90 Z" fill="url(#b777Body)" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" />
+
+  <!-- Cockpit Windows -->
+  <path d="M 388 122 C 394 116 406 116 412 122 L 416 132 L 384 132 Z" fill="currentColor" opacity="0.85" />
+  <line x1="400" y1="117" x2="400" y2="132" stroke="currentColor" stroke-width="1.2" />
+
+  <!-- Fuselage Panel Stations and Blade Tail Fin -->
+  <g stroke="currentColor" stroke-width="1" opacity="0.55">
+    <line x1="369" y1="200" x2="431" y2="200" />
+    <line x1="369" y1="270" x2="431" y2="270" />
+    <line x1="369" y1="340" x2="431" y2="340" />
+    <line x1="369" y1="410" x2="431" y2="410" />
+    <line x1="369" y1="480" x2="431" y2="480" />
+    <line x1="369" y1="550" x2="431" y2="550" />
+    <!-- Vertical tail fin dorsal and rudder -->
+    <line x1="400" y1="560" x2="400" y2="715" stroke-width="3" stroke-linecap="round" />
+    <!-- Chisel tail cone APU exhaust -->
+    <rect x="397" y="726" width="6" height="6" rx="1" fill="currentColor" opacity="0.8" />
+  </g>
+
+  <!-- Aircraft ID watermark -->
+  <text x="400" y="765" text-anchor="middle" fill="currentColor" font-family="monospace" font-size="9" font-weight="bold" letter-spacing="3" opacity="0.7">BOEING 777-200 ER · THE DYNASTY</text>
+</svg>

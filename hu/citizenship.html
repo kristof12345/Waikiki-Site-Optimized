@@ -7,14 +7,14 @@
     <meta name="theme-color" content="#fbf7f0" />
     <link rel="stylesheet" href="../css/fonts.css" />
     <script>
-        (function(d) {
+        (function (d) {
             var h = d.documentElement;
             h.classList.add('js');
             try {
                 if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
                 if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
-            } catch (e) {}
-            setTimeout(function() {
+            } catch (e) { }
+            setTimeout(function () {
                 if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
             }, 3500)
         })(document);
@@ -27,10 +27,8 @@
     <link rel="preload" as="image" href="../images/UniversalUpscaler_62c05666-3901-44ad-a6d5-d1b9c4459ea4-U.jpg" fetchpriority="high" />
     <link rel="preload" as="style" href="../css/common.css" />
     <link rel="preload" as="style" href="../css/citizenship.css" />
-    <link rel="preload" as="style" href="../css/font-awesome.min.css" />
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/citizenship.css" />
-    <link rel="stylesheet" href="../css/font-awesome.min.css" />
     <script src="../js/vendor/tailwindcss.js"></script>
     <script src="../js/vendor/react.production.min.js"></script>
     <script src="../js/vendor/react-dom.production.min.js"></script>
@@ -171,37 +169,37 @@
                     </div>
                     <div class="grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6 gap-6">
                         <div class="p-6 rounded-2xl border-2 text-center border-red-300 bg-red-50 hover-card">
-                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><i class="fas fa-times-circle"></i></div>
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><img src="../icons/mdi/shield-alert.svg" alt="" width="24" height="24" /></div>
                             <div class="text-xs font-bold uppercase tracking-widest mb-2 opacity-60">0-34 pont</div>
                             <h3 class="text-lg font-bold mb-2">Vörös Szint</h3>
                             <p class="text-gray-600 text-sm leading-relaxed">Rendszer általi elutasítás. A pályázó profilja "vörös vonal" kizárásokat vált ki, vagy nem éri el a "civilizációs kompatibilitás" küszöbét.</p>
                         </div>
                         <div class="p-6 rounded-2xl border-2 text-center border-blue-300 bg-blue-50 hover-card">
-                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><i class="fas fa-laptop-code"></i></div>
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><img src="../icons/mdi/laptop.svg" alt="" width="24" height="24" /></div>
                             <div class="text-xs font-bold uppercase tracking-widest mb-2 opacity-60">35-49 pont</div>
                             <h3 class="text-lg font-bold mb-2">Kék Szint</h3>
                             <p class="text-gray-600 text-sm leading-relaxed">Tehetségvízum. Ideiglenes státusz fiatal digitális újítók számára. A honosítás előtt valószínűleg hosszabb integrációs időszak szükséges.</p>
                         </div>
                         <div class="p-6 rounded-2xl border-2 text-center border-orange-300 bg-orange-50 hover-card">
-                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><i class="fas fa-user-shield"></i></div>
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><img src="../icons/mdi/shield-account.svg" alt="" width="24" height="24" /></div>
                             <div class="text-xs font-bold uppercase tracking-widest mb-2 opacity-60">50-64 pont</div>
                             <h3 class="text-lg font-bold mb-2">Bronz Szint</h3>
                             <p class="text-gray-600 text-sm leading-relaxed">Próbaidős lakos. Közepes valószínűség az állampolgárság megadására. Tartózkodási engedély elérhető lehet biztonsági letéttel.</p>
                         </div>
                         <div class="p-6 rounded-2xl border-2 text-center border-gray-400 bg-gray-50 hover-card">
-                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><i class="fas fa-medal"></i></div>
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><img src="../icons/mdi/medal.svg" alt="" width="24" height="24" /></div>
                             <div class="text-xs font-bold uppercase tracking-widest mb-2 opacity-60">65-79 pont</div>
                             <h3 class="text-lg font-bold mb-2">Ezüst Szint</h3>
                             <p class="text-gray-600 text-sm leading-relaxed">Standard befektető. Néhány éven belül állampolgársághoz vezethet, elegendő gazdasági hozzájárulás esetén.</p>
                         </div>
                         <div class="p-6 rounded-2xl border-2 text-center border-yellow-400 bg-yellow-50 hover-card">
-                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><i class="fas fa-crown"></i></div>
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><img src="../icons/mdi/crown.svg" alt="" width="24" height="24" /></div>
                             <div class="text-xs font-bold uppercase tracking-widest mb-2 opacity-60">80-90 pont</div>
                             <h3 class="text-lg font-bold mb-2">Arany Szint</h3>
                             <p class="text-gray-600 text-sm leading-relaxed">Stratégiai partner. Kiemelt feldolgozás. Az állampolgárság jó eséllyel azonnal megadható, kedvező feltételek mellett.</p>
                         </div>
                         <div class="p-6 rounded-2xl border-2 text-center border-indigo-300 bg-indigo-50 hover-card">
-                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><i class="fas fa-gem"></i></div>
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><img src="../icons/mdi/gold.svg" alt="" width="24" height="24" /></div>
                             <div class="text-xs font-bold uppercase tracking-widest mb-2 opacity-60">90+ pont</div>
                             <h3 class="text-lg font-bold mb-2">Gyémánt Szint</h3>
                             <p class="text-gray-600 text-sm leading-relaxed">Szuverén érték. A globális újítók felső 1%-a és az ultramagas nettó vagyonnal rendelkező személyek számára fenntartva.</p>
@@ -217,17 +215,17 @@
                     </div>
                     <div class="grid md:grid-cols-3 gap-8">
                         <div class="p-8 bg-white rounded-2xl border border-gray-100 text-center hover-card">
-                            <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm text-2xl" style="color: var(--accent-hover)"><i class="fas fa-chart-pie"></i></div>
+                            <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm text-2xl" style="color: var(--accent-hover)"><img src="../icons/mdi/finance.svg" alt="" width="28" height="28" /></div>
                             <h3 class="text-xl font-bold mb-3">A Pontszámkártya</h3>
                             <p class="text-gray-600 text-sm leading-relaxed">A tények mennyiségi validálása. Ellenőrizzük a nettó vagyont, a tudományok (STEM preferenciával) terén szerzett képesítéseket és a családi állapotot. A szubjektív állításokat figyelmen kívül hagyjuk; kizárólag a matematikailag bizonyítható értékeket vesszük figyelembe.</p>
                         </div>
                         <div class="p-8 bg-white rounded-2xl border border-gray-100 text-center hover-card">
-                            <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm text-2xl" style="color: var(--accent-hover)"><i class="fas fa-brain"></i></div>
+                            <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm text-2xl" style="color: var(--accent-hover)"><img src="../icons/mdi/robot.svg" alt="" width="28" height="28" /></div>
                             <h3 class="text-xl font-bold mb-3">A Kapuőr MI</h3>
                             <p class="text-gray-600 text-sm leading-relaxed">A Kapuőr 15 évnyi digitális lábnyomot és pénzügyi tranzakciót elemez. Előre jelzi az "integrációs súrlódást" az ideológiai radikalizmus, a spekulációs kockázatvállalás és a társadalmi instabilitás kiszűrésével.</p>
                         </div>
                         <div class="p-8 bg-white rounded-2xl border border-gray-100 text-center hover-card">
-                            <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm text-2xl" style="color: var(--accent-hover)"><i class="fas fa-shield-halved"></i></div>
+                            <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm text-2xl" style="color: var(--accent-hover)"><img src="../icons/mdi/shield-check.svg" alt="" width="28" height="28" /></div>
                             <h3 class="text-xl font-bold mb-3">Összhang Interjú</h3>
                             <p class="text-gray-600 text-sm leading-relaxed">Személyes felmérés egy vezető bevándorlási tisztviselővel. Ez a fázis a lojalitást, a stresszhelyzetben tanúsított nyugalmat és Waikiki hierarchikus társadalmi struktúrájának elfogadását teszteli.</p>
                         </div>

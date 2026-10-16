@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%" fill="none" style="color: #003366;">
+  <defs>
+    <linearGradient id="concordeBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="currentColor" stop-opacity="0.14" />
+      <stop offset="50%" stop-color="currentColor" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="currentColor" stop-opacity="0.14" />
+    </linearGradient>
+    <linearGradient id="concordeDelta" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="currentColor" stop-opacity="0.24" />
+      <stop offset="100%" stop-color="currentColor" stop-opacity="0.1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Technical Axis and Grid -->
+  <g opacity="0.25" stroke="currentColor" stroke-width="0.75" stroke-dasharray="3 3">
+    <line x1="400" y1="30" x2="400" y2="770" />
+    <line x1="180" y1="610" x2="620" y2="610" />
+    <circle cx="400" cy="420" r="320" />
+    <circle cx="400" cy="420" r="160" />
+  </g>
+
+  <!-- Dimensions Callouts -->
+  <g opacity="0.55" stroke="currentColor" stroke-width="1">
+    <!-- Wingspan 26m bar -->
+    <line x1="210" y1="600" x2="210" y2="570" />
+    <line x1="590" y1="600" x2="590" y2="570" />
+    <line x1="210" y1="585" x2="590" y2="585" stroke-dasharray="4 4" />
+    <!-- Length 64m bar -->
+    <line x1="370" y1="50" x2="340" y2="50" />
+    <line x1="370" y1="735" x2="340" y2="735" />
+    <line x1="355" y1="50" x2="355" y2="735" stroke-dasharray="4 4" />
+  </g>
+  <text x="400" y="578" text-anchor="middle" fill="currentColor" font-family="monospace" font-size="11" letter-spacing="2" opacity="0.75">SPAN 26.0 M</text>
+  <text x="340" y="390" text-anchor="middle" fill="currentColor" font-family="monospace" font-size="11" letter-spacing="2" opacity="0.75" transform="rotate(-90 340 390)">LENGTH 64.0 M</text>
+
+  <!-- Ogival Delta Wings (Unified continuous wing curve) -->
+  <!-- Left and Right Ogival Delta Wing -->
+  <path d="M 386 215 C 380 270 330 420 210 610 L 215 625 L 340 625 L 386 630 L 386 640 L 414 640 L 414 630 L 460 625 L 585 625 L 590 610 C 470 420 420 270 414 215 Z" fill="url(#concordeDelta)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
+
+  <!-- Elevon Control Surfaces and Wing Rib Lines Left -->
+  <g stroke="currentColor" stroke-width="1" opacity="0.6">
+    <line x1="230" y1="605" x2="230" y2="625" stroke-width="1.8" />
+    <line x1="280" y1="590" x2="280" y2="625" stroke-width="1.8" />
+    <line x1="330" y1="580" x2="330" y2="625" stroke-width="1.8" />
+    <path d="M 386 360 C 350 460 280 540 230 600" stroke-dasharray="3 3" />
+    <path d="M 386 450 C 360 520 320 570 280 610" stroke-dasharray="3 3" />
+  </g>
+  <!-- Elevon Control Surfaces and Wing Rib Lines Right -->
+  <g stroke="currentColor" stroke-width="1" opacity="0.6">
+    <line x1="570" y1="605" x2="570" y2="625" stroke-width="1.8" />
+    <line x1="520" y1="590" x2="520" y2="625" stroke-width="1.8" />
+    <line x1="470" y1="580" x2="470" y2="625" stroke-width="1.8" />
+    <path d="M 414 360 C 450 460 520 540 570 600" stroke-dasharray="3 3" />
+    <path d="M 414 450 C 440 520 480 570 520 610" stroke-dasharray="3 3" />
+  </g>
+
+  <!-- 4 Underslung Olympus 1000 Engines (Twin Nacelle Boxes) -->
+  <!-- Left Engine Bay (2 engines) -->
+  <g stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.35">
+    <rect x="300" y="540" width="44" height="88" rx="4" />
+    <line x1="322" y1="540" x2="322" y2="628" stroke-width="1.5" />
+    <!-- Nozzle exits -->
+    <circle cx="311" cy="628" r="7" fill="currentColor" fill-opacity="0.7" />
+    <circle cx="333" cy="628" r="7" fill="currentColor" fill-opacity="0.7" />
+    <!-- Air intake ramps -->
+    <line x1="300" y1="552" x2="344" y2="552" stroke-width="1" />
+  </g>
+  <!-- Right Engine Bay (2 engines) -->
+  <g stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.35">
+    <rect x="456" y="540" width="44" height="88" rx="4" />
+    <line x1="478" y1="540" x2="478" y2="628" stroke-width="1.5" />
+    <!-- Nozzle exits -->
+    <circle cx="467" cy="628" r="7" fill="currentColor" fill-opacity="0.7" />
+    <circle cx="489" cy="628" r="7" fill="currentColor" fill-opacity="0.7" />
+    <!-- Air intake ramps -->
+    <line x1="456" y1="552" x2="500" y2="552" stroke-width="1" />
+  </g>
+
+  <!-- Slender Fuselage -->
+  <!-- Needle nose with pitot boom at Y=50 -->
+  <line x1="400" y1="50" x2="400" y2="75" stroke="currentColor" stroke-width="1.5" />
+  <path d="M 400 75 C 395 110 387 180 387 280 L 387 660 C 387 700 395 725 400 735 C 405 725 413 700 413 660 L 413 280 C 413 180 405 110 400 75 Z" fill="url(#concordeBody)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
+
+  <!-- Supersonic Visor / Droop Nose Seam -->
+  <path d="M 393 115 C 397 112 403 112 407 115 L 409 135 L 391 135 Z" fill="currentColor" opacity="0.8" />
+  <line x1="390" y1="145" x2="410" y2="145" stroke="currentColor" stroke-width="1" opacity="0.6" />
+
+  <!-- Cabin Sections and Fin Spine -->
+  <g stroke="currentColor" stroke-width="1" opacity="0.55">
+    <line x1="387" y1="220" x2="413" y2="220" />
+    <line x1="387" y1="300" x2="413" y2="300" />
+    <line x1="387" y1="380" x2="413" y2="380" />
+    <line x1="387" y1="460" x2="413" y2="460" />
+    <line x1="387" y1="540" x2="413" y2="540" />
+    <line x1="387" y1="620" x2="413" y2="620" />
+    <!-- Vertical tail spine -->
+    <line x1="400" y1="530" x2="400" y2="725" stroke-width="2.8" stroke-linecap="round" />
+  </g>
+
+  <!-- Aircraft ID watermark/badge -->
+  <text x="400" y="770" text-anchor="middle" fill="currentColor" font-family="monospace" font-size="9" font-weight="bold" letter-spacing="3" opacity="0.7">LOCKHEED MARTIN CONCORDE V2 · ROYAL CONCORDE</text>
+</svg>

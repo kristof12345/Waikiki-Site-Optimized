@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%" fill="none" style="color: #003366;">
+  <defs>
+    <linearGradient id="af1Body" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="currentColor" stop-opacity="0.12" />
+      <stop offset="50%" stop-color="currentColor" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="currentColor" stop-opacity="0.12" />
+    </linearGradient>
+    <linearGradient id="af1Wing" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="currentColor" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="currentColor" stop-opacity="0.08" />
+    </linearGradient>
+  </defs>
+
+  <!-- Technical Axis and Grid -->
+  <g opacity="0.25" stroke="currentColor" stroke-width="0.75" stroke-dasharray="3 3">
+    <line x1="400" y1="20" x2="400" y2="780" />
+    <line x1="30" y1="510" x2="770" y2="510" />
+    <circle cx="400" cy="400" r="350" />
+    <circle cx="400" cy="400" r="200" />
+  </g>
+
+  <!-- Dimensions Callouts -->
+  <g opacity="0.55" stroke="currentColor" stroke-width="1">
+    <!-- Wingspan 94m bar -->
+    <line x1="30" y1="500" x2="30" y2="470" />
+    <line x1="770" y1="500" x2="770" y2="470" />
+    <line x1="30" y1="485" x2="770" y2="485" stroke-dasharray="4 4" />
+    <!-- Length 102m bar -->
+    <line x1="380" y1="45" x2="350" y2="45" />
+    <line x1="380" y1="750" x2="350" y2="750" />
+    <line x1="365" y1="45" x2="365" y2="750" stroke-dasharray="4 4" />
+  </g>
+  <text x="400" y="478" text-anchor="middle" fill="currentColor" font-family="monospace" font-size="11" letter-spacing="2" opacity="0.75">SPAN 94.0 M</text>
+  <text x="350" y="390" text-anchor="middle" fill="currentColor" font-family="monospace" font-size="11" letter-spacing="2" opacity="0.75" transform="rotate(-90 350 390)">LENGTH 102.0 M</text>
+
+  <!-- Left Wing -->
+  <path d="M 368 280 L 30 510 L 35 528 L 120 500 L 220 470 L 310 445 L 368 475 Z" fill="url(#af1Wing)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
+  <!-- Right Wing -->
+  <path d="M 432 280 L 770 510 L 765 528 L 680 500 L 580 470 L 490 445 L 432 475 Z" fill="url(#af1Wing)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
+
+  <!-- Wing Panel Details Left -->
+  <g stroke="currentColor" stroke-width="1" opacity="0.65">
+    <line x1="70" y1="505" x2="150" y2="470" />
+    <line x1="160" y1="465" x2="240" y2="430" />
+    <line x1="250" y1="425" x2="330" y2="390" />
+    <!-- Flap tracks -->
+    <line x1="120" y1="500" x2="115" y2="518" stroke-width="2" />
+    <line x1="220" y1="470" x2="215" y2="488" stroke-width="2" />
+    <line x1="310" y1="445" x2="305" y2="463" stroke-width="2" />
+  </g>
+  <!-- Wing Panel Details Right -->
+  <g stroke="currentColor" stroke-width="1" opacity="0.65">
+    <line x1="730" y1="505" x2="650" y2="470" />
+    <line x1="640" y1="465" x2="560" y2="430" />
+    <line x1="550" y1="425" x2="470" y2="390" />
+    <!-- Flap tracks -->
+    <line x1="680" y1="500" x2="685" y2="518" stroke-width="2" />
+    <line x1="580" y1="470" x2="585" y2="488" stroke-width="2" />
+    <line x1="490" y1="445" x2="495" y2="463" stroke-width="2" />
+  </g>
+
+  <!-- 6 TITAN XWB Engines -->
+  <!-- Left Engines: Outboard (E1), Mid (E2), Inboard (E3) -->
+  <!-- E1 Left Outboard -->
+  <g stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.3">
+    <rect x="108" y="465" width="18" height="48" rx="7" />
+    <line x1="117" y1="465" x2="117" y2="440" stroke-width="2" />
+    <circle cx="117" cy="473" r="3" fill="currentColor" />
+  </g>
+  <!-- E2 Left Mid -->
+  <g stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.3">
+    <rect x="206" y="415" width="20" height="52" rx="8" />
+    <line x1="216" y1="415" x2="216" y2="385" stroke-width="2" />
+    <circle cx="216" cy="423" r="3.5" fill="currentColor" />
+  </g>
+  <!-- E3 Left Inboard -->
+  <g stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.3">
+    <rect x="301" y="370" width="22" height="56" rx="9" />
+    <line x1="312" y1="370" x2="312" y2="335" stroke-width="2.2" />
+    <circle cx="312" cy="378" r="4" fill="currentColor" />
+  </g>
+
+  <!-- Right Engines: Inboard (E4), Mid (E5), Outboard (E6) -->
+  <!-- E4 Right Inboard -->
+  <g stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.3">
+    <rect x="477" y="370" width="22" height="56" rx="9" />
+    <line x1="488" y1="370" x2="488" y2="335" stroke-width="2.2" />
+    <circle cx="488" cy="378" r="4" fill="currentColor" />
+  </g>
+  <!-- E5 Right Mid -->
+  <g stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.3">
+    <rect x="574" y="415" width="20" height="52" rx="8" />
+    <line x1="584" y1="415" x2="584" y2="385" stroke-width="2" />
+    <circle cx="584" cy="423" r="3.5" fill="currentColor" />
+  </g>
+  <!-- E6 Right Outboard -->
+  <g stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.3">
+    <rect x="674" y="465" width="18" height="48" rx="7" />
+    <line x1="683" y1="465" x2="683" y2="440" stroke-width="2" />
+    <circle cx="683" cy="473" r="3" fill="currentColor" />
+  </g>
+
+  <!-- Horizontal Stabilizers (Tail) -->
+  <path d="M 382 660 L 255 745 L 260 760 L 335 740 L 382 725 Z" fill="url(#af1Wing)" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+  <path d="M 418 660 L 545 745 L 540 760 L 465 740 L 418 725 Z" fill="url(#af1Wing)" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+
+  <!-- Fuselage Body -->
+  <path d="M 400 45 C 385 65 368 110 368 170 L 368 640 C 368 690 382 730 400 750 C 418 730 432 690 432 640 L 432 170 C 432 110 415 65 400 45 Z" fill="url(#af1Body)" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" />
+
+  <!-- Cockpit Windshield -->
+  <path d="M 388 98 C 394 92 406 92 412 98 L 418 108 L 382 108 Z" fill="currentColor" opacity="0.85" />
+  <line x1="400" y1="93" x2="400" y2="108" stroke="currentColor" stroke-width="1.5" />
+
+  <!-- Upper Deck Contour and Panel Lines -->
+  <g stroke="currentColor" stroke-width="1" opacity="0.55">
+    <path d="M 380 135 C 380 120 420 120 420 135 L 420 320 C 420 340 380 340 380 320 Z" stroke-dasharray="4 2" />
+    <line x1="370" y1="200" x2="430" y2="200" />
+    <line x1="370" y1="280" x2="430" y2="280" />
+    <line x1="370" y1="360" x2="430" y2="360" />
+    <line x1="370" y1="440" x2="430" y2="440" />
+    <line x1="370" y1="520" x2="430" y2="520" />
+    <line x1="370" y1="600" x2="430" y2="600" />
+    <!-- Vertical stabilizer spine top view -->
+    <line x1="400" y1="610" x2="400" y2="735" stroke-width="3" stroke-linecap="round" />
+  </g>
+
+  <!-- Aircraft ID watermark/badge in SVG -->
+  <text x="400" y="775" text-anchor="middle" fill="currentColor" font-family="monospace" font-size="9" font-weight="bold" letter-spacing="3" opacity="0.7">BOEING 7107-B · WAIKIKI AIR FORCE ONE</text>
+</svg>

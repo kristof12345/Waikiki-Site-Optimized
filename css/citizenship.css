@@ -266,10 +266,18 @@ button.open-assessment:active,
     font-weight: 700;
 }
 
+.hover-card .w-14.h-14.bg-blue-50 img {
+    filter: invert(41%) sepia(35%) saturate(1612%) hue-rotate(334deg) brightness(89%) contrast(89%);
+}
+
 .body-dark .hover-card .w-12.h-12.bg-white {
     background-color: rgba(255, 255, 255, 0.08) !important;
     color: var(--neutral-100) !important;
     border: 1px solid rgba(107, 164, 217, 0.2);
+}
+
+.body-dark .hover-card .w-12.h-12.bg-white img {
+    filter: brightness(0) invert(0.9);
 }
 
 .body-dark .hover-card .w-12.h-12.bg-white i,
@@ -281,6 +289,10 @@ button.open-assessment:active,
     background-color: rgba(201, 90, 65, 0.16) !important;
     border: 1px solid rgba(201, 90, 65, 0.35) !important;
     color: var(--accent) !important;
+}
+
+.body-dark .hover-card .w-14.h-14.bg-blue-50 img {
+    filter: invert(55%) sepia(40%) saturate(1500%) hue-rotate(334deg) brightness(100%) contrast(90%);
 }
 
 /* Dark mode - Assessment modal */
