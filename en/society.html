@@ -9,14 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />
     <script>
-        (function(d) {
+        (function (d) {
             var h = d.documentElement;
             h.classList.add('js');
             try {
                 if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
                 if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
-            } catch (e) {}
-            setTimeout(function() {
+            } catch (e) { }
+            setTimeout(function () {
                 if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
             }, 3500)
         })(document);
@@ -164,17 +164,17 @@
                 <p class="section-intro">Waikiki's culture is built on history, knowledge, and family communities. World-class education, sustainable infrastructure, modern healthcare, a vibrant arts scene, strong sports traditions, and a shared national identity strengthen Waikiki's social unity. Our population is proud of its cultural heritage, where history and modernity meet.</p>
                 <div class="card-grid">
                     <div class="card">
-                        <img src="https://api.iconify.design/mdi/palette.svg?color=%23003366&width=48" class="card-icon" />
+                        <span class="card-icon"><img src="https://api.iconify.design/mdi/palette.svg?color=%23003366&width=56&height=56" /></span>
                         <h3>Artistic Life</h3>
                         <p>A vibrant and internationally recognized arts scene, with annual film festivals, music galas, and fine arts exhibitions characterizing the country.</p>
                     </div>
                     <div class="card">
-                        <img src="https://api.iconify.design/mdi/calendar-star.svg?color=%23003366&width=48" class="card-icon" />
+                        <span class="card-icon"><img src="https://api.iconify.design/mdi/calendar-star.svg?color=%23003366&width=56&height=56" /></span>
                         <h3>Holidays</h3>
                         <p>Our national holidays serve to strengthen historical identity and community belonging, with national events and tributes.</p>
                     </div>
                     <div class="card">
-                        <img src="https://api.iconify.design/mdi/scale-balance.svg?color=%23003366&width=48" class="card-icon" />
+                        <span class="card-icon"><img src="https://api.iconify.design/mdi/scale-balance.svg?color=%23003366&width=56&height=56" /></span>
                         <h3>Values</h3>
                         <p>A society and family model built on traditional Christian values is the spiritual and moral foundation of the nation.</p>
                     </div>
@@ -345,7 +345,7 @@
                 <div>
                     <div class="card-grid">
                         <div class="card">
-                            <img src="https://api.iconify.design/mdi/hospital-marker.svg?color=%23003366&width=48" class="card-icon" />
+                            <span class="card-icon"><img src="https://api.iconify.design/mdi/hospital-marker.svg?color=%23003366&width=56&height=56" /></span>
                             <h3>Quality of Life and Healthcare</h3>
                             <p>Waikiki's healthcare system is state-funded and free for all citizens. Our clinics are equipped with the latest technology, and our indicators are among the best in the world.</p>
                             <ul style="margin-top: 15px; padding-left: 20px;">
@@ -355,7 +355,7 @@
                             </ul>
                         </div>
                         <div class="card">
-                            <img src="https://api.iconify.design/mdi/leaf.svg?color=%23003366&width=48" class="card-icon" />
+                            <span class="card-icon"><img src="https://api.iconify.design/mdi/leaf.svg?color=%23003366&width=56&height=56" /></span>
                             <h3>Sustainability</h3>
                             <p>We are committed to protecting the environment and natural wildlife. More than 90% of our energy supply comes from renewable and clean sources like wind, solar, and fusion energy.</p>
                             <ul style="margin-top: 15px; padding-left: 20px;">
@@ -382,8 +382,88 @@
                 </div>
             </div>
         </section>
+        <!-- Education System and Institutions -->
+        <section id="education" class="section fade-in">
+            <div>
+                <h2 class="section-title">Education System and Institutions</h2>
+                <p class="section-intro">Waikiki's educational model is built upon meritocracy, technological preparedness, and comprehensive state funding. From kindergarten to doctoral degrees, tuition is entirely free for all citizens, and obtaining at least one university degree is a mandatory civic standard to ensure adult societal stability.</p>
+                <div class="card-grid">
+                    <div class="card">
+                        <span class="card-icon"><img src="https://api.iconify.design/mdi/book-open-page-variant.svg?color=%23003366&width=56&height=56" /></span>
+                        <h3>Primary Schools</h3>
+                        <p>During the four years of primary school, students receive standardized foundational education. They are mastering writing, reading, and mathematics alongside digital competencies and scientific thinking.</p>
+                    </div>
+                    <div class="card">
+                        <span class="card-icon"><img src="https://api.iconify.design/mdi/school.svg?color=%23003366&width=56&height=56" /></span>
+                        <h3>High Schools and Colleges</h3>
+                        <p>Following entrance examinations, students choose among STEM, humanities, arts, and technology tracks, receiving advanced preparation for graduation, later studies and research careers.</p>
+                    </div>
+                    <div class="card">
+                        <span class="card-icon"><img src="https://api.iconify.design/mdi/town-hall.svg?color=%23003366&width=56&height=56" /></span>
+                        <h3>Universities and Research Institutes</h3>
+                        <p>Completing at least one university degree is mandatory for Waikiki citizens. The government also enables gifted students to pursue multiple concurrent degrees completely free of charge.</p>
+                    </div>
+                </div>
+                <div class="card-grid" style="margin-top: 30px;">
+                    <div class="card">
+                        <h3>Prestigious Primary Schools</h3>
+                        <ul style="margin-top: 10px; padding-left: 20px;">
+                            <li>Nova Aurelia Main Primary School</li>
+                            <li>Blue River Elementary</li>
+                            <li>Lincoln Institute</li>
+                            <li>Westwood Elementary</li>
+                            <li>Bear Valley Elementary</li>
+                            <li>Laguna Beach Charter School</li>
+                            <li>Palm Valley Elementary</li>
+                            <li>Waterford Grammar School</li>
+                            <li>Miami Elementary</li>
+                            <li>Copper Cove Grammar School</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Prestigious High Schools</h3>
+                        <ul style="margin-top: 10px; padding-left: 20px;">
+                            <li>Nova Aurelia High School</li>
+                            <li>Riverdale High</li>
+                            <li>Darwin School</li>
+                            <li>Trinity Middle School</li>
+                            <li>Pleasant Grove High School</li>
+                            <li>Seacoast High</li>
+                            <li>Laguna Creek Conservatory</li>
+                            <li>West Bridge College</li>
+                            <li>Einstein High School</li>
+                            <li>Spring Gardens Conservatory</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Prestigious Universities</h3>
+                        <ul style="margin-top: 10px; padding-left: 20px;">
+                            <li>Nova Aurelia University of Economics</li>
+                            <li>University of Advanced Programming</li>
+                            <li>Chease Young University of Economics</li>
+                            <li>Nova Aurelia Engineering University</li>
+                            <li>Waikiki University of Science</li>
+                            <li>Miami Medical University</li>
+                            <li>Rio de Janeiro University of Economics and Science</li>
+                            <li>Atlanta IT University</li>
+                            <li>Brasília Research University</li>
+                            <li>Guantánamo City University</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>High-Tech Private Universities</h3>
+                        <p>Research universities founded and maintained by industry leaders feature world-class laboratories training the nation's elite engineers and scientists:</p>
+                        <ul style="margin-top: 12px; padding-left: 20px;">
+                            <li><strong>Techno Industries Mechatronics University:</strong> Holographic design and anti-gravity physics research.</li>
+                            <li><strong>Inter Medic Cellular Biology University:</strong> DNA architecture, genetic engineering, and regenerative cellular biology.</li>
+                            <li><strong>Apple Advanced Programming University:</strong> AI algorithms, autonomous systems, and cybersecurity.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Interactive Map -->
-        <section class="fade-in" id="map">
+        <section class="light-bg section fade-in" id="map">
             <h2 class="section-title">Provinces</h2>
             <p class="section-intro">Waikiki's administrative system is based on the close cooperation between the central government and the provinces. The country was formed by the union of three equal provinces: Waikiki, Amazonia, and Brazil. The three provinces have unique geographical, economic, and cultural characteristics, which are coordinated by the central government within a unified framework.</p>
             <div class="map-container">
@@ -543,7 +623,7 @@
             </div>
         </section>
         <!-- Admin Structure -->
-        <section class="light-bg fade-in" id="admin">
+        <section class="section fade-in" id="admin">
             <h2 class="section-title">Administrative System</h2>
             <p class="section-intro">Waikiki is a unitary state that is administratively divided into provinces, counties, and municipalities. While Waikiki does not have administrative bodies and legistlation at the provincial and county levels, local regulations and budgets are determined by referendums and municipal governments, whose leaders are elected by the local residents.</p>
             <div class="admin-grid">
@@ -589,7 +669,7 @@
             </div>
         </section>
         <!-- Comparison Table -->
-        <section class="fade-in" id="comparison">
+        <section class="light-bg section fade-in" id="comparison">
             <h2 class="section-title">Provincial Comparison</h2>
             <div class="table">
                 <table>
@@ -664,7 +744,7 @@
             </div>
         </section>
         <!-- Political Philosophy -->
-        <section id="philosophy" class="section fade-in light-bg">
+        <section id="philosophy" class="section fade-in">
             <div>
                 <h2 class="section-title">Political Philosophy</h2>
                 <p class="section-intro">Waikiki's political philosophy blends decisive state leadership with direct citizen engagement. This meritocratic model prioritizes expertise and efficiency while balancing individual freedom with collective welfare. Our goal is to ensure that technological progress and economic stability guarantee sustainable prosperity and security for all citizens.</p>
