@@ -113,10 +113,6 @@ Ez a dokumentum a távoli hivatalos weboldal (https://waikikigovernment.github.i
 * **`wealth-fund.html`:** A vagyonalap kezelt vagyona **2,4 billió dollár** ($2.4 trillion).
 * **`overview.html` és `economy.html`:** Egyes összefoglalókban 2,1 billió, más helyeken 2,8 billió dolláros értékek szerepelnek eltérő bázisidőszakok világos megjelölése nélkül.
 
-### 4.3. Kötelező egyetemi diploma elvárás
-* **`education.html` (távoli oldal):** Minden állampolgár számára **törvényileg kötelező** a felsőfokú diploma megszerzése.
-* **`citizenship.html` és `society.html` (alap lokális szövegek):** A tankötelezettség 18 éves korig tart, az egyetem ingyenes és garantált, de nem minősül jogilag kikényszeríthető kötelezettségnek.
-
 ---
 
 ## 5. Összegzés és Ajánlások
