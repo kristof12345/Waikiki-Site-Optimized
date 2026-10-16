@@ -244,23 +244,21 @@ class Page:
 # --------------------------------------------------------------------------- #
 def build_head(page: Page) -> str:
     other = "hu" if page.locale == "en" else "en"
-    return """<!-- @chrome:head -->
+    return f"""<!-- @chrome:head -->
     <meta name="theme-color" content="#fbf7f0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400..800&display=swap" />
+    <link rel="stylesheet" href="{page.asset('css/fonts.css')}" />
     <script>
-    (function (d) {
+    (function (d) {{
         var h = d.documentElement;
         h.classList.add('js');
-        try {
+        try {{
             if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
             if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
-        } catch (e) { }
-        setTimeout(function () {
+        }} catch (e) {{ }}
+        setTimeout(function () {{
             if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
-        }, 3500)
-    })(document);
+        }}, 3500)
+    }})(document);
     </script>
     <!-- /@chrome:head -->"""
 

@@ -1464,14 +1464,6 @@ html.menu-open .menu-aside {
   object-fit: contain;
 }
 
-.card-icon img[src*="chameleon"] {
-  filter: hue-rotate(-34deg) saturate(0.56) brightness(0.84);
-}
-
-.body-dark .card-icon img[src*="chameleon"] {
-  filter: hue-rotate(-34deg) saturate(0.4) brightness(1.76);
-}
-
 .card:hover .card-icon {
   transform: rotate(-8deg) scale(1.08);
   border-radius: var(--radius);
