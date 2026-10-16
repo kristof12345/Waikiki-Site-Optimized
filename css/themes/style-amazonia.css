@@ -117,6 +117,17 @@
   background: radial-gradient(circle at 35% 35%, var(--accent-light), var(--accent) 70%);
 }
 
+.hero-veil {
+  background:
+    radial-gradient(1200px 600px at 85% 0%, rgba(237, 214, 149, 0.1), transparent 70%),
+    linear-gradient(180deg, rgba(10, 41, 27, 0.4) 0%, rgba(10, 41, 27, 0.08) 28%, rgba(10, 41, 27, 0.3) 58%, rgba(10, 41, 27, 0.9) 100%),
+    linear-gradient(90deg, rgba(10, 41, 27, 0.5) 0%, rgba(10, 41, 27, 0.2) 55%, rgba(10, 41, 27, 0) 85%);
+}
+
+.gallery-toolbar {
+  background: rgba(10, 41, 27, 0.95);
+}
+
 .to-top .ring {
   stroke: var(--tertiary);
 }
