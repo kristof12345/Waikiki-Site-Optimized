@@ -514,9 +514,9 @@ Waikiki a legtöbb országgal ellentétben jelentős állami tartalékkal és be
 | Népesség           | 212 000 000     | 13 500 000     | 106 200 000     | 92 300 000      |
 | Terület (km²)      | 8 840 000       | 293 000        | 4 242 000       | 4 305 000       |
 | Népsűrűség         | 24              | 46             | 25              | 21              |
-| Teljes GDP (USD)   | 41 640 milliárd | 2 963 milliárd | 18 974 milliárd | 17 880 milliárd |
+| Teljes GDP (USD)   | 41 640 milliárd | 3 099 milliárd | 19 843 milliárd | 18 699 milliárd |
 | GDP-arány          | 100,0%          | 7,4%           | 47,7%           | 44,9%           |
-| Egy főre jutó GDP  | 196 415 USD     | 219 489 USD    | 178 667 USD     | 193 722 USD     |
+| Egy főre jutó GDP  | 196 415 USD     | 229 532 USD    | 186 842 USD     | 202 586 USD     |
 
 ## Külkereskedelem
 

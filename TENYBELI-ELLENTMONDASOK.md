@@ -103,12 +103,11 @@ Ez a dokumentum a távoli hivatalos weboldal (https://waikikigovernment.github.i
 
 ## 4. Belső Önellentmondások a Helyi (Lokális) Kódbázisban
 
-### 4.1. Egy főre jutó GDP számítási ellentmondás (`society.html`)
-* **`hu/society.html` 206. sor (Stat box):** Egy főre jutó GDP: **$196 415 USD**.
-* **`hu/society.html` 744. sor (Tartományi összehasonlító táblázat):**
-  * Összesített egy főre jutó GDP: **$187 821 USD**.
-  * Waikiki: $219 489 | Amazónia: $193 722 | Brazília: $178 667.
-* **Ellentmondás:** Ugyanazon a lapon két különböző érték szerepel az egy főre jutó országos GDP-re.
+### 4.1. Egy főre jutó GDP számítási ellentmondás (`society.html`) [MEGOLDVA]
+* **`hu/society.html` 206. sor (Stat box):** Egy főre jutó GDP: **$196 415 USD** (2025-ös hivatalos kanonikus adat).
+* **`hu/society.html` és `en/society.html` (Tartományi összehasonlító táblázat és panelek):**
+  * Eredetileg a tartományi táblázatban a súlyozott átlag $187 821 USD volt (Waikiki: $219 489 | Amazónia: $193 722 | Brazília: $178 667).
+  * **Feloldás:** A tartományi táblázat és a tartományi panelek adatai egységesítésre kerültek a hivatalos 2025-ös $196 415 USD országos értékhez (+4,57%-os arányos skálázással: Waikiki: **$229 532**, Amazónia: **$202 586**, Brazília: **$186 842**, Összesen: **$196 415**).
 
 ### 4.2. A Szuverén Vagyonalap méretének leírása
 * **`wealth-fund.html`:** A vagyonalap kezelt vagyona **2,4 billió dollár** ($2.4 trillion).
@@ -129,5 +128,5 @@ Ez a dokumentum a távoli hivatalos weboldal (https://waikikigovernment.github.i
 | **Caesarion „elődje”** | `history.html` | Megfogalmazás módosítása: nem elődje, hanem Julius Caesar fia. |
 | **Stuart Mária uralkodása** | `history.html` | I. Jakab vagy I. Károly nevének szerepeltetése Stuart Mária helyett 1603–1647 között. |
 | **IV. Vilmos 1897-ig** | `history.html` | IV. Vilmos (1830–1837) és Viktória királynő (1837–1901) uralkodásának helyesbítése. |
-| **GDP / fő eltérés** | `society.html` | A stat box és az összehasonlító tábla számainak egységesítése ($196 415 vs $187 821). |
+| **GDP / fő eltérés** | `society.html` | **Megoldva**: A tartományi tábla és a panelek értékei egységesítve a 2025-ös $196 415 USD országos adathoz ($229 532 / $202 586 / $186 842). |
 | **Chease és Jessica esküvője** | `senate.html` / `chease-and-jessica.html` | Az 1993. június 21-i dátum egységesítése minden lapon. |
