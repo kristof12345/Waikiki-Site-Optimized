@@ -15,6 +15,8 @@ const COLORS = {
     success: '#008000'
 };
 
+const isHu = typeof document !== 'undefined' && document.documentElement.lang === 'hu';
+
 // Common chart options for responsive behavior
 const commonOptions = {
     responsive: true,
@@ -371,7 +373,7 @@ function initEconomyCharts() {
         new Chart(employmentRateCtx, {
             type: 'doughnut',
             data: {
-                labels: ['Employed', 'Unemployed'],
+                labels: isHu ? ['Foglalkoztatott', 'Munkanélküli'] : ['Employed', 'Unemployed'],
                 datasets: [{
                     data: [94, 6],
                     backgroundColor: [COLORS.tertiary, '#e0e0e0'],
@@ -419,7 +421,9 @@ function initEconomyCharts() {
         new Chart(employmentDistributionCtx, {
             type: 'doughnut',
             data: {
-                labels: ['Healthcare & Education', 'Trade & Logistics', 'Administration', 'Other Services', 'Infocommunication', 'Finance', 'Manufacturing', 'Other'],
+                labels: isHu
+                    ? ['Egészségügy és oktatás', 'Kereskedelem és logisztika', 'Közigazgatás', 'Egyéb szolgáltatások', 'Infokommunikáció', 'Pénzügyek', 'Ipar', 'Egyéb']
+                    : ['Healthcare and Education', 'Trade and Logistics', 'Administration', 'Other Services', 'Infocommunication', 'Finance', 'Manufacturing', 'Other'],
                 datasets: [{
                     data: [22.4, 18.1, 13.9, 11, 10.4, 9, 7.7, 7.5],
                     backgroundColor: [
@@ -469,9 +473,11 @@ function initEconomyCharts() {
         new Chart(budgetCtx, {
             type: 'bar',
             data: {
-                labels: ['Healthcare', 'R&D', 'Education', 'Infrastructure', 'Defense', 'Pension Programs', 'Administration', 'Public Safety', 'Culture & Sports'],
+                labels: isHu
+                    ? ['Egészségügy', 'Kutatás és fejlesztés', 'Oktatás', 'Infrastruktúra', 'Honvédelem', 'Nyugdíjak', 'Közigazgatás', 'Közbiztonság', 'Kultúra és sport']
+                    : ['Healthcare', 'Research and Development', 'Education', 'Infrastructure', 'Defense', 'Pension Programs', 'Administration', 'Public Safety', 'Culture and Sports'],
                 datasets: [{
-                    label: 'Budget Share',
+                    label: isHu ? 'Költségvetési részesedés' : 'Budget Share',
                     data: [34, 23, 11, 7, 7, 5, 4, 4, 2],
                     backgroundColor: [
                         '#2E75B6',  // Steel Blue

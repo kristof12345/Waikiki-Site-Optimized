@@ -227,22 +227,24 @@ const AssessmentForm = ({ onClose }) => {
     const tier = getTier();
     const progress = (currentQ / questionsData.length) * 100;
 
+    const isEn = typeof document !== 'undefined' && document.documentElement.lang === 'en';
+
     const renderIntro = () => (
         <div className="text-center p-4 sm:p-6">
             <div className="w-14 h-14 sm:w-20 sm:h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-6">
-                <i className="fas fa-scale-balanced text-2xl sm:text-4xl" style={{ color: colors.gold }}></i>
+                <img src="../icons/mdi/scale-balance.svg" alt="" className="w-8 h-8 sm:w-10 sm:h-10" />
             </div>
-            <h3 className="text-xl sm:text-3xl font-bold mb-2 sm:mb-4" style={{ color: colors.secondary }}>W-MAP Protokoll</h3>
-            <p className="text-gray-600 text-sm sm:text-base mb-3 sm:mb-6">A Waikiki Merit Assessment Protocol egy többszintű értékelési rendszer. Célunk nem csak a vagyon, hanem a tehetség és az elkötelezettség mérése. A rendszer 4 jogosultsági szintet különböztet meg.</p>
+            <h3 className="text-xl sm:text-3xl font-bold mb-2 sm:mb-4" style={{ color: colors.secondary }}>{isEn ? "W-MAP Protocol" : "W-MAP Protokoll"}</h3>
+            <p className="text-gray-600 text-sm sm:text-base mb-3 sm:mb-6">{isEn ? "The Waikiki Merit Assessment Protocol is a multi-tier evaluation system designed to measure talent, capital, and long-term commitment. The system recognizes 4 eligibility tiers." : "A Waikiki Merit Assessment Protocol egy többszintű értékelési rendszer. Célunk nem csak a vagyon, hanem a tehetség és az elkötelezettség mérése. A rendszer 4 jogosultsági szintet különböztet meg."}</p>
             <div className="bg-yellow-50 border border-yellow-200 p-3 sm:p-4 rounded-lg text-xs sm:text-sm text-left mb-4 sm:mb-6">
-                <p className="font-bold text-yellow-800 mb-1 sm:mb-2"><i className="fas fa-triangle-exclamation mr-1.5"></i>Figyelmeztetés</p>
+                <p className="font-bold text-yellow-800 mb-1 sm:mb-2 flex items-center gap-1.5"><img src="../icons/mdi/shield-alert.svg" alt="" className="w-4 h-4 inline-block" />{isEn ? "Important Notice" : "Figyelmeztetés"}</p>
                 <ul className="list-disc list-inside text-yellow-700 space-y-1">
-                    <li>A válaszai jogi kötelezettségvállalásnak minősülnek.</li>
-                    <li>A "The Watcher" AI minden adatot ellenőriz a háttérben.</li>
-                    <li>A hamis adatszolgáltatás automatikus kitiltással jár.</li>
+                    <li>{isEn ? "Your responses constitute a legal declaration." : "A válaszai jogi kötelezettségvállalásnak minősülnek."}</li>
+                    <li>{isEn ? "The Watcher AI verifies credentials and public data in the background." : "A \"The Watcher\" AI minden adatot ellenőriz a háttérben."}</li>
+                    <li>{isEn ? "Providing fraudulent information results in automatic permanent disqualification." : "A hamis adatszolgáltatás automatikus kitiltással jár."}</li>
                 </ul>
             </div>
-            <button onClick={() => setStage('quiz')} className="w-full py-3 sm:py-4 rounded-lg text-white font-bold text-base sm:text-lg shadow-lg hover:scale-[1.01] active:scale-[0.99] transition-transform" style={{ backgroundColor: colors.primary }}>Értékelés Indítása</button>
+            <button onClick={() => setStage('quiz')} className="w-full py-3 sm:py-4 rounded-lg text-white font-bold text-base sm:text-lg shadow-lg hover:scale-[1.01] active:scale-[0.99] transition-transform" style={{ backgroundColor: colors.primary }}>{isEn ? "Begin Assessment" : "Értékelés Indítása"}</button>
         </div>
     );
 
@@ -277,8 +279,8 @@ const AssessmentForm = ({ onClose }) => {
     const renderAnalyzing = () => (
         <div className="text-center p-6 sm:p-12 flex flex-col items-center justify-center min-h-[300px]">
             <div className="w-16 h-16 sm:w-24 sm:h-24 rounded-full border-4 border-t-transparent animate-spin mb-4 sm:mb-8" style={{ borderColor: `${colors.gold} transparent ${colors.gold} ${colors.gold}` }}></div>
-            <h3 className="text-xl sm:text-2xl font-bold mb-2 animate-pulse" style={{ color: colors.secondary }}>The Watcher Elemzése...</h3>
-            <p className="text-gray-500 text-xs sm:text-sm">Biometrikus adatok ellenőrzése...<br />Pénzügyi háttér validálása...<br />Social Credit pontszámítás...</p>
+            <h3 className="text-xl sm:text-2xl font-bold mb-2 animate-pulse" style={{ color: colors.secondary }}>{isEn ? "The Watcher is Analyzing..." : "The Watcher Elemzése..."}</h3>
+            <p className="text-gray-500 text-xs sm:text-sm">{isEn ? "Verifying biometric credentials... Validating financial background... Computing merit score..." : "Biometrikus adatok ellenőrzése... Pénzügyi háttér validálása... Social Credit pontszámítás..."}</p>
         </div>
     );
 
@@ -287,50 +289,52 @@ const AssessmentForm = ({ onClose }) => {
 
         switch (tier) {
             case 'GOLD':
-                title = 'GOLD TIER: Stratégiai Vagyontárgy';
-                desc = 'Azonnali állampolgárság. Ön a tökéletes jelölt. Nincs várakozási idő, nincs ingatlanminimum, VIP ügyintézés.';
-                icon = 'fas fa-crown';
+                title = isEn ? 'GOLD TIER: Strategic Asset' : 'GOLD TIER: Stratégiai Vagyontárgy';
+                desc = isEn ? 'Immediate citizenship. You are an exemplary candidate. Zero waiting period, no real estate minimum, VIP fast-track processing.' : 'Azonnali állampolgárság. Ön a tökéletes jelölt. Nincs várakozási idő, nincs ingatlanminimum, VIP ügyintézés.';
+                icon = '../icons/mdi/crown.svg';
                 bgClass = 'border-yellow-400';
-                btnText = 'Hivatalos Kérelem ($5,000)';
-                badge = '90+ PONT';
+                btnText = isEn ? 'Official Application ($5,000)' : 'Hivatalos Kérelem ($5,000)';
+                badge = isEn ? '90+ POINTS' : '90+ PONT';
                 break;
             case 'SILVER':
-                title = 'SILVER TIER: Kiemelt Befektető';
-                desc = 'Gyorsított eljárás. Állampolgárság 1 év után, feltéve, hogy teljesíti a $1M kötvényvásárlást és az ingatlanbefektetést.';
-                icon = 'fas fa-medal';
+                title = isEn ? 'SILVER TIER: Priority Investor' : 'SILVER TIER: Kiemelt Befektető';
+                desc = isEn ? 'Accelerated procedure. Citizenship after 1 year, subject to $1M bond purchase and qualifying property investment.' : 'Gyorsított eljárás. Állampolgárság 1 év után, feltéve, hogy teljesíti a $1M kötvényvásárlást és az ingatlanbefektetést.';
+                icon = '../icons/mdi/medal.svg';
                 bgClass = 'border-gray-400';
-                btnText = 'Befektetési Terv Indítása';
-                badge = '75-89 PONT';
+                btnText = isEn ? 'Start Investment Plan' : 'Befektetési Terv Indítása';
+                badge = isEn ? '75-89 POINTS' : '75-89 PONT';
                 break;
             case 'BRONZE':
-                title = 'BRONZE TIER: Szakképzett Rezidens';
-                desc = 'Letelepedési engedély (Residency). Állampolgárság 5 év után kérvényezhető. Biztonsági letét ($100k) és igazolt munkaviszony szükséges.';
-                icon = 'fas fa-user-shield';
+                title = isEn ? 'BRONZE TIER: Skilled Resident' : 'BRONZE TIER: Szakképzett Rezidens';
+                desc = isEn ? 'Residency permit. Citizenship eligible after 5 years. Security deposit ($100k) and verified employment required.' : 'Letelepedési engedély (Residency). Állampolgárság 5 év után kérvényezhető. Biztonsági letét ($100k) és igazolt munkaviszony szükséges.';
+                icon = '../icons/mdi/shield-account.svg';
                 bgClass = 'border-orange-300';
-                btnText = 'Letelepedési Kérelem';
-                badge = '60-74 PONT';
+                btnText = isEn ? 'Residency Application' : 'Letelepedési Kérelem';
+                badge = isEn ? '60-74 POINTS' : '60-74 PONT';
                 break;
             case 'BLUE':
-                title = 'BLUE TIER: Talent / Nomad Vízum';
-                desc = 'Ideiglenes munkavállalói státusz. Fiatal tehetségeknek, akik nem rendelkeznek nagy vagyonnal, de kritikus tudással igen. 10 éves út az állampolgárságig.';
-                icon = 'fas fa-laptop-code';
+                title = isEn ? 'BLUE TIER: Talent / Nomad Visa' : 'BLUE TIER: Talent / Nomad Vízum';
+                desc = isEn ? 'Temporary residency status for young innovators and specialized talent. 10-year pathway to citizenship.' : 'Ideiglenes munkavállalói státusz. Fiatal tehetségeknek, akik nem rendelkeznek nagy vagyonnal, de kritikus tudással igen. 10 éves út az állampolgárságig.';
+                icon = '../icons/mdi/laptop.svg';
                 bgClass = 'border-blue-300';
-                btnText = 'Talent Program Jelentkezés';
-                badge = '45-59 PONT';
+                btnText = isEn ? 'Apply to Talent Program' : 'Talent Program Jelentkezés';
+                badge = isEn ? '45-59 POINTS' : '45-59 PONT';
                 break;
             default:
-                title = 'ELUTASÍTVA: High Risk';
-                desc = isFatal ? 'A rendszer KIZÁRÓ OKOT (Red Flag) azonosított. Kérelmét elutasítottuk.' : 'Pontszáma (45 alatt) nem éri el a minimális belépési küszöböt.';
-                icon = 'fas fa-ban';
+                title = isEn ? 'DECLINED: High Risk' : 'ELUTASÍTVA: High Risk';
+                desc = isFatal
+                    ? (isEn ? 'The system identified a disqualifying condition (Red Flag). Application declined.' : 'A rendszer KIZÁRÓ OKOT (Red Flag) azonosított. Kérelmét elutasítottuk.')
+                    : (isEn ? 'Your score (below 45) does not meet the minimum eligibility threshold.' : 'Pontszáma (45 alatt) nem éri el a minimális belépési küszöböt.');
+                icon = '../icons/mdi/cloud-alert.svg';
                 bgClass = 'border-red-200';
-                btnText = 'Bezárás';
-                badge = 'ELÉGTELEN';
+                btnText = isEn ? 'Close' : 'Bezárás';
+                badge = isEn ? 'INSUFFICIENT' : 'ELÉGTELEN';
         }
 
         return (
             <div className="p-4 sm:p-8 text-center animate-fade-up">
-                <div className={`w-14 h-14 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-6 shadow-xl text-2xl sm:text-3xl ${tier === 'REJECTED' ? 'bg-red-100 text-red-600' : 'bg-white'}`} style={{ color: tier === 'GOLD' ? colors.gold : tier === 'SILVER' ? colors.silver : tier === 'BRONZE' ? colors.bronze : tier === 'BLUE' ? colors.primary : '' }}>
-                    <i className={icon}></i>
+                <div className={`w-14 h-14 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-6 shadow-xl ${tier === 'REJECTED' ? 'bg-red-100' : 'bg-white'}`}>
+                    <img src={icon} alt="" className="w-8 h-8 sm:w-10 sm:h-10" />
                 </div>
 
                 <div className={`p-4 sm:p-6 rounded-xl border-2 mb-4 sm:mb-6 relative overflow-hidden ${bgClass}`}>
@@ -342,7 +346,7 @@ const AssessmentForm = ({ onClose }) => {
 
                 {tier !== 'REJECTED' && (
                     <div className="text-left bg-gray-50 p-3 sm:p-4 rounded-lg mb-4 sm:mb-6 text-xs sm:text-sm text-gray-600">
-                        <p><strong>Következő lépés:</strong> A besorolása alapján Ön jogosult a fenti program elindítására. Kérjük, foglaljon időpontot a biometrikus azonosításra.</p>
+                        <p><strong>{isEn ? 'Next step:' : 'Következő lépés:'}</strong> {isEn ? 'Based on your tier evaluation, you qualify to initiate this program. Please proceed with booking an appointment for biometric credentialing.' : 'A besorolása alapján Ön jogosult a fenti program elindítására. Kérjük, foglaljon időpontot a biometrikus azonosításra.'}</p>
                     </div>
                 )}
 
@@ -356,8 +360,8 @@ const AssessmentForm = ({ onClose }) => {
             <div className="assessment-modal bg-white rounded-xl sm:rounded-2xl w-full max-w-4xl max-h-[92dvh] sm:max-h-[90vh] flex flex-col shadow-2xl relative overflow-hidden">
                 <div className="assessment-modal-header flex-shrink-0 bg-white/95 backdrop-blur px-4 py-3 sm:px-6 sm:py-4 border-b flex justify-between items-center z-10">
                     <span className="assessment-modal-meta font-bold text-gray-400 text-[11px] sm:text-xs tracking-widest">W-MAP v2.1 PROTOCOL</span>
-                    <button onClick={onClose} className="assessment-modal-close text-gray-400 hover:text-red-500 transition-colors" aria-label="Close modal">
-                        <i className="fas fa-times text-lg sm:text-xl"></i>
+                    <button onClick={onClose} className="assessment-modal-close text-gray-400 hover:text-red-500 transition-colors text-2xl font-bold leading-none p-1" aria-label="Close modal">
+                        &times;
                     </button>
                 </div>
 
