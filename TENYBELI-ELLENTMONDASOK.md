@@ -109,9 +109,17 @@ Ez a dokumentum a távoli hivatalos weboldal (https://waikikigovernment.github.i
   * Eredetileg a tartományi táblázatban a súlyozott átlag $187 821 USD volt (Waikiki: $219 489 | Amazónia: $193 722 | Brazília: $178 667).
   * **Feloldás:** A tartományi táblázat és a tartományi panelek adatai egységesítésre kerültek a hivatalos 2025-ös $196 415 USD országos értékhez (+4,57%-os arányos skálázással: Waikiki: **$229 532**, Amazónia: **$202 586**, Brazília: **$186 842**, Összesen: **$196 415**).
 
-### 4.2. A Szuverén Vagyonalap méretének leírása
-* **`wealth-fund.html`:** A vagyonalap kezelt vagyona **2,4 billió dollár** ($2.4 trillion).
-* **`overview.html` és `economy.html`:** Egyes összefoglalókban 2,1 billió, más helyeken 2,8 billió dolláros értékek szerepelnek eltérő bázisidőszakok világos megjelölése nélkül.
+### 4.2. A Szuverén Vagyonalap méretének leírása [MEGOLDVA]
+* **Hivatalos kanonikus adat (2025):**
+  * Nemzeti valutában: **11,12 billió WUD**
+  * Amerikai dollárban: **25,58 billió USD** (kerekítve: **$25,6 billió USD**)
+  * GDP-arány: **61%** (a 41,8 billió USD / 18,19 billió WUD teljes GDP-hez viszonyítva; 1 WUD = 2,30 USD).
+* **Lokális állapot:** A jelenlegi kódbázisban már teljes az összhang:
+  * `hu/wealth-fund.html` és `en/wealth-fund.html`: **₩ 11,12T WUD** és **61% GDP-arány**.
+  * `hu/economy.html` és `en/economy.html`: **25,58 billió dollár** és **61% GDP**.
+  * `hu/society.html` és `en/society.html`: **$25,6 billió** / **$25.6 Trillion** (A legnagyobb szuverén vagyonalap).
+  * `content/Economy.md` és `content/Overview.md`: **11,12 billió WUD (25,58 billió USD)**.
+* **A korábbi eltérés forrása:** A korábbi feljegyzésben említett 2,1 / 2,4 / 2,8 billió értékek korábbi évekből (2007: 2,07T USD állami tartalék, 2009: 2,72T WUD tartalék, 2011: 2,42T USD királyi magánvagyon), illetve korai vázlatokból maradtak fenn; a jelenlegi kódbázisban már sehol sem szerepelnek.
 
 ---
 
@@ -125,4 +133,5 @@ Ez a dokumentum a távoli hivatalos weboldal (https://waikikigovernment.github.i
 | **Stuart Mária uralkodása** | `history.html` | I. Jakab vagy I. Károly nevének szerepeltetése Stuart Mária helyett 1603–1647 között. |
 | **IV. Vilmos 1897-ig** | `history.html` | IV. Vilmos (1830–1837) és Viktória királynő (1837–1901) uralkodásának helyesbítése. |
 | **GDP / fő eltérés** | `society.html` | **Megoldva**: A tartományi tábla és a panelek értékei egységesítve a 2025-ös $196 415 USD országos adathoz ($229 532 / $202 586 / $186 842). |
+| **Szuverén Vagyonalap mérete** | `wealth-fund.html` / `economy.html` / `society.html` | **Megoldva**: A hivatalos adat 11,12 billió WUD (25,58 billió USD, ~25,6 billió USD), a GDP 61%-a. A régebbi vázlatokban szereplő 2,1 / 2,4 / 2,8 billió már nincs a kódbázisban. |
 | **Chease és Jessica esküvője** | `senate.html` / `chease-and-jessica.html` | Az 1993. június 21-i dátum egységesítése minden lapon. |
