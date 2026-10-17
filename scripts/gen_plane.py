@@ -7,7 +7,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_SVG_PATH = ROOT / "images" / "planes" / "plane-deck.svg"
+DEFAULT_SVG_PATH = ROOT / "icons" / "planes" / "plane-deck.svg"
 
 DECKPLAN_SVG_RE = re.compile(
     r'(<div class="deckplan-svg-scroll">\s*)<svg\b[^>]*>.*?</svg>(\s*</div>)',
