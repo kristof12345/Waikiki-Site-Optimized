@@ -95,6 +95,7 @@ WHITELIST = {
     "velaa", "laccadive", "tenochtitlan", "chichén", "itzá", "guantánamo", "quebec", "quebecben",
     "phi", "bora", "cálido", "porto", "amazonia", "amazóniai", "brazilia", "chameleon", "kaméleon",
     "kaméleon-sziget", "kaméleon-szigetek", "kaldera", "kalderára", "kalderájára",
+    "cerrado", "iguazú", "iguazu", "iguazú-scale",
 
     # Tech, Acronyms & Brands
     "cbdc", "maglev", "hyperloop", "hyperloopot", "hyperloop-vonalának", "hyperloop's", "spacex",
