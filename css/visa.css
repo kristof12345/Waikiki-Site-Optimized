@@ -159,40 +159,6 @@
 .checker-controls-col {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-.checker-control-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.65rem;
-    margin-bottom: 1.35rem;
-}
-
-.checker-label {
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: var(--heading);
-    letter-spacing: 0.02em;
-}
-
-.checker-select {
-    padding: 0.85rem 1rem;
-    border-radius: var(--radius-md, 10px);
-    border: 1.5px solid var(--line);
-    background: var(--surface);
-    color: var(--text);
-    font-size: 0.95rem;
-    font-weight: 600;
-    font-family: inherit;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer;
-}
-
-.checker-select:focus {
-    outline: none;
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px var(--accent-subtle);
 }
 
 .tier-selector-grid {
@@ -319,40 +285,6 @@
     color: var(--text-muted);
 }
 
-.purpose-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.purpose-pill {
-    padding: 0.6rem 1rem;
-    border-radius: 999px;
-    border: 1.5px solid var(--line);
-    background: var(--surface);
-    color: var(--text-muted);
-    font-size: 0.88rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.purpose-pill:hover {
-    border-color: var(--accent);
-    color: var(--heading);
-}
-
-.purpose-pill.is-active {
-    background: var(--primary);
-    border-color: var(--primary);
-    color: #ffffff;
-}
-
-.body-dark .purpose-pill.is-active {
-    background: var(--accent);
-    border-color: var(--accent);
-    color: var(--neutral-900);
-}
 
 .checker-result-panel {
     background: var(--surface-alt, rgba(0, 51, 102, 0.03));
@@ -500,41 +432,6 @@
     line-height: 1.25;
 }
 
-.result-req-sub {
-    font-size: 0.74rem;
-    color: var(--text-muted);
-    line-height: 1.3;
-}
-
-.result-items {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 1.4rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.68rem;
-}
-
-.result-items li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.65rem;
-    font-size: 0.9rem;
-    line-height: 1.48;
-    color: var(--text);
-}
-
-.result-items svg {
-    flex-shrink: 0;
-    width: 18px;
-    height: 18px;
-    margin-top: 2px;
-    color: var(--waikiki);
-}
-
-.body-dark .result-items svg {
-    color: var(--waikiki-hover);
-}
 
 .result-footer {
     display: flex;
