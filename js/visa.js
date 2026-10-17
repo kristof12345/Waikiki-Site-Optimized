@@ -38,7 +38,7 @@
                     ? 'EU, Egyesült Királyság, Svájc, Ausztrália és Új-Zéland'
                     : 'EU, United Kingdom, Switzerland, Australia and New Zealand',
                 tag: isHungarian ? 'Vízummentes · 24 órás regisztráció' : 'Visa-Free · 24h Registration',
-                tagClass: 'tag-free',
+                tagClass: 'tag-fast',
                 doc: isHungarian ? 'Útlevél szükséges' : 'Passport Required',
                 prereg: isHungarian ? 'Előzetes regisztráció (24 óra)' : 'Pre-Registration (24 Hours)',
                 border: isHungarian ? 'Digitális határellenőrzés' : 'Digital Border Control',
@@ -84,7 +84,7 @@
                 lead: isHungarian
                     ? 'A további partner országok állampolgárai egyszerűsített online e-Visa igényléssel utazhatnak be, és érkezéskor a gyorsított digitális határellenőrzést vehetik igénybe.'
                     : 'Citizens of additional partner countries with a biometric passport qualify for a simplified online e-Visa registration process. They enjoy automated digital border control upon arrival.',
-                stay: isHungarian ? '30 nap (egyszeri vagy többszöri)' : '30 Days (Single or Multiple)',
+                stay: isHungarian ? 'Legfeljebb 30 nap' : 'Up to 30 Days',
                 fee: isHungarian ? '20 WUD (Kedvezményes)' : '20 WUD (Partner Rate)',
                 time: isHungarian ? '1-2 napon belül' : 'Within 1-2 Days'
             },
