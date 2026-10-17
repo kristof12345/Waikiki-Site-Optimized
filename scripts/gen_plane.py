@@ -33,7 +33,7 @@ EN_TO_HU = [
     (">12-SEAT MAHOGANY BANQUET<", ">12 FŐS MAHAGÓNI BANKETT<"),
     (">BARS and VIDEO CONF.<", ">BÁR és VIDEOKONF.<"),
     (">GALLEY<", ">KONYHA<"),
-    (">24 GOVERNMENT and MEDIA SEATS<", ">24 KORMÁNY és SAJTÓ ÜLÉS<"),
+    (">24 GOVERNMENT and MEDIA SEATS<", ">24 KORMÁNYZATI és SAJTÓ ÜLÉS<"),
     (">MEDICAL ICU<", ">ORVOSI MŰTŐ<"),
     # Tier 2: Upper Deck headers & room labels
     (
