@@ -1626,10 +1626,6 @@ html.menu-open .menu-aside {
   font-weight: 380;
 }
 
-.tab-content {
-  animation: fadeIn 0.4s var(--ease-out);
-}
-
 .table {
   display: block !important;
   overflow: auto;
@@ -2739,20 +2735,6 @@ html.header-hidden .subnav {
 
   to {
     transform: scaleX(1);
-  }
-}
-
-@keyframes scrollCue {
-  0% {
-    background-position: 0 100%;
-  }
-
-  50% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: 0 -100%;
   }
 }
 
