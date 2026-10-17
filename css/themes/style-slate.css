@@ -160,13 +160,6 @@
   --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.35), 0 24px 48px -28px rgba(0, 0, 0, 0.88);
   --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.4), 0 40px 80px -36px rgba(0, 0, 0, 0.95);
   --shadow-btn-hover: 0 18px 40px -16px rgba(129, 140, 248, 0.5);
-
-  --ill-dark-sky: #0e131f;
-  --ill-dark-sea-3: #161e30;
-  --ill-dark-sand: #1e2840;
-  --ill-dark-ink-2: #818cf8;
-  --ill-dark-ink-3: #6366f1;
-  --ill-dark-glass: #141b2b;
 }
 
 .body-dark .hero--compact::after {

@@ -69,7 +69,6 @@ button.open-assessment,
 .page-citizenship button.open-assessment {
     background-color: #003366 !important;
     color: #ffffff !important;
-    -webkit-appearance: none;
     appearance: none;
     cursor: pointer;
     transition: background-color var(--duration-normal, 0.3s) var(--ease-out),
@@ -124,7 +123,6 @@ button.open-assessment:active,
 /* Assessment Modal */
 .assessment-modal-overlay {
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     background: rgba(7, 28, 27, 0.72) !important;
     transition: opacity var(--duration-normal) var(--ease-out);
     z-index: 9999 !important;
@@ -138,7 +136,6 @@ button.open-assessment:active,
     color: var(--text-primary);
     display: flex;
     flex-direction: column;
-    max-height: 90vh;
     max-height: 92dvh;
     overflow: hidden;
 }
@@ -191,7 +188,6 @@ button.open-assessment:active,
 
     .assessment-modal {
         border-radius: var(--radius-lg, 16px) !important;
-        max-height: calc(100vh - 1rem) !important;
         max-height: calc(100dvh - 1rem) !important;
         width: 100% !important;
     }

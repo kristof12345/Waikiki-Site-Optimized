@@ -1027,7 +1027,6 @@
   top: 0.85rem;
   background: var(--glass);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 }
 
 .hotel-body {
