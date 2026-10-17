@@ -83,7 +83,7 @@
                     : 'Simplified e-Visa with Digital Border Control',
                 lead: isHungarian
                     ? 'A további partner országok állampolgárai egyszerűsített online e-Visa igényléssel utazhatnak be, és érkezéskor a gyorsított digitális határellenőrzést vehetik igénybe.'
-                    : 'Citizens of additional partner countries qualify for a simplified online e-Visa and enjoy automated digital border control upon arrival.',
+                    : 'Citizens of additional partner countries with a biometric passport qualify for a simplified online e-Visa registration process. They enjoy automated digital border control upon arrival.',
                 stay: isHungarian ? '30 nap (egyszeri vagy többszöri)' : '30 Days (Single or Multiple)',
                 fee: isHungarian ? '20 WUD (Kedvezményes)' : '20 WUD (Partner Rate)',
                 time: isHungarian ? '1-2 napon belül' : 'Within 1-2 Days'
@@ -100,7 +100,7 @@
                     : 'Standard e-Visa and In-Person Border Control',
                 lead: isHungarian
                     ? 'A további fejlett országok állampolgárai előzetesen online igényelhető e-Visa engedéllyel utazhatnak be, érkezéskor pedig személyes határellenőrzésen vesznek részt.'
-                    : 'Citizens of additional developed countries apply online for a standard e-Visa prior to travel and complete in-person border inspection upon arrival.',
+                    : 'Citizens of additional developed countries apply online for a standard e-Visa prior to travel and must complete traditional in-person border inspection upon arrival.',
                 stay: isHungarian ? 'Legfeljebb 30 nap' : 'Up to 30 Days',
                 fee: isHungarian ? '35 WUD' : '35 WUD',
                 time: isHungarian ? '1 héten belül' : 'Within 1 Week'
