@@ -33,7 +33,7 @@ import tempfile
 from html.parser import HTMLParser
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parent.parent
 
 # --------------------------------------------------------------------------- #
 # Domain Whitelist: Lore characters, leaders, brands, geography & abbreviations

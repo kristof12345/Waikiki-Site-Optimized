@@ -479,6 +479,467 @@
   line-height: 1.3;
 }
 
+/* Illustrated Panels and Site-Wide SVG Helpers */
+.ill-panel {
+  margin: 0 auto;
+  max-width: var(--width-s, 1200px);
+  width: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.ill-caption {
+  padding: 1rem 1.5rem;
+  background: var(--surface-2);
+  border-top: 1px solid var(--line);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.ill-caption strong {
+  color: var(--heading);
+}
+
+.ill {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.ill .f-sky {
+  fill: var(--ill-sky);
+}
+
+.ill .f-sun {
+  fill: var(--ill-sun);
+}
+
+.ill .f-sun2 {
+  fill: var(--ill-sun-2);
+}
+
+.ill .f-sea {
+  fill: var(--ill-sea);
+}
+
+.ill .f-sea2 {
+  fill: var(--ill-sea-2);
+}
+
+.ill .f-sea3 {
+  fill: var(--ill-sea-3);
+}
+
+.ill .f-sand {
+  fill: var(--ill-sand);
+}
+
+.ill .f-ink {
+  fill: var(--ill-ink);
+}
+
+.ill .f-ink2 {
+  fill: var(--ill-ink-2);
+}
+
+.ill .f-ink3 {
+  fill: var(--ill-ink-3);
+}
+
+.ill .f-gold {
+  fill: var(--ill-gold);
+}
+
+.ill .f-coral {
+  fill: var(--ill-coral);
+}
+
+.ill .f-leaf {
+  fill: var(--ill-leaf);
+}
+
+.ill .f-leaf2 {
+  fill: var(--ill-leaf-2);
+}
+
+.ill .f-glass {
+  fill: var(--ill-glass);
+}
+
+.ill .f-white {
+  fill: var(--ill-white);
+}
+
+.ill .k-ink {
+  fill: none;
+  stroke: var(--ill-ink);
+}
+
+.ill .k-ink2 {
+  fill: none;
+  stroke: var(--ill-ink-2);
+}
+
+.ill .k-gold {
+  fill: none;
+  stroke: var(--ill-gold);
+}
+
+.ill .k-coral {
+  fill: none;
+  stroke: var(--ill-coral);
+}
+
+.ill .k-white {
+  fill: none;
+  stroke: var(--ill-white);
+}
+
+.ill .k-line {
+  fill: none;
+  stroke: var(--ill-line);
+}
+
+.ill text {
+  font-family: var(--font-sans);
+  font-weight: 700;
+}
+
+.ill .spin {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: illSpin 14s linear infinite;
+}
+
+.ill .drift {
+  animation: illDrift 14s var(--ease-in-out, ease-in-out) infinite alternate;
+}
+
+.ill .pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: illPulse 2.8s var(--ease-out, ease-out) infinite;
+}
+
+.ill .pulse-slow {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: illPulse 4s var(--ease-out, ease-out) infinite;
+}
+
+.ill .twinkle {
+  animation: illTwinkle 3.2s ease-in-out infinite alternate;
+}
+
+.ill .dash {
+  stroke-dasharray: 8 6;
+  animation: illDash 2.4s linear infinite;
+}
+
+.ill .dash-fast {
+  stroke-dasharray: 5 6;
+  animation: illDash 1.4s linear infinite;
+}
+
+@keyframes illSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes illPulse {
+  0%,
+  100% {
+    transform: scale(0.95);
+    opacity: 0.95;
+  }
+  50% {
+    transform: scale(1.18);
+    opacity: 0.4;
+  }
+}
+
+@keyframes illDash {
+  to {
+    stroke-dashoffset: -28;
+  }
+}
+
+@keyframes illDrift {
+  from {
+    transform: translateX(-8px);
+  }
+  to {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes illTwinkle {
+  0% {
+    opacity: 0.35;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Full-Width Air Force One Architectural Deck Plan Section */
+.af1-deckplan-section {
+  max-width: var(--width-full);
+  margin: 0 auto;
+  padding: clamp(3.5rem, 6.5vw, 6rem) var(--gutter);
+}
+
+.deckplan-showcase {
+  max-width: var(--width-s, 1200px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.deckplan-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1.35rem;
+  background: var(--surface);
+  border: var(--border-width-hairline) solid var(--line-strong);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.deckplan-toolbar-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.deckplan-model-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(135deg, #e3735a, #c95a41);
+  color: #ffffff;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(201, 90, 65, 0.3);
+}
+
+.deckplan-toolbar-title {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--heading);
+  letter-spacing: 0.03em;
+}
+
+.deckplan-filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.deckplan-filter-btn {
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line-strong);
+  background: var(--surface-2);
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background-color 0.25s var(--ease-out),
+    color 0.25s var(--ease-out),
+    border-color 0.25s var(--ease-out),
+    transform 0.2s var(--ease-out);
+}
+
+.deckplan-filter-btn:hover {
+  color: var(--heading);
+  border-color: var(--primary);
+}
+
+.deckplan-filter-btn.is-active {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+.deckplan-svg-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.deckplan-svg-scroll .ill {
+  min-width: 900px;
+}
+
+.deckplan-ill .deck-tier {
+  transition: opacity 0.35s ease, filter 0.35s ease;
+}
+
+.ill-panel[data-active-tier="elevation"] .deck-tier:not(.deck-tier--elevation),
+.ill-panel[data-active-tier="upper"] .deck-tier:not(.deck-tier--upper),
+.ill-panel[data-active-tier="main"] .deck-tier:not(.deck-tier--main) {
+  opacity: 0.2;
+  filter: grayscale(0.45);
+}
+
+.deckplan-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.15rem;
+  align-items: center;
+}
+
+.deckplan-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--heading);
+}
+
+.deckplan-legend-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  display: inline-block;
+  box-shadow: inset 0 0 0 1px rgba(0, 34, 68, 0.2);
+}
+
+/* Architectural Compartment Cards Grid */
+.deckplan-zones-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.1rem;
+}
+
+.deckplan-zone-card {
+  background: var(--surface);
+  border: var(--border-width-hairline) solid var(--line-strong);
+  border-top: 4px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 1.2rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.3s var(--ease-out),
+    border-color 0.3s var(--ease-out),
+    box-shadow 0.3s var(--ease-out);
+}
+
+.deckplan-zone-card--royal {
+  border-top-color: #c95a41;
+}
+
+.deckplan-zone-card--diplo {
+  border-top-color: #c28a29;
+}
+
+.deckplan-zone-card--cmd {
+  border-top-color: #2a8c83;
+}
+
+.deckplan-zone-card--vip {
+  border-top-color: #1a528f;
+}
+
+.deckplan-zone-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.deckplan-zone-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.deckplan-zone-code {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.22rem 0.6rem;
+  border-radius: var(--radius-pill);
+  background: var(--accent-subtle);
+  border: 1px solid rgba(194, 154, 87, 0.32);
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--accent-dark);
+  letter-spacing: 0.08em;
+}
+
+.deckplan-zone-card--royal .deckplan-zone-code {
+  background: rgba(201, 90, 65, 0.12);
+  border-color: rgba(201, 90, 65, 0.3);
+  color: #b5452d;
+}
+
+.deckplan-zone-card--cmd .deckplan-zone-code {
+  background: rgba(42, 140, 131, 0.12);
+  border-color: rgba(42, 140, 131, 0.3);
+  color: #1d6c65;
+}
+
+.deckplan-zone-card--vip .deckplan-zone-code {
+  background: rgba(26, 82, 143, 0.12);
+  border-color: rgba(26, 82, 143, 0.3);
+  color: #1a528f;
+}
+
+.deckplan-zone-area {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--text-muted);
+}
+
+.deckplan-zone-title {
+  font-family: var(--font-sans);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--heading);
+  margin: 0.15rem 0 0;
+}
+
+.deckplan-zone-desc {
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0;
+}
+
 /* Dark mode styling */
 .body-dark .aircraft-card {
   background: var(--dark-surface);
@@ -585,7 +1046,116 @@
   color: var(--dark-heading);
 }
 
+.body-dark .ill-panel {
+  background: var(--dark-surface);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.body-dark .ill-caption {
+  background: var(--dark-surface-2);
+  border-top-color: rgba(255, 255, 255, 0.1);
+  color: var(--dark-text);
+}
+
+.body-dark .ill-caption strong,
+.body-dark .deckplan-legend-item {
+  color: var(--dark-heading);
+}
+
+.body-dark .deckplan-toolbar {
+  background: var(--dark-surface);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.body-dark .deckplan-toolbar-title {
+  color: var(--dark-heading);
+}
+
+.body-dark .deckplan-filter-btn {
+  background: var(--dark-surface-2);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--dark-text);
+}
+
+.body-dark .deckplan-filter-btn:hover {
+  color: var(--dark-heading);
+  border-color: var(--tertiary);
+}
+
+.body-dark .deckplan-filter-btn.is-active {
+  background: var(--tertiary);
+  color: #061527;
+  border-color: var(--tertiary);
+}
+
+.body-dark .deckplan-zone-card {
+  background: var(--dark-surface);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.body-dark .deckplan-zone-card--royal {
+  border-top-color: #e3735a;
+}
+
+.body-dark .deckplan-zone-card--diplo {
+  border-top-color: #f5c46e;
+}
+
+.body-dark .deckplan-zone-card--cmd {
+  border-top-color: #5ce1cf;
+}
+
+.body-dark .deckplan-zone-card--vip {
+  border-top-color: #6ba4d9;
+}
+
+.body-dark .deckplan-zone-card:hover {
+  background: var(--dark-surface-2);
+}
+
+.body-dark .deckplan-zone-code {
+  background: rgba(245, 196, 110, 0.14);
+  border-color: rgba(245, 196, 110, 0.3);
+  color: #f5c46e;
+}
+
+.body-dark .deckplan-zone-card--royal .deckplan-zone-code {
+  background: rgba(227, 115, 90, 0.16);
+  border-color: rgba(227, 115, 90, 0.35);
+  color: #f8a28f;
+}
+
+.body-dark .deckplan-zone-card--cmd .deckplan-zone-code {
+  background: rgba(92, 225, 207, 0.14);
+  border-color: rgba(92, 225, 207, 0.32);
+  color: #5ce1cf;
+}
+
+.body-dark .deckplan-zone-card--vip .deckplan-zone-code {
+  background: rgba(107, 164, 217, 0.16);
+  border-color: rgba(107, 164, 217, 0.35);
+  color: #93c5fd;
+}
+
+.body-dark .deckplan-zone-area {
+  color: var(--dark-text);
+}
+
+.body-dark .deckplan-zone-title {
+  color: var(--dark-heading);
+}
+
+.body-dark .deckplan-zone-desc {
+  color: var(--dark-text);
+}
+
 /* Responsive adjustments */
+@media (max-width: 1024px) {
+  .deckplan-zones-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 900px) {
   .aircraft-card {
     grid-template-columns: 1fr;
@@ -620,5 +1190,9 @@
 
   .spec-val {
     text-align: left;
+  }
+
+  .deckplan-zones-grid {
+    grid-template-columns: 1fr;
   }
 }
