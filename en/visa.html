@@ -254,67 +254,128 @@
         </section>
         <section id="checker">
             <h2 class="section-title">Interactive Entry Requirement Checker</h2>
-            <p class="section-intro">Check your specific travel requirements before you fly. Select your nationality and travel purpose to review document requirements, stay limitations, and applicable fees.</p>
+            <p class="section-intro">Check your exact travel, pre-registration, and border clearance rules before you fly. Select one of the six treaty tiers and your travel purpose below.</p>
             <div class="checker-wrapper" id="visa-checker">
                 <div class="checker-grid">
-                    <div>
+                    <div class="checker-controls-col">
                         <div class="checker-control-group">
-                            <label class="checker-label" for="nationality-select">Your Passport Country or Region</label>
-                            <select id="nationality-select" class="checker-select" data-checker-nationality>
-                                <option value="au_eu">American Union, European Union, UK and Switzerland</option>
-                                <option value="apac">Japan, South Korea, Singapore, Australia and New Zealand</option>
-                                <option value="latam">Latin America and Caribbean Treaty Partners</option>
-                                <option value="other">Other Countries (Worldwide e-Visa Gateway)</option>
-                            </select>
+                            <span class="checker-label">1. Quick-Select Entry Tier</span>
+                            <div class="tier-selector-grid" role="group" aria-label="Entry requirement tiers">
+                                <button type="button" class="tier-card is-active" data-checker-tier="us_ca">
+                                    <span class="tier-card-top">
+                                        <span class="tier-badge badge-green">ID Only · No Reg</span>
+                                        <span class="tier-gate">Digital Gate</span>
+                                    </span>
+                                    <strong class="tier-card-title">United States and Canada</strong>
+                                    <span class="tier-card-sub">No passport or pre-registration required, photo ID suffices</span>
+                                </button>
+                                <button type="button" class="tier-card" data-checker-tier="eu_ch_au_uk">
+                                    <span class="tier-card-top">
+                                        <span class="tier-badge badge-green">24h Pre-Reg</span>
+                                        <span class="tier-gate">Digital Gate</span>
+                                    </span>
+                                    <strong class="tier-card-title">EU, Switzerland, Australia and UK</strong>
+                                    <span class="tier-card-sub">Passport required, 24-hour pre-registration, digital control</span>
+                                </button>
+                                <button type="button" class="tier-card" data-checker-tier="jp_ar_partners">
+                                    <span class="tier-card-top">
+                                        <span class="tier-badge badge-teal">48h Pre-Reg</span>
+                                        <span class="tier-gate">Digital Gate</span>
+                                    </span>
+                                    <strong class="tier-card-title">Japan, Argentina, etc.</strong>
+                                    <span class="tier-card-sub">Passport required, 48-hour pre-registration, digital control</span>
+                                </button>
+                                <button type="button" class="tier-card" data-checker-tier="partner_other">
+                                    <span class="tier-card-top">
+                                        <span class="tier-badge badge-amber">Simplified e-Visa</span>
+                                        <span class="tier-gate">Digital Gate</span>
+                                    </span>
+                                    <strong class="tier-card-title">Additional Partner Countries</strong>
+                                    <span class="tier-card-sub">Simplified online e-Visa with digital border clearance</span>
+                                </button>
+                                <button type="button" class="tier-card" data-checker-tier="developed_other">
+                                    <span class="tier-card-top">
+                                        <span class="tier-badge badge-amber">Standard e-Visa</span>
+                                        <span class="tier-gate">In-Person</span>
+                                    </span>
+                                    <strong class="tier-card-title">Additional Developed Countries</strong>
+                                    <span class="tier-card-sub">Online e-Visa with in-person border officer inspection</span>
+                                </button>
+                                <button type="button" class="tier-card" data-checker-tier="other_world">
+                                    <span class="tier-card-top">
+                                        <span class="tier-badge badge-coral">Visa Application</span>
+                                        <span class="tier-gate">In-Person</span>
+                                    </span>
+                                    <strong class="tier-card-title">Other Countries</strong>
+                                    <span class="tier-card-sub">Prior consular visa application and in-person border control</span>
+                                </button>
+                            </div>
                         </div>
-                        <div class="checker-control-group">
-                            <span class="checker-label">Purpose of Your Visit</span>
+                        <div class="checker-control-group" style="margin-bottom: 0;">
+                            <span class="checker-label">2. Purpose of Your Visit</span>
                             <div class="purpose-pills">
                                 <button type="button" class="purpose-pill is-active" data-checker-purpose="tourism">Tourism and Leisure</button>
                                 <button type="button" class="purpose-pill" data-checker-purpose="business">Business and Meetings</button>
                                 <button type="button" class="purpose-pill" data-checker-purpose="transit">Flight Transit</button>
                             </div>
                         </div>
-                        <p class="section-intro" style="font-size: 0.88rem; margin-top: 1rem;">All travelers must possess a valid passport with at least six months remaining validity and complete pre-departure Waikiki One registration.</p>
                     </div>
                     <div class="checker-result-panel" data-checker-result>
                         <div>
                             <div class="result-status-header">
-                                <span class="result-tag tag-free" data-result-tag>Visa-Free Access</span>
+                                <span class="result-tag tag-free" data-result-tag>ID-Only Direct Entry</span>
+                                <span class="result-region-pill" data-result-region>United States and Canada</span>
                             </div>
-                            <h3 class="result-title" data-result-title>Automatic Biometric Clearance</h3>
-                            <p class="result-lead" data-result-lead>You are eligible to enter the Sovereign Nation of Waikiki visa-free for tourism, cultural exchange, and business meetings.</p>
+                            <h3 class="result-title" data-result-title>Direct Photo ID Entry and Digital SmartBorder</h3>
+                            <p class="result-lead" data-result-lead>Citizens of the United States and Canada do not need a passport or advance registration—a valid government photo ID card is sufficient with automated digital border control.</p>
+                            <div class="result-req-grid">
+                                <div class="result-req-card">
+                                    <span class="result-req-label">Travel Document</span>
+                                    <strong class="result-req-value" data-result-doc>ID Card or Passport</strong>
+                                    <span class="result-req-sub" data-result-doc-sub>No passport required — Photo ID suffices</span>
+                                </div>
+                                <div class="result-req-card">
+                                    <span class="result-req-label">Pre-Arrival Authorization</span>
+                                    <strong class="result-req-value" data-result-prereg>No Pre-Registration</strong>
+                                    <span class="result-req-sub" data-result-prereg-sub>Direct check-in without prior form</span>
+                                </div>
+                                <div class="result-req-card">
+                                    <span class="result-req-label">Border Control</span>
+                                    <strong class="result-req-value" data-result-border>Digital Border Control</strong>
+                                    <span class="result-req-sub" data-result-border-sub>Contactless SmartBorder e-Gates</span>
+                                </div>
+                            </div>
                             <ul class="result-items" data-result-items>
                                 <li>
                                     <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
-                                    <span>Valid national passport (minimum 6 months validity beyond travel)</span>
+                                    <span>Government-issued photo ID card (state driver's license, national ID) or passport</span>
                                 </li>
                                 <li>
                                     <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
-                                    <span>Free pre-departure Waikiki One digital registration token</span>
+                                    <span>No advance registration or visa required prior to departure</span>
                                 </li>
                                 <li>
                                     <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
-                                    <span>Proof of return or onward transportation booking</span>
+                                    <span>Automated digital border control via SmartBorder biometric e-gates</span>
                                 </li>
                                 <li>
                                     <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
-                                    <span>Contactless pass through SmartBorder biometric e-gates</span>
+                                    <span>Return or onward travel ticket confirmation</span>
                                 </li>
                             </ul>
                         </div>
                         <div class="result-footer">
-                            <span class="result-stat-pill">Allowed Stay: <strong data-result-stay>Up to 30 Days</strong></span>
+                            <span class="result-stat-pill">Allowed Stay: <strong data-result-stay>Up to 90 Days</strong></span>
                             <span class="result-stat-pill">Processing Fee: <strong data-result-fee>0 WUD (Free)</strong></span>
-                            <span class="result-stat-pill">Turnaround: <strong data-result-time>Instant Clearance</strong></span>
+                            <span class="result-stat-pill">Turnaround: <strong data-result-time>Instant at Gate</strong></span>
                         </div>
                     </div>
                 </div>

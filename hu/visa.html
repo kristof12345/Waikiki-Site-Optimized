@@ -254,48 +254,115 @@
         </section>
         <section id="checker">
             <h2 class="section-title">Interaktív beutazási feltételkereső</h2>
-            <p class="section-intro">Tájékozódjon az utazási szabályokról indulás előtt. Válassza ki állampolgárságát és utazásának célját a dokumentumigények, tartózkodási korlátok és díjak azonnali megtekintéséhez.</p>
+            <p class="section-intro">Tájékozódjon a pontos okmány-, előzetes regisztrációs és határellenőrzési szabályokról indulás előtt. Válassza ki a hat kategória egyikét és utazásának célját.</p>
             <div class="checker-wrapper" id="visa-checker">
                 <div class="checker-grid">
-                    <div>
+                    <div class="checker-controls-col">
                         <div class="checker-control-group">
-                            <label class="checker-label" for="nationality-select">Útlevelének országa vagy régiója</label>
-                            <select id="nationality-select" class="checker-select" data-checker-nationality>
-                                <option value="au_eu">Amerikai Unió, Európai Unió, Egyesült Királyság és Svájc</option>
-                                <option value="apac">Japán, Dél-Korea, Szingapúr, Ausztrália és Új-Zéland</option>
-                                <option value="latam">Latin-Amerika és karibi szerződéses partnerek</option>
-                                <option value="other">Egyéb országok (Globális e-vízum kapu)</option>
-                            </select>
+                            <span class="checker-label">1. Gyorsválasztó kategóriák</span>
+                            <div class="tier-selector-grid" role="group" aria-label="Beutazási kategóriák">
+                                <button type="button" class="tier-card is-active" data-checker-tier="us_ca">
+                                    <span class="tier-card-top">
+                                        <span class="tier-badge badge-green">Igazolvány · Nincs reg.</span>
+                                        <span class="tier-gate">Digitális kapu</span>
+                                    </span>
+                                    <strong class="tier-card-title">Egyesült Államok és Canada</strong>
+                                    <span class="tier-card-sub">Nem szükséges előzetes regisztráció és útlevél, egy fényképes igazolvány elegendő</span>
+                                </button>
+                                <button type="button" class="tier-card" data-checker-tier="eu_ch_au_uk">
+                                    <span class="tier-card-top">
+                                        <span class="tier-badge badge-green">24 órás regisztráció</span>
+                                        <span class="tier-gate">Digitális kapu</span>
+                                    </span>
+                                    <strong class="tier-card-title">EU, Egyesült Királyság, Svájc és Ausztrália</strong>
+                                    <span class="tier-card-sub">Útlevél szükséges, előzetes regisztráció szükséges 24 órával az utazás előtt</span>
+                                </button>
+                                <button type="button" class="tier-card" data-checker-tier="jp_ar_partners">
+                                    <span class="tier-card-top">
+                                        <span class="tier-badge badge-teal">48 órás regisztráció</span>
+                                        <span class="tier-gate">Digitális kapu</span>
+                                    </span>
+                                    <strong class="tier-card-title">Japán, Argentína stb.</strong>
+                                    <span class="tier-card-sub">Útlevél szükséges, előzetes regisztráció 48 óra, digitális kapu</span>
+                                </button>
+                                <button type="button" class="tier-card" data-checker-tier="partner_other">
+                                    <span class="tier-card-top">
+                                        <span class="tier-badge badge-amber">Egyszerűsített e-Visa</span>
+                                        <span class="tier-gate">Digitális kapu</span>
+                                    </span>
+                                    <strong class="tier-card-title">További partner országok</strong>
+                                    <span class="tier-card-sub">Egyszerűsített e-Visa, digitális határellenőrzés</span>
+                                </button>
+                                <button type="button" class="tier-card" data-checker-tier="developed_other">
+                                    <span class="tier-card-top">
+                                        <span class="tier-badge badge-amber">Normál e-Visa</span>
+                                        <span class="tier-gate">Személyes</span>
+                                    </span>
+                                    <strong class="tier-card-title">További fejlett országok</strong>
+                                    <span class="tier-card-sub">Online e-Visa és személyes határellenőrzés</span>
+                                </button>
+                                <button type="button" class="tier-card" data-checker-tier="other_world">
+                                    <span class="tier-card-top">
+                                        <span class="tier-badge badge-coral">Vízum igénylés</span>
+                                        <span class="tier-gate">Személyes</span>
+                                    </span>
+                                    <strong class="tier-card-title">Egyéb országok</strong>
+                                    <span class="tier-card-sub">Előzetes vízum igénylés és személyes határellenőrzés</span>
+                                </button>
+                            </div>
                         </div>
-                        <div class="checker-control-group">
-                            <span class="checker-label">Az utazás célja</span>
+                        <div class="checker-control-group" style="margin-bottom: 0;">
+                            <span class="checker-label">2. Az utazás célja</span>
                             <div class="purpose-pills">
                                 <button type="button" class="purpose-pill is-active" data-checker-purpose="tourism">Turizmus és pihenés</button>
                                 <button type="button" class="purpose-pill" data-checker-purpose="business">Üzlet és tárgyalások</button>
                                 <button type="button" class="purpose-pill" data-checker-purpose="transit">Repülőtéri átszállás</button>
                             </div>
                         </div>
-                        <p class="section-intro" style="font-size: 0.88rem; margin-top: 1rem;">Minden utazónak rendelkeznie kell a tervezett távozástól számított legalább hat hónapig érvényes útlevéllel és előzetes Waikiki One regisztrációval.</p>
                     </div>
                     <div class="checker-result-panel" data-checker-result>
                         <div>
                             <div class="result-status-header">
-                                <span class="result-tag tag-free" data-result-tag>Vízummentes Belépés</span>
+                                <span class="result-tag tag-free" data-result-tag>Igazolvánnyal szabad belépés</span>
+                                <span class="result-region-pill" data-result-region>Egyesült Államok és Kanada</span>
                             </div>
-                            <h3 class="result-title" data-result-title>Automatikus Biometrikus Belépés</h3>
-                            <p class="result-lead" data-result-lead>Ön jogosult vízummentesen belépni Waikiki Szuverén Államba turizmus, kulturális és üzleti célból.</p>
+                            <h3 class="result-title" data-result-title>Belépés igazolvánnyal és digitális határellenőrzéssel</h3>
+                            <p class="result-lead" data-result-lead>Az Egyesült Államok és Kanada állampolgárainak nem kell előzetes regisztráció és útlevél: elég egy fényképes igazolvány, a belépés pedig digitális határellenőrzéssel történik.</p>
+                            <div class="result-req-grid">
+                                <div class="result-req-card">
+                                    <span class="result-req-label">Szükséges okmány</span>
+                                    <strong class="result-req-value" data-result-doc>Elég egy igazolvány</strong>
+                                    <span class="result-req-sub" data-result-doc-sub>Útlevél nem szükséges (ID vagy jogosítvány)</span>
+                                </div>
+                                <div class="result-req-card">
+                                    <span class="result-req-label">Előzetes regisztráció / Vízum</span>
+                                    <strong class="result-req-value" data-result-prereg>Nem kell regisztráció</strong>
+                                    <span class="result-req-sub" data-result-prereg-sub>Előzetes bejelentés nélkül utazhat</span>
+                                </div>
+                                <div class="result-req-card">
+                                    <span class="result-req-label">Határellenőrzés</span>
+                                    <strong class="result-req-value" data-result-border>Digitális határellenőrzés</strong>
+                                    <span class="result-req-sub" data-result-border-sub>Automatikus SmartBorder e-kapuk</span>
+                                </div>
+                            </div>
                             <ul class="result-items" data-result-items>
                                 <li>
                                     <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
-                                    <span>Érvényes útlevél (legalább 6 hónap érvényességgel a tervezett távozástól)</span>
+                                    <span>Nem kell útlevél: állami fényképes személyazonosító igazolvány vagy jogosítvány elegendő</span>
                                 </li>
                                 <li>
                                     <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
-                                    <span>Ingyenes előzetes regisztráció a Waikiki One rendszerben</span>
+                                    <span>Nem kell előzetes regisztráció vagy vízum az indulás előtt</span>
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Gyorsított digitális határellenőrzés a SmartBorder biometrikus kapukon</span>
                                 </li>
                                 <li>
                                     <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -303,18 +370,12 @@
                                     </svg>
                                     <span>Visszaúti vagy továbbutazási menetjegy igazolása</span>
                                 </li>
-                                <li>
-                                    <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    <span>Érintésmentes áthaladás a SmartBorder biometrikus e-kapukon</span>
-                                </li>
                             </ul>
                         </div>
                         <div class="result-footer">
-                            <span class="result-stat-pill">Megengedett tartózkodás: <strong data-result-stay>Legfeljebb 30 nap</strong></span>
+                            <span class="result-stat-pill">Megengedett tartózkodás: <strong data-result-stay>Legfeljebb 90 nap</strong></span>
                             <span class="result-stat-pill">Eljárási díj: <strong data-result-fee>0 WUD (Díjmentes)</strong></span>
-                            <span class="result-stat-pill">Feldolgozás: <strong data-result-time>Azonnali engedély</strong></span>
+                            <span class="result-stat-pill">Feldolgozás: <strong data-result-time>Azonnali beléptetés</strong></span>
                         </div>
                     </div>
                 </div>
