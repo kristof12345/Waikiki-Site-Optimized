@@ -16,23 +16,10 @@ DECKPLAN_SVG_RE = re.compile(
 
 # English -> Hungarian replacements applied when injecting into hu/plane.html
 EN_TO_HU = [
-    (
-        'aria-label="Colorful architectural illustration of Waikiki Air Force One Boeing 7107-B two-level luxury deck plan with Antonov An-225 twin-tail outer silhouette and elongated fuselage"',
-        'aria-label="Színes építészeti illusztráció a Waikiki Air Force One Boeing 7107-B kétszintes luxus fedélzeti tervrajzáról Antonov An-225 stílusú dupla vezérsíkkal és nyújtott törzzsel"',
-    ),
-    # Header ribbon widths to fit Hungarian text
-    (
-        '<rect x="28" y="268" width="560" height="26" rx="13" fill="#c95a41" />',
-        '<rect x="28" y="268" width="585" height="26" rx="13" fill="#c95a41" />',
-    ),
-    (
-        '<rect x="28" y="482" width="495" height="26" rx="13" fill="#c28a29" />',
-        '<rect x="28" y="482" width="525" height="26" rx="13" fill="#c28a29" />',
-    ),
     # Tier 1: Outer Cutaway telemetry & labels
-    (">BOEING 7107-B · AN-225 CLASS<", ">BOEING 7107-B · AN-225 OSZTÁLY<"),
+    (">BOEING 7107-B CLASS<", ">BOEING 7107-B OSZTÁLY<"),
     (">500 M² · 2 FULL LUXURY DECKS<", ">500 M² · 2 TELJES LUXUS SZINT<"),
-    (">6× ROLLS-ROYCE TITAN XWB TURBOFANS<", ">6× ROLLS-ROYCE TITAN XWB HAJTÓMŰ<"),
+    (">6x ROLLS-ROYCE TITAN XWB TURBOFANS<", ">6x ROLLS-ROYCE TITAN XWB HAJTÓMŰ<"),
     (
         ">102.0 M LENGTH · 94.0 M WINGSPAN · TWIN-FIN TAIL<",
         ">102,0 M HOSSZ · 94,0 M FESZTTÁV · DUPLA VEZÉRSÍK<",
@@ -48,28 +35,26 @@ EN_TO_HU = [
     (">GALLEY<", ">KONYHA<"),
     (">24 GOVERNMENT and MEDIA SEATS<", ">24 KORMÁNY és SAJTÓ ÜLÉS<"),
     (">MEDICAL ICU<", ">ORVOSI MŰTŐ<"),
-    (">AN-225 TWIN-FIN TAIL<", ">AN-225 DUPLA VEZÉRSÍK<"),
     # Tier 2: Upper Deck headers & room labels
     (
         ">UPPER DECK · LEVEL 02 · SOVEREIGN RESIDENCE AND COMMAND (210 M²)<",
         ">FELSŐ FEDÉLZET · 02. SZINT · SZUVERÉN REZIDENCIA ÉS PARANCSNOKSÁG (210 M²)<",
     ),
     (
-        ">ELONGATED UPPER TRUNK · 2 BEDROOMS · RAIN SHOWERS · SKY LOUNGE · WAR ROOM · COCKPIT<",
-        ">NYÚJTOTT FELSŐ TÖRZS · 2 HÁLÓSZOBA · ESŐZUHANYOK · NAPPALI SZALON · VÁLSÁGSZOBA · PILÓTAFÜLKE<",
+        ">2 BEDROOMS · RAIN SHOWERS · SKY LOUNGE · WAR ROOM · COCKPIT<",
+        ">2 HÁLÓSZOBA · ESŐZUHANYOK · NAPPALI SZALON · VÁLSÁGSZOBA · PILÓTAFÜLKE<",
     ),
     (">FLIGHT DECK<", ">PILÓTAFÜLKE<"),
     (">SPIRAL STAIR 1<", ">1. CSIGALÉPCSŐ<"),
     (">STRATEGIC SITUATION WAR ROOM<", ">STRATÉGIAI VÁLSÁGSZOBA<"),
     (">MAHOGANY SALON CREDENZA AND LIBRARY<", ">MAHAGÓNI KÖNYVTÁR és KOMÓD<"),
     (
-        ">SOVEREIGN LIVING ROOM AND SKY LOUNGE<",
-        ">SZUVERÉN NAPPALI ÉS PANORÁMA SZALON<",
+        ">LIVING ROOM AND SKY LOUNGE<",
+        ">NAPPALI ÉS PANORÁMA SZALON<",
     ),
     (">STUDY DESK AND WALK-IN WARDROBE<", ">DOLGOZÓASZTAL és GARDRÓBSZOBA<"),
     (">SHOWER<", ">ZUHANY<"),
     (">ROYAL DRESSING VANITY<", ">KIRÁLYI PIPEREASZTAL<"),
-    (">SHOWER II<", ">ZUHANY II<"),
     (">ROYAL SUITE II<", ">II. KIRÁLYI HÁLÓSZOBA<"),
     (">SPIRAL STAIR 2<", ">2. CSIGALÉPCSŐ<"),
     # Tier 3: Main Deck headers & room labels
@@ -78,8 +63,8 @@ EN_TO_HU = [
         ">FŐFEDÉLZET · 01. SZINT · DIPLOMÁCIAI ÉS DELEGÁCIÓS SZINT (290 M²)<",
     ),
     (
-        ">ANTONOV AN-225 OUTER SILHOUETTE · 6× TITAN XWB ENGINES · TWIN VERTICAL TAIL FINS<",
-        ">ANTONOV AN-225 KÜLSŐ SZILUETT · 6× TITAN XWB HAJTÓMŰ · DUPLA FÜGGŐLEGES VEZÉRSÍK<",
+        ">OUTER SILHOUETTE · 6x TITAN XWB ENGINES · TWIN VERTICAL TAIL FINS<",
+        ">KÜLSŐ SZILUETT · 6x TITAN XWB HAJTÓMŰ · DUPLA FÜGGŐLEGES VEZÉRSÍK<",
     ),
     (">PORT TWIN TAIL FIN<", ">BAL DUPLA VEZÉRSÍK<"),
     (">STARBOARD TWIN TAIL FIN<", ">JOBB DUPLA VEZÉRSÍK<"),
@@ -95,13 +80,12 @@ EN_TO_HU = [
     ),
     (">DEFENSE<", ">VÉDELEM<"),
     # Bottom Architectural Meter Ruler
-    (">0.0 M (NOSE PROBE)<", ">0,0 M (ORRSZONDA)<"),
+    (">0.0 M<", ">0,0 M<"),
     (">20.0 M<", ">20,0 M<"),
     (">40.0 M<", ">40,0 M<"),
     (">60.0 M<", ">60,0 M<"),
     (">80.0 M<", ">80,0 M<"),
-    (">94.0 M (TAILCONE)<", ">94,0 M (FAROKKÚP)<"),
-    (">102.0 M (TWIN TAIL)<", ">102,0 M (DUPLA VEZÉRSÍK)<"),
+    (">100.0 M<", ">100,0 M<"),
 ]
 
 
