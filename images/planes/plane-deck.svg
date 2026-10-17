@@ -1,0 +1,678 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="ill deckplan-ill" viewBox="0 0 1800 1020" role="img" aria-label="Colorful architectural illustration of Waikiki Air Force One Boeing 7107-B two-level luxury deck plan with Antonov An-225 twin-tail outer silhouette and elongated fuselage">
+    <defs>
+        <clipPath id="af1-ill-clip">
+            <rect width="1800" height="1020" rx="20" />
+        </clipPath>
+        <!-- Sky and Caribbean Horizon Gradients for Outer Cutaway Banner -->
+        <linearGradient id="af1-sky-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#123d70" />
+            <stop offset="48%" stop-color="#2b6cb0" />
+            <stop offset="82%" stop-color="#f3c68f" />
+            <stop offset="100%" stop-color="#f6e7d3" />
+        </linearGradient>
+        <linearGradient id="af1-sea-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#2a8c83" />
+            <stop offset="50%" stop-color="#1a528f" />
+            <stop offset="100%" stop-color="#0b2948" />
+        </linearGradient>
+        <!-- Main Canvas Deep Lagoon Backdrop for Deck Plans -->
+        <linearGradient id="af1-canvas-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0b2239" />
+            <stop offset="50%" stop-color="#102d4a" />
+            <stop offset="100%" stop-color="#091c30" />
+        </linearGradient>
+        <!-- Sovereign Gold Metallic Gradient -->
+        <linearGradient id="af1-gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fcedc7" />
+            <stop offset="45%" stop-color="#dfba76" />
+            <stop offset="80%" stop-color="#c29a57" />
+            <stop offset="100%" stop-color="#8b6520" />
+        </linearGradient>
+        <!-- Royal Coral Gradient -->
+        <linearGradient id="af1-coral-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f0856c" />
+            <stop offset="50%" stop-color="#e3735a" />
+            <stop offset="100%" stop-color="#b8462e" />
+        </linearGradient>
+        <!-- Caribbean Lagoon Teal Gradient -->
+        <linearGradient id="af1-teal-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#5ce1cf" />
+            <stop offset="50%" stop-color="#2a8c83" />
+            <stop offset="100%" stop-color="#165953" />
+        </linearGradient>
+        <!-- Wing and Stabilizer Metallic Sheen -->
+        <linearGradient id="af1-wing-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#e3eef9" />
+            <stop offset="50%" stop-color="#b8d7f2" />
+            <stop offset="100%" stop-color="#6ba4d9" />
+        </linearGradient>
+    </defs>
+    <g clip-path="url(#af1-ill-clip)">
+        <!-- Full Canvas Base -->
+        <rect width="1800" height="1020" fill="url(#af1-canvas-grad)" />
+        <!-- ======================================================================= -->
+        <!-- TIER 1: ANTONOV AN-225 STYLE OUTER CUTAWAY AND TWIN TAIL (Y=0..256)     -->
+        <!-- ======================================================================= -->
+        <g class="deck-tier deck-tier--elevation">
+            <!-- Sky Backdrop -->
+            <rect x="0" y="0" width="1800" height="224" fill="url(#af1-sky-grad)" />
+            <!-- Glowing Tropical Sun -->
+            <circle cx="1580" cy="108" r="78" fill="#f5c46e" opacity="0.35" class="pulse-slow" />
+            <circle cx="1580" cy="108" r="48" fill="#e3735a" opacity="0.9" />
+            <circle cx="1580" cy="108" r="33" fill="#f5c46e" />
+            <!-- Twinkling High-Altitude Stars -->
+            <g fill="#fffdf9">
+                <circle class="twinkle" cx="110" cy="26" r="1.6" />
+                <circle class="twinkle" cx="310" cy="20" r="1.4" />
+                <circle class="twinkle" cx="560" cy="28" r="1.8" />
+                <circle class="twinkle" cx="840" cy="18" r="1.5" />
+                <circle class="twinkle" cx="1120" cy="24" r="1.7" />
+                <circle class="twinkle" cx="1390" cy="30" r="1.5" />
+                <circle class="twinkle" cx="1690" cy="22" r="1.6" />
+            </g>
+            <!-- Drifting Tropical Clouds -->
+            <g class="drift" fill="#fffdf9" opacity="0.82">
+                <ellipse cx="265" cy="84" rx="64" ry="13" />
+                <ellipse cx="304" cy="74" rx="40" ry="14" />
+                <ellipse cx="1140" cy="68" rx="58" ry="11" />
+                <ellipse cx="1175" cy="60" rx="34" ry="12" />
+            </g>
+            <!-- Caribbean Sea and Nova Aurelia Skyline Silhouette at Horizon (Y=220..256) -->
+            <rect x="0" y="220" width="1800" height="36" fill="url(#af1-sea-grad)" />
+            <rect x="0" y="220" width="1800" height="3" fill="#5ce1cf" opacity="0.7" />
+            <!-- Distant Nova Aurelia Mega Pyramid and Skyline on Golden Sand Spit -->
+            <path d="M 160 220 L 340 220 L 328 215 L 172 215 Z" fill="#e8dcb8" />
+            <polygon points="215,216 240,192 265,216" fill="#dfba76" stroke="#002244" stroke-width="0.8" />
+            <rect x="274" y="196" width="9" height="20" fill="#003366" />
+            <rect x="287" y="201" width="8" height="15" fill="#1a528f" />
+            <rect x="299" y="204" width="7" height="12" fill="#2a8c83" />
+            <!-- Ocean Wave Highlights -->
+            <path d="M 80 234 H 150 M 440 240 H 530 M 860 232 H 960 M 1280 238 H 1380 M 1610 234 H 1700" stroke="#b8d7f2" stroke-width="1.8" stroke-linecap="round" opacity="0.65" />
+            <!-- Top Sovereign Telemetry Badges -->
+            <g font-size="10.5" font-weight="700" letter-spacing="1.2">
+                <rect x="28" y="14" width="320" height="28" rx="14" fill="#082038" stroke="#dfba76" stroke-width="1.2" />
+                <circle cx="48" cy="28" r="4.5" fill="#e3735a" class="pulse" />
+                <text x="64" y="32" fill="#fcedc7">BOEING 7107-B · AN-225 CLASS</text>
+                <rect x="364" y="14" width="280" height="28" rx="14" fill="#082038" stroke="#5ce1cf" stroke-width="1.2" />
+                <circle cx="384" cy="28" r="4.5" fill="#2ecc71" class="pulse" />
+                <text x="400" y="32" fill="#fffdf9">500 M² · 2 FULL LUXURY DECKS</text>
+                <rect x="660" y="14" width="310" height="28" rx="14" fill="#082038" stroke="#6ba4d9" stroke-width="1.2" />
+                <text x="815" y="32" fill="#b8d7f2" text-anchor="middle">6× ROLLS-ROYCE TITAN XWB TURBOFANS</text>
+                <rect x="986" y="14" width="440" height="28" rx="14" fill="#082038" stroke="#dfba76" stroke-width="1.2" />
+                <text x="1206" y="32" fill="#fcedc7" text-anchor="middle">102.0 M LENGTH · 94.0 M WINGSPAN · TWIN-FIN TAIL</text>
+            </g>
+            <!-- Animated Jet Stream and Refueling Telemetry Vector -->
+            <path d="M 12 162 L 54 162" stroke="#e3735a" stroke-width="2.5" stroke-dasharray="5 5" class="dash-fast" />
+            <path d="M 880 206 L 1760 206" stroke="#f5c46e" stroke-width="2" stroke-dasharray="8 6" class="dash" opacity="0.8" />
+            <!-- =============================================================== -->
+            <!-- ANTONOV AN-225 DOUBLE TAIL (TWIN VERTICAL ENDPLATE STABILIZERS) -->
+            <!-- =============================================================== -->
+            <!-- Far-Side (Starboard) Twin Vertical Fin in 3D Perspective -->
+            <g opacity="0.92">
+                <path d="M 1495 102 L 1565 36 L 1648 36 L 1672 138 L 1595 148 L 1495 118 Z" fill="#002244" stroke="#dfba76" stroke-width="1.8" stroke-linejoin="round" />
+                <polygon points="1565,36 1648,36 1651,46 1555,46" fill="#c95a41" />
+                <circle cx="1608" cy="82" r="10" fill="url(#af1-gold-grad)" stroke="#002244" stroke-width="1" />
+            </g>
+            <!-- An-225 Twin Dorsal Spine Fairings Atop Fuselage Crown -->
+            <path d="M 550 96 C 590 82 650 82 940 84 C 1120 85 1290 90 1380 96 Z" fill="#e3eef9" stroke="#002244" stroke-width="1.6" />
+            <line x1="620" y1="89" x2="1260" y2="91" stroke="#c28a29" stroke-width="1.4" />
+            <!-- Fuselage Outer Body (An-225 Visor Nose, Long Cylindrical Trunk, Stepped Upper Hump, Tailcone Stinger) -->
+            <path d="M 58 164 C 60 144 98 124 142 114 C 166 108 188 96 235 94 L 1385 94 C 1465 94 1545 112 1612 134 L 1612 146 C 1545 170 1455 188 1365 190 L 155 190 C 96 190 58 180 58 164 Z" fill="#fffdf9" stroke="#002244" stroke-width="2.4" />
+            <!-- An-225 Hinged Nose Visor Seam Line -->
+            <path d="M 136 115 C 148 142 146 168 132 189" fill="none" stroke="#c28a29" stroke-width="1.6" stroke-dasharray="4 2" />
+            <!-- Royal Blue Lower Belly and An-225 14-Axle Multi-Wheel Landing Gear Blister Pod -->
+            <path d="M 72 174 L 1565 174 C 1500 186 1425 190 1365 190 L 155 190 C 102 190 74 184 72 174 Z" fill="#003366" />
+            <path d="M 565 178 C 595 172 915 172 955 178 L 940 196 L 580 196 Z" fill="#10375c" stroke="#dfba76" stroke-width="1.5" />
+            <!-- Coral and Gold Livery Cheatlines -->
+            <line x1="66" y1="169" x2="1588" y2="169" stroke="#c95a41" stroke-width="3.5" />
+            <line x1="68" y1="172.5" x2="1580" y2="172.5" stroke="#dfba76" stroke-width="2" />
+            <!-- Nose Aerial Refueling Probe and Stepped An-225 Cockpit Glazing -->
+            <line x1="34" y1="162" x2="60" y2="162" stroke="#dfba76" stroke-width="3" stroke-linecap="round" />
+            <circle cx="34" cy="162" r="3.5" fill="#c95a41" />
+            <path d="M 142 114 L 188 102 L 194 116 L 146 122 Z" fill="#46cad9" stroke="#002244" stroke-width="1.5" />
+            <!-- Cutaway Interior Window Band Showing Colorful Rooms on Upper and Main Decks -->
+            <!-- Upper Deck Cutaway Strip (Y=100..128) -->
+            <rect x="215" y="100" width="215" height="28" rx="4" fill="#165953" stroke="#002244" stroke-width="1.2" />
+            <rect x="436" y="100" width="265" height="28" rx="4" fill="#fdf2dc" stroke="#c29a57" stroke-width="1.2" />
+            <rect x="707" y="100" width="285" height="28" rx="4" fill="#fadbd8" stroke="#c95a41" stroke-width="1.2" />
+            <rect x="998" y="100" width="255" height="28" rx="4" fill="#fdebd0" stroke="#c28a29" stroke-width="1.2" />
+            <rect x="1259" y="100" width="165" height="28" rx="4" fill="#f6ddcc" stroke="#c95a41" stroke-width="1.2" />
+            <!-- Main Deck Cutaway Strip (Y=134..164) -->
+            <rect x="150" y="134" width="115" height="28" rx="4" fill="#fbf7f0" stroke="#c29a57" stroke-width="1.2" />
+            <rect x="271" y="134" width="275" height="28" rx="4" fill="#f9e7c8" stroke="#c95a41" stroke-width="1.2" />
+            <rect x="552" y="134" width="245" height="28" rx="4" fill="#d4efdf" stroke="#2a8c83" stroke-width="1.2" />
+            <rect x="803" y="134" width="125" height="28" rx="4" fill="#e8f8f5" stroke="#46cad9" stroke-width="1.2" />
+            <rect x="934" y="134" width="380" height="28" rx="4" fill="#d6eaf8" stroke="#1a528f" stroke-width="1.2" />
+            <rect x="1320" y="134" width="135" height="28" rx="4" fill="#e8f8f5" stroke="#c95a41" stroke-width="1.2" />
+            <!-- Cutaway Labels Inside Fuselage -->
+            <g font-size="9" font-weight="800" text-anchor="middle">
+                <text x="322" y="118" fill="#fffdf9">SITUATION WAR ROOM</text>
+                <text x="568" y="118" fill="#7c3626">SOVEREIGN LIVING LOUNGE</text>
+                <text x="850" y="118" fill="#922b21">MASTER BEDROOM SUITE I</text>
+                <text x="1125" y="118" fill="#784212">ROYAL CONSORT SUITE II</text>
+                <text x="1341" y="118" fill="#922b21">UPPER SKY BAR</text>
+                <text x="207" y="152" fill="#002244">GRAND FOYER</text>
+                <text x="408" y="152" fill="#7c3626">12-SEAT MAHOGANY BANQUET</text>
+                <text x="674" y="152" fill="#0e6251">BARS and VIDEO CONF.</text>
+                <text x="865" y="152" fill="#003366">GALLEY</text>
+                <text x="1124" y="152" fill="#002244">24 GOVERNMENT and MEDIA SEATS</text>
+                <text x="1387" y="152" fill="#922b21">MEDICAL ICU</text>
+            </g>
+            <!-- An-225 High-Mounted Anhedral Wing Fairing and 3 Port-Side Pylon-Slung Titan XWB Nacelles -->
+            <path d="M 535 126 L 895 126 L 925 148 L 560 156 Z" fill="url(#af1-wing-grad)" stroke="#002244" stroke-width="1.8" opacity="0.92" />
+            <!-- Pylons and 3 Port-Side Engines (Inboard, Mid, Outboard) -->
+            <g stroke="#002244" stroke-width="1.6">
+                <!-- Engine 3 (Inboard) -->
+                <polygon points="565,152 585,152 570,182 550,182" fill="#6ba4d9" />
+                <rect x="526" y="178" width="60" height="24" rx="7" fill="#1a528f" />
+                <rect x="526" y="178" width="12" height="24" rx="3" fill="#dfba76" />
+                <circle cx="576" cy="190" r="4.5" fill="#e3735a" />
+                <!-- Engine 2 (Mid) -->
+                <polygon points="685,150 705,150 690,186 670,186" fill="#6ba4d9" />
+                <rect x="646" y="182" width="60" height="24" rx="7" fill="#1a528f" />
+                <rect x="646" y="182" width="12" height="24" rx="3" fill="#dfba76" />
+                <circle cx="696" cy="194" r="4.5" fill="#e3735a" />
+                <!-- Engine 1 (Outboard) -->
+                <polygon points="805,148 825,148 810,190 790,190" fill="#6ba4d9" />
+                <rect x="766" y="186" width="60" height="24" rx="7" fill="#1a528f" />
+                <rect x="766" y="186" width="12" height="24" rx="3" fill="#dfba76" />
+                <circle cx="816" cy="198" r="4.5" fill="#e3735a" />
+            </g>
+            <!-- An-225 Dihedral Horizontal Tailplane and Near-Side (Port) Twin Endplate Vertical Fin -->
+            <path d="M 1395 136 L 1615 118 L 1645 130 L 1435 148 Z" fill="url(#af1-wing-grad)" stroke="#002244" stroke-width="1.8" />
+            <!-- Near-Side (Port) Giant Endplate Fin (Extends Above AND Below Horizontal Tailplane!) -->
+            <path d="M 1538 112 L 1612 44 L 1702 44 L 1726 154 L 1646 176 L 1548 144 Z" fill="#003366" stroke="#dfba76" stroke-width="2.2" stroke-linejoin="round" />
+            <path d="M 1560 114 L 1618 58 L 1678 58 L 1694 146 L 1636 162 L 1566 138 Z" fill="#1a528f" />
+            <!-- Rudder Seam Line -->
+            <line x1="1674" y1="44" x2="1696" y2="162" stroke="#dfba76" stroke-width="1.5" />
+            <!-- Coral Fin Cap and Sovereign Gold Crest on Twin Fin -->
+            <polygon points="1612,44 1702,44 1705,55 1600,55" fill="#c95a41" />
+            <circle cx="1645" cy="104" r="15" fill="url(#af1-gold-grad)" stroke="#002244" stroke-width="1.4" />
+            <circle cx="1645" cy="104" r="6" fill="#c95a41" />
+            <text x="1635" y="196" fill="#fcedc7" font-size="8.5" font-weight="800" text-anchor="middle" letter-spacing="0.8">AN-225 TWIN-FIN TAIL</text>
+        </g>
+        <!-- ======================================================================= -->
+        <!-- TIER 2: UPPER DECK · LEVEL 02 — ELONGATED TRUNK (Y=268..466)            -->
+        <!-- ======================================================================= -->
+        <g class="deck-tier deck-tier--upper">
+            <!-- Section Header Ribbon -->
+            <rect x="28" y="268" width="560" height="26" rx="13" fill="#c95a41" />
+            <text x="44" y="285" fill="#fffdf9" font-size="10.5" font-weight="800" letter-spacing="1.2">UPPER DECK · LEVEL 02 · SOVEREIGN RESIDENCE AND COMMAND (210 M²)</text>
+            <text x="1772" y="285" fill="#fcedc7" font-size="10" font-weight="700" text-anchor="end" letter-spacing="0.8">ELONGATED UPPER TRUNK · 2 BEDROOMS · RAIN SHOWERS · SKY LOUNGE · WAR ROOM · COCKPIT</text>
+            <!-- An-225 Twin Dorsal Spine Fairings Framing the Upper Trunk -->
+            <path d="M 540 308 C 565 298 875 298 902 308 Z" fill="#b8d7f2" stroke="#dfba76" stroke-width="1.5" />
+            <path d="M 540 452 C 565 462 875 462 902 452 Z" fill="#b8d7f2" stroke="#dfba76" stroke-width="1.5" />
+            <!-- Elongated Upper Deck Fuselage Trunk Shell (X=76..1550, Y=308..452 · 10.2:1 Aspect Ratio) -->
+            <path d="M 76 380 C 76 336 165 308 285 308 L 1335 308 C 1445 308 1532 338 1550 380 C 1532 422 1445 452 1335 452 L 285 452 C 165 452 76 424 76 380 Z" fill="#fffdf9" stroke="#dfba76" stroke-width="3.6" />
+            <!-- ZONE 01: ARMORED FLIGHT DECK (X=80..240) -->
+            <path d="M 80 380 C 80 338 162 312 240 310 L 240 450 C 162 448 80 422 80 380 Z" fill="#10375c" />
+            <!-- Panoramic Cyan Cockpit Windshield -->
+            <path d="M 96 350 C 86 368 86 392 96 410 L 116 403 C 108 389 108 371 116 357 Z" fill="#46cad9" stroke="#002244" stroke-width="1.5" />
+            <!-- Pilot, Co-Pilot, Flight Engineer and Navigator Seats -->
+            <rect x="130" y="346" width="26" height="22" rx="5" fill="#1a528f" stroke="#f5c46e" stroke-width="1.5" />
+            <rect x="130" y="350" width="7" height="14" rx="2" fill="#e3735a" />
+            <rect x="130" y="392" width="26" height="22" rx="5" fill="#1a528f" stroke="#f5c46e" stroke-width="1.5" />
+            <rect x="130" y="396" width="7" height="14" rx="2" fill="#e3735a" />
+            <rect x="170" y="356" width="22" height="20" rx="4" fill="#2a8c83" stroke="#f5c46e" stroke-width="1.4" />
+            <rect x="170" y="384" width="22" height="20" rx="4" fill="#2a8c83" stroke="#f5c46e" stroke-width="1.4" />
+            <!-- Avionics Radar Consoles -->
+            <rect x="200" y="318" width="32" height="32" rx="4" fill="#082038" stroke="#5ce1cf" stroke-width="1.4" />
+            <circle cx="216" cy="334" r="8" fill="#165953" stroke="#2ecc71" stroke-width="1.2" />
+            <circle cx="216" cy="334" r="3" fill="#2ecc71" class="pulse" />
+            <rect x="200" y="410" width="32" height="32" rx="4" fill="#082038" stroke="#5ce1cf" stroke-width="1.4" />
+            <line x1="240" y1="308" x2="240" y2="364" stroke="#002244" stroke-width="2.5" />
+            <line x1="240" y1="396" x2="240" y2="452" stroke="#002244" stroke-width="2.5" />
+            <!-- Badge 01 -->
+            <rect x="132" y="316" width="24" height="16" rx="5" fill="#2a8c83" />
+            <text x="144" y="328" fill="#fffdf9" font-size="9.5" text-anchor="middle">01</text>
+            <text x="165" y="442" fill="#5ce1cf" font-size="8.5" text-anchor="middle" letter-spacing="0.6">FLIGHT DECK</text>
+            <!-- ZONE 02: STRATEGIC SITUATION AND WAR ROOM (X=240..475) -->
+            <rect x="241" y="310" width="234" height="140" fill="#d4efdf" />
+            <line x1="475" y1="308" x2="475" y2="364" stroke="#002244" stroke-width="2.5" />
+            <line x1="475" y1="396" x2="475" y2="452" stroke="#002244" stroke-width="2.5" />
+            <!-- Holographic Command Table + 8 Coral/Gold Tactical Chairs -->
+            <rect x="315" y="354" width="124" height="52" rx="12" fill="#0d3b37" stroke="#c28a29" stroke-width="2.2" />
+            <rect x="330" y="363" width="94" height="34" rx="6" fill="#2a8c83" stroke="#5ce1cf" stroke-width="1.2" />
+            <path d="M 348 380 Q 368 370 388 382 T 412 378" stroke="#f5c46e" stroke-width="2.5" fill="none" stroke-linecap="round" />
+            <circle cx="377" cy="380" r="3.5" fill="#e3735a" class="pulse" />
+            <g fill="#e3735a" stroke="#002244" stroke-width="1.2">
+                <circle cx="338" cy="343" r="5.5" />
+                <circle cx="377" cy="343" r="5.5" />
+                <circle cx="416" cy="343" r="5.5" />
+                <circle cx="338" cy="417" r="5.5" />
+                <circle cx="377" cy="417" r="5.5" />
+                <circle cx="416" cy="417" r="5.5" />
+                <circle cx="302" cy="380" r="6" fill="#dfba76" />
+                <circle cx="452" cy="380" r="6" fill="#dfba76" />
+            </g>
+            <!-- Forward Golden Spiral Staircase 1 -->
+            <g transform="translate(272, 416)">
+                <circle r="19" fill="#002244" stroke="#dfba76" stroke-width="2" />
+                <circle r="13" fill="#c95a41" opacity="0.9" />
+                <path d="M -16 0 H 16 M 0 -16 V 16 M -11 -11 L 11 11 M 11 -11 L -11 11" stroke="#fcedc7" stroke-width="1.3" />
+                <circle r="4.5" fill="#f5c46e" stroke="#002244" stroke-width="1" />
+            </g>
+            <text x="272" y="446" fill="#003366" font-size="7.5" text-anchor="middle">SPIRAL STAIR 1</text>
+            <!-- Badge 02 -->
+            <rect x="250" y="316" width="24" height="16" rx="5" fill="#2a8c83" />
+            <text x="262" y="328" fill="#fffdf9" font-size="9.5" text-anchor="middle">02</text>
+            <text x="377" y="328" fill="#0e6251" font-size="9.5" text-anchor="middle" letter-spacing="0.5">STRATEGIC SITUATION WAR ROOM</text>
+            <!-- ZONE 03: SOVEREIGN LIVING ROOM AND SKY LOUNGE (X=475..775) -->
+            <rect x="476" y="310" width="299" height="140" fill="#fdf2dc" />
+            <line x1="775" y1="308" x2="775" y2="364" stroke="#002244" stroke-width="2.5" />
+            <line x1="775" y1="396" x2="775" y2="452" stroke="#002244" stroke-width="2.5" />
+            <!-- Woven Golden Carpet Inlay -->
+            <rect x="504" y="338" width="196" height="78" rx="8" fill="#f5e0b7" stroke="#c28a29" stroke-width="1.4" stroke-dasharray="5 3" />
+            <!-- Plush Coral-Red L-Shaped Sectional Sofa with Gold Cushions -->
+            <path d="M 494 334 H 640 V 356 H 520 V 412 H 494 Z" fill="url(#af1-coral-grad)" stroke="#7c2818" stroke-width="1.8" stroke-linejoin="round" />
+            <rect x="500" y="338" width="20" height="12" rx="3" fill="#f5c46e" />
+            <rect x="534" y="338" width="32" height="12" rx="3" fill="#f5c46e" />
+            <rect x="580" y="338" width="32" height="12" rx="3" fill="#f5c46e" />
+            <rect x="498" y="366" width="14" height="26" rx="3" fill="#f5c46e" />
+            <!-- White Carrara Marble Coffee Table and Teal Club Armchairs -->
+            <rect x="544" y="366" width="88" height="34" rx="8" fill="#fffdf9" stroke="#c29a57" stroke-width="2" />
+            <circle cx="588" cy="383" r="7" fill="#2a8c83" opacity="0.85" />
+            <rect x="652" y="352" width="26" height="24" rx="6" fill="#2a8c83" stroke="#002244" stroke-width="1.4" />
+            <rect x="652" y="384" width="26" height="24" rx="6" fill="#2a8c83" stroke="#002244" stroke-width="1.4" />
+            <!-- Mahogany Grand Credenza and Library -->
+            <rect x="524" y="424" width="180" height="20" rx="4" fill="#6b281c" stroke="#dfba76" stroke-width="1.4" />
+            <text x="614" y="438" fill="#fcedc7" font-size="8" text-anchor="middle">MAHOGANY SALON CREDENZA AND LIBRARY</text>
+            <!-- Central Private Golden Elevator -->
+            <rect x="722" y="316" width="42" height="34" rx="5" fill="url(#af1-gold-grad)" stroke="#002244" stroke-width="1.8" />
+            <rect x="728" y="321" width="30" height="24" rx="3" fill="#002244" />
+            <text x="743" y="336" fill="#fcedc7" font-size="8" text-anchor="middle">LIFT</text>
+            <!-- Badge 03 -->
+            <rect x="486" y="316" width="24" height="16" rx="5" fill="#c95a41" />
+            <text x="498" y="328" fill="#fffdf9" font-size="9.5" text-anchor="middle">03</text>
+            <text x="610" y="328" fill="#7c2818" font-size="9.5" text-anchor="middle" letter-spacing="0.5">SOVEREIGN LIVING ROOM AND SKY LOUNGE</text>
+            <!-- ZONE 04: DICTATOR'S MASTER BEDROOM SUITE I AND SPA BATH (X=775..1095) -->
+            <rect x="776" y="310" width="319" height="140" fill="#fadbd8" />
+            <!-- En-Suite Lagoon Spa Bathroom Tile Floor (X=975..1095) -->
+            <rect x="975" y="310" width="120" height="140" fill="#d1f2eb" />
+            <line x1="975" y1="308" x2="975" y2="366" stroke="#002244" stroke-width="2" />
+            <line x1="975" y1="394" x2="975" y2="452" stroke="#002244" stroke-width="2" />
+            <line x1="1095" y1="308" x2="1095" y2="364" stroke="#002244" stroke-width="2.5" />
+            <line x1="1095" y1="396" x2="1095" y2="452" stroke="#002244" stroke-width="2.5" />
+            <!-- King-Size Sovereign Canopy Bed -->
+            <rect x="792" y="340" width="112" height="72" rx="8" fill="#5c2016" stroke="#dfba76" stroke-width="2.2" />
+            <rect x="798" y="346" width="100" height="60" rx="5" fill="#fffdf9" />
+            <rect x="830" y="346" width="68" height="60" rx="5" fill="url(#af1-coral-grad)" />
+            <rect x="802" y="350" width="20" height="22" rx="4" fill="#f5c46e" stroke="#c28a29" stroke-width="1" />
+            <rect x="802" y="378" width="20" height="22" rx="4" fill="#f5c46e" stroke="#c28a29" stroke-width="1" />
+            <!-- Mahogany Study Desk and Walk-in Wardrobe -->
+            <rect x="792" y="422" width="165" height="22" rx="4" fill="#6b281c" stroke="#dfba76" stroke-width="1.4" />
+            <text x="874" y="437" fill="#fcedc7" font-size="8" text-anchor="middle">STUDY DESK AND WALK-IN WARDROBE</text>
+            <!-- En-Suite Rain Shower Stall and Bubbling Jacuzzi Tub -->
+            <rect x="988" y="316" width="92" height="48" rx="6" fill="#46cad9" fill-opacity="0.35" stroke="#165953" stroke-width="1.8" />
+            <circle cx="1018" cy="340" r="12" fill="#fffdf9" fill-opacity="0.5" stroke="#165953" stroke-width="1.4" stroke-dasharray="3 2" />
+            <circle cx="1018" cy="340" r="4" fill="#dfba76" />
+            <text x="1056" y="344" fill="#0e6251" font-size="8" text-anchor="middle">SHOWER</text>
+            <!-- Jacuzzi Tub -->
+            <rect x="988" y="394" width="92" height="48" rx="14" fill="#fffdf9" stroke="#c28a29" stroke-width="1.8" />
+            <ellipse cx="1034" cy="418" rx="34" ry="16" fill="#6ba4d9" stroke="#1a528f" stroke-width="1.2" />
+            <circle cx="1020" cy="415" r="3" fill="#fffdf9" opacity="0.8" />
+            <circle cx="1044" cy="421" r="2.5" fill="#fffdf9" opacity="0.8" />
+            <text x="1034" y="387" fill="#003366" font-size="8" text-anchor="middle">SPA JACUZZI</text>
+            <!-- Badge 04 -->
+            <rect x="786" y="316" width="24" height="16" rx="5" fill="#c95a41" />
+            <text x="798" y="328" fill="#fffdf9" font-size="9.5" text-anchor="middle">04</text>
+            <text x="890" y="328" fill="#7c2818" font-size="9.5" text-anchor="middle" letter-spacing="0.5">MASTER BEDROOM SUITE I</text>
+            <!-- ZONE 05: ROYAL CONSORT BEDROOM SUITE II AND SHOWER (X=1095..1375) -->
+            <rect x="1096" y="310" width="279" height="140" fill="#fdebd0" />
+            <!-- En-Suite Bathroom II Floor (X=1265..1375) -->
+            <rect x="1265" y="310" width="110" height="140" fill="#d1f2eb" />
+            <line x1="1265" y1="308" x2="1265" y2="366" stroke="#002244" stroke-width="2" />
+            <line x1="1265" y1="394" x2="1265" y2="452" stroke="#002244" stroke-width="2" />
+            <line x1="1375" y1="308" x2="1375" y2="364" stroke="#002244" stroke-width="2.5" />
+            <line x1="1375" y1="396" x2="1375" y2="452" stroke="#002244" stroke-width="2.5" />
+            <!-- Second Full-Size Royal Bed -->
+            <rect x="1112" y="340" width="104" height="70" rx="8" fill="#5c2016" stroke="#dfba76" stroke-width="2" />
+            <rect x="1118" y="346" width="92" height="58" rx="5" fill="#fffdf9" />
+            <rect x="1148" y="346" width="62" height="58" rx="5" fill="url(#af1-gold-grad)" />
+            <rect x="1122" y="350" width="18" height="22" rx="4" fill="#e3735a" />
+            <rect x="1122" y="376" width="18" height="22" rx="4" fill="#e3735a" />
+            <!-- Dressing Vanity and Lounge Bench -->
+            <rect x="1112" y="422" width="138" height="22" rx="4" fill="#6b281c" stroke="#dfba76" stroke-width="1.4" />
+            <text x="1181" y="437" fill="#fcedc7" font-size="8" text-anchor="middle">ROYAL DRESSING VANITY</text>
+            <!-- Rain Shower II and Marble Vanity -->
+            <rect x="1276" y="316" width="86" height="48" rx="6" fill="#46cad9" fill-opacity="0.35" stroke="#165953" stroke-width="1.8" />
+            <circle cx="1304" cy="340" r="12" fill="#fffdf9" fill-opacity="0.5" stroke="#165953" stroke-width="1.4" stroke-dasharray="3 2" />
+            <text x="1340" y="344" fill="#0e6251" font-size="8" text-anchor="middle">SHOWER II</text>
+            <rect x="1276" y="396" width="86" height="46" rx="8" fill="#fffdf9" stroke="#2a8c83" stroke-width="1.6" />
+            <circle cx="1304" cy="419" r="9" fill="#b8d7f2" stroke="#1a528f" stroke-width="1.2" />
+            <circle cx="1334" cy="419" r="9" fill="#b8d7f2" stroke="#1a528f" stroke-width="1.2" />
+            <!-- Badge 05 -->
+            <rect x="1106" y="316" width="24" height="16" rx="5" fill="#c95a41" />
+            <text x="1118" y="328" fill="#fffdf9" font-size="9.5" text-anchor="middle">05</text>
+            <text x="1195" y="328" fill="#784212" font-size="9.5" text-anchor="middle" letter-spacing="0.5">ROYAL SUITE II</text>
+            <!-- ZONE 06: UPPER SKY BAR AND AFT SPIRAL ROTUNDA (X=1375..1548) -->
+            <path d="M 1376 310 C 1445 310 1530 338 1548 380 C 1530 422 1445 450 1376 450 Z" fill="#f6ddcc" />
+            <!-- Curved Mahogany Cocktail Bar and Golden Stools -->
+            <path d="M 1392 338 C 1428 338 1446 356 1446 380 C 1446 404 1428 422 1392 422 L 1392 406 C 1414 406 1426 396 1426 380 C 1426 364 1414 354 1392 354 Z" fill="#6b281c" stroke="#dfba76" stroke-width="1.8" />
+            <circle cx="1456" cy="358" r="5" fill="#f5c46e" stroke="#002244" stroke-width="1.2" />
+            <circle cx="1460" cy="380" r="5" fill="#f5c46e" stroke="#002244" stroke-width="1.2" />
+            <circle cx="1456" cy="402" r="5" fill="#f5c46e" stroke="#002244" stroke-width="1.2" />
+            <!-- Aft Golden Spiral Staircase 2 -->
+            <g transform="translate(1500, 380)">
+                <circle r="19" fill="#002244" stroke="#dfba76" stroke-width="2" />
+                <circle r="13" fill="#2a8c83" opacity="0.9" />
+                <path d="M -16 0 H 16 M 0 -16 V 16 M -11 -11 L 11 11 M 11 -11 L -11 11" stroke="#fcedc7" stroke-width="1.3" />
+                <circle r="4.5" fill="#f5c46e" stroke="#002244" stroke-width="1" />
+            </g>
+            <text x="1455" y="442" fill="#7c2818" font-size="7.5" text-anchor="middle">SPIRAL STAIR 2</text>
+            <!-- Badge 06 -->
+            <rect x="1384" y="316" width="24" height="16" rx="5" fill="#c28a29" />
+            <text x="1396" y="328" fill="#fffdf9" font-size="9.5" text-anchor="middle">06</text>
+            <text x="1452" y="328" fill="#7c2818" font-size="9" text-anchor="middle">UPPER SKY BAR</text>
+            <!-- Upper Deck Panoramic Window Ticks -->
+            <g stroke="#002244" stroke-width="2.5">
+                <line x1="250" y1="308" x2="1370" y2="308" stroke-dasharray="18 12" />
+                <line x1="250" y1="452" x2="1370" y2="452" stroke-dasharray="18 12" />
+            </g>
+        </g>
+        <!-- ======================================================================= -->
+        <!-- ANIMATED VERTICAL CIRCULATION PATHS (STAIRS AND ELEVATOR)               -->
+        <!-- ======================================================================= -->
+        <g opacity="0.9">
+            <path id="af1-stair1-flow" d="M 272 435 C 272 525, 206 565, 206 675" fill="none" stroke="#f5c46e" stroke-width="2.2" stroke-dasharray="5 5" class="dash" />
+            <path id="af1-elev-flow" d="M 743 350 L 743 660" fill="none" stroke="#e3735a" stroke-width="2.2" stroke-dasharray="5 5" class="dash-fast" />
+            <path id="af1-stair2-flow" d="M 1500 399 L 1500 715" fill="none" stroke="#5ce1cf" stroke-width="2.2" stroke-dasharray="5 5" class="dash" />
+            <circle r="4.5" fill="#f5c46e">
+                <animateMotion dur="3.5s" repeatCount="indefinite">
+                    <mpath href="#af1-stair1-flow" />
+                </animateMotion>
+            </circle>
+            <circle r="4.5" fill="#e3735a">
+                <animateMotion dur="2.8s" repeatCount="indefinite">
+                    <mpath href="#af1-elev-flow" />
+                </animateMotion>
+            </circle>
+            <circle r="4.5" fill="#5ce1cf">
+                <animateMotion dur="3.5s" repeatCount="indefinite">
+                    <mpath href="#af1-stair2-flow" />
+                </animateMotion>
+            </circle>
+        </g>
+        <!-- ======================================================================= -->
+        <!-- TIER 3: MAIN DECK · LEVEL 01 — ELONGATED TRUNK + AN-225 WINGS AND TAIL  -->
+        <!-- ======================================================================= -->
+        <g class="deck-tier deck-tier--main">
+            <!-- Section Header Ribbon -->
+            <rect x="28" y="482" width="495" height="26" rx="13" fill="#c28a29" />
+            <text x="44" y="499" fill="#fffdf9" font-size="10.5" font-weight="800" letter-spacing="1.2">MAIN DECK · LEVEL 01 · DIPLOMATIC AND DELEGATION DECK (290 M²)</text>
+            <text x="1772" y="499" fill="#5ce1cf" font-size="10" font-weight="700" text-anchor="end" letter-spacing="0.8">ANTONOV AN-225 OUTER SILHOUETTE · 6× TITAN XWB ENGINES · TWIN VERTICAL TAIL FINS</text>
+            <!-- =============================================================== -->
+            <!-- ANTONOV AN-225 SWEPT HIGH WINGS, 6 PYLON ENGINES AND FLAP TRACKS-->
+            <!-- =============================================================== -->
+            <!-- Port (Top) Swept Wing Root and Outer Wing Section (X=540..902, Y=492..652) -->
+            <path d="M 540 652 L 560 632 L 775 492 L 955 492 L 912 632 L 902 652 Z" fill="url(#af1-wing-grad)" stroke="#dfba76" stroke-width="2.2" stroke-linejoin="round" />
+            <!-- Starboard (Bottom) Swept Wing Root and Outer Wing Section (X=540..902, Y=808..968) -->
+            <path d="M 540 808 L 560 828 L 775 968 L 955 968 L 912 828 L 902 808 Z" fill="url(#af1-wing-grad)" stroke="#dfba76" stroke-width="2.2" stroke-linejoin="round" />
+            <!-- An-225 Wing Panel Ribs and Flap Track Canoe Fairings -->
+            <g stroke="#002244" stroke-width="1.3" opacity="0.65">
+                <!-- Port Wing Ribs -->
+                <line x1="615" y1="596" x2="880" y2="596" />
+                <line x1="685" y1="550" x2="915" y2="550" />
+                <line x1="745" y1="512" x2="942" y2="512" />
+                <!-- Starboard Wing Ribs -->
+                <line x1="615" y1="864" x2="880" y2="864" />
+                <line x1="685" y1="910" x2="915" y2="910" />
+                <line x1="745" y1="948" x2="942" y2="948" />
+            </g>
+            <!-- An-225 Protruding Flap Track Canoe Fairings Behind Trailing Edge -->
+            <g fill="#c95a41" stroke="#002244" stroke-width="1.2">
+                <rect x="908" y="592" width="22" height="6" rx="3" />
+                <rect x="922" y="546" width="22" height="6" rx="3" />
+                <rect x="938" y="508" width="22" height="6" rx="3" />
+                <rect x="908" y="862" width="22" height="6" rx="3" />
+                <rect x="922" y="908" width="22" height="6" rx="3" />
+                <rect x="938" y="946" width="22" height="6" rx="3" />
+            </g>
+            <!-- 6 Forward-Projecting Rolls-Royce Titan XWB (D-18T Style) Turbofan Nacelles on Pylons -->
+            <g stroke="#002244" stroke-width="1.5">
+                <!-- Port E3 Inboard (Y=588..612) -->
+                <rect x="572" y="595" width="44" height="10" fill="#6ba4d9" />
+                <rect x="530" y="588" width="58" height="24" rx="7" fill="#1a528f" stroke="#dfba76" />
+                <rect x="530" y="588" width="11" height="24" rx="3" fill="#dfba76" />
+                <circle cx="576" cy="600" r="4" fill="#e3735a" />
+                <!-- Port E2 Mid (Y=542..566) -->
+                <rect x="642" y="549" width="44" height="10" fill="#6ba4d9" />
+                <rect x="600" y="542" width="58" height="24" rx="7" fill="#1a528f" stroke="#dfba76" />
+                <rect x="600" y="542" width="11" height="24" rx="3" fill="#dfba76" />
+                <circle cx="646" cy="554" r="4" fill="#e3735a" />
+                <!-- Port E1 Outboard (Y=496..520) -->
+                <rect x="712" y="503" width="44" height="10" fill="#6ba4d9" />
+                <rect x="670" y="496" width="58" height="24" rx="7" fill="#1a528f" stroke="#dfba76" />
+                <rect x="670" y="496" width="11" height="24" rx="3" fill="#dfba76" />
+                <circle cx="716" cy="508" r="4" fill="#e3735a" />
+                <!-- Starboard E4 Inboard (Y=848..872) -->
+                <rect x="572" y="855" width="44" height="10" fill="#6ba4d9" />
+                <rect x="530" y="848" width="58" height="24" rx="7" fill="#1a528f" stroke="#dfba76" />
+                <rect x="530" y="848" width="11" height="24" rx="3" fill="#dfba76" />
+                <circle cx="576" cy="860" r="4" fill="#e3735a" />
+                <!-- Starboard E5 Mid (Y=894..918) -->
+                <rect x="642" y="901" width="44" height="10" fill="#6ba4d9" />
+                <rect x="600" y="894" width="58" height="24" rx="7" fill="#1a528f" stroke="#dfba76" />
+                <rect x="600" y="894" width="11" height="24" rx="3" fill="#dfba76" />
+                <circle cx="646" cy="906" r="4" fill="#e3735a" />
+                <!-- Starboard E6 Outboard (Y=940..964) -->
+                <rect x="712" y="947" width="44" height="10" fill="#6ba4d9" />
+                <rect x="670" y="940" width="58" height="24" rx="7" fill="#1a528f" stroke="#dfba76" />
+                <rect x="670" y="940" width="11" height="24" rx="3" fill="#dfba76" />
+                <circle cx="716" cy="952" r="4" fill="#e3735a" />
+            </g>
+            <!-- =============================================================== -->
+            <!-- ANTONOV AN-225 ICONIC DOUBLE TAIL (H-TAIL STABILIZER AND FINS)  -->
+            <!-- =============================================================== -->
+            <!-- Port (Top) Swept Horizontal Tailplane (X=1367..1675, Y=532..682) -->
+            <path d="M 1367 666 L 1552 532 L 1672 532 L 1552 692 Z" fill="url(#af1-wing-grad)" stroke="#dfba76" stroke-width="2.2" stroke-linejoin="round" />
+            <line x1="1518" y1="670" x2="1642" y2="532" stroke="#002244" stroke-width="1.4" stroke-dasharray="6 3" />
+            <!-- Starboard (Bottom) Swept Horizontal Tailplane (X=1367..1675, Y=778..928) -->
+            <path d="M 1367 794 L 1552 928 L 1672 928 L 1552 768 Z" fill="url(#af1-wing-grad)" stroke="#dfba76" stroke-width="2.2" stroke-linejoin="round" />
+            <line x1="1518" y1="790" x2="1642" y2="928" stroke="#002244" stroke-width="1.4" stroke-dasharray="6 3" />
+            <!-- Twin Vertical Stabilizer Endplate Fin 1 (Port / Top Double Tail Fin · X=1488..1726, Y=514..544) -->
+            <path d="M 1488 530 C 1510 518 1560 514 1625 514 L 1705 518 L 1726 530 L 1705 542 L 1625 544 C 1560 544 1510 540 1488 530 Z" fill="#003366" stroke="#dfba76" stroke-width="2.2" />
+            <path d="M 1488 530 C 1504 522 1524 520 1538 520 L 1538 540 C 1524 540 1504 538 1488 530 Z" fill="#c95a41" />
+            <line x1="1668" y1="516" x2="1668" y2="542" stroke="#fcedc7" stroke-width="1.5" />
+            <circle cx="1605" cy="529" r="6" fill="url(#af1-gold-grad)" stroke="#002244" stroke-width="1" />
+            <text x="1610" y="505" fill="#fcedc7" font-size="8.5" font-weight="800" text-anchor="middle" letter-spacing="0.8">PORT TWIN TAIL FIN</text>
+            <!-- Twin Vertical Stabilizer Endplate Fin 2 (Starboard / Bottom Double Tail Fin · X=1488..1726, Y=916..946) -->
+            <path d="M 1488 930 C 1510 918 1560 916 1625 916 L 1705 920 L 1726 930 L 1705 940 L 1625 944 C 1560 944 1510 942 1488 930 Z" fill="#003366" stroke="#dfba76" stroke-width="2.2" />
+            <path d="M 1488 930 C 1504 922 1524 920 1538 920 L 1538 940 C 1524 940 1504 938 1488 930 Z" fill="#c95a41" />
+            <line x1="1668" y1="918" x2="1668" y2="942" stroke="#fcedc7" stroke-width="1.5" />
+            <circle cx="1605" cy="930" r="6" fill="url(#af1-gold-grad)" stroke="#002244" stroke-width="1" />
+            <text x="1610" y="962" fill="#fcedc7" font-size="8.5" font-weight="800" text-anchor="middle" letter-spacing="0.8">STARBOARD TWIN TAIL FIN</text>
+            <!-- =============================================================== -->
+            <!-- ELONGATED MAIN DECK FUSELAGE TRUNK (X=58..1590, Y=652..808)     -->
+            <!-- =============================================================== -->
+            <!-- Nose Aerial Probe and An-225 Central Tailcone Stinger -->
+            <line x1="34" y1="730" x2="58" y2="730" stroke="#dfba76" stroke-width="3" stroke-linecap="round" />
+            <circle cx="34" cy="730" r="3.5" fill="#c95a41" />
+            <path d="M 1584 722 L 1618 730 L 1584 738 Z" fill="#c95a41" stroke="#dfba76" stroke-width="1.5" />
+            <!-- Main Deck Outer Aerodynamic Fuselage Trunk Shell (9.82:1 Aspect Ratio) -->
+            <path d="M 58 730 C 58 682 148 652 275 652 L 1280 652 C 1410 652 1545 684 1590 730 C 1545 776 1410 808 1280 808 L 275 808 C 148 808 58 778 58 730 Z" fill="#fffdf9" stroke="#dfba76" stroke-width="4" />
+            <!-- ZONE 07: CEREMONIAL NOSE FOYER AND GRAND ROTUNDA (X=62..245) -->
+            <path d="M 62 730 C 62 684 148 656 245 654 L 245 806 C 148 804 62 776 62 730 Z" fill="#fbf7f0" />
+            <line x1="245" y1="652" x2="245" y2="712" stroke="#002244" stroke-width="2.5" />
+            <line x1="245" y1="748" x2="245" y2="808" stroke="#002244" stroke-width="2.5" />
+            <!-- Waikiki Royal Sun and Compass Rose Marble Inlay -->
+            <circle cx="148" cy="730" r="30" fill="#f5e0b7" stroke="#c28a29" stroke-width="2" />
+            <polygon points="148,702 155,721 176,730 155,739 148,758 141,739 120,730 141,721" fill="#c95a41" />
+            <circle cx="148" cy="730" r="9" fill="url(#af1-gold-grad)" stroke="#002244" stroke-width="1.2" />
+            <!-- Forward Spiral Staircase 1 Landing -->
+            <g transform="translate(206, 684)">
+                <circle r="17" fill="#002244" stroke="#dfba76" stroke-width="2" />
+                <circle r="11.5" fill="#c95a41" />
+                <path d="M -14 0 H 14 M 0 -14 V 14 M -10 -10 L 10 10 M 10 -10 L -10 10" stroke="#fcedc7" stroke-width="1.2" />
+                <circle r="4" fill="#f5c46e" />
+            </g>
+            <!-- Badge 07 -->
+            <rect x="112" y="660" width="24" height="16" rx="5" fill="#c28a29" />
+            <text x="124" y="672" fill="#fffdf9" font-size="9.5" text-anchor="middle">07</text>
+            <text x="172" y="796" fill="#784212" font-size="8.5" text-anchor="middle">GRAND FOYER</text>
+            <!-- ZONE 08: 12-SEAT MAHOGANY STATE BANQUET HALL (X=245..540) -->
+            <rect x="246" y="654" width="294" height="152" fill="#f9e7c8" />
+            <line x1="540" y1="652" x2="540" y2="712" stroke="#002244" stroke-width="2.5" />
+            <line x1="540" y1="748" x2="540" y2="808" stroke="#002244" stroke-width="2.5" />
+            <!-- Royal Crimson Carpet Runner -->
+            <rect x="266" y="688" width="254" height="84" rx="12" fill="#e6b0aa" stroke="#c95a41" stroke-width="1.5" />
+            <!-- 12-Seat Solid Mahogany State Banquet Table -->
+            <rect x="292" y="702" width="202" height="56" rx="14" fill="#5c2016" stroke="#dfba76" stroke-width="2.4" />
+            <rect x="308" y="712" width="170" height="36" rx="8" fill="#7c3626" stroke="#f5c46e" stroke-width="1.2" />
+            <!-- Golden Table Runner and Crystal Chandeliers -->
+            <line x1="320" y1="730" x2="466" y2="730" stroke="#f5c46e" stroke-width="3.5" stroke-linecap="round" />
+            <circle cx="358" cy="730" r="10" fill="#fffdf9" fill-opacity="0.35" stroke="#fcedc7" stroke-width="1.4" stroke-dasharray="2 2" class="twinkle" />
+            <circle cx="428" cy="730" r="10" fill="#fffdf9" fill-opacity="0.35" stroke="#fcedc7" stroke-width="1.4" stroke-dasharray="2 2" class="twinkle" />
+            <!-- 12 Banquet Chairs (2 Coral Sovereign Thrones + 10 Gold Diplomatic Chairs) -->
+            <g stroke="#002244" stroke-width="1.2">
+                <circle cx="278" cy="730" r="7.5" fill="#c95a41" />
+                <circle cx="508" cy="730" r="7.5" fill="#c95a41" />
+                <circle cx="322" cy="693" r="5.5" fill="#f5c46e" />
+                <circle cx="358" cy="693" r="5.5" fill="#f5c46e" />
+                <circle cx="393" cy="693" r="5.5" fill="#f5c46e" />
+                <circle cx="428" cy="693" r="5.5" fill="#f5c46e" />
+                <circle cx="464" cy="693" r="5.5" fill="#f5c46e" />
+                <circle cx="322" cy="767" r="5.5" fill="#f5c46e" />
+                <circle cx="358" cy="767" r="5.5" fill="#f5c46e" />
+                <circle cx="393" cy="767" r="5.5" fill="#f5c46e" />
+                <circle cx="428" cy="767" r="5.5" fill="#f5c46e" />
+                <circle cx="464" cy="767" r="5.5" fill="#f5c46e" />
+            </g>
+            <!-- Badge 08 -->
+            <rect x="256" y="660" width="24" height="16" rx="5" fill="#c28a29" />
+            <text x="268" y="672" fill="#fffdf9" font-size="9.5" text-anchor="middle">08</text>
+            <text x="398" y="672" fill="#5c2016" font-size="9.5" text-anchor="middle" letter-spacing="0.5">12-SEAT MAHOGANY STATE BANQUET HALL</text>
+            <!-- ZONE 09: BARS, LUXURY LOUNGES AND VIDEO CONFERENCE ROOM (X=540..820) -->
+            <rect x="541" y="654" width="279" height="76" fill="#fdebd0" />
+            <rect x="541" y="730" width="279" height="76" fill="#10375c" />
+            <line x1="540" y1="730" x2="660" y2="730" stroke="#dfba76" stroke-width="2" />
+            <line x1="700" y1="730" x2="820" y2="730" stroke="#dfba76" stroke-width="2" />
+            <line x1="820" y1="652" x2="820" y2="712" stroke="#002244" stroke-width="2.5" />
+            <line x1="820" y1="748" x2="820" y2="808" stroke="#002244" stroke-width="2.5" />
+            <!-- Diplomatic Cocktail Bar and Stools -->
+            <path d="M 556 680 H 636 C 644 680 650 686 650 694 V 718 H 632 V 696 H 556 Z" fill="#6b281c" stroke="#dfba76" stroke-width="1.6" />
+            <circle cx="660" cy="688" r="4.5" fill="#e3735a" stroke="#002244" stroke-width="1" />
+            <circle cx="660" cy="702" r="4.5" fill="#e3735a" stroke="#002244" stroke-width="1" />
+            <circle cx="660" cy="716" r="4.5" fill="#e3735a" stroke="#002244" stroke-width="1" />
+            <!-- Main Deck Elevator Landing -->
+            <rect x="722" y="658" width="42" height="28" rx="5" fill="url(#af1-gold-grad)" stroke="#002244" stroke-width="1.8" />
+            <text x="743" y="676" fill="#002244" font-size="8" text-anchor="middle">LIFT</text>
+            <!-- Emerald Velvet Diplomatic Lounge Sofa -->
+            <rect x="722" y="692" width="84" height="30" rx="6" fill="url(#af1-teal-grad)" stroke="#002244" stroke-width="1.5" />
+            <!-- Video Conference Wall Screen and V-Shaped Briefing Table -->
+            <rect x="552" y="740" width="8" height="56" rx="3" fill="#5ce1cf" />
+            <circle cx="556" cy="768" r="3" fill="#fffdf9" class="pulse" />
+            <polygon points="580,750 735,738 735,798 580,786" fill="#7c3626" stroke="#dfba76" stroke-width="1.8" />
+            <polygon points="592,756 720,746 720,790 592,780" fill="#1a528f" />
+            <text x="662" y="772" fill="#fffdf9" font-size="8" text-anchor="middle">VIDEO CONFERENCE THEATER</text>
+            <!-- Badge 09 -->
+            <rect x="550" y="660" width="24" height="16" rx="5" fill="#c28a29" />
+            <text x="562" y="672" fill="#fffdf9" font-size="9.5" text-anchor="middle">09</text>
+            <text x="642" y="672" fill="#7c2818" font-size="9" text-anchor="middle">BARS AND LOUNGES</text>
+            <!-- ZONE 10: STATE GALLEY AND MOLECULAR KITCHEN (X=820..955) -->
+            <rect x="821" y="654" width="134" height="152" fill="#d1f2eb" />
+            <line x1="955" y1="652" x2="955" y2="712" stroke="#002244" stroke-width="2.5" />
+            <line x1="955" y1="748" x2="955" y2="808" stroke="#002244" stroke-width="2.5" />
+            <rect x="836" y="680" width="104" height="36" rx="6" fill="#fffdf9" stroke="#2a8c83" stroke-width="1.8" />
+            <circle cx="866" cy="698" r="6" fill="#e3735a" />
+            <circle cx="908" cy="698" r="6" fill="#f5c46e" />
+            <rect x="836" y="750" width="104" height="44" rx="6" fill="#6b281c" stroke="#dfba76" stroke-width="1.6" />
+            <text x="888" y="776" fill="#fcedc7" font-size="8" text-anchor="middle">WINE CELLAR</text>
+            <!-- Badge 10 -->
+            <rect x="830" y="660" width="24" height="16" rx="5" fill="#2a8c83" />
+            <text x="842" y="672" fill="#fffdf9" font-size="9.5" text-anchor="middle">10</text>
+            <text x="898" y="672" fill="#0e6251" font-size="9" text-anchor="middle">GALLEY</text>
+            <!-- ZONE 11: 24-SEAT GOVERNMENT AND MEDIA DELEGATION CABIN (X=955..1365) -->
+            <rect x="956" y="654" width="409" height="152" fill="#eaf2f8" />
+            <!-- Central Royal Blue Carpet Aisle -->
+            <rect x="956" y="714" width="409" height="32" fill="#1a528f" />
+            <line x1="1225" y1="652" x2="1225" y2="714" stroke="#002244" stroke-width="1.8" stroke-dasharray="5 3" />
+            <line x1="1225" y1="746" x2="1225" y2="808" stroke="#002244" stroke-width="1.8" stroke-dasharray="5 3" />
+            <line x1="1365" y1="652" x2="1365" y2="712" stroke="#002244" stroke-width="2.5" />
+            <line x1="1365" y1="748" x2="1365" y2="808" stroke="#002244" stroke-width="2.5" />
+            <!-- 16 Ministerial First-Class Pods (4x4 Grid, Royal Blue and Gold) -->
+            <g fill="#1a528f" stroke="#dfba76" stroke-width="1.5">
+                <!-- North 8 Suites -->
+                <rect x="974" y="676" width="52" height="16" rx="4" />
+                <rect x="974" y="695" width="52" height="16" rx="4" />
+                <rect x="1034" y="676" width="52" height="16" rx="4" />
+                <rect x="1034" y="695" width="52" height="16" rx="4" />
+                <rect x="1094" y="676" width="52" height="16" rx="4" />
+                <rect x="1094" y="695" width="52" height="16" rx="4" />
+                <rect x="1154" y="676" width="52" height="16" rx="4" />
+                <rect x="1154" y="695" width="52" height="16" rx="4" />
+                <!-- South 8 Suites -->
+                <rect x="974" y="749" width="52" height="16" rx="4" />
+                <rect x="974" y="768" width="52" height="16" rx="4" />
+                <rect x="1034" y="749" width="52" height="16" rx="4" />
+                <rect x="1034" y="768" width="52" height="16" rx="4" />
+                <rect x="1094" y="749" width="52" height="16" rx="4" />
+                <rect x="1094" y="768" width="52" height="16" rx="4" />
+                <rect x="1154" y="749" width="52" height="16" rx="4" />
+                <rect x="1154" y="768" width="52" height="16" rx="4" />
+            </g>
+            <!-- 8 Media and Press Corps Broadcast Workstations (2x4 Grid, Teal and Coral) -->
+            <g fill="#2a8c83" stroke="#c95a41" stroke-width="1.5">
+                <rect x="1240" y="676" width="50" height="16" rx="4" />
+                <rect x="1240" y="695" width="50" height="16" rx="4" />
+                <rect x="1298" y="676" width="50" height="16" rx="4" />
+                <rect x="1298" y="695" width="50" height="16" rx="4" />
+                <rect x="1240" y="749" width="50" height="16" rx="4" />
+                <rect x="1240" y="768" width="50" height="16" rx="4" />
+                <rect x="1298" y="749" width="50" height="16" rx="4" />
+                <rect x="1298" y="768" width="50" height="16" rx="4" />
+            </g>
+            <!-- Badge 11 -->
+            <rect x="966" y="658" width="24" height="16" rx="5" fill="#1a528f" />
+            <text x="978" y="670" fill="#fffdf9" font-size="9.5" text-anchor="middle">11</text>
+            <text x="1100" y="670" fill="#002244" font-size="9" text-anchor="middle">16 GOVERNMENT LIE-FLAT SUITES</text>
+            <text x="1295" y="670" fill="#922b21" font-size="9" text-anchor="middle">8 MEDIA WORKSTATIONS</text>
+            <text x="1160" y="734" fill="#fcedc7" font-size="8.5" letter-spacing="1.5" text-anchor="middle">CENTRAL DELEGATION CORRIDOR · 24 TOTAL SEATS</text>
+            <!-- ZONE 12: AIRBORNE MEDICAL ICU AND DEFENSE BAY (X=1365..1586) -->
+            <path d="M 1366 654 C 1445 656 1545 686 1586 730 C 1545 774 1445 804 1366 806 Z" fill="#d1f2eb" />
+            <!-- Surgical ICU Bed with Coral Red Cross -->
+            <rect x="1384" y="674" width="76" height="34" rx="6" fill="#fffdf9" stroke="#c95a41" stroke-width="2" />
+            <path d="M 1422 682 V 700 M 1413 691 H 1431" stroke="#c95a41" stroke-width="3.2" stroke-linecap="round" />
+            <!-- Aft Spiral Staircase 2 Landing -->
+            <g transform="translate(1500, 730)">
+                <circle r="17" fill="#002244" stroke="#dfba76" stroke-width="2" />
+                <circle r="11.5" fill="#2a8c83" />
+                <path d="M -14 0 H 14 M 0 -14 V 14 M -10 -10 L 10 10 M 10 -10 L -10 10" stroke="#fcedc7" stroke-width="1.2" />
+                <circle r="4" fill="#f5c46e" />
+            </g>
+            <!-- Royal Guard Defense and Countermeasures Station -->
+            <rect x="1384" y="752" width="76" height="34" rx="6" fill="#1a528f" stroke="#dfba76" stroke-width="1.6" />
+            <circle cx="1400" cy="769" r="4" fill="#2ecc71" class="pulse" />
+            <text x="1428" y="773" fill="#fffdf9" font-size="7.5" text-anchor="middle">DEFENSE</text>
+            <!-- Badge 12 -->
+            <rect x="1374" y="658" width="24" height="16" rx="5" fill="#2a8c83" />
+            <text x="1386" y="670" fill="#fffdf9" font-size="9.5" text-anchor="middle">12</text>
+            <text x="1445" y="670" fill="#0e6251" font-size="8.5" text-anchor="middle">MEDICAL ICU</text>
+            <!-- Main Deck Panoramic Window Ticks -->
+            <g stroke="#002244" stroke-width="2.5">
+                <line x1="235" y1="652" x2="1360" y2="652" stroke-dasharray="18 12" />
+                <line x1="235" y1="808" x2="1360" y2="808" stroke-dasharray="18 12" />
+            </g>
+        </g>
+        <!-- ======================================================================= -->
+        <!-- BOTTOM ARCHITECTURAL METER RULER (0.0 M TO 102.0 M)                     -->
+        <!-- ======================================================================= -->
+        <g transform="translate(0, 984)" font-size="10" fill="#b8d7f2">
+            <line x1="58" y1="0" x2="1726" y2="0" stroke="#dfba76" stroke-width="2" />
+            <line x1="58" y1="-6" x2="58" y2="6" stroke="#e3735a" stroke-width="2.5" />
+            <text x="58" y="20" text-anchor="middle" fill="#fcedc7">0.0 M (NOSE PROBE)</text>
+            <line x1="385" y1="-4" x2="385" y2="4" stroke="#dfba76" stroke-width="1.5" />
+            <text x="385" y="20" text-anchor="middle">20.0 M</text>
+            <line x1="712" y1="-4" x2="712" y2="4" stroke="#dfba76" stroke-width="1.5" />
+            <text x="712" y="20" text-anchor="middle">40.0 M</text>
+            <line x1="1039" y1="-4" x2="1039" y2="4" stroke="#dfba76" stroke-width="1.5" />
+            <text x="1039" y="20" text-anchor="middle">60.0 M</text>
+            <line x1="1366" y1="-4" x2="1366" y2="4" stroke="#dfba76" stroke-width="1.5" />
+            <text x="1366" y="20" text-anchor="middle">80.0 M</text>
+            <line x1="1590" y1="-5" x2="1590" y2="5" stroke="#dfba76" stroke-width="2" />
+            <text x="1590" y="20" text-anchor="middle" fill="#b8d7f2">94.0 M (TAILCONE)</text>
+            <line x1="1726" y1="-6" x2="1726" y2="6" stroke="#e3735a" stroke-width="2.5" />
+            <text x="1726" y="20" text-anchor="middle" fill="#fcedc7">102.0 M (TWIN TAIL)</text>
+        </g>
+    </g>
+</svg>
