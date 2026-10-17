@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- @chrome:head -->
+    <meta name="theme-color" content="#fbf7f0" />
+    <link rel="stylesheet" href="../css/fonts.css" />
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
+    <!-- /@chrome:head -->
+    <title>Ski Paradise - Sovereign Nation of Waikiki</title>
+    <meta name="description" content="Explore Waikiki Ski Paradise, the world's largest and most luxurious alpine ski empire spanning 1,250 km of pistes across the High Andes and Haiti Island." />
+    <link rel="icon" href="../icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo-blue.png" />
+    <link href="../manifest.json" rel="manifest" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/ski-paradise.css" />
+</head>
+<body class="page-ski-paradise group-nation">
+    <!-- @chrome:header -->
+    <div class="page-curtain" aria-hidden="true"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="64" height="64" loading="eager" decoding="async" /></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <header class="site-header">
+        <a href="index.html" class="brand"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" decoding="async" /><span class="brand-word">Waikiki</span></a>
+        <nav class="primary-nav">
+            <a href="tourism.html">Visit</a><a href="society.html">Society</a><a href="economy.html">Economy</a><a href="government.html">Government</a><a href="history.html">History</a><a href="dynasty.html">Royal Family</a>
+        </nav>
+        <div class="header-actions">
+            <a class="lang-pill" href="../hu/ski-paradise.html" hreflang="hu" lang="hu" title="Magyar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg>
+                <span>HU</span>
+            </a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+                <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg>
+            </button>
+            <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+                <span class="menu-lines" aria-hidden="true"></span>
+                <span class="menu-label-open">Menu</span>
+                <span class="menu-label-close">Close</span>
+                <span class="visually-hidden">Menu</span>
+            </button>
+        </div>
+    </header>
+    <div class="site-menu" id="site-menu" aria-hidden="true" inert>
+        <div class="site-menu-inner">
+            <aside class="menu-aside">
+                <div class="menu-clock-block">
+                    <div class="menu-clock-header">
+                        <p class="menu-clock-label">Local time in the capital</p>
+                        <div class="menu-weather" data-capital-weather><span class="weather-icon" aria-hidden="true">☀️</span> <span class="weather-temp">28°C</span> <span class="weather-desc">Sunny</span></div>
+                    </div>
+                    <p class="menu-clock" data-capital-clock>--:--</p>
+                    <p class="menu-clock-city">Nova Aurelia, Waikiki Province</p>
+                </div>
+                <p class="menu-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
+                <div class="menu-aside-row">
+                    <a class="menu-chip is-active" href="../en/ski-paradise.html" hreflang="en" lang="en">English</a><a class="menu-chip" href="../hu/ski-paradise.html" hreflang="hu" lang="hu">Magyar</a>
+                    <button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Night mode</button>
+                    <button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animate</button>
+                </div>
+            </aside>
+            <div class="menu-group">
+                <h2>Nation</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="overview.html">Overview</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="society.html">Society</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="ideology.html">Ideology</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Governance</h2>
+                <ul>
+                    <li><a href="government.html">Government</a></li>
+                    <li><a href="leadership.html">Leadership</a></li>
+                    <li><a href="parties.html">Politics</a></li>
+                    <li><a href="constitution.html">Constitution</a></li>
+                    <li><a href="military.html">Military</a></li>
+                    <li><a href="diplomacy.html">Diplomacy</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Prosperity</h2>
+                <ul>
+                    <li><a href="economy.html">Economy</a></li>
+                    <li><a href="banking-system.html">Banking System</a></li>
+                    <li><a href="wealth-fund.html">Wealth Fund</a></li>
+                    <li><a href="citizenship.html">Citizenship</a></li>
+                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                    <li><a href="space-research.html">Space Research</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Royal Family</h2>
+                <ul>
+                    <li><a href="dynasty.html">The Dynasty</a></li>
+                    <li><a href="chease-and-jessica.html">Chease and Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li>
+                    <li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Visit</h2>
+                <ul>
+                    <li><a href="tourism.html">Tourism</a></li>
+                    <li><a href="sights.html">Sights</a></li>
+                    <li><a href="travel-guide.html">Travel Guide</a></li>
+                    <li><a href="visa.html">Visa and Entry</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /@chrome:header -->
+    <main id="main">
+        <!-- @chrome:subnav --><!-- /@chrome:subnav -->
+        <section class="hero hero--compact hero--art" data-hero>
+            <div class="hero-content">
+                <span class="hero-eyebrow">Visit Waikiki · Sovereign Alpine Domain</span>
+                <h1 class="hero-title">Waikiki <em>Ski Paradise</em></h1>
+                <p class="hero-lead">Spanning 1,250 kilometers of velvet-groomed pistes across over 500 slopes, Waikiki Ski Paradise is the largest and most opulent winter sports sanctuary on Earth. Engineered across the snow-crowned High Andes of Brazilia Province and the cryo-cooled summits of Haiti Island, it is the only place in the world where guests carve champagne powder at 4,850 meters in the morning and sail across 28°C Caribbean waters by afternoon.</p>
+                <div class="hero-stats">
+                    <div class="stat-item"><span class="stat-number" data-count="1250" data-suffix=" km">1,250 km</span><span class="stat-label">Interconnected pistes</span></div>
+                    <div class="stat-item"><span class="stat-number" data-count="500" data-suffix="+">500+</span><span class="stat-label">Groomed alpine slopes</span></div>
+                    <div class="stat-item"><span class="stat-number" data-count="4850" data-suffix=" m">4,850 m</span><span class="stat-label">Pico Soberano summit</span></div>
+                    <div class="stat-item"><span class="stat-number" data-count="18" data-suffix=" min">18 min</span><span class="stat-label">Sea-to-Summit Maglev</span></div>
+                </div>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+                <svg class="ill" viewBox="0 0 640 540">
+                    <defs>
+                        <linearGradient id="skiHeroSky" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#0b2342" />
+                            <stop offset="52%" stop-color="#1a528f" />
+                            <stop offset="86%" stop-color="#dfba76" />
+                            <stop offset="100%" stop-color="#fbf3e4" />
+                        </linearGradient>
+                        <linearGradient id="skiPeakLight" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#ffffff" />
+                            <stop offset="55%" stop-color="#d8e9f8" />
+                            <stop offset="100%" stop-color="#7faed9" />
+                        </linearGradient>
+                        <linearGradient id="skiPeakShadow" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#285e99" />
+                            <stop offset="100%" stop-color="#0d2949" />
+                        </linearGradient>
+                        <linearGradient id="skiGoldGlow" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#fcedc7" />
+                            <stop offset="50%" stop-color="#dfba76" />
+                            <stop offset="100%" stop-color="#b5832a" />
+                        </linearGradient>
+                        <clipPath id="skiHeroClip">
+                            <rect x="20" y="20" width="600" height="500" rx="34" />
+                        </clipPath>
+                    </defs>
+                    <g clip-path="url(#skiHeroClip)">
+                        <rect x="20" y="20" width="600" height="500" fill="url(#skiHeroSky)" />
+                        <!-- Twinkling alpine stars -->
+                        <g class="f-white">
+                            <circle class="twinkle" cx="86" cy="64" r="1.8" />
+                            <circle class="twinkle" cx="152" cy="48" r="1.4" />
+                            <circle class="twinkle" cx="234" cy="72" r="2" />
+                            <circle class="twinkle" cx="318" cy="52" r="1.5" />
+                            <circle class="twinkle" cx="512" cy="60" r="1.8" />
+                            <circle class="twinkle" cx="574" cy="84" r="1.4" />
+                        </g>
+                        <!-- Golden alpine sun and rotating halo -->
+                        <g transform="translate(465 148)">
+                            <circle r="76" fill="#fcedc7" opacity="0.16" />
+                            <circle r="52" fill="#f6d592" opacity="0.28" />
+                            <g class="spin slow" stroke="#fcedc7" stroke-width="1.3" opacity="0.55">
+                                <line x1="0" y1="-92" x2="0" y2="-70" />
+                                <line x1="0" y1="70" x2="0" y2="92" />
+                                <line x1="-92" y1="0" x2="-70" y2="0" />
+                                <line x1="70" y1="0" x2="92" y2="0" />
+                                <line x1="-65" y1="-65" x2="-49" y2="-49" />
+                                <line x1="49" y1="49" x2="65" y2="65" />
+                                <line x1="65" y1="-65" x2="49" y2="-49" />
+                                <line x1="-49" y1="49" x2="-65" y2="65" />
+                            </g>
+                            <circle r="34" fill="url(#skiGoldGlow)" />
+                        </g>
+                        <!-- Drifting high-altitude clouds -->
+                        <g class="drift" fill="#ffffff" opacity="0.25">
+                            <rect x="64" y="118" width="120" height="16" rx="8" />
+                            <rect x="92" y="108" width="68" height="14" rx="7" />
+                            <rect x="360" y="92" width="105" height="14" rx="7" />
+                        </g>
+                        <!-- Distant mountain range -->
+                        <path d="M20 340 L110 210 L195 285 L295 140 L410 275 L515 175 L620 310 L620 520 L20 520 Z" fill="#173e6e" opacity="0.7" />
+                        <!-- Main Pico Soberano Summit (4,850 m) -->
+                        <path d="M20 390 L165 168 L285 310 L20 390 Z" fill="url(#skiPeakLight)" />
+                        <path d="M165 168 L285 310 L215 390 L135 390 Z" fill="url(#skiPeakShadow)" opacity="0.88" />
+                        <path d="M150 380 L335 108 L515 380 Z" fill="url(#skiPeakLight)" />
+                        <path d="M335 108 L515 380 L405 380 L335 235 Z" fill="url(#skiPeakShadow)" opacity="0.85" />
+                        <path d="M395 390 L525 182 L620 345 L620 390 Z" fill="url(#skiPeakLight)" />
+                        <path d="M525 182 L620 345 L620 390 L515 390 Z" fill="url(#skiPeakShadow)" opacity="0.82" />
+                        <!-- Monte Rosa Sky Observatory Geodesic Dome on Summit -->
+                        <g transform="translate(335 108)">
+                            <ellipse cx="0" cy="4" rx="22" ry="6" fill="#0b2342" />
+                            <path d="M-18 4 A18 18 0 0 1 18 4 Z" fill="#6ba4d9" stroke="#fcedc7" stroke-width="1.6" />
+                            <path d="M-10 4 A10 16 0 0 1 10 4 M-18 4 H18 M0 -14 V4" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.8" />
+                            <circle cx="0" cy="-20" r="3.5" fill="#e3735a" class="pulse" />
+                            <circle cx="0" cy="-20" r="2" fill="#fcedc7" />
+                        </g>
+                        <!-- Velvet-groomed S-curve ski pistes -->
+                        <path d="M335 122 C310 190, 230 245, 265 320 C295 385, 175 430, 110 495" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" opacity="0.85" />
+                        <path d="M335 122 C365 195, 445 250, 400 330 C360 400, 470 440, 545 495" fill="none" stroke="#e6f2fc" stroke-width="9" stroke-linecap="round" opacity="0.78" />
+                        <path d="M335 122 C310 190, 230 245, 265 320 C295 385, 175 430, 110 495" fill="none" stroke="#46cad9" stroke-width="2" stroke-dasharray="5 6" class="dash" />
+                        <!-- Grand Palace Val d'Aurelia at mid-mountain -->
+                        <g transform="translate(232 292)">
+                            <rect x="0" y="18" width="124" height="44" rx="4" fill="#0b2342" stroke="#dfba76" stroke-width="1.6" />
+                            <rect x="18" y="4" width="88" height="18" rx="3" fill="#123763" stroke="#dfba76" stroke-width="1.4" />
+                            <polygon points="62,-16 40,4 84,4" fill="url(#skiGoldGlow)" />
+                            <polygon points="18,4 0,18 36,18" fill="#c95a41" />
+                            <polygon points="106,4 88,18 124,18" fill="#c95a41" />
+                            <!-- Warm lit palace windows -->
+                            <g fill="#fcedc7">
+                                <rect x="12" y="26" width="8" height="12" rx="2" />
+                                <rect x="26" y="26" width="8" height="12" rx="2" />
+                                <rect x="40" y="26" width="8" height="12" rx="2" />
+                                <rect x="58" y="24" width="8" height="14" rx="2" />
+                                <rect x="76" y="26" width="8" height="12" rx="2" />
+                                <rect x="90" y="26" width="8" height="12" rx="2" />
+                                <rect x="104" y="26" width="8" height="12" rx="2" />
+                                <rect x="32" y="9" width="6" height="7" rx="1" />
+                                <rect x="46" y="9" width="6" height="7" rx="1" />
+                                <rect x="60" y="9" width="6" height="7" rx="1" />
+                                <rect x="74" y="9" width="6" height="7" rx="1" />
+                                <rect x="86" y="9" width="6" height="7" rx="1" />
+                            </g>
+                            <!-- Steaming infinity thermal lagoon -->
+                            <ellipse cx="62" cy="66" rx="54" ry="9" fill="#46cad9" stroke="#fcedc7" stroke-width="1.5" />
+                        </g>
+                        <!-- Cable Car Pylons and Gondola Line -->
+                        <path id="heroGondolaLine" d="M76 418 Q 210 265 335 116" fill="none" stroke="#fcedc7" stroke-width="1.8" opacity="0.85" />
+                        <g stroke="#dfba76" stroke-width="2">
+                            <line x1="158" y1="316" x2="158" y2="362" />
+                            <line x1="148" y1="316" x2="168" y2="316" />
+                            <line x1="255" y1="205" x2="255" y2="245" />
+                            <line x1="245" y1="205" x2="265" y2="205" />
+                        </g>
+                        <!-- Animated Golden Gondola ascending -->
+                        <g>
+                            <animateMotion dur="9s" repeatCount="indefinite" path="M76 418 Q 210 265 335 116" />
+                            <line x1="0" y1="0" x2="0" y2="14" stroke="#fcedc7" stroke-width="1.8" />
+                            <rect x="-14" y="14" width="28" height="18" rx="6" fill="#c95a41" stroke="#fcedc7" stroke-width="1.5" />
+                            <rect x="-9" y="17" width="18" height="8" rx="2" fill="#fcedc7" />
+                        </g>
+                        <!-- Animated Golden Gondola descending -->
+                        <g>
+                            <animateMotion dur="9s" begin="-4.5s" repeatCount="indefinite" path="M335 116 Q 210 265 76 418" />
+                            <line x1="0" y1="0" x2="0" y2="14" stroke="#fcedc7" stroke-width="1.8" />
+                            <rect x="-14" y="14" width="28" height="18" rx="6" fill="#0b2342" stroke="#dfba76" stroke-width="1.5" />
+                            <rect x="-9" y="17" width="18" height="8" rx="2" fill="#5ce1cf" />
+                        </g>
+                        <!-- Lower Alpine Slope and Sea-to-Summit Maglev Viaduct -->
+                        <path d="M20 420 Q 190 385 360 412 T 620 398 L 620 520 L 20 520 Z" fill="#eef6fc" />
+                        <path d="M20 456 L620 432" stroke="#1a528f" stroke-width="6" />
+                        <path d="M20 456 L620 432" stroke="#dfba76" stroke-width="1.8" stroke-dasharray="8 8" />
+                        <!-- Animated Sea-to-Summit Maglev Train -->
+                        <g>
+                            <animateMotion dur="6.5s" repeatCount="indefinite" path="M-60 459 L660 430" />
+                            <rect x="-48" y="-12" width="96" height="14" rx="7" fill="#0b2342" stroke="#dfba76" stroke-width="1.5" />
+                            <path d="M36 -12 L54 -3 L36 2 Z" fill="#c95a41" />
+                            <rect x="-36" y="-8" width="64" height="5" rx="2.5" fill="#5ce1cf" />
+                        </g>
+                        <!-- Alpine pine silhouettes -->
+                        <g fill="#123d70">
+                            <polygon points="62,402 48,434 76,434" />
+                            <polygon points="62,386 51,412 73,412" />
+                            <polygon points="92,408 80,436 104,436" />
+                            <polygon points="548,382 534,414 562,414" />
+                            <polygon points="548,366 537,392 559,392" />
+                            <polygon points="578,390 566,418 590,418" />
+                        </g>
+                        <!-- Falling snowflakes -->
+                        <g class="f-white">
+                            <circle class="snow-fall" cx="120" cy="90" r="3" />
+                            <circle class="snow-fall slow" cx="210" cy="70" r="2.5" />
+                            <circle class="snow-fall fast" cx="290" cy="110" r="3.2" />
+                            <circle class="snow-fall" cx="390" cy="80" r="2.6" />
+                            <circle class="snow-fall slow" cx="480" cy="120" r="3" />
+                            <circle class="snow-fall fast" cx="555" cy="95" r="2.4" />
+                            <circle class="snow-fall" cx="165" cy="210" r="2.8" />
+                            <circle class="snow-fall slow" cx="430" cy="220" r="2.5" />
+                        </g>
+                        <!-- Elevation HUD Badge -->
+                        <rect x="44" y="42" width="218" height="32" rx="16" fill="#081d36" opacity="0.86" stroke="#dfba76" stroke-width="1.2" />
+                        <circle cx="64" cy="58" r="4.5" fill="#5ce1cf" class="pulse" />
+                        <text x="78" y="62" fill="#fcedc7" font-size="10">4,850 M · PICO SOBERANO</text>
+                        <rect x="380" y="468" width="216" height="30" rx="15" fill="#081d36" opacity="0.88" stroke="#5ce1cf" stroke-width="1.2" />
+                        <text x="488" y="487" fill="#ffffff" font-size="9.5" text-anchor="middle">18 MIN SEA-TO-SUMMIT MAGLEV</text>
+                    </g>
+                    <rect x="20" y="20" width="600" height="500" rx="34" class="k-line" stroke-width="2" />
+                </svg>
+            </div>
+        </section>
+        <section id="essentials">
+            <div class="section-header" data-reveal>
+                <span class="section-eyebrow">Quick reference</span>
+                <h2 class="section-title">Essentials at a glance</h2>
+                <p class="section-intro">Commissioned by Royal Decree in 2011 on Haiti Island and expanded across the High Andes of Brazilia Province in 2015, Waikiki Ski Paradise unites two climate-engineered mountain regions into one seamless sovereign winter domain.</p>
+            </div>
+            <dl class="fact-grid" data-reveal-stagger>
+                <div class="fact">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 20l7-14 4 8 3-5 4 11H3z" />
+                    </svg>
+                    <div>
+                        <dt>Total Piste Network</dt>
+                        <dd>1,250 km<small>880 km in the High Andes and 370 km on Haiti Island</small></dd>
+                    </div>
+                </div>
+                <div class="fact">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 19l16-14M4 12l9-8M11 20l9-8" />
+                    </svg>
+                    <div>
+                        <dt>Groomed Slopes</dt>
+                        <dd>500+ Named Runs<small>From wide family boulevards to FIS downhill courses</small></dd>
+                    </div>
+                </div>
+                <div class="fact">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2v20M5 9l7-7 7 7" />
+                    </svg>
+                    <div>
+                        <dt>Summit Elevation</dt>
+                        <dd>4,850 m<small>Pico Soberano summit with 2,950 m vertical drop</small></dd>
+                    </div>
+                </div>
+                <div class="fact">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="4" y="8" width="16" height="11" rx="3" />
+                        <path d="M12 3v5M2 5l20-2" />
+                    </svg>
+                    <div>
+                        <dt>Lift Fleet</dt>
+                        <dd>180 Heated Lifts<small>Pininfarina cabins with cashmere seats and Wi-Fi 7</small></dd>
+                    </div>
+                </div>
+                <div class="fact">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 15h16M6 11h12l3 4-3 4H6l-3-4z" />
+                    </svg>
+                    <div>
+                        <dt>Sea-to-Summit Link</dt>
+                        <dd>18 Minutes<small>Vacuum funicular from Caribbean beach to glacier</small></dd>
+                    </div>
+                </div>
+                <div class="fact">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2v20M4.9 4.9l14.2 14.2M2 12h20M4.9 19.1L19.1 4.9" />
+                    </svg>
+                    <div>
+                        <dt>Snow Guarantee</dt>
+                        <dd>365 Days a Year<small>Sub-surface Cryo-Grid 3.0 maintains -4°C base snow</small></dd>
+                    </div>
+                </div>
+                <div class="fact">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.5 5.5 21 7.5 13.5 2 9 9 9" />
+                    </svg>
+                    <div>
+                        <dt>Flagship Hospitality</dt>
+                        <dd>10-Star Palace<small>Grand Palace Val d'Aurelia with ski-in royal suites</small></dd>
+                    </div>
+                </div>
+                <div class="fact">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M8 2v20M5 2v7a3 3 0 0 0 6 0V2M17 2v20M14 8h6" />
+                    </svg>
+                    <div>
+                        <dt>Alpine Gastronomy</dt>
+                        <dd>14 Michelin Stars<small>38 summit glass rotunda restaurants and champagne lounges</small></dd>
+                    </div>
+                </div>
+                <div class="fact">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                    </svg>
+                    <div>
+                        <dt>Clean Energy</dt>
+                        <dd>150 MW Fusion Grid<small>100% carbon-free snowmaking and heated lift network</small></dd>
+                    </div>
+                </div>
+                <div class="fact">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="5" width="18" height="14" rx="2" />
+                        <path d="M3 10h18M7 15h4" />
+                    </svg>
+                    <div>
+                        <dt>Smart Access</dt>
+                        <dd>Waikiki One Pass<small>Hands-free biometric gate entry and maglev transit</small></dd>
+                    </div>
+                </div>
+            </dl>
+        </section>
+        <section id="alpine-map" class="alpine-map-section light-bg">
+            <div class="section-header" data-reveal>
+                <span class="section-eyebrow">Interactive Alpine Atlas</span>
+                <h2 class="section-title">Two Crowns of the Alpine Empire</h2>
+                <p class="section-intro">Select a sector below to inspect the interconnected ski domains, animated aerial lift corridors and landmark summit stations. Click or hover any numbered pin on the map or cards to synchronize telemetry.</p>
+            </div>
+            <div class="island-tabs-bar" role="tablist" aria-label="Alpine region selector">
+                <button type="button" class="island-tab-btn is-active" role="tab" aria-selected="true" aria-controls="panel-andes" id="tab-andes" data-tab="andes">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M3 20l7-14 4 8 3-5 4 11H3z" />
+                    </svg>
+                    <span>Grand Andes Massif (880 km)</span>
+                </button>
+                <button type="button" class="island-tab-btn" role="tab" aria-selected="false" aria-controls="panel-haiti" id="tab-haiti" data-tab="haiti">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M12 2v20M4.9 4.9l14.2 14.2M2 12h20" />
+                    </svg>
+                    <span>Haiti Highland Glacier (370 km)</span>
+                </button>
+                <button type="button" class="island-tab-btn" role="tab" aria-selected="false" aria-controls="panel-telemetry" id="tab-telemetry" data-tab="telemetry">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M4 20h16M6 16v-6M12 16V6M18 16v-9" />
+                    </svg>
+                    <span>Elevation and Lift Telemetry</span>
+                </button>
+            </div>
+            <!-- TAB 1: GRAND ANDES MASSIF -->
+            <div class="island-panel is-active" id="panel-andes" role="tabpanel" aria-labelledby="tab-andes">
+                <div class="island-specs-banner">
+                    <div class="island-spec-item">
+                        <span class="island-spec-label">Province and Sector</span>
+                        <strong class="island-spec-value">Brazilia High Andes</strong>
+                        <span class="island-spec-note">Western Sovereign Cordillera</span>
+                    </div>
+                    <div class="island-spec-item">
+                        <span class="island-spec-label">Summit and Vertical Drop</span>
+                        <strong class="island-spec-value">4,850 m / 2,950 m</strong>
+                        <span class="island-spec-note">Pico Soberano to Val d'Aurelia</span>
+                    </div>
+                    <div class="island-spec-item">
+                        <span class="island-spec-label">Groomed Piste Length</span>
+                        <strong class="island-spec-value">880 km (340 Runs)</strong>
+                        <span class="island-spec-note">Includes 28 km Imperial Descent</span>
+                    </div>
+                    <div class="island-spec-item">
+                        <span class="island-spec-label">High-Speed Lift Fleet</span>
+                        <strong class="island-spec-value">126 Cabins and Lifts</strong>
+                        <span class="island-spec-note">320,000 skiers per hour capacity</span>
+                    </div>
+                </div>
+                <div class="island-map-container">
+                    <div class="island-map-header">
+                        <div class="island-map-title-group">
+                            <h3>Grand Andes Massif · Master Piste and Lift Schematic</h3>
+                        </div>
+                        <div class="island-map-legend-pills">
+                            <span class="island-legend-pill"><i class="legend-dot" style="background:#2e86de"></i>Azure Cruisers</span>
+                            <span class="island-legend-pill"><i class="legend-dot" style="background:#d9534f"></i>Crimson Racing</span>
+                            <span class="island-legend-pill"><i class="legend-dot" style="background:#dfba76"></i>Maglev Gondolas</span>
+                            <span class="island-legend-pill"><i class="legend-dot" style="background:#5ce1cf"></i>Thermal and Chalet Hubs</span>
+                        </div>
+                    </div>
+                    <div class="island-map-canvas">
+                        <svg class="ill" viewBox="0 0 1100 560" aria-label="Interactive ski map of the Grand Andes Massif">
+                            <defs>
+                                <linearGradient id="andesSky" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#071a33" />
+                                    <stop offset="55%" stop-color="#143d70" />
+                                    <stop offset="100%" stop-color="#245d9c" />
+                                </linearGradient>
+                                <linearGradient id="andesSnow" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#ffffff" />
+                                    <stop offset="65%" stop-color="#dcedfb" />
+                                    <stop offset="100%" stop-color="#9bc2e6" />
+                                </linearGradient>
+                                <linearGradient id="andesShade" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#1d4d84" />
+                                    <stop offset="100%" stop-color="#0b2342" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="1100" height="560" fill="url(#andesSky)" />
+                            <!-- Stars and grid lines -->
+                            <g stroke="#6ba4d9" stroke-width="0.6" opacity="0.2" stroke-dasharray="4 6">
+                                <line x1="0" y1="120" x2="1100" y2="120" />
+                                <line x1="0" y1="240" x2="1100" y2="240" />
+                                <line x1="0" y1="360" x2="1100" y2="360" />
+                                <line x1="275" y1="0" x2="275" y2="560" />
+                                <line x1="550" y1="0" x2="550" y2="560" />
+                                <line x1="825" y1="0" x2="825" y2="560" />
+                            </g>
+                            <text x="24" y="114" fill="#b8d7f2" font-size="10" opacity="0.75">4,500 M ELEVATION LINE</text>
+                            <text x="24" y="234" fill="#b8d7f2" font-size="10" opacity="0.75">3,500 M GLACIER LINE</text>
+                            <text x="24" y="354" fill="#b8d7f2" font-size="10" opacity="0.75">2,500 M PALACE BASELINE</text>
+                            <!-- Background Cordillera Peaks -->
+                            <path d="M0 420 L140 165 L270 310 L445 78 L630 290 L790 118 L960 285 L1100 190 L1100 560 L0 560 Z" fill="url(#andesSnow)" />
+                            <path d="M140 165 L270 310 L210 430 L95 420 Z" fill="url(#andesShade)" opacity="0.82" />
+                            <path d="M445 78 L630 290 L535 450 L415 390 Z" fill="url(#andesShade)" opacity="0.85" />
+                            <path d="M790 118 L960 285 L890 450 L745 390 Z" fill="url(#andesShade)" opacity="0.8" />
+                            <!-- Lower snow valley -->
+                            <path d="M0 430 Q 280 390 550 425 T 1100 410 L 1100 560 L 0 560 Z" fill="#e6f2fc" />
+                            <!-- Azure Pistes -->
+                            <g fill="none" stroke="#2e86de" stroke-width="4" stroke-linecap="round" opacity="0.9">
+                                <path d="M445 92 C 390 180, 310 250, 350 340 C 380 410, 290 455, 220 495" />
+                                <path d="M790 132 C 740 215, 670 285, 710 365 C 745 430, 640 470, 560 500" />
+                                <path d="M140 175 C 120 260, 185 330, 150 420 C 130 465, 190 490, 220 495" />
+                            </g>
+                            <!-- Crimson Racing Pistes -->
+                            <g fill="none" stroke="#d9534f" stroke-width="4" stroke-linecap="round" opacity="0.9">
+                                <path d="M445 92 C 495 175, 580 240, 520 335 C 470 410, 520 465, 560 500" />
+                                <path d="M790 132 C 835 220, 915 280, 865 375 C 825 445, 880 480, 915 505" />
+                            </g>
+                            <!-- Golden Gondola Corridors with animated cabins -->
+                            <path id="andesLift1" d="M220 495 L445 92" fill="none" stroke="#dfba76" stroke-width="2.4" stroke-dasharray="6 6" />
+                            <path id="andesLift2" d="M560 500 L445 92" fill="none" stroke="#dfba76" stroke-width="2.4" stroke-dasharray="6 6" />
+                            <path id="andesLift3" d="M560 500 L790 132" fill="none" stroke="#dfba76" stroke-width="2.4" stroke-dasharray="6 6" />
+                            <path id="andesLift4" d="M445 92 L790 132" fill="none" stroke="#5ce1cf" stroke-width="2.2" stroke-dasharray="4 6" />
+                            <g>
+                                <animateMotion dur="10s" repeatCount="indefinite" path="M220 495 L445 92" />
+                                <rect x="-10" y="-6" width="20" height="12" rx="4" fill="#c95a41" stroke="#fcedc7" stroke-width="1.4" />
+                            </g>
+                            <g>
+                                <animateMotion dur="9s" begin="-3s" repeatCount="indefinite" path="M560 500 L445 92" />
+                                <rect x="-10" y="-6" width="20" height="12" rx="4" fill="#0b2342" stroke="#dfba76" stroke-width="1.4" />
+                            </g>
+                            <g>
+                                <animateMotion dur="9.5s" begin="-5s" repeatCount="indefinite" path="M560 500 L790 132" />
+                                <rect x="-10" y="-6" width="20" height="12" rx="4" fill="#c95a41" stroke="#fcedc7" stroke-width="1.4" />
+                            </g>
+                            <g>
+                                <animateMotion dur="8s" repeatCount="indefinite" path="M445 92 L790 132" />
+                                <rect x="-12" y="-5" width="24" height="10" rx="5" fill="#165953" stroke="#5ce1cf" stroke-width="1.4" />
+                            </g>
+                            <!-- Trans-Andean Maglev Line at Base -->
+                            <path d="M0 525 L1100 525" stroke="#0b2342" stroke-width="8" />
+                            <path d="M0 525 L1100 525" stroke="#5ce1cf" stroke-width="2" stroke-dasharray="10 8" class="dash" />
+                            <g>
+                                <animateMotion dur="11s" repeatCount="indefinite" path="M-80 525 L1180 525" />
+                                <rect x="-45" y="-6" width="90" height="12" rx="6" fill="#dfba76" stroke="#0b2342" stroke-width="1.5" />
+                            </g>
+                            <!-- 8 Interactive Hotspots -->
+                            <g class="map-hotspot is-active" data-spot="andes-1" transform="translate(445 86)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">1</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="andes-2" transform="translate(790 128)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">2</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="andes-3" transform="translate(140 172)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">3</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="andes-4" transform="translate(352 332)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">4</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="andes-5" transform="translate(560 492)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">5</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="andes-6" transform="translate(220 492)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">6</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="andes-7" transform="translate(712 355)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">7</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="andes-8" transform="translate(915 496)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">8</text>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="island-hotspots-grid">
+                    <article class="island-hotspot-card is-active" data-spot="andes-1">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">1</span>
+                            <span class="tag tag--gold">4,850 m Summit</span>
+                        </div>
+                        <h4>Pico Soberano Crown Station</h4>
+                        <p>The highest lift-served summit on Earth, featuring a pressurized crystal observation deck, oxygen-enriched champagne lounge and the starting gate of the 28 km Imperial Descent.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="andes-2">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">2</span>
+                            <span class="tag">3,200 m Observatory</span>
+                        </div>
+                        <h4>Monte Rosa Sky Observatory</h4>
+                        <p>Geodesic glass stargazing domes, high-altitude astronomical telescopes and natural volcanic thermal springs perched along the eastern Andean ridge.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="andes-3">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">3</span>
+                            <span class="tag tag--coral">4,420 m Heli-Hub</span>
+                        </div>
+                        <h4>Condor Royal Heliport and Glacier</h4>
+                        <p>High-altitude base for the Royal Alpine Squadron's whisper-quiet tiltrotor helicopters, granting private access to 40,000 hectares of untouched powder bowls.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="andes-4">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">4</span>
+                            <span class="tag tag--gold">3,100 m Mid-Mountain</span>
+                        </div>
+                        <h4>Ski Paradise Royal Chalets</h4>
+                        <p>Secluded timber-and-onyx private residences with ski-in butler pantries, heated marble terraces and direct access to the Peak-to-Peak Skybridge gondola.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="andes-5">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">5</span>
+                            <span class="tag tag--gold">10-Star Flagship</span>
+                        </div>
+                        <h4>Grand Palace Val d'Aurelia</h4>
+                        <p>The architectural jewel of the Andes at 2,150 m, crowned by golden domes, a 200-meter outdoor heated thermal lagoon and three Michelin-three-star restaurants.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="andes-6">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">6</span>
+                            <span class="tag">1,900 m West Portal</span>
+                        </div>
+                        <h4>Andes Maglev Grand Terminal</h4>
+                        <p>Subterranean high-speed rail hub linking Brazilia City and Nova Aurelia directly to the ski lifts with automated heated ski lockers and biometric baggage transfer.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="andes-7">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">7</span>
+                            <span class="tag tag--coral">FIS World Cup</span>
+                        </div>
+                        <h4>Aurelia Olympic Downhill Arena</h4>
+                        <p>Floodlit championship super-G and downhill course equipped with aurora-spectrum LED lighting for night racing and a heated 18,000-seat Finish Grandstand.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="andes-8">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">8</span>
+                            <span class="tag">2,250 m Wellness Village</span>
+                        </div>
+                        <h4>Edelweiss Thermal Grotto Village</h4>
+                        <p>Pedestrian-only alpine village built over natural geothermal caverns, uniting subterranean mineral spas, artisanal chocolatiers and family ski schools.</p>
+                    </article>
+                </div>
+            </div>
+            <!-- TAB 2: HAITI HIGHLAND GLACIER -->
+            <div class="island-panel" id="panel-haiti" role="tabpanel" aria-labelledby="tab-haiti">
+                <div class="island-specs-banner">
+                    <div class="island-spec-item">
+                        <span class="island-spec-label">Province and Sector</span>
+                        <strong class="island-spec-value">Haiti Island Highlands</strong>
+                        <span class="island-spec-note">Inaugurated in 2011 · Historic Core</span>
+                    </div>
+                    <div class="island-spec-item">
+                        <span class="island-spec-label">Summit to Sea Contrast</span>
+                        <strong class="island-spec-value">3,180 m to 0 m</strong>
+                        <span class="island-spec-note">-4°C powder above · 28°C beach below</span>
+                    </div>
+                    <div class="island-spec-item">
+                        <span class="island-spec-label">Cryo-Cooled Pistes</span>
+                        <strong class="island-spec-value">370 km (160+ Runs)</strong>
+                        <span class="island-spec-note">Sub-surface Cryo-Grid 3.0</span>
+                    </div>
+                    <div class="island-spec-item">
+                        <span class="island-spec-label">Sea-to-Summit Transit</span>
+                        <strong class="island-spec-value">18 Minutes Direct</strong>
+                        <span class="island-spec-note">Coral Bay Marina to Glacier Crown</span>
+                    </div>
+                </div>
+                <div class="island-map-container">
+                    <div class="island-map-header">
+                        <div class="island-map-title-group">
+                            <h3>Haiti Highland Glacier · Sea-to-Summit Schematic</h3>
+                        </div>
+                        <div class="island-map-legend-pills">
+                            <span class="island-legend-pill"><i class="legend-dot" style="background:#5ce1cf"></i>Cryo-Grid Slopes</span>
+                            <span class="island-legend-pill"><i class="legend-dot" style="background:#dfba76"></i>18-Min Sea-to-Summit Funicular</span>
+                            <span class="island-legend-pill"><i class="legend-dot" style="background:#46cad9"></i>28°C Caribbean Reef</span>
+                        </div>
+                    </div>
+                    <div class="island-map-canvas">
+                        <svg class="ill" viewBox="0 0 1100 560" aria-label="Interactive ski map of Haiti Highland Glacier">
+                            <defs>
+                                <linearGradient id="haitiSky" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#0b2847" />
+                                    <stop offset="55%" stop-color="#2268a8" />
+                                    <stop offset="100%" stop-color="#f5d598" />
+                                </linearGradient>
+                                <linearGradient id="haitiSea" x1="0" y1="0" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="#1ca3b8" />
+                                    <stop offset="50%" stop-color="#28b8c7" />
+                                    <stop offset="100%" stop-color="#11678a" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="1100" height="560" fill="url(#haitiSky)" />
+                            <!-- Warm Caribbean sun -->
+                            <circle cx="170" cy="115" r="46" fill="#fcedc7" opacity="0.9" />
+                            <!-- Island Mountain rising out of Caribbean Sea -->
+                            <path d="M260 455 L520 96 L740 240 L890 128 L1080 455 Z" fill="#ffffff" />
+                            <path d="M520 96 L740 240 L650 455 L485 455 Z" fill="#1d4d84" opacity="0.82" />
+                            <path d="M890 128 L1080 455 L920 455 L845 310 Z" fill="#1d4d84" opacity="0.78" />
+                            <!-- Emerald Tropical Forest Belt at mid-elevation -->
+                            <path d="M240 460 Q 420 350 640 385 T 1090 430 L 1100 480 L 220 480 Z" fill="#1b6b5c" />
+                            <!-- Golden Caribbean Beach and Turquoise Sea -->
+                            <path d="M0 445 Q 240 435 460 475 L 1100 475 L 1100 560 L 0 560 Z" fill="#f5deb3" />
+                            <path d="M0 460 Q 220 455 430 500 L 1100 500 L 1100 560 L 0 560 Z" fill="url(#haitiSea)" />
+                            <!-- Animated superyacht in Coral Bay -->
+                            <g class="bob" transform="translate(135 495)">
+                                <path d="M-36 8 L36 8 L26 20 L-28 20 Z" fill="#ffffff" stroke="#0b2342" stroke-width="1.5" />
+                                <rect x="-18" y="-2" width="32" height="10" rx="2" fill="#e6f2fc" />
+                                <line x1="0" y1="-12" x2="0" y2="-2" stroke="#dfba76" stroke-width="2" />
+                            </g>
+                            <!-- Cryo-Grid Glacier Pistes -->
+                            <g fill="none" stroke="#5ce1cf" stroke-width="4.5" stroke-linecap="round">
+                                <path d="M520 110 C 470 190, 410 265, 445 335 C 470 380, 395 410, 355 435" />
+                                <path d="M520 110 C 575 185, 640 250, 600 330 C 570 380, 645 415, 690 435" />
+                                <path d="M890 140 C 845 215, 790 275, 825 350 C 850 395, 785 420, 740 440" />
+                            </g>
+                            <!-- Sea-to-Summit Vacuum Funicular Tunnel and Viaduct -->
+                            <path d="M215 470 L520 106" fill="none" stroke="#dfba76" stroke-width="3.2" stroke-dasharray="8 6" />
+                            <g>
+                                <animateMotion dur="7.5s" repeatCount="indefinite" path="M215 470 L520 106" />
+                                <rect x="-14" y="-7" width="28" height="14" rx="6" fill="#c95a41" stroke="#fcedc7" stroke-width="1.5" />
+                            </g>
+                            <path d="M520 106 L890 140" fill="none" stroke="#fcedc7" stroke-width="2.2" stroke-dasharray="5 5" />
+                            <g>
+                                <animateMotion dur="8.5s" repeatCount="indefinite" path="M520 106 L890 140" />
+                                <rect x="-12" y="-5" width="24" height="10" rx="4" fill="#0b2342" stroke="#5ce1cf" stroke-width="1.4" />
+                            </g>
+                            <!-- 8 Interactive Hotspots -->
+                            <g class="map-hotspot is-active" data-spot="haiti-1" transform="translate(520 102)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">1</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="haiti-2" transform="translate(890 138)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">2</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="haiti-3" transform="translate(445 255)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">3</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="haiti-4" transform="translate(615 280)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">4</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="haiti-5" transform="translate(820 305)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">5</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="haiti-6" transform="translate(355 425)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">6</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="haiti-7" transform="translate(690 432)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">7</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="haiti-8" transform="translate(215 470)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">8</text>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="island-hotspots-grid">
+                    <article class="island-hotspot-card is-active" data-spot="haiti-1">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">1</span>
+                            <span class="tag tag--gold">3,180 m Summit</span>
+                        </div>
+                        <h4>Haiti Glacier Crown Resort</h4>
+                        <p>7-star glass-and-titanium summit citadel overlooking both the snowfields and the turquoise Caribbean Sea, complete with a cantilevered sky pool.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="haiti-2">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">2</span>
+                            <span class="tag">2,940 m East Peak</span>
+                        </div>
+                        <h4>Cryo-Dome Snowphere</h4>
+                        <p>Climate-shielded glacier bowl guaranteeing feather-light powder even during peak tropical summer, connected via the Sky-Link twin-cable tramway.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="haiti-3">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">3</span>
+                            <span class="tag tag--coral">2,200 m Panorama</span>
+                        </div>
+                        <h4>Caribbean Horizon Terrace</h4>
+                        <p>Open-air champagne sundeck and oyster bar where skiers dine in heated loungers while gazing directly down at coral reefs and sailing regattas.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="haiti-4">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">4</span>
+                            <span class="tag">2,050 m Mid-Station</span>
+                        </div>
+                        <h4>Cryo-Grid 3.0 Command Vault</h4>
+                        <p>Architectural showcase housing the closed-loop geothermal heat pumps and liquid-nitrogen snow atomizers that keep 370 km of island runs pristine.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="haiti-5">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">5</span>
+                            <span class="tag tag--gold">1,850 m Freestyle</span>
+                        </div>
+                        <h4>Royal Halfpipe and Snowpark</h4>
+                        <p>Olympic-grade superpipe, airbag training jumps and illuminated night-session terrain park sculpted daily by laser-guided autonomous groomers.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="haiti-6">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">6</span>
+                            <span class="tag">1,200 m Snow Line</span>
+                        </div>
+                        <h4>Cloud Forest Transition Lodge</h4>
+                        <p>Where crystalline alpine snow meets misty tropical botanical gardens, featuring glass-walled locker lounges for switching from ski boots to linen resort wear.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="haiti-7">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">7</span>
+                            <span class="tag tag--gold">1,150 m Heritage</span>
+                        </div>
+                        <h4>2011 Founders Pavilion</h4>
+                        <p>Commemorating the historic 2011 opening of Ski Paradise on Haiti Island with interactive holographic exhibits and the Royal Trophy Hall.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="haiti-8">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">8</span>
+                            <span class="tag tag--coral">0 m Sea Level</span>
+                        </div>
+                        <h4>Coral Bay Sea-to-Summit Marina</h4>
+                        <p>Superyacht berth and beach club where guests board the 18-minute vacuum funicular in swimsuits and step out at 3,180 m in pre-warmed ski gear.</p>
+                    </article>
+                </div>
+            </div>
+            <!-- TAB 3: ELEVATION AND LIFT TELEMETRY -->
+            <div class="island-panel" id="panel-telemetry" role="tabpanel" aria-labelledby="tab-telemetry">
+                <div class="island-specs-banner">
+                    <div class="island-spec-item">
+                        <span class="island-spec-label">Maximum Vertical Drop</span>
+                        <strong class="island-spec-value">2,950 m Continuous</strong>
+                        <span class="island-spec-note">World's longest non-stop vertical descent</span>
+                    </div>
+                    <div class="island-spec-item">
+                        <span class="island-spec-label">Total Uphill Capacity</span>
+                        <strong class="island-spec-value">465,000 Skiers / Hr</strong>
+                        <span class="island-spec-note">Zero-wait biometric boarding gates</span>
+                    </div>
+                    <div class="island-spec-item">
+                        <span class="island-spec-label">Longest Single Piste</span>
+                        <strong class="island-spec-value">28.4 km Imperial Run</strong>
+                        <span class="island-spec-note">Pico Soberano to Andes Maglev Portal</span>
+                    </div>
+                    <div class="island-spec-item">
+                        <span class="island-spec-label">Snowmaking Precision</span>
+                        <strong class="island-spec-value">14,000 Smart Lances</strong>
+                        <span class="island-spec-note">Pure mineral water crystal atomization</span>
+                    </div>
+                </div>
+                <figure class="ill-panel">
+                    <svg class="ill height-chart" viewBox="0 0 960 390" data-reveal aria-label="Alpine summit elevation comparison chart">
+                        <g class="k-line" stroke-dasharray="3 6">
+                            <line x1="60" y1="50" x2="920" y2="50" />
+                            <line x1="60" y1="120" x2="920" y2="120" />
+                            <line x1="60" y1="190" x2="920" y2="190" />
+                            <line x1="60" y1="260" x2="920" y2="260" />
+                        </g>
+                        <line x1="60" y1="330" x2="920" y2="330" class="k-ink" stroke-width="1.8" />
+                        <text x="50" y="54" text-anchor="end" font-size="10" class="h-ref">5,000 m</text>
+                        <text x="50" y="124" text-anchor="end" font-size="10" class="h-ref">3,750 m</text>
+                        <text x="50" y="194" text-anchor="end" font-size="10" class="h-ref">2,500 m</text>
+                        <text x="50" y="264" text-anchor="end" font-size="10" class="h-ref">1,250 m</text>
+                        <text x="50" y="334" text-anchor="end" font-size="10" class="h-ref">0 m</text>
+                        <!-- 1: Pico Soberano (4,850 m) -->
+                        <g class="tower" style="--d: 0">
+                            <polygon points="95,330 145,58 195,330" class="f-ink" />
+                            <polygon points="145,58 195,330 165,330" class="f-ink2" />
+                            <polygon points="127,155 145,58 163,155" class="f-gold" />
+                            <circle cx="145" cy="52" r="4" class="f-coral pulse" />
+                        </g>
+                        <text x="145" y="40" text-anchor="middle" class="h-val">4,850 m</text>
+                        <text x="145" y="352" text-anchor="middle" class="h-name">Pico Soberano</text>
+                        <text x="145" y="368" text-anchor="middle" font-size="9" class="h-ref">Waikiki Andes</text>
+                        <!-- 2: Condor Glacier Heli-Peak (4,420 m) -->
+                        <g class="tower" style="--d: 1">
+                            <polygon points="245,330 295,82 345,330" class="f-ink2" />
+                            <polygon points="277,170 295,82 313,170" class="f-white" />
+                        </g>
+                        <text x="295" y="68" text-anchor="middle" class="h-val">4,420 m</text>
+                        <text x="295" y="352" text-anchor="middle" class="h-name">Condor Glacier</text>
+                        <text x="295" y="368" text-anchor="middle" font-size="9" class="h-ref">Waikiki Andes</text>
+                        <!-- 3: Zermatt Klein Matterhorn (3,883 m reference) -->
+                        <g class="tower" style="--d: 2" opacity="0.55">
+                            <polygon points="395,330 445,112 495,330" class="f-sea2" />
+                        </g>
+                        <text x="445" y="98" text-anchor="middle" class="h-val h-ref">3,883 m</text>
+                        <text x="445" y="352" text-anchor="middle" class="h-name h-ref">Zermatt Glacier</text>
+                        <text x="445" y="368" text-anchor="middle" font-size="9" class="h-ref">Switzerland (Ref.)</text>
+                        <!-- 4: Monte Rosa Sky Observatory (3,200 m) -->
+                        <g class="tower" style="--d: 3">
+                            <polygon points="545,330 595,150 645,330" class="f-ink" />
+                            <circle cx="595" cy="146" r="8" class="f-gold" />
+                        </g>
+                        <text x="595" y="130" text-anchor="middle" class="h-val">3,200 m</text>
+                        <text x="595" y="352" text-anchor="middle" class="h-name">Monte Rosa Dome</text>
+                        <text x="595" y="368" text-anchor="middle" font-size="9" class="h-ref">Waikiki Andes</text>
+                        <!-- 5: Haiti Glacier Crown (3,180 m) -->
+                        <g class="tower" style="--d: 4">
+                            <polygon points="695,330 745,152 795,330" class="f-sea" />
+                            <polygon points="725,220 745,152 765,220" class="f-white" />
+                        </g>
+                        <text x="745" y="136" text-anchor="middle" class="h-val">3,180 m</text>
+                        <text x="745" y="352" text-anchor="middle" class="h-name">Haiti Glacier Crown</text>
+                        <text x="745" y="368" text-anchor="middle" font-size="9" class="h-ref">Haiti Island</text>
+                        <!-- 6: Courchevel Saulire (2,738 m reference) -->
+                        <g class="tower" style="--d: 5" opacity="0.55">
+                            <polygon points="825,330 870,176 915,330" class="f-sea2" />
+                        </g>
+                        <text x="870" y="162" text-anchor="middle" class="h-val h-ref">2,738 m</text>
+                        <text x="870" y="352" text-anchor="middle" class="h-name h-ref">Courchevel</text>
+                        <text x="870" y="368" text-anchor="middle" font-size="9" class="h-ref">France (Ref.)</text>
+                    </svg>
+                    <figcaption class="ill-caption">Summit elevation comparison placing Waikiki's High Andes and Haiti Island peaks alongside classic European alpine resorts.</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section id="engineering">
+            <div class="section-header" data-reveal>
+                <span class="section-eyebrow">Climate and Mobility Engineering</span>
+                <h2 class="section-title">Engineering the Eternal Winter</h2>
+                <p class="section-intro">Beneath every piste lies Waikiki's proprietary alpine infrastructure—combining geothermal cryo-cooling, clean fusion power and magnetic-levitation mountain transit to guarantee flawless snow 365 days a year.</p>
+            </div>
+            <div class="piste-mix">
+                <div class="piste-bar" data-reveal role="img" aria-label="Piste difficulty distribution: 32% Azure Cruisers, 38% Crimson Racing, 18% Obsidian Couloirs, 12% Golden Royal Glacier and Heliski">
+                    <div class="piste-seg seg-azure" style="--w: 32%; --d: 0"><span>32% · 400 km Azure</span></div>
+                    <div class="piste-seg seg-crimson" style="--w: 38%; --d: 1"><span>38% · 475 km Crimson</span></div>
+                    <div class="piste-seg seg-obsidian" style="--w: 18%; --d: 2"><span>18% · 225 km Obsidian</span></div>
+                    <div class="piste-seg seg-gold" style="--w: 12%; --d: 3"><span>12% · 150 km Royal Gold</span></div>
+                </div>
+                <ul class="piste-legend">
+                    <li><i class="seg-azure"></i>Azure Panoramic Cruisers (32% · 400 km)</li>
+                    <li><i class="seg-crimson"></i>Crimson Sport and GS Courses (38% · 475 km)</li>
+                    <li><i class="seg-obsidian"></i>Obsidian Steep Couloirs (18% · 225 km)</li>
+                    <li><i class="seg-gold"></i>Royal Gold Glacier and Heliski Trails (12% · 150 km)</li>
+                </ul>
+            </div>
+            <ol class="feature-list" data-reveal-stagger>
+                <li>
+                    <h3>Sub-Surface Cryo-Grid 3.0</h3>
+                    <p>Over 4,200 kilometers of closed-loop titanium cooling conduits beneath the Haiti Island and lower Andean slopes maintain a constant -4°C snowpack base, preventing slush and preserving crystalline powder even under tropical sunshine.</p>
+                </li>
+                <li>
+                    <h3>Pininfarina Heated Maglev Gondolas</h3>
+                    <p>All 180 aerial lifts glide on frictionless magnetic bearings at up to 14 m/s. Every cabin features heated stitched-cashmere reclined seating, electrochromic panoramic glass, champagne chillers and active wind-stabilization gyroscopes.</p>
+                </li>
+                <li>
+                    <h3>18-Minute Sea-to-Summit Vacuum Funicular</h3>
+                    <p>Descending through a pressurized basalt bore from Haiti Glacier Crown (3,180 m) directly to Coral Bay Marina (0 m), the twin-tube funicular accelerates smoothly to 320 km/h with active cabin pressure equalization.</p>
+                </li>
+                <li>
+                    <h3>14,000 Mineral-Crystal Snow Atomizers</h3>
+                    <p>Fed by purified high-altitude glacial meltwater and deep aquifer springs, acoustic snow lances nucleate hexagonal dendritic snow crystals without chemical additives, replenishing 15 cm of fresh velvet powder nightly.</p>
+                </li>
+                <li>
+                    <h3>Autonomous Hydrogen Grooming Armada</h3>
+                    <p>A synchronized fleet of 240 zero-emission hydrogen-electric snowcats guided by millimeter-wave LiDAR grooms all 1,250 km of pistes between midnight and 06:00, sculpting corduroy ribs to 0.5-millimeter precision.</p>
+                </li>
+                <li>
+                    <h3>Active LiDAR and Acoustic Avalanche Shield</h3>
+                    <p>Quantum weather radar domes and automated micro-impulse acoustic towers continuously monitor snowpack shear layers across every ridge, neutralizing unstable cornices long before morning lift opening.</p>
+                </li>
+            </ol>
+        </section>
+        <section id="resorts" class="light-bg">
+            <div class="section-header" data-reveal>
+                <span class="section-eyebrow">Where to stay on the slopes</span>
+                <h2 class="section-title">Palaces, Chalets and Sky Observatories</h2>
+                <p class="section-intro">Every sanctuary in Waikiki Ski Paradise offers direct ski-in and ski-out access, private alpine butlers, subterranean thermal spas and helipads linkable to your Waikiki One pass.</p>
+            </div>
+            <div class="filter-bar" data-filter-for="resort-grid" role="toolbar" aria-label="Filter alpine resorts">
+                <button class="filter-chip" type="button" data-filter="all" aria-pressed="true">All Sanctuaries</button>
+                <button class="filter-chip" type="button" data-filter="palace" aria-pressed="false">10-Star Palace</button>
+                <button class="filter-chip" type="button" data-filter="chalet" aria-pressed="false">Private Chalets</button>
+                <button class="filter-chip" type="button" data-filter="observatory" aria-pressed="false">Sky Observatory</button>
+                <button class="filter-chip" type="button" data-filter="seatoski" aria-pressed="false">Sea-to-Ski Island</button>
+            </div>
+            <div class="hotel-grid" id="resort-grid" data-reveal-stagger>
+                <!-- 1: Grand Palace Val d'Aurelia -->
+                <article class="card hotel" data-filter-item data-category="palace">
+                    <div class="hotel-art" aria-hidden="true">
+                        <svg class="ill" viewBox="0 0 320 200">
+                            <rect width="320" height="200" class="f-ink" />
+                            <circle cx="260" cy="44" r="24" class="f-sun" opacity="0.85" />
+                            <polygon points="0,155 85,55 170,155" class="f-ink2" />
+                            <polygon points="140,155 235,42 320,155" class="f-ink2" />
+                            <polygon points="65,80 85,55 105,80" class="f-white" />
+                            <polygon points="212,72 235,42 258,72" class="f-white" />
+                            <rect x="64" y="102" width="192" height="56" rx="4" class="f-sand" />
+                            <rect x="96" y="78" width="128" height="26" rx="3" class="f-gold" />
+                            <polygon points="160,46 128,78 192,78" class="f-coral" />
+                            <g class="f-ink">
+                                <rect x="80" y="114" width="12" height="20" rx="2" />
+                                <rect x="102" y="114" width="12" height="20" rx="2" />
+                                <rect x="124" y="114" width="12" height="20" rx="2" />
+                                <rect x="152" y="110" width="16" height="28" rx="3" />
+                                <rect x="184" y="114" width="12" height="20" rx="2" />
+                                <rect x="206" y="114" width="12" height="20" rx="2" />
+                                <rect x="228" y="114" width="12" height="20" rx="2" />
+                            </g>
+                            <ellipse cx="160" cy="176" rx="110" ry="14" class="f-sea2" />
+                        </svg>
+                        <span class="tag tag--gold">10-Star Flagship</span>
+                    </div>
+                    <div class="hotel-body">
+                        <div class="hotel-stars" aria-label="10 star palace">★ ★ ★ ★ ★ ★ ★ ★ ★ ★</div>
+                        <h3>Grand Palace Val d'Aurelia</h3>
+                        <p class="hotel-loc">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7z" />
+                                <circle cx="12" cy="9" r="2.5" />
+                            </svg> Val d'Aurelia · 2,150 m · High Andes
+                        </p>
+                        <p>Crowned with 24-karat leaf domes and a 200-meter outdoor geothermal lagoon, the flagship alpine palace offers private gondola boarding directly from its marble grand lobby.</p>
+                        <ul class="perks">
+                            <li>Private Gondola</li>
+                            <li>3 Michelin 3-Star</li>
+                            <li>Royal Thermal Spa</li>
+                        </ul>
+                    </div>
+                </article>
+                <!-- 2: Ski Paradise Royal Chalets -->
+                <article class="card hotel" data-filter-item data-category="chalet">
+                    <div class="hotel-art" aria-hidden="true">
+                        <svg class="ill" viewBox="0 0 320 200">
+                            <rect width="320" height="200" class="f-sky" />
+                            <polygon points="0,150 110,40 220,150" class="f-sea2" opacity="0.45" />
+                            <polygon points="120,150 230,48 320,150" class="f-sea" opacity="0.55" />
+                            <rect x="0" y="148" width="320" height="52" class="f-white" />
+                            <polygon points="48,148 115,82 182,148" class="f-ink" />
+                            <polygon points="56,148 115,90 174,148" class="f-coral" />
+                            <rect x="76" y="122" width="78" height="32" class="f-sand" />
+                            <rect x="98" y="128" width="34" height="20" class="f-sun" />
+                            <polygon points="168,148 225,94 282,148" class="f-ink" />
+                            <rect x="190" y="126" width="70" height="28" class="f-sand" />
+                            <rect x="210" y="132" width="30" height="16" class="f-sun" />
+                        </svg>
+                        <span class="tag">Ski-in Private Estates</span>
+                    </div>
+                    <div class="hotel-body">
+                        <div class="hotel-stars" aria-label="5 star luxury">★ ★ ★ ★ ★</div>
+                        <h3>Ski Paradise Royal Chalets</h3>
+                        <p class="hotel-loc">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7z" />
+                                <circle cx="12" cy="9" r="2.5" />
+                            </svg> Soberano Ridge · 3,100 m · High Andes
+                        </p>
+                        <p>Forty standalone cedar-and-onyx chalets perched on the sun-drenched mid-mountain ridge, each complete with a dedicated chef, sommelier cellar and outdoor cedar hot tub.</p>
+                        <ul class="perks">
+                            <li>Ski-In / Ski-Out</li>
+                            <li>24/7 Butler</li>
+                            <li>Private Helipad</li>
+                        </ul>
+                    </div>
+                </article>
+                <!-- 3: Monte Rosa Sky Observatory -->
+                <article class="card hotel" data-filter-item data-category="observatory">
+                    <div class="hotel-art" aria-hidden="true">
+                        <svg class="ill" viewBox="0 0 320 200">
+                            <rect width="320" height="200" class="f-ink" />
+                            <g class="f-white">
+                                <circle class="twinkle" cx="48" cy="36" r="1.8" />
+                                <circle class="twinkle" cx="105" cy="24" r="1.5" />
+                                <circle class="twinkle" cx="210" cy="30" r="2" />
+                                <circle class="twinkle" cx="275" cy="48" r="1.6" />
+                            </g>
+                            <path d="M0 165 L95 95 L160 115 L235 88 L320 165 Z" class="f-ink2" />
+                            <path d="M85 135 A55 55 0 0 1 195 135 Z" class="f-sea2" />
+                            <path d="M110 135 A30 52 0 0 1 170 135 M85 135 H195 M140 80 V135" class="k-gold" stroke-width="1.6" />
+                            <path d="M205 135 A28 28 0 0 1 261 135 Z" class="f-gold" />
+                            <ellipse cx="160" cy="168" rx="95" ry="12" class="f-sea3" />
+                        </svg>
+                        <span class="tag tag--coral">3,200 m Stargazing</span>
+                    </div>
+                    <div class="hotel-body">
+                        <div class="hotel-stars" aria-label="5 star boutique">★ ★ ★ ★ ★</div>
+                        <h3>Monte Rosa Sky Observatory</h3>
+                        <p class="hotel-loc">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7z" />
+                                <circle cx="12" cy="9" r="2.5" />
+                            </svg> Monte Rosa Ridge · 3,200 m · High Andes
+                        </p>
+                        <p>Heated geodesic glass suites under the crystal-clear Andean night sky, pairing private research-grade telescopes with steaming volcanic mineral pools on the glacier edge.</p>
+                        <ul class="perks">
+                            <li>Geodesic Domes</li>
+                            <li>Volcanic Springs</li>
+                            <li>Observatory Deck</li>
+                        </ul>
+                    </div>
+                </article>
+                <!-- 4: Haiti Glacier Crown Resort -->
+                <article class="card hotel" data-filter-item data-category="seatoski palace">
+                    <div class="hotel-art" aria-hidden="true">
+                        <svg class="ill" viewBox="0 0 320 200">
+                            <rect width="320" height="200" class="f-sky" />
+                            <circle cx="62" cy="48" r="22" class="f-sun" />
+                            <polygon points="35,155 160,38 285,155" class="f-white" />
+                            <polygon points="160,38 285,155 215,155" class="f-sea2" opacity="0.5" />
+                            <rect x="92" y="86" width="136" height="32" rx="16" class="f-ink" />
+                            <rect x="104" y="94" width="112" height="14" rx="7" class="f-sea3" />
+                            <rect x="0" y="155" width="320" height="45" class="f-sea" />
+                            <path d="M20 175 Q 90 165 160 175 T 300 175" class="k-white" stroke-width="2" />
+                        </svg>
+                        <span class="tag tag--gold">7-Star Sea-to-Summit</span>
+                    </div>
+                    <div class="hotel-body">
+                        <div class="hotel-stars" aria-label="7 star resort">★ ★ ★ ★ ★ ★ ★</div>
+                        <h3>Haiti Glacier Crown Resort</h3>
+                        <p class="hotel-loc">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7z" />
+                                <circle cx="12" cy="9" r="2.5" />
+                            </svg> Glacier Crown · 3,180 m · Haiti Island
+                        </p>
+                        <p>Suspended atop Haiti Island's highest cryo-glacier with 360-degree views of the Caribbean Sea and a private elevator directly into the 18-minute Coral Bay funicular.</p>
+                        <ul class="perks">
+                            <li>18-Min to Beach</li>
+                            <li>Cantilever Pool</li>
+                            <li>Yacht Berth Included</li>
+                        </ul>
+                    </div>
+                </article>
+                <!-- 5: Edelweiss Thermal Alpine Village -->
+                <article class="card hotel" data-filter-item data-category="chalet seatoski">
+                    <div class="hotel-art" aria-hidden="true">
+                        <svg class="ill" viewBox="0 0 320 200">
+                            <rect width="320" height="200" class="f-sand" />
+                            <polygon points="0,145 90,52 180,145" class="f-ink2" opacity="0.35" />
+                            <polygon points="140,145 240,44 320,145" class="f-ink2" opacity="0.45" />
+                            <rect x="36" y="106" width="68" height="42" class="f-ink" />
+                            <polygon points="30,106 70,74 110,106" class="f-coral" />
+                            <rect x="122" y="96" width="76" height="52" class="f-ink" />
+                            <polygon points="114,96 160,60 206,96" class="f-gold" />
+                            <rect x="216" y="108" width="68" height="40" class="f-ink" />
+                            <polygon points="210,108 250,76 290,108" class="f-coral" />
+                            <ellipse cx="160" cy="172" rx="120" ry="15" class="f-sea2" />
+                        </svg>
+                        <span class="tag">Family and Wellness</span>
+                    </div>
+                    <div class="hotel-body">
+                        <div class="hotel-stars" aria-label="5 star resort">★ ★ ★ ★ ★</div>
+                        <h3>Edelweiss Thermal Village</h3>
+                        <p class="hotel-loc">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7z" />
+                                <circle cx="12" cy="9" r="2.5" />
+                            </svg> East Valley · 2,250 m · High Andes
+                        </p>
+                        <p>Car-free alpine sanctuary woven around subterranean mineral grottos, gentle azure learning slopes, royal ski academies for children and artisanal fondue pavilions.</p>
+                        <ul class="perks">
+                            <li>Thermal Grottos</li>
+                            <li>Royal Ski Academy</li>
+                            <li>Car-Free Village</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section id="experiences">
+            <div class="section-header" data-reveal>
+                <span class="section-eyebrow">Beyond the pistes</span>
+                <h2 class="section-title">Sea-to-Summit Lifestyle and Experiences</h2>
+                <p class="section-intro">Designed for sovereign guests who refuse to choose between alpine exhilaration and tropical indulgence, Waikiki Ski Paradise curates experiences found nowhere else on the planet.</p>
+            </div>
+            <div class="card-grid" data-reveal-stagger>
+                <article class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="5" />
+                            <path d="M12 1v3M12 20v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1 12h3M20 12h3" />
+                        </svg>
+                    </div>
+                    <h3>Morning Powder, Afternoon Surf</h3>
+                    <p>Carve velvet corduroy on Haiti Glacier Crown at 09:00, board the 18-minute vacuum funicular at noon and step directly onto your superyacht or a 28°C coral-sand beach in Coral Bay for afternoon surfing and diving.</p>
+                </article>
+                <article class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 11h18M12 4v16M7 4h10M5 17l3-6h8l3 6" />
+                        </svg>
+                    </div>
+                    <h3>Royal Squadron Heli-Skiing</h3>
+                    <p>Lift off from Condor Glacier Heliport aboard whisper-quiet hybrid tiltrotors piloted by the Royal Alpine Wing to drop into 40,000 hectares of untouched 4,800-meter Andean bowls with personal mountain guides.</p>
+                </article>
+                <article class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M8 2v20M5 2v7a3 3 0 0 0 6 0V2M17 2v20M14 8h6" />
+                        </svg>
+                    </div>
+                    <h3>14-Michelin-Starred Summit Dining</h3>
+                    <p>Revolving glass rotunda restaurants at 4,000+ meters serve white truffle fondue, Amazonian-Andean tasting menus, vintage Dom Pérignon and Caribbean lobster flown up fresh every morning.</p>
+                </article>
+                <article class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M2 16c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2M2 20c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2M7 10a5 5 0 0 1 10 0" />
+                        </svg>
+                    </div>
+                    <h3>Subterranean Volcanic Thermal Grottos</h3>
+                    <p>Glide from the final run straight into naturally heated 40°C mineral lagoons, emerald steam caverns, cryo-recovery chambers and panoramic Finnish cedar saunas overlooking the glaciers.</p>
+                </article>
+                <article class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+                        </svg>
+                    </div>
+                    <h3>Aurora-Spectrum Night Skiing</h3>
+                    <p>Every evening until 23:00, 320 kilometers of pistes transform into an illuminated theatre lit by low-glare aurora-spectrum LED arrays, accompanied by live symphony projections on the glacier face.</p>
+                </article>
+                <article class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="3" y="5" width="18" height="14" rx="2" />
+                            <path d="M3 10h18M7 15h4" />
+                        </svg>
+                    </div>
+                    <h3>Waikiki One Bespoke Valet</h3>
+                    <p>Your custom-fitted carbon skis and heated boots are laser-scanned on arrival and delivered automatically to whichever summit or island locker you select each morning via subterranean pneumatic tubes.</p>
+                </article>
+            </div>
+            <div class="travel-callout" data-reveal>
+                <div class="travel-callout-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                    </svg>
+                </div>
+                <div>
+                    <h3>Included with the Sovereign Alpine Privileges Pass</h3>
+                    <p>All guests staying at registered Ski Paradise palaces, chalets and observatories receive complimentary unlimited lift access across both the High Andes and Haiti Island, priority seats on the 18-minute Sea-to-Summit Funicular and Trans-Andean Maglev, plus automatic equipment transfer between islands.</p>
+                </div>
+            </div>
+        </section>
+        <section id="seasons" class="light-bg">
+            <div class="section-header" data-reveal>
+                <span class="section-eyebrow">365-Day Alpine Calendar</span>
+                <h2 class="section-title">Snow Calendar and Milestones</h2>
+                <p class="section-intro">Thanks to the Southern Hemisphere winter across the High Andes (May to October) and the Northern Hemisphere winter plus Cryo-Grid 3.0 cooling on Haiti Island (November to April), Waikiki offers peak powder conditions every month of the year.</p>
+            </div>
+            <div class="season" data-reveal>
+                <div class="season-row season-head">
+                    <b>Sector / Experience</b>
+                    <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
+                </div>
+                <div class="season-row">
+                    <b>High Andes Natural Powder</b>
+                    <div class="season-cell s-good" title="Jan: Glacier and Cryo-Grid"></div>
+                    <div class="season-cell s-good" title="Feb: Glacier and Cryo-Grid"></div>
+                    <div class="season-cell s-good" title="Mar: Early Autumn Snowfall"></div>
+                    <div class="season-cell s-good" title="Apr: Deep Base Building"></div>
+                    <div class="season-cell s-peak" title="May: Peak Andean Powder"></div>
+                    <div class="season-cell s-peak" title="Jun: Peak Andean Powder"></div>
+                    <div class="season-cell s-peak" title="Jul: Deep Winter Powder"></div>
+                    <div class="season-cell s-peak" title="Aug: Championship Season"></div>
+                    <div class="season-cell s-peak" title="Sep: Spring Corn and Powder"></div>
+                    <div class="season-cell s-peak" title="Oct: High-Altitude Sun and Snow"></div>
+                    <div class="season-cell s-good" title="Nov: Glacier Cruising"></div>
+                    <div class="season-cell s-good" title="Dec: Festive Glacier Season"></div>
+                </div>
+                <div class="season-row">
+                    <b>Haiti Island Cryo-Glacier</b>
+                    <div class="season-cell s-peak" title="Jan: Peak Sea-to-Ski"></div>
+                    <div class="season-cell s-peak" title="Feb: Peak Sea-to-Ski"></div>
+                    <div class="season-cell s-peak" title="Mar: Peak Sea-to-Ski"></div>
+                    <div class="season-cell s-peak" title="Apr: Spring Regatta and Ski"></div>
+                    <div class="season-cell s-good" title="May: Cryo-Grid 3.0 Active"></div>
+                    <div class="season-cell s-good" title="Jun: Cryo-Grid 3.0 Active"></div>
+                    <div class="season-cell s-good" title="Jul: Summer Glacier Dome"></div>
+                    <div class="season-cell s-good" title="Aug: Summer Glacier Dome"></div>
+                    <div class="season-cell s-good" title="Sep: Cryo-Grid 3.0 Active"></div>
+                    <div class="season-cell s-good" title="Oct: Cryo-Grid 3.0 Active"></div>
+                    <div class="season-cell s-peak" title="Nov: Winter Opening Gala"></div>
+                    <div class="season-cell s-peak" title="Dec: Royal Holiday Season"></div>
+                </div>
+                <div class="season-row">
+                    <b>Royal Squadron Heli-Skiing</b>
+                    <div class="season-cell s-good" title="Jan"></div>
+                    <div class="season-cell s-good" title="Feb"></div>
+                    <div class="season-cell s-fair" title="Mar"></div>
+                    <div class="season-cell s-good" title="Apr"></div>
+                    <div class="season-cell s-peak" title="May"></div>
+                    <div class="season-cell s-peak" title="Jun"></div>
+                    <div class="season-cell s-peak" title="Jul"></div>
+                    <div class="season-cell s-peak" title="Aug"></div>
+                    <div class="season-cell s-peak" title="Sep"></div>
+                    <div class="season-cell s-good" title="Oct"></div>
+                    <div class="season-cell s-good" title="Nov"></div>
+                    <div class="season-cell s-peak" title="Dec"></div>
+                </div>
+                <div class="season-row">
+                    <b>Sea-to-Summit Dual Days</b>
+                    <div class="season-cell s-peak" title="Jan: 28°C Sea / -4°C Summit"></div>
+                    <div class="season-cell s-peak" title="Feb: 28°C Sea / -4°C Summit"></div>
+                    <div class="season-cell s-peak" title="Mar: 28°C Sea / -4°C Summit"></div>
+                    <div class="season-cell s-peak" title="Apr: 28°C Sea / -4°C Summit"></div>
+                    <div class="season-cell s-peak" title="May: 28°C Sea / -4°C Summit"></div>
+                    <div class="season-cell s-good" title="Jun: 29°C Sea / -4°C Summit"></div>
+                    <div class="season-cell s-good" title="Jul: 29°C Sea / -4°C Summit"></div>
+                    <div class="season-cell s-good" title="Aug: 29°C Sea / -4°C Summit"></div>
+                    <div class="season-cell s-good" title="Sep: 29°C Sea / -4°C Summit"></div>
+                    <div class="season-cell s-peak" title="Oct: 28°C Sea / -4°C Summit"></div>
+                    <div class="season-cell s-peak" title="Nov: 28°C Sea / -4°C Summit"></div>
+                    <div class="season-cell s-peak" title="Dec: 28°C Sea / -4°C Summit"></div>
+                </div>
+                <ul class="season-legend">
+                    <li><i class="s-peak"></i>Peak Champagne Powder and Bluebird Skies</li>
+                    <li><i class="s-good"></i>Guaranteed Glacier and Cryo-Grid 3.0 Snow</li>
+                    <li><i class="s-fair"></i>Shoulder Transition (High-Altitude Bowls Only)</li>
+                </ul>
+            </div>
+            <ol class="milestones" data-reveal-stagger>
+                <li>
+                    <span class="year">2011</span>
+                    <h3>Haiti Island Inauguration</h3>
+                    <p>King Chease I commissions the original Ski Paradise on the highlands of Haiti Island, unveiling the world's first sub-surface cryo-cooled tropical ski domain.</p>
+                </li>
+                <li>
+                    <span class="year">2015</span>
+                    <h3>High Andes Expansion</h3>
+                    <p>Following the integration of Brazilia Province, engineers connect 880 km of high-altitude Andean pistes up to Pico Soberano at 4,850 meters.</p>
+                </li>
+                <li>
+                    <span class="year">2018</span>
+                    <h3>Sea-to-Summit Funicular</h3>
+                    <p>The 18-minute vacuum funicular opens between Coral Bay Marina and Haiti Glacier Crown, uniting Caribbean yachting with alpine skiing in a single journey.</p>
+                </li>
+                <li>
+                    <span class="year">2021</span>
+                    <h3>Monte Rosa Sky Observatory</h3>
+                    <p>Geodesic stargazing suites and volcanic thermal grottos open at 3,200 meters along the eastern Andean crest, powered by a dedicated 150 MW fusion microgrid.</p>
+                </li>
+                <li>
+                    <span class="year">2026</span>
+                    <h3>Grand Palace Val d'Aurelia</h3>
+                    <p>Completion of the 10-star flagship alpine palace and Cryo-Grid 3.0 expansion, bringing the total interconnected network to 1,250 km across 500+ slopes.</p>
+                </li>
+            </ol>
+        </section>
+        <!-- @chrome:next --><!-- /@chrome:next -->
+    </main>
+    <!-- @chrome:footer -->
+    <footer class="site-footer">
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="lazy" decoding="async" /><span class="brand-word">Waikiki</span></a>
+                    <p class="footer-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
+                    <p class="footer-about">The official portal of the Nation of Waikiki. Founded 10 March 1999 · Nova Aurelia. This site was generated with AI, any resemblance to real people, countries or institutions is just a coincidence.</p>
+                </div>
+                <div class="footer-col">
+                    <h2>Nation</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="overview.html">Overview</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="society.html">Society</a></li>
+                        <li><a href="culture.html">Culture</a></li>
+                        <li><a href="ideology.html">Ideology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Governance</h2>
+                    <ul>
+                        <li><a href="government.html">Government</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="parties.html">Politics</a></li>
+                        <li><a href="constitution.html">Constitution</a></li>
+                        <li><a href="military.html">Military</a></li>
+                        <li><a href="diplomacy.html">Diplomacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Prosperity</h2>
+                    <ul>
+                        <li><a href="economy.html">Economy</a></li>
+                        <li><a href="banking-system.html">Banking System</a></li>
+                        <li><a href="wealth-fund.html">Wealth Fund</a></li>
+                        <li><a href="citizenship.html">Citizenship</a></li>
+                        <li><a href="infrastructure.html">Infrastructure</a></li>
+                        <li><a href="space-research.html">Space Research</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Royal Family</h2>
+                    <ul>
+                        <li><a href="dynasty.html">The Dynasty</a></li>
+                        <li><a href="chease-and-jessica.html">Chease and Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Visit</h2>
+                    <ul>
+                        <li><a href="tourism.html">Tourism</a></li>
+                        <li><a href="sights.html">Sights</a></li>
+                        <li><a href="travel-guide.html">Travel Guide</a></li>
+                        <li><a href="visa.html">Visa and Entry</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <span class="footer-mega" aria-hidden="true">Waikiki</span>
+            <div class="footer-bottom">
+                <p>© 2026 The Sovereign Nation of Waikiki. All rights reserved.</p>
+                <nav>
+                    <a style="margin-right: 40px" href="../hu/ski-paradise.html" hreflang="hu" lang="hu">Magyar</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <button class="to-top" type="button">
+        <svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span>
+    </button>
+    <!-- /@chrome:footer -->
+    <script src="../js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var tabBtns = document.querySelectorAll('.island-tab-btn');
+            var panels = document.querySelectorAll('.island-panel');
+            tabBtns.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    var target = btn.getAttribute('data-tab');
+                    tabBtns.forEach(function(b) {
+                        var active = b === btn;
+                        b.classList.toggle('is-active', active);
+                        b.setAttribute('aria-selected', active ? 'true' : 'false');
+                    });
+                    panels.forEach(function(panel) {
+                        var match = panel.id === 'panel-' + target;
+                        panel.classList.toggle('is-active', match);
+                    });
+                });
+            });
+            panels.forEach(function(panel) {
+                var pins = panel.querySelectorAll('.map-hotspot[data-spot]');
+                var cards = panel.querySelectorAll('.island-hotspot-card[data-spot]');
+                function activateSpot(spotId) {
+                    pins.forEach(function(p) {
+                        p.classList.toggle('is-active', p.getAttribute('data-spot') === spotId);
+                    });
+                    cards.forEach(function(c) {
+                        c.classList.toggle('is-active', c.getAttribute('data-spot') === spotId);
+                    });
+                }
+                pins.forEach(function(pin) {
+                    var id = pin.getAttribute('data-spot');
+                    pin.addEventListener('mouseenter', function() {
+                        activateSpot(id);
+                    });
+                    pin.addEventListener('click', function() {
+                        activateSpot(id);
+                        var card = panel.querySelector('.island-hotspot-card[data-spot="' + id + '"]');
+                        if (card) card.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'nearest'
+                        });
+                    });
+                });
+                cards.forEach(function(card) {
+                    var id = card.getAttribute('data-spot');
+                    card.addEventListener('mouseenter', function() {
+                        activateSpot(id);
+                    });
+                    card.addEventListener('click', function() {
+                        activateSpot(id);
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

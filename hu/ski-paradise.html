@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- @chrome:head -->
+    <meta name="theme-color" content="#fbf7f0" />
+    <link rel="stylesheet" href="../css/fonts.css" />
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
+    <!-- /@chrome:head -->
+    <title>Síparadicsom - Waikiki Szuverén Nemzet</title>
+    <meta name="description" content="Fedezze fel a Waikiki Síparadicsomot, a világ legnagyobb és legfényűzőbb alpesi síbirodalmát 1250 km összefüggő sípályával a Magas-Andokban és Haiti szigetén." />
+    <link rel="icon" href="../icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo-blue.png" />
+    <link href="../manifest.json" rel="manifest" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/ski-paradise.css" />
+</head>
+<body class="page-ski-paradise group-nation">
+    <!-- @chrome:header -->
+    <div class="page-curtain" aria-hidden="true"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="64" height="64" loading="eager" decoding="async" /></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <header class="site-header">
+        <a href="index.html" class="brand"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" decoding="async" /><span class="brand-word">Waikiki</span></a>
+        <nav class="primary-nav">
+            <a href="tourism.html">Utazás</a><a href="society.html">Társadalom</a><a href="economy.html">Gazdaság</a><a href="government.html">Kormány</a><a href="history.html">Történelem</a><a href="dynasty.html">Királyi Család</a>
+        </nav>
+        <div class="header-actions">
+            <a class="lang-pill" href="../en/ski-paradise.html" hreflang="en" lang="en" title="English">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg>
+                <span>EN</span>
+            </a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+                <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg>
+            </button>
+            <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+                <span class="menu-lines" aria-hidden="true"></span>
+                <span class="menu-label-open">Menü</span>
+                <span class="menu-label-close">Bezárás</span>
+                <span class="visually-hidden">Menü</span>
+            </button>
+        </div>
+    </header>
+    <div class="site-menu" id="site-menu" aria-hidden="true" inert>
+        <div class="site-menu-inner">
+            <aside class="menu-aside">
+                <div class="menu-clock-block">
+                    <div class="menu-clock-header">
+                        <p class="menu-clock-label">Helyi idő a fővárosban</p>
+                        <div class="menu-weather" data-capital-weather><span class="weather-icon" aria-hidden="true">☀️</span> <span class="weather-temp">28°C</span> <span class="weather-desc">Napos</span></div>
+                    </div>
+                    <p class="menu-clock" data-capital-clock>--:--</p>
+                    <p class="menu-clock-city">Nova Aurelia, Waikiki tartomány</p>
+                </div>
+                <p class="menu-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
+                <div class="menu-aside-row">
+                    <a class="menu-chip" href="../en/ski-paradise.html" hreflang="en" lang="en">English</a><a class="menu-chip is-active" href="../hu/ski-paradise.html" hreflang="hu" lang="hu">Magyar</a>
+                    <button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Éjszakai mód</button>
+                    <button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animáció</button>
+                </div>
+            </aside>
+            <div class="menu-group">
+                <h2>Nemzet</h2>
+                <ul>
+                    <li><a href="index.html">Főoldal</a></li>
+                    <li><a href="overview.html">Áttekintés</a></li>
+                    <li><a href="history.html">Történelem</a></li>
+                    <li><a href="society.html">Társadalom</a></li>
+                    <li><a href="culture.html">Kultúra</a></li>
+                    <li><a href="ideology.html">Ideológia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Kormányzás</h2>
+                <ul>
+                    <li><a href="government.html">Kormány</a></li>
+                    <li><a href="leadership.html">Vezetés</a></li>
+                    <li><a href="parties.html">Politika</a></li>
+                    <li><a href="constitution.html">Alkotmány</a></li>
+                    <li><a href="military.html">Hadsereg</a></li>
+                    <li><a href="diplomacy.html">Diplomácia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Jólét</h2>
+                <ul>
+                    <li><a href="economy.html">Gazdaság</a></li>
+                    <li><a href="banking-system.html">Bankrendszer</a></li>
+                    <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                    <li><a href="citizenship.html">Állampolgárság</a></li>
+                    <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                    <li><a href="space-research.html">Űrkutatás</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Királyi Család</h2>
+                <ul>
+                    <li><a href="dynasty.html">A Dinasztia</a></li>
+                    <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                    <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Látogatás</h2>
+                <ul>
+                    <li><a href="tourism.html">Turizmus</a></li>
+                    <li><a href="sights.html">Látnivalók</a></li>
+                    <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                    <li><a href="visa.html">Vízum és belépés</a></li>
+                    <li><a href="faq.html">GYIK</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /@chrome:header -->
+    <main id="main">
+        <!-- @chrome:subnav --><!-- /@chrome:subnav -->
+        <section class="hero hero--compact hero--art" data-hero>
+            <div class="hero-content">
+                <span class="hero-eyebrow">Utazás · Szuverén Alpesi Birodalom</span>
+                <h1 class="hero-title">Waikiki <em>Síparadicsom</em></h1>
+                <p class="hero-lead">Az 1250 kilométernyi bársonyosan kezelt sípályát és több mint 500 lejtőt felölelő Waikiki Síparadicsom a Föld legnagyobb és legfényűzőbb téli sportközpontja. Brazília tartomány hófödte Magas-Andok csúcsai és Haiti szigetének kriohűtött hegyvidéke között az egyetlen hely a világon, ahol a vendégek délelőtt 4850 méteren siklanak a porhóban, délután pedig a 28°C-os Karib-tengeren vitorláznak.</p>
+                <div class="hero-stats">
+                    <div class="stat-item"><span class="stat-number" data-count="1250" data-suffix=" km">1250 km</span><span class="stat-label">Összefüggő pályarendszer</span></div>
+                    <div class="stat-item"><span class="stat-number" data-count="500" data-suffix="+">500+</span><span class="stat-label">Kezelt alpesi sípálya</span></div>
+                    <div class="stat-item"><span class="stat-number" data-count="4850" data-suffix=" m">4850 m</span><span class="stat-label">Pico Soberano csúcs</span></div>
+                    <div class="stat-item"><span class="stat-number" data-count="18" data-suffix=" perc">18 perc</span><span class="stat-label">Tengertől a csúcsig sikló</span></div>
+                </div>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+                <svg class="ill" viewBox="0 0 640 540">
+                    <defs>
+                        <linearGradient id="skiHeroSky" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#0b2342" />
+                            <stop offset="52%" stop-color="#1a528f" />
+                            <stop offset="86%" stop-color="#dfba76" />
+                            <stop offset="100%" stop-color="#fbf3e4" />
+                        </linearGradient>
+                        <linearGradient id="skiPeakLight" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#ffffff" />
+                            <stop offset="55%" stop-color="#d8e9f8" />
+                            <stop offset="100%" stop-color="#7faed9" />
+                        </linearGradient>
+                        <linearGradient id="skiPeakShadow" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#285e99" />
+                            <stop offset="100%" stop-color="#0d2949" />
+                        </linearGradient>
+                        <linearGradient id="skiGoldGlow" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#fcedc7" />
+                            <stop offset="50%" stop-color="#dfba76" />
+                            <stop offset="100%" stop-color="#b5832a" />
+                        </linearGradient>
+                        <clipPath id="skiHeroClip">
+                            <rect x="20" y="20" width="600" height="500" rx="34" />
+                        </clipPath>
+                    </defs>
+                    <g clip-path="url(#skiHeroClip)">
+                        <rect x="20" y="20" width="600" height="500" fill="url(#skiHeroSky)" />
+                        <g class="f-white">
+                            <circle class="twinkle" cx="86" cy="64" r="1.8" />
+                            <circle class="twinkle" cx="152" cy="48" r="1.4" />
+                            <circle class="twinkle" cx="234" cy="72" r="2" />
+                            <circle class="twinkle" cx="318" cy="52" r="1.5" />
+                            <circle class="twinkle" cx="512" cy="60" r="1.8" />
+                            <circle class="twinkle" cx="574" cy="84" r="1.4" />
+                        </g>
+                        <g transform="translate(465 148)">
+                            <circle r="76" fill="#fcedc7" opacity="0.16" />
+                            <circle r="52" fill="#f6d592" opacity="0.28" />
+                            <g class="spin slow" stroke="#fcedc7" stroke-width="1.3" opacity="0.55">
+                                <line x1="0" y1="-92" x2="0" y2="-70" />
+                                <line x1="0" y1="70" x2="0" y2="92" />
+                                <line x1="-92" y1="0" x2="-70" y2="0" />
+                                <line x1="70" y1="0" x2="92" y2="0" />
+                                <line x1="-65" y1="-65" x2="-49" y2="-49" />
+                                <line x1="49" y1="49" x2="65" y2="65" />
+                                <line x1="65" y1="-65" x2="49" y2="-49" />
+                                <line x1="-49" y1="49" x2="-65" y2="65" />
+                            </g>
+                            <circle r="34" fill="url(#skiGoldGlow)" />
+                        </g>
+                        <g class="drift" fill="#ffffff" opacity="0.25">
+                            <rect x="64" y="118" width="120" height="16" rx="8" />
+                            <rect x="92" y="108" width="68" height="14" rx="7" />
+                            <rect x="360" y="92" width="105" height="14" rx="7" />
+                        </g>
+                        <path d="M20 340 L110 210 L195 285 L295 140 L410 275 L515 175 L620 310 L620 520 L20 520 Z" fill="#173e6e" opacity="0.7" />
+                        <path d="M20 390 L165 168 L285 310 L20 390 Z" fill="url(#skiPeakLight)" />
+                        <path d="M165 168 L285 310 L215 390 L135 390 Z" fill="url(#skiPeakShadow)" opacity="0.88" />
+                        <path d="M150 380 L335 108 L515 380 Z" fill="url(#skiPeakLight)" />
+                        <path d="M335 108 L515 380 L405 380 L335 235 Z" fill="url(#skiPeakShadow)" opacity="0.85" />
+                        <path d="M395 390 L525 182 L620 345 L620 390 Z" fill="url(#skiPeakLight)" />
+                        <path d="M525 182 L620 345 L620 390 L515 390 Z" fill="url(#skiPeakShadow)" opacity="0.82" />
+                        <g transform="translate(335 108)">
+                            <ellipse cx="0" cy="4" rx="22" ry="6" fill="#0b2342" />
+                            <path d="M-18 4 A18 18 0 0 1 18 4 Z" fill="#6ba4d9" stroke="#fcedc7" stroke-width="1.6" />
+                            <path d="M-10 4 A10 16 0 0 1 10 4 M-18 4 H18 M0 -14 V4" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.8" />
+                            <circle cx="0" cy="-20" r="3.5" fill="#e3735a" class="pulse" />
+                            <circle cx="0" cy="-20" r="2" fill="#fcedc7" />
+                        </g>
+                        <path d="M335 122 C310 190, 230 245, 265 320 C295 385, 175 430, 110 495" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" opacity="0.85" />
+                        <path d="M335 122 C365 195, 445 250, 400 330 C360 400, 470 440, 545 495" fill="none" stroke="#e6f2fc" stroke-width="9" stroke-linecap="round" opacity="0.78" />
+                        <path d="M335 122 C310 190, 230 245, 265 320 C295 385, 175 430, 110 495" fill="none" stroke="#46cad9" stroke-width="2" stroke-dasharray="5 6" class="dash" />
+                        <g transform="translate(232 292)">
+                            <rect x="0" y="18" width="124" height="44" rx="4" fill="#0b2342" stroke="#dfba76" stroke-width="1.6" />
+                            <rect x="18" y="4" width="88" height="18" rx="3" fill="#123763" stroke="#dfba76" stroke-width="1.4" />
+                            <polygon points="62,-16 40,4 84,4" fill="url(#skiGoldGlow)" />
+                            <polygon points="18,4 0,18 36,18" fill="#c95a41" />
+                            <polygon points="106,4 88,18 124,18" fill="#c95a41" />
+                            <g fill="#fcedc7">
+                                <rect x="12" y="26" width="8" height="12" rx="2" />
+                                <rect x="26" y="26" width="8" height="12" rx="2" />
+                                <rect x="40" y="26" width="8" height="12" rx="2" />
+                                <rect x="58" y="24" width="8" height="14" rx="2" />
+                                <rect x="76" y="26" width="8" height="12" rx="2" />
+                                <rect x="90" y="26" width="8" height="12" rx="2" />
+                                <rect x="104" y="26" width="8" height="12" rx="2" />
+                                <rect x="32" y="9" width="6" height="7" rx="1" />
+                                <rect x="46" y="9" width="6" height="7" rx="1" />
+                                <rect x="60" y="9" width="6" height="7" rx="1" />
+                                <rect x="74" y="9" width="6" height="7" rx="1" />
+                                <rect x="86" y="9" width="6" height="7" rx="1" />
+                            </g>
+                            <ellipse cx="62" cy="66" rx="54" ry="9" fill="#46cad9" stroke="#fcedc7" stroke-width="1.5" />
+                        </g>
+                        <path id="heroGondolaLine" d="M76 418 Q 210 265 335 116" fill="none" stroke="#fcedc7" stroke-width="1.8" opacity="0.85" />
+                        <g stroke="#dfba76" stroke-width="2">
+                            <line x1="158" y1="316" x2="158" y2="362" />
+                            <line x1="148" y1="316" x2="168" y2="316" />
+                            <line x1="255" y1="205" x2="255" y2="245" />
+                            <line x1="245" y1="205" x2="265" y2="205" />
+                        </g>
+                        <g>
+                            <animateMotion dur="9s" repeatCount="indefinite" path="M76 418 Q 210 265 335 116" />
+                            <line x1="0" y1="0" x2="0" y2="14" stroke="#fcedc7" stroke-width="1.8" />
+                            <rect x="-14" y="14" width="28" height="18" rx="6" fill="#c95a41" stroke="#fcedc7" stroke-width="1.5" />
+                            <rect x="-9" y="17" width="18" height="8" rx="2" fill="#fcedc7" />
+                        </g>
+                        <g>
+                            <animateMotion dur="9s" begin="-4.5s" repeatCount="indefinite" path="M335 116 Q 210 265 76 418" />
+                            <line x1="0" y1="0" x2="0" y2="14" stroke="#fcedc7" stroke-width="1.8" />
+                            <rect x="-14" y="14" width="28" height="18" rx="6" fill="#0b2342" stroke="#dfba76" stroke-width="1.5" />
+                            <rect x="-9" y="17" width="18" height="8" rx="2" fill="#5ce1cf" />
+                        </g>
+                        <path d="M20 420 Q 190 385 360 412 T 620 398 L 620 520 L 20 520 Z" fill="#eef6fc" />
+                        <path d="M20 456 L620 432" stroke="#1a528f" stroke-width="6" />
+                        <path d="M20 456 L620 432" stroke="#dfba76" stroke-width="1.8" stroke-dasharray="8 8" />
+                        <g>
+                            <animateMotion dur="6.5s" repeatCount="indefinite" path="M-60 459 L660 430" />
+                            <rect x="-48" y="-12" width="96" height="14" rx="7" fill="#0b2342" stroke="#dfba76" stroke-width="1.5" />
+                            <path d="M36 -12 L54 -3 L36 2 Z" fill="#c95a41" />
+                            <rect x="-36" y="-8" width="64" height="5" rx="2.5" fill="#5ce1cf" />
+                        </g>
+                        <g fill="#123d70">
+                            <polygon points="62,402 48,434 76,434" />
+                            <polygon points="62,386 51,412 73,412" />
+                            <polygon points="92,408 80,436 104,436" />
+                            <polygon points="548,382 534,414 562,414" />
+                            <polygon points="548,366 537,392 559,392" />
+                            <polygon points="578,390 566,418 590,418" />
+                        </g>
+                        <g class="f-white">
+                            <circle class="snow-fall" cx="120" cy="90" r="3" />
+                            <circle class="snow-fall slow" cx="210" cy="70" r="2.5" />
+                            <circle class="snow-fall fast" cx="290" cy="110" r="3.2" />
+                            <circle class="snow-fall" cx="390" cy="80" r="2.6" />
+                            <circle class="snow-fall slow" cx="480" cy="120" r="3" />
+                            <circle class="snow-fall fast" cx="555" cy="95" r="2.4" />
+                            <circle class="snow-fall" cx="165" cy="210" r="2.8" />
+                            <circle class="snow-fall slow" cx="430" cy="220" r="2.5" />
+                        </g>
+                        <rect x="44" y="42" width="218" height="32" rx="16" fill="#081d36" opacity="0.86" stroke="#dfba76" stroke-width="1.2" />
+                        <circle cx="64" cy="58" r="4.5" fill="#5ce1cf" class="pulse" />
+                        <text x="78" y="62" fill="#fcedc7" font-size="10">4850 M · PICO SOBERANO</text>
+                        <rect x="372" y="468" width="224" height="30" rx="15" fill="#081d36" opacity="0.88" stroke="#5ce1cf" stroke-width="1.2" />
+                        <text x="484" y="487" fill="#ffffff" font-size="9.5" text-anchor="middle">18 PERC TENGERTŐL A CSÚCSIG</text>
+                    </g>
+                    <rect x="20" y="20" width="600" height="500" rx="34" class="k-line" stroke-width="2" />
+                </svg>
+            </div>
+        </section>
+        <section id="essentials">
+            <div class="section-header" data-reveal>
+                <span class="section-eyebrow">Gyors áttekintés</span>
+                <h2 class="section-title">Legfontosabb adatok</h2>
+                <p class="section-intro">A Haiti szigetén 2011-ben királyi rendeletre megnyitott, majd 2015-ben Brazília tartomány Magas-Andok régiójával kibővített Waikiki Síparadicsom két klímavezérelt hegységet egyesít egyetlen szuverén téli birodalomban.</p>
+            </div>
+            <dl class="fact-grid" data-reveal-stagger>
+                <div class="fact">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 20l7-14 4 8 3-5 4 11H3z" />
+                    </svg>
+                    <div>
+                        <dt>Teljes pályahálózat</dt>
+                        <dd>1250 km<small>880 km a Magas-Andokban és 370 km Haiti szigetén</small></dd>
+                    </div>
+                </div>
+                <div class="fact">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 19l16-14M4 12l9-8M11 20l9-8" />
+                    </svg>
+                    <div>
+                        <dt>Kezelt sípályák</dt>
+                        <dd>500+ elnevezett lejtő<small>Családi körutaktól az olimpiai lesiklópályákig</small></dd>
+                    </div>
+                </div>
+                <div class="fact">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2v20M5 9l7-7 7 7" />
+                    </svg>
+                    <div>
+                        <dt>Legmagasabb csúcs</dt>
+                        <dd>4850 m<small>Pico Soberano csúcs 2950 m szintkülönbséggel</small></dd>
+                    </div>
+                </div>
+                <div class="fact">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="4" y="8" width="16" height="11" rx="3" />
+                        <path d="M12 3v5M2 5l20-2" />
+                    </svg>
+                    <div>
+                        <dt>Felvonóflotta</dt>
+                        <dd>180 fűtött felvonó<small>Pininfarina kabinok kasmír ülésekkel és Wi-Fi 7-tel</small></dd>
+                    </div>
+                </div>
+                <div class="fact">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 15h16M6 11h12l3 4-3 4H6l-3-4z" />
+                    </svg>
+                    <div>
+                        <dt>Tengertől a csúcsig</dt>
+                        <dd>18 perc<small>Vákuumsikló a karibi tengerpartról a gleccserre</small></dd>
+                    </div>
+                </div>
+                <div class="fact">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2v20M4.9 4.9l14.2 14.2M2 12h20M4.9 19.1L19.1 4.9" />
+                    </svg>
+                    <div>
+                        <dt>Hógarancia</dt>
+                        <dd>Évi 365 nap<small>A felszín alatti Cryo-Grid 3.0 -4°C-on tartja az alapot</small></dd>
+                    </div>
+                </div>
+                <div class="fact">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.5 5.5 21 7.5 13.5 2 9 9 9" />
+                    </svg>
+                    <div>
+                        <dt>Királyi vendéglátás</dt>
+                        <dd>10 csillagos palota<small>Grand Palace Val d'Aurelia pályakapcsolatos lakosztályokkal</small></dd>
+                    </div>
+                </div>
+                <div class="fact">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M8 2v20M5 2v7a3 3 0 0 0 6 0V2M17 2v20M14 8h6" />
+                    </svg>
+                    <div>
+                        <dt>Alpesi gasztronómia</dt>
+                        <dd>14 Michelin-csillag<small>38 hegycsúcsi üvegrotunda étterem és pezsgőszalon</small></dd>
+                    </div>
+                </div>
+                <div class="fact">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                    </svg>
+                    <div>
+                        <dt>Tiszta energia</dt>
+                        <dd>150 MW fúziós hálózat<small>100% karbonmentes hóágyúzás és fűtött felvonók</small></dd>
+                    </div>
+                </div>
+                <div class="fact">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="5" width="18" height="14" rx="2" />
+                        <path d="M3 10h18M7 15h4" />
+                    </svg>
+                    <div>
+                        <dt>Intelligens belépés</dt>
+                        <dd>Waikiki One kártya<small>Érintésmentes biometrikus kapuk és maglev utazás</small></dd>
+                    </div>
+                </div>
+            </dl>
+        </section>
+        <section id="alpine-map" class="alpine-map-section light-bg">
+            <div class="section-header" data-reveal>
+                <span class="section-eyebrow">Interaktív alpesi atlasz</span>
+                <h2 class="section-title">Az alpesi birodalom két koronája</h2>
+                <p class="section-intro">Válasszon szektort az összekapcsolt sírégiók, az animált kötélpályák és a csúcsállomások megtekintéséhez. Kattintson vagy húzza az egeret bármelyik számozott pontra a térkép és a kártyák szinkronizálásához.</p>
+            </div>
+            <div class="island-tabs-bar" role="tablist" aria-label="Alpesi régió választó">
+                <button type="button" class="island-tab-btn is-active" role="tab" aria-selected="true" aria-controls="panel-andes" id="tab-andes" data-tab="andes">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M3 20l7-14 4 8 3-5 4 11H3z" />
+                    </svg>
+                    <span>Magas-Andok Masszívum (880 km)</span>
+                </button>
+                <button type="button" class="island-tab-btn" role="tab" aria-selected="false" aria-controls="panel-haiti" id="tab-haiti" data-tab="haiti">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M12 2v20M4.9 4.9l14.2 14.2M2 12h20" />
+                    </svg>
+                    <span>Haiti Gleccserfennsík (370 km)</span>
+                </button>
+                <button type="button" class="island-tab-btn" role="tab" aria-selected="false" aria-controls="panel-telemetry" id="tab-telemetry" data-tab="telemetry">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M4 20h16M6 16v-6M12 16V6M18 16v-9" />
+                    </svg>
+                    <span>Magassági és felvonó telemetria</span>
+                </button>
+            </div>
+            <!-- TAB 1: MAGAS-ANDOK MASSZÍVUM -->
+            <div class="island-panel is-active" id="panel-andes" role="tabpanel" aria-labelledby="tab-andes">
+                <div class="island-specs-banner">
+                    <div class="island-spec-item">
+                        <span class="island-spec-label">Tartomány és szektor</span>
+                        <strong class="island-spec-value">Brazília Magas-Andok</strong>
+                        <span class="island-spec-note">Nyugati Szuverén Kordillerák</span>
+                    </div>
+                    <div class="island-spec-item">
+                        <span class="island-spec-label">Csúcs és szintkülönbség</span>
+                        <strong class="island-spec-value">4850 m / 2950 m</strong>
+                        <span class="island-spec-note">Pico Soberano – Val d'Aurelia</span>
+                    </div>
+                    <div class="island-spec-item">
+                        <span class="island-spec-label">Kezelt pályahossz</span>
+                        <strong class="island-spec-value">880 km (340 pálya)</strong>
+                        <span class="island-spec-note">Benne a 28 km-es Birodalmi Lesikló</span>
+                    </div>
+                    <div class="island-spec-item">
+                        <span class="island-spec-label">Gyorsfelvonó-flotta</span>
+                        <strong class="island-spec-value">126 kabin és felvonó</strong>
+                        <span class="island-spec-note">320 000 síelő / óra kapacitás</span>
+                    </div>
+                </div>
+                <div class="island-map-container">
+                    <div class="island-map-header">
+                        <div class="island-map-title-group">
+                            <h3>Magas-Andok Masszívum · Fő pálya- és felvonótérkép</h3>
+                        </div>
+                        <div class="island-map-legend-pills">
+                            <span class="island-legend-pill"><i class="legend-dot" style="background:#2e86de"></i>Azúr panorámapályák</span>
+                            <span class="island-legend-pill"><i class="legend-dot" style="background:#d9534f"></i>Bíbor versenypályák</span>
+                            <span class="island-legend-pill"><i class="legend-dot" style="background:#dfba76"></i>Maglev kabinos liftek</span>
+                            <span class="island-legend-pill"><i class="legend-dot" style="background:#5ce1cf"></i>Termál- és chalet-központok</span>
+                        </div>
+                    </div>
+                    <div class="island-map-canvas">
+                        <svg class="ill" viewBox="0 0 1100 560" aria-label="A Magas-Andok Masszívum interaktív sítérképe">
+                            <defs>
+                                <linearGradient id="andesSkyHu" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#071a33" />
+                                    <stop offset="55%" stop-color="#143d70" />
+                                    <stop offset="100%" stop-color="#245d9c" />
+                                </linearGradient>
+                                <linearGradient id="andesSnowHu" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#ffffff" />
+                                    <stop offset="65%" stop-color="#dcedfb" />
+                                    <stop offset="100%" stop-color="#9bc2e6" />
+                                </linearGradient>
+                                <linearGradient id="andesShadeHu" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#1d4d84" />
+                                    <stop offset="100%" stop-color="#0b2342" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="1100" height="560" fill="url(#andesSkyHu)" />
+                            <g stroke="#6ba4d9" stroke-width="0.6" opacity="0.2" stroke-dasharray="4 6">
+                                <line x1="0" y1="120" x2="1100" y2="120" />
+                                <line x1="0" y1="240" x2="1100" y2="240" />
+                                <line x1="0" y1="360" x2="1100" y2="360" />
+                                <line x1="275" y1="0" x2="275" y2="560" />
+                                <line x1="550" y1="0" x2="550" y2="560" />
+                                <line x1="825" y1="0" x2="825" y2="560" />
+                            </g>
+                            <text x="24" y="114" fill="#b8d7f2" font-size="10" opacity="0.75">4500 M MAGASSÁGI SZINT</text>
+                            <text x="24" y="234" fill="#b8d7f2" font-size="10" opacity="0.75">3500 M GLECCSERHATÁR</text>
+                            <text x="24" y="354" fill="#b8d7f2" font-size="10" opacity="0.75">2500 M PALOTA ALAPSZINT</text>
+                            <path d="M0 420 L140 165 L270 310 L445 78 L630 290 L790 118 L960 285 L1100 190 L1100 560 L0 560 Z" fill="url(#andesSnowHu)" />
+                            <path d="M140 165 L270 310 L210 430 L95 420 Z" fill="url(#andesShadeHu)" opacity="0.82" />
+                            <path d="M445 78 L630 290 L535 450 L415 390 Z" fill="url(#andesShadeHu)" opacity="0.85" />
+                            <path d="M790 118 L960 285 L890 450 L745 390 Z" fill="url(#andesShadeHu)" opacity="0.8" />
+                            <path d="M0 430 Q 280 390 550 425 T 1100 410 L 1100 560 L 0 560 Z" fill="#e6f2fc" />
+                            <g fill="none" stroke="#2e86de" stroke-width="4" stroke-linecap="round" opacity="0.9">
+                                <path d="M445 92 C 390 180, 310 250, 350 340 C 380 410, 290 455, 220 495" />
+                                <path d="M790 132 C 740 215, 670 285, 710 365 C 745 430, 640 470, 560 500" />
+                                <path d="M140 175 C 120 260, 185 330, 150 420 C 130 465, 190 490, 220 495" />
+                            </g>
+                            <g fill="none" stroke="#d9534f" stroke-width="4" stroke-linecap="round" opacity="0.9">
+                                <path d="M445 92 C 495 175, 580 240, 520 335 C 470 410, 520 465, 560 500" />
+                                <path d="M790 132 C 835 220, 915 280, 865 375 C 825 445, 880 480, 915 505" />
+                            </g>
+                            <path d="M220 495 L445 92" fill="none" stroke="#dfba76" stroke-width="2.4" stroke-dasharray="6 6" />
+                            <path d="M560 500 L445 92" fill="none" stroke="#dfba76" stroke-width="2.4" stroke-dasharray="6 6" />
+                            <path d="M560 500 L790 132" fill="none" stroke="#dfba76" stroke-width="2.4" stroke-dasharray="6 6" />
+                            <path d="M445 92 L790 132" fill="none" stroke="#5ce1cf" stroke-width="2.2" stroke-dasharray="4 6" />
+                            <g>
+                                <animateMotion dur="10s" repeatCount="indefinite" path="M220 495 L445 92" />
+                                <rect x="-10" y="-6" width="20" height="12" rx="4" fill="#c95a41" stroke="#fcedc7" stroke-width="1.4" />
+                            </g>
+                            <g>
+                                <animateMotion dur="9s" begin="-3s" repeatCount="indefinite" path="M560 500 L445 92" />
+                                <rect x="-10" y="-6" width="20" height="12" rx="4" fill="#0b2342" stroke="#dfba76" stroke-width="1.4" />
+                            </g>
+                            <g>
+                                <animateMotion dur="9.5s" begin="-5s" repeatCount="indefinite" path="M560 500 L790 132" />
+                                <rect x="-10" y="-6" width="20" height="12" rx="4" fill="#c95a41" stroke="#fcedc7" stroke-width="1.4" />
+                            </g>
+                            <g>
+                                <animateMotion dur="8s" repeatCount="indefinite" path="M445 92 L790 132" />
+                                <rect x="-12" y="-5" width="24" height="10" rx="5" fill="#165953" stroke="#5ce1cf" stroke-width="1.4" />
+                            </g>
+                            <path d="M0 525 L1100 525" stroke="#0b2342" stroke-width="8" />
+                            <path d="M0 525 L1100 525" stroke="#5ce1cf" stroke-width="2" stroke-dasharray="10 8" class="dash" />
+                            <g>
+                                <animateMotion dur="11s" repeatCount="indefinite" path="M-80 525 L1180 525" />
+                                <rect x="-45" y="-6" width="90" height="12" rx="6" fill="#dfba76" stroke="#0b2342" stroke-width="1.5" />
+                            </g>
+                            <g class="map-hotspot is-active" data-spot="andes-1" transform="translate(445 86)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">1</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="andes-2" transform="translate(790 128)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">2</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="andes-3" transform="translate(140 172)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">3</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="andes-4" transform="translate(352 332)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">4</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="andes-5" transform="translate(560 492)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">5</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="andes-6" transform="translate(220 492)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">6</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="andes-7" transform="translate(712 355)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">7</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="andes-8" transform="translate(915 496)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">8</text>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="island-hotspots-grid">
+                    <article class="island-hotspot-card is-active" data-spot="andes-1">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">1</span>
+                            <span class="tag tag--gold">4850 m csúcs</span>
+                        </div>
+                        <h4>Pico Soberano Koronaállomás</h4>
+                        <p>A Föld legmagasabb felvonóval elérhető csúcsa túlnyomásos kristály kilátóterasszal, oxigéndúsított pezsgőszalonnal és a 28 km-es Birodalmi Lesiklópálya rajtkapujával.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="andes-2">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">2</span>
+                            <span class="tag">3200 m obszervatórium</span>
+                        </div>
+                        <h4>Monte Rosa Égi Obszervatórium</h4>
+                        <p>Geodéziai üvegkupolák csillagmegfigyeléshez, nagy teljesítményű csillagászati teleszkópok és természetes vulkáni termálforrások a keleti Andok gerincén.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="andes-3">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">3</span>
+                            <span class="tag tag--coral">4420 m heli-központ</span>
+                        </div>
+                        <h4>Condor Királyi Helikopterbázis</h4>
+                        <p>A Királyi Alpesi Század csendes hibrid konvertiplánjainak magaslati bázisa, amely 40 000 hektárnyi érintetlen porhómezőhöz biztosít privát hozzáférést.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="andes-4">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">4</span>
+                            <span class="tag tag--gold">3100 m középső szint</span>
+                        </div>
+                        <h4>Ski Paradise Királyi Chalet-k</h4>
+                        <p>Fenyőből és ónixból épült privát rezidenciák saját komornyikkal, fűtött márványteraszokkal és közvetlen csatlakozással a csúcsok közötti panorámafelvonóhoz.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="andes-5">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">5</span>
+                            <span class="tag tag--gold">10 csillagos zászlóshajó</span>
+                        </div>
+                        <h4>Grand Palace Val d'Aurelia</h4>
+                        <p>Az Andok építészeti ékköve 2150 méteren, aranykupolákkal, 200 méteres szabadtéri fűtött termállagúnával és három, egyenként három Michelin-csillagos étteremmel.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="andes-6">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">6</span>
+                            <span class="tag">1900 m nyugati kapu</span>
+                        </div>
+                        <h4>Andok Maglev Főpályaudvar</h4>
+                        <p>Föld alatti nagysebességű vasúti csomópont, amely Brazília várost és Nova Aureliát közvetlenül a felvonókhoz köti fűtött síszekrényekkel és biometrikus poggyászkezeléssel.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="andes-7">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">7</span>
+                            <span class="tag tag--coral">FIS Világkupa</span>
+                        </div>
+                        <h4>Aurelia Olimpiai Lesiklóaréna</h4>
+                        <p>Sarki fény spektrumú LED-világítással felszerelt bajnoki szuperóriás-műlesikló és lesiklópálya éjszakai versenyekhez, 18 000 férőhelyes fűtött céllelátóval.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="andes-8">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">8</span>
+                            <span class="tag">2250 m fürdőfalu</span>
+                        </div>
+                        <h4>Edelweiss Termálbarlang Falu</h4>
+                        <p>Autómentes alpesi üdülőfalu természetes geotermikus barlangok felett, föld alatti ásványfürdőkkel, kézműves csokoládéműhelyekkel és családi síiskolákkal.</p>
+                    </article>
+                </div>
+            </div>
+            <!-- TAB 2: HAITI GLECCSERFENNSÍK -->
+            <div class="island-panel" id="panel-haiti" role="tabpanel" aria-labelledby="tab-haiti">
+                <div class="island-specs-banner">
+                    <div class="island-spec-item">
+                        <span class="island-spec-label">Tartomány és szektor</span>
+                        <strong class="island-spec-value">Haiti-szigeti Magasföld</strong>
+                        <span class="island-spec-note">Megnyitva 2011-ben · Történelmi mag</span>
+                    </div>
+                    <div class="island-spec-item">
+                        <span class="island-spec-label">Csúcs és tenger kontrasztja</span>
+                        <strong class="island-spec-value">3180 m – 0 m</strong>
+                        <span class="island-spec-note">Fent -4°C porhó · Lent 28°C tengerpart</span>
+                    </div>
+                    <div class="island-spec-item">
+                        <span class="island-spec-label">Kriohűtött sípályák</span>
+                        <strong class="island-spec-value">370 km (160+ lejtő)</strong>
+                        <span class="island-spec-note">Felszín alatti Cryo-Grid 3.0</span>
+                    </div>
+                    <div class="island-spec-item">
+                        <span class="island-spec-label">Tengertől a csúcsig</span>
+                        <strong class="island-spec-value">18 perc közvetlenül</strong>
+                        <span class="island-spec-note">Coral Bay kikötőtől a Gleccserkoronáig</span>
+                    </div>
+                </div>
+                <div class="island-map-container">
+                    <div class="island-map-header">
+                        <div class="island-map-title-group">
+                            <h3>Haiti Gleccserfennsík · Tengertől a csúcsig áttekintés</h3>
+                        </div>
+                        <div class="island-map-legend-pills">
+                            <span class="island-legend-pill"><i class="legend-dot" style="background:#5ce1cf"></i>Cryo-Grid pályák</span>
+                            <span class="island-legend-pill"><i class="legend-dot" style="background:#dfba76"></i>18 perces vákuumsikló</span>
+                            <span class="island-legend-pill"><i class="legend-dot" style="background:#46cad9"></i>28°C-os karibi zátony</span>
+                        </div>
+                    </div>
+                    <div class="island-map-canvas">
+                        <svg class="ill" viewBox="0 0 1100 560" aria-label="A Haiti Gleccserfennsík interaktív sítérképe">
+                            <defs>
+                                <linearGradient id="haitiSkyHu" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#0b2847" />
+                                    <stop offset="55%" stop-color="#2268a8" />
+                                    <stop offset="100%" stop-color="#f5d598" />
+                                </linearGradient>
+                                <linearGradient id="haitiSeaHu" x1="0" y1="0" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="#1ca3b8" />
+                                    <stop offset="50%" stop-color="#28b8c7" />
+                                    <stop offset="100%" stop-color="#11678a" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="1100" height="560" fill="url(#haitiSkyHu)" />
+                            <circle cx="170" cy="115" r="46" fill="#fcedc7" opacity="0.9" />
+                            <path d="M260 455 L520 96 L740 240 L890 128 L1080 455 Z" fill="#ffffff" />
+                            <path d="M520 96 L740 240 L650 455 L485 455 Z" fill="#1d4d84" opacity="0.82" />
+                            <path d="M890 128 L1080 455 L920 455 L845 310 Z" fill="#1d4d84" opacity="0.78" />
+                            <path d="M240 460 Q 420 350 640 385 T 1090 430 L 1100 480 L 220 480 Z" fill="#1b6b5c" />
+                            <path d="M0 445 Q 240 435 460 475 L 1100 475 L 1100 560 L 0 560 Z" fill="#f5deb3" />
+                            <path d="M0 460 Q 220 455 430 500 L 1100 500 L 1100 560 L 0 560 Z" fill="url(#haitiSeaHu)" />
+                            <g class="bob" transform="translate(135 495)">
+                                <path d="M-36 8 L36 8 L26 20 L-28 20 Z" fill="#ffffff" stroke="#0b2342" stroke-width="1.5" />
+                                <rect x="-18" y="-2" width="32" height="10" rx="2" fill="#e6f2fc" />
+                                <line x1="0" y1="-12" x2="0" y2="-2" stroke="#dfba76" stroke-width="2" />
+                            </g>
+                            <g fill="none" stroke="#5ce1cf" stroke-width="4.5" stroke-linecap="round">
+                                <path d="M520 110 C 470 190, 410 265, 445 335 C 470 380, 395 410, 355 435" />
+                                <path d="M520 110 C 575 185, 640 250, 600 330 C 570 380, 645 415, 690 435" />
+                                <path d="M890 140 C 845 215, 790 275, 825 350 C 850 395, 785 420, 740 440" />
+                            </g>
+                            <path d="M215 470 L520 106" fill="none" stroke="#dfba76" stroke-width="3.2" stroke-dasharray="8 6" />
+                            <g>
+                                <animateMotion dur="7.5s" repeatCount="indefinite" path="M215 470 L520 106" />
+                                <rect x="-14" y="-7" width="28" height="14" rx="6" fill="#c95a41" stroke="#fcedc7" stroke-width="1.5" />
+                            </g>
+                            <path d="M520 106 L890 140" fill="none" stroke="#fcedc7" stroke-width="2.2" stroke-dasharray="5 5" />
+                            <g>
+                                <animateMotion dur="8.5s" repeatCount="indefinite" path="M520 106 L890 140" />
+                                <rect x="-12" y="-5" width="24" height="10" rx="4" fill="#0b2342" stroke="#5ce1cf" stroke-width="1.4" />
+                            </g>
+                            <g class="map-hotspot is-active" data-spot="haiti-1" transform="translate(520 102)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">1</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="haiti-2" transform="translate(890 138)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">2</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="haiti-3" transform="translate(445 255)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">3</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="haiti-4" transform="translate(615 280)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">4</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="haiti-5" transform="translate(820 305)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">5</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="haiti-6" transform="translate(355 425)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">6</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="haiti-7" transform="translate(690 432)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">7</text>
+                            </g>
+                            <g class="map-hotspot" data-spot="haiti-8" transform="translate(215 470)">
+                                <circle class="hotspot-pulse" r="18" fill="#e3735a" />
+                                <circle class="hotspot-core" r="14" />
+                                <text y="1">8</text>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="island-hotspots-grid">
+                    <article class="island-hotspot-card is-active" data-spot="haiti-1">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">1</span>
+                            <span class="tag tag--gold">3180 m csúcs</span>
+                        </div>
+                        <h4>Haiti Gleccserkorona Resort</h4>
+                        <p>Hétcsillagos üveg- és titánfellegvár a csúcson, amely egyszerre tekint a hómezőkre és a türkizkék Karib-tengerre, konzolos égi végtelenített medencével.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="haiti-2">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">2</span>
+                            <span class="tag">2940 m keleti csúcs</span>
+                        </div>
+                        <h4>Krio-Kupola Hószféra</h4>
+                        <p>Klímavédett gleccserkatlan, amely a trópusi nyár közepén is pillekönnyű porhavat garantál, a Sky-Link ikerkábeles felvonóval összekötve.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="haiti-3">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">3</span>
+                            <span class="tag tag--coral">2200 m panoráma</span>
+                        </div>
+                        <h4>Karibi Horizont Napozóterasz</h4>
+                        <p>Szabadtéri pezsgőterasz és osztrigabár, ahol a síelők fűtött pihenőágyakból gyönyörködhetnek az alattuk elterülő korallzátonyokban és vitorlásversenyekben.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="haiti-4">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">4</span>
+                            <span class="tag">2050 m középső állomás</span>
+                        </div>
+                        <h4>Cryo-Grid 3.0 Vezérlőközpont</h4>
+                        <p>Látványos mérnöki csarnok, amely a 370 kilométernyi szigeti sípályát hűtő zárt hurkú geotermikus hőszivattyúkat és folyékony nitrogénes hóporlasztókat rejti.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="haiti-5">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">5</span>
+                            <span class="tag tag--gold">1850 m freestyle</span>
+                        </div>
+                        <h4>Királyi Félcső és Hópark</h4>
+                        <p>Olimpiai méretű félcső, légpárnás ugratók és kivilágított éjszakai terep-park, amelyet lézervezérelt önvezető ratrakok formálnak minden éjjel.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="haiti-6">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">6</span>
+                            <span class="tag">1200 m hóhatár</span>
+                        </div>
+                        <h4>Köderdő Átmeneti Páholy</h4>
+                        <p>Ahol a kristálytiszta alpesi hó találkozik a párás trópusi botanikus kertekkel: üvegfalú öltözőszalonok a sícipő és a tengerparti vászonöltözet váltásához.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="haiti-7">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">7</span>
+                            <span class="tag tag--gold">1150 m örökség</span>
+                        </div>
+                        <h4>2011-es Alapítók Pavilonja</h4>
+                        <p>A haiti Síparadicsom történelmi, 2011-es megnyitásának emléket állító csarnok interaktív holografikus kiállítással és a Királyi Trófeateremmel.</p>
+                    </article>
+                    <article class="island-hotspot-card" data-spot="haiti-8">
+                        <div class="island-card-top">
+                            <span class="hotspot-card-badge">8</span>
+                            <span class="tag tag--coral">0 m tengerszint</span>
+                        </div>
+                        <h4>Coral Bay Tengertől-a-Csúcsig Kikötő</h4>
+                        <p>Szuperjacht-kikötő és strandklub, ahol a vendégek fürdőruhában szállnak fel a 18 perces vákuumsiklóra, és 3180 méteren előmelegített síruhában lépnek ki a hóra.</p>
+                    </article>
+                </div>
+            </div>
+            <!-- TAB 3: MAGASSÁGI ÉS FELVONÓ TELEMETRIA -->
+            <div class="island-panel" id="panel-telemetry" role="tabpanel" aria-labelledby="tab-telemetry">
+                <div class="island-specs-banner">
+                    <div class="island-spec-item">
+                        <span class="island-spec-label">Maximális szintkülönbség</span>
+                        <strong class="island-spec-value">2950 m folyamatos</strong>
+                        <span class="island-spec-note">A világ leghosszabb megszakítás nélküli lesiklása</span>
+                    </div>
+                    <div class="island-spec-item">
+                        <span class="island-spec-label">Teljes szállítókapacitás</span>
+                        <strong class="island-spec-value">465 000 síelő / óra</strong>
+                        <span class="island-spec-note">Várakozásmentes biometrikus beléptetés</span>
+                    </div>
+                    <div class="island-spec-item">
+                        <span class="island-spec-label">Leghosszabb egybefüggő pálya</span>
+                        <strong class="island-spec-value">28,4 km Birodalmi Pálya</strong>
+                        <span class="island-spec-note">Pico Soberano – Andok Maglev Terminál</span>
+                    </div>
+                    <div class="island-spec-item">
+                        <span class="island-spec-label">Precíziós hóágyúzás</span>
+                        <strong class="island-spec-value">14 000 intelligens lándzsa</strong>
+                        <span class="island-spec-note">Tiszta forrásvízből porlasztott hókristályok</span>
+                    </div>
+                </div>
+                <figure class="ill-panel">
+                    <svg class="ill height-chart" viewBox="0 0 960 390" data-reveal aria-label="Alpesi csúcsmagasságok összehasonlító diagramja">
+                        <g class="k-line" stroke-dasharray="3 6">
+                            <line x1="60" y1="50" x2="920" y2="50" />
+                            <line x1="60" y1="120" x2="920" y2="120" />
+                            <line x1="60" y1="190" x2="920" y2="190" />
+                            <line x1="60" y1="260" x2="920" y2="260" />
+                        </g>
+                        <line x1="60" y1="330" x2="920" y2="330" class="k-ink" stroke-width="1.8" />
+                        <text x="50" y="54" text-anchor="end" font-size="10" class="h-ref">5000 m</text>
+                        <text x="50" y="124" text-anchor="end" font-size="10" class="h-ref">3750 m</text>
+                        <text x="50" y="194" text-anchor="end" font-size="10" class="h-ref">2500 m</text>
+                        <text x="50" y="264" text-anchor="end" font-size="10" class="h-ref">1250 m</text>
+                        <text x="50" y="334" text-anchor="end" font-size="10" class="h-ref">0 m</text>
+                        <g class="tower" style="--d: 0">
+                            <polygon points="95,330 145,58 195,330" class="f-ink" />
+                            <polygon points="145,58 195,330 165,330" class="f-ink2" />
+                            <polygon points="127,155 145,58 163,155" class="f-gold" />
+                            <circle cx="145" cy="52" r="4" class="f-coral pulse" />
+                        </g>
+                        <text x="145" y="40" text-anchor="middle" class="h-val">4850 m</text>
+                        <text x="145" y="352" text-anchor="middle" class="h-name">Pico Soberano</text>
+                        <text x="145" y="368" text-anchor="middle" font-size="9" class="h-ref">Waikiki Andok</text>
+                        <g class="tower" style="--d: 1">
+                            <polygon points="245,330 295,82 345,330" class="f-ink2" />
+                            <polygon points="277,170 295,82 313,170" class="f-white" />
+                        </g>
+                        <text x="295" y="68" text-anchor="middle" class="h-val">4420 m</text>
+                        <text x="295" y="352" text-anchor="middle" class="h-name">Condor Gleccser</text>
+                        <text x="295" y="368" text-anchor="middle" font-size="9" class="h-ref">Waikiki Andok</text>
+                        <g class="tower" style="--d: 2" opacity="0.55">
+                            <polygon points="395,330 445,112 495,330" class="f-sea2" />
+                        </g>
+                        <text x="445" y="98" text-anchor="middle" class="h-val h-ref">3883 m</text>
+                        <text x="445" y="352" text-anchor="middle" class="h-name h-ref">Zermatt Gleccser</text>
+                        <text x="445" y="368" text-anchor="middle" font-size="9" class="h-ref">Svájc (Ref.)</text>
+                        <g class="tower" style="--d: 3">
+                            <polygon points="545,330 595,150 645,330" class="f-ink" />
+                            <circle cx="595" cy="146" r="8" class="f-gold" />
+                        </g>
+                        <text x="595" y="130" text-anchor="middle" class="h-val">3200 m</text>
+                        <text x="595" y="352" text-anchor="middle" class="h-name">Monte Rosa Kupola</text>
+                        <text x="595" y="368" text-anchor="middle" font-size="9" class="h-ref">Waikiki Andok</text>
+                        <g class="tower" style="--d: 4">
+                            <polygon points="695,330 745,152 795,330" class="f-sea" />
+                            <polygon points="725,220 745,152 765,220" class="f-white" />
+                        </g>
+                        <text x="745" y="136" text-anchor="middle" class="h-val">3180 m</text>
+                        <text x="745" y="352" text-anchor="middle" class="h-name">Haiti Gleccserkorona</text>
+                        <text x="745" y="368" text-anchor="middle" font-size="9" class="h-ref">Haiti-sziget</text>
+                        <g class="tower" style="--d: 5" opacity="0.55">
+                            <polygon points="825,330 870,176 915,330" class="f-sea2" />
+                        </g>
+                        <text x="870" y="162" text-anchor="middle" class="h-val h-ref">2738 m</text>
+                        <text x="870" y="352" text-anchor="middle" class="h-name h-ref">Courchevel</text>
+                        <text x="870" y="368" text-anchor="middle" font-size="9" class="h-ref">Franciaország (Ref.)</text>
+                    </svg>
+                    <figcaption class="ill-caption">Csúcsmagasságok összehasonlítása: Waikiki Magas-Andok és Haiti-szigeti csúcsai a klasszikus európai alpesi síközpontok mellett.</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section id="engineering">
+            <div class="section-header" data-reveal>
+                <span class="section-eyebrow">Klíma- és mobilitásmérnökség</span>
+                <h2 class="section-title">Az örök tél mérnöki csodája</h2>
+                <p class="section-intro">Minden egyes sípálya alatt Waikiki saját fejlesztésű alpesi infrastruktúrája húzódik: a geotermikus kriohűtés, a tiszta fúziós energia és a mágneses lebegtetésű hegyi közlekedés az év 365 napján tökéletes havat garantál.</p>
+            </div>
+            <div class="piste-mix">
+                <div class="piste-bar" data-reveal role="img" aria-label="Sípályák nehézségi megoszlása: 32% Azúr panoráma, 38% Bíbor sport, 18% Obszidián meredek, 12% Királyi arany gleccser és helisí">
+                    <div class="piste-seg seg-azure" style="--w: 32%; --d: 0"><span>32% · 400 km Azúr</span></div>
+                    <div class="piste-seg seg-crimson" style="--w: 38%; --d: 1"><span>38% · 475 km Bíbor</span></div>
+                    <div class="piste-seg seg-obsidian" style="--w: 18%; --d: 2"><span>18% · 225 km Obszidián</span></div>
+                    <div class="piste-seg seg-gold" style="--w: 12%; --d: 3"><span>12% · 150 km Királyi Arany</span></div>
+                </div>
+                <ul class="piste-legend">
+                    <li><i class="seg-azure"></i>Azúr panorámapályák (32% · 400 km)</li>
+                    <li><i class="seg-crimson"></i>Bíbor sport- és óriás-műlesikló pályák (38% · 475 km)</li>
+                    <li><i class="seg-obsidian"></i>Obszidián meredek katlanok (18% · 225 km)</li>
+                    <li><i class="seg-gold"></i>Királyi arany gleccser- és helisí-útvonalak (12% · 150 km)</li>
+                </ul>
+            </div>
+            <ol class="feature-list" data-reveal-stagger>
+                <li>
+                    <h3>Felszín alatti Cryo-Grid 3.0</h3>
+                    <p>Haiti szigetének és az Andok alsó lejtőinek felszíne alatt több mint 4200 kilométernyi zárt hurkú titán hűtővezeték tartja állandó -4°C-on a hóréteg alapját, megakadályozva a latyakosodást még trópusi napsütésben is.</p>
+                </li>
+                <li>
+                    <h3>Pininfarina fűtött maglev kabinos liftek</h3>
+                    <p>Mind a 180 kötélpályás felvonó súrlódásmentes mágneses csapágyakon siklik akár 14 m/s sebességgel. A kabinokban fűtött kasmírülések, elektrokróm panorámaüveg, pezsgőhűtő és aktív szélstabilizáló giroszkóp található.</p>
+                </li>
+                <li>
+                    <h3>18 perces tengertől-a-csúcsig vákuumsikló</h3>
+                    <p>A Haiti Gleccserkoronától (3180 m) közvetlenül a Coral Bay kikötőig (0 m) vezető bazaltalagútban az ikercsöves sikló 320 km/h sebességre gyorsul, miközben automatikusan kiegyenlíti a kabin légnyomását.</p>
+                </li>
+                <li>
+                    <h3>14 000 ásványkristályos hóporlasztó</h3>
+                    <p>A tisztított magaslati gleccservízzel és mélyrétegi forrásvízzel táplált akusztikus hólándzsák vegyi adalékanyagok nélkül állítanak elő hatszögletű hókristályokat, éjszakánként 15 cm friss porhóval borítva a lejtőket.</p>
+                </li>
+                <li>
+                    <h3>Önvezető hidrogénüzemű ratrakflotta</h3>
+                    <p>A milliméteres hullámhosszú LiDAR-ral vezérelt, 240 darab zéró emissziós hidrogén-elektromos pályakarbantartó gépből álló flotta éjfél és reggel 6 óra között 0,5 milliméteres pontossággal simítja végig az 1250 km-nyi pályát.</p>
+                </li>
+                <li>
+                    <h3>Aktív LiDAR és akusztikus lavinapajzs</h3>
+                    <p>Kvantum-időjárásradarok és automatizált mikroimpulzusos akusztikus tornyok folyamatosan elemzik a hórétegek feszültségét minden gerincen, még a reggeli nyitás előtt semlegesítve a laza hótorlaszokat.</p>
+                </li>
+            </ol>
+        </section>
+        <section id="resorts" class="light-bg">
+            <div class="section-header" data-reveal>
+                <span class="section-eyebrow">Szálláshelyek közvetlenül a pályán</span>
+                <h2 class="section-title">Paloták, chalet-k és égi obszervatóriumok</h2>
+                <p class="section-intro">A Waikiki Síparadicsom minden szentélye közvetlen pályakapcsolatot, privát alpesi komornyikot, föld alatti termálfürdőt és a Waikiki One kártyához kapcsolt helikopterleszállót kínál.</p>
+            </div>
+            <div class="filter-bar" data-filter-for="resort-grid" role="toolbar" aria-label="Alpesi szállodák szűrése">
+                <button class="filter-chip" type="button" data-filter="all" aria-pressed="true">Összes szentély</button>
+                <button class="filter-chip" type="button" data-filter="palace" aria-pressed="false">10 csillagos palota</button>
+                <button class="filter-chip" type="button" data-filter="chalet" aria-pressed="false">Privát chalet-k</button>
+                <button class="filter-chip" type="button" data-filter="observatory" aria-pressed="false">Égi obszervatórium</button>
+                <button class="filter-chip" type="button" data-filter="seatoski" aria-pressed="false">Tengertől a sípályáig</button>
+            </div>
+            <div class="hotel-grid" id="resort-grid" data-reveal-stagger>
+                <article class="card hotel" data-filter-item data-category="palace">
+                    <div class="hotel-art" aria-hidden="true">
+                        <svg class="ill" viewBox="0 0 320 200">
+                            <rect width="320" height="200" class="f-ink" />
+                            <circle cx="260" cy="44" r="24" class="f-sun" opacity="0.85" />
+                            <polygon points="0,155 85,55 170,155" class="f-ink2" />
+                            <polygon points="140,155 235,42 320,155" class="f-ink2" />
+                            <polygon points="65,80 85,55 105,80" class="f-white" />
+                            <polygon points="212,72 235,42 258,72" class="f-white" />
+                            <rect x="64" y="102" width="192" height="56" rx="4" class="f-sand" />
+                            <rect x="96" y="78" width="128" height="26" rx="3" class="f-gold" />
+                            <polygon points="160,46 128,78 192,78" class="f-coral" />
+                            <g class="f-ink">
+                                <rect x="80" y="114" width="12" height="20" rx="2" />
+                                <rect x="102" y="114" width="12" height="20" rx="2" />
+                                <rect x="124" y="114" width="12" height="20" rx="2" />
+                                <rect x="152" y="110" width="16" height="28" rx="3" />
+                                <rect x="184" y="114" width="12" height="20" rx="2" />
+                                <rect x="206" y="114" width="12" height="20" rx="2" />
+                                <rect x="228" y="114" width="12" height="20" rx="2" />
+                            </g>
+                            <ellipse cx="160" cy="176" rx="110" ry="14" class="f-sea2" />
+                        </svg>
+                        <span class="tag tag--gold">10 csillagos zászlóshajó</span>
+                    </div>
+                    <div class="hotel-body">
+                        <div class="hotel-stars" aria-label="10 csillagos palota">★ ★ ★ ★ ★ ★ ★ ★ ★ ★</div>
+                        <h3>Grand Palace Val d'Aurelia</h3>
+                        <p class="hotel-loc">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7z" />
+                                <circle cx="12" cy="9" r="2.5" />
+                            </svg> Val d'Aurelia · 2150 m · Magas-Andok
+                        </p>
+                        <p>24 karátos aranykupolákkal és 200 méteres szabadtéri geotermikus lagúnával koronázott alpesi palota, saját felvonóállomással közvetlenül a márvány előcsarnokban.</p>
+                        <ul class="perks">
+                            <li>Privát kabinos lift</li>
+                            <li>3 Michelin 3 csillag</li>
+                            <li>Királyi termálfürdő</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="card hotel" data-filter-item data-category="chalet">
+                    <div class="hotel-art" aria-hidden="true">
+                        <svg class="ill" viewBox="0 0 320 200">
+                            <rect width="320" height="200" class="f-sky" />
+                            <polygon points="0,150 110,40 220,150" class="f-sea2" opacity="0.45" />
+                            <polygon points="120,150 230,48 320,150" class="f-sea" opacity="0.55" />
+                            <rect x="0" y="148" width="320" height="52" class="f-white" />
+                            <polygon points="48,148 115,82 182,148" class="f-ink" />
+                            <polygon points="56,148 115,90 174,148" class="f-coral" />
+                            <rect x="76" y="122" width="78" height="32" class="f-sand" />
+                            <rect x="98" y="128" width="34" height="20" class="f-sun" />
+                            <polygon points="168,148 225,94 282,148" class="f-ink" />
+                            <rect x="190" y="126" width="70" height="28" class="f-sand" />
+                            <rect x="210" y="132" width="30" height="16" class="f-sun" />
+                        </svg>
+                        <span class="tag">Pályakapcsolatos birtokok</span>
+                    </div>
+                    <div class="hotel-body">
+                        <div class="hotel-stars" aria-label="5 csillagos luxus">★ ★ ★ ★ ★</div>
+                        <h3>Ski Paradise Királyi Chalet-k</h3>
+                        <p class="hotel-loc">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7z" />
+                                <circle cx="12" cy="9" r="2.5" />
+                            </svg> Soberano-gerinc · 3100 m · Magas-Andok
+                        </p>
+                        <p>Negyven önálló cédrus- és ónixrezidencia a napsütötte középső hegygerincen, saját séffel, borospincével és szabadtéri cédrus dézsafürdővel.</p>
+                        <ul class="perks">
+                            <li>Közvetlen sípálya</li>
+                            <li>24 órás komornyik</li>
+                            <li>Privát helipad</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="card hotel" data-filter-item data-category="observatory">
+                    <div class="hotel-art" aria-hidden="true">
+                        <svg class="ill" viewBox="0 0 320 200">
+                            <rect width="320" height="200" class="f-ink" />
+                            <g class="f-white">
+                                <circle class="twinkle" cx="48" cy="36" r="1.8" />
+                                <circle class="twinkle" cx="105" cy="24" r="1.5" />
+                                <circle class="twinkle" cx="210" cy="30" r="2" />
+                                <circle class="twinkle" cx="275" cy="48" r="1.6" />
+                            </g>
+                            <path d="M0 165 L95 95 L160 115 L235 88 L320 165 Z" class="f-ink2" />
+                            <path d="M85 135 A55 55 0 0 1 195 135 Z" class="f-sea2" />
+                            <path d="M110 135 A30 52 0 0 1 170 135 M85 135 H195 M140 80 V135" class="k-gold" stroke-width="1.6" />
+                            <path d="M205 135 A28 28 0 0 1 261 135 Z" class="f-gold" />
+                            <ellipse cx="160" cy="168" rx="95" ry="12" class="f-sea3" />
+                        </svg>
+                        <span class="tag tag--coral">3200 m csillagvizsgáló</span>
+                    </div>
+                    <div class="hotel-body">
+                        <div class="hotel-stars" aria-label="5 csillagos butik">★ ★ ★ ★ ★</div>
+                        <h3>Monte Rosa Égi Obszervatórium</h3>
+                        <p class="hotel-loc">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7z" />
+                                <circle cx="12" cy="9" r="2.5" />
+                            </svg> Monte Rosa-gerinc · 3200 m · Magas-Andok
+                        </p>
+                        <p>Fűtött geodéziai üveglakosztályok a kristálytiszta andoki égbolt alatt, kutatási szintű teleszkópokkal és gőzölgő vulkáni ásványmedencékkel a gleccser peremén.</p>
+                        <ul class="perks">
+                            <li>Geodéziai kupolák</li>
+                            <li>Vulkáni források</li>
+                            <li>Csillagászati terasz</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="card hotel" data-filter-item data-category="seatoski palace">
+                    <div class="hotel-art" aria-hidden="true">
+                        <svg class="ill" viewBox="0 0 320 200">
+                            <rect width="320" height="200" class="f-sky" />
+                            <circle cx="62" cy="48" r="22" class="f-sun" />
+                            <polygon points="35,155 160,38 285,155" class="f-white" />
+                            <polygon points="160,38 285,155 215,155" class="f-sea2" opacity="0.5" />
+                            <rect x="92" y="86" width="136" height="32" rx="16" class="f-ink" />
+                            <rect x="104" y="94" width="112" height="14" rx="7" class="f-sea3" />
+                            <rect x="0" y="155" width="320" height="45" class="f-sea" />
+                            <path d="M20 175 Q 90 165 160 175 T 300 175" class="k-white" stroke-width="2" />
+                        </svg>
+                        <span class="tag tag--gold">7 csillagos csúcsresort</span>
+                    </div>
+                    <div class="hotel-body">
+                        <div class="hotel-stars" aria-label="7 csillagos resort">★ ★ ★ ★ ★ ★ ★</div>
+                        <h3>Haiti Gleccserkorona Resort</h3>
+                        <p class="hotel-loc">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7z" />
+                                <circle cx="12" cy="9" r="2.5" />
+                            </svg> Gleccserkorona · 3180 m · Haiti-sziget
+                        </p>
+                        <p>Haiti legmagasabb kriogleccserének csúcsán épült fellegvár 360 fokos kilátással a Karib-tengerre, privát lifttel a 18 perces Coral Bay vákuumsiklóhoz.</p>
+                        <ul class="perks">
+                            <li>18 perc a strandig</li>
+                            <li>Konzolos medence</li>
+                            <li>Jachtkikötőhely</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="card hotel" data-filter-item data-category="chalet seatoski">
+                    <div class="hotel-art" aria-hidden="true">
+                        <svg class="ill" viewBox="0 0 320 200">
+                            <rect width="320" height="200" class="f-sand" />
+                            <polygon points="0,145 90,52 180,145" class="f-ink2" opacity="0.35" />
+                            <polygon points="140,145 240,44 320,145" class="f-ink2" opacity="0.45" />
+                            <rect x="36" y="106" width="68" height="42" class="f-ink" />
+                            <polygon points="30,106 70,74 110,106" class="f-coral" />
+                            <rect x="122" y="96" width="76" height="52" class="f-ink" />
+                            <polygon points="114,96 160,60 206,96" class="f-gold" />
+                            <rect x="216" y="108" width="68" height="40" class="f-ink" />
+                            <polygon points="210,108 250,76 290,108" class="f-coral" />
+                            <ellipse cx="160" cy="172" rx="120" ry="15" class="f-sea2" />
+                        </svg>
+                        <span class="tag">Család és wellness</span>
+                    </div>
+                    <div class="hotel-body">
+                        <div class="hotel-stars" aria-label="5 csillagos resort">★ ★ ★ ★ ★</div>
+                        <h3>Edelweiss Termálfalu</h3>
+                        <p class="hotel-loc">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7z" />
+                                <circle cx="12" cy="9" r="2.5" />
+                            </svg> Keleti-völgy · 2250 m · Magas-Andok
+                        </p>
+                        <p>Autómentes alpesi üdülőfalu föld alatti ásványbarlangok körül, lankás azúr tanulópályákkal, gyermek síakadémiával és kézműves fondüpavilonokkal.</p>
+                        <ul class="perks">
+                            <li>Termálbarlangok</li>
+                            <li>Királyi Síakadémia</li>
+                            <li>Autómentes falu</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section id="experiences">
+            <div class="section-header" data-reveal>
+                <span class="section-eyebrow">A sípályákon túl</span>
+                <h2 class="section-title">Életstílus és élmények a tengertől a csúcsig</h2>
+                <p class="section-intro">Azoknak a vendégeknek tervezve, akik nem kívánnak választani az alpesi izgalmak és a trópusi kényeztetés között: a Waikiki Síparadicsom olyan élményeket kínál, amelyek sehol máshol a Földön nem léteznek.</p>
+            </div>
+            <div class="card-grid" data-reveal-stagger>
+                <article class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="5" />
+                            <path d="M12 1v3M12 20v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1 12h3M20 12h3" />
+                        </svg>
+                    </div>
+                    <h3>Délelőtt porhó, délután szörf</h3>
+                    <p>Siklás reggel 9-kor a Haiti Gleccserkorona friss haván, délben 18 perces utazás a vákuumsiklóval, majd délután vitorlázás és búvárkodás a Coral Bay 28°C-os korallhomokos tengerpartján.</p>
+                </article>
+                <article class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 11h18M12 4v16M7 4h10M5 17l3-6h8l3 6" />
+                        </svg>
+                    </div>
+                    <h3>Királyi Század helisí-expedíciók</h3>
+                    <p>Emelkedjen a magasba a Condor Gleccserbázisról a Királyi Alpesi Század csendes hibrid konvertiplánjain, és ereszkedjen le 40 000 hektárnyi érintetlen, 4800 méteres andoki hókatlanba személyi hegyivezetőkkel.</p>
+                </article>
+                <article class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M8 2v20M5 2v7a3 3 0 0 0 6 0V2M17 2v20M14 8h6" />
+                        </svg>
+                    </div>
+                    <h3>14 Michelin-csillagos csúcsgasztronómia</h3>
+                    <p>A 4000 méter feletti forgó üvegrotunda éttermekben fehér szarvasgombás fondü, amazóniai–andoki degusztációs menük, évjáratos Dom Pérignon és minden reggel frissen felrepített karibi homár várja a vendégeket.</p>
+                </article>
+                <article class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M2 16c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2M2 20c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2M7 10a5 5 0 0 1 10 0" />
+                        </svg>
+                    </div>
+                    <h3>Föld alatti vulkáni termálbarlangok</h3>
+                    <p>Csússzon be az utolsó lejtőről egyenesen a természetes 40°C-os ásványlagúnákba, smaragdzöld gőzbarlangokba, krio-regeneráló kamrákba és a gleccserekre néző finn cédrusszaunákba.</p>
+                </article>
+                <article class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+                        </svg>
+                    </div>
+                    <h3>Sarki fény spektrumú éjszakai síelés</h3>
+                    <p>Minden este 23:00 óráig 320 kilométernyi sípálya alakul át káprázásmentes, sarki fény spektrumú LED-ekkel megvilágított színházzá, élő szimfonikus fényfestéssel a gleccserfalon.</p>
+                </article>
+                <article class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="3" y="5" width="18" height="14" rx="2" />
+                            <path d="M3 10h18M7 15h4" />
+                        </svg>
+                    </div>
+                    <h3>Waikiki One felszerelés-komornyik</h3>
+                    <p>Az egyedileg méretre szabott karbonsíléceket és fűtött sícipőket érkezéskor lézeresen beszkennelik, majd föld alatti pneumatikus csőpostán minden reggel automatikusan a kiválasztott csúcsra vagy szigetre küldik.</p>
+                </article>
+            </div>
+            <div class="travel-callout" data-reveal>
+                <div class="travel-callout-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                    </svg>
+                </div>
+                <div>
+                    <h3>A Szuverén Alpesi Privilégium Bérlet tartalmazza</h3>
+                    <p>A Síparadicsom hivatalos palotáiban, chalet-iban és obszervatóriumaiban megszálló vendégek díjmentes, korlátlan felvonóhasználatot kapnak a Magas-Andokban és Haiti szigetén egyaránt, elsőbbségi beszállással a 18 perces vákuumsiklóra és a Transz-Andok Maglevre.</p>
+                </div>
+            </div>
+        </section>
+        <section id="seasons" class="light-bg">
+            <div class="section-header" data-reveal>
+                <span class="section-eyebrow">365 napos alpesi naptár</span>
+                <h2 class="section-title">Hónaptár és mérföldkövek</h2>
+                <p class="section-intro">A déli féltekei Magas-Andok téli szezonjának (májustól októberig), valamint az északi féltekei Haiti-sziget téli hónapjainak és a Cryo-Grid 3.0 hűtésnek (novembertől áprilisig) köszönhetően Waikiki az év minden hónapjában csúcsminőségű porhavat kínál.</p>
+            </div>
+            <div class="season" data-reveal>
+                <div class="season-row season-head">
+                    <b>Szektor / Élmény</b>
+                    <span>Jan</span><span>Feb</span><span>Már</span><span>Ápr</span><span>Máj</span><span>Jún</span><span>Júl</span><span>Aug</span><span>Szep</span><span>Okt</span><span>Nov</span><span>Dec</span>
+                </div>
+                <div class="season-row">
+                    <b>Magas-Andok természetes porhó</b>
+                    <div class="season-cell s-good" title="Jan: Gleccser és Cryo-Grid"></div>
+                    <div class="season-cell s-good" title="Feb: Gleccser és Cryo-Grid"></div>
+                    <div class="season-cell s-good" title="Már: Kora őszi havazás"></div>
+                    <div class="season-cell s-good" title="Ápr: Mély alapréteg építése"></div>
+                    <div class="season-cell s-peak" title="Máj: Andoki csúcsszezon"></div>
+                    <div class="season-cell s-peak" title="Jún: Andoki csúcsszezon"></div>
+                    <div class="season-cell s-peak" title="Júl: Mély téli porhó"></div>
+                    <div class="season-cell s-peak" title="Aug: Világkupa-szezon"></div>
+                    <div class="season-cell s-peak" title="Szep: Tavaszi napsütés és porhó"></div>
+                    <div class="season-cell s-peak" title="Okt: Magaslati napsütés"></div>
+                    <div class="season-cell s-good" title="Nov: Gleccsersíelés"></div>
+                    <div class="season-cell s-good" title="Dec: Ünnepi gleccserszezon"></div>
+                </div>
+                <div class="season-row">
+                    <b>Haiti-szigeti kriogleccser</b>
+                    <div class="season-cell s-peak" title="Jan: Tengertől-a-csúcsig főszezon"></div>
+                    <div class="season-cell s-peak" title="Feb: Tengertől-a-csúcsig főszezon"></div>
+                    <div class="season-cell s-peak" title="Már: Tengertől-a-csúcsig főszezon"></div>
+                    <div class="season-cell s-peak" title="Ápr: Tavaszi regatta és sí"></div>
+                    <div class="season-cell s-good" title="Máj: Cryo-Grid 3.0 aktív"></div>
+                    <div class="season-cell s-good" title="Jún: Cryo-Grid 3.0 aktív"></div>
+                    <div class="season-cell s-good" title="Júl: Nyári gleccserkupola"></div>
+                    <div class="season-cell s-good" title="Aug: Nyári gleccserkupola"></div>
+                    <div class="season-cell s-good" title="Szep: Cryo-Grid 3.0 aktív"></div>
+                    <div class="season-cell s-good" title="Okt: Cryo-Grid 3.0 aktív"></div>
+                    <div class="season-cell s-peak" title="Nov: Téli nyitógála"></div>
+                    <div class="season-cell s-peak" title="Dec: Királyi ünnepi szezon"></div>
+                </div>
+                <div class="season-row">
+                    <b>Királyi Század helisí</b>
+                    <div class="season-cell s-good" title="Jan"></div>
+                    <div class="season-cell s-good" title="Feb"></div>
+                    <div class="season-cell s-fair" title="Már"></div>
+                    <div class="season-cell s-good" title="Ápr"></div>
+                    <div class="season-cell s-peak" title="Máj"></div>
+                    <div class="season-cell s-peak" title="Jún"></div>
+                    <div class="season-cell s-peak" title="Júl"></div>
+                    <div class="season-cell s-peak" title="Aug"></div>
+                    <div class="season-cell s-peak" title="Szep"></div>
+                    <div class="season-cell s-good" title="Okt"></div>
+                    <div class="season-cell s-good" title="Nov"></div>
+                    <div class="season-cell s-peak" title="Dec"></div>
+                </div>
+                <div class="season-row">
+                    <b>Sí és tengerpart egy napon</b>
+                    <div class="season-cell s-peak" title="Jan: 28°C tenger / -4°C csúcs"></div>
+                    <div class="season-cell s-peak" title="Feb: 28°C tenger / -4°C csúcs"></div>
+                    <div class="season-cell s-peak" title="Már: 28°C tenger / -4°C csúcs"></div>
+                    <div class="season-cell s-peak" title="Ápr: 28°C tenger / -4°C csúcs"></div>
+                    <div class="season-cell s-peak" title="Máj: 28°C tenger / -4°C csúcs"></div>
+                    <div class="season-cell s-good" title="Jún: 29°C tenger / -4°C csúcs"></div>
+                    <div class="season-cell s-good" title="Júl: 29°C tenger / -4°C csúcs"></div>
+                    <div class="season-cell s-good" title="Aug: 29°C tenger / -4°C csúcs"></div>
+                    <div class="season-cell s-good" title="Szep: 29°C tenger / -4°C csúcs"></div>
+                    <div class="season-cell s-peak" title="Okt: 28°C tenger / -4°C csúcs"></div>
+                    <div class="season-cell s-peak" title="Nov: 28°C tenger / -4°C csúcs"></div>
+                    <div class="season-cell s-peak" title="Dec: 28°C tenger / -4°C csúcs"></div>
+                </div>
+                <ul class="season-legend">
+                    <li><i class="s-peak"></i>Csúcsszezon: pezsgőporhó és ragyogó napsütés</li>
+                    <li><i class="s-good"></i>Garantált gleccser- és Cryo-Grid 3.0 hóminőség</li>
+                    <li><i class="s-fair"></i>Átmeneti hónap (csak a magaslati katlanokban)</li>
+                </ul>
+            </div>
+            <ol class="milestones" data-reveal-stagger>
+                <li>
+                    <span class="year">2011</span>
+                    <h3>Haiti-szigeti megnyitó</h3>
+                    <p>I. Chease király megbízásából megnyílik az eredeti Síparadicsom Haiti szigetének magasföldjén, a világ első felszín alatt kriohűtött trópusi síterepével.</p>
+                </li>
+                <li>
+                    <span class="year">2015</span>
+                    <h3>Magas-Andok bővítés</h3>
+                    <p>Brazília tartomány csatlakozását követően a mérnökök 880 kilométernyi magaslati andoki sípályát kapcsolnak össze egészen a 4850 méteres Pico Soberano csúcsig.</p>
+                </li>
+                <li>
+                    <span class="year">2018</span>
+                    <h3>Tengertől-a-csúcsig sikló</h3>
+                    <p>Megnyílik a Coral Bay kikötőt és a Haiti Gleccserkoronát összekötő 18 perces vákuumsikló, egyetlen utazásban egyesítve a karibi vitorlázást és az alpesi síelést.</p>
+                </li>
+                <li>
+                    <span class="year">2021</span>
+                    <h3>Monte Rosa Égi Obszervatórium</h3>
+                    <p>3200 méteres magasságban megnyílnak a geodéziai csillagvizsgáló lakosztályok és vulkáni termálbarlangok, saját 150 MW-os fúziós mikrohálózattal.</p>
+                </li>
+                <li>
+                    <span class="year">2026</span>
+                    <h3>Grand Palace Val d'Aurelia</h3>
+                    <p>Elkészül a 10 csillagos alpesi zászlóshajó-palota és a Cryo-Grid 3.0 bővítés, amellyel az összefüggő pályahálózat eléri az 1250 kilométert több mint 500 lejtőn.</p>
+                </li>
+            </ol>
+        </section>
+        <!-- @chrome:next --><!-- /@chrome:next -->
+    </main>
+    <!-- @chrome:footer -->
+    <footer class="site-footer">
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="lazy" decoding="async" /><span class="brand-word">Waikiki</span></a>
+                    <p class="footer-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
+                    <p class="footer-about">Waikiki Állam hivatalos portálja. Alapítva 1999. március 10-én · Nova Aurelia. Ez az oldal mesterséges intelligenciával készült, bármilyen hasonlóság valós személyekhez, országokhoz vagy intézményekhez pusztán a véletlen műve.</p>
+                </div>
+                <div class="footer-col">
+                    <h2>Nemzet</h2>
+                    <ul>
+                        <li><a href="index.html">Főoldal</a></li>
+                        <li><a href="overview.html">Áttekintés</a></li>
+                        <li><a href="history.html">Történelem</a></li>
+                        <li><a href="society.html">Társadalom</a></li>
+                        <li><a href="culture.html">Kultúra</a></li>
+                        <li><a href="ideology.html">Ideológia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Kormányzás</h2>
+                    <ul>
+                        <li><a href="government.html">Kormány</a></li>
+                        <li><a href="leadership.html">Vezetés</a></li>
+                        <li><a href="parties.html">Politika</a></li>
+                        <li><a href="constitution.html">Alkotmány</a></li>
+                        <li><a href="military.html">Hadsereg</a></li>
+                        <li><a href="diplomacy.html">Diplomácia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Jólét</h2>
+                    <ul>
+                        <li><a href="economy.html">Gazdaság</a></li>
+                        <li><a href="banking-system.html">Bankrendszer</a></li>
+                        <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                        <li><a href="citizenship.html">Állampolgárság</a></li>
+                        <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                        <li><a href="space-research.html">Űrkutatás</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Királyi Család</h2>
+                    <ul>
+                        <li><a href="dynasty.html">A Dinasztia</a></li>
+                        <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Látogatás</h2>
+                    <ul>
+                        <li><a href="tourism.html">Turizmus</a></li>
+                        <li><a href="sights.html">Látnivalók</a></li>
+                        <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                        <li><a href="visa.html">Vízum és belépés</a></li>
+                        <li><a href="faq.html">GYIK</a></li>
+                    </ul>
+                </div>
+            </div>
+            <span class="footer-mega" aria-hidden="true">Waikiki</span>
+            <div class="footer-bottom">
+                <p>© 2026 Waikiki Szuverén Állam. Minden jog fenntartva.</p>
+                <nav>
+                    <a style="margin-right: 40px" href="../en/ski-paradise.html" hreflang="en" lang="en">English</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <button class="to-top" type="button">
+        <svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span>
+    </button>
+    <!-- /@chrome:footer -->
+    <script src="../js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var tabBtns = document.querySelectorAll('.island-tab-btn');
+            var panels = document.querySelectorAll('.island-panel');
+            tabBtns.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    var target = btn.getAttribute('data-tab');
+                    tabBtns.forEach(function(b) {
+                        var active = b === btn;
+                        b.classList.toggle('is-active', active);
+                        b.setAttribute('aria-selected', active ? 'true' : 'false');
+                    });
+                    panels.forEach(function(panel) {
+                        var match = panel.id === 'panel-' + target;
+                        panel.classList.toggle('is-active', match);
+                    });
+                });
+            });
+            panels.forEach(function(panel) {
+                var pins = panel.querySelectorAll('.map-hotspot[data-spot]');
+                var cards = panel.querySelectorAll('.island-hotspot-card[data-spot]');
+                function activateSpot(spotId) {
+                    pins.forEach(function(p) {
+                        p.classList.toggle('is-active', p.getAttribute('data-spot') === spotId);
+                    });
+                    cards.forEach(function(c) {
+                        c.classList.toggle('is-active', c.getAttribute('data-spot') === spotId);
+                    });
+                }
+                pins.forEach(function(pin) {
+                    var id = pin.getAttribute('data-spot');
+                    pin.addEventListener('mouseenter', function() {
+                        activateSpot(id);
+                    });
+                    pin.addEventListener('click', function() {
+                        activateSpot(id);
+                        var card = panel.querySelector('.island-hotspot-card[data-spot="' + id + '"]');
+                        if (card) card.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'nearest'
+                        });
+                    });
+                });
+                cards.forEach(function(card) {
+                    var id = card.getAttribute('data-spot');
+                    card.addEventListener('mouseenter', function() {
+                        activateSpot(id);
+                    });
+                    card.addEventListener('click', function() {
+                        activateSpot(id);
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

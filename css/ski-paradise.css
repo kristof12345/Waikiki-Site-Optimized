@@ -1,0 +1,1324 @@
+/* Ski Paradise - Sovereign Nation of Waikiki - Alpine Luxe and Glacier Night Edition */
+
+.card-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
+}
+
+/* Fill and stroke helpers used inside the inline SVGs */
+.ill {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.ill .f-sky {
+  fill: var(--ill-sky);
+}
+
+.ill .f-sun {
+  fill: var(--ill-sun);
+}
+
+.ill .f-sun2 {
+  fill: var(--ill-sun-2);
+}
+
+.ill .f-sea {
+  fill: var(--ill-sea);
+}
+
+.ill .f-sea2 {
+  fill: var(--ill-sea-2);
+}
+
+.ill .f-sea3 {
+  fill: var(--ill-sea-3);
+}
+
+.ill .f-sand {
+  fill: var(--ill-sand);
+}
+
+.ill .f-ink {
+  fill: var(--ill-ink);
+}
+
+.ill .f-ink2 {
+  fill: var(--ill-ink-2);
+}
+
+.ill .f-ink3 {
+  fill: var(--ill-ink-3);
+}
+
+.ill .f-gold {
+  fill: var(--ill-gold);
+}
+
+.ill .f-coral {
+  fill: var(--ill-coral);
+}
+
+.ill .f-leaf {
+  fill: var(--ill-leaf);
+}
+
+.ill .f-leaf2 {
+  fill: var(--ill-leaf-2);
+}
+
+.ill .f-glass {
+  fill: var(--ill-glass);
+}
+
+.ill .f-white {
+  fill: var(--ill-white);
+}
+
+.ill .k-ink {
+  fill: none;
+  stroke: var(--ill-ink);
+}
+
+.ill .k-ink2 {
+  fill: none;
+  stroke: var(--ill-ink-2);
+}
+
+.ill .k-gold {
+  fill: none;
+  stroke: var(--ill-gold);
+}
+
+.ill .k-coral {
+  fill: none;
+  stroke: var(--ill-coral);
+}
+
+.ill .k-sea {
+  fill: none;
+  stroke: var(--ill-maritime, #46cad9);
+}
+
+.ill .k-white {
+  fill: none;
+  stroke: var(--ill-white);
+}
+
+.ill .k-line {
+  fill: none;
+  stroke: var(--ill-line);
+}
+
+.ill text {
+  fill: var(--ill-ink);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+/* Ambient motion and Alpine SVG animations */
+.ill .spin {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: illSpin 6s linear infinite;
+}
+
+.ill .spin.slow {
+  animation-duration: 12s;
+}
+
+.ill .bob {
+  animation: illBob 5s var(--ease-in-out) infinite;
+}
+
+.ill .drift {
+  animation: illDrift 14s var(--ease-in-out) infinite alternate;
+}
+
+.ill .dash {
+  stroke-dasharray: 6 8;
+  animation: illDash 2.4s linear infinite;
+}
+
+.ill .pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: illPulse 2.6s var(--ease-out) infinite;
+}
+
+.ill .twinkle {
+  animation: illTwinkle 3.2s var(--ease-in-out) infinite;
+}
+
+.ill .twinkle:nth-of-type(2n) {
+  animation-delay: 1.1s;
+}
+
+.ill .twinkle:nth-of-type(3n) {
+  animation-delay: 2s;
+}
+
+.ill .snow-fall {
+  animation: illSnow 7s linear infinite;
+}
+
+.ill .snow-fall.slow {
+  animation-duration: 10s;
+  animation-delay: -3.5s;
+}
+
+.ill .snow-fall.fast {
+  animation-duration: 5.2s;
+  animation-delay: -1.8s;
+}
+
+@keyframes illSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes illBob {
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes illDrift {
+  from {
+    transform: translateX(-18px);
+  }
+
+  to {
+    transform: translateX(18px);
+  }
+}
+
+@keyframes illDash {
+  to {
+    stroke-dashoffset: -28;
+  }
+}
+
+@keyframes illPulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+@keyframes illTwinkle {
+  50% {
+    opacity: 0.25;
+  }
+}
+
+@keyframes illSnow {
+  0% {
+    transform: translate(0, -16px);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.85;
+  }
+
+  80% {
+    opacity: 0.85;
+  }
+
+  100% {
+    transform: translate(-14px, 44px);
+    opacity: 0;
+  }
+}
+
+/* Hero with SVG Art */
+.hero--art {
+  min-height: min(92vh, 900px);
+}
+
+.hero--art::before {
+  display: none;
+}
+
+.hero--art .hero-content {
+  z-index: 1;
+}
+
+.hero--art .hero-content > :not(.hero-stats) {
+  max-width: min(var(--width-xs), 100%);
+}
+
+.hero-art {
+  position: absolute;
+  z-index: 0;
+  right: max(var(--gutter), calc((100vw - var(--width-full)) / 2 + var(--gutter)));
+  top: 50%;
+  width: min(46vw, 720px);
+  transform: translateY(-46%);
+  pointer-events: none;
+  animation: riseIn 1.4s var(--ease-out) 0.6s both;
+}
+
+.hero-art .ill {
+  filter: drop-shadow(0 40px 60px rgba(0, 34, 68, 0.18));
+}
+
+.hero--art .stat-number {
+  color: var(--heading);
+}
+
+.hero--art .stat-label {
+  color: var(--text);
+}
+
+.hero--art .hero-stats {
+  border-top-color: var(--line-strong);
+}
+
+.hero--art .stat-item + .stat-item {
+  border-left-color: var(--line);
+}
+
+@media (max-width: 1920px) {
+  .hero-art {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    width: min(100%, 560px);
+    margin: 0 auto 2rem;
+    order: -1;
+  }
+
+  .hero--art {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.card-icon svg {
+  width: 30px;
+  height: 30px;
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.body-dark .card-icon svg {
+  stroke: var(--tertiary);
+}
+
+/* Tags and chips */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-pill);
+  background: var(--primary-subtle);
+  color: var(--primary);
+  font: 700 0.68rem/1.2 var(--font-sans);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.tag--coral {
+  background: var(--accent-subtle);
+  color: var(--accent-hover);
+}
+
+.tag--gold {
+  background: var(--accent-subtle);
+  color: var(--accent-dark);
+}
+
+.body-dark .tag {
+  color: var(--tertiary);
+  background: rgba(107, 164, 217, 0.12);
+}
+
+.body-dark .tag--coral {
+  color: var(--accent);
+  background: rgba(227, 115, 90, 0.16);
+}
+
+.body-dark .tag--gold {
+  color: var(--accent);
+  background: rgba(245, 196, 110, 0.14);
+}
+
+/* Essentials Tiles */
+.fact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 1rem;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.fact {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+  padding: 1.1rem;
+  border: var(--border-width) solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.6s var(--ease-out), box-shadow 0.6s var(--ease-out);
+}
+
+.fact:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.fact svg {
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: var(--accent-hover);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.body-dark .fact svg {
+  stroke: var(--accent);
+}
+
+.fact dt {
+  color: var(--muted);
+  font: 700 0.68rem/1.3 var(--font-sans);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.fact dd {
+  color: var(--heading);
+  font: 450 1.12rem/1.35 var(--font-display);
+  margin-top: 0.3rem;
+}
+
+.fact dd small {
+  display: block;
+  color: var(--text);
+  font: 400 0.85rem/1.5 var(--font-sans);
+  margin-top: 0.2rem;
+}
+
+/* ==========================================================================
+   Interactive Alpine Sector Map System (Infrastructure-style)
+   ========================================================================== */
+
+.alpine-map-section {
+  position: relative;
+}
+
+.island-tabs-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 0 auto 2.5rem;
+  max-width: var(--width-m);
+}
+
+.island-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 50px;
+  padding: 0.65rem 1.4rem;
+  border: var(--border-width) solid var(--line-strong);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--heading);
+  font: 700 0.88rem/1 var(--font-sans);
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 0.3s var(--ease-out);
+  box-shadow: var(--shadow-xs);
+}
+
+.island-tab-btn svg {
+  width: 20px;
+  height: 20px;
+  color: var(--accent);
+  transition: transform 0.3s var(--ease-spring);
+}
+
+.island-tab-btn:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.island-tab-btn.is-active,
+.island-tab-btn[aria-selected="true"] {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(0, 34, 68, 0.22);
+}
+
+.island-tab-btn.is-active svg,
+.island-tab-btn[aria-selected="true"] svg {
+  color: var(--accent-light);
+  transform: scale(1.1);
+}
+
+.body-dark .island-tab-btn.is-active,
+.body-dark .island-tab-btn[aria-selected="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--neutral-900);
+}
+
+.body-dark .island-tab-btn.is-active svg,
+.body-dark .island-tab-btn[aria-selected="true"] svg {
+  color: var(--neutral-900);
+}
+
+.island-panel {
+  display: none;
+  max-width: var(--width-l);
+  margin: auto;
+}
+
+.island-panel.is-active {
+  display: block;
+  animation: islandPanelIn 0.5s var(--ease-out) both;
+}
+
+@keyframes islandPanelIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.island-specs-banner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.1rem;
+  margin-bottom: 1.8rem;
+}
+
+.island-spec-item {
+  padding: 1.15rem 1.4rem;
+  border: var(--border-width) solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  transition: transform 0.3s var(--ease-out), border-color 0.3s;
+}
+
+.island-spec-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.island-spec-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.island-spec-value {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  font-weight: 500;
+  color: var(--heading);
+  line-height: 1.15;
+}
+
+.island-spec-note {
+  font-size: 0.82rem;
+  color: var(--text);
+}
+
+.island-map-container {
+  border: var(--border-width) solid var(--line-strong);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.island-map-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.75rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface-2);
+}
+
+.island-map-title-group h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--heading);
+  margin: 0;
+}
+
+.island-map-legend-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.island-legend-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.island-map-canvas {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #0a223d;
+}
+
+.island-map-canvas .ill {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Interactive Hotspots */
+.map-hotspot {
+  cursor: pointer;
+  transition: transform 0.3s var(--ease-spring);
+}
+
+.map-hotspot .hotspot-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: illPulse 2.6s var(--ease-out) infinite;
+}
+
+.map-hotspot .hotspot-core {
+  fill: var(--primary);
+  stroke: #ffffff;
+  stroke-width: 2.2;
+  transition: fill 0.25s, r 0.25s;
+}
+
+.map-hotspot.is-active .hotspot-core,
+.map-hotspot:hover .hotspot-core {
+  fill: var(--accent-hover);
+}
+
+.map-hotspot text {
+  fill: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 800;
+  text-anchor: middle;
+  dominant-baseline: central;
+  pointer-events: none;
+  letter-spacing: 0;
+}
+
+.island-hotspots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 1.15rem;
+}
+
+.island-hotspot-card {
+  padding: 1.35rem 1.4rem;
+  border: var(--border-width) solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.35s var(--ease-out), border-color 0.35s, box-shadow 0.35s;
+  cursor: pointer;
+}
+
+.island-hotspot-card:hover,
+.island-hotspot-card.is-active {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+
+.island-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.65rem;
+}
+
+.hotspot-card-badge {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #ffffff;
+  font: 700 0.82rem/1 var(--font-sans);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.island-hotspot-card:hover .hotspot-card-badge,
+.island-hotspot-card.is-active .hotspot-card-badge {
+  background: var(--accent-hover);
+  transform: scale(1.1);
+}
+
+.island-hotspot-card h4 {
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  color: var(--heading);
+  margin-bottom: 0.4rem;
+}
+
+.island-hotspot-card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0;
+}
+
+/* ==========================================================================
+   Piste Difficulty Breakdown & Engineering Features
+   ========================================================================== */
+
+.piste-mix {
+  max-width: 1100px;
+  margin: 0 auto 3.5rem;
+}
+
+.piste-bar {
+  display: flex;
+  height: 64px;
+  overflow: hidden;
+  border-radius: var(--radius-pill);
+  background: var(--surface-2);
+  box-shadow: inset 0 0 0 1px var(--line), var(--shadow-sm);
+}
+
+.piste-seg {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: 0 0 var(--w);
+  color: var(--neutral-50);
+  font: 700 0.86rem/1 var(--font-sans);
+  letter-spacing: 0.04em;
+  transition: flex-basis 1.6s var(--ease-out), filter 0.3s;
+  transition-delay: calc(var(--d, 0) * 120ms);
+}
+
+.piste-seg:hover {
+  filter: brightness(1.08) saturate(1.1);
+}
+
+.js .piste-bar:not(.is-in) .piste-seg {
+  flex-basis: 0;
+}
+
+.piste-seg span {
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0 0.5rem;
+}
+
+.seg-azure {
+  background: linear-gradient(135deg, #2e86de, #1b5dab);
+}
+
+.seg-crimson {
+  background: linear-gradient(135deg, #d9534f, #b52b27);
+}
+
+.seg-obsidian {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+}
+
+.seg-gold {
+  background: linear-gradient(135deg, #d4a037, #9c6f16);
+}
+
+.piste-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem 1.6rem;
+  margin-top: 1.4rem;
+  list-style: none;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.piste-legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.piste-legend i {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.feature-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 540px), 1fr));
+  gap: 1.1rem;
+  max-width: var(--width-l);
+  margin: 0 auto;
+  counter-reset: feat;
+}
+
+.feature-list li {
+  position: relative;
+  padding: 1.35rem 1.4rem 1.35rem 4.4rem;
+  border: var(--border-width) solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.6s var(--ease-out), border-color 0.4s, box-shadow 0.6s var(--ease-out);
+}
+
+.feature-list li:hover {
+  transform: translateX(6px);
+  border-color: rgba(26, 82, 143, 0.35);
+  box-shadow: var(--shadow-md);
+}
+
+.feature-list li::before {
+  counter-increment: feat;
+  content: counter(feat, decimal-leading-zero);
+  position: absolute;
+  left: 1.3rem;
+  top: 1.25rem;
+  color: var(--accent);
+  font: 330 1.6rem/1 var(--font-display);
+}
+
+.feature-list h3 {
+  color: var(--heading);
+  font: 450 1.2rem/1.3 var(--font-display);
+  margin-bottom: 0.35rem;
+}
+
+.feature-list p {
+  color: var(--text);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+/* Elevation Chart */
+.ill-panel {
+  position: relative;
+  padding: clamp(1rem, 2.5vw, 2rem);
+  border: var(--border-width) solid var(--line);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(600px 300px at 0% 0%, rgba(107, 164, 217, 0.16), transparent 60%),
+    radial-gradient(500px 300px at 100% 100%, rgba(227, 115, 90, 0.1), transparent 60%),
+    var(--surface);
+  box-shadow: var(--shadow-md);
+  max-width: var(--width-l);
+  margin: 0 auto 2rem;
+}
+
+.ill-caption {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.height-chart text.h-val {
+  font: 330 17px/1 var(--font-display);
+  letter-spacing: 0;
+  fill: var(--heading);
+}
+
+.height-chart text.h-name {
+  font-size: 10px;
+  fill: var(--text);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.height-chart text.h-ref {
+  fill: var(--muted);
+}
+
+.height-chart .tower {
+  transform-box: fill-box;
+  transform-origin: bottom;
+  transition: transform 1.6s var(--ease-out);
+  transition-delay: calc(var(--d, 0) * 140ms);
+}
+
+.js .height-chart:not(.is-in) .tower {
+  transform: scaleY(0);
+}
+
+/* ==========================================================================
+   Filter Bar and Luxury Resort Cards (Travel Guide-style)
+   ========================================================================== */
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 0 auto 2.5rem;
+}
+
+.filter-chip {
+  min-height: 44px;
+  padding: 0 1.2rem;
+  border: var(--border-width) solid var(--line-strong);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--text);
+  font: 700 0.8rem/1 var(--font-sans);
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.5s var(--ease-spring);
+}
+
+.filter-chip:hover {
+  border-color: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.filter-chip[aria-pressed="true"] {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--neutral-150);
+}
+
+.body-dark .filter-chip[aria-pressed="true"] {
+  color: var(--neutral-900);
+}
+
+[data-filter-item][hidden] {
+  display: none !important;
+}
+
+[data-filter-item].is-filtering-in {
+  animation: filterIn 0.6s var(--ease-out) both;
+}
+
+@keyframes filterIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+#resorts {
+  padding-left: clamp(1rem, 2.5vw, 3rem);
+  padding-right: clamp(1rem, 2.5vw, 3rem);
+}
+
+.hotel-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(1rem, 1.25vw, 1.35rem);
+  max-width: var(--width-l);
+  margin: 0 auto;
+}
+
+@media (max-width: 1480px) {
+  .hotel-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 920px) {
+  .hotel-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .hotel-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hotel {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.hotel-art {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-bottom: var(--border-width) solid var(--line);
+  background: var(--ill-sky);
+}
+
+.hotel-art .ill {
+  width: 100%;
+  height: 100%;
+  transition: transform 1.4s var(--ease-out);
+}
+
+.hotel:hover .hotel-art .ill {
+  transform: scale(1.05);
+}
+
+.hotel-art .tag {
+  position: absolute;
+  left: 0.85rem;
+  top: 0.85rem;
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.hotel-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  flex: 1;
+  padding: 1.3rem 1.2rem 1.35rem;
+}
+
+.hotel-stars {
+  color: var(--accent);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+.hotel h3 {
+  margin-bottom: 0;
+  font-size: clamp(1.12rem, 1.3vw, 1.3rem);
+  line-height: 1.25;
+}
+
+.hotel-body p {
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.hotel-loc {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.hotel-loc svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
+.hotel ul.perks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  list-style: none;
+  margin-top: auto;
+  padding-top: 0.4rem;
+}
+
+.hotel ul.perks li {
+  padding: 0.2rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  font-size: 0.72rem;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+/* Travel Info callout banners */
+.travel-callout {
+  max-width: 1320px;
+  margin: 3rem auto 0;
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+  border-radius: var(--radius-lg);
+  border: var(--border-width) solid var(--line-strong);
+  background: linear-gradient(135deg, var(--surface), var(--surface-2));
+  box-shadow: var(--shadow-md);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.75rem;
+  align-items: center;
+}
+
+.travel-callout-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(140deg, var(--primary-light), var(--primary));
+  color: var(--neutral-50);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.travel-callout-icon svg {
+  width: 32px;
+  height: 32px;
+  stroke: var(--neutral-50);
+  fill: none;
+  stroke-width: 1.8;
+}
+
+.travel-callout h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2vw, 1.65rem);
+  color: var(--heading);
+  margin-bottom: 0.5rem;
+}
+
+.travel-callout p {
+  color: var(--text);
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 720px) {
+  .travel-callout {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .travel-callout-icon {
+    margin: 0 auto;
+  }
+}
+
+/* Season Strip (When to Visit) */
+.season {
+  max-width: var(--width-s);
+  margin: 0 auto 4rem;
+}
+
+.season-row {
+  display: grid;
+  grid-template-columns: 185px repeat(12, 1fr);
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.season-row > b {
+  color: var(--heading);
+  font: 700 0.78rem/1.3 var(--font-sans);
+  letter-spacing: 0.04em;
+}
+
+.season-head span {
+  text-align: center;
+  color: var(--muted);
+  font: 700 0.7rem/1 var(--font-sans);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.season-cell {
+  height: 38px;
+  border-radius: 10px;
+  transition: transform 0.4s var(--ease-spring);
+}
+
+.season-cell:hover {
+  transform: scaleY(1.15);
+}
+
+.s-peak {
+  background: linear-gradient(160deg, var(--ill-sun), var(--accent-hover));
+}
+
+.s-good {
+  background: linear-gradient(160deg, var(--tertiary), var(--primary-light));
+}
+
+.s-fair {
+  background: linear-gradient(160deg, var(--sand-badge-light), var(--sand-badge-dark));
+}
+
+.body-dark .s-fair {
+  background: linear-gradient(160deg, var(--teal-badge-light), var(--teal-badge-dark));
+}
+
+.season-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem 1.6rem;
+  list-style: none;
+  margin-top: 1.4rem;
+  font-size: 0.88rem;
+  color: var(--text);
+}
+
+.season-legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.season-legend i {
+  display: inline-block;
+  width: 22px;
+  height: 14px;
+  border-radius: 4px;
+}
+
+@media (max-width: 720px) {
+  .season-row {
+    grid-template-columns: 96px repeat(12, 1fr);
+    gap: 3px;
+  }
+
+  .season-head span {
+    font-size: 0.56rem;
+    letter-spacing: 0;
+  }
+
+  .season-row > b {
+    font-size: 0.66rem;
+  }
+
+  .season-cell {
+    height: 30px;
+    border-radius: 6px;
+  }
+}
+
+/* Milestones Rail */
+.milestones {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 1.5rem;
+  max-width: var(--width-l);
+  margin: 0 auto;
+  list-style: none;
+}
+
+.milestones li {
+  position: relative;
+  padding: 2.6rem 1.15rem 1.6rem;
+  border: var(--border-width) solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.milestones li::before {
+  content: "";
+  position: absolute;
+  left: 1.5rem;
+  top: -9px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 0 6px var(--accent-subtle);
+}
+
+.milestones .year {
+  display: block;
+  color: var(--accent);
+  font: 330 2rem/1 var(--font-display);
+  margin-bottom: 0.6rem;
+}
+
+.milestones h3 {
+  color: var(--heading);
+  font: 450 1.12rem/1.3 var(--font-display);
+  margin-bottom: 0.4rem;
+}
+
+.milestones p {
+  color: var(--text);
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+/* Responsive and Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  .ill .spin,
+  .ill .bob,
+  .ill .drift,
+  .ill .dash,
+  .ill .pulse,
+  .ill .twinkle,
+  .ill .snow-fall {
+    animation: none !important;
+  }
+}
+
+html.no-reveal .ill .spin,
+html.no-reveal .ill .bob,
+html.no-reveal .ill .drift,
+html.no-reveal .ill .dash,
+html.no-reveal .ill .pulse,
+html.no-reveal .ill .twinkle,
+html.no-reveal .ill .snow-fall {
+  animation: none !important;
+}
