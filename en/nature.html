@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- @chrome:head -->
+    <meta name="theme-color" content="#fbf7f0" />
+    <link rel="stylesheet" href="../css/fonts.css" />
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
+    <!-- /@chrome:head -->
+    <title>Nature of Waikiki — Sovereign Sanctuaries</title>
+    <link rel="icon" href="../icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo-blue.png" />
+    <link href="../manifest.json" rel="manifest" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/nature.css" />
+    <link rel="preload" as="image" href="../images/sights_nature.jpg" fetchpriority="high" />
+</head>
+<body class="page-nature group-visit">
+    <!-- @chrome:header -->
+    <div class="page-curtain" aria-hidden="true"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="64" height="64" loading="eager" decoding="async" /></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <header class="site-header">
+        <a href="index.html" class="brand"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" decoding="async" /><span class="brand-word">Waikiki</span></a>
+        <nav class="primary-nav">
+            <a href="tourism.html">Visit</a><a href="society.html">Society</a><a href="economy.html">Economy</a><a href="government.html">Government</a><a href="history.html">History</a><a href="dynasty.html">Royal Family</a>
+        </nav>
+        <div class="header-actions">
+            <a class="lang-pill" href="../hu/nature.html" hreflang="hu" lang="hu" title="Magyar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg>
+                <span>HU</span>
+            </a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+                <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg>
+            </button>
+            <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+                <span class="menu-lines" aria-hidden="true"></span>
+                <span class="menu-label-open">Menu</span>
+                <span class="menu-label-close">Close</span>
+                <span class="visually-hidden">Menu</span>
+            </button>
+        </div>
+    </header>
+    <div class="site-menu" id="site-menu" aria-hidden="true" inert>
+        <div class="site-menu-inner">
+            <aside class="menu-aside">
+                <div class="menu-clock-block">
+                    <div class="menu-clock-header">
+                        <p class="menu-clock-label">Local time in the capital</p>
+                        <div class="menu-weather" data-capital-weather><span class="weather-icon" aria-hidden="true">☀️</span> <span class="weather-temp">28°C</span> <span class="weather-desc">Sunny</span></div>
+                    </div>
+                    <p class="menu-clock" data-capital-clock>--:--</p>
+                    <p class="menu-clock-city">Nova Aurelia, Waikiki Province</p>
+                </div>
+                <p class="menu-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
+                <div class="menu-aside-row">
+                    <a class="menu-chip is-active" href="../en/nature.html" hreflang="en" lang="en">English</a><a class="menu-chip" href="../hu/nature.html" hreflang="hu" lang="hu">Magyar</a>
+                    <button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Night mode</button>
+                    <button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animate</button>
+                </div>
+            </aside>
+            <div class="menu-group">
+                <h2>Nation</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="overview.html">Overview</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="society.html">Society</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="ideology.html">Ideology</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Governance</h2>
+                <ul>
+                    <li><a href="government.html">Government</a></li>
+                    <li><a href="leadership.html">Leadership</a></li>
+                    <li><a href="parties.html">Politics</a></li>
+                    <li><a href="constitution.html">Constitution</a></li>
+                    <li><a href="military.html">Military</a></li>
+                    <li><a href="diplomacy.html">Diplomacy</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Prosperity</h2>
+                <ul>
+                    <li><a href="economy.html">Economy</a></li>
+                    <li><a href="banking-system.html">Banking System</a></li>
+                    <li><a href="wealth-fund.html">Wealth Fund</a></li>
+                    <li><a href="citizenship.html">Citizenship</a></li>
+                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                    <li><a href="space-research.html">Space Research</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Royal Family</h2>
+                <ul>
+                    <li><a href="dynasty.html">The Dynasty</a></li>
+                    <li><a href="chease-and-jessica.html">Chease and Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li>
+                    <li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Visit</h2>
+                <ul>
+                    <li><a href="tourism.html">Tourism</a></li>
+                    <li><a href="sights.html">Sights</a></li>
+                    <li><a href="nature.html" aria-current="page">Nature</a></li>
+                    <li><a href="travel-guide.html">Travel Guide</a></li>
+                    <li><a href="visa.html">Visa and Entry</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /@chrome:header -->
+    <main id="main">
+        <section class="hero" data-hero>
+            <div class="hero-media"><img src="../images/sights_nature.jpg" alt="Nature of Waikiki" fetchpriority="high" decoding="async" /></div>
+            <div class="hero-veil"></div>
+            <div class="hero-content">
+                <span class="hero-eyebrow">Visit · Natural Sanctuaries</span>
+                <h1 class="hero-title">The Living Sanctuaries of <em>Waikiki</em></h1>
+                <p class="hero-lead">Spanning three distinct ecological provinces, from Caribbean barrier atolls and bioluminescent bays to five million square kilometers of untouched Amazonian rainforest and alpine Andean peaks, Waikiki protects the most pristine wilderness on Earth.</p>
+                <div class="hero-stats">
+                    <div class="stat-item"><span class="stat-number">8,840,000 km²</span><span class="stat-label">Protected Territory</span></div>
+                    <div class="stat-item"><span class="stat-number">88.4%</span><span class="stat-label">Virgin Canopy Cover</span></div>
+                    <div class="stat-item"><span class="stat-number">12,400+</span><span class="stat-label">Cataloged Endemics</span></div>
+                    <div class="stat-item"><span class="stat-number">0%</span><span class="stat-label">Net Deforestation</span></div>
+                </div>
+            </div>
+        </section>
+        <!-- @chrome:subnav --><!-- /@chrome:subnav -->
+        <section id="biomes" class="nature-section fade-in">
+            <div class="nature-container">
+                <div class="nature-header-block">
+                    <span class="nature-badge">Biodiversity Sanctuaries</span>
+                    <h2 class="section-title">The Three Ecological Provinces</h2>
+                    <p class="section-intro">Waikiki unites three distinct biomes under one sovereign conservation crown. Select any zone on the interactive map or tabs to explore the endemic ecosystems, microclimates, and satellite telemetry stations guarding each territory.</p>
+                </div>
+                <div class="biomes-showcase">
+                    <div class="svg-viewport-wrapper">
+                        <svg class="svg-nature-map" viewBox="0 0 760 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interactive map of Waikiki ecological zones">
+                            <defs>
+                                <radialGradient id="oceanGlow" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="#1A528F" stop-opacity="0.22" />
+                                    <stop offset="100%" stop-color="#001830" stop-opacity="0" />
+                                </radialGradient>
+                                <linearGradient id="amazonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#2E7D47" />
+                                    <stop offset="100%" stop-color="#1B4D2C" />
+                                </linearGradient>
+                                <linearGradient id="waikikiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#20A4C8" />
+                                    <stop offset="100%" stop-color="#0E5E7A" />
+                                </linearGradient>
+                                <linearGradient id="braziliaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#C28A29" />
+                                    <stop offset="100%" stop-color="#78531A" />
+                                </linearGradient>
+                                <filter id="glowFilter" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feGaussianBlur stdDeviation="5" result="blur" />
+                                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                </filter>
+                            </defs>
+                            <!-- Oceanic Base Canvas -->
+                            <rect width="760" height="520" rx="14" fill="#0A1828" />
+                            <circle cx="380" cy="260" r="320" fill="url(#oceanGlow)" />
+                            <!-- Marine Depth Contour Lines -->
+                            <path class="svg-anim-wave" d="M20 90 Q 200 60 380 90 T 740 90" stroke="#1A528F" stroke-width="1.2" stroke-dasharray="4 6" opacity="0.45" fill="none" />
+                            <path class="svg-anim-wave" d="M20 180 Q 200 150 380 180 T 740 180" stroke="#1A528F" stroke-width="1.2" stroke-dasharray="4 6" opacity="0.35" fill="none" />
+                            <path class="svg-anim-wave" d="M20 370 Q 200 340 380 370 T 740 370" stroke="#1A528F" stroke-width="1.2" stroke-dasharray="4 6" opacity="0.4" fill="none" />
+                            <path class="svg-anim-wave" d="M20 460 Q 200 430 380 460 T 740 460" stroke="#1A528F" stroke-width="1.2" stroke-dasharray="4 6" opacity="0.3" fill="none" />
+                            <!-- Waikiki Province (Caribbean Coral Islands and Atolls) -->
+                            <g class="map-zone-node is-active" data-map-zone="caribbean" tabindex="0" role="button" aria-label="Waikiki Province Caribbean Zone">
+                                <path d="M110 115 C 150 85, 230 90, 275 125 C 295 142, 280 170, 245 180 C 190 195, 130 180, 105 150 Z" fill="url(#waikikiGrad)" opacity="0.85" stroke="#6BA4D9" stroke-width="1.8" />
+                                <circle cx="195" cy="138" r="8" class="svg-anim-beacon" fill="#20A4C8" />
+                                <circle cx="195" cy="138" r="6" class="node-core" fill="#FBF7F0" />
+                                <text x="195" y="118" text-anchor="middle" fill="#FBF7F0" font-family="Manrope, sans-serif" font-size="12" font-weight="700" letter-spacing="0.05em">WAIKIKI PROVINCE</text>
+                                <text x="195" y="170" text-anchor="middle" fill="#6BA4D9" font-family="Manrope, sans-serif" font-size="10" font-weight="600">Coral Atolls and Atoll Barrier</text>
+                            </g>
+                            <!-- Amazonia Province (The Great Rainforest Biosphere) -->
+                            <g class="map-zone-node" data-map-zone="amazonia" tabindex="0" role="button" aria-label="Amazonia Province Biosphere">
+                                <path d="M260 210 C 340 180, 480 195, 530 250 C 565 290, 520 375, 450 395 C 360 420, 280 380, 240 320 C 215 280, 230 225, 260 210 Z" fill="url(#amazonGrad)" opacity="0.85" stroke="#4E8B5A" stroke-width="1.8" />
+                                <circle cx="390" cy="295" r="9" class="svg-anim-beacon" fill="#4E8B5A" />
+                                <circle cx="390" cy="295" r="6" class="node-core" fill="#FBF7F0" />
+                                <text x="390" y="270" text-anchor="middle" fill="#FBF7F0" font-family="Manrope, sans-serif" font-size="13" font-weight="700" letter-spacing="0.05em">AMAZONIA PROVINCE</text>
+                                <text x="390" y="328" text-anchor="middle" fill="#88D49E" font-family="Manrope, sans-serif" font-size="10" font-weight="600">Virgin Rainforest and Biosphere</text>
+                            </g>
+                            <!-- Brazilia Province (Highland Escarpments and Alpine Cataracts) -->
+                            <g class="map-zone-node" data-map-zone="brazilia" tabindex="0" role="button" aria-label="Brazilia Province Alpine Zone">
+                                <path d="M470 330 C 540 320, 640 345, 665 400 C 685 440, 620 480, 560 485 C 490 490, 460 435, 450 390 C 445 360, 455 335, 470 330 Z" fill="url(#braziliaGrad)" opacity="0.85" stroke="#ECC677" stroke-width="1.8" />
+                                <circle cx="560" cy="415" r="8" class="svg-anim-beacon" fill="#C28A29" />
+                                <circle cx="560" cy="415" r="6" class="node-core" fill="#FBF7F0" />
+                                <text x="560" y="392" text-anchor="middle" fill="#FBF7F0" font-family="Manrope, sans-serif" font-size="12" font-weight="700" letter-spacing="0.05em">BRAZILIA PROVINCE</text>
+                                <text x="560" y="446" text-anchor="middle" fill="#ECC677" font-family="Manrope, sans-serif" font-size="10" font-weight="600">High Plateaus and Waterfalls</text>
+                            </g>
+                            <!-- Blue Belt Deep-Sea Marine Corridor -->
+                            <g class="map-zone-node" data-map-zone="bluebelt" tabindex="0" role="button" aria-label="Blue Belt Marine Corridor">
+                                <path d="M370 120 Q 480 140 590 190" stroke="#20A4C8" stroke-width="2.5" stroke-dasharray="6 6" fill="none" />
+                                <circle cx="590" cy="190" r="7" class="svg-anim-beacon" fill="#20A4C8" />
+                                <circle cx="590" cy="190" r="5" class="node-core" fill="#6BA4D9" />
+                                <text x="590" y="170" text-anchor="middle" fill="#6BA4D9" font-family="Manrope, sans-serif" font-size="11" font-weight="700">THE BLUE BELT</text>
+                                <text x="590" y="215" text-anchor="middle" fill="#C2CDD8" font-family="Manrope, sans-serif" font-size="9" font-weight="500">Oceanic Trench Sanctuary</text>
+                            </g>
+                            <!-- Legend Inset -->
+                            <g transform="translate(30, 435)">
+                                <rect width="180" height="60" rx="8" fill="#001830" opacity="0.75" stroke="#1A528F" stroke-width="1" />
+                                <circle cx="20" cy="20" r="5" fill="#2E7D47" />
+                                <text x="35" y="24" fill="#C2CDD8" font-family="Manrope, sans-serif" font-size="10">80% Total Non-touch Core</text>
+                                <circle cx="20" cy="40" r="5" fill="#20A4C8" />
+                                <text x="35" y="44" fill="#C2CDD8" font-family="Manrope, sans-serif" font-size="10">Autonomous Sensor Grid</text>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="biome-details-panel">
+                        <div class="biome-tabs-nav" role="tablist" aria-label="Ecosystem Zones">
+                            <button class="biome-tab-btn is-active" data-biome-target="caribbean" role="tab" aria-selected="true">Waikiki Province</button>
+                            <button class="biome-tab-btn" data-biome-target="amazonia" role="tab" aria-selected="false">Amazonia Province</button>
+                            <button class="biome-tab-btn" data-biome-target="brazilia" role="tab" aria-selected="false">Brazilia Province</button>
+                            <button class="biome-tab-btn" data-biome-target="bluebelt" role="tab" aria-selected="false">The Blue Belt</button>
+                        </div>
+                        <article class="biome-info-card is-active" data-biome-card="caribbean">
+                            <div class="biome-info-header">
+                                <h3 class="biome-title">Caribbean Coral and Atoll Sanctum</h3>
+                                <span class="biome-province-tag">Waikiki Province</span>
+                            </div>
+                            <p class="biome-narrative">Encompassing crystalline archipelagos, protected mangrove lagoons, and shallow turquoise banks, this tropical marine territory shelters over 480 species of reef coral. Strict electric-only maritime regulations guarantee zero fuel runoff in nursery atolls.</p>
+                            <div class="biome-metrics-grid">
+                                <div class="biome-metric-item"><span class="metric-val">28.4°C</span><span class="metric-lbl">Mean Sea Temp</span></div>
+                                <div class="biome-metric-item"><span class="metric-val">480+</span><span class="metric-lbl">Coral Species</span></div>
+                                <div class="biome-metric-item"><span class="metric-val">100%</span><span class="metric-lbl">Electric Vessel Mandate</span></div>
+                                <div class="biome-metric-item"><span class="metric-val">32</span><span class="metric-lbl">Bioluminescent Bays</span></div>
+                            </div>
+                        </article>
+                        <article class="biome-info-card" data-biome-card="amazonia">
+                            <div class="biome-info-header">
+                                <h3 class="biome-title">The Great Virgin Rainforest Biosphere</h3>
+                                <span class="biome-province-tag">Amazonia Province</span>
+                            </div>
+                            <p class="biome-narrative">The largest continuous virgin rainforest on the planet, legally guarded by the 80% non-touch constitutional covenant. Autonomous solar sensors and canopy watchtowers detect unauthorized access within 60 seconds, allowing wildlife to flourish without human disturbance.</p>
+                            <div class="biome-metrics-grid">
+                                <div class="biome-metric-item"><span class="metric-val">5,200,000 km²</span><span class="metric-lbl">Protected Forest</span></div>
+                                <div class="biome-metric-item"><span class="metric-val">8,900+</span><span class="metric-lbl">Flora Species</span></div>
+                                <div class="biome-metric-item"><span class="metric-val">99.8%</span><span class="metric-lbl">Canopy Health Score</span></div>
+                                <div class="biome-metric-item"><span class="metric-val">1,240</span><span class="metric-lbl">Avian Species</span></div>
+                            </div>
+                        </article>
+                        <article class="biome-info-card" data-biome-card="brazilia">
+                            <div class="biome-info-header">
+                                <h3 class="biome-title">Highland Escarpments and Alpine Cataracts</h3>
+                                <span class="biome-province-tag">Brazilia Province</span>
+                            </div>
+                            <p class="biome-narrative">From towering granite escarpments and alpine cloud plateaus to monumental crystalline waterfalls, Brazilia provides a striking vertical contrast. High-altitude microclimates harbor unique orchids, bromeliads, and endangered Andean mountain raptors.</p>
+                            <div class="biome-metrics-grid">
+                                <div class="biome-metric-item"><span class="metric-val">2,890 m</span><span class="metric-lbl">Highest Summit</span></div>
+                                <div class="biome-metric-item"><span class="metric-val">140+</span><span class="metric-lbl">Monitored Waterfalls</span></div>
+                                <div class="biome-metric-item"><span class="metric-val">18.2°C</span><span class="metric-lbl">Misty Plateau Mean</span></div>
+                                <div class="biome-metric-item"><span class="metric-val">650+</span><span class="metric-lbl">Alpine Orchid Types</span></div>
+                            </div>
+                        </article>
+                        <article class="biome-info-card" data-biome-card="bluebelt">
+                            <div class="biome-info-header">
+                                <h3 class="biome-title">The Blue Belt Oceanic Trench Sanctuary</h3>
+                                <span class="biome-province-tag">Oceanic Territories</span>
+                            </div>
+                            <p class="biome-narrative">Established following the historic Blue Belt Convention at COP26, this sovereign oceanic reserve protects deep abyssal trenches, hydrothermal vents, and pelagic migratory highways used by sperm whales, leatherback turtles, and manta rays.</p>
+                            <div class="biome-metrics-grid">
+                                <div class="biome-metric-item"><span class="metric-val">7,400 m</span><span class="metric-lbl">Deepest Trench</span></div>
+                                <div class="biome-metric-item"><span class="metric-val">24</span><span class="metric-lbl">Autonomous Clean Fleets</span></div>
+                                <div class="biome-metric-item"><span class="metric-val">96.2%</span><span class="metric-lbl">Pelagic Survival Rate</span></div>
+                                <div class="biome-metric-item"><span class="metric-val">4,800 km²</span><span class="metric-lbl">Reef Restoration Grid</span></div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="canopy" class="nature-section light-bg fade-in">
+            <div class="nature-container">
+                <div class="nature-header-block">
+                    <span class="nature-badge">Forest Strata Science</span>
+                    <h2 class="section-title">Vertical Canopy Stratification</h2>
+                    <p class="section-intro">Life inside Waikiki's Amazonian sanctuary is organized across four distinct botanical storeys. Hover or click through the layers below to view the species, sunlight penetration, and autonomous monitoring probes operating at each height.</p>
+                </div>
+                <div class="canopy-layout">
+                    <div class="canopy-svg-box">
+                        <svg class="canopy-svg" viewBox="0 0 720 620" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cross-section diagram of Amazonian rainforest canopy stratification">
+                            <defs>
+                                <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#6BA4D9" stop-opacity="0.5" />
+                                    <stop offset="100%" stop-color="#FBF7F0" stop-opacity="0.1" />
+                                </linearGradient>
+                                <linearGradient id="emergentGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#4E8B5A" />
+                                    <stop offset="100%" stop-color="#2E7D47" />
+                                </linearGradient>
+                                <linearGradient id="canopyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#2E7D47" />
+                                    <stop offset="100%" stop-color="#1E502D" />
+                                </linearGradient>
+                                <linearGradient id="understoryGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#1E502D" />
+                                    <stop offset="100%" stop-color="#14361E" />
+                                </linearGradient>
+                                <linearGradient id="floorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#14361E" />
+                                    <stop offset="100%" stop-color="#0B1E11" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Sky and Atmospheric Backdrop -->
+                            <rect width="720" height="620" rx="14" fill="#0A1828" />
+                            <rect y="0" width="720" height="150" fill="url(#skyGrad)" />
+                            <!-- Animated Sunlight Filter Rays -->
+                            <polygon class="svg-anim-ray" points="180,0 260,0 340,480 220,480" fill="#F5C46E" opacity="0.12" />
+                            <polygon class="svg-anim-ray" points="420,0 510,0 580,480 460,480" fill="#F5C46E" opacity="0.15" />
+                            <!-- Floating Biological Particles -->
+                            <circle class="svg-anim-particle" cx="240" cy="180" r="3.5" fill="#88D49E" />
+                            <circle class="svg-anim-particle" cx="490" cy="230" r="4" fill="#88D49E" />
+                            <circle class="svg-anim-particle" cx="320" cy="380" r="3" fill="#ECC677" />
+                            <circle class="svg-anim-particle" cx="190" cy="460" r="2.5" fill="#88D49E" />
+                            <!-- Stratum 4: Emergent Layer (50m - 70m) -->
+                            <g class="strata-tier" data-strata="emergent" tabindex="0" role="button" aria-label="Emergent Layer 50 to 70 meters">
+                                <rect x="30" y="30" width="660" height="110" rx="8" fill="url(#emergentGrad)" opacity="0.85" stroke="#4E8B5A" stroke-width="1.5" />
+                                <text x="50" y="65" fill="#FBF7F0" font-family="Fraunces, serif" font-size="18" font-weight="700">Emergent Layer</text>
+                                <text x="50" y="88" fill="#88D49E" font-family="Manrope, sans-serif" font-size="12" font-weight="600">Altitude: 50 — 70 Meters · 100% Sunlight Exposure</text>
+                                <text x="50" y="112" fill="#C2CDD8" font-family="Manrope, sans-serif" font-size="11">Giant Kapok crowns, Harpy Eagle nests and atmospheric solar sensor nodes.</text>
+                                <circle cx="640" cy="85" r="7" class="svg-anim-beacon" fill="#88D49E" />
+                                <circle cx="640" cy="85" r="4" fill="#FBF7F0" />
+                            </g>
+                            <!-- Stratum 3: Canopy Layer (30m - 45m) -->
+                            <g class="strata-tier" data-strata="canopy" tabindex="0" role="button" aria-label="Canopy Layer 30 to 45 meters">
+                                <rect x="30" y="160" width="660" height="120" rx="8" fill="url(#canopyGrad)" opacity="0.85" stroke="#2E7D47" stroke-width="1.5" />
+                                <text x="50" y="198" fill="#FBF7F0" font-family="Fraunces, serif" font-size="18" font-weight="700">Main Forest Canopy</text>
+                                <text x="50" y="222" fill="#88D49E" font-family="Manrope, sans-serif" font-size="12" font-weight="600">Altitude: 30 — 45 Meters · 90% Photosynthetic Activity</text>
+                                <text x="50" y="246" fill="#C2CDD8" font-family="Manrope, sans-serif" font-size="11">Dense green roof, orchids, Toucans, tree frogs and autonomous canopy cable gliders.</text>
+                                <circle cx="640" cy="220" r="7" class="svg-anim-beacon" fill="#2E7D47" />
+                                <circle cx="640" cy="220" r="4" fill="#FBF7F0" />
+                            </g>
+                            <!-- Stratum 2: Understory (15m - 25m) -->
+                            <g class="strata-tier" data-strata="understory" tabindex="0" role="button" aria-label="Understory Layer 15 to 25 meters">
+                                <rect x="30" y="300" width="660" height="120" rx="8" fill="url(#understoryGrad)" opacity="0.85" stroke="#1E502D" stroke-width="1.5" />
+                                <text x="50" y="338" fill="#FBF7F0" font-family="Fraunces, serif" font-size="18" font-weight="700">The Understory</text>
+                                <text x="50" y="362" fill="#88D49E" font-family="Manrope, sans-serif" font-size="12" font-weight="600">Altitude: 15 — 25 Meters · Filtered Humidity Zone</text>
+                                <text x="50" y="386" fill="#C2CDD8" font-family="Manrope, sans-serif" font-size="11">Broad-leaved ferns, Jaguars, Emerald boas and high-humidity microclimate sensors.</text>
+                                <circle cx="640" cy="360" r="7" class="svg-anim-beacon" fill="#1E502D" />
+                                <circle cx="640" cy="360" r="4" fill="#FBF7F0" />
+                            </g>
+                            <!-- Stratum 1: Forest Floor (0m - 5m) -->
+                            <g class="strata-tier" data-strata="floor" tabindex="0" role="button" aria-label="Forest Floor 0 to 5 meters">
+                                <rect x="30" y="440" width="660" height="120" rx="8" fill="url(#floorGrad)" opacity="0.85" stroke="#14361E" stroke-width="1.5" />
+                                <text x="50" y="478" fill="#FBF7F0" font-family="Fraunces, serif" font-size="18" font-weight="700">The Forest Floor</text>
+                                <text x="50" y="502" fill="#88D49E" font-family="Manrope, sans-serif" font-size="12" font-weight="600">Altitude: 0 — 5 Meters · 2% Sunlight Penetration</text>
+                                <text x="50" y="526" fill="#C2CDD8" font-family="Manrope, sans-serif" font-size="11">Decomposer fungi networks, tapirs, crystalline spring runoff and soil nutrient telemetry.</text>
+                                <circle cx="640" cy="500" r="7" class="svg-anim-beacon" fill="#14361E" />
+                                <circle cx="640" cy="500" r="4" fill="#FBF7F0" />
+                            </g>
+                            <!-- Height Calibration Scale -->
+                            <line x1="16" y1="30" x2="16" y2="560" stroke="#4E8B5A" stroke-width="2" />
+                            <circle cx="16" cy="30" r="3" fill="#4E8B5A" />
+                            <circle cx="16" cy="560" r="3" fill="#4E8B5A" />
+                        </svg>
+                    </div>
+                    <div class="canopy-layers-stack">
+                        <article class="canopy-layer-card is-active" data-layer="emergent">
+                            <div class="layer-card-header">
+                                <h3 class="layer-card-title">Emergent Layer</h3>
+                                <span class="layer-altitude-pill">50 — 70 Meters</span>
+                            </div>
+                            <p class="layer-card-desc">The crown giants that brave fierce tropical gusts and direct equatorial radiation. Harpy eagles establish sovereign eyries in Kapok branches spanning up to forty meters wide.</p>
+                            <span class="layer-species-tag">Dominant species: Harpy Eagle, Giant Kapok, Flying Fox</span>
+                        </article>
+                        <article class="canopy-layer-card" data-layer="canopy">
+                            <div class="layer-card-header">
+                                <h3 class="layer-card-title">Main Forest Canopy</h3>
+                                <span class="layer-altitude-pill">30 — 45 Meters</span>
+                            </div>
+                            <p class="layer-card-desc">A continuous interlocking ceiling of foliage that absorbs ninety percent of incoming sunlight, creating a high-energy botanical engine brimming with orchids, toucans, and climbing bromeliads.</p>
+                            <span class="layer-species-tag">Dominant species: Emerald Toucan, Tree Frog, Sovereign Orchid</span>
+                        </article>
+                        <article class="canopy-layer-card" data-layer="understory">
+                            <div class="layer-card-header">
+                                <h3 class="layer-card-title">The Understory</h3>
+                                <span class="layer-altitude-pill">15 — 25 Meters</span>
+                            </div>
+                            <p class="layer-card-desc">A dimly illuminated realm of broad waxy leaves and constant seventy-five percent ambient humidity. Apex predators such as the black jaguar roam silently through shaded branchways.</p>
+                            <span class="layer-species-tag">Dominant species: Black Jaguar, Emerald Tree Boa, Morpho Butterfly</span>
+                        </article>
+                        <article class="canopy-layer-card" data-layer="floor">
+                            <div class="layer-card-header">
+                                <h3 class="layer-card-title">The Forest Floor</h3>
+                                <span class="layer-altitude-pill">0 — 5 Meters</span>
+                            </div>
+                            <p class="layer-card-desc">Completely sheltered from sunlight, the floor recycles biological nutrients with astonishing speed. Interconnected mycelial networks feed crystal springs feeding the mighty tributaries.</p>
+                            <span class="layer-species-tag">Dominant species: Lowland Tapir, Giant Armadillo, Bioluminescent Fungi</span>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="marine" class="nature-section fade-in">
+            <div class="nature-container">
+                <div class="nature-header-block">
+                    <span class="nature-badge">Oceanic Preservation</span>
+                    <h2 class="section-title">The Blue Belt Marine Sanctuary</h2>
+                    <p class="section-intro">Born from Waikiki's leadership at COP26 and the Oceanic Partnership Charter, the Blue Belt safeguards both shallow living coral atolls and abyssal ocean trenches through automated surveillance and zero-emission protection.</p>
+                </div>
+                <div class="marine-container">
+                    <div class="marine-svg-frame">
+                        <svg class="marine-svg" viewBox="0 0 860 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animated cross-section of coral reef and oceanic trench">
+                            <defs>
+                                <linearGradient id="deepWater" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#20A4C8" stop-opacity="0.8" />
+                                    <stop offset="45%" stop-color="#003366" />
+                                    <stop offset="100%" stop-color="#001830" />
+                                </linearGradient>
+                                <linearGradient id="coralGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#D9654C" />
+                                    <stop offset="100%" stop-color="#F5C46E" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Water Gradient -->
+                            <rect width="860" height="380" rx="14" fill="url(#deepWater)" />
+                            <!-- Animated Ocean Waves Surface -->
+                            <path class="svg-anim-wave" d="M0 45 C 120 30, 240 60, 360 45 C 480 30, 600 60, 720 45 C 780 38, 820 48, 860 45 L 860 0 L 0 0 Z" fill="#6BA4D9" opacity="0.3" />
+                            <!-- Swimming Manta Ray Animation -->
+                            <g class="svg-anim-manta" transform="translate(180, 110)">
+                                <path d="M0 0 C 25 -15, 65 -12, 90 0 C 70 8, 45 10, 0 0 Z" fill="#FBF7F0" opacity="0.85" />
+                                <line x1="45" y1="8" x2="45" y2="45" stroke="#FBF7F0" stroke-width="1.8" opacity="0.75" />
+                                <circle cx="45" cy="-2" r="3" fill="#6BA4D9" />
+                            </g>
+                            <!-- Swimming Sea Turtle Animation -->
+                            <g class="svg-anim-turtle" transform="translate(560, 160)">
+                                <ellipse cx="30" cy="20" rx="22" ry="15" fill="#2E7D47" stroke="#88D49E" stroke-width="1.5" />
+                                <circle cx="56" cy="20" r="7" fill="#4E8B5A" />
+                                <path d="M18 7 C 8 -2, -2 4, 6 12" fill="#4E8B5A" />
+                                <path d="M18 33 C 8 42, -2 36, 6 28" fill="#4E8B5A" />
+                                <path d="M42 7 C 52 -2, 60 4, 52 12" fill="#4E8B5A" />
+                                <path d="M42 33 C 52 42, 60 36, 52 28" fill="#4E8B5A" />
+                            </g>
+                            <!-- Bioluminescent Coral Garden on Lagoon Bed -->
+                            <g class="svg-anim-coral">
+                                <path d="M20 380 Q 60 310 110 380 Q 150 280 200 380 Q 240 330 280 380" fill="url(#coralGlow)" opacity="0.9" />
+                                <circle cx="70" cy="330" r="4" fill="#F5C46E" />
+                                <circle cx="160" cy="300" r="4.5" fill="#D9654C" />
+                                <circle cx="230" cy="340" r="3.5" fill="#F5C46E" />
+                            </g>
+                            <!-- Oceanic Trench Abyssal Drop -->
+                            <path d="M380 380 L 460 270 Q 560 280 620 330 L 680 380 Z" fill="#001830" stroke="#1A528F" stroke-width="1.8" />
+                            <!-- Autonomous Deep Submersible Scientific Beacon -->
+                            <g transform="translate(520, 290)">
+                                <rect x="0" y="0" width="40" height="20" rx="6" fill="#FBF7F0" stroke="#C28A29" stroke-width="1.5" />
+                                <circle cx="20" cy="10" r="4" class="svg-anim-beacon" fill="#20A4C8" />
+                                <circle cx="20" cy="10" r="3" fill="#003366" />
+                                <line x1="20" y1="0" x2="20" y2="-18" stroke="#FBF7F0" stroke-width="1.5" />
+                                <circle cx="20" cy="-18" r="2.5" fill="#C28A29" />
+                            </g>
+                            <text x="30" y="30" fill="#FBF7F0" font-family="Fraunces, serif" font-size="16" font-weight="700">Shallow Coral Lagoon (0 — 25 m)</text>
+                            <text x="540" y="360" fill="#6BA4D9" font-family="Manrope, sans-serif" font-size="12" font-weight="600">Pelagic Migration Trench (2,000+ m)</text>
+                        </svg>
+                    </div>
+                    <div class="marine-pillars-grid">
+                        <article class="marine-card">
+                            <div class="marine-icon-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                                    <circle cx="12" cy="12" r="3" />
+                                </svg>
+                            </div>
+                            <h3>Active Coral Restoration</h3>
+                            <p>Automated underwater micro-nurseries cultivate resilient heat-tolerant coral colonies, replanting over 250,000 polyps annually across the Great Caribbean Barrier.</p>
+                        </article>
+                        <article class="marine-card">
+                            <div class="marine-icon-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4" />
+                                </svg>
+                            </div>
+                            <h3>Bioluminescent Night Atolls</h3>
+                            <p>Thirty-two pristine saltwater lagoons host millions of glowing micro-dinoflagellates. Strict zero-motor policies permit only silent transparent kayaks after sundown.</p>
+                        </article>
+                        <article class="marine-card">
+                            <div class="marine-icon-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                                </svg>
+                            </div>
+                            <h3>Pelagic Highway Defense</h3>
+                            <p>Autonomous solar-powered patrol drones intercept rogue vessels in migration corridors, securing safe passage for humpback whales, blue marlins, and leatherback turtles.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sanctuaries" class="nature-section light-bg fade-in">
+            <div class="nature-container">
+                <div class="nature-header-block">
+                    <span class="nature-badge">Protected Territories</span>
+                    <h2 class="section-title">Premier National Parks and Sanctuaries</h2>
+                    <p class="section-intro">Explore Waikiki's crown jewels of wilderness conservation. Each park balances scientific stewardship with controlled low-impact eco-exploration permits booked exclusively via the Waikiki One platform.</p>
+                </div>
+                <div class="sanctuaries-filter-bar">
+                    <button class="filter-chip sanctuary-filter-btn is-active" data-filter="all" type="button" aria-pressed="true">All Sanctuaries</button>
+                    <button class="filter-chip sanctuary-filter-btn" data-filter="rainforest" type="button" aria-pressed="false">Rainforest</button>
+                    <button class="filter-chip sanctuary-filter-btn" data-filter="marine" type="button" aria-pressed="false">Marine</button>
+                    <button class="filter-chip sanctuary-filter-btn" data-filter="highland" type="button" aria-pressed="false">Highland</button>
+                </div>
+                <div class="sanctuaries-grid">
+                    <article class="sanctuary-card" data-cat="rainforest">
+                        <div>
+                            <div class="sanctuary-top">
+                                <span class="sanctuary-badge-category cat-rainforest">Rainforest Core</span>
+                                <span class="sanctuary-province">Amazonia Province</span>
+                            </div>
+                            <h3 class="sanctuary-title">Alto Amazonia Biosphere Reserve</h3>
+                            <p class="sanctuary-desc">Covering 3.2 million hectares of untouched canopy, this wilderness is accessible only via silent solar airships and elevated botanical walkways. Home to sovereign jaguar corridors and uncontacted biodiversity zones.</p>
+                        </div>
+                        <div class="sanctuary-stats-row">
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">3,200,000 ha</span><span class="sanctuary-stat-tag">Surface Area</span></div>
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">Tier I</span><span class="sanctuary-stat-tag">Protection Class</span></div>
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">Airship Only</span><span class="sanctuary-stat-tag">Access Mode</span></div>
+                        </div>
+                    </article>
+                    <article class="sanctuary-card" data-cat="marine">
+                        <div>
+                            <div class="sanctuary-top">
+                                <span class="sanctuary-badge-category cat-marine">Marine Park</span>
+                                <span class="sanctuary-province">Waikiki Province</span>
+                            </div>
+                            <h3 class="sanctuary-title">Aurelia Coral Archipelago</h3>
+                            <p class="sanctuary-desc">Eighty crystalline islets ringed by live barrier coral. Daily explorer quotas are capped strictly at 120 guests to guarantee zero physical impact on reef health and nesting sea birds.</p>
+                        </div>
+                        <div class="sanctuary-stats-row">
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">80 Islets</span><span class="sanctuary-stat-tag">Islands</span></div>
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">Tier I</span><span class="sanctuary-stat-tag">Protection Class</span></div>
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">120 / Day</span><span class="sanctuary-stat-tag">Visitor Cap</span></div>
+                        </div>
+                    </article>
+                    <article class="sanctuary-card" data-cat="highland">
+                        <div>
+                            <div class="sanctuary-top">
+                                <span class="sanctuary-badge-category cat-highland">Highland Peak</span>
+                                <span class="sanctuary-province">Brazilia Province</span>
+                            </div>
+                            <h3 class="sanctuary-title">Monte Cristal Cloud Forest</h3>
+                            <p class="sanctuary-desc">Rising into perpetual mist at 2,890 meters, Monte Cristal harbors the highest concentration of endemic orchids and cloud forest mosses in South America, linked by suspended wooden sky-trails.</p>
+                        </div>
+                        <div class="sanctuary-stats-row">
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">2,890 m</span><span class="sanctuary-stat-tag">Peak Altitude</span></div>
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">Tier II</span><span class="sanctuary-stat-tag">Protection Class</span></div>
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">Sky-Trail</span><span class="sanctuary-stat-tag">Trail Network</span></div>
+                        </div>
+                    </article>
+                    <article class="sanctuary-card" data-cat="rainforest">
+                        <div>
+                            <div class="sanctuary-top">
+                                <span class="sanctuary-badge-category cat-rainforest">Rainforest River</span>
+                                <span class="sanctuary-province">Amazonia Province</span>
+                            </div>
+                            <h3 class="sanctuary-title">Rio Esmeralda Cataracts</h3>
+                            <p class="sanctuary-desc">A breathtaking cascade network where emerald jungle tributaries drop 180 meters into deep basaltic lagoons. Electric catamarans glide silently past mist-draped granite cliffs.</p>
+                        </div>
+                        <div class="sanctuary-stats-row">
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">180 m</span><span class="sanctuary-stat-tag">Cataract Drop</span></div>
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">Tier II</span><span class="sanctuary-stat-tag">Protection Class</span></div>
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">Electric Boats</span><span class="sanctuary-stat-tag">Transit</span></div>
+                        </div>
+                    </article>
+                    <article class="sanctuary-card" data-cat="marine">
+                        <div>
+                            <div class="sanctuary-top">
+                                <span class="sanctuary-badge-category cat-marine">Coastal Mangrove</span>
+                                <span class="sanctuary-province">Waikiki Province</span>
+                            </div>
+                            <h3 class="sanctuary-title">Bahia Serena Mangrove Reserve</h3>
+                            <p class="sanctuary-desc">A labyrinthine tidal sanctuary shielding the southern shoreline. Crucial breeding habitat for manatees, roseate spoonbills, and juvenile reef fish sheltered beneath ancient mangrove roots.</p>
+                        </div>
+                        <div class="sanctuary-stats-row">
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">64,000 ha</span><span class="sanctuary-stat-tag">Mangrove Core</span></div>
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">Tier I</span><span class="sanctuary-stat-tag">Protection Class</span></div>
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">Kayak Only</span><span class="sanctuary-stat-tag">Permit</span></div>
+                        </div>
+                    </article>
+                    <article class="sanctuary-card" data-cat="highland">
+                        <div>
+                            <div class="sanctuary-top">
+                                <span class="sanctuary-badge-category cat-highland">Savanna Plateau</span>
+                                <span class="sanctuary-province">Brazilia Province</span>
+                            </div>
+                            <h3 class="sanctuary-title">Cerrado Sunlit Savanna</h3>
+                            <p class="sanctuary-desc">Vast golden plateaus dotted with twisted fire-adapted trees, deep river canyons, and crystal mineral pools. A crucial sanctuary for maned wolves and giant anteaters under strict night watch.</p>
+                        </div>
+                        <div class="sanctuary-stats-row">
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">950,000 ha</span><span class="sanctuary-stat-tag">Protected Area</span></div>
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">Tier II</span><span class="sanctuary-stat-tag">Protection Class</span></div>
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">Guided Safari</span><span class="sanctuary-stat-tag">Exploration</span></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="charter" class="nature-section fade-in">
+            <div class="nature-container">
+                <div class="nature-header-block">
+                    <span class="nature-badge">Legal Conservation</span>
+                    <h2 class="section-title">The Sovereign Green Charter</h2>
+                    <p class="section-intro">In Waikiki, ecological integrity is not merely policy: it is encoded directly into the Constitution. Every resident and visitor participates in the four core mandates of the Sovereign Green Charter.</p>
+                </div>
+                <div class="charter-grid">
+                    <div class="charter-card">
+                        <span class="charter-num-badge">1</span>
+                        <h3>Zero Single-Use Plastics</h3>
+                        <p>All single-use plastics have been completely outlawed across all three provinces since 2015. Organic bio-cellulose packaging and bamboo composites are standard nationwide.</p>
+                    </div>
+                    <div class="charter-card">
+                        <span class="charter-num-badge">2</span>
+                        <h3>100% Electric and Maglev Transit</h3>
+                        <p>Combustion engines are strictly prohibited in national reserves and coastal waterways. All expedition transport utilizes silent hydrogen maglevs or solar-battery watercraft.</p>
+                    </div>
+                    <div class="charter-card">
+                        <span class="charter-num-badge">3</span>
+                        <h3>Satellite Bio-Defense</h3>
+                        <p>Autonomous constellation satellites and AI acoustic monitors listen continuously for illegal chainsaws or firearms, deploying interception drones in under sixty seconds.</p>
+                    </div>
+                    <div class="charter-card">
+                        <span class="charter-num-badge">4</span>
+                        <h3>Full Tourism Reinvestment</h3>
+                        <p>Every dollar generated from visitor sanctuary permits directly funds coral nursery grafting and native seedling replanting in the Amazonia biosphere.</p>
+                    </div>
+                </div>
+                <div class="charter-banner">
+                    <h3>Experience Wilderness in its Purest Form</h3>
+                    <p>Plan your low-impact expedition to the ancient canopy or crystalline atolls. Permits are issued in limited quantities to preserve silence and wildlife balance for generations to come.</p>
+                    <a class="charter-cta-btn" href="travel-guide.html">
+                        <span>Read the Travel Guide</span>
+                        <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- @chrome:next -->
+        <section class="next-chapter">
+            <a class="next-card" href="travel-guide.html">
+                <div class="next-media"><img src="../images/UniversalUpscaler_Pro_Precise_2_1f1c1a3a-8488-6130-962d-09f15cdbb0eb.jpg" alt="" loading="lazy" decoding="async" /></div>
+                <span class="next-body">
+                    <span class="next-eyebrow">Continue the journey · Visit</span>
+                    <span class="next-title">Travel Guide</span>
+                    <span class="next-arrow" aria-hidden="true">→</span>
+                </span>
+            </a>
+        </section>
+        <!-- /@chrome:next -->
+    </main>
+    <!-- @chrome:footer -->
+    <footer class="site-footer">
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="lazy" decoding="async" /><span class="brand-word">Waikiki</span></a>
+                    <p class="footer-motto">Prosperity, stability and progress, from the Caribbean to the Amazon.</p>
+                    <p class="footer-about">The official portal of the Nation of Waikiki. Founded 10 March 1999 · Nova Aurelia. This site was generated with AI, any resemblance to real people, countries or institutions is just a coincidence.</p>
+                </div>
+                <div class="footer-col">
+                    <h2>Nation</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="overview.html">Overview</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="society.html">Society</a></li>
+                        <li><a href="culture.html">Culture</a></li>
+                        <li><a href="ideology.html">Ideology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Governance</h2>
+                    <ul>
+                        <li><a href="government.html">Government</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="parties.html">Politics</a></li>
+                        <li><a href="constitution.html">Constitution</a></li>
+                        <li><a href="military.html">Military</a></li>
+                        <li><a href="diplomacy.html">Diplomacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Prosperity</h2>
+                    <ul>
+                        <li><a href="economy.html">Economy</a></li>
+                        <li><a href="banking-system.html">Banking System</a></li>
+                        <li><a href="wealth-fund.html">Wealth Fund</a></li>
+                        <li><a href="citizenship.html">Citizenship</a></li>
+                        <li><a href="infrastructure.html">Infrastructure</a></li>
+                        <li><a href="space-research.html">Space Research</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Royal Family</h2>
+                    <ul>
+                        <li><a href="dynasty.html">The Dynasty</a></li>
+                        <li><a href="chease-and-jessica.html">Chease and Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo and Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina and Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer and Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Visit</h2>
+                    <ul>
+                        <li><a href="tourism.html">Tourism</a></li>
+                        <li><a href="sights.html">Sights</a></li>
+                        <li><a href="nature.html">Nature</a></li>
+                        <li><a href="travel-guide.html">Travel Guide</a></li>
+                        <li><a href="visa.html">Visa and Entry</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <span class="footer-mega" aria-hidden="true">Waikiki</span>
+            <div class="footer-bottom">
+                <p>© 2026 The Sovereign Nation of Waikiki. All rights reserved.</p>
+                <nav>
+                    <a style="margin-right: 40px" href="../hu/nature.html" hreflang="hu" lang="hu">Magyar</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <button class="to-top" type="button">
+        <svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span>
+    </button>
+    <!-- /@chrome:footer -->
+    <script src="../js/common.js"></script>
+    <script src="../js/nature.js"></script>
+</body>
+</html>

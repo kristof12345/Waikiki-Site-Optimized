@@ -70,6 +70,7 @@ GROUPS = [
     ("visit", {"en": "Visit", "hu": "Látogatás"}, [
         ("tourism", {"en": "Tourism", "hu": "Turizmus"}),
         ("sights", {"en": "Sights", "hu": "Látnivalók"}),
+        ("nature", {"en": "Nature", "hu": "Természet"}),
         ("travel-guide", {"en": "Travel Guide", "hu": "Utazási Kalauz"}),
         ("visa", {"en": "Visa and Entry", "hu": "Vízum és belépés"}),
         ("faq", {"en": "FAQ", "hu": "GYIK"}),
@@ -391,6 +392,7 @@ TARGET_NEXT_IMAGES = {
     "space-research": "UniversalUpscaler_Pro_Precise_2_1f1c2357-5be5-6860-9aa6-0dca8e8888b7.jpg",
     "banking-system": "UniversalUpscaler_Pro_Precise_2_1f1c235a-8739-6b80-818f-9814e906014a.jpg",
     "constitution": "UniversalUpscaler_Pro_Precise_2_1f1c1a2a-3682-6450-b953-3cd17cf5a1a7.jpg",
+    "nature": "sights_nature.jpg",
     "travel-guide": "UniversalUpscaler_Pro_Precise_2_1f1c1a3a-8488-6130-962d-09f15cdbb0eb.jpg",
     "visa": "UniversalUpscaler_Pro_Precise_2_1f1c8726-8cda-62d0-a130-3eed92bc8395.jpg",
     "faq": "UniversalUpscaler_82625004-8a28-4ed6-9515-e204957d9457.jpg",

@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- @chrome:head -->
+    <meta name="theme-color" content="#fbf7f0" />
+    <link rel="stylesheet" href="../css/fonts.css" />
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
+    <!-- /@chrome:head -->
+    <title>Waikiki Természete — Szuverén Rezervátumok</title>
+    <link rel="icon" href="../icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo-blue.png" />
+    <link href="../manifest.json" rel="manifest" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/nature.css" />
+    <link rel="preload" as="image" href="../images/sights_nature.jpg" fetchpriority="high" />
+</head>
+<body class="page-nature group-visit">
+    <!-- @chrome:header -->
+    <div class="page-curtain" aria-hidden="true"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="64" height="64" loading="eager" decoding="async" /></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <header class="site-header">
+        <a href="index.html" class="brand"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" decoding="async" /><span class="brand-word">Waikiki</span></a>
+        <nav class="primary-nav">
+            <a href="tourism.html">Utazás</a><a href="society.html">Társadalom</a><a href="economy.html">Gazdaság</a><a href="government.html">Kormány</a><a href="history.html">Történelem</a><a href="dynasty.html">Királyi Család</a>
+        </nav>
+        <div class="header-actions">
+            <a class="lang-pill" href="../en/nature.html" hreflang="en" lang="en" title="English">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg>
+                <span>EN</span>
+            </a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+                <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg>
+            </button>
+            <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+                <span class="menu-lines" aria-hidden="true"></span>
+                <span class="menu-label-open">Menü</span>
+                <span class="menu-label-close">Bezárás</span>
+                <span class="visually-hidden">Menü</span>
+            </button>
+        </div>
+    </header>
+    <div class="site-menu" id="site-menu" aria-hidden="true" inert>
+        <div class="site-menu-inner">
+            <aside class="menu-aside">
+                <div class="menu-clock-block">
+                    <div class="menu-clock-header">
+                        <p class="menu-clock-label">Helyi idő a fővárosban</p>
+                        <div class="menu-weather" data-capital-weather><span class="weather-icon" aria-hidden="true">☀️</span> <span class="weather-temp">28°C</span> <span class="weather-desc">Napos</span></div>
+                    </div>
+                    <p class="menu-clock" data-capital-clock>--:--</p>
+                    <p class="menu-clock-city">Nova Aurelia, Waikiki tartomány</p>
+                </div>
+                <p class="menu-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
+                <div class="menu-aside-row">
+                    <a class="menu-chip" href="../en/nature.html" hreflang="en" lang="en">English</a><a class="menu-chip is-active" href="../hu/nature.html" hreflang="hu" lang="hu">Magyar</a>
+                    <button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Éjszakai mód</button>
+                    <button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animáció</button>
+                </div>
+            </aside>
+            <div class="menu-group">
+                <h2>Nemzet</h2>
+                <ul>
+                    <li><a href="index.html">Főoldal</a></li>
+                    <li><a href="overview.html">Áttekintés</a></li>
+                    <li><a href="history.html">Történelem</a></li>
+                    <li><a href="society.html">Társadalom</a></li>
+                    <li><a href="culture.html">Kultúra</a></li>
+                    <li><a href="ideology.html">Ideológia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Kormányzás</h2>
+                <ul>
+                    <li><a href="government.html">Kormány</a></li>
+                    <li><a href="leadership.html">Vezetés</a></li>
+                    <li><a href="parties.html">Politika</a></li>
+                    <li><a href="constitution.html">Alkotmány</a></li>
+                    <li><a href="military.html">Hadsereg</a></li>
+                    <li><a href="diplomacy.html">Diplomácia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Jólét</h2>
+                <ul>
+                    <li><a href="economy.html">Gazdaság</a></li>
+                    <li><a href="banking-system.html">Bankrendszer</a></li>
+                    <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                    <li><a href="citizenship.html">Állampolgárság</a></li>
+                    <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                    <li><a href="space-research.html">Űrkutatás</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Királyi Család</h2>
+                <ul>
+                    <li><a href="dynasty.html">A Dinasztia</a></li>
+                    <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                    <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Látogatás</h2>
+                <ul>
+                    <li><a href="tourism.html">Turizmus</a></li>
+                    <li><a href="sights.html">Látnivalók</a></li>
+                    <li><a href="nature.html" aria-current="page">Természet</a></li>
+                    <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                    <li><a href="visa.html">Vízum és belépés</a></li>
+                    <li><a href="faq.html">GYIK</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /@chrome:header -->
+    <main id="main">
+        <section class="hero" data-hero>
+            <div class="hero-media"><img src="../images/sights_nature.jpg" alt="Waikiki természete" fetchpriority="high" decoding="async" /></div>
+            <div class="hero-veil"></div>
+            <div class="hero-content">
+                <span class="hero-eyebrow">Látogatás · Természeti Rezervátumok</span>
+                <h1 class="hero-title">Waikiki Élő <em>Természete</em></h1>
+                <p class="hero-lead">Három eltérő ökológiai tartományt egyesítve, a karibi korallzátonyoktól és biolumineszcens öblöktől az ötmillió négyzetkilométeres érintetlen amazóniai esőerdőig és az alpesi andoki csúcsokig Waikiki a Föld legtisztább vadonját őrzi.</p>
+                <div class="hero-stats">
+                    <div class="stat-item"><span class="stat-number">8 840 000 km²</span><span class="stat-label">Védett Terület</span></div>
+                    <div class="stat-item"><span class="stat-number">88,4%</span><span class="stat-label">Érintetlen Lombkorona</span></div>
+                    <div class="stat-item"><span class="stat-number">12 400+</span><span class="stat-label">Katalogizált Faj</span></div>
+                    <div class="stat-item"><span class="stat-number">0%</span><span class="stat-label">Nettó Erdőirtás</span></div>
+                </div>
+            </div>
+        </section>
+        <!-- @chrome:subnav --><!-- /@chrome:subnav -->
+        <section id="biomes" class="nature-section fade-in">
+            <div class="nature-container">
+                <div class="nature-header-block">
+                    <span class="nature-badge">Biodiverzitási Menedékek</span>
+                    <h2 class="section-title">A Három Ökológiai Tartomány</h2>
+                    <p class="section-intro">Waikiki három lenyűgöző élőhelytípust fog össze egyetlen szuverén természetvédelmi korona alatt. Válasszon zónát az interaktív térképen vagy a füleken az endemikus ökoszisztémák és telemetriai állomások megismeréséhez.</p>
+                </div>
+                <div class="biomes-showcase">
+                    <div class="svg-viewport-wrapper">
+                        <svg class="svg-nature-map" viewBox="0 0 760 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Waikiki ökológiai zónáinak interaktív térképe">
+                            <defs>
+                                <radialGradient id="oceanGlowHu" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="#1A528F" stop-opacity="0.22" />
+                                    <stop offset="100%" stop-color="#001830" stop-opacity="0" />
+                                </radialGradient>
+                                <linearGradient id="amazonGradHu" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#2E7D47" />
+                                    <stop offset="100%" stop-color="#1B4D2C" />
+                                </linearGradient>
+                                <linearGradient id="waikikiGradHu" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#20A4C8" />
+                                    <stop offset="100%" stop-color="#0E5E7A" />
+                                </linearGradient>
+                                <linearGradient id="braziliaGradHu" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#C28A29" />
+                                    <stop offset="100%" stop-color="#78531A" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Óceáni Alapvászon -->
+                            <rect width="760" height="520" rx="14" fill="#0A1828" />
+                            <circle cx="380" cy="260" r="320" fill="url(#oceanGlowHu)" />
+                            <!-- Tengeri Mélységi Szintvonalak -->
+                            <path class="svg-anim-wave" d="M20 90 Q 200 60 380 90 T 740 90" stroke="#1A528F" stroke-width="1.2" stroke-dasharray="4 6" opacity="0.45" fill="none" />
+                            <path class="svg-anim-wave" d="M20 180 Q 200 150 380 180 T 740 180" stroke="#1A528F" stroke-width="1.2" stroke-dasharray="4 6" opacity="0.35" fill="none" />
+                            <path class="svg-anim-wave" d="M20 370 Q 200 340 380 370 T 740 370" stroke="#1A528F" stroke-width="1.2" stroke-dasharray="4 6" opacity="0.4" fill="none" />
+                            <path class="svg-anim-wave" d="M20 460 Q 200 430 380 460 T 740 460" stroke="#1A528F" stroke-width="1.2" stroke-dasharray="4 6" opacity="0.3" fill="none" />
+                            <!-- Waikiki Tartomány (Karibi Korallszigetek és Atollok) -->
+                            <g class="map-zone-node is-active" data-map-zone="caribbean" tabindex="0" role="button" aria-label="Waikiki Tartomány Karibi Zóna">
+                                <path d="M110 115 C 150 85, 230 90, 275 125 C 295 142, 280 170, 245 180 C 190 195, 130 180, 105 150 Z" fill="url(#waikikiGradHu)" opacity="0.85" stroke="#6BA4D9" stroke-width="1.8" />
+                                <circle cx="195" cy="138" r="8" class="svg-anim-beacon" fill="#20A4C8" />
+                                <circle cx="195" cy="138" r="6" class="node-core" fill="#FBF7F0" />
+                                <text x="195" y="118" text-anchor="middle" fill="#FBF7F0" font-family="Manrope, sans-serif" font-size="12" font-weight="700" letter-spacing="0.05em">WAIKIKI TARTOMÁNY</text>
+                                <text x="195" y="170" text-anchor="middle" fill="#6BA4D9" font-family="Manrope, sans-serif" font-size="10" font-weight="600">Korallzátonyok és Lagúnák</text>
+                            </g>
+                            <!-- Amazonia Tartomány (Érintetlen Esőerdő Bioszféra) -->
+                            <g class="map-zone-node" data-map-zone="amazonia" tabindex="0" role="button" aria-label="Amazonia Tartomány Bioszféra">
+                                <path d="M260 210 C 340 180, 480 195, 530 250 C 565 290, 520 375, 450 395 C 360 420, 280 380, 240 320 C 215 280, 230 225, 260 210 Z" fill="url(#amazonGradHu)" opacity="0.85" stroke="#4E8B5A" stroke-width="1.8" />
+                                <circle cx="390" cy="295" r="9" class="svg-anim-beacon" fill="#4E8B5A" />
+                                <circle cx="390" cy="295" r="6" class="node-core" fill="#FBF7F0" />
+                                <text x="390" y="270" text-anchor="middle" fill="#FBF7F0" font-family="Manrope, sans-serif" font-size="13" font-weight="700" letter-spacing="0.05em">AMAZONIA TARTOMÁNY</text>
+                                <text x="390" y="328" text-anchor="middle" fill="#88D49E" font-family="Manrope, sans-serif" font-size="10" font-weight="600">Őserdő és Bioszféra</text>
+                            </g>
+                            <!-- Brazilia Tartomány (Fennsíkok és Alpesi Vízesések) -->
+                            <g class="map-zone-node" data-map-zone="brazilia" tabindex="0" role="button" aria-label="Brazilia Tartomány Alpesi Zóna">
+                                <path d="M470 330 C 540 320, 640 345, 665 400 C 685 440, 620 480, 560 485 C 490 490, 460 435, 450 390 C 445 360, 455 335, 470 330 Z" fill="url(#braziliaGradHu)" opacity="0.85" stroke="#ECC677" stroke-width="1.8" />
+                                <circle cx="560" cy="415" r="8" class="svg-anim-beacon" fill="#C28A29" />
+                                <circle cx="560" cy="415" r="6" class="node-core" fill="#FBF7F0" />
+                                <text x="560" y="392" text-anchor="middle" fill="#FBF7F0" font-family="Manrope, sans-serif" font-size="12" font-weight="700" letter-spacing="0.05em">BRAZILIA TARTOMÁNY</text>
+                                <text x="560" y="446" text-anchor="middle" fill="#ECC677" font-family="Manrope, sans-serif" font-size="10" font-weight="600">Magasfennsíkok és Vízesések</text>
+                            </g>
+                            <!-- Kék Öv Mélytengeri Folyosó -->
+                            <g class="map-zone-node" data-map-zone="bluebelt" tabindex="0" role="button" aria-label="Kék Öv Tengeri Rezervátum">
+                                <path d="M370 120 Q 480 140 590 190" stroke="#20A4C8" stroke-width="2.5" stroke-dasharray="6 6" fill="none" />
+                                <circle cx="590" cy="190" r="7" class="svg-anim-beacon" fill="#20A4C8" />
+                                <circle cx="590" cy="190" r="5" class="node-core" fill="#6BA4D9" />
+                                <text x="590" y="170" text-anchor="middle" fill="#6BA4D9" font-family="Manrope, sans-serif" font-size="11" font-weight="700">A KÉK ÖV</text>
+                                <text x="590" y="215" text-anchor="middle" fill="#C2CDD8" font-family="Manrope, sans-serif" font-size="9" font-weight="500">Mélytengeri Rezervátum</text>
+                            </g>
+                            <!-- Jelmagyarázat -->
+                            <g transform="translate(30, 435)">
+                                <rect width="180" height="60" rx="8" fill="#001830" opacity="0.75" stroke="#1A528F" stroke-width="1" />
+                                <circle cx="20" cy="20" r="5" fill="#2E7D47" />
+                                <text x="35" y="24" fill="#C2CDD8" font-family="Manrope, sans-serif" font-size="10">80% Érintetlen Magterület</text>
+                                <circle cx="20" cy="40" r="5" fill="#20A4C8" />
+                                <text x="35" y="44" fill="#C2CDD8" font-family="Manrope, sans-serif" font-size="10">Autonóm Szenzorhálózat</text>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="biome-details-panel">
+                        <div class="biome-tabs-nav" role="tablist" aria-label="Ökoszisztéma Zónák">
+                            <button class="biome-tab-btn is-active" data-biome-target="caribbean" role="tab" aria-selected="true">Waikiki Tartomány</button>
+                            <button class="biome-tab-btn" data-biome-target="amazonia" role="tab" aria-selected="false">Amazonia Tartomány</button>
+                            <button class="biome-tab-btn" data-biome-target="brazilia" role="tab" aria-selected="false">Brazilia Tartomány</button>
+                            <button class="biome-tab-btn" data-biome-target="bluebelt" role="tab" aria-selected="false">A Kék Öv</button>
+                        </div>
+                        <article class="biome-info-card is-active" data-biome-card="caribbean">
+                            <div class="biome-info-header">
+                                <h3 class="biome-title">Karibi Korall és Atoll Menedék</h3>
+                                <span class="biome-province-tag">Waikiki Tartomány</span>
+                            </div>
+                            <p class="biome-narrative">Kristálytiszta szigetvilágok, védett mangrove lagúnák és sekély türkiz zátonyok együttese, amely több mint négyszáznyolcvan korallfajnak nyújt biztonságos menedéket. A kizárólag elektromos hajózási szabályozás megóvja a part menti vizeket az üzemanyag-szennyezéstől.</p>
+                            <div class="biome-metrics-grid">
+                                <div class="biome-metric-item"><span class="metric-val">28,4°C</span><span class="metric-lbl">Átlagos Vízhőmérséklet</span></div>
+                                <div class="biome-metric-item"><span class="metric-val">480+</span><span class="metric-lbl">Korallfaj</span></div>
+                                <div class="biome-metric-item"><span class="metric-val">100%</span><span class="metric-lbl">Elektromos Hajózás</span></div>
+                                <div class="biome-metric-item"><span class="metric-val">32</span><span class="metric-lbl">Világító Öböl</span></div>
+                            </div>
+                        </article>
+                        <article class="biome-info-card" data-biome-card="amazonia">
+                            <div class="biome-info-header">
+                                <h3 class="biome-title">A Hatalmas Érintetlen Esőerdő Bioszféra</h3>
+                                <span class="biome-province-tag">Amazonia Tartomány</span>
+                            </div>
+                            <p class="biome-narrative">A bolygó legnagyobb egybefüggő őserdeje, amelyet az alkotmányos nyolcvan százalékos érintetlenségi paktum véd. Autonóm napelemes szenzorok és lombkorona-megfigyelők hatvan másodpercen belül érzékelik az illetéktelen behatolást, biztosítva az élővilág zavartalan fejlődését.</p>
+                            <div class="biome-metrics-grid">
+                                <div class="biome-metric-item"><span class="metric-val">5 200 000 km²</span><span class="metric-lbl">Védett Erdőterület</span></div>
+                                <div class="biome-metric-item"><span class="metric-val">8 900+</span><span class="metric-lbl">Növényfaj</span></div>
+                                <div class="biome-metric-item"><span class="metric-val">99,8%</span><span class="metric-lbl">Lombkorona-egészség</span></div>
+                                <div class="biome-metric-item"><span class="metric-val">1 240</span><span class="metric-lbl">Madárfaj</span></div>
+                            </div>
+                        </article>
+                        <article class="biome-info-card" data-biome-card="brazilia">
+                            <div class="biome-info-header">
+                                <h3 class="biome-title">Fennsíkok és Alpesi Vízesések</h3>
+                                <span class="biome-province-tag">Brazilia Tartomány</span>
+                            </div>
+                            <p class="biome-narrative">Hatalmas gránitképződmények, alpesi ködfennsíkok és monumentális kristálytiszta zuhatagok alkotják Brazilia lenyűgöző domborzatát. A magaslati mikroklíma egyedülálló orchideáknak, broméliáknak és ritka andoki ragadozóknak ad otthont.</p>
+                            <div class="biome-metrics-grid">
+                                <div class="biome-metric-item"><span class="metric-val">2 890 m</span><span class="metric-lbl">Legmagasabb Csúcs</span></div>
+                                <div class="biome-metric-item"><span class="metric-val">140+</span><span class="metric-lbl">Nyilvántartott Vízesés</span></div>
+                                <div class="biome-metric-item"><span class="metric-val">18,2°C</span><span class="metric-lbl">Fennsíki Átlaghőmérséklet</span></div>
+                                <div class="biome-metric-item"><span class="metric-val">650+</span><span class="metric-lbl">Alpesi Orchideafaj</span></div>
+                            </div>
+                        </article>
+                        <article class="biome-info-card" data-biome-card="bluebelt">
+                            <div class="biome-info-header">
+                                <h3 class="biome-title">A Kék Öv Mélytengeri Rezervátum</h3>
+                                <span class="biome-province-tag">Óceáni Területek</span>
+                            </div>
+                            <p class="biome-narrative">A glasgow-i COP26 klímacsúcson bemutatott és ratifikált Kék Öv Egyezmény alapján létrejött tengeri rezervátum mélytengeri árkokat, hidrotermális forrásokat és a vándorló bálnák, teknősök és ráják védett folyosóit oltalmazza.</p>
+                            <div class="biome-metrics-grid">
+                                <div class="biome-metric-item"><span class="metric-val">7 400 m</span><span class="metric-lbl">Legmélyebb Árok</span></div>
+                                <div class="biome-metric-item"><span class="metric-val">24</span><span class="metric-lbl">Autonóm Tisztító Flotta</span></div>
+                                <div class="biome-metric-item"><span class="metric-val">96,2%</span><span class="metric-lbl">Nyílt Tengeri Túlélés</span></div>
+                                <div class="biome-metric-item"><span class="metric-val">4 800 km²</span><span class="metric-lbl">Zátony-helyreállítás</span></div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="canopy" class="nature-section light-bg fade-in">
+            <div class="nature-container">
+                <div class="nature-header-block">
+                    <span class="nature-badge">Erdőszintek Tudománya</span>
+                    <h2 class="section-title">Vertikális Lombkorona-rétegződés</h2>
+                    <p class="section-intro">Az amazóniai rezervátum élővilága négy jól elkülönülő szintben létezik. Kattintson az egyes szintekre vagy vigye föléjük a kurzort a fajok, a napfény-áteresztés és az autonóm szenzorok megtekintéséhez.</p>
+                </div>
+                <div class="canopy-layout">
+                    <div class="canopy-svg-box">
+                        <svg class="canopy-svg" viewBox="0 0 720 620" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Amazóniai esőerdő lombkorona rétegeinek keresztmetszeti ábrája">
+                            <defs>
+                                <linearGradient id="skyGradHu" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#6BA4D9" stop-opacity="0.5" />
+                                    <stop offset="100%" stop-color="#FBF7F0" stop-opacity="0.1" />
+                                </linearGradient>
+                                <linearGradient id="emergentGradHu" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#4E8B5A" />
+                                    <stop offset="100%" stop-color="#2E7D47" />
+                                </linearGradient>
+                                <linearGradient id="canopyGradHu" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#2E7D47" />
+                                    <stop offset="100%" stop-color="#1E502D" />
+                                </linearGradient>
+                                <linearGradient id="understoryGradHu" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#1E502D" />
+                                    <stop offset="100%" stop-color="#14361E" />
+                                </linearGradient>
+                                <linearGradient id="floorGradHu" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#14361E" />
+                                    <stop offset="100%" stop-color="#0B1E11" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Égbolt és Hangulati Háttér -->
+                            <rect width="720" height="620" rx="14" fill="#0A1828" />
+                            <rect y="0" width="720" height="150" fill="url(#skyGradHu)" />
+                            <!-- Animált Szűrt Fénysugarak -->
+                            <polygon class="svg-anim-ray" points="180,0 260,0 340,480 220,480" fill="#F5C46E" opacity="0.12" />
+                            <polygon class="svg-anim-ray" points="420,0 510,0 580,480 460,480" fill="#F5C46E" opacity="0.15" />
+                            <!-- Lebegő Biológiai Részecskék -->
+                            <circle class="svg-anim-particle" cx="240" cy="180" r="3.5" fill="#88D49E" />
+                            <circle class="svg-anim-particle" cx="490" cy="230" r="4" fill="#88D49E" />
+                            <circle class="svg-anim-particle" cx="320" cy="380" r="3" fill="#ECC677" />
+                            <circle class="svg-anim-particle" cx="190" cy="460" r="2.5" fill="#88D49E" />
+                            <!-- 4. Szint: Kiemelkedő Szint (50m - 70m) -->
+                            <g class="strata-tier" data-strata="emergent" tabindex="0" role="button" aria-label="Kiemelkedő szint 50 és 70 méter között">
+                                <rect x="30" y="30" width="660" height="110" rx="8" fill="url(#emergentGradHu)" opacity="0.85" stroke="#4E8B5A" stroke-width="1.5" />
+                                <text x="50" y="65" fill="#FBF7F0" font-family="Fraunces, serif" font-size="18" font-weight="700">Kiemelkedő Lombkorona</text>
+                                <text x="50" y="88" fill="#88D49E" font-family="Manrope, sans-serif" font-size="12" font-weight="600">Magasság: 50 — 70 Méter · 100% Közvetlen Napfény</text>
+                                <text x="50" y="112" fill="#C2CDD8" font-family="Manrope, sans-serif" font-size="11">Óriás kapokfák, hárpia fészkek és légköri napelemes szenzorok világa.</text>
+                                <circle cx="640" cy="85" r="7" class="svg-anim-beacon" fill="#88D49E" />
+                                <circle cx="640" cy="85" r="4" fill="#FBF7F0" />
+                            </g>
+                            <!-- 3. Szint: Fő Lombkoronaszint (30m - 45m) -->
+                            <g class="strata-tier" data-strata="canopy" tabindex="0" role="button" aria-label="Fő lombkoronaszint 30 és 45 méter között">
+                                <rect x="30" y="160" width="660" height="120" rx="8" fill="url(#canopyGradHu)" opacity="0.85" stroke="#2E7D47" stroke-width="1.5" />
+                                <text x="50" y="198" fill="#FBF7F0" font-family="Fraunces, serif" font-size="18" font-weight="700">Fő Lombkoronaszint</text>
+                                <text x="50" y="222" fill="#88D49E" font-family="Manrope, sans-serif" font-size="12" font-weight="600">Magasság: 30 — 45 Méter · 90% Fotoszintetikus Aktivitás</text>
+                                <text x="50" y="246" fill="#C2CDD8" font-family="Manrope, sans-serif" font-size="11">Összefüggő zöld tetőzet, orchideák, tukánok, levelibékák és autonóm kábelpályák.</text>
+                                <circle cx="640" cy="220" r="7" class="svg-anim-beacon" fill="#2E7D47" />
+                                <circle cx="640" cy="220" r="4" fill="#FBF7F0" />
+                            </g>
+                            <!-- 2. Szint: Lombkorona Alatti Szint (15m - 25m) -->
+                            <g class="strata-tier" data-strata="understory" tabindex="0" role="button" aria-label="Lombkorona alatti szint 15 és 25 méter között">
+                                <rect x="30" y="300" width="660" height="120" rx="8" fill="url(#understoryGradHu)" opacity="0.85" stroke="#1E502D" stroke-width="1.5" />
+                                <text x="50" y="338" fill="#FBF7F0" font-family="Fraunces, serif" font-size="18" font-weight="700">Lombkorona Alatti Szint</text>
+                                <text x="50" y="362" fill="#88D49E" font-family="Manrope, sans-serif" font-size="12" font-weight="600">Magasság: 15 — 25 Méter · Állandó Párás Klímazóna</text>
+                                <text x="50" y="386" fill="#C2CDD8" font-family="Manrope, sans-serif" font-size="11">Széles levelű páfrányok, fekete jaguárok, smaragdzöld boák és páratartalom-mérők.</text>
+                                <circle cx="640" cy="360" r="7" class="svg-anim-beacon" fill="#1E502D" />
+                                <circle cx="640" cy="360" r="4" fill="#FBF7F0" />
+                            </g>
+                            <!-- 1. Szint: Erdőtalaj (0m - 5m) -->
+                            <g class="strata-tier" data-strata="floor" tabindex="0" role="button" aria-label="Erdőtalaj 0 és 5 méter között">
+                                <rect x="30" y="440" width="660" height="120" rx="8" fill="url(#floorGradHu)" opacity="0.85" stroke="#14361E" stroke-width="1.5" />
+                                <text x="50" y="478" fill="#FBF7F0" font-family="Fraunces, serif" font-size="18" font-weight="700">Az Erdőtalaj</text>
+                                <text x="50" y="502" fill="#88D49E" font-family="Manrope, sans-serif" font-size="12" font-weight="600">Magasság: 0 — 5 Méter · 2% Fénybehatolás</text>
+                                <text x="50" y="526" fill="#C2CDD8" font-family="Manrope, sans-serif" font-size="11">Gombahálózatok, tapírok, kristálytiszta forrásvizek és talaj tápanyag-telemetria.</text>
+                                <circle cx="640" cy="500" r="7" class="svg-anim-beacon" fill="#14361E" />
+                                <circle cx="640" cy="500" r="4" fill="#FBF7F0" />
+                            </g>
+                            <!-- Magasságmérő Skála -->
+                            <line x1="16" y1="30" x2="16" y2="560" stroke="#4E8B5A" stroke-width="2" />
+                            <circle cx="16" cy="30" r="3" fill="#4E8B5A" />
+                            <circle cx="16" cy="560" r="3" fill="#4E8B5A" />
+                        </svg>
+                    </div>
+                    <div class="canopy-layers-stack">
+                        <article class="canopy-layer-card is-active" data-layer="emergent">
+                            <div class="layer-card-header">
+                                <h3 class="layer-card-title">Kiemelkedő Lombkorona</h3>
+                                <span class="layer-altitude-pill">50 — 70 Méter</span>
+                            </div>
+                            <p class="layer-card-desc">A dzsungel koronás óriásai, amelyek ellenállnak a heves trópusi viharoknak és a tűző napnak. A hárpiák akár negyven méter széles kapokfa ágakon alakítják ki fészkeiket.</p>
+                            <span class="layer-species-tag">Domináns fajok: Hárpia, Óriás Kapokfa, Repülő Kutya</span>
+                        </article>
+                        <article class="canopy-layer-card" data-layer="canopy">
+                            <div class="layer-card-header">
+                                <h3 class="layer-card-title">Fő Lombkoronaszint</h3>
+                                <span class="layer-altitude-pill">30 — 45 Méter</span>
+                            </div>
+                            <p class="layer-card-desc">Összefüggő, sűrű levelekből álló tetőzet, amely a beérkező napfény kilencven százalékát elnyeli. Orchideák, tukánok és kúszó broméliák bőséges otthona.</p>
+                            <span class="layer-species-tag">Domináns fajok: Smaragd Tukán, Levelibéka, Királyi Orchidea</span>
+                        </article>
+                        <article class="canopy-layer-card" data-layer="understory">
+                            <div class="layer-card-header">
+                                <h3 class="layer-card-title">Lombkorona Alatti Szint</h3>
+                                <span class="layer-altitude-pill">15 — 25 Méter</span>
+                            </div>
+                            <p class="layer-card-desc">Félhomályos világ viaszos levelekkel és állandó hetvenöt százalékos páratartalommal. A csúcsragadozók, mint a fekete jaguár, nesztelenül vadásznak az ágak között.</p>
+                            <span class="layer-species-tag">Domináns fajok: Fekete Jaguár, Smaragdzöld Boa, Morfolepke</span>
+                        </article>
+                        <article class="canopy-layer-card" data-layer="floor">
+                            <div class="layer-card-header">
+                                <h3 class="layer-card-title">Az Erdőtalaj</h3>
+                                <span class="layer-altitude-pill">0 — 5 Méter</span>
+                            </div>
+                            <p class="layer-card-desc">A közvetlen napfénytől védett erdőtalaj rendkívüli sebességgel hasznosítja újra a biológiai tápanyagokat. Micéliumhálózatok táplálják a kristálytiszta forrásokat.</p>
+                            <span class="layer-species-tag">Domináns fajok: Síkvidéki Tapír, Óriástatu, Világító Gombák</span>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="marine" class="nature-section fade-in">
+            <div class="nature-container">
+                <div class="nature-header-block">
+                    <span class="nature-badge">Óceánvédelem</span>
+                    <h2 class="section-title">A Kék Öv Tengeri Rezervátum</h2>
+                    <p class="section-intro">A COP26 klímacsúcs és az Óceáni Partnerségi Charta révén megalapozott Kék Öv sekély korallzátonyokat és több ezer méter mély óceáni árkokat óv meg autonóm és zéró emissziós technológiával.</p>
+                </div>
+                <div class="marine-container">
+                    <div class="marine-svg-frame">
+                        <svg class="marine-svg" viewBox="0 0 860 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Korallzátony és óceáni árok animált keresztmetszete">
+                            <defs>
+                                <linearGradient id="deepWaterHu" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#20A4C8" stop-opacity="0.8" />
+                                    <stop offset="45%" stop-color="#003366" />
+                                    <stop offset="100%" stop-color="#001830" />
+                                </linearGradient>
+                                <linearGradient id="coralGlowHu" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#D9654C" />
+                                    <stop offset="100%" stop-color="#F5C46E" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Vízszín Átmenet -->
+                            <rect width="860" height="380" rx="14" fill="url(#deepWaterHu)" />
+                            <!-- Hullámzó Tengerfelszín Animáció -->
+                            <path class="svg-anim-wave" d="M0 45 C 120 30, 240 60, 360 45 C 480 30, 600 60, 720 45 C 780 38, 820 48, 860 45 L 860 0 L 0 0 Z" fill="#6BA4D9" opacity="0.3" />
+                            <!-- Úszó Ördögrája Animáció -->
+                            <g class="svg-anim-manta" transform="translate(180, 110)">
+                                <path d="M0 0 C 25 -15, 65 -12, 90 0 C 70 8, 45 10, 0 0 Z" fill="#FBF7F0" opacity="0.85" />
+                                <line x1="45" y1="8" x2="45" y2="45" stroke="#FBF7F0" stroke-width="1.8" opacity="0.75" />
+                                <circle cx="45" cy="-2" r="3" fill="#6BA4D9" />
+                            </g>
+                            <!-- Úszó Tengeri Teknős Animáció -->
+                            <g class="svg-anim-turtle" transform="translate(560, 160)">
+                                <ellipse cx="30" cy="20" rx="22" ry="15" fill="#2E7D47" stroke="#88D49E" stroke-width="1.5" />
+                                <circle cx="56" cy="20" r="7" fill="#4E8B5A" />
+                                <path d="M18 7 C 8 -2, -2 4, 6 12" fill="#4E8B5A" />
+                                <path d="M18 33 C 8 42, -2 36, 6 28" fill="#4E8B5A" />
+                                <path d="M42 7 C 52 -2, 60 4, 52 12" fill="#4E8B5A" />
+                                <path d="M42 33 C 52 42, 60 36, 52 28" fill="#4E8B5A" />
+                            </g>
+                            <!-- Világító Korallkert a Tengerfenéken -->
+                            <g class="svg-anim-coral">
+                                <path d="M20 380 Q 60 310 110 380 Q 150 280 200 380 Q 240 330 280 380" fill="url(#coralGlowHu)" opacity="0.9" />
+                                <circle cx="70" cy="330" r="4" fill="#F5C46E" />
+                                <circle cx="160" cy="300" r="4.5" fill="#D9654C" />
+                                <circle cx="230" cy="340" r="3.5" fill="#F5C46E" />
+                            </g>
+                            <!-- Mélytengeri Árok Szintje -->
+                            <path d="M380 380 L 460 270 Q 560 280 620 330 L 680 380 Z" fill="#001830" stroke="#1A528F" stroke-width="1.8" />
+                            <!-- Autonóm Kutató Szonda -->
+                            <g transform="translate(520, 290)">
+                                <rect x="0" y="0" width="40" height="20" rx="6" fill="#FBF7F0" stroke="#C28A29" stroke-width="1.5" />
+                                <circle cx="20" cy="10" r="4" class="svg-anim-beacon" fill="#20A4C8" />
+                                <circle cx="20" cy="10" r="3" fill="#003366" />
+                                <line x1="20" y1="0" x2="20" y2="-18" stroke="#FBF7F0" stroke-width="1.5" />
+                                <circle cx="20" cy="-18" r="2.5" fill="#C28A29" />
+                            </g>
+                            <text x="30" y="30" fill="#FBF7F0" font-family="Fraunces, serif" font-size="16" font-weight="700">Sekély Korall-lagúna (0 — 25 m)</text>
+                            <text x="540" y="360" fill="#6BA4D9" font-family="Manrope, sans-serif" font-size="12" font-weight="600">Nyílt Tengeri Árok (2000+ m)</text>
+                        </svg>
+                    </div>
+                    <div class="marine-pillars-grid">
+                        <article class="marine-card">
+                            <div class="marine-icon-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                                    <circle cx="12" cy="12" r="3" />
+                                </svg>
+                            </div>
+                            <h3>Aktív Korall-rehabilitáció</h3>
+                            <p>Automatizált víz alatti mikro-bölcsődék tenyésztik a hőtűrő koralltelepeket, évente több mint kétszázötvenezer polipot visszatelepítve a Karibi Zátonyrendszerbe.</p>
+                        </article>
+                        <article class="marine-card">
+                            <div class="marine-icon-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4" />
+                                </svg>
+                            </div>
+                            <h3>Biolumineszcens Éjszakai Atollok</h3>
+                            <p>Harminckét védett sós vizű lagúnában világítanak a dinoflagelláták. Szigorú motormentességi szabályok szerint kizárólag csendes, átlátszó kajakok léphetnek be napnyugta után.</p>
+                        </article>
+                        <article class="marine-card">
+                            <div class="marine-icon-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                                </svg>
+                            </div>
+                            <h3>Vándorlási Folyosók Védelme</h3>
+                            <p>Önálló működésű napelemes járőrhajók figyelik a vándorlási útvonalakat, garantálva a hosszúszárnyú bálnák, vitorláshalak és kérgesteknősök békés áthaladását.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sanctuaries" class="nature-section light-bg fade-in">
+            <div class="nature-container">
+                <div class="nature-header-block">
+                    <span class="nature-badge">Védett Területek</span>
+                    <h2 class="section-title">Kiemelt Nemzeti Parkok és Rezervátumok</h2>
+                    <p class="section-intro">Fedezze fel Waikiki természetvédelmi koronagyémántjait. Minden park a legszigorúbb tudományos felügyeletet ötvözi az ellenőrzött, alacsony terhelésű ökoturisztikai engedélyekkel, amelyeket kizárólag a Waikiki One rendszeren keresztül lehet igényelni.</p>
+                </div>
+                <div class="sanctuaries-filter-bar">
+                    <button class="filter-chip sanctuary-filter-btn is-active" data-filter="all" type="button" aria-pressed="true">Minden Rezervátum</button>
+                    <button class="filter-chip sanctuary-filter-btn" data-filter="rainforest" type="button" aria-pressed="false">Esőerdő</button>
+                    <button class="filter-chip sanctuary-filter-btn" data-filter="marine" type="button" aria-pressed="false">Tengeri</button>
+                    <button class="filter-chip sanctuary-filter-btn" data-filter="highland" type="button" aria-pressed="false">Hegyvidék</button>
+                </div>
+                <div class="sanctuaries-grid">
+                    <article class="sanctuary-card" data-cat="rainforest">
+                        <div>
+                            <div class="sanctuary-top">
+                                <span class="sanctuary-badge-category cat-rainforest">Őserdő Magterület</span>
+                                <span class="sanctuary-province">Amazonia Tartomány</span>
+                            </div>
+                            <h3 class="sanctuary-title">Alto Amazonia Bioszféra Rezervátum</h3>
+                            <p class="sanctuary-desc">Több mint 3,2 millió hektárnyi érintetlen lombkoronával rendelkező rezervátum, amely kizárólag csendes napelemes léghajókkal és függő lombkorona-sétányokon keresztül közelíthető meg. A vadon élő jaguárok és ritka növénytársulások legfőbb otthona.</p>
+                        </div>
+                        <div class="sanctuary-stats-row">
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">3 200 000 ha</span><span class="sanctuary-stat-tag">Kiterjedés</span></div>
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">I. Osztály</span><span class="sanctuary-stat-tag">Védettség</span></div>
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">Léghajó</span><span class="sanctuary-stat-tag">Megközelítés</span></div>
+                        </div>
+                    </article>
+                    <article class="sanctuary-card" data-cat="marine">
+                        <div>
+                            <div class="sanctuary-top">
+                                <span class="sanctuary-badge-category cat-marine">Tengeri Nemzeti Park</span>
+                                <span class="sanctuary-province">Waikiki Tartomány</span>
+                            </div>
+                            <h3 class="sanctuary-title">Aurelia Korall Szigetvilág</h3>
+                            <p class="sanctuary-desc">Nyolcvan kristálytiszta szigetből álló korallövezet. A napi látogatói létszámot szigorúan százhúsz főben határozzák meg a zátonyok és a tengeri madárkolóniák tökéletes védelme érdekében.</p>
+                        </div>
+                        <div class="sanctuary-stats-row">
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">80 Sziget</span><span class="sanctuary-stat-tag">Szigetszám</span></div>
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">I. Osztály</span><span class="sanctuary-stat-tag">Védettség</span></div>
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">120 / Nap</span><span class="sanctuary-stat-tag">Látogatói Korlát</span></div>
+                        </div>
+                    </article>
+                    <article class="sanctuary-card" data-cat="highland">
+                        <div>
+                            <div class="sanctuary-top">
+                                <span class="sanctuary-badge-category cat-highland">Magashegyi Csúcs</span>
+                                <span class="sanctuary-province">Brazilia Tartomány</span>
+                            </div>
+                            <h3 class="sanctuary-title">Monte Cristal Köderdő</h3>
+                            <p class="sanctuary-desc">A 2890 méteres magasságban állandó párafelhőbe burkolózó Monte Cristal Dél-Amerika leggazdagabb endemikus orchidea- és hegyvidéki mohaközösségét rejti, amelyet függőhíd-ösvények kötnek össze.</p>
+                        </div>
+                        <div class="sanctuary-stats-row">
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">2 890 m</span><span class="sanctuary-stat-tag">Csúcsmagasság</span></div>
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">II. Osztály</span><span class="sanctuary-stat-tag">Védettség</span></div>
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">Függőhíd</span><span class="sanctuary-stat-tag">Túraútvonal</span></div>
+                        </div>
+                    </article>
+                    <article class="sanctuary-card" data-cat="rainforest">
+                        <div>
+                            <div class="sanctuary-top">
+                                <span class="sanctuary-badge-category cat-rainforest">Erdei Zuhatag</span>
+                                <span class="sanctuary-province">Amazonia Tartomány</span>
+                            </div>
+                            <h3 class="sanctuary-title">Rio Esmeralda Vízesésrendszer</h3>
+                            <p class="sanctuary-desc">Káprázatos folyami zuhatagok, ahol a smaragdzöld dzsungelfolyók száznyolcvan métert zuhannak mély bazaltlagúnákba. Elektromos katamaránok haladnak nesztelenül a ködös sziklafalak mentén.</p>
+                        </div>
+                        <div class="sanctuary-stats-row">
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">180 m</span><span class="sanctuary-stat-tag">Zuhatag Magasság</span></div>
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">II. Osztály</span><span class="sanctuary-stat-tag">Védettség</span></div>
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">E-Hajó</span><span class="sanctuary-stat-tag">Közlekedés</span></div>
+                        </div>
+                    </article>
+                    <article class="sanctuary-card" data-cat="marine">
+                        <div>
+                            <div class="sanctuary-top">
+                                <span class="sanctuary-badge-category cat-marine">Parti Mangrove</span>
+                                <span class="sanctuary-province">Waikiki Tartomány</span>
+                            </div>
+                            <h3 class="sanctuary-title">Bahia Serena Mangrove Rezervátum</h3>
+                            <p class="sanctuary-desc">Labirintusszerű árapály-erdőrendszer, amely védi a partvonalat a viharoktól. Kiemelt szaporodóhely a lamantinok, rózsás kanalasgémek és a korallzátonyok fiatal halai számára.</p>
+                        </div>
+                        <div class="sanctuary-stats-row">
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">64 000 ha</span><span class="sanctuary-stat-tag">Mangrove Magterület</span></div>
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">I. Osztály</span><span class="sanctuary-stat-tag">Védettség</span></div>
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">Csak Kajak</span><span class="sanctuary-stat-tag">Engedély</span></div>
+                        </div>
+                    </article>
+                    <article class="sanctuary-card" data-cat="highland">
+                        <div>
+                            <div class="sanctuary-top">
+                                <span class="sanctuary-badge-category cat-highland">Szavanna Fennsík</span>
+                                <span class="sanctuary-province">Brazilia Tartomány</span>
+                            </div>
+                            <h3 class="sanctuary-title">Cerrado Napsütötte Szavanna</h3>
+                            <p class="sanctuary-desc">Kanyargós folyókkal és kristálytiszta kanyonokkal szabdalt aranyló fennsík. A sörényes farkasok és óriáshangyászok létfontosságú élőhelye, amelyet szigorú éjszakai őrjáratok védenek.</p>
+                        </div>
+                        <div class="sanctuary-stats-row">
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">950 000 ha</span><span class="sanctuary-stat-tag">Védett Terület</span></div>
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">II. Osztály</span><span class="sanctuary-stat-tag">Védettség</span></div>
+                            <div class="sanctuary-stat-col"><span class="sanctuary-stat-num">Vezetett Szafari</span><span class="sanctuary-stat-tag">Kutatás</span></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="charter" class="nature-section fade-in">
+            <div class="nature-container">
+                <div class="nature-header-block">
+                    <span class="nature-badge">Törvényi Természetvédelem</span>
+                    <h2 class="section-title">A Szuverén Zöld Karta</h2>
+                    <p class="section-intro">Waikikiben a természet sérthetetlensége nem csupán irányelv, hanem az Alkotmány alapköve. Minden állampolgár és látogató a Szuverén Zöld Karta négy alapvető parancsát követi.</p>
+                </div>
+                <div class="charter-grid">
+                    <div class="charter-card">
+                        <span class="charter-num-badge">1</span>
+                        <h3>Egyszer Használatos Műanyagok Tilalma</h3>
+                        <p>Az egyszer használatos műanyagok használata 2015 óta teljes tilalom alá esik mindhárom tartományban. A biológiailag lebomló cellulóz és bambusz kompozitok az általánosak.</p>
+                    </div>
+                    <div class="charter-card">
+                        <span class="charter-num-badge">2</span>
+                        <h3>100% Elektromos és Maglev Közlekedés</h3>
+                        <p>A belső égésű motorok szigorúan tilosak a rezervátumokban és part menti vizeken. A túrákhoz kizárólag csendes hidrogén üzemű maglev vonatok és napelemes hajók vehetők igénybe.</p>
+                    </div>
+                    <div class="charter-card">
+                        <span class="charter-num-badge">3</span>
+                        <h3>Műholdas Bio-védelem</h3>
+                        <p>Autonóm műholdkonstellációk és mesterséges intelligenciával ellátott akusztikus szenzorok figyelik az erdőket, hatvan másodpercen belül elfogó drónokat indítva bármilyen gyanús eseményre.</p>
+                    </div>
+                    <div class="charter-card">
+                        <span class="charter-num-badge">4</span>
+                        <h3>Teljes Turisztikai Újrabefektetés</h3>
+                        <p>A rezervátumi látogatási engedélyekből befolyó minden fillér közvetlenül a korallzátonyok ültetését és az amazóniai őshonos csemeték visszatelepítését finanszírozza.</p>
+                    </div>
+                </div>
+                <div class="charter-banner">
+                    <h3>Tapasztalja Meg a Vadont a Legtisztább Formájában</h3>
+                    <p>Tervezze meg környezetbarát utazását az ősi lombkoronák vagy a kristálytiszta atollok felé. Az engedélyek korlátozott számban érhetők el a csend és a vadvilág hosszú távú megőrzése érdekében.</p>
+                    <a class="charter-cta-btn" href="travel-guide.html">
+                        <span>Olvassa el az Utazási Kalauzt</span>
+                        <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- @chrome:next -->
+        <section class="next-chapter">
+            <a class="next-card" href="travel-guide.html">
+                <div class="next-media"><img src="../images/UniversalUpscaler_Pro_Precise_2_1f1c1a3a-8488-6130-962d-09f15cdbb0eb.jpg" alt="" loading="lazy" decoding="async" /></div>
+                <span class="next-body">
+                    <span class="next-eyebrow">Folytassa az utazást · Látogatás</span>
+                    <span class="next-title">Utazási Kalauz</span>
+                    <span class="next-arrow" aria-hidden="true">→</span>
+                </span>
+            </a>
+        </section>
+        <!-- /@chrome:next -->
+    </main>
+    <!-- @chrome:footer -->
+    <footer class="site-footer">
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="lazy" decoding="async" /><span class="brand-word">Waikiki</span></a>
+                    <p class="footer-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
+                    <p class="footer-about">Waikiki Állam hivatalos portálja. Alapítva 1999. március 10-én · Nova Aurelia. Ez az oldal mesterséges intelligenciával készült, bármilyen hasonlóság valós személyekhez, országokhoz vagy intézményekhez pusztán a véletlen műve.</p>
+                </div>
+                <div class="footer-col">
+                    <h2>Nemzet</h2>
+                    <ul>
+                        <li><a href="index.html">Főoldal</a></li>
+                        <li><a href="overview.html">Áttekintés</a></li>
+                        <li><a href="history.html">Történelem</a></li>
+                        <li><a href="society.html">Társadalom</a></li>
+                        <li><a href="culture.html">Kultúra</a></li>
+                        <li><a href="ideology.html">Ideológia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Kormányzás</h2>
+                    <ul>
+                        <li><a href="government.html">Kormány</a></li>
+                        <li><a href="leadership.html">Vezetés</a></li>
+                        <li><a href="parties.html">Politika</a></li>
+                        <li><a href="constitution.html">Alkotmány</a></li>
+                        <li><a href="military.html">Hadsereg</a></li>
+                        <li><a href="diplomacy.html">Diplomácia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Jólét</h2>
+                    <ul>
+                        <li><a href="economy.html">Gazdaság</a></li>
+                        <li><a href="banking-system.html">Bankrendszer</a></li>
+                        <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                        <li><a href="citizenship.html">Állampolgárság</a></li>
+                        <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                        <li><a href="space-research.html">Űrkutatás</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Királyi Család</h2>
+                    <ul>
+                        <li><a href="dynasty.html">A Dinasztia</a></li>
+                        <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Látogatás</h2>
+                    <ul>
+                        <li><a href="tourism.html">Turizmus</a></li>
+                        <li><a href="sights.html">Látnivalók</a></li>
+                        <li><a href="nature.html">Természet</a></li>
+                        <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                        <li><a href="visa.html">Vízum és belépés</a></li>
+                        <li><a href="faq.html">GYIK</a></li>
+                    </ul>
+                </div>
+            </div>
+            <span class="footer-mega" aria-hidden="true">Waikiki</span>
+            <div class="footer-bottom">
+                <p>© 2026 Waikiki Szuverén Állam. Minden jog fenntartva.</p>
+                <nav>
+                    <a style="margin-right: 40px" href="../en/nature.html" hreflang="en" lang="en">English</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <button class="to-top" type="button">
+        <svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span>
+    </button>
+    <!-- /@chrome:footer -->
+    <script src="../js/common.js"></script>
+    <script src="../js/nature.js"></script>
+</body>
+</html>
