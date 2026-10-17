@@ -710,9 +710,6 @@
   font-weight: 700;
 }
 
-.body-dark .hotel-stars {
-  color: var(--accent);
-}
 
 .hotel h3 {
   margin-bottom: 0;

@@ -101,7 +101,6 @@
 }
 
 .body-dark .bio-summary {
-    background: var(--surface-card);
     border-color: rgba(107, 164, 217, 0.18);
     color: var(--accent);
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
@@ -116,7 +115,6 @@
 }
 
 .body-dark .bio-quote {
-    background: var(--surface-card);
     border-color: rgba(107, 164, 217, 0.18);
     color: var(--neutral-100) !important;
     box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.6);

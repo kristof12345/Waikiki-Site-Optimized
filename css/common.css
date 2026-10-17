@@ -1975,7 +1975,6 @@ video {
   backdrop-filter: blur(var(--blur-lg)) saturate(1.4);
   -webkit-backdrop-filter: blur(var(--blur-lg)) saturate(1.4);
   border-bottom: var(--border-width-hairline) solid var(--line);
-  box-sizing: border-box;
   transition: top 0.6s var(--ease-out);
 }
 

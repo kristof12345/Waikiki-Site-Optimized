@@ -330,8 +330,6 @@
 }
 
 .body-dark .timeline-content {
-    background: var(--surface-card);
-    border-color: var(--border-subtle);
     box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.5);
 }
 

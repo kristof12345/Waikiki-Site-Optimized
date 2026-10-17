@@ -559,7 +559,6 @@
 
 .body-dark .legend-item.active {
     background: var(--primary);
-    color: var(--neutral-100);
 }
 
 .body-dark .info-title,

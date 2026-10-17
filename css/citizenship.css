@@ -147,7 +147,6 @@ button.open-assessment:active,
     flex: 1 1 auto;
     overflow-y: auto;
     overscroll-behavior: contain;
-    -webkit-overflow-scrolling: touch;
 }
 
 .assessment-modal-header {
@@ -263,7 +262,6 @@ button.open-assessment:active,
 .body-dark .hover-card .opacity-60 {
     opacity: 1 !important;
     color: var(--tertiary-light) !important;
-    font-weight: 700;
 }
 
 .hover-card .w-14.h-14.bg-blue-50 img {

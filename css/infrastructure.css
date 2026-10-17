@@ -729,13 +729,7 @@
 }
 
 .body-dark .island-tab-btn {
-  background: var(--dark-surface);
   border-color: var(--line-strong);
-  color: var(--dark-heading);
-}
-
-.body-dark .island-tab-btn:hover {
-  border-color: var(--accent);
 }
 
 .body-dark .island-tab-btn.is-active,
@@ -818,7 +812,6 @@
 }
 
 .body-dark .island-spec-item {
-  background: var(--dark-surface);
   border-color: var(--line-strong);
 }
 
@@ -1284,13 +1277,7 @@
 }
 
 .body-dark .island-hotspot-card {
-  background: var(--dark-surface);
   border-color: var(--line-strong);
-}
-
-.body-dark .island-hotspot-card:hover,
-.body-dark .island-hotspot-card.is-active {
-  border-color: var(--accent);
 }
 
 /* Responsive adjustments */
