@@ -100,9 +100,22 @@
     <circle cx="683" cy="473" r="3" fill="currentColor" />
   </g>
 
-  <!-- Horizontal Stabilizers (Tail) -->
-  <path d="M 382 660 L 255 745 L 260 760 L 335 740 L 382 725 Z" fill="url(#af1Wing)" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
-  <path d="M 418 660 L 545 745 L 540 760 L 465 740 L 418 725 Z" fill="url(#af1Wing)" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+  <!-- Horizontal Stabilizers and Dual Tail Fins -->
+  <path d="M 382 660 L 256 732 L 256 756 L 335 738 L 382 725 Z" fill="url(#af1Wing)" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+  <path d="M 418 660 L 544 732 L 544 756 L 465 738 L 418 725 Z" fill="url(#af1Wing)" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+  <g stroke="currentColor" stroke-width="1" stroke-dasharray="4 2" opacity="0.65">
+    <line x1="382" y1="712" x2="262" y2="744" />
+    <line x1="418" y1="712" x2="538" y2="744" />
+  </g>
+  <!-- Dual Vertical Stabilizer Endplate Fins (Left and Right Twin Tail) -->
+  <g fill="currentColor" fill-opacity="0.35" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+    <path d="M 256 706 C 250 718 249 740 250 756 L 256 770 L 262 756 C 263 740 262 718 256 706 Z" />
+    <path d="M 544 706 C 538 718 537 740 538 756 L 544 770 L 550 756 C 551 740 550 718 544 706 Z" />
+  </g>
+  <g stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity="0.8">
+    <line x1="256" y1="710" x2="256" y2="766" />
+    <line x1="544" y1="710" x2="544" y2="766" />
+  </g>
 
   <!-- Fuselage Body -->
   <path d="M 400 45 C 385 65 368 110 368 170 L 368 640 C 368 690 382 730 400 750 C 418 730 432 690 432 640 L 432 170 C 432 110 415 65 400 45 Z" fill="url(#af1Body)" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" />
@@ -120,8 +133,6 @@
     <line x1="370" y1="440" x2="430" y2="440" />
     <line x1="370" y1="520" x2="430" y2="520" />
     <line x1="370" y1="600" x2="430" y2="600" />
-    <!-- Vertical stabilizer spine top view -->
-    <line x1="400" y1="610" x2="400" y2="735" stroke-width="3" stroke-linecap="round" />
   </g>
 
   <!-- Aircraft ID watermark/badge in SVG -->
