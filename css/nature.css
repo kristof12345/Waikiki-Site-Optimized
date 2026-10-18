@@ -1,7 +1,7 @@
 /* Sovereign Nation of Waikiki — Nature and Sanctuaries Design System */
 /* Integrated with Tropical Luxe and Lagoon Night standards */
 
-/* --- Typography & Section Title Refinement --- */
+/* --- Typography and Section Title Refinement --- */
 .page-nature .section-title {
     line-height: 1.45;
     padding-top: 2.8rem;
@@ -28,6 +28,10 @@
     margin: 2rem 0;
 }
 
+.nature-feature-media .nature-ill-frame {
+    margin: 0;
+}
+
 .body-dark .nature-ill-frame {
     background: var(--surface-card, #0E2035);
     border-color: rgba(107, 164, 217, 0.2);
@@ -42,68 +46,6 @@
     overflow: hidden;
     border-radius: calc(var(--radius-lg, 20px) - 2px);
 }
-
-/* Sky Gradient Theme Stops */
-.sky-stop-1 {
-    stop-color: #F6E7D3;
-    transition: stop-color 0.4s var(--ease-out, ease);
-}
-
-.sky-stop-2 {
-    stop-color: #FBF1E4;
-    transition: stop-color 0.4s var(--ease-out, ease);
-}
-
-.sky-stop-3 {
-    stop-color: #FBF7F0;
-    transition: stop-color 0.4s var(--ease-out, ease);
-}
-
-.body-dark .sky-stop-1 {
-    stop-color: #061527;
-}
-
-.body-dark .sky-stop-2 {
-    stop-color: #0D233C;
-}
-
-.body-dark .sky-stop-3 {
-    stop-color: #123050;
-}
-
-/* Color Fill Helpers */
-.nature-ill .f-sky { fill: var(--ill-sky, #f6e7d3); }
-.nature-ill .f-sky2 { fill: var(--ill-sky-2, #fbf1e4); }
-.nature-ill .f-sun { fill: var(--ill-sun, #e3735a); transition: fill 0.4s var(--ease-out); }
-.nature-ill .f-sun2 { fill: var(--ill-sun-2, #f5c46e); transition: fill 0.4s var(--ease-out); }
-.nature-ill .f-sea { fill: var(--ill-sea, #1a528f); }
-.nature-ill .f-sea2 { fill: var(--ill-sea-2, #6ba4d9); }
-.nature-ill .f-sea3 { fill: var(--ill-sea-3, #b8d7f2); }
-.nature-ill .f-deep { fill: #001830; }
-.nature-ill .f-sand { fill: var(--ill-sand, #e8dcb8); }
-.nature-ill .f-leaf { fill: #2E7D47; }
-.nature-ill .f-leaf2 { fill: #4E8B5A; }
-.nature-ill .f-leaf3 { fill: #1E502D; }
-.nature-ill .f-leaf-light { fill: #88D49E; }
-.nature-ill .f-gold { fill: var(--ill-gold, #c28a29); }
-.nature-ill .f-gold-light { fill: #f5c46e; }
-.nature-ill .f-coral { fill: var(--ill-coral, #c95a41); }
-.nature-ill .f-white { fill: #ffffff; }
-.nature-ill .f-glass { fill: rgba(251, 247, 240, 0.2); }
-.nature-ill .f-ink { fill: var(--primary-dark, #001830); }
-.nature-ill .f-ink2 { fill: var(--secondary, #002244); }
-.nature-ill .f-snow { fill: #EBF4FC; }
-
-.body-dark .nature-ill .f-sun { fill: #EBF4FC; }
-.body-dark .nature-ill .f-sun2 { fill: rgba(107, 164, 217, 0.35); }
-.body-dark .nature-ill .f-sand { fill: #8B7A5C; }
-
-/* Stroke Helpers */
-.nature-ill .k-gold { fill: none; stroke: var(--accent, #C28A29); stroke-linecap: round; stroke-linejoin: round; }
-.nature-ill .k-white { fill: none; stroke: #ffffff; stroke-linecap: round; stroke-linejoin: round; }
-.nature-ill .k-sea { fill: none; stroke: var(--tertiary, #6BA4D9); stroke-linecap: round; stroke-linejoin: round; }
-.nature-ill .k-leaf { fill: none; stroke: #4E8B5A; stroke-linecap: round; stroke-linejoin: round; }
-.nature-ill .k-line { fill: none; stroke: var(--line, rgba(0, 34, 68, 0.15)); }
 
 /* Interactive SVG Hotspots */
 .nat-realm-zone {
@@ -125,17 +67,38 @@
     opacity: 0.95;
 }
 
-/* Ambient Motion */
+/* Ambient Motion for Procedural Biome SVGs */
 .nature-ill .drift {
-    animation: natDrift 16s ease-in-out infinite alternate;
+    animation: natDrift 18s ease-in-out infinite alternate;
 }
 
 .nature-ill .drift-reverse {
-    animation: natDriftReverse 18s ease-in-out infinite alternate;
+    animation: natDriftReverse 20s ease-in-out infinite alternate;
 }
 
 .nature-ill .bob {
-    animation: natBob 5s ease-in-out infinite;
+    animation: natBob 5.5s ease-in-out infinite;
+}
+
+.nature-ill .sway {
+    animation: natSway 6.5s ease-in-out infinite alternate;
+}
+
+.nature-ill .swim {
+    animation: natSwim 11s ease-in-out infinite alternate;
+}
+
+.nature-ill .fly {
+    animation: natFly 7s ease-in-out infinite alternate;
+}
+
+.nature-ill .flow {
+    stroke-dasharray: 8 10;
+    animation: natFlow 2.6s linear infinite;
+}
+
+.nature-ill .shimmer {
+    animation: natShimmer 5s ease-in-out infinite alternate;
 }
 
 .nature-ill .pulse-glow {
@@ -147,24 +110,46 @@
     animation: natTwinkle 3.2s ease-in-out infinite;
 }
 
-.nature-ill .orbit {
-    animation: natOrbit 22s linear infinite;
-    transform-origin: 380px 140px;
-}
-
 @keyframes natDrift {
-    from { transform: translateX(-14px); }
-    to { transform: translateX(14px); }
+    from { transform: translateX(-12px); }
+    to { transform: translateX(12px); }
 }
 
 @keyframes natDriftReverse {
-    from { transform: translateX(16px); }
-    to { transform: translateX(-16px); }
+    from { transform: translateX(14px); }
+    to { transform: translateX(-14px); }
 }
 
 @keyframes natBob {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-7px); }
+    50% { transform: translateY(-6px); }
+}
+
+@keyframes natSway {
+    from { transform: rotate(-1.6deg); }
+    to { transform: rotate(1.6deg); }
+}
+
+@keyframes natSwim {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(-8px, -4px); }
+    100% { transform: translate(6px, 3px); }
+}
+
+@keyframes natFly {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(6px, -5px); }
+    100% { transform: translate(-4px, 3px); }
+}
+
+@keyframes natFlow {
+    from { stroke-dashoffset: 36; }
+    to { stroke-dashoffset: 0; }
+}
+
+@keyframes natShimmer {
+    from { opacity: 0.55; }
+    to { opacity: 0.95; }
 }
 
 @keyframes natPulse {
@@ -178,19 +163,18 @@
     50% { opacity: 0.95; }
 }
 
-@keyframes natOrbit {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
 /* Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
     .nature-ill .drift,
     .nature-ill .drift-reverse,
     .nature-ill .bob,
+    .nature-ill .sway,
+    .nature-ill .swim,
+    .nature-ill .fly,
+    .nature-ill .flow,
+    .nature-ill .shimmer,
     .nature-ill .pulse-glow,
-    .nature-ill .twinkle,
-    .nature-ill .orbit {
+    .nature-ill .twinkle {
         animation: none !important;
     }
 }
@@ -198,9 +182,13 @@
 .no-reveal .nature-ill .drift,
 .no-reveal .nature-ill .drift-reverse,
 .no-reveal .nature-ill .bob,
+.no-reveal .nature-ill .sway,
+.no-reveal .nature-ill .swim,
+.no-reveal .nature-ill .fly,
+.no-reveal .nature-ill .flow,
+.no-reveal .nature-ill .shimmer,
 .no-reveal .nature-ill .pulse-glow,
-.no-reveal .nature-ill .twinkle,
-.no-reveal .nature-ill .orbit {
+.no-reveal .nature-ill .twinkle {
     animation: none !important;
 }
 
@@ -686,6 +674,16 @@
     color: var(--text-primary, #FBF7F0);
 }
 
+.sanctuary-art.nature-ill-frame {
+    margin: 0 0 1.25rem 0;
+    border-radius: 14px;
+    box-shadow: var(--shadow-xs, 0 4px 12px rgba(0, 24, 48, 0.06));
+}
+
+.sanctuary-art .nature-ill {
+    border-radius: 13px;
+}
+
 .sanctuary-item p {
     font-size: 0.95rem;
     line-height: 1.65;
@@ -697,7 +695,7 @@
     color: var(--text-secondary, #C2CDD8);
 }
 
-/* --- Sovereign Green Charter Banner & Cards --- */
+/* --- Sovereign Green Charter Banner and Cards --- */
 .charter-card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
