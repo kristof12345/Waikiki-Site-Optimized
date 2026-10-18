@@ -944,15 +944,24 @@ def build_transect(labels):
     s.add(condor(1420, 120, 0.7))
     # labels
     lab = []
-    zones = [(165, 0), (375, 1), (500, 2), (712, 3), (950, 4), (1130, 5), (1280, 6), (1480, 7)]
-    for (x, idx) in zones:
+    zones = [
+        (165, 0, "waikiki"),
+        (375, 1, "waikiki"),
+        (500, 2, "waikiki"),
+        (712, 3, "amazonia"),
+        (950, 4, "amazonia"),
+        (1130, 5, "brazilia"),
+        (1280, 6, "brazilia"),
+        (1480, 7, "brazilia"),
+    ]
+    for (x, idx, realm) in zones:
         txt = labels["transect"][idx]
         w = len(txt) * 6.4 + 22
         lab.append(g([
             el("rect", x=x - w / 2, y=H - 46, width=w, height=24, rx=12, fill="#001830", opacity=0.82),
             el("text", txt, x=x, y=H - 30, text_anchor="middle", fill="#fbf7f0", font_family="Manrope, sans-serif",
                font_size=11, font_weight=700, letter_spacing="0.08em"),
-        ]))
+        ], class_="nat-zone-badge", data_realm=realm))
         lab.append(el("path", d=f"M{n(x)},{n(H - 46)} L{n(x)},{n(H - 62)}", stroke="#001830", stroke_width=1, opacity=0.5))
     s.add(g(lab))
     return s.render(labels["aria"]["transect"])
