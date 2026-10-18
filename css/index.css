@@ -142,7 +142,7 @@
 
 .timeline-content {
   background: var(--surface);
-  padding: 2.25rem 2rem;
+  padding: 1.2rem;
   border-radius: var(--radius);
   border: 1px solid var(--line);
   box-shadow: var(--shadow-sm);
