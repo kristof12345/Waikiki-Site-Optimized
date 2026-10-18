@@ -141,7 +141,7 @@ Az alkotmány rögzíti a nemzeti zászlót, a címert és a himnuszt, amelyekr�
 ## 2002 — Konszolidáció
 - Aaron Shore kabinetfőnöki kinevezése.
 
-## 2003 — A Pacifikus Háború
+## 2003 — A Csendes-óceáni Háború
 - A Pacifikus háború kitörése és Waikiki belépése.
 - Az Atomhatalmak Szövetségének megalapítása.
 - Népszavazás az ingyenes felsőfokú oktatásról.
