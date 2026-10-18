@@ -150,6 +150,12 @@
     align-items: stretch;
 }
 
+@media (max-width: 979px) {
+    .checker-wrapper {
+        padding: 1.25rem;
+    }
+}
+
 @media (min-width: 980px) {
     .checker-grid {
         grid-template-columns: 1.08fr 1fr;
@@ -591,4 +597,3 @@
     line-height: 1;
     top: -1px;
 }
-
