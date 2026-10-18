@@ -142,12 +142,12 @@ Az alkotmány rögzíti a nemzeti zászlót, a címert és a himnuszt, amelyekr�
 - Aaron Shore kabinetfőnöki kinevezése.
 
 ## 2003 — A Csendes-óceáni Háború
-- A Pacifikus háború kitörése és Waikiki belépése.
+- A Csendes-óceáni háború kitörése és Waikiki belépése.
 - Az Atomhatalmak Szövetségének megalapítása.
 - Népszavazás az ingyenes felsőfokú oktatásról.
 
 ## 2004 — Béke és Atomhatalmi Státusz
-- A Pacifikus háború lezárása a New York-i békével.
+- A Csendes-óceáni háború lezárása a New York-i békével.
 - Waikiki atomhatalmi státuszának megszerzése.
 
 ## 2005 — Koronázás
@@ -930,7 +930,7 @@ Waikiki a nemzetközi rendbe mélyen integrálódott szuperhatalomként definiá
 | Szervezet | Csatlakozás | Jelentőség |
 | --- | --- | --- |
 | ENSZ | 1999 | Alapítás évében; 2006 óta BT állandó tag, vétójoggal |
-| Atomhatalmak Szövetsége | 2003 | A Pacifikus háború időszakában alakult |
+| Atomhatalmak Szövetsége | 2003 | A Csendes-óceáni háború időszakában alakult |
 | Amerikai Gazdasági Unió | 2007 | Regionális gazdasági integráció |
 | G9 | 2016 | Gazdasági szuperhatalmi státusz |
 | Világkormány | 2018 | Alapító; székhelye Nova Aurelia; első elnöke Chease Young |
@@ -945,7 +945,7 @@ Stratégiai partnerség, amelyet különösen Donald Trump elnöksége alatt sze
 Együttműködés és érdekegyeztetés. Waikiki fejlett hadiipara jelentős mennyiségű fegyvert szállít piaci alapon az európai országoknak az orosz fenyegetés ellensúlyozására. Waikiki támogatja a szuverenista és jobboldali pártokat.
 
 ### Kína
-Első számú stratégiai és gazdasági rivális. A viszonyt beárnyékolja a Pacifikus háború emléke. Waikiki technológiai és ipari innovációban közvetlen versenyben áll Kínával, és egyértelműen támogatja Tajvan önállóságát fegyvereladásokkal és diplomáciai garanciákkal.
+Első számú stratégiai és gazdasági rivális. A viszonyt beárnyékolja a Csendes-óceáni háború emléke. Waikiki technológiai és ipari innovációban közvetlen versenyben áll Kínával, és egyértelműen támogatja Tajvan önállóságát fegyvereladásokkal és diplomáciai garanciákkal.
 
 ### Oroszország
 Felelős távolságtartás. Az orosz–ukrán háború után határozottan kiállt Ukrajna mellett az ENSZ-ben, de nem vezetett be totális blokádot — a szankciók célzottak, a kereskedelmi csatornák részben nyitva maradtak.
@@ -1370,9 +1370,9 @@ A Szovjetunió összeomlása után Kuba válságos helyzetbe került. Chease 199
 
 Waikiki kormánya jelentős kőolaj- és gázmezőkre bukkant a sziget körül. Az exportbevételek fedezték a kezdeti kiadásokat és megteremtették a WUD valuta alapját. Chease monopóliumot adott a Waikiki Petrolnak és az OilExp-nek (a későbbi Royal Oil Group). A nyílt kereskedelempolitika révén Waikiki pillanatok alatt becsatlakozott a globalizációba, technológiai importot és tőkebevonást generálva.
 
-## A Pacifikus háború (2002–2004)
+## A Csendes-óceáni háború (2002–2004)
 
-2002. október 5-én Kína megtámadta Oroszországot, kirobbantva a Pacifikus háborút. Az Internacionális Unió (Kína, Észak-Korea, Pakisztán) ellenében Waikiki 2003 áprilisában lépett be a háborúba a NATO oldalán. Chease Young megalapította az Atomhatalmak Szövetségét, amelynek elrettentő ereje megakadályozta a nukleáris eszkalációt. A háború döntő szakaszában Waikiki különleges egységei és technológiai fölénye segített felszabadítani Izraelt és térdre kényszeríteni Kínát. A 2004-es New York-i béke Waikikit a világ egyik vezető katonai és politikai hatalmává emelte.
+2002. október 5-én Kína megtámadta Oroszországot, kirobbantva a Csendes-óceáni háborút. Az Internacionális Unió (Kína, Észak-Korea, Pakisztán) ellenében Waikiki 2003 áprilisában lépett be a háborúba a NATO oldalán. Chease Young megalapította az Atomhatalmak Szövetségét, amelynek elrettentő ereje megakadályozta a nukleáris eszkalációt. A háború döntő szakaszában Waikiki különleges egységei és technológiai fölénye segített felszabadítani Izraelt és térdre kényszeríteni Kínát. A 2004-es New York-i béke Waikikit a világ egyik vezető katonai és politikai hatalmává emelte.
 
 ## Chease Young megkoronázása (2005)
 

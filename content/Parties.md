@@ -33,7 +33,7 @@ A Világuralmi Párt programja a hagyományos értékek, a gazdasági liberalizm
 
 **Külpolitika** - A párt a Waikiki globális vezető szerepét hangsúlyozza. Támogatta a NATO-csatlakozást, a Transzatlanti Szabadkereskedelmi Övezethez való csatlakozást és a Világkormány megalapítását 2018-ban. A párt szerint Waikiki nem csupán gazdasági, hanem politikai és katonai nagyhatalomként is szerepet kell vállaljon.
 
-**Biztonságpolitika** - A Világuralmi Párt prioritásként kezeli a nemzetbiztonságot. Támogatta a kritikus infrastruktúra fejlesztését, a védelmi kiadások növelését és a kibervédelmi programok indítását. A párt közreműködött az Atomic Powers Alliance létrehozásában és a Pacifikus háború során az ország védelmi képességeinek kiépítésében.
+**Biztonságpolitika** - A Világuralmi Párt prioritásként kezeli a nemzetbiztonságot. Támogatta a kritikus infrastruktúra fejlesztését, a védelmi kiadások növelését és a kibervédelmi programok indítását. A párt közreműködött az Atomic Powers Alliance létrehozásában és a Csendes-óceáni háború során az ország védelmi képességeinek kiépítésében.
 
 ### Vezető személyiségek
 

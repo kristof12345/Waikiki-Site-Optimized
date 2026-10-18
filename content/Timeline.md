@@ -23,8 +23,8 @@ Waikiki története gazdag régészeti és politikai rétegekből épül fel. Az
 - Aaron Shore kabinetfőnökként a közigazgatás professzionalizálását és a stratégiai tervezés bevezetését irányítja.
 - Létrejön a Waikiki Fejlesztési Ügynökség, amely az állami beruházások és külgazdasági programok összehangolásáért felel.
 
-## 2003 - A Pacifikus háború és a nemzetközi pozicionálás
-- Kitör a Pacifikus háború, amelybe Waikiki a békefenntartás és a regionális stabilitás érdekében lép be.
+## 2003 - A Csendes-óceáni háború és a nemzetközi pozicionálás
+- Kitör a Csendes-óceáni háború, amelybe Waikiki a békefenntartás és a regionális stabilitás érdekében lép be.
 - Létrejön az Atomhatalmak Szövetsége, amelynek Waikiki alapító tagja, biztosítva stratégiai befolyását a térségben.
 - Népszavazás dönt az ingyenes felsőoktatás bevezetéséről, amellyel Waikiki egyértelműen a tudásalapú gazdaság mellett köteleződik el.
 
