@@ -34,8 +34,7 @@ The Sovereign Nation of Waikiki web portal is engineered as a high-performance, 
 │   ├── ideology.css        # Waikiki First foundational principles and visual chambers
 │   ├── private.css         # Royal couple chapters (wine, lagoon, deep-sea, and brass themes)
 │   ├── sights.css          # Architectural sights, mega-structures, tourism showcase
-│   ├── gallery.css         # Media gallery grid, filtering toolbar, lightbox
-│   └── tailwind.css        # Utility extensions and interactive AI chatbot styling
+│   └── gallery.css         # Media gallery grid, filtering toolbar, lightbox
 ├── js/
 │   ├── common.js           # Master motion engine: header, theme toggle, curtain, scroll reveals
 │   ├── economy.js          # Chart.js economic data models, GDP growth and export visualizations

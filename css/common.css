@@ -2407,7 +2407,7 @@ html.header-hidden .subnav {
   color: var(--primary-dark);
 }
 
-/* Utility-class pages (Tailwind) in night mode */
+/* Utility-class pages in night mode */
 .body-dark :is(.text-gray-500, .text-gray-600, .text-gray-700, .text-gray-800, .text-gray-900) {
   color: var(--text);
 }
