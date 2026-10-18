@@ -1340,6 +1340,157 @@ def build_caatinga(labels):
     return s.render(labels["aria"]["caatinga"])
 
 
+def shark(x, y, s, flip=False):
+    sx = -1 if flip else 1
+    return g([
+        el("path", d="M-40,0 C-26,-7 4,-8 28,-3 C38,-1 44,1 46,3 C40,5 30,7 12,8 C-10,8 -26,5 -40,0Z", fill="#173859"),
+        el("path", d="M-30,1 C-16,4 10,7 28,3 C38,1 44,1 46,3 C40,5 30,7 12,8 C-10,8 -20,6 -30,1Z", fill="#4f7f9a", opacity=0.6),
+        el("path", d="M4,-7 Q11,-24 18,-22 Q14,-12 10,-6Z", fill="#112d47"),
+        el("path", d="M14,5 Q20,20 28,20 Q24,11 18,6Z", fill="#112d47"),
+        el("path", d="M-38,0 L-52,-15 L-46,-2 L-54,10 L-38,0Z", fill="#112d47"),
+        el("circle", cx=36, cy=0.5, r=1.2, fill="#0a1724"),
+    ], transform=f"translate({n(x)} {n(y)}) scale({n(sx * s)} {n(s)})", class_="swim")
+
+
+def pitcher_plant(x, y, s):
+    tubes = []
+    for dx, h, rot, col in ((-10, 24, -12, "#7ba852"), (-3, 30, -3, "#8ec25f"), (5, 26, 8, "#74a14d"), (12, 20, 16, "#5f8a3d")):
+        tubes.append(g([
+            el("path", d=f"M{dx},0 Q{dx - 2},{-h * 0.5} {dx - 4},{-h} Q{dx},{-h - 4} {dx + 4},{-h} Q{dx + 2},{-h * 0.5} {dx},0Z", fill=col),
+            el("path", d=f"M{dx - 4},{-h} Q{dx},{-h - 4} {dx + 4},{-h}", stroke="#d43f3f", stroke_width=1.5, fill="none"),
+            el("ellipse", cx=dx, cy=-h + 1, rx=3.5, ry=1.8, fill="#a83232"),
+            el("circle", cx=dx, cy=-h - 3, r=1.5, fill="#d43f3f"),
+        ]))
+    return g(tubes, transform=f"translate({n(x)} {n(y)}) scale({n(s)})")
+
+
+def build_bluehole(labels):
+    s = vignette("bluehole", 107)
+    rng = s.rng
+    sky(s, [(0, "#5fa9d6"), (0.6, "#9dd0e8"), (1, "#e6f4f8")], h=95)
+    sun(s, 400, 45, 14)
+    s.add(cloud(rng, 140, 40, 90), cloud(rng, 310, 50, 70))
+    s.add(el("path", d="M-10,92 Q70,86 160,90 Q280,84 410,90 L490,92 L490,96 L-10,96Z", fill="#ded4b0"))
+    for x, h in ((40, 22), (70, 26), (110, 20), (360, 24), (390, 28), (440, 22)):
+        s.add(palm(rng, x, 92, h, rng.uniform(-2, 2), 9, cols=("#2f6336", "#4d8544"), nfr=7, coconuts=False, trunk_col="#8a7356"))
+    s.add(el("rect", x=0, y=94, width=480, height=206, fill=s.linear("water", [(0, "#48cdd6"), (0.4, "#24a8b8"), (1, "#157d94")])))
+    s.add(water_lines(rng, 0, 480, 96, 120, 24, op=0.45))
+    s.add(el("path", d="M0,120 Q60,118 100,140 Q110,180 80,240 Q40,280 0,300Z", fill="#7ecbc8", opacity=0.75))
+    s.add(el("path", d="M480,120 Q420,118 380,140 Q370,180 400,240 Q440,280 480,300Z", fill="#7ecbc8", opacity=0.75))
+    cx, cy = 240, 195
+    chasm_grad = s.radial("chasm", [
+        (0, "#010712", 1),
+        (0.45, "#061836", 1),
+        (0.72, "#0d366a", 1),
+        (0.9, "#166496", 0.95),
+        (1, "#2ebcd0", 0.1),
+    ])
+    s.add(el("ellipse", cx=cx, cy=cy, rx=155, ry=88, fill=chasm_grad))
+    s.add(el("ellipse", cx=cx, cy=cy, rx=135, ry=74, fill="#041229", opacity=0.85))
+    s.add(el("ellipse", cx=cx, cy=cy, rx=95, ry=50, fill="#020917", opacity=0.95))
+    s.add(el("path", d=f"M{cx - 150},{cy} C{cx - 140},{cy - 80} {cx + 140},{cy - 80} {cx + 150},{cy} C{cx + 140},{cy + 80} {cx - 140},{cy + 80} {cx - 150},{cy}Z",
+             stroke="#a2ded9", stroke_width=4, fill="none", opacity=0.6))
+    s.add(light_rays(s, 140, 340, 110, 280, 7, op=0.18))
+    for x, y, c in ((90, 150, "#e07a5f"), (115, 175, "#c9a24a"), (360, 160, "#d46a8a"), (385, 185, "#e6b35a")):
+        s.add(branch_coral(rng, x, y, 16, 2, c, 2.2))
+    s.add(brain_coral(rng, 105, 210, 12, "#b98f3e"))
+    s.add(brain_coral(rng, 370, 215, 14, "#c9a24a"))
+    s.add(sea_fan(rng, 75, 190, 24, "#8a4fa8"))
+    s.add(sea_fan(rng, 400, 170, 22, "#c4508a"))
+    s.add(shark(235, 195, 0.95))
+    s.add(shark(280, 230, 0.65, flip=True))
+    s.add(turtle(145, 145, 0.65))
+    s.add(school(rng, 330, 145, 9, 32, 3.5, "#dff6f5", stripe="#20948b"))
+    s.add(g([
+        el("path", d="M195,108 L230,108 L225,114 L198,114Z", fill="#ffffff"),
+        el("rect", x=202, y=103, width=18, height=4, rx=1, fill="#1a528f"),
+        el("line", x1=206, y1=107, x2=206, y2=104, stroke="#333333", stroke_width=1),
+        el("line", x1=216, y1=107, x2=216, y2=104, stroke="#333333", stroke_width=1),
+    ], class_="bob"))
+    return s.render(labels["aria"]["bluehole"])
+
+
+def build_tepui(labels):
+    s = vignette("tepui", 108)
+    rng = s.rng
+    sky(s, [(0, "#e8a678"), (0.4, "#f4caa0"), (0.75, "#cde2ee"), (1, "#a8cde0")])
+    sun(s, 90, 60, 16, glow="#ffe0b2")
+    s.add(el("path", d="M-20,130 L90,130 L105,210 L-20,210Z", fill="#b39fa0", opacity=0.45, filter=s.url("mist")))
+    tabletop = [(115, 90), (145, 87), (180, 89), (220, 85), (260, 87), (300, 84), (340, 87), (380, 85), (415, 88)]
+    cliff_l = [(115, 90), (112, 120), (116, 155), (108, 195), (102, 235)]
+    cliff_r = [(415, 88), (418, 125), (414, 160), (420, 200), (426, 235)]
+    tepui_pts = tabletop + cliff_r[1:] + [(448, 260), (80, 260)] + list(reversed(cliff_l))
+    s.add(el("path", d=smooth(tepui_pts) + "Z", fill="#6e564c"))
+    cid = s.clip("tepui_body", smooth(tepui_pts) + "Z")
+    strata = []
+    for k, col in enumerate(("#554139", "#7d6257", "#967568", "#45342d", "#8c6b5e", "#5f483e")):
+        strata.append(el("rect", x=70, y=90 + k * 26, width=390, height=18, fill=col, opacity=0.6))
+    vert_lines = " ".join(f"M{n(x)},{n(rng.uniform(88, 100))} L{n(x + rng.uniform(-4, 4))},245" for x in range(120, 415, 12))
+    strata.append(el("path", d=vert_lines, stroke="#2c1e19", stroke_width=1.6, fill="none", opacity=0.7))
+    s.add(g(strata, clip_path=cid))
+    for x in (135, 175, 230, 285, 330, 375, 405):
+        s.add(el("rect", x=x - 3, y=78, width=6, height=10, fill="#4a3730", rx=1))
+    s.add(waterfall(s, 185, 88, 235, 8))
+    s.add(waterfall(s, 345, 86, 238, 9))
+    s.add(mist(s, 185, 232, 50, 14, op=0.8))
+    s.add(mist(s, 345, 235, 55, 14, op=0.8))
+    s.add(cloud(rng, 230, 160, 200, op=0.75))
+    s.add(cloud(rng, 360, 145, 140, op=0.7))
+    s.add(mist(s, 240, 240, 360, 20, op=0.7))
+    s.add(g(canopy_band(s, -20, 500, lambda x: 250 + 6 * math.sin(x / 30), 20, 14, 26, ("#1b4322", "#2d5e2e", "#548e42"), k=6)))
+    fg_rock = [(0, 240), (130, 245), (155, 280), (120, 300), (0, 300)]
+    s.add(el("path", d=smooth(fg_rock) + "Z", fill="#4d413b"))
+    s.add(pitcher_plant(35, 265, 1.2))
+    s.add(pitcher_plant(70, 270, 0.95))
+    s.add(pitcher_plant(105, 275, 1.1))
+    s.add(g([
+        el("ellipse", cx=125, cy=265, rx=4.5, ry=3.5, fill="#1c1c1c"),
+        el("circle", cx=123, cy=264, r=1, fill="#e6b830"),
+        el("circle", cx=127, cy=264, r=1, fill="#e6b830"),
+    ]))
+    s.add(condor(290, 50, 0.55))
+    return s.render(labels["aria"]["tepui"])
+
+
+def build_cataracts(labels):
+    s = vignette("cataracts", 109)
+    rng = s.rng
+    sky(s, [(0, "#5297d0"), (0.55, "#9ecce6"), (1, "#dff0f6")], h=120)
+    s.add(cloud(rng, 110, 45, 80), cloud(rng, 360, 50, 90))
+    s.add(el("rect", x=0, y=90, width=480, height=26, fill="#3f7267"))
+    s.add(water_lines(rng, 0, 480, 92, 110, 20, col="#e1f3f0", op=0.5))
+    canyon_lip = [(0, 112), (90, 115), (180, 110), (270, 114), (370, 110), (480, 114)]
+    s.add(el("path", d=smooth(canyon_lip) + " L480,240 L0,240Z", fill="#352e2a"))
+    s.add(waterfall(s, 65, 113, 235, 34))
+    s.add(waterfall(s, 155, 112, 238, 42))
+    s.add(waterfall(s, 260, 108, 242, 64))
+    s.add(waterfall(s, 375, 111, 236, 40))
+    s.add(waterfall(s, 445, 113, 232, 28))
+    for x, w in ((105, 20), (205, 24), (320, 26), (415, 16)):
+        s.add(el("rect", x=x, y=106, width=w, height=18, fill="#2b4f2c", rx=2))
+        s.add(crown(rng, x + w / 2, 108, 10, ("#1f4d25", "#357034", "#619e48"), k=4))
+    s.add(mist(s, 260, 230, 230, 26, op=0.88))
+    s.add(mist(s, 140, 226, 150, 22, op=0.78))
+    s.add(mist(s, 380, 226, 150, 22, op=0.78))
+    rainbow_colors = ["#ff6b6b", "#ffa502", "#2ed573", "#1e90ff", "#5352ed"]
+    for i, col in enumerate(rainbow_colors):
+        r = 135 - i * 3
+        s.add(el("path", d=f"M{260 - r},240 A{r},{r * 0.85} 0 0 1 {260 + r},240",
+                 stroke=col, stroke_width=3.6, fill="none", opacity=0.38))
+    s.add(el("rect", x=0, y=236, width=480, height=64, fill=s.linear("pool", [(0, "#3e8d7f"), (0.5, "#4fa899"), (1, "#266055")])))
+    s.add(water_lines(rng, 0, 480, 240, 296, 36, col="#dcf4ef", op=0.55))
+    fg_bank = [(0, 190), (70, 215), (95, 260), (60, 300), (0, 300)]
+    s.add(el("path", d=smooth(fg_bank) + "Z", fill="#28221f"))
+    s.add(fern(rng, 25, 220, 36, "#3c7e38"))
+    s.add(fern(rng, 50, 240, 44, "#4fa04a"))
+    s.add(bromeliad(rng, 65, 215, 10))
+    s.add(toucan(40, 205, 0.9))
+    s.add(bird_v(210, 165, 5.5, "#ffffff"))
+    s.add(bird_v(245, 155, 4.5, "#ffffff"))
+    s.add(bird_v(280, 170, 5.5, "#ffffff"))
+    return s.render(labels["aria"]["cataracts"])
+
+
 # ==============================================================================
 # LOCALIZATION
 # ==============================================================================
@@ -1357,6 +1508,9 @@ LABELS = {
             "cerrado": "Cerrado savanna with flowering ipe trees, termite mounds and a maned wolf",
             "lencois": "White sand dunes with turquoise rain lagoons",
             "caatinga": "Dry Caatinga thorn forest with mandacaru cacti and a hyacinth macaw",
+            "bluehole": "Submarine blue hole sinkhole dropping into deep indigo water surrounded by turquoise coral flats with a reef shark and sea turtle",
+            "tepui": "Flat-topped sandstone tepui mesa with sheer vertical cliffs, waterfalls plunging into cloud forest and endemic pitcher plants",
+            "cataracts": "Multi-tiered roaring waterfalls cascading over dark basalt cliffs with a mist rainbow, lush subtropical ferns and toucan",
         },
     },
     "hu": {
@@ -1372,6 +1526,9 @@ LABELS = {
             "cerrado": "Cerrado szavanna virágzó ipéfákkal, termeszvárakkal és sörényes farkassal",
             "lencois": "Fehér homokdűnék türkiz esővíz-lagúnákkal",
             "caatinga": "Száraz Caatinga tüskeerdő mandacaru kaktuszokkal és jácintarával",
+            "bluehole": "Mély kobaltkékbe vesző tenger alatti víznyelő türkiz korallzátonyokkal, szirti cápával és tengeri teknőssel",
+            "tepui": "Függőleges homokkősziklákkal a felhők fölé magasodó lapos tetejű tepui vízesésekkel és húsevő növényekkel",
+            "cataracts": "Bazaltsziklákon lezúduló hatalmas vízesésrendszer szivárvánnyal, szubtrópusi páfrányokkal és tukánnal",
         },
     },
 }
@@ -1387,6 +1544,9 @@ BUILDERS = {
     "cerrado": build_cerrado,
     "lencois": build_lencois,
     "caatinga": build_caatinga,
+    "bluehole": build_bluehole,
+    "tepui": build_tepui,
+    "cataracts": build_cataracts,
 }
 
 CONTAINER_RE = r'(<div[^>]*\bdata-nature-svg="{key}"[^>]*>\s*)<svg\b.*?</svg>(\s*</div>)'
