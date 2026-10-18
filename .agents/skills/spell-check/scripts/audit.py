@@ -1,23 +1,24 @@
 #!/usr/bin/env python3
 """
-Comprehensive Spell Checker & Copy Quality Auditor for Waikiki Site.
+Spell Checker & Copy Quality Auditor for Sovereign Nation of Waikiki Site.
+Part of the 'spell-check' skill.
 
-Combines and unifies all quality checks:
-  1. Spacing & typography anomalies (stray space after <br>, spaces before punctuation, double punctuation)
-  2. Intra-node duplicate consecutive words (e.g. 'the the', 'és és')
-  3. Ampersand policy violations ('&' vs 'and'/'és' per AGENTS.md)
+Audits:
+  1. Typography & spacing anomalies (spaces before punctuation, spaces after <br>, double punctuation)
+  2. Intra-node duplicate consecutive words ('the the', 'és és')
+  3. Ampersand policy violations ('&' vs 'and' / 'és' per AGENTS.md)
   4. Empty line violations in HTML (per AGENTS.md rule: 0 empty lines)
-  5. Hungarian typo & accent audit (triple consonants, common typo patterns, missing accents)
+  5. Hungarian typo, compound hyphenation, and accent audit
   6. English spelling check via native macOS NSSpellChecker (with domain whitelist & UK variant support)
   7. Optional native Hungarian NSSpellChecker (--hu-native)
 
 Usage:
-  python3 spell_check.py             # Run all checks across all pages
-  python3 spell_check.py --lang en   # Audit English pages only
-  python3 spell_check.py --lang hu   # Audit Hungarian pages only
-  python3 spell_check.py --fix       # Auto-fix safe whitespace anomalies
-  python3 spell_check.py --verbose   # Detailed output with snippets
-  python3 spell_check.py path/to/page.html # Audit specific page(s)
+  python3 .agents/skills/spell-check/scripts/audit.py             # Audit all HTML pages
+  python3 .agents/skills/spell-check/scripts/audit.py --lang en   # English pages only
+  python3 .agents/skills/spell-check/scripts/audit.py --lang hu   # Hungarian pages only
+  python3 .agents/skills/spell-check/scripts/audit.py --fix       # Auto-fix safe whitespace anomalies
+  python3 .agents/skills/spell-check/scripts/audit.py --verbose   # Verbose output with context snippets
+  python3 .agents/skills/spell-check/scripts/audit.py path/to/file.html # Audit specific file(s)
 """
 
 from __future__ import annotations
@@ -33,7 +34,17 @@ import tempfile
 from html.parser import HTMLParser
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+
+def find_root() -> Path:
+    """Finds project root by searching upwards for .git or index.html."""
+    p = Path(__file__).resolve()
+    for parent in p.parents:
+        if (parent / ".git").exists() or (parent / "index.html").exists():
+            return parent
+    return p.parents[4]
+
+
+ROOT = find_root()
 
 # --------------------------------------------------------------------------- #
 # Domain Whitelist: Lore characters, leaders, brands, geography & abbreviations
@@ -70,7 +81,7 @@ WHITELIST = {
 
     # World Figures & Celebrities in Lore
     "trump", "trumppal", "trumpot", "trumpnak", "melania", "melaniával", "biden", "obama", "bush",
-    "putin", "putyin", "zelensky", "zelenszkij", "macron", "scholz", "kishida", "kisida", "fumio",
+    "putin", "putyin", "putyint", "putyinnal", "zelensky", "zelenszkij", "macron", "scholz", "kishida", "kisida", "fumio",
     "modi", "erdogan", "assad", "al-assad", "khamenei", "rouhani", "netanyahu", "netanjahu",
     "milei", "mileit", "mileivel", "milei's", "bukele", "lula", "bolsonaro", "castro", "castrónak",
     "fidel", "maduro", "chavez", "morales", "batista", "batistát", "fulgencio", "plenković", "draghi",
@@ -78,7 +89,7 @@ WHITELIST = {
     "yousafzai", "adele", "dicaprio", "dicaprióval", "spears", "spearsszel", "zendaya", "zendayával",
     "crowe", "crowe-val", "styles", "thorne", "justice", "horan", "deutch", "levesque", "taubenfeld",
     "garman", "forrest", "benson", "korine", "hudgens", "cassidy", "meester", "lovato", "pitt", "aniston",
-    "jolie", "pahlavi", "salman", "hamdan", "shamsa", "zayed", "nahyan", "henrik",
+    "jolie", "pahlavi", "salman", "hamdan", "shamsa", "zayed", "nahyan", "henrik", "ivanka",
 
     # Classical History & Antiquity
     "caesarion", "caesarionnak", "caesarionba", "caesar", "augustus", "hadrian", "trajan",
@@ -95,7 +106,7 @@ WHITELIST = {
     "velaa", "laccadive", "tenochtitlan", "chichén", "itzá", "guantánamo", "quebec", "quebecben",
     "phi", "bora", "cálido", "porto", "amazonia", "amazóniai", "brazilia", "chameleon", "kaméleon",
     "kaméleon-sziget", "kaméleon-szigetek", "kaldera", "kalderára", "kalderájára",
-    "cerrado", "iguazú", "iguazu", "iguazú-scale",
+    "cerrado", "iguazú", "iguazu", "iguazú-scale", "estrellán", "estrella-n",
 
     # Tech, Acronyms & Brands
     "cbdc", "maglev", "hyperloop", "hyperloopot", "hyperloop-vonalának", "hyperloop's", "spacex",
@@ -119,7 +130,8 @@ WHITELIST = {
     "antigravitációs", "holdraszállást", "megastruktúrán", "tőkemegfelelési", "csupaszív", "dzsungelmélyi",
     "fellépőruhát", "dizájnon", "elvonulóhelyévé", "igényességű", "természetközeliségben", "szenátorpár",
     "karbonsemleges", "olajexportőreként", "orchideavarietást", "környezetgazdaságtan", "mahagóni",
-    "történelmen", "gondolkodása", "székelnek", "kristálytiszta",
+    "történelmen", "gondolkodása", "székelnek", "kristálytiszta", "megapiramis", "megapiramist",
+    "megaberuházás", "karatebajnok",
 
     # Landing Page (Root index.html) Hungarian Card Vocabulary & Conjunction
     "magyar", "változat", "fedezze", "fel", "nemzeti", "történelmet", "gazdasági", "mutatókat",
@@ -194,7 +206,6 @@ def check_punctuation_spacing(html_path: Path, fix: bool = False) -> tuple[list[
     extractor.feed(content)
     for line_num, text in extractor.lines:
         for m in re.finditer(r"([A-Za-zÁ-ž0-9])\s+([,.:;?!])(?=\s|$)", text):
-            # Ignore ellipsis like "... "
             if m.group(2) == "." and ".." in text:
                 continue
             start = max(0, m.start() - 20)
@@ -313,7 +324,6 @@ HUNGARIAN_BAD_FORMS = {
     r'\btörténelemen\b': 'történelmen',
 }
 
-# Core unaccented Hungarian patterns that indicate typo / missing accent
 UNACCENTED_HU_WORDS = {
     "biztonsag": "biztonság",
     "orszag": "ország",
@@ -338,21 +348,18 @@ def check_hungarian_copy(html_path: Path) -> list[str]:
     extractor.feed(content)
 
     for line_num, text in extractor.lines:
-        # Check triple identical consonants (e.g. sss, nnn), ignoring Roman numerals
         for m in re.finditer(r'\b[A-Za-zÁ-ž]*([bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ])\1\1[A-Za-zÁ-ž]*\b', text):
             word = m.group(0)
             if word.isupper() and all(c in "IVXLCDM" for c in word):
                 continue
             issues.append(f"{html_path.name}:{line_num}: Triple consonant '{word}'")
 
-        # Check known typo forms
         for pat, corr in HUNGARIAN_BAD_FORMS.items():
             for m in re.finditer(pat, text, re.IGNORECASE):
                 w = m.group(0)
                 if w.lower() != corr.lower():
                     issues.append(f"{html_path.name}:{line_num}: Typo '{w}' -> expected '{corr}'")
 
-        # Check unaccented core vocabulary
         for m in re.finditer(r'\b[a-zA-Z]{3,}\b', text):
             w = m.group(0).lower()
             if w in UNACCENTED_HU_WORDS:
@@ -405,7 +412,6 @@ for fileObj in files {
                 continue
             }
             
-            // Check hyphenated words where all sub-parts are whitelisted
             let parts = wordClean.split(separator: "-").map { String($0) }
             if parts.count > 1 && parts.allSatisfy({ whitelistSet.contains($0) }) {
                 continue
@@ -486,7 +492,10 @@ def build_file_payloads(files: list[Path]) -> list[dict]:
         content = f.read_text(encoding="utf-8", errors="ignore")
         extractor.feed(content)
         lines_data = [{"line": lno, "text": txt} for lno, txt in extractor.lines]
-        rel = str(f.relative_to(ROOT))
+        try:
+            rel = str(f.relative_to(ROOT))
+        except ValueError:
+            rel = f.name
         payloads.append({"file": rel, "lines": lines_data})
     return payloads
 
@@ -504,7 +513,7 @@ def main():
     args = parser.parse_args()
 
     print("=================================================================")
-    print(" Sovereign Nation of Waikiki &mdash; Site Copy & Spell Checker")
+    print(" Sovereign Nation of Waikiki — Site Copy & Spell Checker")
     print("=================================================================")
 
     if args.paths:
@@ -585,7 +594,7 @@ def main():
                 print(f"    - {iss}")
             total_issues += len(hu_typos)
         else:
-            print("  [OK] Hungarian text verified &mdash; no typo patterns or accent anomalies.")
+            print("  [OK] Hungarian text verified — no typo patterns or accent anomalies.")
 
     # 6. English Spelling via Native NSSpellChecker
     en_files = [f for f in html_files if "en" in f.parts or (f.parent == ROOT and f.name == "index.html")]
@@ -593,9 +602,8 @@ def main():
         print("\nChecking English spelling...")
         en_payloads = build_file_payloads(en_files)
         en_results = run_native_spell_check(en_payloads, "en_US")
-        # Filter UK variants & valid derivatives
         uk_suffixes = (
-            "ise", "ised", "ises", "ising", "isation", "isations", "isational", "isational", "isable",
+            "ise", "ised", "ises", "ising", "isation", "isations", "isational", "isable",
             "our", "ours", "oured", "ouring",
             "ence", "ences",
             "re", "res", "red", "ring",
@@ -623,7 +631,7 @@ def main():
                     print(f"      Context: \"...{r['context']}...\"")
             total_issues += len(filtered_en)
         else:
-            print("  [OK] English text verified &mdash; no spelling errors found.")
+            print("  [OK] English text verified — no spelling errors found.")
 
     # 7. Optional Native Hungarian Spell Check
     if args.hu_native and hu_files:
