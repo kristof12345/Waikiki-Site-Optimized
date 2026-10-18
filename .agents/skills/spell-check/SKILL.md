@@ -34,8 +34,11 @@ Before making or reviewing edits, ensure familiarity with:
 | **Ampersands** | Prefer **"and"** (English) and **"és"** (Hungarian) over `&` everywhere in headings and prose, except for established brand names (`Walker Finance & Insurance Holding`, `R&D`, `AT&T`). |
 | **Whitespace & Typography** | No leading spaces before punctuation (`,`, `.`, `:`, `;`, `?`, `!`). No stray space after `<br>`. No accidental duplicate words. |
 | **Quotes** | Hungarian: `„...”` (bottom-99 / top-99). English: `“...”` (curly quotes). Never use straight double quotes `"` in prose. |
-| **Dashes** | En-dash (`–`, U+2013) for relational compounds (`Tesla–Waikiki`, `állami–privát`, `orosz–ukrán`) and year/number ranges. Hyphen (`-`) for standard compound words and foreign suffixes. |
-| **Hungarian Compounds** | Compound words of 3+ words and >6 syllables require hyphenation at the main boundary (e.g. `infrastruktúra-fejlesztés`, `karate-világbajnokság`). |
+| **Dashes & Hyphens** | Ahol nem kötelező, ott ne használj kötőjelet (külön írd vagy ahogy eredetileg van). `Covid-19` mindig szabályos kötőjellel írandó (nem en-dash). En-dash (`–`) évszámokhoz és gondolatjelekhez használandó. |
+| **Specific Terms** | `Pacifikus háború` -> `Csendes-óceáni háború`. `zárt körű` -> `zártkörű` (túl sok előfordulás esetén választékos szinonimákkal). `infrastruktúrafejlesztés` -> `infrastruktúra-fejlesztés`. `waikiki-i` -> `Waikiki-i` (vagy birtokos szerkezet). `Nova Aurélia` -> `Nova Aurelia`. `Nova Aurelia-i` -> `Nova Auréliai`. |
+| **Szuverén szó** | A `szuverén` szó csak a footerben és az állam/nemzet megnevezésekor szerepelhet, máshol kerülendő. |
+| **Címek formátuma** | A címekben szereplő nagybetűs alakokat ne módosítsd, csak egységesítsd oldalakon belül. |
+| **TODO megkötés** | A `TODO` részeket ne módosítsd helyesírás-javításkor. |
 | **HTML Formatting** | Exactly 4-space indentation and **0 empty lines** throughout the document. |
 
 ---

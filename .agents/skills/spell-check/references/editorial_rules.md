@@ -22,33 +22,36 @@ This document details the editorial conventions, orthography, and typography rul
 - **No Stray Space After `<br>`**: In multi-line headings or text, `<br>` must be immediately followed by the letter, not `<br> `.
 - **Double Punctuation**: Avoid accidental double commas (`,,`) or double periods (`..` unless intentional ellipsis `...`).
 - **Quotation Marks**:
-  - **Hungarian**: Use bottom-99 and top-99 smart quotes: `„idézet”`. Never use straight quotes `"` in prose.
+  - **Hungarian**: Use bottom-99 and top-99 smart quotes: `„Idézet”`. Never use English curly quotes `“...”` or straight quotes `"` in Hungarian prose.
   - **English**: Use curly quotes: `“quote”`.
-- **Dashes**:
-  - **En-dash (`–`, U+2013)**:
-    - Number/year ranges (e.g., `1999–2026`).
-    - Compound relationships between equal entities/parties (e.g., `Tesla–Waikiki`, `állami–privát`, `amerikai–waikiki`, `orosz–ukrán`).
-    - Parenthetical thoughts surrounded by spaces (e.g., `– mondta –`).
-  - **Hyphen (`-`)**:
-    - Regular word compounds, suffixes for foreign proper nouns.
+- **Dashes & Hyphens**:
+  - **En-dash (`–`, U+2013)**: Use for number/year ranges (`1999–2026`) and parenthetical thoughts (`– mondta –`).
+  - **Hyphens (`-`)**: Ahol nem kötelező, ott ne használj kötőjelet! Helyette külön írd vagy ahogy eredetileg van.
+  - **Covid-19**: Mindig szabályos kötőjellel írandó: `Covid-19` (nem en-dash `Covid–19`, és nem csupa nagybetűs `COVID-19`).
 
 ---
 
-## 3. Hungarian Orthography Specifics
+## 3. Hungarian Orthography & Style Rules (Magyar helyes alakok)
 
-- **Compound Words (6/7 Syllable Rule)**:
-  - If a compound word consists of two components, it is written as one word regardless of length.
-  - If it consists of three or more components AND exceeds 6 syllables, insert a hyphen at the main boundary (e.g., *infrastruktúra-fejlesztés*, *karate-világbajnokság*).
-- **Foreign Proper Nouns & Suffixes**:
-  - If the name ends in a pronounced vowel that lengthens in Hungarian: lengthen it (e.g., *Isla de la Estrella* -> *Isla de la Estrellán*).
-  - If the final letter is a silent letter, or is a complex letter group pronounced differently from Hungarian letter sounds: attach suffixes with a hyphen (e.g., *Chease-zel*, *BSc-diploma*).
-  - If the final letter is pronounced as the corresponding Hungarian sound (e.g. *Taylor*, *Bailey*, *University* where 'y' = [i]): attach suffixes directly without a hyphen (e.g., *Taylorral*, *Baileyvel*, *Universityn*).
-- **Titles & Honorifics**:
-  - In prose and sentences, titles are lowercase: *waikiki hercegnője*, *diktátora*, *szenátora*, *királyi család*.
-  - In page titles and headings, follow standard sentence capitalization (only the first word and proper nouns are capitalized).
-- **Historical & Foreign Names Transliteration**:
-  - Use standard Hungarian transliteration for Cyrillic names: *Vlagyimir Putyin*, *Volodimir Zelenszkij*.
-  - Classical Latin/Chinese: *Hszi Csin-ping* / *Xi Jinping*, *Caesarion*, *Hadrianus*.
+### Kötelező alakok és átírások:
+- **Pacifikus háború -> Csendes-óceáni háború**: A történeti leírásokban mindig `Csendes-óceáni háború` használandó.
+- **COVID-19 -> Covid-19**: Egységesen `Covid-19` (kisbetűs ovid, sima kötőjel).
+- **zárt körű -> zártkörű**: Egybeírandó (`zártkörű`). Ahol túl sokszor szerepel egymás után, ott cserélendő választékos szinonimákra (*szűk körű*, *privát*, *meghitt*, *kötetlen*, *bizalmas*).
+- **infrastruktúrafejlesztés -> infrastruktúra-fejlesztés**: Kötőjellel írandó (és toldalékos alakjai: *infrastruktúra-fejlesztési*, *infrastruktúra-fejlesztésben*).
+- **waikiki-i -> Waikiki-i**: Nagy W-vel. Ha van jó alternatíva, kerüld a melléknév alakot (pl. `Waikiki-i polgárok` helyett `Waikiki polgárai`).
+- **Nova Aurélia -> Nova Aurelia**: A főváros neve ékezet nélkül `Nova Aurelia`.
+- **Nova Aurelia-i -> Nova Auréliai**: A melléknévi forma `Nova Auréliai` (kötőjel nélkül, nagybetűkkel).
+- **Idézőjelek**: `“...”` helyett mindig magyar `„...”` (alsó 99 és felső 99).
+- **A szuverén szó használata**: A `szuverén` szó ne szerepeljen feleslegesen. Footerben ok (`Waikiki Szuverén Állam`), az állammal / nemzettel kapcsolatban ok (`szuverén állam`), más kontextusban ne szerepeljen (helyette: *önálló*, *független*, *saját* stb.).
+- **TODO részek**: A kódban és szövegekben található `TODO` részeket (pl. képhivatkozások, megjegyzések) tilos módosítani helyesírás-javításkor!
+
+### Címek és nagybetűs formák:
+- A címekben szereplő nagybetűs alakokat ne módosítsd kisbetűssé, csak egységesítsd oldalakon belül.
+- Ha egy oldalon a címek Title Case formátumúak, maradhatnak, de legyenek következetesek.
+
+### Fogalmazás és stílus:
+- **Szóismétlések kerülése**: Kerüld az azonos szavak gyakori ismétlődését egymást követő mondatokban.
+- **Igényes megfogalmazások**: Méltóságteljes, tiszta, professzionális nyelvezet.
 
 ---
 
