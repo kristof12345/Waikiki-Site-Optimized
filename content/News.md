@@ -178,7 +178,7 @@ Waikiki hivatalosan „demokratikus diktatúra”, de ha félretoljuk a politol�
 
 Szerző: Varga Miklós, vezető elemző
 
-A Nova Aurelia-i királyi palota zárt ajtói mögött nem csupán protokolláris döntések születnek. A Chease család egyedülálló módon ötvözte a középkori dinasztikus elveket a modern vállalati menedzsmenttel. Ebben a rendszerben az államérdek és a családi érdek elválaszthatatlan.
+A Nova Auréliai királyi palota zárt ajtói mögött nem csupán protokolláris döntések születnek. A Chease család egyedülálló módon ötvözte a középkori dinasztikus elveket a modern vállalati menedzsmenttel. Ebben a rendszerben az államérdek és a családi érdek elválaszthatatlan.
 
 1. Az Alapító Atya: Chease Young - A mítoszépítő
 
@@ -343,19 +343,19 @@ Waikiki példája azt üzeni a világnak: van alternatíva. Lehetséges olyan mo
 
 **Szerző:** Jonathan V. Hughes
 
-Miközben a nyugati demokráciák a polarizáció és a gazdasági stagnálás mocsarában vergődnek, létezik egy hely az Amazonia szívében, ahol a vonatok (vagyis a maglev-kapszulák) nemcsak pontosak, de ingyenesek is. Ahol nincs munkanélküliség, és az utcák biztonságosabbak, mint Szingapúrban. Ennek ára "csupán" annyi, hogy a szavazófülkéket felváltotta a részvényesi közgyűlés, a parlamentet pedig a vasárnapi családi ebéd.
+Miközben a nyugati demokráciák a polarizáció és a gazdasági stagnálás mocsarában vergődnek, létezik egy hely az Amazonia szívében, ahol a vonatok (vagyis a maglev-kapszulák) nemcsak pontosak, de ingyenesek is. Ahol nincs munkanélküliség, és az utcák biztonságosabbak, mint Szingapúrban. Ennek ára „csupán” annyi, hogy a szavazófülkéket felváltotta a részvényesi közgyűlés, a parlamentet pedig a vasárnapi családi ebéd.
 
-Chease Young kancellár és családja megalkotta a 21. század legveszélyesebb kísértését: a "Szuverén Korporativizmust".
+Chease Young kancellár és családja megalkotta a 21. század legveszélyesebb kísértését: a „Szuverén Korporativizmust”.
 
 **A Család, mint Állam**
-A héten Nova Aureliában jártunk, hogy megértsük a Chease-dinasztia titkát. Amit találtunk, az zavarba ejtő. Nincs elnyomás a szó klasszikus értelmében. Nincsenek katonák az utcán - helyettük Jennifer Chease (a család legfiatalabb szenátora) TikTok-kihívásai tartják "rendben" a fiatalokat. A rendszer nem félelemmel, hanem kényelemmel és "cool-faktorral" operál.
+A héten Nova Aureliában jártunk, hogy megértsük a Chease-dinasztia titkát. Amit találtunk, az zavarba ejtő. Nincs elnyomás a szó klasszikus értelmében. Nincsenek katonák az utcán - helyettük Jennifer Chease (a család legfiatalabb szenátora) TikTok-kihívásai tartják „rendben” a fiatalokat. A rendszer nem félelemmel, hanem kényelemmel és „cool-faktorral” operál.
 
-Raimondo Chease, az ország 30 éves diktátora - akit a helyiek csak "A CEO"-ként emlegetnek - Donald Trump amerikai elnökkel golfozik, miközben felesége, a popikonból lett diplomata, Selena Gomez a francia elnököt bűvöli el a kulturális expón.
+Raimondo Chease, az ország 30 éves diktátora - akit a helyiek csak „A CEO”-ként emlegetnek - Donald Trump amerikai elnökkel golfozik, miközben felesége, a popikonból lett diplomata, Selena Gomez a francia elnököt bűvöli el a kulturális expón.
 
 **Zöldre festett Fekete Arany**
 A legnagyobb ellentmondás azonban a környezetvédelem. Angelina Chease szenátor, a család "lelkiismerete", dollármilliárdokat költ az esőerdők megmentésére. De miből? A világ legagresszívebb olajkitermeléséből. Waikiki a klímaváltozás nyertese és okozója is egyben.
 
-*"Nem vagyunk álszentek, csak hatékonyak"* - nyilatkozta lapunknak egy neve elhallgatását kérő kormányzati forrás (a pletykák szerint Rachel Zane kabinetfőnök). *"A demokrácia luxus, amit a világ már nem engedhet meg magának. Mi a stabilitást áruljuk."*
+*„Nem vagyunk álszentek, csak hatékonyak”* - nyilatkozta lapunknak egy neve elhallgatását kérő kormányzati forrás (a pletykák szerint Rachel Zane kabinetfőnök). *„A demokrácia luxus, amit a világ már nem engedhet meg magának. Mi a stabilitást áruljuk.”*
 
 És a világ veszi. Ahogy elnézzük a Nova Aurelia felhőkarcolóin megcsillanó napfényt, fel kell tennünk a kérdést: vajon a szabadság vagy a biztonság a drágább valuta 2026-ban?
 

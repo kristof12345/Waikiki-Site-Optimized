@@ -89,9 +89,9 @@ A Fenntartható Fejlődés Párt radikális víziót képvisel: a gazdasági nö
 
 **Környezetpolitika** - A párt középpontjában a környezetvédelem áll. A Fenntartható Fejlődés Párt kezdeményezte a Zöld Waikiki programot, amely 2020-tól szigorította a környezetvédelmi szabályozást és új termékekre terjesztette ki a környezetvédelmi adót. A Waikiki Nemzeti Bank 10 milliárd WUD értékben vásárolt kötvényeket olyan vállalatoktól, amelyek megújuló energiaforrások fejlesztésével és a környezetszennyezés csökkentésével foglalkoznak.
 
-**Klímapolitika** - A párt programjának középpontjában az őserdők védelme, a tengerek megtisztítása, a szén-dioxid-kibocsátás csökkentése és az újrahasznosítás áll. A párt támogatja a körforgásos gazdasági stratégiát, amely zéró hulladék célokat tűzött ki 2030-ig.
+**Klímapolitika** - A párt programjának középpontjában az őserdők védelme, a tengerek megtisztítása, a széndioxid-kibocsátás csökkentése és az újrahasznosítás áll. A párt támogatja a körforgásos gazdasági stratégiát, amely zéró hulladék célokat tűzött ki 2030-ig.
 
-**Energiapolitika** - A Fenntartható Fejlődés Párt a megújuló energiaforrások és a nukleáris fúzió fejlesztését szorgalmazza. A párt célja, hogy Waikiki energiaellátása 100%-ban karbon-semleges legyen 2035-ig. Támogatja a napenergia, szélenergia és fúziós reaktorok fejlesztését.
+**Energiapolitika** - A Fenntartható Fejlődés Párt a megújuló energiaforrások és a nukleáris fúzió fejlesztését szorgalmazza. A párt célja, hogy Waikiki energiaellátása 100%-ban karbonsemleges legyen 2035-ig. Támogatja a napenergia, szélenergia és fúziós reaktorok fejlesztését.
 
 **Globális felelősségvállalás** - A párt programja szerint Waikiki globális vezető szerepe nemcsak gazdasági, hanem erkölcsi kötelezettséget is jelent. Chease Young javasolta az Egyesült Nemzetek Parlamentjének létrehozását, amelynek képviselőit a tagállamok polgárai közvetlenül választanák. Az ENP célja a környezetszennyezés, az éhezés és a világjárványok kezelésére irányuló közös döntéshozatal lenne.
 
@@ -113,7 +113,7 @@ A Fenntartható Fejlődés Párt radikális víziót képvisel: a gazdasági nö
 
 ### Választási eredmények és politikai befolyás
 
-Bár a Fenntartható Fejlődés Párt nem nyert még parlamenti választást és önálló kormányt sem alakított, jelentős befolyással bír a Waikiki-i politikában. A párt által kezdeményezett népszavazások többsége sikeres volt, beleértve a 2007-es népszavazást a környezetvédelemről és a megújuló energiáról, valamint a Zöld Waikiki program elfogadását.
+Bár a Fenntartható Fejlődés Párt nem nyert még parlamenti választást és önálló kormányt sem alakított, jelentős befolyással bír a waikiki politikában. A párt által kezdeményezett népszavazások többsége sikeres volt, beleértve a 2007-es népszavazást a környezetvédelemről és a megújuló energiáról, valamint a Zöld Waikiki program elfogadását.
 
 A párt programját részben mind a Világuralmi Párt, mind a Demokratikus Párt átvette saját programjába, így a környezetvédelem konszenzusos üggyé vált Waikikin. A párt fő szerepe nem a közvetlen hatalomgyakorlás, hanem a politikai diskurzus formálása és a nemzetközi környezetvédelmi mozgalmak vezetése.
 
@@ -165,7 +165,7 @@ A Föderalista Párt legfőbb célja Waikiki egy olyan köztársasággá törté
 A 2012-ben alapult, de eddigi választásokon parlamentbe nem jutó liberális párt az alapvető emberi szabadságjogok biztosítását tűzte ki legfőbb céljául. A párt támogatja a társadalmi szerződés gondolatát, aminek alapján az állam polgárai hozzák a törvényeket, és egyetértenek abban, hogy alávetik magukat nekik. A Liberális Párt választójogot adna minden felnőtt polgárnak nemzetiségre, vallásra, gazdasági státusra való tekintet nélkül. Előnyben részesítik ugyan a kormányzati beavatkozástól mentes szabadpiacot, de bizonyos közjavak esetén meghagynák az állam szerepét. A párt jelentősen csökkentené az állami monopóliumokat, helyette privát cégekre és a szabadpiacra helyezné a gazdaság súlypontját. A párt vezetője, Arianna Huffington ellenzi a szigorú bevándorlási és munkavállalási szabályokat.
 
 ## Szociáldemokrata Párt
-A Waikiki-i Szociális Mozgalom utódjaként megalapuló Szociáldemokrata Párt támogatja az állam gazdasági és szociális beavatkozását, elősegítené a társadalmi igazságosságot és a jövedelem újraelosztást a piacgazdaság keretein belül. A párt vezetője, a finn származású Tarja Halonen alapvetőnek tartja a képviseleti demokráciát, de nem zárkózik el a részvételi- vagy közvetlen demokráciától sem. A párt tagjai szerint a kormánynak nagyobb erőforrásokat kellene fordítani a rászorulók segítésére, és a megnövekedett kiadásokat az újonnan bevezetendő jövedelemadókból pótolnák. Nemzetközi kapcsolatok terén a szociáldemokraták fontos szövetségesnek tekintik a Nyugat- és Közép-Európai államokat, de ellenzik a Szabadkereskedelmi övezet létrejöttét és a Kína ellen folytatott kereskedelmi háborút is.
+A Waikiki Szociális Mozgalom utódjaként megalapuló Szociáldemokrata Párt támogatja az állam gazdasági és szociális beavatkozását, elősegítené a társadalmi igazságosságot és a jövedelem újraelosztást a piacgazdaság keretein belül. A párt vezetője, a finn származású Tarja Halonen alapvetőnek tartja a képviseleti demokráciát, de nem zárkózik el a részvételi- vagy közvetlen demokráciától sem. A párt tagjai szerint a kormánynak nagyobb erőforrásokat kellene fordítani a rászorulók segítésére, és a megnövekedett kiadásokat az újonnan bevezetendő jövedelemadókból pótolnák. Nemzetközi kapcsolatok terén a szociáldemokraták fontos szövetségesnek tekintik a Nyugat- és Közép-Európai államokat, de ellenzik a Szabadkereskedelmi övezet létrejöttét és a Kína ellen folytatott kereskedelmi háborút is.
 
 ## Eredmények
 Név	Demokratikus Párt	Világuralmi Párt	Milliomosok Pártja	Kutatás és Fejlesztés Párt	Fenntartható Fejlődés Párt	Föderalista Párt

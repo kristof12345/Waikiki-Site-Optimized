@@ -41,7 +41,7 @@ A befektetési bankok hagyományos értelemben nem minősülnek banknak, mivel n
 
 ###### A hagyományos bankokhoz hasonlóan a befektetési alapok is nyújthatnak hiteleket, de nem vezethetnek betéti számlákat. A befektetési alapok forrásait a saját tőkén kívül kötvények, befektetési jegyek, derivatívák és egyéb komplex pénzügyi termékek alkotják. A befektetési bankok mérlegében szereplő tételek az alacsonyabb szabályozási szint és a nagyobb tőkeáttétel miatt tipikusan jóval kockázatosabbak, mint a kereskedelmi bankok esetében, de ezáltal nagyobb hozamot ígérnek a befektetőiknek. A világ legnagyobb befektetési alapjai a Chease Investment Group, a Berkshire Hathaway és a Walker Finance and Insurance Holding.
 
-A Waikiki-i Tőzsde
+A Waikiki Tőzsde
 
 Waikiki rendkívül fejlett tőkepiaccal rendelkezik. A kormány már a 2000-es évek elején felismerte, hogy az állampolgárok megtakarításainak és a cégek által nyújtott befektetési lehetőségek összekapcsolásában hatalmas lehetőség rejlik. Ennek érdekében minden állampolgár ingyenesen kereskedhet részvényekkel, kötvényekkel és valutákkal digitális formában. A nagyobb értékpapírok likviditásának biztosításáról a Nemzeti Bank gondoskodik. A Waikiki tőzsdéjén számtalan értékpapír megtalálható, több mint 7.000 részvény és 18.000 kötvény közül választhatnak a befektetők.
 
@@ -69,7 +69,7 @@ Chease Young javaslatára 2000-ben a Waikiki Nemzeti Bankja új valuta bevezeté
 
 ###### Állami Pénzteremtés
 
-###### Az inflációs várakozásokat figyelembe véve a Nemzeti Bank Monetáris Tanácsa minden hónapban dönt a forgalomban lévő Waikiki-i dollár mennyiségének módosításáról. Amennyiben lehetőség van a pénzmennyiség növelésére, az ebből keletkező hasznot a Nemzeti Bank értékpapírokba fekteti, vállalati hiteleket nyújt vagy pedig az állami költségvetésbe fizeti be. Ezzel ellentétben amennyiben például az inflációs nyomás miatt a pénzmennyiség csökkentésére van szükség, a Monetáris Tanács értékpapírok eladásáról vagy a valutatartalék csökkentéséről dönt. A pénzmennyiség több más tényező mellett hatással van az árszintre, az árfolyamokra és a beruházásokra is.
+###### Az inflációs várakozásokat figyelembe véve a Nemzeti Bank Monetáris Tanácsa minden hónapban dönt a forgalomban lévő waikiki dollár mennyiségének módosításáról. Amennyiben lehetőség van a pénzmennyiség növelésére, az ebből keletkező hasznot a Nemzeti Bank értékpapírokba fekteti, vállalati hiteleket nyújt vagy pedig az állami költségvetésbe fizeti be. Ezzel ellentétben amennyiben például az inflációs nyomás miatt a pénzmennyiség csökkentésére van szükség, a Monetáris Tanács értékpapírok eladásáról vagy a valutatartalék csökkentéséről dönt. A pénzmennyiség több más tényező mellett hatással van az árszintre, az árfolyamokra és a beruházásokra is.
 
 ###### Aranytartalék
 
@@ -91,7 +91,7 @@ Waikiki Nemzeti Bankja két alapkamat szintet határoz meg. A betéti alapkamat 
 
 ###### Hitel alapkamat
 
-###### A hitel alapkamaton a Nemzeti Bank 5 éves lejáratú hiteleket nyújt a legjobb hitelminősítésű Waikiki-i vállalatoknak. 2020-ig a Nemzeti Bank egy 10 fokozatú skálán minősítette a cégeket, azóta pedig 5 db, betűvel jelölt főkategóriába, azokon belül pedig 3-3 alkategóriába sorolja be a vállalatokat. A minősítés során a pénzügyi stabilitás mellett a fenntarthatóság és a társadalomra, valamint a környezetre gyakorolt hatás is szerepet kap majd. Az átmenet alatt a Nemzeti Bank 2021-ig párhuzamosan biztosítja a két értékelési rendszert. A hitel kamatok csökkentésével a vállalatok olcsóbban juthatnak forrásokhoz, ezáltal növelve termelésüket, de ez növelheti az inflációt.
+###### A hitel alapkamaton a Nemzeti Bank 5 éves lejáratú hiteleket nyújt a legjobb hitelminősítésű waikiki vállalatoknak. 2020-ig a Nemzeti Bank egy 10 fokozatú skálán minősítette a cégeket, azóta pedig 5 db, betűvel jelölt főkategóriába, azokon belül pedig 3-3 alkategóriába sorolja be a vállalatokat. A minősítés során a pénzügyi stabilitás mellett a fenntarthatóság és a társadalomra, valamint a környezetre gyakorolt hatás is szerepet kap majd. Az átmenet alatt a Nemzeti Bank 2021-ig párhuzamosan biztosítja a két értékelési rendszert. A hitel kamatok csökkentésével a vállalatok olcsóbban juthatnak forrásokhoz, ezáltal növelve termelésüket, de ez növelheti az inflációt.
 
 0% 2% 4% 6% 8% 10% 0,0 USD 0,6 USD 1,2 USD 1,8 USD 2,4 USD 3,0 USD 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 Waikiki hitel kamat WUD / USD árfolyam Waikiki betéti kamat
 

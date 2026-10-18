@@ -17,19 +17,19 @@ Ez a dokumentum a távoli hivatalos weboldal (https://waikikigovernment.github.i
 * **Távoli oldal (`history.html`):** Augustus császár Kr. e. 5-ben (i.e. 5) alapította meg Vaikikia provinciát.
 * **Lokális oldal (`hu/history.html` és `en/history.html`):** *„Kr. u. 24-ben Augustus császár expedíciót indított és megalapította Vaikikia provinciát.”*
 * **Ténybeli ellentmondás és hiba:**
-  * Augustus római császár (Gaius Octavius) **Kr. u. 14. augusztus 19-én meghalt** Nolában. Kr. u. 24-ben már tíz éve halott volt; a Római Birodalom élén ekkor Tiberius császár (uralkodott: Kr. u. 14–37) állt. Augustus tehát semmiképp sem alapíthatott provinciát Kr. u. 24-ben.
+  * Augustus római császár (Gaius Octavius) **Kr. u. 14. augusztus 19-én meghalt** Nolában. Kr. u. 24-ben már tíz éve halott volt; a Római Birodalom élén ekkor Tiberius császár (uralkodott: Kr. u. 14-37) állt. Augustus tehát semmiképp sem alapíthatott provinciát Kr. u. 24-ben.
 
 ### 1.3. Caesarion mint Augustus „elődje”
 * **Mindkét oldalon (`history.html`):** A szöveg szerint Augustus császár a megalapított fővárost, Caesariont *„elődjéről, Caesarionról nevezte el”*.
 * **Ténybeli ellentmondás és hiba:**
   * XV. Ptolemaiosz Caesarion (Julius Caesar és VII. Kleopátra fia) soha nem volt Augustus elődje a római trónon. Octavianus (a későbbi Augustus) riválisként tekintett rá, és Kr. e. 30-ban, Alexandria elfoglalása után kivégeztette Caesariont (*„Két Caesar sok egynek”* jelszóval).
 
-### 1.4. Stuart Mária uralkodása (1603–1647)
+### 1.4. Stuart Mária uralkodása (1603-1647)
 * **Távoli és lokális oldal (`history.html`):** *„1603-tól Stuart Mária kiterjesztette a gyarmatosítást... Uralkodása 1647-ben ért véget.”*
 * **Ténybeli ellentmondás és hiba:**
   * Stuart Mária skót királynőt **1587. február 8-án kivégezték** I. Erzsébet parancsára. 1603 és 1625 között I. Jakab (Mária fia), 1625 és 1649 között pedig I. Károly uralkodott. 1603 és 1647 között sem Angliában, sem Skóciában nem uralkodott Stuart Mária nevű királynő.
 
-### 1.5. IV. Vilmos brit király uralkodási ideje (1830–1897)
+### 1.5. IV. Vilmos brit király uralkodási ideje (1830-1897)
 * **Távoli és lokális oldal (`history.html`):** IV. Vilmos uralkodását 1830 és 1897 közé teszi a szöveg.
 * **Ténybeli ellentmondás és hiba:**
   * IV. Vilmos brit király valójában mindössze **1830-tól 1837-ig** uralkodott (1837-ben elhunyt). 1837 és 1901 között 63 éven át Viktória királynő volt a Brit Birodalom uralkodója.
@@ -130,8 +130,8 @@ Ez a dokumentum a távoli hivatalos weboldal (https://waikikigovernment.github.i
 | **I. Erzsébet római győzelme** | `history.html` | Javítás a fiktív kronológiában (pl. 16. századi fiktív kormányzó vagy 1588-as spanyol armada analógia alkalmazása római consul helyett). |
 | **Augustus császár Kr. u. 24** | `history.html` | Kr. e. 5 vagy Kr. u. 10 körüli dátum használata, amikor Augustus még élt. |
 | **Caesarion „elődje”** | `history.html` | Megfogalmazás módosítása: nem elődje, hanem Julius Caesar fia. |
-| **Stuart Mária uralkodása** | `history.html` | I. Jakab vagy I. Károly nevének szerepeltetése Stuart Mária helyett 1603–1647 között. |
-| **IV. Vilmos 1897-ig** | `history.html` | IV. Vilmos (1830–1837) és Viktória királynő (1837–1901) uralkodásának helyesbítése. |
+| **Stuart Mária uralkodása** | `history.html` | I. Jakab vagy I. Károly nevének szerepeltetése Stuart Mária helyett 1603-1647 között. |
+| **IV. Vilmos 1897-ig** | `history.html` | IV. Vilmos (1830-1837) és Viktória királynő (1837-1901) uralkodásának helyesbítése. |
 | **GDP / fő eltérés** | `society.html` | **Megoldva**: A tartományi tábla és a panelek értékei egységesítve a 2025-ös $196 415 USD országos adathoz ($229 532 / $202 586 / $186 842). |
 | **Szuverén Vagyonalap mérete** | `wealth-fund.html` / `economy.html` / `society.html` | **Megoldva**: A hivatalos adat 11,12 billió WUD (25,58 billió USD, ~25,6 billió USD), a GDP 61%-a. A régebbi vázlatokban szereplő 2,1 / 2,4 / 2,8 billió már nincs a kódbázisban. |
 | **Chease és Jessica esküvője** | `senate.html` / `chease-and-jessica.html` | Az 1993. június 21-i dátum egységesítése minden lapon. |

@@ -44,7 +44,7 @@ This document catalogues canonical names, places, organizations, technologies, a
 - **GaiaNova**: Green investment and clean-tech holding founded by Angelina.
 - **Waikiki Economics University (WEU)**: Premier state academic institution.
 - **Waikiki National Space Station (WNSS)**: Sovereign orbital station.
-- **Falcon–9 (SpaceX)**: Launch vehicle partner for sovereign missions.
+- **Falcon-9 (SpaceX)**: Launch vehicle partner for sovereign missions.
 - **Hyperloop**: High-speed vacuum tube transport connecting Nova Aurelia and regional hubs.
 - **Undersea Maglev**: High-speed magnetic levitation tunnel system connecting Waikiki and Florida.
 - **Blue Belt Agreement (Kék Öv Megállapodás)**: International marine conservation treaty spearheaded by Waikiki.

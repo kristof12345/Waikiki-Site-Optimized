@@ -23,11 +23,11 @@ Waikiki a világ legfejlettebb országa, a globális pénzügyi és gazdasági r
 ### Állami alapadatok
 - Államforma: demokratikus diktatúra
 - Főváros: Nova Aurelia
-- Hivatalos nyelv: waikiki-i (angol)
+- Hivatalos nyelv: angol
 - Pénznem: Waikiki dollár ₩ (WUD)
 
 ### Demográfiai adatok
-- Nemzetiség: 100% waikiki-i
+- Nemzetiség: 100% waikiki
 - Évi népességnövekedés: 500 000 fő/év
 - Írástudatlanság: 0,0%
 - Születéskor várható élettartam: 86,5 év
@@ -49,7 +49,7 @@ Waikiki a világ legfejlettebb országa, a globális pénzügyi és gazdasági r
 
 # II. A Waikiki First Doktrína — Ideológiai Alapvetés
 
-Waikiki politikai filozófiája a pragmatizmus, a nemzeti érdek elsődlegessége és a mérhető eredmények tisztelete köré szerveződik. Az ország ideológiája nem illeszkedik a hagyományos bal–jobb spektrumba, hanem egy sajátos, önálló rendszert alkot, amelyet a „Waikiki First" doktrína foglal keretbe.
+Waikiki politikai filozófiája a pragmatizmus, a nemzeti érdek elsődlegessége és a mérhető eredmények tisztelete köré szerveződik. Az ország ideológiája nem illeszkedik a hagyományos bal-jobb spektrumba, hanem egy sajátos, önálló rendszert alkot, amelyet a „Waikiki First" doktrína foglal keretbe.
 
 ## A Waikiki First alapelvei
 
@@ -82,7 +82,7 @@ Waikiki alkotmánya a nemzet legfőbb jogi dokumentuma, amelyet 2000-ben népsza
 - Hivatalos név: Waikiki Nemzet
 - Államforma: demokratikus diktatúra
 - Főváros: Nova Aurelia
-- Hivatalos nyelv: waikiki-i (angol)
+- Hivatalos nyelv: angol
 - Pénznem: Waikiki dollár (WUD)
 
 ### Alapvető állampolgári jogok
@@ -116,7 +116,7 @@ Az alkotmány rögzíti a nemzeti zászlót, a címert és a himnuszt, amelyekr�
 ### Angol Gyarmat (1625 — 1945)
 - I. Erzsébet seregei legyőzik az utolsó konzult, a terület angol gyarmattá válik.
 - Lord Beckett kormányzósága a Stuart Mária-korszakban.
-- IV. Vilmos uralkodása alatt (1830–1897) jelentős infrastrukturális fejlődés.
+- IV. Vilmos uralkodása alatt (1830-1897) jelentős infrastrukturális fejlődés.
 
 ### Kubai Időszak (1945 — 1999)
 - Tomás Estrada Palma elnöksége.
@@ -249,18 +249,18 @@ Az alkotmány rögzíti a nemzeti zászlót, a címert és a himnuszt, amelyekr�
 ## 2020 — Válságkezelés
 - George Bush megkezdi újabb elnöki ciklusát.
 - Chloe Bennet hivatalvezető lesz.
-- COVID-19 világjárvány kezelése.
+- Covid-19 világjárvány kezelése.
 - Négy napos munkahét bevezetésének előkészítése.
 
 ## 2021 — Újjáépülés
-- COVID-19 oltási programok engedélyezése és bevezetése.
+- Covid-19 oltási programok engedélyezése és bevezetése.
 - Diplomáciai küldetés Japánban (Raimondo, Angelina, Jennifer).
 - Angelina és Taylor űrutazása.
 - A Sustainable Trade Group létrehozása.
 
 ## 2022 — Geopolitikai Fordulópont
 - Körforgásos gazdasági stratégia bejelentése, zéró hulladék célok 2030-ig.
-- Waikiki állásfoglalás az orosz–ukrán háborúról.
+- Waikiki állásfoglalás az orosz-ukrán háborúról.
 - Népszavazás a kritikus infrastruktúra kiépítéséről.
 - A Moana Templom világörökségi elismerése (UNESCO).
 - Kaméleon mesterséges szigetcsoport projekt megkezdése.
@@ -270,7 +270,7 @@ Az alkotmány rögzíti a nemzeti zászlót, a címert és a himnuszt, amelyekr�
 - Golden Future Forum Nova Aureliában.
 - Az első Boeing 7107 átadása.
 - Javier Milei beiktatása Argentínában, waikiki királyi delegáció részvétele.
-- III. Károly koronázása, brit–waikiki diplomáciai kapcsolatok erősítése.
+- III. Károly koronázása, brit-waikiki diplomáciai kapcsolatok erősítése.
 
 ## 2024 — Pénzügyi Visszatérés
 - Jessica Walker ismét a Waikiki Nemzeti Bank elnöke lesz.
@@ -358,7 +358,7 @@ A diktátor által kinevezett szenátus élén a kancellár áll, aki egyben a d
 A végrehajtó hatalmat a kongresszus által megválasztott kormány gyakorolja. A 20 miniszterből álló kormányt az elnök vezeti, akit ötévente a kongresszus győztes pártja nevez ki. A legfőbb feladata, hogy biztosítsa a törvények végrehajtását és védje az alkotmányt. A kormány legtöbbször koalíció révén jön létre, így több pártból is kerülnek ki miniszterek.
 
 ### Jelenlegi elnök
-Aaron Eckhart (2025–)
+Aaron Eckhart (2025-)
 
 ### Jelenlegi Miniszterek
 
@@ -387,7 +387,7 @@ Aaron Eckhart (2025–)
 
 ### Korábbi kormánytagok
 
-|                             | 2000–2004       | 2005–2009           | 2010–2014            | 2015–2019           | 2020–2024         | 2025–2029         |
+|                             | 2000-2004       | 2005-2009           | 2010-2014            | 2015-2019           | 2020-2024         | 2025-2029         |
 | --------------------------- | --------------- | ------------------- | -------------------- | ------------------- | ----------------- | ----------------- |
 | Elnök                       | John Boehner    | Rick Santorum       | Aaron Eckhart        | George Bush         | George Bush       | Aaron Eckhart     |
 | Kereskedelmi miniszter      | Ayden Roberts   | Ayden Roberts       | Ayden Roberts        | Ayden Roberts       | Ayden Roberts     | Rick Santorum     |
@@ -417,31 +417,31 @@ Aaron Eckhart (2025–)
 
 | Tisztség | Időszak | Név |
 | --- | --- | --- |
-| Diktátor | 2017– | Raimondo Chease |
-| Diktátor | 2000–2017 | Chease Young |
+| Diktátor | 2017- | Raimondo Chease |
+| Diktátor | 2000-2017 | Chease Young |
 
 ### Intézményi vezetők
 
 | Intézmény | Időszak | Név |
 | --- | --- | --- |
-| Nemzeti Bank elnöke | 2024– | Jessica Walker |
-| Nemzeti Bank elnöke | 2016–2023 | Michael J. Cavanagh |
-| Nemzeti Bank elnöke | 2008–2015 | Jessica Walker |
-| Nemzeti Bank elnöke | 2000–2007 | Robert Menéndez |
-| Médiatanács elnöke | 2024– | Colin Farrell |
-| Médiatanács elnöke | 2008–2023 | Rupert Murdoch |
-| Médiatanács elnöke | 2000–2007 | Marc Benioff |
-| Főbíró | 2008– | Sebastian Stark |
-| Főbíró | 2000–2007 | Marilyn R. Reid |
-| Főparancsnok | 2008– | Logan Davis |
-| Főparancsnok | 2000–2007 | Winnefeld Daniels |
-| Titkosszolgálat igazgató | 2024– | Smith Edward |
-| Titkosszolgálat igazgató | 2008–2023 | Elena Martinez |
-| Titkosszolgálat igazgató | 2000–2007 | Alejandro Ramirez |
-| Legfőbb ügyész | 2024– | Vincent Kartheiser |
-| Legfőbb ügyész | 2016–2023 | Marilyn R. Reid |
-| Legfőbb ügyész | 2008–2015 | Paul Ryan |
-| Legfőbb ügyész | 2000–2007 | Dias Toffoli |
+| Nemzeti Bank elnöke | 2024- | Jessica Walker |
+| Nemzeti Bank elnöke | 2016-2023 | Michael J. Cavanagh |
+| Nemzeti Bank elnöke | 2008-2015 | Jessica Walker |
+| Nemzeti Bank elnöke | 2000-2007 | Robert Menéndez |
+| Médiatanács elnöke | 2024- | Colin Farrell |
+| Médiatanács elnöke | 2008-2023 | Rupert Murdoch |
+| Médiatanács elnöke | 2000-2007 | Marc Benioff |
+| Főbíró | 2008- | Sebastian Stark |
+| Főbíró | 2000-2007 | Marilyn R. Reid |
+| Főparancsnok | 2008- | Logan Davis |
+| Főparancsnok | 2000-2007 | Winnefeld Daniels |
+| Titkosszolgálat igazgató | 2024- | Smith Edward |
+| Titkosszolgálat igazgató | 2008-2023 | Elena Martinez |
+| Titkosszolgálat igazgató | 2000-2007 | Alejandro Ramirez |
+| Legfőbb ügyész | 2024- | Vincent Kartheiser |
+| Legfőbb ügyész | 2016-2023 | Marilyn R. Reid |
+| Legfőbb ügyész | 2008-2015 | Paul Ryan |
+| Legfőbb ügyész | 2000-2007 | Dias Toffoli |
 
 ## A Legfelsőbb Bíróság
 
@@ -456,9 +456,9 @@ A kormányzati rendszer sajátossága a stratégiai és végrehajtó szerepek fe
 A döntések előkészítését és az államgépezet mindennapi működtetését a meritokrácia elvei alapján toborzott bizalmi személyzet, a Diktátori Kabinet segíti. Ez a testület az állam adminisztratív gerince, amelynek összetétele az évtizedek során organikusan fejlődött.
 
 ### Kabinetfőnökök
-- Rachel Zane (2016–) — A meritokrácia élő példájaként asszisztensi pozícióból küzdötte fel magát; a Diktátor jobbkezeként irányítja a napi ügymenetet.
-- Mickey Haller (2007–2016) — Jogi zseni, pragmatikus tudása nélkülözhetetlen volt a nemzetközi elismerés kivívásában.
-- Aaron Shore (2002–2007) — Stratégiai higgadtsága tette lehetővé az államszervezet megszilárdulását.
+- Rachel Zane (2016-) — A meritokrácia élő példájaként asszisztensi pozícióból küzdötte fel magát; a Diktátor jobbkezeként irányítja a napi ügymenetet.
+- Mickey Haller (2007-2016) — Jogi zseni, pragmatikus tudása nélkülözhetetlen volt a nemzetközi elismerés kivívásában.
+- Aaron Shore (2002-2007) — Stratégiai higgadtsága tette lehetővé az államszervezet megszilárdulását.
 
 ### Jelenlegi kabinet tagjai
 
@@ -601,7 +601,7 @@ A készpénzmentesség és a digitális Waikiki Dollár a modernitás szimbólum
 | Adónem | Mérték | Éves bevétel |
 | --- | --- | --- |
 | Vállalati adó | 15% (teljes bevétel) | 1 800 milliárd WUD |
-| Környezetvédelmi adó | 5–25% | 300 milliárd WUD |
+| Környezetvédelmi adó | 5-25% | 300 milliárd WUD |
 
 ### Vámrendszer
 
@@ -611,7 +611,7 @@ A készpénzmentesség és a digitális Waikiki Dollár a modernitás szimbólum
 | STG-tagállamok | 10% | 30 milliárd WUD |
 | Egyéb országok | 15% | 80 milliárd WUD |
 
-## Waikiki-i Tulajdonú Nemzetközi Vállalatok
+## Waikiki Tulajdonú Nemzetközi Vállalatok
 
 ### Technológia és infokommunikáció
 - **Számítástechnika:** Apple, Intel, Nvidia
@@ -888,13 +888,13 @@ A rendszer egyedi, jogilag kötelező ajánlatot generál:
 - Azonnali teljes jogú állampolgárság a család minden tagjának
 - VIP konzuli ügyintézés, meghívás állami gálára
 
-**Standard Tier (75–89 pont) — Befektetői Csomag:**
-- 150 000–500 000 WUD fejlesztési hozzájárulás
+**Standard Tier (75-89 pont) — Befektetői Csomag:**
+- 150 000-500 000 WUD fejlesztési hozzájárulás
 - 1 000 000 WUD államkötvény (5 évre)
 - Ingatlanbefektetés (min. 750 000 WUD)
 - 3 év rezidens státusz a teljes jogú állampolgárság előtt
 
-**Probationary Tier (60–74 pont) — Lehetőség Csomag:**
+**Probationary Tier (60-74 pont) — Lehetőség Csomag:**
 - Stratégiai projektfinanszírozás (min. 5M WUD) vagy hiányszakmában 5 éves szerződés
 - Politikai jogok 10 éves hűségidő után
 - Biztonsági letét a Nemzeti Banknál
@@ -948,7 +948,7 @@ Együttműködés és érdekegyeztetés. Waikiki fejlett hadiipara jelentős men
 Első számú stratégiai és gazdasági rivális. A viszonyt beárnyékolja a Csendes-óceáni háború emléke. Waikiki technológiai és ipari innovációban közvetlen versenyben áll Kínával, és egyértelműen támogatja Tajvan önállóságát fegyvereladásokkal és diplomáciai garanciákkal.
 
 ### Oroszország
-Felelős távolságtartás. Az orosz–ukrán háború után határozottan kiállt Ukrajna mellett az ENSZ-ben, de nem vezetett be totális blokádot — a szankciók célzottak, a kereskedelmi csatornák részben nyitva maradtak.
+Felelős távolságtartás. Az orosz-ukrán háború után határozottan kiállt Ukrajna mellett az ENSZ-ben, de nem vezetett be totális blokádot — a szankciók célzottak, a kereskedelmi csatornák részben nyitva maradtak.
 
 ### Egyesült Királyság
 Pénzügyi és innovációs együttműködés. London és Nova Aurelia között a világ leggyorsabb tőkeáramlási csatornája működik. A brit királyi család és a Chease-dinasztia viszonya udvarias és méltóságteljes.
@@ -997,7 +997,7 @@ Regionális ellátási láncok, stratégiai nyersanyagok (lítium, réz), energi
 
 ## Az Egyesült Afrikai Nemzetek Projekt
 
-Waikiki geopolitikai stratégiájának egyik legkiemelkedőbb fejezete (2013–2022). A Smith Edward tábornok által kidolgozott doktrína alapján Waikiki a NATO-val együttműködve humanitárius stabilizációt hajtott végre Afrikában. A waikiki tőke révén Afrika átvette a globális termelés jelentős részét az ázsiai piacoktól. Bár a 2022-es események és a pandémia a politikai unió felbomlását eredményezték, a projekt stratégiai sikere vitathatatlan.
+Waikiki geopolitikai stratégiájának egyik legkiemelkedőbb fejezete (2013-2022). A Smith Edward tábornok által kidolgozott doktrína alapján Waikiki a NATO-val együttműködve humanitárius stabilizációt hajtott végre Afrikában. A waikiki tőke révén Afrika átvette a globális termelés jelentős részét az ázsiai piacoktól. Bár a 2022-es események és a pandémia a politikai unió felbomlását eredményezték, a projekt stratégiai sikere vitathatatlan.
 
 ## Geopolitikai Irányváltás — Americas First
 
@@ -1102,7 +1102,7 @@ A mai Nova Aurelia területén a rómaiak már időszámításunk előtt 52 évb
 Értéke megközelíti a 80 milliárd dollárt. Raimondo a 16. születésnapjára kapta szüleitől. Diplomáciai és katonai központ: 1600 hektáros park, 2,5 km partszakasz, saját jachtkikötő, koncertterem, aquapark, konferenciaterem.
 
 ## Az Üzleti Negyed
-A főváros üzleti negyedében a világ legnagyobb vállalatainak központjai foglalnak helyet: Chease Investment Group, Quantum Travel, Royal Oil Group. A Waikiki-i Tőzsde a világ legnagyobb értékpapírpiaca. Nova Aurelia a Világkormány és a NATO egyesített hadseregének tervezett főhadiszállása.
+A főváros üzleti negyedében a világ legnagyobb vállalatainak központjai foglalnak helyet: Chease Investment Group, Quantum Travel, Royal Oil Group. A Waikiki Tőzsde a világ legnagyobb értékpapírpiaca. Nova Aurelia a Világkormány és a NATO egyesített hadseregének tervezett főhadiszállása.
 
 ---
 
@@ -1131,7 +1131,7 @@ Raimondo Chease 1996. július 7-én született az Egyesült Államokban, Washing
 
 Tízéves koráig Raimondo otthon tanult szülei és magántanárok irányításával, különös hangsúlyt fektetve a közgazdaságtanra, a történelemre, a matematikára és a nyelvekre. Tizenkét éves korától két évig a Nova Aurelia Main Primary Schoolba járt, majd 2008-tól tanulmányait a Nova Aurelia High Schoolban folytatta, ahol tehetséges diáktársak körében mélyítette el ismereteit.
 
-## A Seven Seas High School (2011–2012)
+## A Seven Seas High School (2011-2012)
 
 2011-ben új fejezet kezdődött Raimondo életében, amikor felvételt nyert a Seven Seas High School kivételes oktatási programjába. Az egyedülálló intézmény az SS Tipton óceánjáró fedélzetén működött, és újszerű módon kapcsolta össze a nemzetközi tanulmányokat a világ országainak gyakorlati megismerésével. A sors különös véletlene folytán Raimondo életének egyik meghatározó találkozására közvetlenül a beiratkozást követően került sor. Az italbárnál futott össze osztálytársával, Bailey Pickettel, akire egy baleset során ráöntött egy pohár üdítőt. Raimondo kárpótlásul egy új ruha vásárlását ajánlotta fel, ami különleges kapcsolatuk kezdetét jelentette.
 
@@ -1145,7 +1145,7 @@ Raimondo 16. születésnapja és sikeres egyetemi felvételije alkalmából szü
 
 Raimondo és Selena Gomez első találkozása 2014-ben egy filmforgatáson történt, ahol Raimondo producerként dolgozott, míg Selena a női főszerepet alakította. Kettejük között szinte azonnal kialakult egy rendkívüli intellektuális és baráti összhang, amely messze túlmutatott a szokványos munkakapcsolat keretein. A forgatás időszaka egybeesett Selena magánéletének fordulópontjával, amikor lezárta korábbi kapcsolatát. Bár Selena egy spontán csókkal próbálta kifejezni mélyebb érzéseit, Raimondo, aki ekkor még Baileyvel járt, tisztelettel utasította vissza a romantikus közeledést. Ez a momentum azonban nem vetett árnyékot barátságukra — kapcsolatuk a film elkészülte után sem veszített intenzitásából. Rendszeres találkozásaik és közösen szervezett utazásaik során tovább mélyült a kötelék. Később mindketten a Waikiki Economics University hallgatóiként folytatták tanulmányaikat.
 
-## Egyetemi évek (2012–2017)
+## Egyetemi évek (2012-2017)
 
 2012 szeptembere és 2015 júniusa között Raimondo, Bailey, Jennifer és Tyler olyan milliárdos tinédzserekkel tanultak együtt az egyetem közgazdaságtan alapképzésén, mint Selena Gomez, Rory Gates vagy Willow Smith. Az alapképzés szilárd közgazdasági, jogi és politikai ismereteket adott. A BSc diploma megszerzése után 2015-től Raimondo a mesterképzésre jelentkezett, ahol a hallgatók heti két napot parlamenti munkával, kettőt akadémiai tevékenységgel töltöttek. A mesterképzés különlegessége volt, hogy Chease Young személyesen is oktatott, Jessica Walker pedig a bankrendszer működését tanította.
 
@@ -1165,7 +1165,7 @@ Raimondo és Selena első évfordulójukat a lélegzetelállító **Bora-Bora** 
 - **Természetvédelem:** Sir David Attenborough-val közös jótékonysági gálán több mint 20 millió dollárt gyűjtöttek veszélyeztetett fajok védelmére.
 
 ### Válságkezelés és jótékonyság
-A COVID-19 világjárvány idején megalapították a **Global Hope Foundation**-t. Az alapítvány a járvány által sújtott közösségeket, különösen a gyermekeket és egészségügyi dolgozókat támogatja. Selena felügyeli a női egészségügyi és oktatási programokat.
+A Covid-19 világjárvány idején megalapították a **Global Hope Foundation**-t. Az alapítvány a járvány által sújtott közösségeket, különösen a gyermekeket és egészségügyi dolgozókat támogatja. Selena felügyeli a női egészségügyi és oktatási programokat.
 
 ## Szenátorrá válás (2015)
 
@@ -1206,13 +1206,13 @@ Raimondo és Selena ötnapos látogatást tettek Oroszországba, ahol Vlagyimir 
 
 ## Raimondo diktátorrá választása (2017. július 7.)
 
-Waikiki történelmének egyik legjelentősebb pillanata: Chease Young lemondott a diktátori tisztségről, és a parlament jóváhagyásával fiát, Raimondót nevezte ki utódjául. Az eskütételi ceremónián Raimondo fogadalmat tett az alkotmány védelmére. Első intézkedései között bejelentette a négy napos munkahét felé vezető lépéseket és a Waikiki–Florida alagütrendszer projektjét. Első hivatalos külföldi útja az Egyesült Államokba vezetett, ahol Donald Trump elnökkel tárgyalt.
+Waikiki történelmének egyik legjelentősebb pillanata: Chease Young lemondott a diktátori tisztségről, és a parlament jóváhagyásával fiát, Raimondót nevezte ki utódjául. Az eskütételi ceremónián Raimondo fogadalmat tett az alkotmány védelmére. Első intézkedései között bejelentette a négy napos munkahét felé vezető lépéseket és a Waikiki-Florida alagütrendszer projektjét. Első hivatalos külföldi útja az Egyesült Államokba vezetett, ahol Donald Trump elnökkel tárgyalt.
 
 Szeptemberben Selena Gomez és Jessica Walker konzuli kinevezésben részesültek. A szenátus Olivia Holttal bővült. Októberben ünnepélyes koronázási ceremónián Selena Marie Gomezt hercegnővé, Taylor Lautnert és Tyler Poseyt herceggé koronázták. Novemberben Raimondo aláírta a Transzatlanti Szabadkereskedelmi Megállapodást, 59 országot magába foglaló kereskedelmi övezetet hozva létre.
 
 ## Európai diplomáciai körút (2017)
 
-A Waikiki-i delegáció hivatalos látogatást tett Luxemburgban, ahol palládium reaktor létesítéséről született megállapodás. Párizsban a Louvre műkincseit tekintették meg, privát jachtkiránduláson és gálavacsorán vettek részt.
+A waikiki delegáció hivatalos látogatást tett Luxemburgban, ahol palládium reaktor létesítéséről született megállapodás. Párizsban a Louvre műkincseit tekintették meg, privát jachtkiránduláson és gálavacsorán vettek részt.
 
 ## Raimondo és Selena a világűrben (2018)
 
@@ -1262,7 +1262,7 @@ Waikiki példás válságkezeléssel nemzetközi figyelmet vívott ki. Szigorú 
 
 Selena 5 millió WUD-ot adományozott iskolai felújításokra, Raimondo 20 millió WUD-ot gyógyíthatatlan betegségek kutatására, Chease Young 1 milliárd WUD-ot a járvány elleni küzdelemre, Jessica erdőtelepítésre, Angelina és Taylor 8 millió dollárral az óceánok kutatására, Jennifer és Tyler 15 millió dollárral a levegőtisztítási programokra fordított.
 
-## Külföldi látogatások és évértékelő (2021–2022)
+## Külföldi látogatások és évértékelő (2021-2022)
 
 Olaf Scholz, Fumio Kishida, Joe Biden, Emmanuel Macron, IV. Fülöp spanyol király, Alberto Fernández argentin elnök és Magyarország köztársasági elnöke egyaránt tárgyalt Waikiki vezetőivel. 2021-es évértékelőjükben Raimondo a GDP 11%-os, a háztartások jövedelmének 12%-os növekedéséről számolt be.
 
@@ -1270,7 +1270,7 @@ Olaf Scholz, Fumio Kishida, Joe Biden, Emmanuel Macron, IV. Fülöp spanyol kir�
 
 A karácsonyt családi körben töltötték, majd Brazíliába utaztak — abba a szállodába, ahol évekkel korábban a Mátrix forgatásán először találkoztak. Nagyszabású szilveszteri ünnepséget rendeztek, tűzijátékkal és élő zenei produkciókkal.
 
-## Az orosz–ukrán háború és gazdaságpolitika (2022)
+## Az orosz-ukrán háború és gazdaságpolitika (2022)
 
 Raimondo rendkívüli parlamenti ülést hívott össze, egyhangúlag elítélték az orosz agressziót. Selena az ENSZ rendkívüli közgyűlésén szólalt fel a béke érdekében. A Nemzeti Bank 1000 milliárd WUD értékben vásárolt hazai valutát az infláció mérséklésére, a Royal Oil Group korlátlan exportot kapott, az aranytartalék 4000 tonnára nőtt.
 
@@ -1296,7 +1296,7 @@ Tokióban a Császári Palotánál fogadták őket, tradicionális teaszertartá
 
 ## Szenátusi vitaműsor (2024)
 
-A Waikiki-i köztévé szenátusi vitaműsort rendezett, ahol a 10 szenátor a gazdaság, a migráció és a biztonságpolitika kérdéseiben fejtette ki véleményét. Jennifer a nagyvállalati beruházások, Bailey a klímatörvények, Selena és Jennifer a határvédelem, Olivia a tehetséges munkavállalók befogadása, Tyler a katonai fejlesztések, Taylor pedig a NATO-csatlakozás mellett érvelt.
+A waikiki köztévé szenátusi vitaműsort rendezett, ahol a 10 szenátor a gazdaság, a migráció és a biztonságpolitika kérdéseiben fejtette ki véleményét. Jennifer a nagyvállalati beruházások, Bailey a klímatörvények, Selena és Jennifer a határvédelem, Olivia a tehetséges munkavállalók befogadása, Tyler a katonai fejlesztések, Taylor pedig a NATO-csatlakozás mellett érvelt.
 
 ## A Kék Öv Egyezmény (2024)
 
@@ -1370,7 +1370,7 @@ A Szovjetunió összeomlása után Kuba válságos helyzetbe került. Chease 199
 
 Waikiki kormánya jelentős kőolaj- és gázmezőkre bukkant a sziget körül. Az exportbevételek fedezték a kezdeti kiadásokat és megteremtették a WUD valuta alapját. Chease monopóliumot adott a Waikiki Petrolnak és az OilExp-nek (a későbbi Royal Oil Group). A nyílt kereskedelempolitika révén Waikiki pillanatok alatt becsatlakozott a globalizációba, technológiai importot és tőkebevonást generálva.
 
-## A Csendes-óceáni háború (2002–2004)
+## A Csendes-óceáni háború (2002-2004)
 
 2002. október 5-én Kína megtámadta Oroszországot, kirobbantva a Csendes-óceáni háborút. Az Internacionális Unió (Kína, Észak-Korea, Pakisztán) ellenében Waikiki 2003 áprilisában lépett be a háborúba a NATO oldalán. Chease Young megalapította az Atomhatalmak Szövetségét, amelynek elrettentő ereje megakadályozta a nukleáris eszkalációt. A háború döntő szakaszában Waikiki különleges egységei és technológiai fölénye segített felszabadítani Izraelt és térdre kényszeríteni Kínát. A 2004-es New York-i béke Waikikit a világ egyik vezető katonai és politikai hatalmává emelte.
 
@@ -1398,7 +1398,7 @@ Míg a világot megrázta a pénzügyi összeomlás, Waikiki nyertesként kerül
 
 A tizedik évfordulón Nova Aurelia rekordméretű beruházásokkal gazdagodott: ekkor épült a Sky City (956 m) és az Infinity Tower. 2010-ben Chease és Jessica történelmi űrutazáson vett részt, 12 napot töltöttek a Waikiki Nemzeti Űrállomáson, ahol tudományos kísérletekben is közreműködtek.
 
-## Diplomáciai küldetések és az EAN (2012–2014)
+## Diplomáciai küldetések és az EAN (2012-2014)
 
 2012-ben Chease békemisszióra utazott Észak-Koreába, ahol Kim Dzsongunnal tárgyalt a stabilitásról. 2014-ben Waikiki kezdeményezésére és Jessica Walker ENSZ-főtitkárhelyettesi támogatásával létrejött az Egyesült Afrikai Nemzetek (EAN), véget vetve a polgárháborúknak a kontinensen. A hadműveleteket Smith Edward koordinálta.
 
@@ -1418,7 +1418,7 @@ A tizedik évfordulón Nova Aurelia rekordméretű beruházásokkal gazdagodott:
 
 2018-ban Chease Young kezdeményezésére létrejött a Világkormány, melynek ő lett az első elnöke. Az intézmény célja a klímaváltozás, a terrorizmus és a globális válságok egységes kezelése. Első intézkedései között szerepelt a fosszilis tüzelőanyagok 2025-től kezdődő kivezetése és az Óceáni Partnerségi Charta aláírása.
 
-## Népszavazások és a jövő (2018–2020)
+## Népszavazások és a jövő (2018-2020)
 
 2018-ban a nép megszavazta az ingyenes tömegközlekedést és az alanyi jogú internet-hozzáférést. Chease tovább növelte részesedését az űripari cégekben (Lockheed Martin, Rocket Lab). A 2019-es 20. évfordulón Waikiki a világ legfejlettebb államaként ünnepelt. A 2020-as járványkezelés során Waikiki digitális modellje nemzetközi példává vált.
 

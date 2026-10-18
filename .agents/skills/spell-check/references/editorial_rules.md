@@ -25,9 +25,17 @@ This document details the editorial conventions, orthography, and typography rul
   - **Hungarian**: Use bottom-99 and top-99 smart quotes: `„Idézet”`. Never use English curly quotes `“...”` or straight quotes `"` in Hungarian prose.
   - **English**: Use curly quotes: `“quote”`.
 - **Dashes & Hyphens**:
-  - **En-dash (`–`, U+2013)**: Use for number/year ranges (`1999–2026`) and parenthetical thoughts (`– mondta –`).
-  - **Hyphens (`-`)**: Ahol nem kötelező, ott ne használj kötőjelet! Helyette külön írd vagy ahogy eredetileg van.
-  - **Covid-19**: Mindig szabályos kötőjellel írandó: `Covid-19` (nem en-dash `Covid–19`, és nem csupa nagybetűs `COVID-19`).
+  - **Kötőjel (`-`, U+002D) használata**: A nagykötőjel / en-dash (`–`, U+2013) helyett mindig szabályos sima kötőjelet (`-`) használj évszámoknál, intervallumoknál és gondolatjeleknél is!
+  - **Kettős kötőjelezés szabályai**:
+    - **Évszám-intervallumoknál engedélyezett a 2 kötőjel egy szóban**: pl. `2002-2004-es`, `2009-2010-ben`, `2021-2024-es` teljesen szabályos.
+    - **Minden más esetben kerülendő a 2 kötőjel egy szón belül**:
+      - `Covid-19-világjárvány` helyett `Covid-19 világjárvány` (a második kötőjel felesleges)
+      - `Covid-19-járvány` helyett `Covid-19 járvány`
+      - `Covid-19-válság` helyett `Covid-19 válság`
+      - `Covid-19-oltási program` helyett `Covid-19 oltási program`
+      - Többszavas idegen szerkezeteknél különírás: `VIP lounge-ok`, `cash flow-t`.
+      - Összetett jelzős szerkezeteknél egyszerűsítés vagy különírás: `Kibocsátásmentes`, `karbonsemleges`, `tengertől a csúcsig`.
+  - **Covid-19**: Mindig szabályos kötőjellel írandó: `Covid-19` (nem csupa nagybetűs `COVID-19`).
 
 ---
 

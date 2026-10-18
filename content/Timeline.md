@@ -70,7 +70,7 @@ Waikiki története gazdag régészeti és politikai rétegekből épül fel. Az
 ## 2018-2020 - Globális válságkezelés és társadalmi ellenállóképesség
 - 2018-ban megalakul a Világkormány, amelyben Waikiki alapító tagként vesz részt.
 - Raimondo és Selena moszkvai diplomáciai küldetése megerősíti az ország többpólusú külpolitikáját.
-- 2020-ban a COVID-19 járvány idején Waikiki a Digitális Védőháló Programmal gyors és hatékony választ ad a válságra, amelyet a nemzetközi közösség példaértékűnek tekint.
+- 2020-ban a Covid-19 járvány idején Waikiki a Digitális Védőháló Programmal gyors és hatékony választ ad a válságra, amelyet a nemzetközi közösség példaértékűnek tekint.
 - George Bush újraválasztása biztosítja a gazdasági és szociális reformok folytonosságát.
 
 ## 2021-2023 - Nemzetközi megbecsülés és stratégiai partnerségek

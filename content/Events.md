@@ -20,12 +20,12 @@
 - Aaron Shore kabinetfőnöki kinevezése.
 
 ## 2003
-- A Pacifikus háború kitörése és Waikiki belépése.
+- A Csendes-óceáni háború kitörése és Waikiki belépése.
 - Atomhatalmak szövetségének megalapítása.
 - Népszavazás az ingyenes felsőfokú oktatásról.
 
 ## 2004
-- A Pacifikus háború lezárása, a New York-i béke.
+- A Csendes-óceáni háború lezárása, a New York-i béke.
 
 ## 2005
 - Kormányalakítás a Világuralmi Párt vezetésével, Rick Santorum elnöki beiktatása.
@@ -133,18 +133,18 @@
 ## 2020
 - George Bush megkezdi újabb elnöki ciklusát.
 - Chloe Bennet hivatalvezető lesz.
-- COVID-19 világjárvány kezelése.
+- Covid-19 világjárvány kezelése.
 - Négy napos munkahét bevezetésének előkészítése.
 
 ## 2021
-- COVID-19 oltási programok engedélyezése és bevezetése.
+- Covid-19 oltási programok engedélyezése és bevezetése.
 - Diplomáciai küldetés Japánban, Raimondo, Angelina és Jennifer közös látogatása.
 - Angelina és Taylor űrutazása.
 - A Sustainable Trade Group létrehozása.
 
 ## 2022
 - Körforgásos gazdasági stratégia bejelentése, zéró hulladék célok 2030‑ig.
-- Waikiki-i állásfoglalás az orosz-ukrán háború kitöréséről.
+- Waikiki állásfoglalása az orosz-ukrán háború kitöréséről.
 - Népszavazás a kritikus infrastruktúra kiépítéséről és a nemzetbiztonság fejlesztéséről.
 - A Moana Templom világörökségi elismerése az UNESCO-tól.
 - Kaméleon mesterséges szigetcsoport projekt megkezdése Nova Aurelia partjainál.

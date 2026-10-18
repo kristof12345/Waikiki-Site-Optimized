@@ -366,6 +366,16 @@ def check_hungarian_copy(html_path: Path) -> list[str]:
                 corr = UNACCENTED_HU_WORDS[w]
                 issues.append(f"{html_path.name}:{line_num}: Missing accent '{w}' -> expected '{corr}'")
 
+        # Disallow double hyphenation in compound words (e.g., Covid-19-világjárvány)
+        for m in re.finditer(r'\bCovid-19-[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ]+\b', text, re.IGNORECASE):
+            word = m.group(0)
+            corr = word[:8] + " " + word[9:]
+            issues.append(f"{html_path.name}:{line_num}: Disallowed double hyphen '{word}' -> expected '{corr}'")
+
+        # Disallow en-dash ('–', U+2013) -> use standard hyphen ('-')
+        if '\u2013' in text:
+            issues.append(f"{html_path.name}:{line_num}: Disallowed en-dash ('\u2013') -> use standard hyphen ('-')")
+
     return issues
 
 

@@ -115,7 +115,7 @@
 *   A tornyok különleges kialakítása egy polip karjaihoz hasonlít.
 
 #### Hotel Millennium
-*   Az ötcsillagos Millennium szálloda gyönyörű tengerpartjával, elegáns éttermével és kényelmes szobáival ideális választás egy waikiki-i nyaraláshoz.
+*   Az ötcsillagos Millennium szálloda gyönyörű tengerpartjával, elegáns éttermével és kényelmes szobáival ideális választás egy waikiki nyaraláshoz.
 *   A szállodához minigolf, bowling pálya, wellness részleg és játékterem is tartozik.
 *   A hotel formája és színe egy tengeri hullámot idéz fel.
 
@@ -219,4 +219,4 @@ Waikiki ad otthont a világ legmagasabb toronyházainak. A Nova Aureliában tal�
 A Hercegi Palota, amelyet Raimondo a 16. születésnapjára, szüleitől kapott, a legértékesebb lakóingatlan a világon. A diplomáciai és katonai központként is funkcionáló komplexumot több mint 1600 hektáros park veszi körül, és a 2,5 km hosszú partszakaszon saját jachtkikötővel is rendelkezik. A palota lakosztályai különböző stílusok jegyeit viselik.
 
 #### A főváros üzleti negyede
-A főváros üzleti negyedében a világ legnagyobb vállalatainak központjai foglalnak helyet. Egy-egy felhőkarcoló tartozik például a Chease Investment Group, a Quantum Travel és a Royal Oil Group irodáihoz. A világ legnagyobb értékpapírpiaca, a Waikiki-i Tőzsde főhadiszállása is Nova Aurelia belvárosában található.
+A főváros üzleti negyedében a világ legnagyobb vállalatainak központjai foglalnak helyet. Egy-egy felhőkarcoló tartozik például a Chease Investment Group, a Quantum Travel és a Royal Oil Group irodáihoz. A világ legnagyobb értékpapírpiaca, a Waikiki Tőzsde főhadiszállása is Nova Aurelia belvárosában található.

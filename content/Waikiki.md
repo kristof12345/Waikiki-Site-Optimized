@@ -18,11 +18,11 @@ Waikiki a világ legfejlettebb országa, a világ pénzügyi és gazdasági köz
 ## Állami alapadatok
 - Államforma: demokratikus diktatúra
 - Főváros: Nova Aurelia
-- Hivatalos nyelv: Waikiki-i (angol)
+- Hivatalos nyelv: angol
 - Pénznem: Waikiki dollár ₩ (WUD)
 
 ## Demográfiai adatok
-- Nemzetiség: 100% Waikiki-i
+- Nemzetiség: 100% waikiki
 - Évi népességnövekedés: 500 000 fő/év
 - Írástudatlanság: 0,0%
 - Születéskor várható élettartam:
@@ -422,7 +422,7 @@ Waikiki által exportált termékek értéke jóval meghaladja az importált ter
 - Vámmérték: 5% az importált termékek értékéből
 - Hatály: 
   - Magánszemélyekre nem vonatkozik
-  - Waikiki-i tulajdonú cégek mentességet élveznek
+  - waikiki tulajdonú cégek mentességet élveznek
 - Kivételek: élelmiszerek és nyersanyagok
 - Éves bevétel: 35 milliárd WUD
 
@@ -430,7 +430,7 @@ Waikiki által exportált termékek értéke jóval meghaladja az importált ter
 - Vámmérték: 10% az importált termékek értékéből
 - Hatály:
   - Magánszemélyekre csak 100 000 WUD felett
-  - Waikiki-i tulajdonú és székhelyű cégek mentesek
+  - waikiki tulajdonú és székhelyű cégek mentesek
 - Kivételek: élelmiszerek és nyersanyagok
 - Éves bevétel: 30 milliárd WUD
 
@@ -438,7 +438,7 @@ Waikiki által exportált termékek értéke jóval meghaladja az importált ter
 - Vámmérték: 15% az importált termékek értékéből
 - Hatály:
   - Magánszemélyekre csak 1 000 WUD felett
-  - Waikiki-i tulajdonú és székhelyű cégek mentesek
+  - waikiki tulajdonú és székhelyű cégek mentesek
 - Kivételek: csak nyersanyagok
 - Éves bevétel: 80 milliárd WUD
 
@@ -587,7 +587,7 @@ A kérvény elbírálásánál három tényező egyenlő súllyal szerepel:
 - Interkontinentális rakétavédelmi rendszer (IMDS)
 - Határokon átnyúló rakétavédelmi rendszer (TMDS)
 
-## Waikiki-i tulajdonú nemzetközi vállalatok
+## Waikiki tulajdonú nemzetközi vállalatok
 
 ### Technológia és infokommunikáció
 - Számítástechnika: Apple, Intel, Nvidia

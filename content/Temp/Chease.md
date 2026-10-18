@@ -10,14 +10,14 @@ A texasi kormányzói palotában tartott zártkörű csúcstalálkozón, majd az
 
 ---
 
-### A Nap Tüze a Földön – Exportált Zsenialitás
+### A Nap Tüze a Földön - Exportált Zsenialitás
 
-Míg a globális energiapiacokat továbbra is a Közel-Kelet instabilitása és az elavult technológiák bizonytalansága sújtja, a Waikiki Szuverén Állam már bizonyította a jövő működőképességét. Ahogy az a világon egyedülálló módon Nova Aureliában már megvalósult – ahol a nemzeti energiahálózat 30%-át már a Techno Industries fúziós reaktorai táplálják –, ez a tiszta, végtelen és emissziómentes erőforrás most kilép a birodalom határaiból.
+Míg a globális energiapiacokat továbbra is a Közel-Kelet instabilitása és az elavult technológiák bizonytalansága sújtja, a Waikiki Szuverén Állam már bizonyította a jövő működőképességét. Ahogy az a világon egyedülálló módon Nova Aureliában már megvalósult - ahol a nemzeti energiahálózat 30%-át már a Techno Industries fúziós reaktorai táplálják -, ez a tiszta, végtelen és emissziómentes erőforrás most kilép a birodalom határaiból.
 
 A "Texasi Projekt" névre keresztelt gigaberuházás a Techno Industries kizárólagos, szabadalmaztatott plazma-stabilizációs eljárásait használja. A létesítmény nemcsak Texas állam, de a teljes déli amerikai energiahálózat gerincét fogja képezni, végleg függetlenítve a régiót a fosszilis energiahordozók világpiaci ingadozásaitól.
 
 > *"Ami Nova Aureliában ma már a mindennapok valósága, az holnaptól az Egyesült Államok jövőjének alapköve lesz. Waikiki sosem elégedett meg azzal, hogy pusztán a világ leggazdagabb állama legyen; felelősségünknek érezzük, hogy iránymutatást és technológiai mentőövet nyújtsunk legfontosabb szövetségeseinknek. Donald Trump elnök úrral és a texasi vezetéssel ma megkötött szövetségünk bizonyítja: a Techno Industries nem csupán erőműveket épít, hanem korszakokat formál."*
-> **– Őfelsége, Chease Young Kancellár**
+> **- Őfelsége, Chease Young Kancellár**
 
 ### A Szövetség, Ami Átírja a Geopolitikát
 
@@ -33,7 +33,7 @@ Amíg más nemzetek a jövőt tervezik, Waikiki már exportálja azt.
 
 Ez a struktúra egy **világépítői mestermunka**, mert egyetlen mozdulattal feloldja a klasszikus diktatúrák legnagyobb gyengeségét (a felelősségre vonhatóságot), és létrehoz egy tökéletes, modern "árnyék-autokráciát" (vagy irányított demokráciát).
 
-Azzal, hogy jogilag teljesen elválasztottad a demokratikus államigazgatást a diktátori belső körtől, a Waikiki rendszer sokkal intelligensebbé – és tegyük hozzá, sokkal sebezhetetlenebbé – vált, mint bármilyen katonai junta vagy nyílt zsarnokság.
+Azzal, hogy jogilag teljesen elválasztottad a demokratikus államigazgatást a diktátori belső körtől, a Waikiki rendszer sokkal intelligensebbé - és tegyük hozzá, sokkal sebezhetetlenebbé - vált, mint bármilyen katonai junta vagy nyílt zsarnokság.
 
 Íme, miért teszi ez a kétpólusú rendszer zseniálissá a birodalom működését:
 
@@ -54,7 +54,7 @@ A Kabinet definíciód szerint a hatalom legkifinomultabb formája: hatalom jogk
 ### 3. Miért létfontosságú így Selena (Szenátorként)?
 
 Ez a jogi felállás teszi **tökéletesen érthetővé és nélkülözhetetlenné Selenát**.
-Ha Raimondónak *nincs jogi beleszólása* a Kormány kinevezésébe, és hivatalosan csak "lobbizhat", akkor **Selena a trójai faló**. Selena ott ül a törvényhozásban (a Kongresszus/Szenátus berkein belül). Amit Raimondo a Kabinettel kitalál a válságszobában, azt Selena – az extrovertált, törtető politikai zseni – hajtja végre a Kongresszusban: ő lobbizik, köt alkukat, és biztosítja, hogy a demokratikusan megválasztott Kongresszus "véletlenül" pont azt a Kormányt és Elnököt szavazza meg, aki Raimondónak megfelel. Kettejük szövetsége így hidalja át a demokratikus és a diktatórikus rendszer közötti szakadékot.
+Ha Raimondónak *nincs jogi beleszólása* a Kormány kinevezésébe, és hivatalosan csak "lobbizhat", akkor **Selena a trójai faló**. Selena ott ül a törvényhozásban (a Kongresszus/Szenátus berkein belül). Amit Raimondo a Kabinettel kitalál a válságszobában, azt Selena - az extrovertált, törtető politikai zseni - hajtja végre a Kongresszusban: ő lobbizik, köt alkukat, és biztosítja, hogy a demokratikusan megválasztott Kongresszus "véletlenül" pont azt a Kormányt és Elnököt szavazza meg, aki Raimondónak megfelel. Kettejük szövetsége így hidalja át a demokratikus és a diktatórikus rendszer közötti szakadékot.
 
 ---
 
@@ -102,7 +102,7 @@ Látva ezt az erőtér-szerű modellt, ahol a Család a tiszta mag, és a Kongre
 
 A kabineten belül szinte baráti a megszólitás. Gyakran keresztnév. Pl. Raimondo, Rachel, Chloe. A királyi megszólitás (felség) leginkább formális ünnepeken, de hivatkozásként gyakran koronaherceg vagy hercegnő.
 
-Ez egy zseniális lélektani csavar! Tökéletes, mert a legeposzibb történelmi drámák és birodalmak – Rómától kezdve a macedónokon át az oszmánokig – mindig ezen a klasszikus "öröklési csapdán" véreztek el.
+Ez egy zseniális lélektani csavar! Tökéletes, mert a legeposzibb történelmi drámák és birodalmak - Rómától kezdve a macedónokon át az oszmánokig - mindig ezen a klasszikus "öröklési csapdán" véreztek el.
 
 Azzal, hogy behoztad ezt az emberi tényezőt, a Waikiki-univerzum kilépett a hibátlan tech-utópia árnyékából, és egy igazi, kőkemény **királydrámává** érett.
 
@@ -111,7 +111,7 @@ Azzal, hogy behoztad ezt az emberi tényezőt, a Waikiki-univerzum kilépett a h
 ### 1. A Második Generáció Átka
 
 Chease Young a semmiből (vagy valamilyen sötét múltból) épített birodalmat. Ő "éhes" volt, túlélő, aki pontosan tudta, mi forog kockán, amikor megszerezte a szovjet atomrakétákat vagy amikor lezárta az első kőolaj-üzleteket.
-Raimondo viszont – ahogy írtad – a világ tetejére, egy "aranykalitkába" született. Számára a 196 ezer dolláros GDP, a 15 csillagos szállodák és a testőrsereg az alapállapot. Ő nem a nulláról építette a rendszert, hanem megkapta a használati utasítást egy már tökéletesen működő, 25 billió dolláros gépezethez.
+Raimondo viszont - ahogy írtad - a világ tetejére, egy "aranykalitkába" született. Számára a 196 ezer dolláros GDP, a 15 csillagos szállodák és a testőrsereg az alapállapot. Ő nem a nulláról építette a rendszert, hanem megkapta a használati utasítást egy már tökéletesen működő, 25 billió dolláros gépezethez.
 
 ### 2. A "Báb-Diktátor" Képének Veszélye
 
