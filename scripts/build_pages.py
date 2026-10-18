@@ -444,7 +444,7 @@ def hero_html(page: Page, *, eyebrow: str, title: str, lead: str | None, image: 
     loc = page.locale
     parts = ['<section class="hero{}" data-hero>'.format("" if image else " hero--compact")]
     if image:
-        alt = esc(strip_tags(title))
+        alt = (label_for(page.slug, loc) or strip_tags(title)).replace('"', '&quot;')
         style = f' style="{img_style}"' if img_style else ""
         parts.append(f'<div class="hero-media"><img src="{image}" alt="{alt}"{style} fetchpriority="high" /></div><div class="hero-veil"></div>')
     parts.append('<div class="hero-content">')
