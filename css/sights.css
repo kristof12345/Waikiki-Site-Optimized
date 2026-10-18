@@ -155,100 +155,6 @@
     }
 }
 
-/* Landmark Cards and Filter Bar */
-.tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.3rem 0.75rem;
-    border-radius: var(--radius-pill);
-    background: var(--primary-subtle);
-    color: var(--primary);
-    font: 700 0.68rem/1.2 var(--font-sans);
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-}
-
-.tag--coral {
-    background: var(--accent-subtle);
-    color: var(--accent-hover);
-}
-
-.tag--gold {
-    background: var(--accent-subtle);
-    color: var(--accent-dark);
-}
-
-.body-dark .tag {
-    color: var(--tertiary);
-    background: rgba(107, 164, 217, 0.12);
-}
-
-.body-dark .tag--coral {
-    color: var(--accent);
-    background: rgba(227, 115, 90, 0.16);
-}
-
-.body-dark .tag--gold {
-    color: var(--accent);
-    background: rgba(245, 196, 110, 0.14);
-}
-
-.filter-bar {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.6rem;
-    margin: 0 auto 2.5rem;
-}
-
-.filter-chip {
-    min-height: 44px;
-    padding: 0 1.2rem;
-    border: var(--border-width) solid var(--line-strong);
-    border-radius: var(--radius-pill);
-    background: var(--surface);
-    color: var(--text);
-    font: 700 0.8rem/1 var(--font-sans);
-    letter-spacing: 0.06em;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.5s var(--ease-spring);
-}
-
-.filter-chip:hover {
-    border-color: var(--primary-light);
-    transform: translateY(-2px);
-}
-
-.filter-chip[aria-pressed="true"] {
-    background: var(--primary);
-    border-color: var(--primary);
-    color: var(--neutral-150);
-}
-
-.body-dark .filter-chip[aria-pressed="true"] {
-    color: var(--neutral-900);
-}
-
-[data-filter-item][hidden] {
-    display: none !important;
-}
-
-[data-filter-item].is-filtering-in {
-    animation: filterIn 0.6s var(--ease-out) both;
-}
-
-@keyframes filterIn {
-    from {
-        opacity: 0;
-        transform: translateY(14px) scale(0.98);
-    }
-    to {
-        opacity: 1;
-        transform: none;
-    }
-}
-
 .landmark-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
@@ -275,20 +181,6 @@
     margin-bottom: 0;
     width: 54px;
     height: 54px;
-}
-
-.landmark .card-icon svg {
-    width: 30px;
-    height: 30px;
-    fill: none;
-    stroke: var(--primary);
-    stroke-width: 1.6;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-
-.body-dark .landmark .card-icon svg {
-    stroke: var(--tertiary);
 }
 
 .landmark h3 {

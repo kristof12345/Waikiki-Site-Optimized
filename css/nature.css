@@ -72,10 +72,6 @@
     animation: natDrift 18s ease-in-out infinite alternate;
 }
 
-.nature-ill .drift-reverse {
-    animation: natDriftReverse 20s ease-in-out infinite alternate;
-}
-
 .nature-ill .bob {
     animation: natBob 5.5s ease-in-out infinite;
 }
@@ -166,7 +162,6 @@
 /* Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
     .nature-ill .drift,
-    .nature-ill .drift-reverse,
     .nature-ill .bob,
     .nature-ill .sway,
     .nature-ill .swim,
@@ -180,7 +175,6 @@
 }
 
 .no-reveal .nature-ill .drift,
-.no-reveal .nature-ill .drift-reverse,
 .no-reveal .nature-ill .bob,
 .no-reveal .nature-ill .sway,
 .no-reveal .nature-ill .swim,

@@ -9,58 +9,10 @@
 }
 
 .economy-stat {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
   text-align: center;
   padding: 2.25rem 1.75rem;
-  background: var(--surface);
   color: var(--heading);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-sm);
-  transition:
-    transform 0.7s var(--ease-out),
-    box-shadow 0.7s var(--ease-out),
-    border-color 0.4s;
   cursor: pointer;
-}
-
-.economy-stat::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: radial-gradient(400px circle at var(--mx, 50%) var(--my, -20%), rgba(107, 164, 217, 0.22), transparent 50%);
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
-.economy-stat::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--primary-light), var(--accent));
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.6s var(--ease-out);
-}
-
-.economy-stat:hover {
-  transform: translateY(-6px);
-  border-color: rgba(26, 82, 143, 0.35);
-  box-shadow: var(--shadow-lg);
-}
-
-.economy-stat:hover::before {
-  opacity: 1;
-}
-
-.economy-stat:hover::after {
-  transform: scaleX(1);
 }
 
 .economy-number {
