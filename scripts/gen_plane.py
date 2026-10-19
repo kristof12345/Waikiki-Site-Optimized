@@ -31,7 +31,7 @@ EN_TO_HU = [
     (">UPPER SKY BAR<", ">FELSŐ SKY BÁR<"),
     (">GRAND FOYER<", ">ELŐCSARNOK<"),
     (">12-SEAT MAHOGANY BANQUET<", ">12 FŐS MAHAGÓNI BANKETT<"),
-    (">BARS and VIDEO CONF.<", ">BÁR és VIDEOKONF.<"),
+    (">BARS and VIDEO CONFERENCE<", ">BÁR és VIDEÓKONFERENCIA<"),
     (">GALLEY<", ">KONYHA<"),
     (">24 GOVERNMENT and MEDIA SEATS<", ">24 KORMÁNYZATI és SAJTÓ ÜLÉS<"),
     (">MEDICAL ICU<", ">ORVOSI MŰTŐ<"),
