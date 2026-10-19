@@ -209,6 +209,7 @@
   padding: 1rem;
   background: var(--surface);
   transition: background-color 0.4s ease;
+  overflow: auto;
 }
 
 .aircraft-intro {
