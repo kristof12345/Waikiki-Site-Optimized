@@ -845,6 +845,10 @@
   .deckplan-zones-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .interior-list {
+    gap: 1rem;
+  }
 }
 
 @media (max-width: 900px) {
