@@ -235,7 +235,7 @@
   --base-delay: 0ms;
   --progress: 0;
   --line-progress: 0;
-  --hero-shift: 0px;
+  --hero-shift: 0;
 
   /* Interactive and Spatial Defaults */
   --mx: 50%;
