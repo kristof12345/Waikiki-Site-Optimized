@@ -29,9 +29,6 @@
     <link rel="preload" as="style" href="../css/citizenship.css" />
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/citizenship.css" />
-    <script src="../js/vendor/react.production.min.js"></script>
-    <script src="../js/vendor/react-dom.production.min.js"></script>
-    <script src="../js/vendor/babel.min.js"></script>
 </head>
 <body class="page-citizenship group-prosperity">
     <!-- @chrome:header -->
@@ -146,172 +143,159 @@
     </div>
     <!-- /@chrome:header -->
     <main id="main">
+        <section class="hero" data-hero>
+            <div class="hero-media"><img src="../images/UniversalUpscaler_62c05666-3901-44ad-a6d5-d1b9c4459ea4-U.jpg" alt="Citizenship" fetchpriority="high" /></div>
+            <div class="hero-veil"></div>
+            <div class="hero-content">
+                <span class="hero-eyebrow">Prosperity · Citizenship</span>
+                <h1 class="hero-title">Civilizational <em>Sanctuary</em></h1>
+                <p class="hero-lead">The "Citizenship by Merit" program is not only reserved for the wealthy. We are welcoming inventors, doctors, entrepreneurs, and artists from all around the world. Talent and diligence are highly rewarded. Assess your eligibility under the new system.</p>
+            </div>
+        </section>
         <!-- @chrome:subnav --><!-- /@chrome:subnav -->
-        <div class="min-h-screen">
-            <section class="citizenship-hero relative h-screen flex items-center justify-center overflow-hidden">
-                <div class="absolute inset-0 z-0">
-                    <div class="absolute inset-0 bg-gradient-to-r from-[#001830]/90 to-[#003366]/40 z-10"></div><img src="../images/UniversalUpscaler_62c05666-3901-44ad-a6d5-d1b9c4459ea4-U.jpg" class="w-full h-full object-cover" />
+        <section id="tiers" class="fade-in">
+            <h2 class="section-title">Initial Screening Tiers</h2>
+            <p class="section-intro">After filling the application form, the system classifies applicants into six initial tiers based on their score. Due to the high number of applicants, this is a necessary step to prioritize processing. This category also gives an overview of the applicant's current standing; however, it does not determine the final decision. Once citizenship is granted, all citizens enjoy the same rights and benefits. <em>Note: This is a preliminary classification, not a final decision.</em></p>
+            <div class="card-grid tier-grid">
+                <div class="card tier-card tier-red">
+                    <div class="tier-icon"><img src="../icons/mdi/shield-alert.svg" alt="" width="28" height="28" /></div>
+                    <span class="tier-points">0-34 points</span>
+                    <h3>Red Tier</h3>
+                    <p>System Rejection. Applicant profile triggers "Red Line" exclusions or fails the "Civilizational Compatibility" threshold.</p>
                 </div>
-                <div class="container mx-auto px-6 z-20 relative text-center pt-20">
-                    <div class="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold tracking-widest uppercase mb-6 animate-fade-up">Waikiki Citizenship Program</div>
-                    <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">Civilizational <span style="color: var(--accent-hover)">Sanctuary</span></h1>
-                    <p class="text-xl text-gray-200 max-w-4xl mx-auto mb-10 font-light">The "Citizenship by Merit" program is not only reserved for the wealthy. We are welcoming inventors, doctors, entrepreneurs, and artists from all around the world. Talent and diligence are highly rewarded. Assess your eligibility under the new system.</p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button class="px-8 py-4 rounded-lg text-white font-bold text-lg transition-all shadow-lg open-assessment">Start Application</button>
-                    </div>
+                <div class="card tier-card tier-blue">
+                    <div class="tier-icon"><img src="../icons/mdi/laptop.svg" alt="" width="28" height="28" /></div>
+                    <span class="tier-points">35-49 points</span>
+                    <h3>Blue Tier</h3>
+                    <p>Talent Visa. Temporary status for young digital innovators. Probably a longer integration path required before naturalization.</p>
                 </div>
-            </section>
-            <section class="bg-white screening-tiers-section">
-                <div class="mx-auto px-6">
-                    <div class="text-center mb-16">
-                        <h2 class="text-4xl font-bold mb-4">Initial Screening Tiers</h2>
-                        <p class="text-gray-600">After filling the application form, the system classifies applicants into six initial tiers based on their score. Due to the high number of applicants, this is a necessary step to prioritize processing. This category also gives an overview of the applicant's current standing; however, it does not determine the final decision. Once citizenship is granted, all citizens enjoy the same rights and benefits. <em>Note: This is a preliminary classification, not a final decision.</em></p>
-                    </div>
-                    <div class="grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6 gap-6">
-                        <div class="p-6 rounded-2xl border-2 text-center border-red-300 bg-red-50 hover-card">
-                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><img src="../icons/mdi/shield-alert.svg" alt="" width="24" height="24" /></div>
-                            <div class="text-xs font-bold uppercase tracking-widest mb-2 opacity-60">0-34 points</div>
-                            <h3 class="text-lg font-bold mb-2">Red Tier</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed">System Rejection. Applicant profile triggers "Red Line" exclusions or fails the "Civilizational Compatibility" threshold.</p>
-                        </div>
-                        <div class="p-6 rounded-2xl border-2 text-center border-blue-300 bg-blue-50 hover-card">
-                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><img src="../icons/mdi/laptop.svg" alt="" width="24" height="24" /></div>
-                            <div class="text-xs font-bold uppercase tracking-widest mb-2 opacity-60">35-49 points</div>
-                            <h3 class="text-lg font-bold mb-2">Blue Tier</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed">Talent Visa. Temporary status for young digital innovators. Probably a longer integration path required before naturalization.</p>
-                        </div>
-                        <div class="p-6 rounded-2xl border-2 text-center border-orange-300 bg-orange-50 hover-card">
-                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><img src="../icons/mdi/shield-account.svg" alt="" width="24" height="24" /></div>
-                            <div class="text-xs font-bold uppercase tracking-widest mb-2 opacity-60">50-64 points</div>
-                            <h3 class="text-lg font-bold mb-2">Bronze Tier</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed">Probationary Resident. Medium probability of being granted citizenship. Residency permit might be available with a security deposit.</p>
-                        </div>
-                        <div class="p-6 rounded-2xl border-2 text-center border-gray-400 bg-gray-50 hover-card">
-                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><img src="../icons/mdi/medal.svg" alt="" width="24" height="24" /></div>
-                            <div class="text-xs font-bold uppercase tracking-widest mb-2 opacity-60">65-79 points</div>
-                            <h3 class="text-lg font-bold mb-2">Silver Tier</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed">Standard Investor. Citizenship path within a few years with sufficient contributions to the nation's prosperity.</p>
-                        </div>
-                        <div class="p-6 rounded-2xl border-2 text-center border-yellow-400 bg-yellow-50 hover-card">
-                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><img src="../icons/mdi/crown.svg" alt="" width="24" height="24" /></div>
-                            <div class="text-xs font-bold uppercase tracking-widest mb-2 opacity-60">80-90 points</div>
-                            <h3 class="text-lg font-bold mb-2">Gold Tier</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed">Strategic Partner. Priority processing. Citizenship is likely granted immediately with favorable offers.</p>
-                        </div>
-                        <div class="p-6 rounded-2xl border-2 text-center border-indigo-300 bg-indigo-50 hover-card">
-                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-xl text-gray-700"><img src="../icons/mdi/gold.svg" alt="" width="24" height="24" /></div>
-                            <div class="text-xs font-bold uppercase tracking-widest mb-2 opacity-60">90+ points</div>
-                            <h3 class="text-lg font-bold mb-2">Diamond Tier</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed">Prime National Asset. Reserved for the top 1% of global innovators and ultra-high-net-worth individuals.</p>
-                        </div>
-                    </div>
+                <div class="card tier-card tier-bronze">
+                    <div class="tier-icon"><img src="../icons/mdi/shield-account.svg" alt="" width="28" height="28" /></div>
+                    <span class="tier-points">50-64 points</span>
+                    <h3>Bronze Tier</h3>
+                    <p>Probationary Resident. Medium probability of being granted citizenship. Residency permit might be available with a security deposit.</p>
                 </div>
-            </section>
-            <section class="naturalization-section light-bg">
-                <div class="mx-auto px-6">
-                    <div class="text-center mb-16">
-                        <h2 class="text-4xl font-bold mb-4">Naturalization Process</h2>
-                        <p class="text-gray-600">The process consists of three separate stages designed to ensure that applicants meet all financial, legal, and social requirements for citizenship. The three steps combine automated reviews, questionnaires, and a personal or online interview with an immigration officer. The combined score of these steps will determine the decision on the citizenship application.</p>
-                    </div>
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <div class="p-8 bg-white rounded-2xl border border-gray-100 text-center hover-card">
-                            <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm text-2xl" style="color: var(--accent-hover)"><img src="../icons/mdi/finance.svg" alt="" width="28" height="28" /></div>
-                            <h3 class="text-xl font-bold mb-3">The Scorecard</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed">A quantitative validation of facts. We verify net worth, "hard science" qualifications (STEM preference), and family status. Subjective claims are ignored; only mathematically demonstrable value is considered.</p>
-                        </div>
-                        <div class="p-8 bg-white rounded-2xl border border-gray-100 text-center hover-card">
-                            <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm text-2xl" style="color: var(--accent-hover)"><img src="../icons/mdi/robot.svg" alt="" width="28" height="28" /></div>
-                            <h3 class="text-xl font-bold mb-3">The Gatekeeper AI</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed">"The Gatekeeper" analyzes 15 years of digital footprints and financial transactions. It predicts "integration friction" by filtering out ideological radicalism, speculative risk-taking, and social volatility.</p>
-                        </div>
-                        <div class="p-8 bg-white rounded-2xl border border-gray-100 text-center hover-card">
-                            <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm text-2xl" style="color: var(--accent-hover)"><img src="../icons/mdi/shield-check.svg" alt="" width="28" height="28" /></div>
-                            <h3 class="text-xl font-bold mb-3">Alignment Interview</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed">A personal assessment with a senior Immigration Officer. This phase tests loyalty, stoicism under stress, and acceptance of Waikiki's hierarchical social structure.</p>
-                        </div>
-                    </div>
+                <div class="card tier-card tier-silver">
+                    <div class="tier-icon"><img src="../icons/mdi/medal.svg" alt="" width="28" height="28" /></div>
+                    <span class="tier-points">65-79 points</span>
+                    <h3>Silver Tier</h3>
+                    <p>Standard Investor. Citizenship path within a few years with sufficient contributions to the nation's prosperity.</p>
                 </div>
-            </section>
-            <section id="citizenship" class="fade-in bg-white">
-                <div class="faq-container">
-                    <h2 class="faq-section-title">Naturalization and Citizenship</h2>
-                    <details class="faq-item">
-                        <summary class="faq-question">
-                            <div class="faq-icon"><img src="../icons/mdi/passport-32.svg" /><span class="faq-question-text">What is the "Citizenship by Merit" philosophy?</span></div>
-                            <div class="faq-toggle"></div>
-                        </summary>
-                        <div class="faq-answer">
-                            <p>Waikiki operates a unique meritocratic naturalization system. Unlike traditional "golden visa" programs, citizenship is not merely bought but earned through a combination of economic contribution, professional expertise, and cultural compatibility. The program evaluates applicants via the Waikiki Merit Assessment Protocol, favoring those who act as "Strategic Partners" to the state.</p>
-                        </div>
-                    </details>
-                    <details class="faq-item">
-                        <summary class="faq-question">
-                            <div class="faq-icon"><img src="../icons/mdi/layers-triple-32.svg" /><span class="faq-question-text">What factors influence my W-MAP Score?</span></div>
-                            <div class="faq-toggle"></div>
-                        </summary>
-                        <div class="faq-answer">
-                            <p>The W-MAP algorithm weighs four key pillars: <br>1. <strong>Cultural Connection:</strong> Preference for nations with similar legal/cultural frameworks (Western/Developed Asian). <br>2. <strong>Strategic Skills:</strong> "Hard Sciences" (Fusion, AI, Medicine) are prioritized over social sciences. <br>3. <strong>Economic Power:</strong> Liquid assets and verified passive income. <br>4. <strong>Demographics:</strong> Bonus points for married couples with children, as families are the bedrock of our society. </p>
-                        </div>
-                    </details>
-                    <details class="faq-item">
-                        <summary class="faq-question">
-                            <div class="faq-icon"><img src="../icons/mdi/eye-check-32.svg" /><span class="faq-question-text">How does "The Gatekeeper" vetting work?</span></div>
-                            <div class="faq-toggle"></div>
-                        </summary>
-                        <div class="faq-answer">
-                            <p>Security is paramount. "The Gatekeeper" is our state-of-the-art AI vetting system that analyzes the applicant's digital footprint and financial history. It screens for "Cultural Entropy"—behaviors such as "cancel culture" activism, speculative gambling, or ideological radicalism that threaten our social harmony.</p>
-                        </div>
-                    </details>
-                    <details class="faq-item">
-                        <summary class="faq-question">
-                            <div class="faq-icon"><img src="../icons/mdi/cash-multiple-32.svg" /><span class="faq-question-text">What are the financial requirements?</span></div>
-                            <div class="faq-toggle"></div>
-                        </summary>
-                        <div class="faq-answer">
-                            <p>Costs are dynamic based on your W-MAP score. The base application fee is 1,000 WUD. Most applicants must purchase a Loyalty Bond ranging from $100,000 to $100,000,000 WUD, held for 5 years. Mandatory real estate investments and donations to the National Fund may also apply based on your assigned tier.</p>
-                        </div>
-                    </details>
-                    <details class="faq-item">
-                        <summary class="faq-question">
-                            <div class="faq-icon"><img src="../icons/mdi/account-multiple-plus-32.svg" /><span class="faq-question-text">Does my family receive citizenship?</span></div>
-                            <div class="faq-toggle"></div>
-                        </summary>
-                        <div class="faq-answer">
-                            <p>Yes, Waikiki is strongly family-centric. The nuclear family (spouse and children) is included in the application. In fact, being married with children grants significant bonus points in the assessment. We view the family unit as a stabilizing force and essential for the nation's future.</p>
-                        </div>
-                    </details>
-                    <details class="faq-item myth-reality">
-                        <summary class="faq-question">
-                            <div class="faq-icon"><img src="../icons/mdi/card-account-details-32.svg" /><span class="faq-question-text">Is dual citizenship allowed?</span></div>
-                            <div class="faq-toggle"></div>
-                        </summary>
-                        <div class="faq-answer">
-                            <p>Waikiki generally allows dual citizenship, recognizing the global nature of our elite citizens. However, in the event of a diplomatic or trade conflict between Waikiki and your country of origin, your primary loyalty must lie with Waikiki. Certain high-security government positions may require renouncing other allegiances.</p>
-                        </div>
-                    </details>
-                    <details class="faq-item myth-reality">
-                        <summary class="faq-question">
-                            <div class="faq-icon"><img src="../icons/mdi/card-account-details-32.svg" /><span class="faq-question-text">Are there "Second Class" citizens?</span></div>
-                            <div class="faq-toggle"></div>
-                        </summary>
-                        <div class="faq-answer">
-                            <p>No. While the entry process is strictly hierarchical and selective, the outcome is egalitarian. Once the Oath of Citizenship is taken and the passport is issued, your "Score" is wiped from public records. Every naturalized citizen enjoys the exact same legal rights and protections as those born in Waikiki.</p>
-                        </div>
-                    </details>
+                <div class="card tier-card tier-gold">
+                    <div class="tier-icon"><img src="../icons/mdi/crown.svg" alt="" width="28" height="28" /></div>
+                    <span class="tier-points">80-90 points</span>
+                    <h3>Gold Tier</h3>
+                    <p>Strategic Partner. Priority processing. Citizenship is likely granted immediately with favorable offers.</p>
                 </div>
-            </section>
-            <!-- @chrome:next -->
-            <section class="next-chapter">
-                <a class="next-card" href="infrastructure.html">
-                    <div class="next-media"><img src="../images/UniversalUpscaler_Pro_Precise_2_1f1c1a29-2ad2-6700-ba29-0886f847836a.jpg" alt="" loading="lazy" /></div>
-                    <span class="next-body">
-                        <span class="next-eyebrow">Continue the journey · Prosperity</span>
-                        <span class="next-title">Infrastructure</span>
-                        <span class="next-arrow" aria-hidden="true">→</span>
-                    </span>
-                </a>
-            </section>
-            <!-- /@chrome:next -->
+                <div class="card tier-card tier-diamond">
+                    <div class="tier-icon"><img src="../icons/mdi/gold.svg" alt="" width="28" height="28" /></div>
+                    <span class="tier-points">90+ points</span>
+                    <h3>Diamond Tier</h3>
+                    <p>Prime National Asset. Reserved for the top 1% of global innovators and ultra-high-net-worth individuals.</p>
+                </div>
+            </div>
+        </section>
+        <section id="naturalization" class="fade-in light-bg">
+            <h2 class="section-title">Naturalization Process</h2>
+            <p class="section-intro">The process consists of three separate stages designed to ensure that applicants meet all financial, legal, and social requirements for citizenship. The three steps combine automated reviews, questionnaires, and a personal or online interview with an immigration officer. The combined score of these steps will determine the decision on the citizenship application.</p>
+            <div class="card-grid process-grid">
+                <div class="card process-card">
+                    <span class="card-icon"><img src="../icons/mdi/finance.svg" alt="" width="28" height="28" /></span>
+                    <h3>The Scorecard</h3>
+                    <p>A quantitative validation of facts. We verify net worth, "hard science" qualifications (STEM preference), and family status. Subjective claims are ignored; only mathematically demonstrable value is considered.</p>
+                </div>
+                <div class="card process-card">
+                    <span class="card-icon"><img src="../icons/mdi/robot.svg" alt="" width="28" height="28" /></span>
+                    <h3>The Gatekeeper AI</h3>
+                    <p>"The Gatekeeper" analyzes 15 years of digital footprints and financial transactions. It predicts "integration friction" by filtering out ideological radicalism, speculative risk-taking, and social volatility.</p>
+                </div>
+                <div class="card process-card">
+                    <span class="card-icon"><img src="../icons/mdi/shield-check.svg" alt="" width="28" height="28" /></span>
+                    <h3>Alignment Interview</h3>
+                    <p>A personal assessment with a senior Immigration Officer. This phase tests loyalty, stoicism under stress, and acceptance of Waikiki's hierarchical social structure.</p>
+                </div>
+            </div>
+        </section>
+        <section id="faq" class="fade-in">
+            <h2 class="section-title">Naturalization and Citizenship</h2>
+            <div class="faq-container">
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="../icons/mdi/passport-32.svg" alt="" /><span class="faq-question-text">What is the "Citizenship by Merit" philosophy?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Waikiki operates a unique meritocratic naturalization system. Unlike traditional "golden visa" programs, citizenship is not merely bought but earned through a combination of economic contribution, professional expertise, and cultural compatibility. The program evaluates applicants via the Waikiki Merit Assessment Protocol, favoring those who act as "Strategic Partners" to the state.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="../icons/mdi/layers-triple-32.svg" alt="" /><span class="faq-question-text">What factors influence my W-MAP Score?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>The W-MAP algorithm weighs four key pillars: <br>1. <strong>Cultural Connection:</strong> Preference for nations with similar legal/cultural frameworks (Western/Developed Asian). <br>2. <strong>Strategic Skills:</strong> "Hard Sciences" (Fusion, AI, Medicine) are prioritized over social sciences. <br>3. <strong>Economic Power:</strong> Liquid assets and verified passive income. <br>4. <strong>Demographics:</strong> Bonus points for married couples with children, as families are the bedrock of our society. </p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="../icons/mdi/eye-check-32.svg" alt="" /><span class="faq-question-text">How does "The Gatekeeper" vetting work?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Security is paramount. "The Gatekeeper" is our state-of-the-art AI vetting system that analyzes the applicant's digital footprint and financial history. It screens for "Cultural Entropy"—behaviors such as "cancel culture" activism, speculative gambling, or ideological radicalism that threaten our social harmony.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="../icons/mdi/cash-multiple-32.svg" alt="" /><span class="faq-question-text">What are the financial requirements?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Costs are dynamic based on your W-MAP score. The base application fee is 1,000 WUD. Most applicants must purchase a Loyalty Bond ranging from $100,000 to $100,000,000 WUD, held for 5 years. Mandatory real estate investments and donations to the National Fund may also apply based on your assigned tier.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="../icons/mdi/account-multiple-plus-32.svg" alt="" /><span class="faq-question-text">Does my family receive citizenship?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Yes, Waikiki is strongly family-centric. The nuclear family (spouse and children) is included in the application. In fact, being married with children grants significant bonus points in the assessment. We view the family unit as a stabilizing force and essential for the nation's future.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="../icons/mdi/card-account-details-32.svg" alt="" /><span class="faq-question-text">Is dual citizenship allowed?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Waikiki generally allows dual citizenship, recognizing the global nature of our elite citizens. However, in the event of a diplomatic or trade conflict between Waikiki and your country of origin, your primary loyalty must lie with Waikiki. Certain high-security government positions may require renouncing other allegiances.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="../icons/mdi/card-account-details-32.svg" alt="" /><span class="faq-question-text">Are there "Second Class" citizens?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>No. While the entry process is strictly hierarchical and selective, the outcome is egalitarian. Once the Oath of Citizenship is taken and the passport is issued, your "Score" is wiped from public records. Every naturalized citizen enjoys the exact same legal rights and protections as those born in Waikiki.</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+        <!-- @chrome:next -->
+        <section class="next-chapter">
+            <a class="next-card" href="infrastructure.html">
+                <div class="next-media"><img src="../images/UniversalUpscaler_Pro_Precise_2_1f1c1a29-2ad2-6700-ba29-0886f847836a.jpg" alt="" loading="lazy" /></div>
+                <span class="next-body">
+                    <span class="next-eyebrow">Continue the journey · Prosperity</span>
+                    <span class="next-title">Infrastructure</span>
+                    <span class="next-arrow" aria-hidden="true">→</span>
+                </span>
+            </a>
+        </section>
+        <!-- /@chrome:next -->
     </main>
     <!-- @chrome:footer -->
     <footer class="site-footer">
@@ -396,9 +380,6 @@
         </svg><span aria-hidden="true">↑</span>
     </button>
     <!-- /@chrome:footer -->
-    </div>
-    <div id="modal-root"></div>
-    <script type="text/babel" src="../js/citizenship.js"></script>
     <script src="../js/common.js"></script>
 </body>
 </html>

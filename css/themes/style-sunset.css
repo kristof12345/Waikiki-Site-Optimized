@@ -1,8 +1,4 @@
-/* ==========================================================================
-   WAIKIKI — STYLE OVERRIDE: SUNSET TERRACOTTA
-   Theme: Caribbean Dusk, Burnt Terracotta & Warm Sunlit Amber
-   Loaded dynamically via common.js when the Sunset style is active.
-   ========================================================================== */
+/* Waikiki — Style Override: Sunset Terracotta (Caribbean Dusk, Burnt Terracotta and Warm Sunlit Amber) */
 
 :root {
   /* Primary — Burnt Terracotta Sienna */
@@ -33,7 +29,7 @@
   --accent-dark: #853b02;
   --accent-subtle: rgba(217, 119, 6, 0.14);
 
-  /* Neutrals — Warm Sunset Sand & Twilight Umber */
+  /* Neutrals — Warm Sunset Sand and Twilight Umber */
   --neutral-50: #ffffff;
   --neutral-100: #fdf8f4;
   --neutral-150: #fcf4ed;
@@ -47,20 +43,10 @@
   --neutral-900: #140904;
 
   /* Semantic Theme Tokens */
-  --bg: var(--neutral-150);
   --surface: #ffffff;
-  --surface-2: var(--neutral-200);
-  --surface-card: var(--surface);
-  --heading: var(--neutral-800);
-  --text: var(--neutral-700);
-  --text-muted: var(--neutral-600);
-  --text-primary: var(--text);
-  --text-secondary: var(--text-muted);
-  --muted: var(--neutral-600);
   --line: rgba(42, 26, 17, 0.1);
   --line-strong: rgba(42, 26, 17, 0.18);
   --glass: rgba(252, 244, 237, 0.78);
-  --dark-bg: var(--neutral-900);
 
   /* Shadows */
   --shadow-sm: 0 1px 2px rgba(94, 33, 16, 0.06), 0 8px 24px -16px rgba(94, 33, 16, 0.25);
@@ -70,7 +56,7 @@
   --shadow-btn-hover: 0 18px 40px -16px rgba(217, 119, 6, 0.7);
   --shadow-xl: 0 8px 24px rgba(94, 33, 16, 0.12), 0 60px 100px -40px rgba(94, 33, 16, 0.6);
 
-  /* Illustrations & Accents */
+  /* Illustrations and Accents */
   --ill-sky: #faeae0;
   --ill-sun: #d97706;
   --ill-sun-2: #fde68a;
@@ -86,9 +72,7 @@
   --ill-glass: #f7e0d2;
 }
 
-/* --------------------------------------------------------------------------
-   LIGHT MODE COMPONENT OVERRIDES
-   -------------------------------------------------------------------------- */
+/* Light Mode Component Overrides */
 .light-bg {
   background:
     radial-gradient(1100px 420px at 8% 0%, rgba(243, 156, 91, 0.16), transparent 60%),
@@ -132,9 +116,7 @@
   stroke: var(--tertiary);
 }
 
-/* --------------------------------------------------------------------------
-   NIGHT MODE (BODY-DARK) OVERRIDES
-   -------------------------------------------------------------------------- */
+/* Night Mode (Body-Dark) Overrides */
 .body-dark {
   --bg: #190e09;
   --dark-surface: #261610;
@@ -151,10 +133,6 @@
   --line: rgba(255, 255, 255, 0.08);
   --line-strong: rgba(255, 255, 255, 0.16);
   --glass: rgba(25, 14, 9, 0.78);
-
-  --primary: #fb923c;
-  --primary-hover: #f97316;
-  --secondary: var(--dark-heading);
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 30px -18px rgba(0, 0, 0, 0.75);
   --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.35), 0 24px 48px -28px rgba(0, 0, 0, 0.88);

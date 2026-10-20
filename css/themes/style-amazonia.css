@@ -1,8 +1,4 @@
-/* ==========================================================================
-   WAIKIKI — STYLE OVERRIDE: EMERALD AMAZONIA
-   Theme: Lush Amazonian Rainforest Sanctuary & Botanical Jade
-   Loaded dynamically via common.js when the Amazonia style is active.
-   ========================================================================== */
+/* Waikiki — Style Override: Emerald Amazonia (Lush Amazonian Rainforest Sanctuary and Botanical Jade) */
 
 :root {
   /* Primary — Deep Rainforest Emerald */
@@ -33,7 +29,7 @@
   --accent-dark: #7d591c;
   --accent-subtle: rgba(196, 147, 63, 0.14);
 
-  /* Neutrals — Fresh Ivory Sage & Forest Obsidian */
+  /* Neutrals — Fresh Ivory Sage and Forest Obsidian */
   --neutral-50: #ffffff;
   --neutral-100: #f7faf7;
   --neutral-150: #f1f7f2;
@@ -47,20 +43,10 @@
   --neutral-900: #07170e;
 
   /* Semantic Theme Tokens */
-  --bg: var(--neutral-150);
   --surface: #ffffff;
-  --surface-2: var(--neutral-200);
-  --surface-card: var(--surface);
-  --heading: var(--neutral-800);
-  --text: var(--neutral-700);
-  --text-muted: var(--neutral-600);
-  --text-primary: var(--text);
-  --text-secondary: var(--text-muted);
-  --muted: var(--neutral-600);
   --line: rgba(20, 41, 28, 0.1);
   --line-strong: rgba(20, 41, 28, 0.18);
   --glass: rgba(241, 247, 242, 0.78);
-  --dark-bg: var(--neutral-900);
 
   /* Shadows */
   --shadow-sm: 0 1px 2px rgba(10, 41, 28, 0.06), 0 8px 24px -16px rgba(10, 41, 28, 0.25);
@@ -70,7 +56,7 @@
   --shadow-btn-hover: 0 18px 40px -16px rgba(196, 147, 63, 0.7);
   --shadow-xl: 0 8px 24px rgba(10, 41, 28, 0.12), 0 60px 100px -40px rgba(10, 41, 28, 0.6);
 
-  /* Illustrations & Accents */
+  /* Illustrations and Accents */
   --ill-sky: #e7f3ea;
   --ill-sun: #c4933f;
   --ill-sun-2: #edd695;
@@ -86,9 +72,7 @@
   --ill-glass: #d8eee0;
 }
 
-/* --------------------------------------------------------------------------
-   LIGHT MODE COMPONENT OVERRIDES
-   -------------------------------------------------------------------------- */
+/* Light Mode Component Overrides */
 .light-bg {
   background:
     radial-gradient(1100px 420px at 8% 0%, rgba(72, 184, 132, 0.16), transparent 60%),
@@ -132,9 +116,7 @@
   stroke: var(--tertiary);
 }
 
-/* --------------------------------------------------------------------------
-   NIGHT MODE (BODY-DARK) OVERRIDES
-   -------------------------------------------------------------------------- */
+/* Night Mode (Body-Dark) Overrides */
 .body-dark {
   --bg: #06150e;
   --dark-surface: #0d2418;
@@ -151,10 +133,6 @@
   --line: rgba(255, 255, 255, 0.08);
   --line-strong: rgba(255, 255, 255, 0.16);
   --glass: rgba(6, 21, 14, 0.78);
-
-  --primary: var(--tertiary);
-  --primary-hover: var(--tertiary-hover);
-  --secondary: var(--dark-heading);
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 30px -18px rgba(0, 0, 0, 0.75);
   --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.35), 0 24px 48px -28px rgba(0, 0, 0, 0.88);

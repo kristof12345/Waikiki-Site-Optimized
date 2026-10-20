@@ -329,7 +329,6 @@
                 flex-direction: column;
                 gap: 0.45rem;
                 max-height: 380px;
-                overflow-y: auto;
                 overscroll-behavior: contain;
                 padding-right: 2px;
             }

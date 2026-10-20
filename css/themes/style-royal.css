@@ -1,8 +1,4 @@
-/* ==========================================================================
-   WAIKIKI — STYLE OVERRIDE: ROYAL VELVET
-   Theme: Imperial Dynasty, Sovereign Burgundy & Crown Gold
-   Loaded dynamically via common.js when the Royal style is active.
-   ========================================================================== */
+/* Waikiki — Style Override: Royal Velvet (Imperial Dynasty, Sovereign Burgundy and Crown Gold) */
 
 :root {
   /* Primary — Imperial Velvet Wine */
@@ -19,7 +15,7 @@
   --secondary-dark: #1f030b;
   --secondary-subtle: rgba(69, 14, 31, 0.12);
 
-  /* Tertiary — Rose Velvet & Crimson Glow */
+  /* Tertiary — Rose Velvet and Crimson Glow */
   --tertiary: #d4738c;
   --tertiary-hover: #bf5973;
   --tertiary-light: #f8cfd9;
@@ -33,7 +29,7 @@
   --accent-dark: #7d5917;
   --accent-subtle: rgba(201, 151, 56, 0.14);
 
-  /* Neutrals — Antique Imperial Parchment & Velvet Shadows */
+  /* Neutrals — Antique Imperial Parchment and Velvet Shadows */
   --neutral-50: #ffffff;
   --neutral-100: #fcf7f6;
   --neutral-150: #fbf4f2;
@@ -47,20 +43,10 @@
   --neutral-900: #140807;
 
   /* Semantic Theme Tokens */
-  --bg: var(--neutral-150);
   --surface: #ffffff;
-  --surface-2: var(--neutral-200);
-  --surface-card: var(--surface);
-  --heading: var(--neutral-800);
-  --text: var(--neutral-700);
-  --text-muted: var(--neutral-600);
-  --text-primary: var(--text);
-  --text-secondary: var(--text-muted);
-  --muted: var(--neutral-600);
   --line: rgba(41, 21, 18, 0.1);
   --line-strong: rgba(41, 21, 18, 0.18);
   --glass: rgba(251, 244, 242, 0.78);
-  --dark-bg: var(--neutral-900);
 
   /* Shadows */
   --shadow-sm: 0 1px 2px rgba(56, 9, 23, 0.06), 0 8px 24px -16px rgba(56, 9, 23, 0.25);
@@ -70,7 +56,7 @@
   --shadow-btn-hover: 0 18px 40px -16px rgba(201, 151, 56, 0.7);
   --shadow-xl: 0 8px 24px rgba(56, 9, 23, 0.12), 0 60px 100px -40px rgba(56, 9, 23, 0.6);
 
-  /* Illustrations & Accents */
+  /* Illustrations and Accents */
   --ill-sky: #faecea;
   --ill-sun: #c99738;
   --ill-sun-2: #f5d58a;
@@ -86,9 +72,7 @@
   --ill-glass: #f6e2dd;
 }
 
-/* --------------------------------------------------------------------------
-   LIGHT MODE COMPONENT OVERRIDES
-   -------------------------------------------------------------------------- */
+/* Light Mode Component Overrides */
 .light-bg {
   background:
     radial-gradient(1100px 420px at 8% 0%, rgba(212, 115, 140, 0.16), transparent 60%),
@@ -132,9 +116,7 @@
   stroke: var(--tertiary);
 }
 
-/* --------------------------------------------------------------------------
-   NIGHT MODE (BODY-DARK) OVERRIDES
-   -------------------------------------------------------------------------- */
+/* Night Mode (Body-Dark) Overrides */
 .body-dark {
   --bg: #15070c;
   --dark-surface: #240c15;
@@ -151,10 +133,6 @@
   --line: rgba(255, 255, 255, 0.08);
   --line-strong: rgba(255, 255, 255, 0.16);
   --glass: rgba(21, 7, 12, 0.78);
-
-  --primary: #f472b6;
-  --primary-hover: #ec4899;
-  --secondary: var(--dark-heading);
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 30px -18px rgba(0, 0, 0, 0.75);
   --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.35), 0 24px 48px -28px rgba(0, 0, 0, 0.88);

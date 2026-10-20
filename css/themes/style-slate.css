@@ -1,8 +1,4 @@
-/* ==========================================================================
-   WAIKIKI — STYLE OVERRIDE: MODERN SLATE
-   Theme: High-Tech Sovereign, Titanium Slate & Electric Cobalt
-   Loaded dynamically via common.js when the Slate style is active.
-   ========================================================================== */
+/* Waikiki — Style Override: Modern Slate (High-Tech Sovereign, Titanium Slate and Electric Cobalt) */
 
 :root {
   /* Primary — High-Tech Titanium Graphite */
@@ -33,7 +29,7 @@
   --accent-dark: #0e7490;
   --accent-subtle: rgba(6, 182, 212, 0.14);
 
-  /* Neutrals — Crisp Architectural Slate & Carbon */
+  /* Neutrals — Crisp Architectural Slate and Carbon */
   --neutral-50: #ffffff;
   --neutral-100: #f8fafc;
   --neutral-150: #f1f5f9;
@@ -47,20 +43,10 @@
   --neutral-900: #0f172a;
 
   /* Semantic Theme Tokens */
-  --bg: var(--neutral-150);
   --surface: #ffffff;
-  --surface-2: var(--neutral-200);
-  --surface-card: var(--surface);
-  --heading: var(--neutral-800);
-  --text: var(--neutral-700);
-  --text-muted: var(--neutral-600);
-  --text-primary: var(--text);
-  --text-secondary: var(--text-muted);
-  --muted: var(--neutral-600);
   --line: rgba(15, 23, 42, 0.1);
   --line-strong: rgba(15, 23, 42, 0.18);
   --glass: rgba(241, 245, 249, 0.78);
-  --dark-bg: var(--neutral-900);
 
   /* Shadows */
   --shadow-sm: 0 1px 2px rgba(2, 6, 23, 0.06), 0 8px 24px -16px rgba(2, 6, 23, 0.25);
@@ -70,7 +56,7 @@
   --shadow-btn-hover: 0 18px 40px -16px rgba(6, 182, 212, 0.7);
   --shadow-xl: 0 8px 24px rgba(2, 6, 23, 0.12), 0 60px 100px -40px rgba(2, 6, 23, 0.6);
 
-  /* Illustrations & Accents */
+  /* Illustrations and Accents */
   --ill-sky: #e2e8f0;
   --ill-sun: #06b6d4;
   --ill-sun-2: #67e8f9;
@@ -86,9 +72,7 @@
   --ill-glass: #e2e8f0;
 }
 
-/* --------------------------------------------------------------------------
-   LIGHT MODE COMPONENT OVERRIDES
-   -------------------------------------------------------------------------- */
+/* Light Mode Component Overrides */
 .light-bg {
   background:
     radial-gradient(1100px 420px at 8% 0%, rgba(79, 70, 229, 0.14), transparent 60%),
@@ -132,9 +116,7 @@
   stroke: var(--tertiary);
 }
 
-/* --------------------------------------------------------------------------
-   NIGHT MODE (BODY-DARK) OVERRIDES
-   -------------------------------------------------------------------------- */
+/* Night Mode (Body-Dark) Overrides */
 .body-dark {
   --bg: #0a0e17;
   --dark-surface: #131926;
@@ -151,10 +133,6 @@
   --line: rgba(255, 255, 255, 0.08);
   --line-strong: rgba(255, 255, 255, 0.16);
   --glass: rgba(10, 14, 23, 0.78);
-
-  --primary: #818cf8;
-  --primary-hover: #6366f1;
-  --secondary: var(--dark-heading);
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 30px -18px rgba(0, 0, 0, 0.75);
   --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.35), 0 24px 48px -28px rgba(0, 0, 0, 0.88);

@@ -60,7 +60,7 @@
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
-  color: #ffffff;
+  color: var(--neutral-50);
   isolation: isolate;
 }
 
@@ -68,7 +68,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.2), transparent 70%);
+  background: radial-gradient(circle at top right, var(--white-alpha-20), transparent 70%);
   pointer-events: none;
   z-index: 1;
 }
@@ -108,19 +108,19 @@
 
 /* Individual card themes */
 .aircraft-card--af1 .aircraft-banner {
-  background: linear-gradient(145deg, #c95a41, #923422);
+  background: linear-gradient(145deg, var(--accent-hover), #923422);
 }
 
 .aircraft-card--concorde .aircraft-banner {
-  background: linear-gradient(145deg, #2a8c83, #15554f);
+  background: linear-gradient(145deg, var(--waikiki), #15554f);
 }
 
 .aircraft-card--af23 .aircraft-banner {
-  background: linear-gradient(145deg, #003366, #001830);
+  background: linear-gradient(145deg, var(--primary), var(--primary-dark));
 }
 
 .aircraft-card--dynasty .aircraft-banner {
-  background: linear-gradient(145deg, #002244, #123f43);
+  background: linear-gradient(145deg, var(--secondary), var(--adventure));
 }
 
 .banner-content-top {
@@ -133,7 +133,7 @@
   align-items: center;
   gap: 0.6rem;
   padding: 0.4rem 0.95rem;
-  background: rgba(255, 255, 255, 0.16);
+  background: var(--line-strong);
   border: 1px solid rgba(255, 255, 255, 0.28);
   backdrop-filter: blur(8px);
   border-radius: var(--radius-pill);
@@ -141,7 +141,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: #ffffff;
+  color: var(--neutral-50);
   margin-bottom: 1.25rem;
 }
 
@@ -157,7 +157,7 @@
   font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.015em;
-  color: #ffffff;
+  color: var(--neutral-50);
   margin: 0 0 0.85rem;
 }
 
@@ -165,7 +165,7 @@
   width: 44px;
   height: 3px;
   background: rgba(255, 255, 255, 0.45);
-  border-radius: 2px;
+  border-radius: var(--radius-3xs);
   margin-bottom: 0.9rem;
 }
 
@@ -392,8 +392,8 @@
   justify-content: center;
   color: var(--primary);
   background-image:
-    linear-gradient(rgba(0, 51, 102, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 51, 102, 0.05) 1px, transparent 1px);
+    linear-gradient(var(--primary-alpha-05) 1px, transparent 1px),
+    linear-gradient(90deg, var(--primary-alpha-05) 1px, transparent 1px);
   background-size: 24px 24px;
   background-position: center center;
   transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease;
@@ -423,43 +423,6 @@
   letter-spacing: 0.12em;
   color: var(--text-muted);
   text-align: center;
-}
-
-/* Illustrated Panels and Site-Wide SVG Helpers */
-.ill-panel {
-  margin: 0 auto;
-  max-width: var(--width-l);
-  width: 100%;
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid var(--line-strong);
-  background: var(--surface);
-  box-shadow: var(--shadow-md);
-  position: relative;
-}
-
-.ill-caption {
-  padding: 1rem 1.5rem;
-  background: var(--surface-2);
-  border-top: 1px solid var(--line);
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.ill-caption strong {
-  color: var(--heading);
-}
-
-.ill {
-  display: block;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
 }
 
 .ill text {
@@ -508,13 +471,13 @@
   gap: 0.45rem;
   padding: 0.35rem 0.9rem;
   border-radius: var(--radius-pill);
-  background: linear-gradient(135deg, #e3735a, #c95a41);
-  color: #ffffff;
+  background: linear-gradient(135deg, var(--ill-sun), var(--accent-hover));
+  color: var(--neutral-50);
   font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  box-shadow: 0 4px 12px rgba(201, 90, 65, 0.3);
+  box-shadow: 0 4px 12px var(--accent-hover-alpha-30);
 }
 
 .deckplan-toolbar-title {
@@ -557,7 +520,7 @@
 
 .deckplan-filter-btn.is-active {
   background: var(--primary);
-  color: #ffffff;
+  color: var(--neutral-50);
   border-color: var(--primary);
 }
 
@@ -602,7 +565,7 @@
 .deckplan-legend-swatch {
   width: 12px;
   height: 12px;
-  border-radius: 4px;
+  border-radius: var(--radius-2xs);
   display: inline-block;
   box-shadow: inset 0 0 0 1px rgba(0, 34, 68, 0.2);
 }
@@ -631,19 +594,19 @@
 }
 
 .deckplan-zone-card--royal {
-  border-top-color: #c95a41;
+  border-top-color: var(--accent-hover);
 }
 
 .deckplan-zone-card--diplo {
-  border-top-color: #c28a29;
+  border-top-color: var(--accent);
 }
 
 .deckplan-zone-card--cmd {
-  border-top-color: #2a8c83;
+  border-top-color: var(--waikiki);
 }
 
 .deckplan-zone-card--vip {
-  border-top-color: #1a528f;
+  border-top-color: var(--primary-light);
 }
 
 .deckplan-zone-card:hover {
@@ -675,7 +638,7 @@
 
 .deckplan-zone-card--royal .deckplan-zone-code {
   background: rgba(201, 90, 65, 0.12);
-  border-color: rgba(201, 90, 65, 0.3);
+  border-color: var(--accent-hover-alpha-30);
   color: #b5452d;
 }
 
@@ -686,9 +649,9 @@
 }
 
 .deckplan-zone-card--vip .deckplan-zone-code {
-  background: rgba(26, 82, 143, 0.12);
-  border-color: rgba(26, 82, 143, 0.3);
-  color: #1a528f;
+  background: var(--primary-light-alpha-12);
+  border-color: var(--primary-light-alpha-30);
+  color: var(--primary-light);
 }
 
 .deckplan-zone-area {
@@ -715,12 +678,12 @@
 
 /* Dark mode styling */
 .body-dark .aircraft-card {
-  border-color: rgba(255, 255, 255, 0.12);
+  border-color: var(--white-alpha-12);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
 }
 
 .body-dark .aircraft-tabs-nav {
-  border-bottom-color: rgba(255, 255, 255, 0.12);
+  border-bottom-color: var(--white-alpha-12);
 }
 
 .body-dark .aircraft-tab-btn {
@@ -744,7 +707,6 @@
   background: var(--dark-surface-3);
 }
 
-
 .body-dark .topview-canvas-wrapper {
   color: var(--tertiary);
   background-image:
@@ -760,21 +722,12 @@
   color: var(--dark-text);
 }
 
-.body-dark .ill-panel {
-  border-color: rgba(255, 255, 255, 0.14);
-}
-
-.body-dark .ill-caption {
-  border-top-color: rgba(255, 255, 255, 0.1);
-  color: var(--dark-text);
-}
-
 .body-dark .deckplan-toolbar {
-  border-color: rgba(255, 255, 255, 0.12);
+  border-color: var(--white-alpha-12);
 }
 
 .body-dark .deckplan-filter-btn {
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--white-alpha-10);
   color: var(--dark-text);
 }
 
@@ -789,15 +742,15 @@
 }
 
 .body-dark .deckplan-zone-card {
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--white-alpha-10);
 }
 
 .body-dark .deckplan-zone-card--royal {
-  border-top-color: #e3735a;
+  border-top-color: var(--ill-sun);
 }
 
 .body-dark .deckplan-zone-card--diplo {
-  border-top-color: #f5c46e;
+  border-top-color: var(--accent-light);
 }
 
 .body-dark .deckplan-zone-card--cmd {
@@ -805,7 +758,7 @@
 }
 
 .body-dark .deckplan-zone-card--vip {
-  border-top-color: #6ba4d9;
+  border-top-color: var(--tertiary);
 }
 
 .body-dark .deckplan-zone-card:hover {
@@ -815,7 +768,7 @@
 .body-dark .deckplan-zone-code {
   background: rgba(245, 196, 110, 0.14);
   border-color: rgba(245, 196, 110, 0.3);
-  color: #f5c46e;
+  color: var(--accent-light);
 }
 
 .body-dark .deckplan-zone-card--royal .deckplan-zone-code {
@@ -831,7 +784,7 @@
 }
 
 .body-dark .deckplan-zone-card--vip .deckplan-zone-code {
-  background: rgba(107, 164, 217, 0.16);
+  background: var(--tertiary-alpha-16);
   border-color: rgba(107, 164, 217, 0.35);
   color: #93c5fd;
 }

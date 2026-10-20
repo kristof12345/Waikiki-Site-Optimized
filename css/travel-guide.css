@@ -11,36 +11,12 @@
   letter-spacing: 0.08em;
 }
 
-/* Hero Art Specific Layout */
-.hero-art {
-  width: min(46vw, 720px);
-  transform: translateY(-46%);
-  animation: riseIn 1.4s var(--ease-out) 0.6s both;
-}
-
-@media (max-width: 1920px) {
-  .hero-art {
-    position: relative;
-    right: auto;
-    top: auto;
-    transform: none;
-    width: min(100%, 560px);
-    margin: 0 auto 2rem;
-    order: -1;
-  }
-
-  .hero--art {
-    flex-direction: column;
-    align-items: stretch;
-  }
-}
-
 /* Essentials Tiles */
 .fact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
   gap: 1rem;
-  max-width: 1320px;
+  max-width: var(--width-m);
   margin: 0 auto;
 }
 
@@ -101,7 +77,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
   gap: 1.5rem;
-  max-width: 1320px;
+  max-width: var(--width-m);
   margin: 0 auto;
   list-style: none;
   counter-reset: step;
@@ -194,7 +170,7 @@
 }
 
 .s-wet {
-  background: repeating-linear-gradient(135deg, rgba(26, 82, 143, 0.28) 0 6px, rgba(26, 82, 143, 0.12) 6px 12px);
+  background: repeating-linear-gradient(135deg, rgba(26, 82, 143, 0.28) 0 6px, var(--primary-light-alpha-12) 6px 12px);
 }
 
 .body-dark .s-fair {
@@ -222,7 +198,7 @@
   display: inline-block;
   width: 22px;
   height: 14px;
-  border-radius: 4px;
+  border-radius: var(--radius-2xs);
 }
 
 @media (max-width: 720px) {
@@ -246,10 +222,9 @@
   }
 }
 
-
 /* Travel Info callout banners */
 .travel-callout {
-  max-width: 1320px;
+  max-width: var(--width-m);
   margin: 3rem auto 0;
   padding: clamp(1.5rem, 3.5vw, 2.5rem);
   border-radius: var(--radius-lg);
@@ -389,7 +364,6 @@
   letter-spacing: 0.1em;
   font-weight: 700;
 }
-
 
 .hotel h3 {
   margin-bottom: 0;

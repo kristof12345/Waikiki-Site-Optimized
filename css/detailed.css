@@ -21,7 +21,7 @@
 
 .gallery-item:hover {
     transform: translateY(-6px);
-    box-shadow: 0 40px 70px -30px rgba(201, 90, 65, 0.45);
+    box-shadow: var(--shadow-accent-hover);
 }
 
 .gallery-item img {
@@ -94,6 +94,18 @@
     width: 270px;
 }
 
+.narrative-content-wide {
+    max-width: var(--width-l);
+}
+
+.narrative-content-wide > .narrative-text,
+.narrative-content-wide > h3,
+.narrative-content-wide > ol,
+.narrative-content-wide > ul {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .narrative-section-title {
     max-width: 880px;
     margin: 4rem auto 1.5rem;
@@ -111,3 +123,6 @@
     background: var(--accent);
 }
 
+.mt-1 {
+    margin-top: 1rem;
+}

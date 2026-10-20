@@ -13,7 +13,7 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.35rem 0.85rem;
-    border-radius: 999px;
+    border-radius: var(--radius-pill);
     background: var(--accent-subtle);
     border: 1px solid rgba(194, 154, 87, 0.3);
     color: var(--accent-dark);
@@ -62,65 +62,15 @@
     border-left-color: var(--accent);
 }
 
-/* Illustrated Panels */
+/* Banking System SVG animations */
 .ill-panel {
-    margin: 2.5rem auto;
-    max-width: var(--width-s, 1160px);
-    width: 100%;
-    border-radius: var(--radius);
-    overflow: hidden;
-    border: 1px solid var(--line-strong);
-    background: var(--surface);
-    box-shadow: var(--shadow-md);
-    position: relative;
-}
-
-.ill-caption {
-    padding: 1rem 1.5rem;
-    background: var(--surface-2);
-    border-top: 1px solid var(--line);
-    font-size: 0.88rem;
-    color: var(--text-muted);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-}
-
-.ill-caption strong {
-    color: var(--heading);
-}
-
-/* SVG helpers and animations */
-.ill {
-    display: block;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-}
-
-.ill .pulse {
-    transform-box: fill-box;
-    transform-origin: center;
-    animation: illPulse 2.8s var(--ease-out, ease-out) infinite;
+    max-width: var(--width-m);
 }
 
 .ill .pulse-slow {
     transform-box: fill-box;
     transform-origin: center;
     animation: illPulse 4s var(--ease-out, ease-out) infinite;
-}
-
-.ill .spin {
-    transform-box: fill-box;
-    transform-origin: center;
-    animation: illSpin 14s linear infinite;
-}
-
-.ill .dash {
-    stroke-dasharray: 6 8;
-    animation: illDash 2.4s linear infinite;
 }
 
 .ill .dash-fast {
@@ -139,23 +89,6 @@
 
 .ill .corridor-pulse {
     animation: illCorridorPulse 4s ease-in-out infinite alternate;
-}
-
-@keyframes illPulse {
-    0% {
-        transform: scale(0.96);
-        opacity: 0.95;
-    }
-
-    50% {
-        transform: scale(1.15);
-        opacity: 0.35;
-    }
-
-    100% {
-        transform: scale(0.96);
-        opacity: 0.95;
-    }
 }
 
 @keyframes illDashFast {

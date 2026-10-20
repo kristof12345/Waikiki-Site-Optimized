@@ -1,7 +1,7 @@
 /* Sovereign Nation of Waikiki — Nature and Sanctuaries Design System */
 /* Integrated with Tropical Luxe and Lagoon Night standards */
 
-/* --- Typography and Section Title Refinement --- */
+/* Typography and Section Title Refinement */
 .page-nature .section-title {
     line-height: 1.45;
     padding-top: 2.8rem;
@@ -15,15 +15,15 @@
     margin: 0;
 }
 
-/* --- Illustration System Tokens and Classes --- */
+/* Illustration System Tokens and Classes */
 .nature-ill-frame {
     width: 100%;
     max-width: 100%;
     background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: var(--radius-lg, 20px);
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: var(--shadow-lg, 0 16px 36px rgba(0, 24, 48, 0.08));
+    box-shadow: var(--shadow-lg);
     position: relative;
     margin: 2rem 0;
 }
@@ -33,8 +33,8 @@
 }
 
 .body-dark .nature-ill-frame {
-    background: var(--surface-card, #0E2035);
-    border-color: rgba(107, 164, 217, 0.2);
+    background: var(--surface-card);
+    border-color: var(--tertiary-border);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
 }
 
@@ -44,13 +44,13 @@
     max-width: 100%;
     height: auto;
     overflow: hidden;
-    border-radius: calc(var(--radius-lg, 20px) - 2px);
+    border-radius: calc(var(--radius-lg) - 2px);
 }
 
 /* Interactive SVG Hotspots */
 .nat-realm-zone {
     cursor: pointer;
-    transition: opacity 0.3s var(--ease-out, ease), filter 0.3s var(--ease-out, ease);
+    transition: opacity 0.3s var(--ease-out), filter 0.3s var(--ease-out);
 }
 
 .nat-realm-zone:hover {
@@ -59,7 +59,7 @@
 
 .nat-zone-badge {
     cursor: pointer;
-    transition: transform 0.25s var(--ease-out, ease), opacity 0.25s var(--ease-out, ease);
+    transition: transform 0.25s var(--ease-out), opacity 0.25s var(--ease-out);
 }
 
 .nat-zone-badge:hover {
@@ -186,7 +186,7 @@
     animation: none !important;
 }
 
-/* --- Section Feature Split Layout --- */
+/* Section Feature Split Layout */
 .nature-feature-split {
     display: flex;
     flex-wrap: wrap;
@@ -210,10 +210,10 @@
 }
 
 .nature-feature-text h3 {
-    font-family: var(--font-display, 'Fraunces', serif);
+    font-family: var(--font-display);
     font-size: clamp(1.6rem, 2.8vw, 2.4rem);
     font-weight: 600;
-    color: var(--heading, #001830);
+    color: var(--heading);
     margin-bottom: 1rem;
     position: relative;
     padding-bottom: 0.8rem;
@@ -228,23 +228,23 @@
     left: 0;
     width: 48px;
     height: 3px;
-    background: var(--accent, #C28A29);
-    border-radius: 2px;
+    background: var(--accent);
+    border-radius: var(--radius-3xs);
 }
 
 .body-dark .nature-feature-text h3 {
-    color: var(--text-primary, #FBF7F0);
+    color: var(--heading);
 }
 
 .nature-feature-text p {
-    color: var(--text, #4A5568);
+    color: var(--text);
     font-size: 1.05rem;
     line-height: 1.8;
     margin-bottom: 1.25rem;
 }
 
 .body-dark .nature-feature-text p {
-    color: var(--text-secondary, #C2CDD8);
+    color: var(--text-secondary);
 }
 
 .nature-feature-list {
@@ -261,22 +261,22 @@
     position: relative;
     font-size: 1rem;
     line-height: 1.65;
-    color: var(--text, #4A5568);
+    color: var(--text);
 }
 
 .body-dark .nature-feature-list li {
-    color: var(--text-secondary, #C2CDD8);
+    color: var(--text-secondary);
 }
 
 .nature-feature-list li::before {
     content: '→';
     position: absolute;
     left: 0;
-    color: var(--accent, #C28A29);
+    color: var(--accent);
     font-weight: 700;
 }
 
-/* --- Interactive Province Selector Tabs --- */
+/* Interactive Province Selector Tabs */
 .province-filter-nav {
     display: flex;
     justify-content: center;
@@ -287,51 +287,51 @@
 
 .province-btn {
     appearance: none;
-    background: var(--surface, #ffffff);
-    border: 1px solid var(--line, #E8DCB8);
-    color: var(--text, #4A5568);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    color: var(--text);
     padding: 0.65rem 1.35rem;
-    border-radius: 999px;
-    font-family: var(--font-sans, 'Manrope', sans-serif);
+    border-radius: var(--radius-pill);
+    font-family: var(--font-sans);
     font-size: 0.92rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.25s var(--ease-out, ease);
+    transition: all 0.25s var(--ease-out);
     display: inline-flex;
     align-items: center;
     gap: 0.55rem;
-    box-shadow: var(--shadow-xs, 0 2px 6px rgba(0, 0, 0, 0.04));
+    box-shadow: var(--shadow-xs);
 }
 
 .province-btn:hover {
-    color: var(--primary, #003366);
-    border-color: var(--primary-light, #1A528F);
+    color: var(--primary);
+    border-color: var(--primary-light);
     transform: translateY(-2px);
     box-shadow: var(--shadow-sm);
 }
 
 .province-btn.is-active {
-    background: var(--primary, #003366);
-    color: #ffffff;
-    border-color: var(--primary, #003366);
+    background: var(--primary);
+    color: var(--neutral-50);
+    border-color: var(--primary);
     box-shadow: 0 4px 14px rgba(0, 51, 102, 0.25);
 }
 
 .body-dark .province-btn {
-    background: var(--surface-card, #0E2035);
-    border-color: rgba(107, 164, 217, 0.2);
-    color: var(--text-secondary, #C2CDD8);
+    background: var(--surface-card);
+    border-color: var(--tertiary-border);
+    color: var(--text-secondary);
 }
 
 .body-dark .province-btn:hover {
-    border-color: var(--tertiary, #6BA4D9);
-    color: #ffffff;
+    border-color: var(--tertiary);
+    color: var(--neutral-50);
 }
 
 .body-dark .province-btn.is-active {
-    background: var(--amazonia, #4E8B5A);
-    color: #ffffff;
-    border-color: var(--amazonia, #4E8B5A);
+    background: var(--amazonia);
+    color: var(--neutral-50);
+    border-color: var(--amazonia);
     box-shadow: 0 4px 14px rgba(78, 139, 90, 0.35);
 }
 
@@ -352,32 +352,32 @@
 
 .province-btn.is-active .prov-filter-count {
     background: rgba(255, 255, 255, 0.25);
-    color: #ffffff;
+    color: var(--neutral-50);
 }
 
 .body-dark .prov-filter-count {
-    background: rgba(107, 164, 217, 0.15);
+    background: var(--tertiary-subtle);
 }
 
 .body-dark .province-btn.is-active .prov-filter-count {
     background: rgba(255, 255, 255, 0.25);
 }
 
-/* --- Province Cards Layout (The Three Realms) --- */
+/* Province Cards Layout (The Three Realms) */
 .province-cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
-    gap: var(--card-gap, 1.75rem);
+    gap: var(--card-gap);
     margin-top: 2rem;
 }
 
 .province-card {
     background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: var(--radius-lg, 20px);
+    border-radius: var(--radius-lg);
     padding: clamp(1.5rem, 2.5vw, 2rem);
-    box-shadow: var(--shadow-sm, 0 4px 16px rgba(0, 24, 48, 0.04));
-    transition: transform 0.35s var(--ease-out, ease), box-shadow 0.35s var(--ease-out, ease);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -397,26 +397,26 @@
 }
 
 .province-card[data-prov="waikiki"]::before {
-    background: linear-gradient(90deg, #1A528F, #20A4C8);
+    background: linear-gradient(90deg, var(--primary-light), var(--waikiki-light));
 }
 
 .province-card[data-prov="amazonia"]::before {
-    background: linear-gradient(90deg, #2E7D47, #88D49E);
+    background: linear-gradient(90deg, #2e7d47, var(--amazonia-light));
 }
 
 .province-card[data-prov="brazilia"]::before {
-    background: linear-gradient(90deg, #C28A29, #F5C46E);
+    background: linear-gradient(90deg, var(--accent), var(--accent-light));
 }
 
 .province-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-lg, 0 16px 36px rgba(0, 24, 48, 0.1));
+    box-shadow: var(--shadow-lg);
 }
 
 .body-dark .province-card {
-    background: var(--surface-card, #0E2035);
-    border-color: rgba(107, 164, 217, 0.2);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    background: var(--surface-card);
+    border-color: var(--tertiary-border);
+    box-shadow: 0 8px 24px var(--black-alpha-35);
 }
 
 .province-card-top {
@@ -435,51 +435,51 @@
     letter-spacing: 0.08em;
     padding: 0.25rem 0.65rem;
     border-radius: 6px;
-    background: var(--sand-100, #F5EDE1);
-    color: var(--primary, #003366);
+    background: var(--neutral-200);
+    color: var(--primary);
 }
 
 .body-dark .province-tag {
-    background: rgba(107, 164, 217, 0.15);
-    color: var(--tertiary, #6BA4D9);
+    background: var(--tertiary-subtle);
+    color: var(--tertiary);
 }
 
 .province-card h3 {
-    font-family: var(--font-display, 'Fraunces', serif);
+    font-family: var(--font-display);
     font-size: 1.35rem;
     font-weight: 600;
-    color: var(--heading, #001830);
+    color: var(--heading);
     margin-bottom: 0.75rem;
     line-height: 1.3;
 }
 
 .body-dark .province-card h3 {
-    color: var(--text-primary, #FBF7F0);
+    color: var(--heading);
 }
 
 .province-card p {
     font-size: 0.95rem;
     line-height: 1.65;
-    color: var(--text, #4A5568);
+    color: var(--text);
     margin-bottom: 1.25rem;
 }
 
 .body-dark .province-card p {
-    color: var(--text-secondary, #C2CDD8);
+    color: var(--text-secondary);
 }
 
-/* --- Clean, Non-Overflowing Card Stats System --- */
+/* Clean, Non-Overflowing Card Stats System */
 .province-card-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.75rem;
     padding-top: 1.25rem;
-    border-top: 1px solid var(--line, #E8DCB8);
+    border-top: 1px solid var(--line);
     margin-top: auto;
 }
 
 .body-dark .province-card-stats {
-    border-top-color: rgba(107, 164, 217, 0.15);
+    border-top-color: var(--tertiary-subtle);
 }
 
 .province-card-stats > div {
@@ -491,11 +491,11 @@
 
 .province-stat-num {
     display: block;
-    font-family: var(--font-display, 'Fraunces', serif);
+    font-family: var(--font-display);
     font-size: clamp(1.05rem, 1.4vw, 1.25rem);
     font-weight: 700;
     line-height: 1.2;
-    color: var(--amazonia, #4E8B5A);
+    color: var(--amazonia);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -503,48 +503,48 @@
 
 .province-card[data-prov="waikiki"] .province-stat-num,
 .sanctuary-item[data-prov="waikiki"] .province-stat-num {
-    color: var(--waikiki, #1A528F);
+    color: var(--waikiki);
 }
 
 .body-dark .province-card[data-prov="waikiki"] .province-stat-num,
 .body-dark .sanctuary-item[data-prov="waikiki"] .province-stat-num {
-    color: #6BA4D9;
+    color: var(--tertiary);
 }
 
 .province-card[data-prov="amazonia"] .province-stat-num,
 .sanctuary-item[data-prov="amazonia"] .province-stat-num {
-    color: var(--amazonia, #4E8B5A);
+    color: var(--amazonia);
 }
 
 .body-dark .province-card[data-prov="amazonia"] .province-stat-num,
 .body-dark .sanctuary-item[data-prov="amazonia"] .province-stat-num {
-    color: #88D49E;
+    color: var(--amazonia-light);
 }
 
 .province-card[data-prov="brazilia"] .province-stat-num,
 .sanctuary-item[data-prov="brazilia"] .province-stat-num {
-    color: var(--brazilia, #C28A29);
+    color: var(--brazilia);
 }
 
 .body-dark .province-card[data-prov="brazilia"] .province-stat-num,
 .body-dark .sanctuary-item[data-prov="brazilia"] .province-stat-num {
-    color: #F5C46E;
+    color: var(--accent-light);
 }
 
 .province-stat-lbl {
     display: block;
-    font-family: var(--font-sans, 'Manrope', sans-serif);
+    font-family: var(--font-sans);
     font-size: 0.72rem;
     font-weight: 600;
     line-height: 1.35;
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    color: var(--text-secondary, #718096);
+    color: var(--text-secondary);
     word-break: break-word;
 }
 
 .body-dark .province-stat-lbl {
-    color: var(--text-muted, #8A99AD);
+    color: var(--text-muted);
 }
 
 @media (max-width: 440px) {
@@ -559,24 +559,24 @@
     }
 }
 
-/* --- Sanctuaries Grid (Filtered) --- */
+/* Sanctuaries Grid (Filtered) */
 .sanctuaries-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr));
-    gap: var(--card-gap, 1.75rem);
+    gap: var(--card-gap);
     margin-top: 2rem;
 }
 
 .sanctuary-item {
     background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: var(--radius-lg, 20px);
+    border-radius: var(--radius-lg);
     padding: clamp(1.5rem, 2.5vw, 2rem);
     box-shadow: var(--shadow-sm);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: transform 0.35s var(--ease-out, ease), box-shadow 0.35s var(--ease-out, ease);
+    transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
     position: relative;
     overflow: hidden;
 }
@@ -592,15 +592,15 @@
 }
 
 .sanctuary-item[data-prov="waikiki"]::before {
-    background: linear-gradient(90deg, #1A528F, #20A4C8);
+    background: linear-gradient(90deg, var(--primary-light), var(--waikiki-light));
 }
 
 .sanctuary-item[data-prov="amazonia"]::before {
-    background: linear-gradient(90deg, #2E7D47, #88D49E);
+    background: linear-gradient(90deg, #2e7d47, var(--amazonia-light));
 }
 
 .sanctuary-item[data-prov="brazilia"]::before {
-    background: linear-gradient(90deg, #C28A29, #F5C46E);
+    background: linear-gradient(90deg, var(--accent), var(--accent-light));
 }
 
 .sanctuary-item:hover {
@@ -609,9 +609,9 @@
 }
 
 .body-dark .sanctuary-item {
-    background: var(--surface-card, #0E2035);
-    border-color: rgba(107, 164, 217, 0.2);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    background: var(--surface-card);
+    border-color: var(--tertiary-border);
+    box-shadow: 0 8px 24px var(--black-alpha-35);
 }
 
 .sanctuary-badge-prov {
@@ -620,58 +620,58 @@
     text-transform: uppercase;
     letter-spacing: 0.06em;
     padding: 0.25rem 0.65rem;
-    border-radius: 999px;
-    background: var(--sand-100, #F5EDE1);
-    color: var(--primary, #003366);
+    border-radius: var(--radius-pill);
+    background: var(--neutral-200);
+    color: var(--primary);
 }
 
 .sanctuary-badge-prov.prov-waikiki {
     background: rgba(26, 82, 143, 0.15);
-    color: var(--waikiki, #1A528F);
+    color: var(--waikiki);
 }
 
 .sanctuary-badge-prov.prov-amazonia {
     background: rgba(78, 139, 90, 0.15);
-    color: var(--amazonia, #4E8B5A);
+    color: var(--amazonia);
 }
 
 .sanctuary-badge-prov.prov-brazilia {
     background: rgba(194, 138, 41, 0.18);
-    color: var(--brazilia, #C28A29);
+    color: var(--brazilia);
 }
 
 .body-dark .sanctuary-badge-prov.prov-waikiki {
-    background: rgba(26, 82, 143, 0.3);
-    color: #6BA4D9;
+    background: var(--primary-light-alpha-30);
+    color: var(--tertiary);
 }
 
 .body-dark .sanctuary-badge-prov.prov-amazonia {
     background: rgba(78, 139, 90, 0.3);
-    color: #88D49E;
+    color: var(--amazonia-light);
 }
 
 .body-dark .sanctuary-badge-prov.prov-brazilia {
     background: rgba(194, 138, 41, 0.3);
-    color: #F5C46E;
+    color: var(--accent-light);
 }
 
 .sanctuary-item h3 {
-    font-family: var(--font-display, 'Fraunces', serif);
+    font-family: var(--font-display);
     font-size: 1.35rem;
     font-weight: 600;
-    color: var(--heading, #001830);
+    color: var(--heading);
     margin: 0.75rem 0 0.5rem 0;
     line-height: 1.3;
 }
 
 .body-dark .sanctuary-item h3 {
-    color: var(--text-primary, #FBF7F0);
+    color: var(--heading);
 }
 
 .sanctuary-art.nature-ill-frame {
     margin: 0 0 1.25rem 0;
     border-radius: 14px;
-    box-shadow: var(--shadow-xs, 0 4px 12px rgba(0, 24, 48, 0.06));
+    box-shadow: var(--shadow-xs);
 }
 
 .sanctuary-art .nature-ill {
@@ -681,29 +681,29 @@
 .sanctuary-item p {
     font-size: 0.95rem;
     line-height: 1.65;
-    color: var(--text, #4A5568);
+    color: var(--text);
     margin-bottom: 1.25rem;
 }
 
 .body-dark .sanctuary-item p {
-    color: var(--text-secondary, #C2CDD8);
+    color: var(--text-secondary);
 }
 
-/* --- Sovereign Green Charter Banner and Cards --- */
+/* Sovereign Green Charter Banner and Cards */
 .charter-card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
-    gap: var(--card-gap, 1.5rem);
+    gap: var(--card-gap);
     margin: 2rem 0 3rem;
 }
 
 .charter-rule-card {
     background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: var(--radius-lg, 20px);
+    border-radius: var(--radius-lg);
     padding: clamp(1.5rem, 2vw, 2rem);
     box-shadow: var(--shadow-sm);
-    transition: transform 0.35s var(--ease-out, ease), box-shadow 0.35s var(--ease-out, ease);
+    transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
     position: relative;
 }
 
@@ -713,9 +713,9 @@
 }
 
 .body-dark .charter-rule-card {
-    background: var(--surface-card, #0E2035);
-    border-color: rgba(107, 164, 217, 0.2);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    background: var(--surface-card);
+    border-color: var(--tertiary-border);
+    box-shadow: 0 8px 24px var(--black-alpha-35);
 }
 
 .charter-index-num {
@@ -727,8 +727,8 @@
     border-radius: 12px;
     background: linear-gradient(135deg, rgba(78, 139, 90, 0.15), rgba(78, 139, 90, 0.05));
     border: 1px solid rgba(78, 139, 90, 0.25);
-    color: var(--amazonia, #4E8B5A);
-    font-family: var(--font-display, 'Fraunces', serif);
+    color: var(--amazonia);
+    font-family: var(--font-display);
     font-weight: 700;
     font-size: 1.2rem;
     margin-bottom: 1rem;
@@ -738,89 +738,30 @@
 .body-dark .charter-index-num {
     background: linear-gradient(135deg, rgba(78, 139, 90, 0.3), rgba(78, 139, 90, 0.1));
     border-color: rgba(136, 212, 158, 0.35);
-    color: #88D49E;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+    color: var(--amazonia-light);
+    box-shadow: 0 4px 14px var(--black-alpha-40);
 }
 
 .charter-rule-card h3 {
-    font-family: var(--font-display, 'Fraunces', serif);
+    font-family: var(--font-display);
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--heading, #001830);
+    color: var(--heading);
     margin-bottom: 0.65rem;
     line-height: 1.3;
 }
 
 .body-dark .charter-rule-card h3 {
-    color: var(--text-primary, #FBF7F0);
+    color: var(--heading);
 }
 
 .charter-rule-card p {
     font-size: 0.95rem;
     line-height: 1.65;
-    color: var(--text, #4A5568);
+    color: var(--text);
     margin: 0;
 }
 
 .body-dark .charter-rule-card p {
-    color: var(--text-secondary, #C2CDD8);
-}
-
-.eco-expedition-banner {
-    background: linear-gradient(135deg, var(--primary, #003366) 0%, #154575 100%);
-    color: #ffffff;
-    border-radius: var(--radius-lg, 20px);
-    padding: clamp(2rem, 4vw, 3rem);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.25rem;
-    box-shadow: 0 16px 40px rgba(0, 51, 102, 0.25);
-    position: relative;
-    overflow: hidden;
-}
-
-.body-dark .eco-expedition-banner {
-    background: linear-gradient(135deg, #091C30 0%, #0E2E4E 100%);
-    border: 1px solid rgba(107, 164, 217, 0.3);
-}
-
-.eco-expedition-banner h3 {
-    font-family: var(--font-display, 'Fraunces', serif);
-    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
-    font-weight: 700;
-    margin: 0;
-    color: #ffffff;
-    line-height: 1.25;
-}
-
-.eco-expedition-banner p {
-    font-size: 1.05rem;
-    line-height: 1.7;
-    max-width: 760px;
-    margin: 0;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.eco-banner-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    padding: 0.85rem 1.85rem;
-    border-radius: 999px;
-    background: var(--accent, #C28A29);
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 0.95rem;
-    text-decoration: none;
-    transition: transform 0.25s var(--ease-out, ease), background 0.25s var(--ease-out, ease), box-shadow 0.25s var(--ease-out, ease);
-    box-shadow: 0 6px 18px rgba(194, 138, 41, 0.35);
-}
-
-.eco-banner-btn:hover {
-    background: var(--accent-hover, #C95A41);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(201, 90, 65, 0.4);
-    color: #ffffff;
+    color: var(--text-secondary);
 }

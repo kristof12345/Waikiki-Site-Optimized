@@ -1,0 +1,23 @@
+/* FAQ Page Specific Styles */
+
+.faq-cta {
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  background: var(--surface-2);
+  border: var(--border-width) solid var(--line-strong);
+  background-clip: padding-box;
+  box-shadow: 0 0 0 1px var(--primary-alpha-05), var(--shadow-sm);
+  text-align: center;
+}
+
+.faq-cta p {
+  margin: 0;
+  color: var(--heading);
+  font-size: 1.12rem;
+  line-height: 1.8;
+}
+
+.body-dark .faq-cta {
+  border-color: var(--white-alpha-18);
+  box-shadow: 0 0 0 1px var(--white-alpha-08), var(--shadow-sm);
+}

@@ -26,7 +26,7 @@ The Sovereign Nation of Waikiki web portal is engineered as a high-performance, 
 │   ├── index.css           # Landing & portal specific layouts
 │   ├── society.css         # Interactive province SVG map, city markers, administrative cards
 │   ├── economy.css         # Economy and sovereign wealth fund charts, comparison bars, milestones timeline
-│   ├── citizenship.css     # Immigration screening tier cards, assessment modal
+│   ├── citizenship.css     # Immigration screening tier cards, naturalization process cards
 │   ├── bio.css             # Royal biography typography, quote blocks, narrative styling
 │   ├── detailed.css        # Detailed ministerial profile cards, portfolio galleries
 │   ├── government.css      # Executive branch, cabinet, and state organ styling
@@ -39,7 +39,6 @@ The Sovereign Nation of Waikiki web portal is engineered as a high-performance, 
 │   ├── common.js           # Master motion engine: header, theme toggle, curtain, scroll reveals
 │   ├── economy.js          # Chart.js economic data models, GDP growth and export visualizations
 │   ├── wealth-fund.js      # Wealth fund asset allocation charts and portfolio dynamics
-│   ├── citizenship.js      # Interactive citizenship eligibility assessment calculator
 │   ├── gallery.js          # Fullscreen responsive gallery viewer and category filters
 │   └── chart.min.js        # Standalone Chart.js library
 ├── scripts/

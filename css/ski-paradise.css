@@ -46,36 +46,12 @@
   }
 }
 
-/* Hero Art Specific Layout */
-.hero-art {
-  width: min(46vw, 720px);
-  transform: translateY(-46%);
-  animation: riseIn 1.4s var(--ease-out) 0.6s both;
-}
-
-@media (max-width: 1920px) {
-  .hero-art {
-    position: relative;
-    right: auto;
-    top: auto;
-    transform: none;
-    width: min(100%, 560px);
-    margin: 0 auto 2rem;
-    order: -1;
-  }
-
-  .hero--art {
-    flex-direction: column;
-    align-items: stretch;
-  }
-}
-
 /* Essentials Tiles */
 .fact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
   gap: 1rem;
-  max-width: 1320px;
+  max-width: var(--width-m);
   margin: 0 auto;
 }
 
@@ -131,9 +107,7 @@
   margin-top: 0.2rem;
 }
 
-/* ==========================================================================
-   Interactive Alpine Sector Map System (Infrastructure-style)
-   ========================================================================== */
+/* Interactive Alpine Sector Map System (Infrastructure-style) */
 
 .alpine-map-section {
   position: relative;
@@ -182,7 +156,7 @@
 .island-tab-btn[aria-selected="true"] {
   background: var(--primary);
   border-color: var(--primary);
-  color: #ffffff;
+  color: var(--neutral-50);
   box-shadow: 0 6px 18px rgba(0, 34, 68, 0.22);
 }
 
@@ -352,7 +326,7 @@
 
 .map-hotspot .hotspot-core {
   fill: var(--primary);
-  stroke: #ffffff;
+  stroke: var(--neutral-50);
   stroke-width: 2.2;
   transition: fill 0.25s, r 0.25s;
 }
@@ -363,7 +337,7 @@
 }
 
 .map-hotspot text {
-  fill: #ffffff;
+  fill: var(--neutral-50);
   font-family: var(--font-sans);
   font-size: 11px;
   font-weight: 800;
@@ -410,7 +384,7 @@
   height: 28px;
   border-radius: 50%;
   background: var(--primary);
-  color: #ffffff;
+  color: var(--neutral-50);
   font: 700 0.82rem/1 var(--font-sans);
   transition: background-color 0.3s, transform 0.3s;
 }
@@ -435,9 +409,7 @@
   margin: 0;
 }
 
-/* ==========================================================================
-   Piste Difficulty Breakdown & Engineering Features
-   ========================================================================== */
+/* Piste Difficulty Breakdown and Engineering Features */
 
 .piste-mix {
   max-width: 1100px;
@@ -515,7 +487,7 @@
 .piste-legend i {
   width: 14px;
   height: 14px;
-  border-radius: 4px;
+  border-radius: var(--radius-2xs);
   display: inline-block;
 }
 
@@ -541,7 +513,7 @@
 
 .feature-list li:hover {
   transform: translateX(6px);
-  border-color: rgba(26, 82, 143, 0.35);
+  border-color: var(--primary-light-border);
   box-shadow: var(--shadow-md);
 }
 
@@ -569,17 +541,12 @@
 
 /* Elevation Chart */
 .ill-panel {
-  position: relative;
   padding: clamp(1rem, 2.5vw, 2rem);
-  border: var(--border-width) solid var(--line);
   border-radius: var(--radius-lg);
   background:
-    radial-gradient(600px 300px at 0% 0%, rgba(107, 164, 217, 0.16), transparent 60%),
-    radial-gradient(500px 300px at 100% 100%, rgba(227, 115, 90, 0.1), transparent 60%),
+    radial-gradient(600px 300px at 0% 0%, var(--tertiary-alpha-16), transparent 60%),
+    radial-gradient(500px 300px at 100% 100%, var(--ill-sun-alpha-10), transparent 60%),
     var(--surface);
-  box-shadow: var(--shadow-md);
-  max-width: var(--width-l);
-  margin: 0 auto 2rem;
 }
 
 .ill-caption {
@@ -618,9 +585,7 @@
   transform: scaleY(0);
 }
 
-/* ==========================================================================
-   Filter Bar and Luxury Resort Cards (Travel Guide-style)
-   ========================================================================== */
+/* Filter Bar and Luxury Resort Cards (Travel Guide-style) */
 
 #resorts {
   padding-left: clamp(1rem, 2.5vw, 3rem);
@@ -748,7 +713,7 @@
 
 /* Travel Info callout banners */
 .travel-callout {
-  max-width: 1320px;
+  max-width: var(--width-m);
   margin: 3rem auto 0;
   padding: clamp(1.5rem, 3.5vw, 2.5rem);
   border-radius: var(--radius-lg);
@@ -879,7 +844,7 @@
   display: inline-block;
   width: 22px;
   height: 14px;
-  border-radius: 4px;
+  border-radius: var(--radius-2xs);
 }
 
 @media (max-width: 720px) {

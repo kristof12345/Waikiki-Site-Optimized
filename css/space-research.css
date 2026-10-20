@@ -1,12 +1,11 @@
 /* Space Research Stylesheet — Sovereign Nation of Waikiki */
 
-
 .spec-badge {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     padding: 0.35rem 0.85rem;
-    border-radius: 999px;
+    border-radius: var(--radius-pill);
     background: var(--primary-subtle);
     border: 1px solid var(--primary);
     color: var(--primary);
@@ -18,8 +17,8 @@
 }
 
 .body-dark .spec-badge {
-    background: rgba(107, 164, 217, 0.12);
-    border-color: rgba(107, 164, 217, 0.25);
+    background: var(--tertiary-subtle);
+    border-color: var(--tertiary-border);
     color: var(--tertiary);
 }
 
@@ -49,7 +48,7 @@
 .mission-status-pill {
     display: inline-block;
     padding: 0.2rem 0.6rem;
-    border-radius: 4px;
+    border-radius: var(--radius-2xs);
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.05em;
@@ -63,54 +62,11 @@
 }
 
 .body-dark .status-active {
-    background: rgba(107, 164, 217, 0.2);
+    background: var(--tertiary-border);
     color: var(--tertiary);
 }
 
-/* Illustrated Panels */
-.ill-panel {
-    margin: 2.5rem auto;
-    max-width: var(--width-s, 1160px);
-    width: 100%;
-    border-radius: var(--radius);
-    overflow: hidden;
-    border: 1px solid var(--line-strong);
-    background: var(--surface);
-    box-shadow: var(--shadow-md);
-    position: relative;
-}
-
-.ill-caption {
-    padding: 1rem 1.5rem;
-    background: var(--surface-2);
-    border-top: 1px solid var(--line);
-    font-size: 0.88rem;
-    color: var(--text-muted);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-}
-
-.ill-caption strong {
-    color: var(--heading);
-}
-
-/* SVG helpers and animations */
-.ill {
-    display: block;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-}
-
-.ill .spin {
-    transform-box: fill-box;
-    transform-origin: center;
-    animation: illSpin 14s linear infinite;
-}
-
+/* Space Research SVG animations */
 .ill .spin-fast {
     transform-box: fill-box;
     transform-origin: center;
@@ -123,40 +79,13 @@
     animation: illSpinRev 16s linear infinite;
 }
 
-.ill .pulse {
-    transform-box: fill-box;
-    transform-origin: center;
-    animation: illPulse 2.8s var(--ease-out, ease-out) infinite;
-}
-
 .ill .pulse-glow {
     animation: illPulseGlow 3s ease-in-out infinite alternate;
-}
-
-.ill .dash {
-    stroke-dasharray: 6 8;
-    animation: illDash 2.4s linear infinite;
 }
 
 .ill .dash-rev {
     stroke-dasharray: 6 8;
     animation: illDashRev 2.4s linear infinite;
-}
-
-.ill .twinkle {
-    animation: illTwinkle 3.2s ease-in-out infinite;
-}
-
-.ill .twinkle:nth-of-type(2n) {
-    animation-delay: 0.9s;
-}
-
-.ill .twinkle:nth-of-type(3n) {
-    animation-delay: 1.8s;
-}
-
-.ill .bob {
-    animation: illBob 6s ease-in-out infinite;
 }
 
 .ill .flame-pulse {
@@ -175,12 +104,6 @@
     to { transform: rotate(-360deg); }
 }
 
-@keyframes illPulse {
-    0% { transform: scale(0.95); opacity: 0.95; }
-    50% { transform: scale(1.18); opacity: 0.35; }
-    100% { transform: scale(0.95); opacity: 0.95; }
-}
-
 @keyframes illPulseGlow {
     from { opacity: 0.4; }
     to { opacity: 1; }
@@ -188,16 +111,6 @@
 
 @keyframes illDashRev {
     to { stroke-dashoffset: 28; }
-}
-
-@keyframes illTwinkle {
-    0%, 100% { opacity: 0.25; transform: scale(0.8); }
-    50% { opacity: 1; transform: scale(1.25); }
-}
-
-@keyframes illBob {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-7px); }
 }
 
 @keyframes illFlame {
@@ -210,7 +123,7 @@
     100% { transform: scaleY(1.0); transform-origin: bottom; }
 }
 
-/* Digital State & Orbital Reach section */
+/* Digital State and Orbital Reach section */
 #digital-space .ill-panel {
     max-width: var(--width-s, 1160px);
     width: 100%;
@@ -224,5 +137,3 @@
     max-width: var(--width-m);
     margin: 0 auto;
 }
-
-

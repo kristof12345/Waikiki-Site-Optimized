@@ -6,7 +6,7 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.35rem 0.85rem;
-    border-radius: 999px;
+    border-radius: var(--radius-pill);
     background: var(--accent-subtle);
     border: 1px solid rgba(194, 154, 87, 0.3);
     color: var(--accent-dark);
@@ -24,21 +24,21 @@
 }
 
 .visa-badge.is-green {
-    background: rgba(26, 82, 143, 0.12);
-    border-color: rgba(26, 82, 143, 0.3);
+    background: var(--primary-light-alpha-12);
+    border-color: var(--primary-light-alpha-30);
     color: var(--waikiki);
 }
 
 .visa-badge.is-blue {
-    background: rgba(26, 82, 143, 0.12);
-    border-color: rgba(26, 82, 143, 0.3);
+    background: var(--primary-light-alpha-12);
+    border-color: var(--primary-light-alpha-30);
     color: var(--primary-light);
 }
 
 .visa-badge.is-red {
     background: rgba(192, 57, 43, 0.12);
     border-color: rgba(192, 57, 43, 0.3);
-    color: #c0392b;
+    color: var(--chart-6);
 }
 
 .body-dark .visa-badge.is-green {
@@ -48,7 +48,7 @@
 }
 
 .body-dark .visa-badge.is-blue {
-    background: rgba(107, 164, 217, 0.16);
+    background: var(--tertiary-alpha-16);
     border-color: rgba(107, 164, 217, 0.35);
     color: var(--tertiary);
 }
@@ -86,7 +86,7 @@
 }
 
 .body-dark .visa-card:hover {
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 12px 32px var(--black-alpha-35);
 }
 
 .visa-card-header {
@@ -204,7 +204,7 @@
 .tier-card.is-active {
     border-color: var(--primary);
     background: rgba(26, 82, 143, 0.06);
-    box-shadow: 0 0 0 2px rgba(26, 82, 143, 0.14);
+    box-shadow: 0 0 0 2px var(--primary-light-alpha-14);
 }
 
 .body-dark .tier-card.is-active {
@@ -225,7 +225,7 @@
 .tier-badge {
     display: inline-block;
     padding: 0.16rem 0.5rem;
-    border-radius: 999px;
+    border-radius: var(--radius-pill);
     font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 0.04em;
@@ -243,8 +243,8 @@
 }
 
 .tier-badge.badge-teal {
-    background: rgba(26, 82, 143, 0.14);
-    color: #1a528f;
+    background: var(--primary-light-alpha-14);
+    color: var(--primary-light);
 }
 
 .body-dark .tier-badge.badge-teal {
@@ -291,9 +291,8 @@
     color: var(--text-muted);
 }
 
-
 .checker-result-panel {
-    background: var(--surface-alt, rgba(0, 51, 102, 0.03));
+    background: var(--surface-2);
     border: 1.5px solid var(--line);
     border-radius: var(--radius-lg, 16px);
     padding: 1rem;
@@ -323,7 +322,7 @@
     background: var(--surface);
     border: 1px solid var(--line);
     padding: 0.32rem 0.75rem;
-    border-radius: 999px;
+    border-radius: var(--radius-pill);
 }
 
 .result-tag {
@@ -331,7 +330,7 @@
     align-items: center;
     gap: 0.4rem;
     padding: 0.4rem 0.9rem;
-    border-radius: 999px;
+    border-radius: var(--radius-pill);
     font-size: 0.8rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -351,9 +350,9 @@
 }
 
 .result-tag.tag-fast {
-    background: rgba(26, 82, 143, 0.14);
-    color: #1a528f;
-    border: 1px solid rgba(26, 82, 143, 0.3);
+    background: var(--primary-light-alpha-14);
+    color: var(--primary-light);
+    border: 1px solid var(--primary-light-alpha-30);
 }
 
 .body-dark .result-tag.tag-fast {
@@ -438,7 +437,6 @@
     line-height: 1.25;
 }
 
-
 .result-footer {
     display: flex;
     flex-wrap: wrap;
@@ -489,7 +487,7 @@
     color: var(--accent-subtle);
     line-height: 1;
     margin-bottom: 1rem;
-    font-family: var(--font-heading, "Fraunces", serif);
+    font-family: var(--font-display);
     letter-spacing: -0.04em;
     display: flex;
     justify-content: space-between;
@@ -502,10 +500,10 @@
     text-transform: uppercase;
     letter-spacing: 0.1em;
     padding: 0.25rem 0.6rem;
-    border-radius: 999px;
-    background: var(--surface-alt, rgba(0, 0, 0, 0.04));
+    border-radius: var(--radius-pill);
+    background: var(--surface-2);
     color: var(--text-muted);
-    font-family: var(--font-body, "Manrope", sans-serif);
+    font-family: var(--font-sans);
 }
 
 .process-step-card h3 {
@@ -553,7 +551,7 @@
 }
 
 .body-dark .customs-icon {
-    background: rgba(107, 164, 217, 0.15);
+    background: var(--tertiary-subtle);
     color: var(--tertiary-light);
 }
 

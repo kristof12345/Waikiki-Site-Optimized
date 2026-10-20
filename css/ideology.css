@@ -59,7 +59,7 @@
 .detail-section.alt {
     flex-direction: row-reverse;
     background:
-        radial-gradient(900px 500px at 10% 100%, rgba(107, 164, 217, 0.14), transparent 60%),
+        radial-gradient(900px 500px at 10% 100%, var(--tertiary-alpha-14), transparent 60%),
         var(--teal-alt);
 }
 
@@ -91,12 +91,12 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border: 1px solid rgba(244, 179, 155, 0.25);
+    border: 1px solid var(--coral-tint-25);
     border-radius: var(--radius-lg);
     background:
         radial-gradient(circle at 70% 30%, rgba(227, 115, 90, 0.28), transparent 55%),
         radial-gradient(circle at 20% 80%, rgba(107, 164, 217, 0.22), transparent 55%),
-        rgba(255, 255, 255, 0.03);
+        var(--white-alpha-03);
 }
 
 .detail-visual::before {
@@ -104,7 +104,7 @@
     position: absolute;
     width: 70%;
     aspect-ratio: 1;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid var(--white-alpha-12);
     border-radius: 50%;
     animation: sunFloat 10s var(--ease-in-out) infinite;
 }
