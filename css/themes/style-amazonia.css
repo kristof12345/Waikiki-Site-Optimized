@@ -116,6 +116,10 @@
   stroke: var(--tertiary);
 }
 
+.card-icon img {
+  filter: brightness(0) saturate(100%) invert(27%) sepia(27%) saturate(912%) hue-rotate(103deg) brightness(98%) contrast(97%);
+}
+
 /* Night Mode (Body-Dark) Overrides */
 .body-dark {
   --bg: #06150e;
@@ -146,6 +150,10 @@
 
 .body-dark .table thead th {
   background: var(--dark-surface-3);
+}
+
+.body-dark .card-icon img {
+  filter: brightness(0) saturate(100%) invert(61%) sepia(34%) saturate(629%) hue-rotate(100deg) brightness(96%) contrast(89%);
 }
 
 .body-dark .faq-item:hover {
