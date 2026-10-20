@@ -279,8 +279,8 @@ def draw_palm_tree(x, y, scale=1.0, tilt=1.0):
     return out
 
 
-def mist_band(y, h):
-    return [f'<rect x="0" y="{n(y)}" width="1200" height="{n(h)}" fill="url(#mist)" />']
+def mist_band(y, h, grad_id="mist"):
+    return [f'<rect x="0" y="{n(y)}" width="1200" height="{n(h)}" fill="url(#{grad_id})" />']
 
 
 def cloud(x, y, s, dx, dur):
@@ -660,7 +660,7 @@ def build_andes_svg() -> str:
         '<stop offset="0.5" stop-color="#dcebf8" />',
         '<stop offset="1" stop-color="#bcd6ee" />',
         "</linearGradient>",
-        '<linearGradient id="mist" x1="0" y1="0" x2="0" y2="1">',
+        '<linearGradient id="andes-mist" x1="0" y1="0" x2="0" y2="1">',
         '<stop offset="0" stop-color="#ffffff" stop-opacity="0" />',
         '<stop offset="0.7" stop-color="#e6f0fa" stop-opacity="0.6" />',
         '<stop offset="1" stop-color="#e6f0fa" stop-opacity="0.15" />',
@@ -692,10 +692,10 @@ def build_andes_svg() -> str:
     o.append('<g opacity="0.9">')
     o += draw_range(range_peaks(-20, 1230, 82, 150, 222, 70, 100, 330, 3.3), far_c, 245, 40)
     o.append("</g>")
-    o += mist_band(250, 90)
+    o += mist_band(250, 90, "andes-mist")
     o.append("<!-- 3. Mid range -->")
     o += draw_range(range_peaks(-40, 1240, 118, 205, 268, 95, 130, 410, 7.1), mid_c, 300, 70)
-    o += mist_band(320, 100)
+    o += mist_band(320, 100, "andes-mist")
 
     # 4. Main ski massif (eight summits)
     main_c = dict(
@@ -907,7 +907,7 @@ def build_haiti_svg() -> str:
         '<stop offset="0" stop-color="#e0f7fe" />',
         '<stop offset="1" stop-color="#38bdf8" />',
         "</linearGradient>",
-        '<linearGradient id="mist" x1="0" y1="0" x2="0" y2="1">',
+        '<linearGradient id="haiti-mist" x1="0" y1="0" x2="0" y2="1">',
         '<stop offset="0" stop-color="#ffffff" stop-opacity="0" />',
         '<stop offset="0.7" stop-color="#eef6fb" stop-opacity="0.55" />',
         '<stop offset="1" stop-color="#eef6fb" stop-opacity="0.1" />',
@@ -937,7 +937,7 @@ def build_haiti_svg() -> str:
         285,
         90,
     )
-    o += mist_band(300, 120)
+    o += mist_band(300, 120, "haiti-mist")
 
     # 3. Main island massif: jungle-clad lower slopes, glacier summits
     main_c = dict(
@@ -965,7 +965,7 @@ def build_haiti_svg() -> str:
         '<path d="M605,292 L590,344 M635,292 L628,344 M665,292 L668,344 M690,292 L702,344" />',
         "</g>",
     ]
-    o += mist_band(370, 80)
+    o += mist_band(370, 80, "haiti-mist")
 
     # 4. Coastal jungle foothills with canopy texture
     def top(x):
