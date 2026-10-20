@@ -5,6 +5,10 @@
 1. **Prefer "and" / "és" over ampersand ("&")**: Use the word "and" (in English) and "és" (in Hungarian) instead of the "&" symbol in titles, section headings, card headers, labels, and copy.
 2. **Alternating Section Styles**: Top-level page sections must alternate between normal and `light-bg` styles.
 
+## CSS & Media Query Guidelines
+
+1. **Desktop-First Media Queries**: Write default styles for large screens (desktop). Use `@media (max-width: ...)` queries to adapt for smaller screens, avoiding `min-width` media queries.
+
 ## HTML Page Builds and Edits
 
 After building or editing any HTML page:

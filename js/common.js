@@ -29,7 +29,7 @@
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
-    /* ---------------------------------------------------------------- utils */
+    /* utils */
     const $ = (selector, scope = document) => scope.querySelector(selector);
     const $$ = (selector, scope = document) => Array.from(scope.querySelectorAll(selector));
 
@@ -46,7 +46,7 @@
         };
     }
 
-    /* ---------------------------------------------------------------- theme */
+    /* theme */
     function isDark() {
         return root.classList.contains(DARK_CLASS);
     }
@@ -71,7 +71,7 @@
         document.dispatchEvent(new CustomEvent('themechange', { detail: { dark } }));
     }
 
-    /** Global for backwards compatibility with inline onclick handlers. */
+    /* Global for backwards compatibility with inline onclick handlers. */
     window.setTheme = function () {
         applyTheme(!isDark());
     };
@@ -90,7 +90,7 @@
         });
     }
 
-    /* ---------------------------------------------------------------- style */
+    /* style */
     const STYLE_STORAGE_KEY = 'waikikiSiteStyle';
     const STYLE_LINK_ID = 'waikiki-style-override';
     const STYLES = [
@@ -555,7 +555,7 @@
     // Early link injection before DOM ready
     initStyle();
 
-    /* -------------------------------------------------------------- animate */
+    /* animate */
     const ANIMATION_STORAGE_KEY = 'isAnimationDisabled';
 
     function isAnimate() {
@@ -614,7 +614,7 @@
         });
     }
 
-    /* -------------------------------------------------------------- curtain */
+    /* curtain */
     function initCurtain() {
         // Restore pages served from the back/forward cache.
         window.addEventListener('pageshow', (event) => {
@@ -641,7 +641,7 @@
         });
     }
 
-    /* --------------------------------------------------------------- header */
+    /* header */
     function initHeader() {
         const header = $('.site-header');
         if (!header) return;
@@ -675,7 +675,7 @@
         window.addEventListener('scroll', rafThrottle(update), { passive: true });
     }
 
-    /* ----------------------------------------------------------------- menu */
+    /* menu */
     function initMenu() {
         const toggle = $('#menu-toggle');
         const menu = $('#site-menu');
@@ -762,8 +762,7 @@
         }
     }
 
-    /* --------------------------------------------------------------- reveal */
-    /** Wrap each word of an element in masking spans, preserving inline markup. */
+    /* reveal */
     function splitWords(element) {
         if (element.dataset.split === 'done') return;
         let wordIndex = 0;
@@ -808,6 +807,9 @@
         ['[data-reveal]', null]
     ];
 
+    const REVEAL_THRESHOLD = 0.1;
+    const REVEAL_ROOT_MARGIN = '0px 0px -5% 0px';
+
     function initReveal() {
         const targets = new Set();
 
@@ -846,7 +848,7 @@
                     entry.target.classList.add('is-in');
                     observer.unobserve(entry.target);
                 });
-            }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+            }, { threshold: REVEAL_THRESHOLD, rootMargin: REVEAL_ROOT_MARGIN });
             window._revealObserver = observer;
             targets.forEach((element) => observer.observe(element));
         }
@@ -865,7 +867,7 @@
         root.classList.add('reveal-ready');
     }
 
-    /* ------------------------------------------------------------- counters */
+    /* counters */
     /** Parse "$41.8T", "8,8M km²", "<1%" into prefix / number / suffix. */
     function parseStat(text) {
         const match = text.match(/^(\D*?)(\d+(?:[.,]\d+)*)(.*)$/s);
@@ -934,7 +936,7 @@
         elements.forEach((element) => observer.observe(element));
     }
 
-    /* ------------------------------------------------------------- parallax */
+    /* parallax */
     function initParallax() {
         if (prefersReducedMotion) return;
         const heroMedia = $('.hero .hero-media');
@@ -961,7 +963,7 @@
         window.addEventListener('resize', rafThrottle(update));
     }
 
-    /* -------------------------------------------------------------- pointer */
+    /* pointer */
     function initPointerEffects() {
         if (!finePointer || prefersReducedMotion) return;
 
@@ -975,7 +977,7 @@
         }), { passive: true });
     }
 
-    /* ----------------------------------------------------------------- rail */
+    /* rail */
     function initSectionRail() {
         const sections = $$('main > section[id]').filter((section) => $('.section-title, h2, h3', section));
         if (sections.length < 3) return;
@@ -1015,7 +1017,7 @@
         window.addEventListener('scroll', setActive, { passive: true });
     }
 
-    /* ------------------------------------------------------------- progress */
+    /* progress */
     function initProgress() {
         const bar = $('.scroll-progress');
         const toTop = $('.to-top');
@@ -1039,7 +1041,7 @@
         window.addEventListener('resize', rafThrottle(update));
     }
 
-    /* ------------------------------------------------------------- timeline */
+    /* timeline */
     function initTimelines() {
         const timelines = $$('.timeline, .timeline-container, .timeline-expanded');
         if (!timelines.length) return;
@@ -1057,7 +1059,7 @@
         window.addEventListener('scroll', rafThrottle(update), { passive: true });
     }
 
-    /* -------------------------------------------------------------- marquee */
+    /* marquee */
     function initMarquees() {
         $$('.marquee-track').forEach((track) => {
             if (track.dataset.cloned) return;
@@ -1070,7 +1072,7 @@
         });
     }
 
-    /* ------------------------------------------------------------------ faq */
+    /* faq */
     function initFaqAccordion() {
         const items = $$('details.faq-item');
         if (!items.length) return;
@@ -1166,7 +1168,7 @@
         });
     }
 
-    /* ---------------------------------------------------------------- filter */
+    /* filter */
     function initFilterBar(bar) {
         const grid = document.getElementById(bar.dataset.filterFor);
         if (!grid) return;
@@ -1201,7 +1203,7 @@
         $$('.filter-bar[data-filter-for]').forEach(initFilterBar);
     }
 
-    /* ----------------------------------------------------------------- boot */
+    /* boot */
     function init() {
         initTheme();
         initStyleUI();

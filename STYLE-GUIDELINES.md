@@ -137,4 +137,5 @@ All motion follows natural organic physics with custom cubic Bézier curves:
 - **Motion Reduction**: `@media (prefers-reduced-motion: reduce)` disables transit curtains and continuous animations for sensitive users.
 - **Keyboard Navigation**: Clear `:focus-visible` rings with `--coral-500` glow and `outline-offset: 3px`.
 - **Multilingual Semantics**: Proper `hreflang="hu"` and `hreflang="en"` links on language selectors; `lang` attributes on `<html>`.
+- **Responsive Media Queries**: Desktop-first architecture. Base rules define large-screen styles; adaptations for smaller viewports use `@media (max-width: ...)` queries, avoiding `min-width` media queries.
 - **Remove unused css**: `purgecss --css css/*.css --output css/ --content **/*.html **/*.js`

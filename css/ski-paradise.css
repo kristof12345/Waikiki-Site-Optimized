@@ -594,28 +594,10 @@
 
 .hotel-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: clamp(1rem, 1.25vw, 1.35rem);
   max-width: var(--width-l);
   margin: 0 auto;
-}
-
-@media (max-width: 1480px) {
-  .hotel-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 920px) {
-  .hotel-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 560px) {
-  .hotel-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 .hotel {

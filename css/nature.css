@@ -542,7 +542,7 @@
     color: var(--text-muted);
 }
 
-@media (max-width: 440px) {
+@media (max-width: 480px) {
     .province-card-stats {
         grid-template-columns: 1fr;
         gap: 0.65rem;

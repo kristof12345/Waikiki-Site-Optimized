@@ -286,7 +286,7 @@
 /* Thin, warm scrollbar */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--header-h-compact) + 1rem);
+  scroll-padding-top: var(--header-h-compact);
   background: var(--bg);
   scrollbar-width: thin;
 }
@@ -1748,6 +1748,7 @@ html.menu-open .menu-aside {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.92rem;
+  table-layout: fixed;
 }
 
 .table tbody tr {
@@ -1780,12 +1781,6 @@ html.menu-open .menu-aside {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-}
-
-@media (min-width: 800px) {
-  .table table {
-    table-layout: fixed;
-  }
 }
 
 /* 10. FAQ */
@@ -2571,7 +2566,7 @@ html.header-hidden .subnav {
   right: clamp(0.75rem, 1.6vw, 1.75rem);
   top: 50%;
   z-index: var(--z-float);
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 0.35rem;
   transform: translate3d(160%, -50%, 0);
@@ -2795,6 +2790,10 @@ html.header-hidden .subnav {
     display: none;
   }
 
+  .section-rail {
+    display: none;
+  }
+
   .site-menu-inner {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     align-content: start;
@@ -2810,12 +2809,6 @@ html.header-hidden .subnav {
 
   .footer-brand {
     grid-column: 1 / -1;
-  }
-}
-
-@media (min-width: 1281px) {
-  .section-rail {
-    display: flex;
   }
 }
 
@@ -2916,6 +2909,10 @@ html.header-hidden .subnav {
 
   .next-chapter {
     padding: 30px var(--gutter);
+  }
+
+  .table table {
+    table-layout: auto;
   }
 
   .video-wrapper {
