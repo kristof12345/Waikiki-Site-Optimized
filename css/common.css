@@ -3087,29 +3087,6 @@ html.header-hidden .subnav {
   }
 }
 
-/* Legacy keyframes referenced by page stylesheets */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Shared and Illustration Keyframes */
 @keyframes filterIn {
   from {

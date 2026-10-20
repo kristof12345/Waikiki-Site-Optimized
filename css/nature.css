@@ -111,11 +111,6 @@
     to { transform: translateX(12px); }
 }
 
-@keyframes natDriftReverse {
-    from { transform: translateX(14px); }
-    to { transform: translateX(-14px); }
-}
-
 @keyframes natBob {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-6px); }

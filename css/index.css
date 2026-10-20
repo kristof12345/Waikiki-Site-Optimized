@@ -34,6 +34,14 @@
   font-size: 1.05rem;
 }
 
+.branches-title {
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
 /* Alternating Timeline */
 .timeline {
   position: relative;
