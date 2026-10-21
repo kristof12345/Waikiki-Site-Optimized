@@ -3,8 +3,8 @@
 Comprehensive Browser Layout & Contrast Auditor — Sovereign Nation of Waikiki Site
 Part of the 'layout-audit' skill.
 
-Audits HTML pages across multiple viewports and color themes using headless Chrome:
-    - Viewports: 2560px (Ultra-wide desktop), 1280px (Standard desktop), 390px (Mobile)
+Audits HTML pages across multiple viewports and color themes using Playwright / headless Chrome:
+    - Viewports: 2560px (Ultra-wide desktop), 1280px (Standard desktop), 430px (Mobile)
     - Color Modes: Light Mode, Dark Mode (body-dark)
 
 Checks for:
@@ -19,7 +19,7 @@ Usage:
     python3 .agents/skills/layout-audit/scripts/layout_audit.py hu/overview.html
 
     # Audit specific width or mode
-    python3 .agents/skills/layout-audit/scripts/layout_audit.py --widths 2560,390 --modes light,dark hu/overview.html
+    python3 .agents/skills/layout-audit/scripts/layout_audit.py --widths 2560,430 --modes light,dark hu/overview.html
 
     # Audit all site pages (quick summary)
     python3 .agents/skills/layout-audit/scripts/layout_audit.py --all
@@ -49,7 +49,6 @@ VIEWPORTS = {
     "1280": (1280, 800, "1280px Desktop (Standard)"),
     "430": (430, 932, "430px Mobile (Phone)"),
     "mobile": (430, 932, "430px Mobile (Phone)"),
-    "390": (430, 932, "430px Mobile (Phone)"),  # alias to 430px standard
 }
 
 THEMES = ["light", "dark"]
