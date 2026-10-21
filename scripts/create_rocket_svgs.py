@@ -127,64 +127,167 @@ def svg_delta_3a():
     <path d="M 422 715 L 420 735 L 428 735 L 426 715 Z" fill="currentColor" opacity="0.4" stroke="currentColor" stroke-width="1.4" />"""
     return wrap_svg("d3a", "115.0 M", "CORE 4.0 M", content)
 
-# 2. Space Shuttle (NASA STS: External Tank, twin SRBs, and winged Orbiter mounted)
+# 2. Space Shuttle (NASA STS Orbiter: authentic double-delta winged orbiter)
 def svg_shuttle():
     id_p = "sts"
-    content = f"""    <!-- External Tank (ET) Center Body -->
-    <path d="M 370 120 C 370 70 400 45 400 45 C 400 45 430 70 430 120 L 430 690 C 430 710 370 710 370 690 Z" fill="url(#{id_p}Body)" stroke="currentColor" stroke-width="2.2" />
-    <!-- ET Pressurization Line & Tank Ribs -->
-    <line x1="400" y1="45" x2="400" y2="695" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.7" />
-    <line x1="370" y1="220" x2="430" y2="220" stroke="currentColor" stroke-width="1" opacity="0.6" />
-    <line x1="370" y1="360" x2="430" y2="360" stroke="currentColor" stroke-width="1" opacity="0.6" />
-    <line x1="370" y1="520" x2="430" y2="520" stroke="currentColor" stroke-width="1" opacity="0.6" />
+    content = f"""    <!-- Space Shuttle Orbiter (Top-Down / Dorsal Technical Blueprint) -->
 
-    <!-- Left Solid Rocket Booster (SRB) -->
+    <!-- Wings (Double-Delta Wing Planform: Strakes sweeping at ~81°, leading edge at 45° to wingtips) -->
+    <!-- Left Wing Structure -->
+    <path d="M 356 220 L 324 410 L 165 595 L 165 620 L 342 620 L 356 610 Z" fill="url(#{id_p}Wing)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
+    <!-- Right Wing Structure -->
+    <path d="M 444 220 L 476 410 L 635 595 L 635 620 L 458 620 L 444 610 Z" fill="url(#{id_p}Wing)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
+
+    <!-- Black RCC (Reinforced Carbon-Carbon) Thermal Protection Leading Edges -->
+    <path d="M 356 220 L 324 410 L 165 595 L 165 605 L 328 418 L 358 230 Z" fill="currentColor" opacity="0.35" stroke="currentColor" stroke-width="1.2" />
+    <path d="M 444 220 L 476 410 L 635 595 L 635 605 L 472 418 L 442 230 Z" fill="currentColor" opacity="0.35" stroke="currentColor" stroke-width="1.2" />
+
+    <!-- Wing Elevons (Inboard and Outboard Flight Control Surfaces) -->
+    <!-- Left Wing Elevons -->
+    <g stroke="currentColor" stroke-width="1.4">
+      <!-- Outboard Elevon Left -->
+      <polygon points="180,598 255,598 255,618 180,618" fill="url(#{id_p}Booster)" />
+      <!-- Inboard Elevon Left -->
+      <polygon points="262,598 335,598 335,618 262,618" fill="url(#{id_p}Booster)" />
+      <line x1="217" y1="598" x2="217" y2="618" stroke-width="1" opacity="0.6" />
+      <line x1="298" y1="598" x2="298" y2="618" stroke-width="1" opacity="0.6" />
+    </g>
+    <!-- Right Wing Elevons -->
+    <g stroke="currentColor" stroke-width="1.4">
+      <!-- Inboard Elevon Right -->
+      <polygon points="465,598 538,598 538,618 465,618" fill="url(#{id_p}Booster)" />
+      <!-- Outboard Elevon Right -->
+      <polygon points="545,598 620,598 620,618 545,618" fill="url(#{id_p}Booster)" />
+      <line x1="502" y1="598" x2="502" y2="618" stroke-width="1" opacity="0.6" />
+      <line x1="583" y1="598" x2="583" y2="618" stroke-width="1" opacity="0.6" />
+    </g>
+
+    <!-- Wing Panel Expansion & Tile Grid Lines -->
+    <g stroke="currentColor" stroke-width="0.8" opacity="0.55">
+      <line x1="210" y1="595" x2="260" y2="535" />
+      <line x1="260" y1="595" x2="310" y2="535" />
+      <line x1="310" y1="595" x2="330" y2="470" />
+      <line x1="590" y1="595" x2="540" y2="535" />
+      <line x1="540" y1="595" x2="490" y2="535" />
+      <line x1="490" y1="595" x2="470" y2="470" />
+    </g>
+
+    <!-- Main Fuselage Body (Nose to Aft Bulkhead) -->
+    <path d="M 382 95 C 382 68 400 60 400 60 C 400 60 418 68 418 95 L 444 220 L 448 515 L 436 630 L 364 630 L 352 515 L 356 220 Z" fill="url(#{id_p}Body)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
+
+    <!-- Black RCC Nose Cap -->
+    <path d="M 385 92 C 385 70 400 62 400 62 C 400 62 415 70 415 92 C 415 104 385 104 385 92 Z" fill="currentColor" opacity="0.45" stroke="currentColor" stroke-width="1.8" />
+
+    <!-- Forward Reaction Control System (RCS) Thruster Wells -->
+    <g fill="currentColor" opacity="0.65">
+      <!-- Left RCS thrusters -->
+      <circle cx="387" cy="85" r="1.8" />
+      <circle cx="390" cy="90" r="1.8" />
+      <circle cx="387" cy="95" r="1.8" />
+      <circle cx="391" cy="98" r="1.8" />
+      <!-- Right RCS thrusters -->
+      <circle cx="413" cy="85" r="1.8" />
+      <circle cx="410" cy="90" r="1.8" />
+      <circle cx="413" cy="95" r="1.8" />
+      <circle cx="409" cy="98" r="1.8" />
+    </g>
+
+    <!-- Cockpit Windshield (6 Faceted Crew Flight Deck Windows + 2 Overhead) -->
+    <g fill="currentColor" opacity="0.75" stroke="currentColor" stroke-width="0.8">
+      <!-- Front-left -->
+      <polygon points="393,124 398,122 398,131 392,130" />
+      <!-- Front-right -->
+      <polygon points="402,122 407,124 408,130 402,131" />
+      <!-- Side-left -->
+      <polygon points="385,127 391,125 390,132 384,133" />
+      <!-- Side-right -->
+      <polygon points="409,125 415,127 416,133 410,132" />
+      <!-- Outer-left -->
+      <polygon points="381,131 384,130 384,134 380,135" />
+      <!-- Outer-right -->
+      <polygon points="416,130 419,131 420,135 416,134" />
+      <!-- Overhead rendezvous windows -->
+      <rect x="393" y="137" width="5" height="4" rx="1" />
+      <rect x="402" y="137" width="5" height="4" rx="1" />
+    </g>
+    <!-- Star Tracker Viewports -->
+    <circle cx="397" cy="112" r="1.5" fill="currentColor" opacity="0.8" />
+    <circle cx="403" cy="112" r="1.5" fill="currentColor" opacity="0.8" />
+
+    <!-- Payload Bay (60-foot Bay with Centerline Split & Segmented Doors) -->
+    <!-- Door Outer Contours & Center Seam -->
+    <rect x="360" y="165" width="80" height="350" fill="url(#{id_p}Body)" stroke="currentColor" stroke-width="1.4" opacity="0.8" />
+    <line x1="400" y1="165" x2="400" y2="515" stroke="currentColor" stroke-width="1.8" />
+    <!-- 4 Segment Door Hinges / Seams -->
+    <line x1="360" y1="250" x2="440" y2="250" stroke="currentColor" stroke-width="1" opacity="0.65" />
+    <line x1="360" y1="340" x2="440" y2="340" stroke="currentColor" stroke-width="1" opacity="0.65" />
+    <line x1="360" y1="430" x2="440" y2="430" stroke="currentColor" stroke-width="1" opacity="0.65" />
+    <!-- Conformal Radiator Panel Lines -->
+    <g stroke="currentColor" stroke-width="0.75" stroke-dasharray="3 3" opacity="0.45">
+      <line x1="372" y1="175" x2="372" y2="505" />
+      <line x1="386" y1="175" x2="386" y2="505" />
+      <line x1="414" y1="175" x2="414" y2="505" />
+      <line x1="428" y1="175" x2="428" y2="505" />
+    </g>
+
+    <!-- Twin OMS (Orbital Maneuvering System) Pods -->
+    <!-- Left OMS Pod -->
+    <g stroke="currentColor" stroke-width="1.8">
+      <path d="M 354 485 C 336 515 332 560 334 625 L 364 625 L 360 495 Z" fill="url(#{id_p}Booster)" />
+      <!-- Left Aft RCS Thrusters -->
+      <rect x="335" y="605" width="8" height="14" fill="currentColor" opacity="0.5" stroke="none" />
+      <circle cx="339" cy="610" r="1.3" fill="#ffffff" />
+      <circle cx="339" cy="615" r="1.3" fill="#ffffff" />
+      <!-- Left OMS Engine Nozzle -->
+      <polygon points="342,625 352,625 354,642 340,642" fill="currentColor" opacity="0.5" />
+    </g>
+    <!-- Right OMS Pod -->
+    <g stroke="currentColor" stroke-width="1.8">
+      <path d="M 446 485 C 464 515 468 560 466 625 L 436 625 L 440 495 Z" fill="url(#{id_p}Booster)" />
+      <!-- Right Aft RCS Thrusters -->
+      <rect x="457" y="605" width="8" height="14" fill="currentColor" opacity="0.5" stroke="none" />
+      <circle cx="461" cy="610" r="1.3" fill="#ffffff" />
+      <circle cx="461" cy="615" r="1.3" fill="#ffffff" />
+      <!-- Right OMS Engine Nozzle -->
+      <polygon points="448,625 458,625 460,642 446,642" fill="currentColor" opacity="0.5" />
+    </g>
+
+    <!-- Vertical Stabilizer (Fin & Centerline Rudder / Speed Brake) -->
+    <!-- Dorsal Fin Base -->
+    <path d="M 400 390 L 396 460 L 396 630 L 404 630 L 404 460 Z" fill="currentColor" opacity="0.4" stroke="currentColor" stroke-width="1.6" />
+    <line x1="400" y1="390" x2="400" y2="630" stroke="currentColor" stroke-width="2" />
+    <!-- Rudder Split / Speed Brake Lines -->
+    <line x1="396" y1="520" x2="404" y2="520" stroke="currentColor" stroke-width="1.4" />
+    <line x1="396" y1="580" x2="404" y2="580" stroke="currentColor" stroke-width="1.4" />
+
+    <!-- Aft Thermal Body Flap -->
+    <polygon points="374,630 426,630 430,652 370,652" fill="url(#{id_p}Body)" stroke="currentColor" stroke-width="1.8" />
+    <line x1="388" y1="630" x2="388" y2="652" stroke="currentColor" stroke-width="1" opacity="0.6" />
+    <line x1="412" y1="630" x2="412" y2="652" stroke="currentColor" stroke-width="1" opacity="0.6" />
+
+    <!-- 3 SSME Main Rocket Engines (Inverted Triangle Cluster) -->
+    <!-- Top Center SSME Engine Bell -->
     <g stroke="currentColor" stroke-width="2">
-      <!-- Nose Cone -->
-      <path d="M 324 160 C 324 125 338 105 338 105 C 338 105 352 125 352 160 Z" fill="url(#{id_p}Booster)" />
-      <!-- SRB Casing -->
-      <rect x="324" y="160" width="28" height="540" fill="url(#{id_p}Booster)" />
-      <!-- SRB Field Joints (4 Segments) -->
-      <line x1="324" y1="280" x2="352" y2="280" stroke-width="1.4" />
-      <line x1="324" y1="410" x2="352" y2="410" stroke-width="1.4" />
-      <line x1="324" y1="550" x2="352" y2="550" stroke-width="1.4" />
-      <!-- SRB Aft Skirt & Nozzle -->
-      <polygon points="320,700 356,700 360,735 316,735" fill="currentColor" opacity="0.35" />
-      <polygon points="326,735 350,735 354,755 322,755" fill="currentColor" opacity="0.5" />
+      <ellipse cx="400" cy="650" rx="16" ry="14" fill="currentColor" opacity="0.4" />
+      <circle cx="400" cy="650" r="8" fill="currentColor" opacity="0.6" />
+      <!-- Gimbal Actuator Struts -->
+      <line x1="390" y1="634" x2="395" y2="644" stroke-width="1.5" />
+      <line x1="410" y1="634" x2="405" y2="644" stroke-width="1.5" />
     </g>
-
-    <!-- Right Solid Rocket Booster (SRB) -->
+    <!-- Lower Left SSME Engine Bell -->
     <g stroke="currentColor" stroke-width="2">
-      <path d="M 448 160 C 448 125 462 105 462 105 C 462 105 476 125 476 160 Z" fill="url(#{id_p}Booster)" />
-      <rect x="448" y="160" width="28" height="540" fill="url(#{id_p}Booster)" />
-      <line x1="448" y1="280" x2="476" y2="280" stroke-width="1.4" />
-      <line x1="448" y1="410" x2="476" y2="410" stroke-width="1.4" />
-      <line x1="448" y1="550" x2="476" y2="550" stroke-width="1.4" />
-      <polygon points="444,700 480,700 484,735 440,735" fill="currentColor" opacity="0.35" />
-      <polygon points="450,735 474,735 478,755 446,755" fill="currentColor" opacity="0.5" />
+      <ellipse cx="378" cy="682" rx="16" ry="14" fill="currentColor" opacity="0.45" />
+      <circle cx="378" cy="682" r="8" fill="currentColor" opacity="0.65" />
+      <line x1="368" y1="666" x2="373" y2="676" stroke-width="1.5" />
+      <line x1="388" y1="666" x2="383" y2="676" stroke-width="1.5" />
     </g>
-
-    <!-- Orbiter Mounted Front Silhouette -->
-    <!-- Wings (Double Delta) -->
-    <path d="M 386 280 L 260 620 L 265 650 L 360 645 L 370 655 L 430 655 L 440 645 L 535 650 L 540 620 L 414 280 Z" fill="url(#{id_p}Wing)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
-    <!-- Orbiter Fuselage & Nose -->
-    <path d="M 384 220 C 384 190 400 175 400 175 C 400 175 416 190 416 220 L 416 645 L 384 645 Z" fill="url(#{id_p}Body)" stroke="currentColor" stroke-width="2" />
-    <!-- Cockpit Windshield Facets -->
-    <polygon points="392,215 398,210 402,210 408,215 400,218" fill="currentColor" opacity="0.75" />
-    <!-- Wing Elevons & Panel Lines -->
-    <g stroke="currentColor" stroke-width="1" opacity="0.6">
-      <line x1="280" y1="625" x2="360" y2="625" />
-      <line x1="440" y1="625" x2="520" y2="625" />
-      <line x1="384" y1="280" x2="416" y2="280" />
-      <line x1="384" y1="440" x2="416" y2="440" />
-      <line x1="384" y1="580" x2="416" y2="580" />
-    </g>
-    <!-- Vertical Stabilizer Fin Center Line -->
-    <line x1="400" y1="480" x2="400" y2="655" stroke="currentColor" stroke-width="2.5" />
-    <!-- 3 SSME Main Engine Bells -->
-    <circle cx="400" cy="672" r="12" fill="currentColor" opacity="0.5" stroke="currentColor" stroke-width="1.8" />
-    <circle cx="384" cy="690" r="11" fill="currentColor" opacity="0.5" stroke="currentColor" stroke-width="1.8" />
-    <circle cx="416" cy="690" r="11" fill="currentColor" opacity="0.5" stroke="currentColor" stroke-width="1.8" />"""
+    <!-- Lower Right SSME Engine Bell -->
+    <g stroke="currentColor" stroke-width="2">
+      <ellipse cx="422" cy="682" rx="16" ry="14" fill="currentColor" opacity="0.45" />
+      <circle cx="422" cy="682" r="8" fill="currentColor" opacity="0.65" />
+      <line x1="412" y1="666" x2="417" y2="676" stroke-width="1.5" />
+      <line x1="432" y1="666" x2="427" y2="676" stroke-width="1.5" />
+    </g>"""
     return wrap_svg("sts", "72.0 M", "SPAN 23.8 M", content)
 
 # 3. Saturn X (Apollo Saturn V / MLV: 10m diameter, 5 F-1 engines, S-IC fins, CSM & Launch Escape Tower)
@@ -405,49 +508,98 @@ def svg_delta_3b():
     <path d="M 385 715 L 380 745 L 415 745 L 410 715 Z" fill="currentColor" opacity="0.5" stroke="currentColor" stroke-width="2" />"""
     return wrap_svg("d3b", "120.0 M", "CORE 5.0 M", content)
 
-# 7. Space Shuttle v2 (Advanced Orbiter / Shuttle II: blended wing, canted twin fins, flyback boosters, 78m)
+# 7. Space Shuttle v2 (Modernized Next-Gen Orbiter: blended delta wing, canted winglets, panoramic canopy, twin V-tail fins)
 def svg_shuttle_v2():
     id_p = "sts2"
-    content = f"""    <!-- Advanced Central Core Tank -->
-    <path d="M 376 110 C 376 60 400 40 400 40 C 400 40 424 60 424 110 L 424 690 C 424 705 376 705 376 690 Z" fill="url(#{id_p}Body)" stroke="currentColor" stroke-width="2.2" />
+    content = f"""    <!-- Space Shuttle v2 Next-Gen Orbiter (Top-Down / Dorsal Technical Blueprint) -->
 
-    <!-- Twin Advanced Liquid Flyback Boosters -->
-    <!-- Left Flyback Booster with Canted Canards -->
-    <g stroke="currentColor" stroke-width="2">
-      <path d="M 320 180 C 320 130 338 115 338 115 C 338 115 356 130 356 180 Z" fill="url(#{id_p}Booster)" />
-      <rect x="320" y="180" width="36" height="515" fill="url(#{id_p}Booster)" />
-      <!-- Canard Fin -->
-      <polygon points="320,220 285,250 285,260 320,245" fill="url(#{id_p}Wing)" stroke-width="1.6" />
-      <!-- Engine Nozzles -->
-      <polygon points="316,695 360,695 364,730 312,730" fill="currentColor" opacity="0.4" />
+    <!-- Advanced Blended Delta Wings with Organic Strakes and Canted Winglets -->
+    <!-- Left Wing Structure -->
+    <path d="M 364 200 C 350 290 325 380 305 440 L 145 580 L 145 615 L 345 615 L 362 605 Z" fill="url(#{id_p}Wing)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
+    <!-- Right Wing Structure -->
+    <path d="M 436 200 C 450 290 475 380 495 440 L 655 580 L 655 615 L 455 615 L 438 605 Z" fill="url(#{id_p}Wing)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
+
+    <!-- Modern Canted Aerodynamic Winglets (Vertical Wingtips) -->
+    <!-- Left Winglet -->
+    <polygon points="145,580 132,540 142,545 145,615" fill="currentColor" opacity="0.5" stroke="currentColor" stroke-width="1.8" />
+    <line x1="138" y1="545" x2="145" y2="600" stroke="currentColor" stroke-width="1" />
+    <!-- Right Winglet -->
+    <polygon points="655,580 668,540 658,545 655,615" fill="currentColor" opacity="0.5" stroke="currentColor" stroke-width="1.8" />
+    <line x1="662" y1="545" x2="655" y2="600" stroke="currentColor" stroke-width="1" />
+
+    <!-- Sleek Stealth Thermal Leading Edge Chine (Black Carbon-Silicon Matrix) -->
+    <path d="M 364 200 C 350 290 325 380 305 440 L 145 580 L 145 590 L 310 448 C 330 388 355 298 368 208 Z" fill="currentColor" opacity="0.4" stroke="currentColor" stroke-width="1.2" />
+    <path d="M 436 200 C 450 290 475 380 495 440 L 655 580 L 655 590 L 490 448 C 470 388 445 298 432 208 Z" fill="currentColor" opacity="0.4" stroke="currentColor" stroke-width="1.2" />
+
+    <!-- Modern Multi-Segment Fly-By-Wire Elevons -->
+    <g stroke="currentColor" stroke-width="1.4">
+      <!-- Left Elevons (3 Segments) -->
+      <polygon points="160,592 220,592 220,612 160,612" fill="url(#{id_p}Booster)" />
+      <polygon points="226,592 286,592 286,612 226,612" fill="url(#{id_p}Booster)" />
+      <polygon points="292,592 342,592 342,612 292,612" fill="url(#{id_p}Booster)" />
+      <!-- Right Elevons (3 Segments) -->
+      <polygon points="458,592 508,592 508,612 458,612" fill="url(#{id_p}Booster)" />
+      <polygon points="514,592 574,592 574,612 514,612" fill="url(#{id_p}Booster)" />
+      <polygon points="580,592 640,592 640,612 580,612" fill="url(#{id_p}Booster)" />
     </g>
-    <!-- Right Flyback Booster with Canted Canards -->
-    <g stroke="currentColor" stroke-width="2">
-      <path d="M 444 180 C 444 130 462 115 462 115 C 462 115 480 130 480 180 Z" fill="url(#{id_p}Booster)" />
-      <rect x="444" y="180" width="36" height="515" fill="url(#{id_p}Booster)" />
-      <!-- Canard Fin -->
-      <polygon points="480,220 515,250 515,260 480,245" fill="url(#{id_p}Wing)" stroke-width="1.6" />
-      <!-- Engine Nozzles -->
-      <polygon points="440,695 484,695 488,730 436,730" fill="currentColor" opacity="0.4" />
+
+    <!-- Modern Composite Fuselage Body -->
+    <path d="M 384 85 C 384 55 400 48 400 48 C 400 48 416 55 416 85 L 442 200 L 446 510 L 434 625 L 366 625 L 354 510 L 358 200 Z" fill="url(#{id_p}Body)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
+
+    <!-- Streamlined Aerodynamic Carbon Nose Cap -->
+    <path d="M 386 82 C 386 58 400 50 400 50 C 400 50 414 58 414 82 C 414 96 386 96 386 82 Z" fill="currentColor" opacity="0.5" stroke="currentColor" stroke-width="1.8" />
+
+    <!-- Integrated Conformal Flush RCS Thrusters -->
+    <g fill="currentColor" opacity="0.7">
+      <line x1="388" y1="78" x2="388" y2="90" stroke="currentColor" stroke-width="1.5" />
+      <line x1="412" y1="78" x2="412" y2="90" stroke="currentColor" stroke-width="1.5" />
+      <circle cx="390" cy="84" r="1.5" />
+      <circle cx="410" cy="84" r="1.5" />
     </g>
 
-    <!-- Shuttle v2 Next-Gen Orbiter (Blended Wing-Body, Winglets) -->
-    <!-- Continuous Aerodynamic Wing Sweep -->
-    <path d="M 388 230 C 370 320 310 460 230 630 L 235 655 L 255 640 L 360 635 L 372 645 L 428 645 L 440 635 L 545 640 L 565 655 L 570 630 C 490 460 430 320 412 230 Z" fill="url(#{id_p}Wing)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
-    <!-- Winglet Wingtips -->
-    <polygon points="230,630 220,590 235,615" fill="currentColor" opacity="0.6" stroke="currentColor" stroke-width="1.6" />
-    <polygon points="570,630 580,590 565,615" fill="currentColor" opacity="0.6" stroke="currentColor" stroke-width="1.6" />
+    <!-- Modern Panoramic Glass Flight Deck (Wraparound Dark Canopy Visor) -->
+    <path d="M 382 120 C 388 112 400 110 400 110 C 400 110 412 112 418 120 L 415 132 C 408 126 400 124 400 124 C 400 124 392 126 385 132 Z" fill="currentColor" opacity="0.85" stroke="currentColor" stroke-width="1.2" />
+    <line x1="400" y1="110" x2="400" y2="124" stroke="#ffffff" stroke-width="1.2" opacity="0.8" />
 
-    <!-- Orbiter Fuselage & Cockpit -->
-    <path d="M 386 195 C 386 165 400 150 400 150 C 400 150 414 165 414 195 L 414 635 L 386 635 Z" fill="url(#{id_p}Body)" stroke="currentColor" stroke-width="2" />
-    <polygon points="391,190 400,185 409,190 405,196 395,196" fill="currentColor" opacity="0.8" />
+    <!-- Modern Payload Bay with Conformal Hexagonal Photovoltaic Radiator Doors -->
+    <rect x="362" y="160" width="76" height="350" rx="3" fill="url(#{id_p}Body)" stroke="currentColor" stroke-width="1.5" />
+    <line x1="400" y1="160" x2="400" y2="510" stroke="currentColor" stroke-width="1.8" />
+    <line x1="362" y1="245" x2="438" y2="245" stroke="currentColor" stroke-width="1" opacity="0.65" />
+    <line x1="362" y1="335" x2="438" y2="335" stroke="currentColor" stroke-width="1" opacity="0.65" />
+    <line x1="362" y1="425" x2="438" y2="425" stroke="currentColor" stroke-width="1" opacity="0.65" />
+    <!-- Hex / diamond panel pattern accents -->
+    <g stroke="currentColor" stroke-width="0.8" opacity="0.4">
+      <polygon points="380,180 390,175 400,180 400,190 390,195 380,190" fill="none" />
+      <polygon points="400,180 410,175 420,180 420,190 410,195 400,190" fill="none" />
+      <polygon points="380,270 390,265 400,270 400,280 390,285 380,280" fill="none" />
+      <polygon points="400,270 410,265 420,270 420,280 410,285 400,280" fill="none" />
+    </g>
 
-    <!-- Twin Canted Vertical Fins (V-tail) -->
-    <polygon points="370,550 350,470 365,475 385,550" fill="currentColor" opacity="0.35" stroke="currentColor" stroke-width="1.8" />
-    <polygon points="430,550 450,470 435,475 415,550" fill="currentColor" opacity="0.35" stroke="currentColor" stroke-width="1.8" />
+    <!-- Modern Streamlined OMS Fairings -->
+    <path d="M 354 480 C 340 505 334 545 336 620 L 364 620 Z" fill="url(#{id_p}Booster)" stroke="currentColor" stroke-width="1.8" />
+    <path d="M 446 480 C 460 505 466 545 464 620 L 436 620 Z" fill="url(#{id_p}Booster)" stroke="currentColor" stroke-width="1.8" />
 
-    <!-- Aerospike / Advanced Linear Engine Nozzle Bank -->
-    <rect x="382" y="640" width="36" height="25" rx="3" fill="currentColor" opacity="0.5" stroke="currentColor" stroke-width="1.8" />"""
+    <!-- Twin Canted Vertical Stabilizers (Modern V-Tail on OMS Pods) -->
+    <!-- Left Canted Fin (Angled out at ~25°) -->
+    <g stroke="currentColor" stroke-width="1.8">
+      <polygon points="350,520 310,430 325,435 362,545" fill="url(#{id_p}Wing)" />
+      <line x1="322" y1="455" x2="354" y2="528" stroke-width="1" opacity="0.6" />
+    </g>
+    <!-- Right Canted Fin (Angled out at ~25°) -->
+    <g stroke="currentColor" stroke-width="1.8">
+      <polygon points="450,520 490,430 475,435 438,545" fill="url(#{id_p}Wing)" />
+      <line x1="478" y1="455" x2="446" y2="528" stroke-width="1" opacity="0.6" />
+    </g>
+
+    <!-- Modern Flush Aerospike / Advanced Linear Multi-Engine Cluster -->
+    <polygon points="370,625 430,625 434,650 366,650" fill="url(#{id_p}Body)" stroke="currentColor" stroke-width="2" />
+    <!-- 3 Advanced Linear Aerospike Bells -->
+    <ellipse cx="400" cy="652" rx="14" ry="12" fill="currentColor" opacity="0.6" stroke="currentColor" stroke-width="1.8" />
+    <ellipse cx="378" cy="678" rx="14" ry="12" fill="currentColor" opacity="0.6" stroke="currentColor" stroke-width="1.8" />
+    <ellipse cx="422" cy="678" rx="14" ry="12" fill="currentColor" opacity="0.6" stroke="currentColor" stroke-width="1.8" />
+    <circle cx="400" cy="652" r="6" fill="#ffffff" opacity="0.7" />
+    <circle cx="378" cy="678" r="6" fill="#ffffff" opacity="0.7" />
+    <circle cx="422" cy="678" r="6" fill="#ffffff" opacity="0.7" />"""
     return wrap_svg("sts2", "78.0 M", "SPAN 28.0 M", content)
 
 # 8. Saturn Nova (NASA Nova C8 concept: 14m core, 8 F-1 engines, colossal direct-ascent rocket, 137m)
@@ -593,7 +745,7 @@ def svg_bfr():
     <circle cx="388" cy="740" r="5" fill="currentColor" opacity="0.8" />
     <circle cx="400" cy="740" r="5" fill="currentColor" opacity="0.8" />
     <circle cx="412" cy="740" r="5" fill="currentColor" opacity="0.8" />"""
-    return wrap_svg("bfr", "128.0 M", "CORE 9.0 M", content)
+    return wrap_svg("bfr", "106.0 M", "CORE 9.0 M", content)
 
 # 11. Delta IV (ULA Delta IV Heavy: 3 Common Booster Cores side-by-side, 3 RS-68A engines, 130m)
 def svg_delta_4():
@@ -647,70 +799,145 @@ def svg_delta_4():
     <line x1="413" y1="715" x2="417" y2="745" stroke="currentColor" stroke-width="3.5" />"""
     return wrap_svg("d4", "130.0 M", "WIDTH 15.0 M", content)
 
-# 12. Interplanetary Shuttle (Mars Transfer Cruiser: crew habitat, radiator wings, nuclear thermal rocket bells, 88m)
+# 12. Interplanetary Shuttle (SpaceX ITS - Interplanetary Transport System Spaceship: 12m diameter, 3 delta fins, panoramic dome, 9 Raptors, 140m)
 def svg_interplanetary_shuttle():
     id_p = "ips"
-    content = f"""    <!-- Forward Exploration Bridge & High-Gain Antenna -->
-    <line x1="400" y1="40" x2="400" y2="85" stroke="currentColor" stroke-width="2" />
-    <path d="M 385 55 Q 400 40 415 55" stroke="currentColor" stroke-width="2.2" fill="none" />
-    <circle cx="400" cy="50" r="3" fill="currentColor" />
+    content = f"""    <!-- SpaceX Interplanetary Transport System (ITS) Spaceship - 12m Diameter Deep-Space Flagship -->
 
-    <!-- Forward Command Module & Cupola Observation Dome -->
-    <polygon points="388,85 412,85 422,140 378,140" fill="url(#{id_p}Body)" stroke="currentColor" stroke-width="2.2" />
-    <polygon points="394,105 406,105 408,118 392,118" fill="currentColor" opacity="0.75" />
+    <!-- Forward RCS Thruster Attitude Quads -->
+    <g stroke="currentColor" stroke-width="1.5">
+      <rect x="360" y="112" width="6" height="12" fill="currentColor" opacity="0.6" />
+      <line x1="355" y1="115" x2="360" y2="115" stroke-width="2" />
+      <line x1="355" y1="121" x2="360" y2="121" stroke-width="2" />
+      <rect x="434" y="112" width="6" height="12" fill="currentColor" opacity="0.6" />
+      <line x1="440" y1="115" x2="445" y2="115" stroke-width="2" />
+      <line x1="440" y1="121" x2="445" y2="121" stroke-width="2" />
+    </g>
 
-    <!-- Crew Habitation Module & Science Deck -->
-    <rect x="378" y="140" width="44" height="120" fill="url(#{id_p}Body)" stroke="currentColor" stroke-width="2.2" />
-    <circle cx="390" cy="170" r="3.5" fill="currentColor" opacity="0.7" />
-    <circle cx="410" cy="170" r="3.5" fill="currentColor" opacity="0.7" />
-    <circle cx="390" cy="210" r="3.5" fill="currentColor" opacity="0.7" />
-    <circle cx="410" cy="210" r="3.5" fill="currentColor" opacity="0.7" />
+    <!-- Main Aerodynamic Ogive Hull (12m Diameter Carbon-Composite Fuselage) -->
+    <path d="M 400 75 C 388 100 366 170 348 220 C 336 250 330 280 330 320 L 330 625 L 470 625 L 470 320 C 470 280 464 250 452 220 C 434 170 412 100 400 75 Z" fill="url(#{id_p}Body)" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" />
 
-    <!-- Deployable Photovoltaic & Thermal Radiator Wings -->
-    <!-- Left Radiator Wing -->
+    <!-- Forward Apex Docking & Sensor Probe -->
+    <line x1="400" y1="52" x2="400" y2="75" stroke="currentColor" stroke-width="2.2" />
+    <circle cx="400" cy="52" r="3" fill="currentColor" />
+
+    <!-- Iconic Panoramic Observation Deck (The Famous Multi-Deck ITS Forward Geodesic Window) -->
+    <!-- Window Outer Contour Frame -->
+    <path d="M 400 115 C 418 115 428 132 432 155 C 435 175 435 195 432 210 L 368 210 C 365 195 365 175 368 155 C 372 132 382 115 400 115 Z" fill="currentColor" opacity="0.28" stroke="currentColor" stroke-width="2" />
+    <!-- Observation Floor Decks -->
+    <line x1="378" y1="145" x2="422" y2="145" stroke="currentColor" stroke-width="1.2" opacity="0.8" />
+    <line x1="371" y1="175" x2="429" y2="175" stroke="currentColor" stroke-width="1.2" opacity="0.8" />
+    <!-- Geodesic & Hexagonal Mullion Framing -->
+    <line x1="400" y1="115" x2="400" y2="210" stroke="currentColor" stroke-width="1.5" />
+    <line x1="389" y1="119" x2="382" y2="210" stroke="currentColor" stroke-width="1.2" opacity="0.75" />
+    <line x1="411" y1="119" x2="418" y2="210" stroke="currentColor" stroke-width="1.2" opacity="0.75" />
+    <line x1="389" y1="145" x2="400" y2="175" stroke="currentColor" stroke-width="0.8" opacity="0.6" stroke-dasharray="2 2" />
+    <line x1="411" y1="145" x2="400" y2="175" stroke="currentColor" stroke-width="0.8" opacity="0.6" stroke-dasharray="2 2" />
+
+    <!-- Passenger Stateroom Viewports (Tiered Portholes below Main Observation Visor) -->
+    <g fill="currentColor" opacity="0.85">
+      <circle cx="365" cy="235" r="3" />
+      <circle cx="382" cy="235" r="3" />
+      <circle cx="400" cy="235" r="3" />
+      <circle cx="418" cy="235" r="3" />
+      <circle cx="435" cy="235" r="3" />
+      <circle cx="355" cy="260" r="3" />
+      <circle cx="373" cy="260" r="3" />
+      <circle cx="391" cy="260" r="3" />
+      <circle cx="409" cy="260" r="3" />
+      <circle cx="427" cy="260" r="3" />
+      <circle cx="445" cy="260" r="3" />
+    </g>
+
+    <!-- Cargo Bay Loading Hatch & Surface Airlock -->
+    <rect x="382" y="285" width="36" height="24" rx="4" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.7" />
+    <circle cx="400" cy="297" r="4.5" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.8" />
+
+    <!-- Deployable Solar Array & Radiator Enclosure Bay Hatches -->
+    <line x1="345" y1="325" x2="375" y2="325" stroke="currentColor" stroke-width="1.4" opacity="0.6" />
+    <line x1="425" y1="325" x2="455" y2="325" stroke="currentColor" stroke-width="1.4" opacity="0.6" />
+    <line x1="345" y1="325" x2="345" y2="385" stroke="currentColor" stroke-width="1.4" opacity="0.6" />
+    <line x1="375" y1="325" x2="375" y2="385" stroke="currentColor" stroke-width="1.4" opacity="0.6" />
+    <line x1="425" y1="325" x2="425" y2="385" stroke="currentColor" stroke-width="1.4" opacity="0.6" />
+    <line x1="455" y1="325" x2="455" y2="385" stroke="currentColor" stroke-width="1.4" opacity="0.6" />
+
+    <!-- Cryogenic Propellant Tanks & Internal Bulkhead Architecture -->
+    <!-- Liquid Methane (CH4) Forward Tank -->
+    <path d="M 330 350 Q 400 375 470 350" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.6" stroke-dasharray="3 2" />
+    <line x1="330" y1="400" x2="470" y2="400" stroke="currentColor" stroke-width="1" opacity="0.5" />
+    <!-- Common Bulkhead Dome -->
+    <path d="M 330 450 Q 400 480 470 450" fill="none" stroke="currentColor" stroke-width="2" opacity="0.7" />
+    <!-- Liquid Oxygen (LOX) Aft Main Tank -->
+    <line x1="330" y1="510" x2="470" y2="510" stroke="currentColor" stroke-width="1" opacity="0.5" />
+    <line x1="330" y1="570" x2="470" y2="570" stroke-width="1" opacity="0.5" />
+    <!-- Center LOX Downcomer Feed Line -->
+    <line x1="400" y1="350" x2="400" y2="625" stroke="currentColor" stroke-width="1.8" stroke-dasharray="6 3" opacity="0.6" />
+
+    <!-- 3 Signature ITS Aerodynamic Delta Wings / Landing Leg Pods -->
+    <!-- Left Swept Delta Fin / Leg Pod -->
+    <g stroke="currentColor" stroke-width="2.2">
+      <!-- Sweeping Outward from Hull at Y=410 down to Tip at Y=645 -->
+      <polygon points="330,410 215,630 215,645 330,630" fill="url(#{id_p}Wing)" stroke-linejoin="round" />
+      <!-- Trailing Edge Control Elevon -->
+      <polygon points="230,627 325,627 325,612 245,612" fill="currentColor" opacity="0.35" stroke-width="1.2" />
+      <!-- Landing Leg Footpad Deployment Door -->
+      <polygon points="215,625 215,645 228,642 228,623" fill="currentColor" opacity="0.6" stroke-width="1.2" />
+      <!-- Aerodynamic Chine Bevel Line -->
+      <line x1="330" y1="410" x2="230" y2="627" stroke-width="1.2" opacity="0.7" />
+    </g>
+
+    <!-- Right Swept Delta Fin / Leg Pod -->
+    <g stroke="currentColor" stroke-width="2.2">
+      <!-- Sweeping Outward from Hull at Y=410 down to Tip at Y=645 -->
+      <polygon points="470,410 585,630 585,645 470,630" fill="url(#{id_p}Wing)" stroke-linejoin="round" />
+      <!-- Trailing Edge Control Elevon -->
+      <polygon points="570,627 475,627 475,612 555,612" fill="currentColor" opacity="0.35" stroke-width="1.2" />
+      <!-- Landing Leg Footpad Deployment Door -->
+      <polygon points="585,625 585,645 572,642 572,623" fill="currentColor" opacity="0.6" stroke-width="1.2" />
+      <!-- Aerodynamic Chine Bevel Line -->
+      <line x1="470" y1="410" x2="570" y2="627" stroke-width="1.2" opacity="0.7" />
+    </g>
+
+    <!-- Center Ventral Stabilizer Keel / 3rd Landing Leg Fairing -->
     <g stroke="currentColor" stroke-width="1.8">
-      <polygon points="378,260 210,380 210,540 378,480" fill="url(#{id_p}Wing)" />
-      <!-- Grid Panel Lines -->
-      <line x1="250" y1="405" x2="250" y2="525" stroke-width="1" />
-      <line x1="290" y1="375" x2="290" y2="510" stroke-width="1" />
-      <line x1="330" y1="345" x2="330" y2="495" stroke-width="1" />
-      <line x1="210" y1="460" x2="378" y2="460" stroke-width="1" />
+      <line x1="400" y1="450" x2="400" y2="630" stroke-width="2" />
+      <polygon points="392,560 408,560 405,630 395,630" fill="currentColor" opacity="0.25" />
+      <rect x="393" y="625" width="14" height="15" fill="currentColor" opacity="0.6" />
     </g>
-    <!-- Right Radiator Wing -->
+
+    <!-- Aft Base Thrust Structure & Engine Heat Skirt -->
+    <polygon points="326,625 474,625 466,645 334,645" fill="currentColor" opacity="0.4" stroke="currentColor" stroke-width="2" />
+
+    <!-- 9 Raptor Engine Propulsion Array (SpaceX 2016 ITS Configuration: 6 Outer Vacuum Raptors + 3 Center Sea-Level Raptors) -->
     <g stroke="currentColor" stroke-width="1.8">
-      <polygon points="422,260 590,380 590,540 422,480" fill="url(#{id_p}Wing)" />
-      <!-- Grid Panel Lines -->
-      <line x1="550" y1="405" x2="550" y2="525" stroke-width="1" />
-      <line x1="510" y1="375" x2="510" y2="510" stroke-width="1" />
-      <line x1="470" y1="345" x2="470" y2="495" stroke-width="1" />
-      <line x1="422" y1="460" x2="590" y2="460" stroke-width="1" />
-    </g>
+      <!-- Outer High-Expansion Vacuum Raptor Engines -->
+      <!-- Engine 1 (Outer Far Left) -->
+      <polygon points="340,645 358,645 364,710 334,710" fill="currentColor" opacity="0.5" />
+      <ellipse cx="349" cy="710" rx="15" ry="3.5" fill="currentColor" opacity="0.8" />
 
-    <!-- Modular Spine / Cryogenic Propellant Tanks -->
-    <rect x="382" y="260" width="36" height="360" fill="url(#{id_p}Body)" stroke="currentColor" stroke-width="2.2" />
-    <!-- Structural Truss Framing -->
-    <g stroke="currentColor" stroke-width="1" opacity="0.65">
-      <line x1="382" y1="330" x2="418" y2="330" />
-      <line x1="382" y1="400" x2="418" y2="400" />
-      <line x1="382" y1="470" x2="418" y2="470" />
-      <line x1="382" y1="540" x2="418" y2="540" />
-      <line x1="382" y1="610" x2="418" y2="610" />
-      <!-- X-bracing in spine -->
-      <line x1="382" y1="260" x2="418" y2="330" stroke-dasharray="2 2" />
-      <line x1="418" y1="260" x2="382" y2="330" stroke-dasharray="2 2" />
-    </g>
+      <!-- Engine 2 (Outer Mid Left) -->
+      <polygon points="364,645 382,645 388,715 358,715" fill="currentColor" opacity="0.55" />
+      <ellipse cx="373" cy="715" rx="15" ry="3.5" fill="currentColor" opacity="0.8" />
 
-    <!-- Radiation Shadow Shield at Base of Reactor -->
-    <polygon points="360,620 440,620 446,655 354,655" fill="currentColor" opacity="0.4" stroke="currentColor" stroke-width="2.2" />
+      <!-- Engine 3 (Outer Mid Right) -->
+      <polygon points="418,645 436,645 442,715 412,715" fill="currentColor" opacity="0.55" />
+      <ellipse cx="427" cy="715" rx="15" ry="3.5" fill="currentColor" opacity="0.8" />
 
-    <!-- Dual High-Impulse Nuclear Thermal Rocket (NTR) Engines -->
-    <g stroke="currentColor" stroke-width="2">
-      <!-- Left NTR Engine Bell -->
-      <polygon points="368,655 394,655 398,730 360,730" fill="currentColor" opacity="0.6" />
-      <!-- Right NTR Engine Bell -->
-      <polygon points="406,655 432,655 440,730 402,730" fill="currentColor" opacity="0.6" />
+      <!-- Engine 4 (Outer Far Right) -->
+      <polygon points="442,645 460,645 466,710 436,710" fill="currentColor" opacity="0.5" />
+      <ellipse cx="451" cy="710" rx="15" ry="3.5" fill="currentColor" opacity="0.8" />
+
+      <!-- Central Cluster: 3 Sea-Level Gimbaled Raptor Engines -->
+      <polygon points="385,645 397,645 400,695 382,695" fill="currentColor" opacity="0.75" />
+      <ellipse cx="391" cy="695" rx="9" ry="2.5" fill="currentColor" opacity="0.9" />
+
+      <polygon points="403,645 415,645 418,695 400,695" fill="currentColor" opacity="0.75" />
+      <ellipse cx="409" cy="695" rx="9" ry="2.5" fill="currentColor" opacity="0.9" />
+
+      <polygon points="394,645 406,645 408,702 392,702" fill="currentColor" opacity="0.85" />
+      <ellipse cx="400" cy="702" rx="8" ry="2.5" fill="currentColor" opacity="1" />
     </g>"""
-    return wrap_svg("ips", "88.0 M", "SPAN 32.0 M", content)
+    return wrap_svg("ips", "140.0 M", "DIAMETER 12.0 M · SPAN 18.0 M", content)
 
 # Map all 12 files
 ROCKETS = {

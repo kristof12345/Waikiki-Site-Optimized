@@ -37,7 +37,7 @@
     <line x1="160" y1="45" x2="130" y2="45" />
     <line x1="160" y1="755" x2="130" y2="755" />
     <line x1="145" y1="45" x2="145" y2="755" stroke-dasharray="4 4" />
-    <text x="130" y="400" text-anchor="middle" fill="currentColor" font-family="monospace" font-size="11" letter-spacing="2" opacity="0.85" transform="rotate(-90 130 400)" stroke="none">HEIGHT 128.0 M</text>
+    <text x="130" y="400" text-anchor="middle" fill="currentColor" font-family="monospace" font-size="11" letter-spacing="2" opacity="0.85" transform="rotate(-90 130 400)" stroke="none">HEIGHT 106.0 M</text>
 
     <!-- Width / Diameter bar -->
     <line x1="300" y1="765" x2="300" y2="785" />

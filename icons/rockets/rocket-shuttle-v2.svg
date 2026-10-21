@@ -48,45 +48,94 @@
 
   <!-- Rocket Technical Vector Graphic -->
   <g id="vehicle-graphic">
-    <!-- Advanced Central Core Tank -->
-    <path d="M 376 110 C 376 60 400 40 400 40 C 400 40 424 60 424 110 L 424 690 C 424 705 376 705 376 690 Z" fill="url(#sts2Body)" stroke="currentColor" stroke-width="2.2" />
+    <!-- Space Shuttle v2 Next-Gen Orbiter (Top-Down / Dorsal Technical Blueprint) -->
 
-    <!-- Twin Advanced Liquid Flyback Boosters -->
-    <!-- Left Flyback Booster with Canted Canards -->
-    <g stroke="currentColor" stroke-width="2">
-      <path d="M 320 180 C 320 130 338 115 338 115 C 338 115 356 130 356 180 Z" fill="url(#sts2Booster)" />
-      <rect x="320" y="180" width="36" height="515" fill="url(#sts2Booster)" />
-      <!-- Canard Fin -->
-      <polygon points="320,220 285,250 285,260 320,245" fill="url(#sts2Wing)" stroke-width="1.6" />
-      <!-- Engine Nozzles -->
-      <polygon points="316,695 360,695 364,730 312,730" fill="currentColor" opacity="0.4" />
+    <!-- Advanced Blended Delta Wings with Organic Strakes and Canted Winglets -->
+    <!-- Left Wing Structure -->
+    <path d="M 364 200 C 350 290 325 380 305 440 L 145 580 L 145 615 L 345 615 L 362 605 Z" fill="url(#sts2Wing)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
+    <!-- Right Wing Structure -->
+    <path d="M 436 200 C 450 290 475 380 495 440 L 655 580 L 655 615 L 455 615 L 438 605 Z" fill="url(#sts2Wing)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
+
+    <!-- Modern Canted Aerodynamic Winglets (Vertical Wingtips) -->
+    <!-- Left Winglet -->
+    <polygon points="145,580 132,540 142,545 145,615" fill="currentColor" opacity="0.5" stroke="currentColor" stroke-width="1.8" />
+    <line x1="138" y1="545" x2="145" y2="600" stroke="currentColor" stroke-width="1" />
+    <!-- Right Winglet -->
+    <polygon points="655,580 668,540 658,545 655,615" fill="currentColor" opacity="0.5" stroke="currentColor" stroke-width="1.8" />
+    <line x1="662" y1="545" x2="655" y2="600" stroke="currentColor" stroke-width="1" />
+
+    <!-- Sleek Stealth Thermal Leading Edge Chine (Black Carbon-Silicon Matrix) -->
+    <path d="M 364 200 C 350 290 325 380 305 440 L 145 580 L 145 590 L 310 448 C 330 388 355 298 368 208 Z" fill="currentColor" opacity="0.4" stroke="currentColor" stroke-width="1.2" />
+    <path d="M 436 200 C 450 290 475 380 495 440 L 655 580 L 655 590 L 490 448 C 470 388 445 298 432 208 Z" fill="currentColor" opacity="0.4" stroke="currentColor" stroke-width="1.2" />
+
+    <!-- Modern Multi-Segment Fly-By-Wire Elevons -->
+    <g stroke="currentColor" stroke-width="1.4">
+      <!-- Left Elevons (3 Segments) -->
+      <polygon points="160,592 220,592 220,612 160,612" fill="url(#sts2Booster)" />
+      <polygon points="226,592 286,592 286,612 226,612" fill="url(#sts2Booster)" />
+      <polygon points="292,592 342,592 342,612 292,612" fill="url(#sts2Booster)" />
+      <!-- Right Elevons (3 Segments) -->
+      <polygon points="458,592 508,592 508,612 458,612" fill="url(#sts2Booster)" />
+      <polygon points="514,592 574,592 574,612 514,612" fill="url(#sts2Booster)" />
+      <polygon points="580,592 640,592 640,612 580,612" fill="url(#sts2Booster)" />
     </g>
-    <!-- Right Flyback Booster with Canted Canards -->
-    <g stroke="currentColor" stroke-width="2">
-      <path d="M 444 180 C 444 130 462 115 462 115 C 462 115 480 130 480 180 Z" fill="url(#sts2Booster)" />
-      <rect x="444" y="180" width="36" height="515" fill="url(#sts2Booster)" />
-      <!-- Canard Fin -->
-      <polygon points="480,220 515,250 515,260 480,245" fill="url(#sts2Wing)" stroke-width="1.6" />
-      <!-- Engine Nozzles -->
-      <polygon points="440,695 484,695 488,730 436,730" fill="currentColor" opacity="0.4" />
+
+    <!-- Modern Composite Fuselage Body -->
+    <path d="M 384 85 C 384 55 400 48 400 48 C 400 48 416 55 416 85 L 442 200 L 446 510 L 434 625 L 366 625 L 354 510 L 358 200 Z" fill="url(#sts2Body)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
+
+    <!-- Streamlined Aerodynamic Carbon Nose Cap -->
+    <path d="M 386 82 C 386 58 400 50 400 50 C 400 50 414 58 414 82 C 414 96 386 96 386 82 Z" fill="currentColor" opacity="0.5" stroke="currentColor" stroke-width="1.8" />
+
+    <!-- Integrated Conformal Flush RCS Thrusters -->
+    <g fill="currentColor" opacity="0.7">
+      <line x1="388" y1="78" x2="388" y2="90" stroke="currentColor" stroke-width="1.5" />
+      <line x1="412" y1="78" x2="412" y2="90" stroke="currentColor" stroke-width="1.5" />
+      <circle cx="390" cy="84" r="1.5" />
+      <circle cx="410" cy="84" r="1.5" />
     </g>
 
-    <!-- Shuttle v2 Next-Gen Orbiter (Blended Wing-Body, Winglets) -->
-    <!-- Continuous Aerodynamic Wing Sweep -->
-    <path d="M 388 230 C 370 320 310 460 230 630 L 235 655 L 255 640 L 360 635 L 372 645 L 428 645 L 440 635 L 545 640 L 565 655 L 570 630 C 490 460 430 320 412 230 Z" fill="url(#sts2Wing)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
-    <!-- Winglet Wingtips -->
-    <polygon points="230,630 220,590 235,615" fill="currentColor" opacity="0.6" stroke="currentColor" stroke-width="1.6" />
-    <polygon points="570,630 580,590 565,615" fill="currentColor" opacity="0.6" stroke="currentColor" stroke-width="1.6" />
+    <!-- Modern Panoramic Glass Flight Deck (Wraparound Dark Canopy Visor) -->
+    <path d="M 382 120 C 388 112 400 110 400 110 C 400 110 412 112 418 120 L 415 132 C 408 126 400 124 400 124 C 400 124 392 126 385 132 Z" fill="currentColor" opacity="0.85" stroke="currentColor" stroke-width="1.2" />
+    <line x1="400" y1="110" x2="400" y2="124" stroke="#ffffff" stroke-width="1.2" opacity="0.8" />
 
-    <!-- Orbiter Fuselage & Cockpit -->
-    <path d="M 386 195 C 386 165 400 150 400 150 C 400 150 414 165 414 195 L 414 635 L 386 635 Z" fill="url(#sts2Body)" stroke="currentColor" stroke-width="2" />
-    <polygon points="391,190 400,185 409,190 405,196 395,196" fill="currentColor" opacity="0.8" />
+    <!-- Modern Payload Bay with Conformal Hexagonal Photovoltaic Radiator Doors -->
+    <rect x="362" y="160" width="76" height="350" rx="3" fill="url(#sts2Body)" stroke="currentColor" stroke-width="1.5" />
+    <line x1="400" y1="160" x2="400" y2="510" stroke="currentColor" stroke-width="1.8" />
+    <line x1="362" y1="245" x2="438" y2="245" stroke="currentColor" stroke-width="1" opacity="0.65" />
+    <line x1="362" y1="335" x2="438" y2="335" stroke="currentColor" stroke-width="1" opacity="0.65" />
+    <line x1="362" y1="425" x2="438" y2="425" stroke="currentColor" stroke-width="1" opacity="0.65" />
+    <!-- Hex / diamond panel pattern accents -->
+    <g stroke="currentColor" stroke-width="0.8" opacity="0.4">
+      <polygon points="380,180 390,175 400,180 400,190 390,195 380,190" fill="none" />
+      <polygon points="400,180 410,175 420,180 420,190 410,195 400,190" fill="none" />
+      <polygon points="380,270 390,265 400,270 400,280 390,285 380,280" fill="none" />
+      <polygon points="400,270 410,265 420,270 420,280 410,285 400,280" fill="none" />
+    </g>
 
-    <!-- Twin Canted Vertical Fins (V-tail) -->
-    <polygon points="370,550 350,470 365,475 385,550" fill="currentColor" opacity="0.35" stroke="currentColor" stroke-width="1.8" />
-    <polygon points="430,550 450,470 435,475 415,550" fill="currentColor" opacity="0.35" stroke="currentColor" stroke-width="1.8" />
+    <!-- Modern Streamlined OMS Fairings -->
+    <path d="M 354 480 C 340 505 334 545 336 620 L 364 620 Z" fill="url(#sts2Booster)" stroke="currentColor" stroke-width="1.8" />
+    <path d="M 446 480 C 460 505 466 545 464 620 L 436 620 Z" fill="url(#sts2Booster)" stroke="currentColor" stroke-width="1.8" />
 
-    <!-- Aerospike / Advanced Linear Engine Nozzle Bank -->
-    <rect x="382" y="640" width="36" height="25" rx="3" fill="currentColor" opacity="0.5" stroke="currentColor" stroke-width="1.8" />
+    <!-- Twin Canted Vertical Stabilizers (Modern V-Tail on OMS Pods) -->
+    <!-- Left Canted Fin (Angled out at ~25°) -->
+    <g stroke="currentColor" stroke-width="1.8">
+      <polygon points="350,520 310,430 325,435 362,545" fill="url(#sts2Wing)" />
+      <line x1="322" y1="455" x2="354" y2="528" stroke-width="1" opacity="0.6" />
+    </g>
+    <!-- Right Canted Fin (Angled out at ~25°) -->
+    <g stroke="currentColor" stroke-width="1.8">
+      <polygon points="450,520 490,430 475,435 438,545" fill="url(#sts2Wing)" />
+      <line x1="478" y1="455" x2="446" y2="528" stroke-width="1" opacity="0.6" />
+    </g>
+
+    <!-- Modern Flush Aerospike / Advanced Linear Multi-Engine Cluster -->
+    <polygon points="370,625 430,625 434,650 366,650" fill="url(#sts2Body)" stroke="currentColor" stroke-width="2" />
+    <!-- 3 Advanced Linear Aerospike Bells -->
+    <ellipse cx="400" cy="652" rx="14" ry="12" fill="currentColor" opacity="0.6" stroke="currentColor" stroke-width="1.8" />
+    <ellipse cx="378" cy="678" rx="14" ry="12" fill="currentColor" opacity="0.6" stroke="currentColor" stroke-width="1.8" />
+    <ellipse cx="422" cy="678" rx="14" ry="12" fill="currentColor" opacity="0.6" stroke="currentColor" stroke-width="1.8" />
+    <circle cx="400" cy="652" r="6" fill="#ffffff" opacity="0.7" />
+    <circle cx="378" cy="678" r="6" fill="#ffffff" opacity="0.7" />
+    <circle cx="422" cy="678" r="6" fill="#ffffff" opacity="0.7" />
   </g>
 </svg>
