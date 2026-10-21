@@ -67,11 +67,6 @@
 }
 
 /* Space Research SVG animations */
-.ill .spin-fast {
-    transform-box: fill-box;
-    transform-origin: center;
-    animation: illSpin 5s linear infinite;
-}
 
 .ill .spin-rev {
     transform-box: fill-box;
@@ -94,12 +89,6 @@
     animation: illFlame 0.25s ease-in-out infinite alternate;
 }
 
-.ill .freq-bar-1 { animation: illFreq 1.2s ease-in-out infinite alternate; }
-.ill .freq-bar-2 { animation: illFreq 0.8s ease-in-out infinite alternate; animation-delay: 0.2s; }
-.ill .freq-bar-3 { animation: illFreq 1.5s ease-in-out infinite alternate; animation-delay: 0.4s; }
-.ill .freq-bar-4 { animation: illFreq 0.9s ease-in-out infinite alternate; animation-delay: 0.1s; }
-.ill .freq-bar-5 { animation: illFreq 1.3s ease-in-out infinite alternate; animation-delay: 0.3s; }
-
 @keyframes illSpinRev {
     to { transform: rotate(-360deg); }
 }
@@ -116,11 +105,6 @@
 @keyframes illFlame {
     0% { transform: scaleY(0.92) scaleX(0.96); opacity: 0.85; }
     100% { transform: scaleY(1.08) scaleX(1.04); opacity: 1; }
-}
-
-@keyframes illFreq {
-    0% { transform: scaleY(0.3); transform-origin: bottom; }
-    100% { transform: scaleY(1.0); transform-origin: bottom; }
 }
 
 /* Digital State and Orbital Reach section */
