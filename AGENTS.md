@@ -31,3 +31,5 @@ After building or editing any HTML page:
   `purgecss --css css/*.css --output css/ --content **/*.html **/*.js --keyframes`
 - Publish to all remotes (via `publish` skill):
   `python3 .agents/skills/publish/scripts/publish.py`
+- Text length and line balance auditor (via `text-balance` skill):
+  `python3 .agents/skills/text-balance/scripts/text_balance.py <file.html>`
