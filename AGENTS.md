@@ -27,3 +27,5 @@ After building or editing any HTML page:
   `python3 .agents/skills/spell-check/scripts/audit.py`
 - Locale sync checker (via `locale-sync` skill):
   `python3 .agents/skills/locale-sync/scripts/sync_check.py`
+- Clean and purge unused CSS (via `clear-css` skill):
+  `purgecss --css css/*.css --output css/ --content **/*.html **/*.js --keyframes`
