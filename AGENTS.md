@@ -23,5 +23,7 @@ After building or editing any HTML page:
   `python3 scripts/build_pages.py --format --all`
 - Build pages (automatically formats and strips empty lines):
   `python3 scripts/build_pages.py`
-- Copy quality & spell checker (via `spell-check` skill):
+- Copy quality and spell checker (via `spell-check` skill):
   `python3 .agents/skills/spell-check/scripts/audit.py`
+- Locale sync checker (via `locale-sync` skill):
+  `python3 .agents/skills/locale-sync/scripts/sync_check.py`
