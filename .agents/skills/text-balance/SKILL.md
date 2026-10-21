@@ -35,20 +35,23 @@ Activate this skill when:
 
 ## Automated Text Balance Auditor
 
-The workspace includes a dedicated inspection script supporting both static analysis and live headless Chrome browser rendering (which **always evaluates at 2560px width**):
+The workspace includes a dedicated inspection script supporting static analysis, headless Chrome, and **Playwright live browser rendering** (which **always evaluates at 2560px ultra-wide desktop width**):
 
 ```bash
 # 1. Audit text balance on a specific page (static line estimation based on 2560px desktop grid width)
 python3 .agents/skills/text-balance/scripts/text_balance.py hu/space-research.html
 
-# 2. Audit with live headless Chrome for exact pixel-rendered line counts at 2560px width
+# 2. Audit with live Playwright browser for exact pixel-rendered line counts at 2560px width
 python3 .agents/skills/text-balance/scripts/text_balance.py --browser hu/space-research.html
 
+# Direct Playwright runner via Node:
+node .agents/skills/text-balance/scripts/playwright_balance.js hu/space-research.html
+
 # 3. Only display sections with imbalanced rows (variance >= 2 lines)
-python3 .agents/skills/text-balance/scripts/text_balance.py --imbalanced hu/space-research.html
+python3 .agents/skills/text-balance/scripts/text_balance.py --browser --imbalanced hu/space-research.html
 
 # 4. Audit all pages across the website
-python3 .agents/skills/text-balance/scripts/text_balance.py --all
+python3 .agents/skills/text-balance/scripts/text_balance.py --browser --all
 ```
 
 ### What the Auditor Reports:

@@ -33,3 +33,5 @@ After building or editing any HTML page:
   `python3 .agents/skills/publish/scripts/publish.py`
 - Text length and line balance auditor (via `text-balance` skill):
   `python3 .agents/skills/text-balance/scripts/text_balance.py <file.html>`
+- Multi-viewport layout and contrast auditor (via `layout-audit` skill):
+  `python3 .agents/skills/layout-audit/scripts/layout_audit.py <file.html>`

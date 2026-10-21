@@ -132,8 +132,23 @@ VIEWPORT_WIDTH = 2560
 VIEWPORT_HEIGHT = 1440
 
 
+PLAYWRIGHT_SCRIPT = Path(__file__).parent / "playwright_balance.js"
+
+
 def measure_with_browser(file_path: Path, width: int = VIEWPORT_WIDTH, height: int = VIEWPORT_HEIGHT) -> dict[str, list[dict]] | None:
-    """Uses headless Google Chrome to measure exact computed line heights and line counts at specified viewport width (default 2560px)."""
+    """Measures exact computed line heights and line counts using Playwright (falling back to headless Chrome) at specified viewport width (default 2560px)."""
+    # 1. Try Playwright runner via Node if available
+    node_bin = shutil.which("node")
+    if node_bin and PLAYWRIGHT_SCRIPT.exists():
+        try:
+            cmd = [node_bin, str(PLAYWRIGHT_SCRIPT), f"--width={width}", str(file_path)]
+            res = subprocess.run(cmd, capture_output=True, text=True, timeout=20)
+            if res.returncode == 0 and res.stdout.strip():
+                return json.loads(res.stdout.strip())
+        except Exception:
+            pass
+
+    # 2. Fallback to headless Google Chrome
     if not os.path.exists(CHROME_PATH):
         return None
 
