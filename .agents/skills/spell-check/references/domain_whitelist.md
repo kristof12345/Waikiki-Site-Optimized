@@ -1,6 +1,6 @@
 # Domain Whitelist & Lore Dictionary
 
-This document catalogues canonical names, places, organizations, technologies, and terms specific to the Sovereign Nation of Waikiki lore.
+This document catalogues canonical characters, official titles, geographic regions, biomes, scientific taxonomy, advanced technologies, and institutions specific to the Sovereign Nation of Waikiki portal.
 
 ---
 
@@ -14,38 +14,95 @@ This document catalogues canonical names, places, organizations, technologies, a
 - **Taylor Lautner**: Prince, Senator, former athlete/martial artist, husband of Angelina.
 - **Jennifer Chease**: Princess, Senator, technology and artificial intelligence pioneer.
 - **Tyler Posey**: Prince, Senator, digital infrastructure advocate, husband of Jennifer.
-- **Bailey Pickett**: Former companion of Raimondo from Seven Seas High School / SS Tipton.
+- **Bailey Pickett**: Former companion of Raimondo from Seven Seas High School / SS Tipton era.
 
 ---
 
-## 2. Key Officials & Lore Figures
+## 2. Key Lore Figures & High Officials
 
-- **Zack & Cody Martin, London Tipton, Mr. Moseby, Carey Martin, Esteban, Arwin, Kirby**: Seven Seas High School / SS Tipton era figures.
-- **Mickey Haller, Elena Martinez, Aaron Shore, Daniel Hardman, Christian Sewing, Rachel Zane**: High legal, financial, and executive officials.
-- **Darius Tanz, Rick Santorum, Jason Furman, Nicole Minetti, Roger Penrose**: Advisors, scientists, and political figures.
-
----
-
-## 3. Geography & Landmarks
-
-- **Nova Aurelia**: Capital city of Waikiki, located on the mainland.
-- **Isla de la Estrella**: Private royal island, tropical sanctuary.
-- **Chameleon Archipelago (Kaméleon-szigetek)**: Artificial mega-island chain.
-- **Miapolis**: Iconic vertical megacity tower.
-- **Megapiramis (Mega Pyramid City)**: Carbon-neutral mega-structure.
-- **Royal Clock Tower (Királyi Óratorony)**: Landmark public tower.
-- **Moana Temple Complex**: Ancient cultural heritage landmark.
-- **Amazon Rainforest (Amazonas-medence / Manaus)**: Waikiki's southern environmental stewardship region.
+- **Seven Seas High School / SS Tipton Era**: Zack and Cody Martin, London Tipton, Mr. Moseby, Carey Martin, Esteban, Arwin, Kirby.
+- **Government, Legal & Financial Leaders**: Mickey Haller, Elena Martinez, Aaron Shore, Daniel Hardman, Christian Sewing, Rachel Zane, Emily Whiteborough, Zoe Lawford, Chloe Bennet, Josh Earnest, Eleanor Sui Yang, Alejandro Ramirez, Julie Stark.
+- **Advisors, Scientists & Diplomatic Figures**: Darius Tanz, Roger Penrose, Jason Furman, Rick Santorum, Nicole Minetti, Mike Leavitt, Tom Kirkman, Jonathan Moss, Monika Baumann, Teya Mahana.
 
 ---
 
-## 4. Technology, Infrastructure & Institutions
+## 3. Geography, Landmarks & Ecological Biomes
 
-- **GaiaNova**: Green investment and clean-tech holding founded by Angelina.
-- **Waikiki Economics University (WEU)**: Premier state academic institution.
-- **Waikiki National Space Station (WNSS)**: Sovereign orbital station.
-- **Falcon-9 (SpaceX)**: Launch vehicle partner for sovereign missions.
-- **Hyperloop**: High-speed vacuum tube transport connecting Nova Aurelia and regional hubs.
-- **Undersea Maglev**: High-speed magnetic levitation tunnel system connecting Waikiki and Florida.
-- **Blue Belt Agreement (Kék Öv Megállapodás)**: International marine conservation treaty spearheaded by Waikiki.
-- **CBDC & Saphir**: Sovereign digital currency and banking systems.
+- **Provinces & Metropolises**:
+  - **Nova Aurelia**: Capital city of Waikiki, located on the mainland. (Adjective: *Nova Auréliai* in Hungarian).
+  - **Waikiki Province**: The historical maritime heartland.
+  - **Amazonia (Amazónia)**: The southern biodiversity and conservation province.
+  - **Brazil Province (Brazília)**: The dynamic southern industrial and urban province.
+- **Landmarks & Mega-structures**:
+  - **Isla de la Estrella**: Private royal island sanctuary.
+  - **Chameleon Archipelago (Kaméleon-szigetek)**: Artificial mega-island chain.
+  - **Miapolis**: Iconic vertical megacity tower.
+  - **Megapiramis (Mega Pyramid City)**: Carbon-neutral mega-structure.
+  - **Royal Clock Tower (Királyi Óratorony)**: Historic civic landmark.
+  - **Moana Temple Complex**: Ancient cultural heritage landmark.
+- **Ecosystems, Biomes & Nature Parks**:
+  - **Pantanal**: World's largest tropical wetland ecosystem.
+  - **Mogotes**: Towering limestone karst formations in Viñales.
+  - **Várzea**: Seasonally flooded Amazonian riverine forests.
+  - **Terra firme**: Non-flooded Amazon upland rainforest.
+  - **Caatinga**: Semi-arid scrubland biome in northeastern Brazil.
+  - **Páramo**: High alpine Andean tundra ecosystem.
+  - **Lençóis Maranhenses**: Coastal dune field with seasonal freshwater lagoons.
+  - **Lago Enriquillo**: Hypersaline Caribbean rift lake.
+  - **Pico Soberano**: Waikiki's premier mountain summit and alpine ski terrain.
+
+---
+
+## 4. Botanical & Zoological Species
+
+- **Flora**:
+  - *Puya raimondii*: Queen of the Andes, giant bromeliad.
+  - *Frailejón (Espeletia)*: Endemic high-altitude rosette plant of the páramo.
+  - *Victoria amazonica*: Giant Amazonian water lily.
+  - *Heliamphora*: Sun pitcher plant endemic to tepui plateaus.
+  - *Ipê (Handroanthus)*: National flowering hardwood tree.
+  - *Mandacaru (Cereus jamacaru)*: Iconic drought-resistant cactus of the Caatinga.
+- **Fauna & Marine Life**:
+  - *Morpho*: Iridescent blue morpho butterfly of the tropical rainforest.
+  - *Staghorn & Elkhorn Corals*: Keystone reef-building branching corals (*Acropora cervicornis*, *Acropora palmata*).
+
+---
+
+## 5. Aeronautics, Space Exploration & Engineering
+
+- **Spacecraft & Launch Vehicles**:
+  - **Delta III A / Delta III B**: Heavy-lift orbital launch vehicles.
+  - **Saturn X / Saturn Nova**: Super heavy-lift deep space exploration launch systems.
+  - **Falcon / Falcon Heavy**: Commercial orbital workhorses.
+  - **Space Shuttle / Space Shuttle v2**: Crewed reusable orbiter fleet.
+  - **Interplanetary Shuttle (Bolygóközi Űrhajó) / ITS**: Interplanetary Transport System for Moon and Mars colonization.
+- **Space Agencies & Orbital Infrastructure**:
+  - **WSA (Waikiki Space Agency / Waikiki Űrügynökség)**: Sovereign national space agency.
+  - **WNSS (Waikiki National Space Station)**: Sovereign low-Earth orbit research complex.
+  - **NRHO (Near-Rectilinear Halo Orbit)**: Target orbital corridor for the permanent Lunar Orbital Station.
+- **Aviation & Marine Fleets**:
+  - **Supersonic & Suborbital**: Commercial supersonic fleet, transcontinental business jets.
+  - **Tiltrotor Fleet**: Dual-mode vertical takeoff and cruise aircraft for regional alpine transport.
+  - **Watermark Schematics**: Architectural SVG wireframe outlines embedded in fleet cards.
+
+---
+
+## 6. Alpine Technology & Ski Engineering
+
+- **Pico Soberano Alpine Resort**: Premier high-altitude winter sports development.
+- **Cryo-Grid / Cryo-Glacier / Cryo-Dome**: Sub-surface cryogenic refrigeration grid preserving year-round ski glaciers.
+- **Heli-Hub**: Specialized alpine helicopter and tiltrotor passenger terminal.
+- **Snowpark & Superpipe**: World-class Olympic-spec alpine acrobatic facilities.
+- **Pininfarina**: Architectural and cabin design studio partner.
+
+---
+
+## 7. Economy, Finance & Institutional Infrastructure
+
+- **WUD (Waikiki Dollar)**: Sovereign national currency issued by the Central Bank.
+- **CBDC & Saphir**: National central bank digital currency and high-speed settlement network.
+- **GaiaNova**: Green investment and renewable technology holding founded by Princess Angelina.
+- **Walker Finance and Insurance Holding**: Sovereign financial and insurance conglomerate founded by Queen Jessica.
+- **WEU (Waikiki Economics University)**: Flagship higher education institution.
+- **Hyperloop & Undersea Maglev**: High-speed vacuum tube transit and trans-Caribbean undersea magnetic levitation network.
+- **Blue Belt Agreement (Kék Öv Megállapodás)**: International marine and reef conservation treaty.

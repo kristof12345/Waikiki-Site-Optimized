@@ -68,13 +68,12 @@ Review the reported diff chunks, modified cards, and any flagged discrepancies.
 
 ### Step 2: Synchronize Counterpart HTML Content
 Open the counterpart file and apply the corresponding additions, updates, or removals:
-- **Prose**: Translate naturally and faithfully while maintaining dignified, inspiring register fitting for a sovereign state.
+- **Prose & Messaging**: Translate contextually and idiomatically to preserve tone, nuance, and dignified state register, avoiding robotic or literal word-for-word translation.
 - **Titles & Headings**:
-  - Hungarian: Sentence case (e.g. *„Hold- és Mars-küldetések”*, *„Delta III B nehéz hordozórakéta”*).
-  - English: Title Case (e.g. *“Lunar and Mars Exploration”*, *“Delta III B Heavy Lift Rocket”*).
-- **Technical Specs**: Ensure all numerical metrics match (mass in kg, height in m, thrust in kN, cost in USD/Mrd Ft).
-- **Watermark & Wireframe Schematics**: Ensure identical SVG image paths (e.g. `../images/wireframes/...`).
-- **Section IDs & Classes**: Ensure matching `id` attributes and `class` attributes (`light-bg`, `fade-in`).
+  - Hungarian: Sentence case (capitalizing only the first word and proper nouns).
+  - English: Title Case (capitalizing principal words).
+- **Technical Metrics & Data**: Maintain identical physical dimensions, dates, counts, and performance metrics while adapting locale formatting (thousands separators, decimal delimiters, currency symbols).
+- **DOM Structure & Assets**: Preserve 1-to-1 structural parity (section IDs, alternating classes, card counts, schematic image paths).
 
 ### Step 3: Enforce Editorial Policies
 During synchronization, strictly adhere to site rules:

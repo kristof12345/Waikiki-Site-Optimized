@@ -143,7 +143,20 @@ WHITELIST = {
     "prieto", "temer", "zambellas", "pardo", "dhalla", "menéndez", "toffoli", "aventador",
     "waverly", "bilderberg", "helu", "bridgit", "mendler", "brangelina", "monde", "sheikha",
     "emiri", "nahyan's", "weddell", "aguas", "calientes", "giorgia", "der", "legolands",
-    "heli-skiing", "riverdale", "expeditioner", "expeditioner-class", "kahele", "amazonas"
+    "heli-skiing", "riverdale", "expeditioner", "expeditioner-class", "kahele", "amazonas",
+
+    # Nature, Ecology, Botanical & Biomes
+    "pantanal", "mogotes", "hypersaline", "várzea", "caatinga", "staghorn", "elkhorn",
+    "amazonica", "morpho", "firme", "páramo", "puya", "raimondii", "frailejón", "viñales",
+    "enriquillo", "lençóis", "heliamphora", "ipê", "mandacaru", "bromeliad", "bromeliads",
+
+    # Alpine, Ski Paradise, Engineering & Luxury
+    "soberano", "pininfarina", "pérignon", "cryo-grid", "cryo-glacier", "cryo-dome",
+    "cryo-recovery", "cryo-cooled", "cryo-cooling", "tiltrotor", "tiltrotors", "heli-hub",
+    "heliski", "snowpark", "superpipe", "microgrid", "microgrids",
+
+    # Space & Advanced Aeronautics
+    "wsa", "its", "nrho", "retropropulsion", "aerospike"
 }
 
 # --------------------------------------------------------------------------- #
