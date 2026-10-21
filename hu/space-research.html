@@ -7,14 +7,14 @@
     <meta name="theme-color" content="#fbf7f0" />
     <link rel="stylesheet" href="../css/fonts.css" />
     <script>
-        (function (d) {
+        (function(d) {
             var h = d.documentElement;
             h.classList.add('js');
             try {
                 if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
                 if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
-            } catch (e) { }
-            setTimeout(function () {
+            } catch (e) {}
+            setTimeout(function() {
                 if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
             }, 3500)
         })(document);
@@ -149,7 +149,7 @@
                 <div class="hero-stats">
                     <div class="stat-item"><span class="stat-number">$200+ Mrd</span><span class="stat-label">Űrállomás költségvetés</span></div>
                     <div class="stat-item"><span class="stat-number">270 T</span><span class="stat-label">Delta IV teherbírás</span></div>
-                    <div class="stat-item"><span class="stat-number">2035</span><span class="stat-label">Emberes Mars-misszió</span></div>
+                    <div class="stat-item"><span class="stat-number">2035-2040</span><span class="stat-label">Emberes Mars-misszió</span></div>
                     <div class="stat-item"><span class="stat-number">12 fő</span><span class="stat-label">Kutatói legénység</span></div>
                 </div>
             </div>
@@ -351,7 +351,7 @@
                 <div class="card"><span class="card-icon"><img src="../icons/mdi/space-station.svg" alt="" /></span>
                     <span class="spec-badge">Orbitális Zászlóshajó</span>
                     <h3>A WNSS Tudományos Laboratórium</h3>
-                    <p>A Waikiki Nemzeti Űrállomás építése 2007-ben kezdődött, az alapkomplexum 2012-ben készült el, az utolsó modul pedig 2016-ban került a helyére. Az építés teljes költségvetése meghaladja a Nemzetközi Űrállomásét és eléri a 200 milliárd USA dollárt. A WNSS büszkén viseli a legnagyobb ember által épített űrobjektum címet.</p>
+                    <p>A Waikiki Nemzeti Űrállomás építése 2007-ben kezdődött, az alapkomplexum 2012-ben készült el, az utolsó modul pedig 2018-ban került a helyére. Az építés teljes költségvetése meghaladja a Nemzetközi Űrállomásét és eléri a 200 milliárd USA dollárt. A WNSS büszkén viseli a legnagyobb ember által épített űrobjektum címet.</p>
                     <ul class="spec-list">
                         <li><span>Állandó személyzet</span><strong>12 asztronauta és kutató</strong></li>
                         <li><span>Pályamagasság</span><strong>420 km Föld körüli pálya</strong></li>
@@ -392,7 +392,7 @@
         </section>
         <section id="lunar-mars" class="light-bg fade-in">
             <h2 class="section-title">Hold- és Mars-küldetések</h2>
-            <p class="section-intro">A WSA tudósai és mérnökei a nemzetközi űrvállalatokkal karöltve az emberiség határait feszegetik. Az űrállomás befejezése után a Hold és a Mars felszíne a következő meghódítandó állomás.</p>
+            <p class="section-intro">A WSA kutatói a nemzetközi űrügynökségekkel és ipari partnerekkel karöltve a következő évtized legambiciózusabb mélyűri küldetéseit készítik elő: a 2026 és 2030 közötti emberes Hold-programot és a 2035-2040-re tervezett Mars-expedíciót.</p>
             <div class="ill-panel">
                 <svg class="ill" viewBox="0 0 1160 480" role="img" aria-label="Föld, Hold és Mars bolygóközi közlekedési folyosók térképe">
                     <defs>
@@ -465,11 +465,11 @@
                             <circle cx="-12" cy="-8" r="6" fill="#88a8a2" opacity=".6" />
                             <circle cx="10" cy="6" r="8" fill="#88a8a2" opacity=".5" />
                             <circle cx="-6" cy="14" r="4" fill="#88a8a2" opacity=".6" />
-                            <!-- Autonóm felszíni jeladó -->
+                            <!-- Tervezett leszállási zóna jeladó -->
                             <circle cx="8" cy="-14" r="3" fill="#2ecc71" />
                             <circle class="pulse" cx="8" cy="-14" r="12" fill="none" stroke="#2ecc71" stroke-width="1.5" />
-                            <text x="0" y="65" fill="#fbf7f0" font-family="Manrope, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1.5">HOLDBÁZIS</text>
-                            <text x="0" y="82" fill="#f5c46e" font-family="Manrope, sans-serif" font-size="10" font-weight="600" text-anchor="middle">SATURN X KÜLDETÉS</text>
+                            <text x="0" y="65" fill="#fbf7f0" font-family="Manrope, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1.5">TERVEZETT HOLDBÁZIS</text>
+                            <text x="0" y="82" fill="#f5c46e" font-family="Manrope, sans-serif" font-size="10" font-weight="600" text-anchor="middle">SATURN X · 2026-2030</text>
                         </g>
                         <!-- 3. MARS ÉS BÁZISÁLLOMÁS -->
                         <g transform="translate(960, 240)">
@@ -486,7 +486,8 @@
                             </g>
                             <polygon points="-8,-12 0,-24 8,-12" fill="#f5c46e" />
                             <circle cx="0" cy="-14" r="2" fill="#003366" />
-                            <text x="0" y="105" fill="#fbf7f0" font-family="Manrope, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1.5">MARS KOLÓNIA</text>
+                            <text x="0" y="105" fill="#fbf7f0" font-family="Manrope, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1.5">MARS-KÜLDETÉS</text>
+                            <text x="0" y="122" fill="#e3735a" font-family="Manrope, sans-serif" font-size="10" font-weight="600" text-anchor="middle">CÉL: 2035-2040 EMBERES</text>
                         </g>
                         <!-- Marsra tartó űrhajó -->
                         <g>
@@ -513,27 +514,37 @@
                     </g>
                 </svg>
                 <div class="ill-caption">
-                    <span>Mélyűri repülési folyosók: Föld-WNSS bázis, Autonóm Holdbázis és a 2035-ös Mars-misszió.</span>
+                    <span>Mélyűri repülési folyosók: Föld-WNSS bázis, a tervezett Hold-program (2026-2030) és az emberes Mars-misszió (2035-2040).</span>
                 </div>
             </div>
             <div class="card-grid">
                 <div class="card"><span class="card-icon"><img src="../icons/mdi/moon-waxing-crescent.svg" alt="" /></span>
-                    <span class="spec-badge">Felszíni Bázis</span>
-                    <h3>A Waikiki Holdbázis</h3>
-                    <p>A NASA és a WSA közös projektjeként épült holdbázishoz 12 Saturn X rakéta szállította az asztronautákat és az alkatrészeket egy éven keresztül. A holdbázis jelenleg autonóm távvezérléssel működik, folyamatos geológiai mintavételezést és sugárzásmérést végezve.</p>
+                    <span class="spec-badge">Tervezett Program</span>
+                    <h3>A Nemzeti Hold-program és Bázisterv</h3>
+                    <p>Waikiki még nem küldött embert a Holdra, és jelenleg nem létezik felszíni holdbázis: a küldetés a nemzet legkiemelkedőbb stratégiai űrprogramja a 2026 és 2030 közötti időszakra. A WSA és a NASA közös tervei szerint a Saturn X rakétával végrehajtott tesztrepüléseket követően kerül sor a történelmi emberes holdraszállásra, majd az állandó, autonóm kutatóbázis kiépítésére.</p>
                     <ul class="spec-list">
-                        <li><span>Logisztika</span><strong>12 Saturn X nehézrakéta-indítás</strong></li>
-                        <li><span>Jelenlegi állapot</span><strong class="mission-status-pill status-active">Aktív távvezérelt működés</strong></li>
-                        <li><span>Helyszín</span><strong>Déli sarki Aitken-medence</strong></li>
+                        <li><span>Tervezett időkeret</span><strong>2026-2030 közötti fázisok</strong></li>
+                        <li><span>Jelenlegi állapot</span><strong class="mission-status-pill">Tervezés és tesztrepülések alatt</strong></li>
+                        <li><span>Tervezett helyszín</span><strong>Déli-sarki Aitken-medence</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/rocket-launch.svg" alt="" /></span>
+                    <span class="spec-badge">Szupernehéz Hordozórakéta</span>
+                    <h3>Saturn X Rakétarendszer</h3>
+                    <p>A mélyűri küldetések és a Hold-program kulcsa a WSA és a Techno Industries által közösen megalkotott Saturn X szupernehéz hordozórakéta. A több mint 120 méter magas monstrum a valaha tervezett legerősebb űrhajózási eszköz: fejlett folyékony metán-oxigén hajtóműveivel és mesterséges intelligenciával vezérelt navigációjával több mint 150 tonna terhet képes alacsony Föld körüli pályára, és több mint 45 tonnát transzlunáris pályára juttatni.</p>
+                    <ul class="spec-list">
+                        <li><span>Fizikai méret</span><strong>120+ méter magas hordozórendszer</strong></li>
+                        <li><span>Teherbírás</span><strong>150 t LEO / 45+ t Hold felé</strong></li>
+                        <li><span>Fő alkalmazás</span><strong>Hold-expedíciók és bolygóközi transzfer</strong></li>
                     </ul>
                 </div>
                 <div class="card"><span class="card-icon"><img src="../icons/mdi/earth.svg" alt="" /></span>
-                    <span class="spec-badge">Bolygóközi Cél</span>
-                    <h3>Emberes Mars-misszió 2030 előtt</h3>
-                    <p>A WSA kutatóinak eltökélt célja, hogy még 2030 előtt embereket küldjenek a Marsra, és biztonságban vissza is hozzák őket. A tervek szerint az űrhajósokat a SpaceX által kifejlesztett forradalmi bolygóközi rakétarendszer juttatja el a vörös bolygóra.</p>
+                    <span class="spec-badge">Interplanetáris Cél</span>
+                    <h3>Emberes Mars-misszió (2035-2040)</h3>
+                    <p>A WSA kutatóinak hosszú távú stratégiai célja, hogy 2035 és 2040 között embert juttassanak a Marsra, és biztonságosan vissza is hozzák a legénységet. A program a SpaceX fejlett mélyűri csillaghajó-technológiájára, a cislunáris pályán végzett üzemanyag-vételezésre és a WNSS logisztikai bázisára támaszkodik a bolygóközi út megvalósításához.</p>
                     <ul class="spec-list">
-                        <li><span>Időkeret</span><strong>2030 előtti indítási ablak</strong></li>
-                        <li><span>Hordozórendszer</span><strong>SpaceX nehéz bolygóközi technológia</strong></li>
+                        <li><span>Tervezett indítás</span><strong>2035-2040 közötti indítási ablak</strong></li>
+                        <li><span>Hordozórendszer</span><strong>Saturn X és SpaceX bolygóközi technológia</strong></li>
                         <li><span>Fő feladat</span><strong>Felszíni kutatás és bázisépítés</strong></li>
                     </ul>
                 </div>
