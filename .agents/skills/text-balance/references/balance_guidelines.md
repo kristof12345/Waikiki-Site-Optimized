@@ -13,9 +13,9 @@ In modern responsive layouts, cards, grid teasers, and column blocks are display
 
 ---
 
-## 2. Character-to-Line Reference on Desktop (1440px Viewport)
+## 2. Character-to-Line Reference on Desktop (2560px Standard Viewport)
 
-Standard Waikiki card grids render with the following approximate character capacities:
+In accordance with project guidelines, **line count comparison tests always evaluate at 2560px width** (the primary desktop-first base layout width). Standard Waikiki card grids render with the following approximate character capacities at this standard width:
 
 | Grid Type | Cards per Row | Average Chars per Line | 3-Line Target | 4-Line Target | 5-Line Target |
 | :--- | :--- | :--- | :--- | :--- | :--- |

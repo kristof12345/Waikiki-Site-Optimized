@@ -128,58 +128,62 @@ def estimate_line_count(char_count: int, num_cards: int) -> int:
     return max(1, round(char_count / chars_per_line))
 
 
-def measure_with_browser(file_path: Path) -> dict[str, list[dict]] | None:
-    """Uses headless Google Chrome to measure exact computed line heights and line counts."""
+VIEWPORT_WIDTH = 2560
+VIEWPORT_HEIGHT = 1440
+
+
+def measure_with_browser(file_path: Path, width: int = VIEWPORT_WIDTH, height: int = VIEWPORT_HEIGHT) -> dict[str, list[dict]] | None:
+    """Uses headless Google Chrome to measure exact computed line heights and line counts at specified viewport width (default 2560px)."""
     if not os.path.exists(CHROME_PATH):
         return None
 
     content = file_path.read_text(encoding="utf-8", errors="ignore")
 
     # Layout probe script that computes exact rendered line count
-    probe_script = """
+    probe_script = f"""
     <script id="text-balance-probe">
-    window.addEventListener('DOMContentLoaded', () => {
-        setTimeout(() => {
-            const results = {};
-            document.querySelectorAll('section').forEach(sec => {
+    window.addEventListener('DOMContentLoaded', () => {{
+        setTimeout(() => {{
+            const results = {{}};
+            document.querySelectorAll('section').forEach(sec => {{
                 const secId = sec.id || 'sec';
                 const cards = sec.querySelectorAll('.card, [class*="-card"], [class*="card-"]');
-                if (cards.length > 1) {
+                if (cards.length > 1) {{
                     const cardList = [];
-                    cards.forEach((c, idx) => {
+                    cards.forEach((c, idx) => {{
                         const h3 = c.querySelector('h2, h3, h4, [class*="title"]');
                         const p = c.querySelector('p');
-                        if (p) {
+                        if (p) {{
                             let lines = 0;
-                            try {
+                            try {{
                                 const range = document.createRange();
                                 range.selectNodeContents(p);
                                 const rects = range.getClientRects();
                                 if (rects && rects.length > 0) lines = rects.length;
-                            } catch (e) {}
-                            if (!lines || lines <= 1) {
+                            }} catch (e) {{}}
+                            if (!lines || lines <= 1) {{
                                 const cs = window.getComputedStyle(p);
                                 const lh = parseFloat(cs.lineHeight) || 24;
                                 lines = Math.round(p.offsetHeight / lh);
-                            }
-                            cardList.push({
+                            }}
+                            cardList.push({{
                                 index: idx + 1,
                                 title: h3 ? h3.innerText.trim() : '',
                                 lines: Math.max(1, lines),
                                 height: p.offsetHeight,
                                 chars: p.innerText.trim().length
-                            });
-                        }
-                    });
+                            }});
+                        }}
+                    }});
                     if (cardList.length > 1) results[secId] = cardList;
-                }
-            });
+                }}
+            }});
             const out = document.createElement('pre');
             out.id = 'text-balance-results';
             out.textContent = JSON.stringify(results);
             document.body.appendChild(out);
-        }, 500);
-    });
+        }}, 500);
+    }});
     </script>
     """
 
@@ -196,7 +200,7 @@ def measure_with_browser(file_path: Path) -> dict[str, list[dict]] | None:
             CHROME_PATH,
             "--headless=new",
             "--disable-gpu",
-            "--window-size=1440,900",
+            f"--window-size={width},{height}",
             "--virtual-time-budget=2000",
             "--dump-dom",
             f"file://{temp_file_path}",
@@ -217,7 +221,7 @@ def measure_with_browser(file_path: Path) -> dict[str, list[dict]] | None:
     return None
 
 
-def audit_file(file_path: Path, use_browser: bool = False, only_imbalanced: bool = False) -> int:
+def audit_file(file_path: Path, use_browser: bool = False, only_imbalanced: bool = False, width: int = VIEWPORT_WIDTH) -> int:
     parser = ComponentParser()
     try:
         content = file_path.read_text(encoding="utf-8", errors="ignore")
@@ -226,7 +230,7 @@ def audit_file(file_path: Path, use_browser: bool = False, only_imbalanced: bool
         print(f"[!] Error reading {file_path}: {e}", file=sys.stderr)
         return 0
 
-    browser_data = measure_with_browser(file_path) if use_browser else None
+    browser_data = measure_with_browser(file_path, width=width) if use_browser else None
 
     imbalanced_sections = 0
     total_sections_checked = 0
@@ -313,15 +317,16 @@ def audit_file(file_path: Path, use_browser: bool = False, only_imbalanced: bool
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Audit and unify component text lengths and line counts on a page")
+    parser = argparse.ArgumentParser(description="Audit and unify component text lengths and line counts on a page (always 2560px desktop width by default)")
     parser.add_argument("file", nargs="?", help="HTML file to audit (e.g. hu/space-research.html)")
-    parser.add_argument("--browser", "-b", action="store_true", help="Use headless Google Chrome for exact rendered line counts")
+    parser.add_argument("--browser", "-b", action="store_true", help="Use headless Google Chrome for exact rendered line counts (at 2560px)")
+    parser.add_argument("--width", "-w", type=int, default=VIEWPORT_WIDTH, help=f"Viewport width for browser test (default: {VIEWPORT_WIDTH}px)")
     parser.add_argument("--all", "-a", action="store_true", help="Audit all English and Hungarian content pages")
     parser.add_argument("--imbalanced", "-i", action="store_true", help="Only display sections with imbalanced line counts (variance >= 2 lines)")
     args = parser.parse_args()
 
     print("=================================================================")
-    print(" Sovereign Nation of Waikiki — Component Text Balance Auditor")
+    print(f" Sovereign Nation of Waikiki — Component Text Balance Auditor ({args.width}px)")
     print("=================================================================")
 
     if args.file:
@@ -343,7 +348,7 @@ def main():
 
     total_imbalanced = 0
     for f in target_files:
-        total_imbalanced += audit_file(f, use_browser=args.browser, only_imbalanced=args.imbalanced)
+        total_imbalanced += audit_file(f, use_browser=args.browser, only_imbalanced=args.imbalanced, width=args.width)
 
     if total_imbalanced > 0:
         print(f"\n[ATTENTION] Found {total_imbalanced} imbalanced component row(s). Review suggestions above to unify line counts.")

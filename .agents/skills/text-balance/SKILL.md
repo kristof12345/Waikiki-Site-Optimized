@@ -35,13 +35,13 @@ Activate this skill when:
 
 ## Automated Text Balance Auditor
 
-The workspace includes a dedicated inspection script supporting both static analysis and live headless Chrome browser rendering:
+The workspace includes a dedicated inspection script supporting both static analysis and live headless Chrome browser rendering (which **always evaluates at 2560px width**):
 
 ```bash
-# 1. Audit text balance on a specific page (static line estimation based on desktop grid width)
+# 1. Audit text balance on a specific page (static line estimation based on 2560px desktop grid width)
 python3 .agents/skills/text-balance/scripts/text_balance.py hu/space-research.html
 
-# 2. Audit with live headless Chrome for exact pixel-rendered line counts
+# 2. Audit with live headless Chrome for exact pixel-rendered line counts at 2560px width
 python3 .agents/skills/text-balance/scripts/text_balance.py --browser hu/space-research.html
 
 # 3. Only display sections with imbalanced rows (variance >= 2 lines)
@@ -52,7 +52,7 @@ python3 .agents/skills/text-balance/scripts/text_balance.py --all
 ```
 
 ### What the Auditor Reports:
-- **Rendered Line Count**: Calculated live via browser DOM `Range.getClientRects()` or calibrated desktop column character estimation (~52 chars/line for 3-column cards).
+- **Rendered Line Count**: Calculated live via browser DOM `Range.getClientRects()` at the canonical 2560px desktop width, or calibrated desktop column character estimation (~52 chars/line for 3-column cards).
 - **Line Variance**: Difference between the shortest and longest card in each section. Sections with variance $\ge 2$ lines are flagged as `[IMBALANCED]`.
 - **Target Line Count**: Recommended unified line count (average of the row) and specific suggestions for each card (`+1 lines, trim text` or `-2 lines, expand text`).
 
