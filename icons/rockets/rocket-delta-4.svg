@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%" fill="none" style="color: #003366;">
+  <defs>
+    <linearGradient id="d4Body" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="currentColor" stop-opacity="0.12" />
+      <stop offset="50%" stop-color="currentColor" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="currentColor" stop-opacity="0.12" />
+    </linearGradient>
+    <linearGradient id="d4Booster" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="currentColor" stop-opacity="0.15" />
+      <stop offset="50%" stop-color="currentColor" stop-opacity="0.32" />
+      <stop offset="100%" stop-color="currentColor" stop-opacity="0.15" />
+    </linearGradient>
+    <linearGradient id="d4Wing" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="currentColor" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="currentColor" stop-opacity="0.08" />
+    </linearGradient>
+    <pattern id="d4Grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.12" />
+    </pattern>
+  </defs>
+
+  <!-- Background Coordinate Grid -->
+  <rect x="20" y="20" width="760" height="760" fill="url(#d4Grid)" />
+
+  <!-- Technical Axis and Grid -->
+  <g opacity="0.25" stroke="currentColor" stroke-width="0.75" stroke-dasharray="3 3">
+    <line x1="400" y1="25" x2="400" y2="775" />
+    <line x1="25" y1="400" x2="775" y2="400" />
+    <circle cx="400" cy="400" r="350" />
+    <circle cx="400" cy="400" r="220" />
+    <circle cx="400" cy="400" r="100" />
+  </g>
+
+  <!-- Dimensions Callouts -->
+  <g opacity="0.6" stroke="currentColor" stroke-width="1">
+    <!-- Height bar -->
+    <line x1="160" y1="45" x2="130" y2="45" />
+    <line x1="160" y1="755" x2="130" y2="755" />
+    <line x1="145" y1="45" x2="145" y2="755" stroke-dasharray="4 4" />
+    <text x="130" y="400" text-anchor="middle" fill="currentColor" font-family="monospace" font-size="11" letter-spacing="2" opacity="0.85" transform="rotate(-90 130 400)" stroke="none">HEIGHT 130.0 M</text>
+
+    <!-- Width / Diameter bar -->
+    <line x1="300" y1="765" x2="300" y2="785" />
+    <line x1="500" y1="765" x2="500" y2="785" />
+    <line x1="300" y1="775" x2="500" y2="775" stroke-dasharray="4 4" />
+    <text x="400" y="792" text-anchor="middle" fill="currentColor" font-family="monospace" font-size="10.5" letter-spacing="2" opacity="0.85" stroke="none">WIDTH 15.0 M</text>
+  </g>
+
+  <!-- Rocket Technical Vector Graphic -->
+  <g id="vehicle-graphic">
+    <!-- Left Common Booster Core (CBC) -->
+    <g stroke="currentColor" stroke-width="2.2">
+      <!-- Conical Nosecone -->
+      <polygon points="325,230 365,230 345,170" fill="url(#d4Booster)" />
+      <!-- Left CBC Body (5.1m diameter) -->
+      <rect x="325" y="230" width="40" height="485" fill="url(#d4Booster)" />
+      <!-- Weld Rings -->
+      <line x1="325" y1="330" x2="365" y2="330" stroke-width="1" opacity="0.65" />
+      <line x1="325" y1="450" x2="365" y2="450" stroke-width="1" opacity="0.65" />
+      <line x1="325" y1="570" x2="365" y2="570" stroke-width="1" opacity="0.65" />
+      <!-- RS-68A Main Engine Bell & Turbine Exhaust Duct -->
+      <polygon points="332,715 358,715 362,745 328,745" fill="currentColor" opacity="0.5" />
+      <line x1="358" y1="715" x2="362" y2="745" stroke-width="3" />
+    </g>
+
+    <!-- Right Common Booster Core (CBC) -->
+    <g stroke="currentColor" stroke-width="2.2">
+      <!-- Conical Nosecone -->
+      <polygon points="435,230 475,230 455,170" fill="url(#d4Booster)" />
+      <!-- Right CBC Body (5.1m diameter) -->
+      <rect x="435" y="230" width="40" height="485" fill="url(#d4Booster)" />
+      <!-- Weld Rings -->
+      <line x1="435" y1="330" x2="475" y2="330" stroke-width="1" opacity="0.65" />
+      <line x1="435" y1="450" x2="475" y2="450" stroke-width="1" opacity="0.65" />
+      <line x1="435" y1="570" x2="475" y2="570" stroke-width="1" opacity="0.65" />
+      <!-- RS-68A Main Engine Bell & Turbine Exhaust Duct -->
+      <polygon points="442,715 468,715 472,745 438,745" fill="currentColor" opacity="0.5" />
+      <line x1="468" y1="715" x2="472" y2="745" stroke-width="3" />
+    </g>
+
+    <!-- Heavy Structural Attach Struts -->
+    <line x1="365" y1="240" x2="380" y2="240" stroke="currentColor" stroke-width="3.5" />
+    <line x1="420" y1="240" x2="435" y2="240" stroke="currentColor" stroke-width="3.5" />
+    <line x1="365" y1="680" x2="380" y2="680" stroke="currentColor" stroke-width="3.5" />
+    <line x1="420" y1="680" x2="435" y2="680" stroke="currentColor" stroke-width="3.5" />
+
+    <!-- Center Common Booster Core (CCBC) -->
+    <!-- 5.1-meter Metallic Payload Fairing -->
+    <path d="M 375 160 L 375 110 C 375 65 400 40 400 40 C 400 40 425 65 425 110 L 425 160 Z" fill="url(#d4Body)" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" />
+    <!-- Delta Cryogenic Second Stage (DCSS) -->
+    <rect x="375" y="160" width="50" height="85" fill="url(#d4Body)" stroke="currentColor" stroke-width="2.2" />
+    <line x1="375" y1="205" x2="425" y2="205" stroke="currentColor" stroke-width="1.2" opacity="0.7" />
+    <!-- Center Core Body -->
+    <rect x="380" y="245" width="40" height="470" fill="url(#d4Body)" stroke="currentColor" stroke-width="2.4" />
+    <!-- Center Engine RS-68A -->
+    <polygon points="387,715 413,715 417,745 383,745" fill="currentColor" opacity="0.6" stroke="currentColor" stroke-width="2.2" />
+    <line x1="413" y1="715" x2="417" y2="745" stroke="currentColor" stroke-width="3.5" />
+  </g>
+</svg>

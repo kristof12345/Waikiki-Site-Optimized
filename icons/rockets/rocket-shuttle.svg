@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%" fill="none" style="color: #003366;">
+  <defs>
+    <linearGradient id="stsBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="currentColor" stop-opacity="0.12" />
+      <stop offset="50%" stop-color="currentColor" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="currentColor" stop-opacity="0.12" />
+    </linearGradient>
+    <linearGradient id="stsBooster" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="currentColor" stop-opacity="0.15" />
+      <stop offset="50%" stop-color="currentColor" stop-opacity="0.32" />
+      <stop offset="100%" stop-color="currentColor" stop-opacity="0.15" />
+    </linearGradient>
+    <linearGradient id="stsWing" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="currentColor" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="currentColor" stop-opacity="0.08" />
+    </linearGradient>
+    <pattern id="stsGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.12" />
+    </pattern>
+  </defs>
+
+  <!-- Background Coordinate Grid -->
+  <rect x="20" y="20" width="760" height="760" fill="url(#stsGrid)" />
+
+  <!-- Technical Axis and Grid -->
+  <g opacity="0.25" stroke="currentColor" stroke-width="0.75" stroke-dasharray="3 3">
+    <line x1="400" y1="25" x2="400" y2="775" />
+    <line x1="25" y1="400" x2="775" y2="400" />
+    <circle cx="400" cy="400" r="350" />
+    <circle cx="400" cy="400" r="220" />
+    <circle cx="400" cy="400" r="100" />
+  </g>
+
+  <!-- Dimensions Callouts -->
+  <g opacity="0.6" stroke="currentColor" stroke-width="1">
+    <!-- Height bar -->
+    <line x1="160" y1="45" x2="130" y2="45" />
+    <line x1="160" y1="755" x2="130" y2="755" />
+    <line x1="145" y1="45" x2="145" y2="755" stroke-dasharray="4 4" />
+    <text x="130" y="400" text-anchor="middle" fill="currentColor" font-family="monospace" font-size="11" letter-spacing="2" opacity="0.85" transform="rotate(-90 130 400)" stroke="none">HEIGHT 72.0 M</text>
+
+    <!-- Width / Diameter bar -->
+    <line x1="300" y1="765" x2="300" y2="785" />
+    <line x1="500" y1="765" x2="500" y2="785" />
+    <line x1="300" y1="775" x2="500" y2="775" stroke-dasharray="4 4" />
+    <text x="400" y="792" text-anchor="middle" fill="currentColor" font-family="monospace" font-size="10.5" letter-spacing="2" opacity="0.85" stroke="none">SPAN 23.8 M</text>
+  </g>
+
+  <!-- Rocket Technical Vector Graphic -->
+  <g id="vehicle-graphic">
+    <!-- External Tank (ET) Center Body -->
+    <path d="M 370 120 C 370 70 400 45 400 45 C 400 45 430 70 430 120 L 430 690 C 430 710 370 710 370 690 Z" fill="url(#stsBody)" stroke="currentColor" stroke-width="2.2" />
+    <!-- ET Pressurization Line & Tank Ribs -->
+    <line x1="400" y1="45" x2="400" y2="695" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.7" />
+    <line x1="370" y1="220" x2="430" y2="220" stroke="currentColor" stroke-width="1" opacity="0.6" />
+    <line x1="370" y1="360" x2="430" y2="360" stroke="currentColor" stroke-width="1" opacity="0.6" />
+    <line x1="370" y1="520" x2="430" y2="520" stroke="currentColor" stroke-width="1" opacity="0.6" />
+
+    <!-- Left Solid Rocket Booster (SRB) -->
+    <g stroke="currentColor" stroke-width="2">
+      <!-- Nose Cone -->
+      <path d="M 324 160 C 324 125 338 105 338 105 C 338 105 352 125 352 160 Z" fill="url(#stsBooster)" />
+      <!-- SRB Casing -->
+      <rect x="324" y="160" width="28" height="540" fill="url(#stsBooster)" />
+      <!-- SRB Field Joints (4 Segments) -->
+      <line x1="324" y1="280" x2="352" y2="280" stroke-width="1.4" />
+      <line x1="324" y1="410" x2="352" y2="410" stroke-width="1.4" />
+      <line x1="324" y1="550" x2="352" y2="550" stroke-width="1.4" />
+      <!-- SRB Aft Skirt & Nozzle -->
+      <polygon points="320,700 356,700 360,735 316,735" fill="currentColor" opacity="0.35" />
+      <polygon points="326,735 350,735 354,755 322,755" fill="currentColor" opacity="0.5" />
+    </g>
+
+    <!-- Right Solid Rocket Booster (SRB) -->
+    <g stroke="currentColor" stroke-width="2">
+      <path d="M 448 160 C 448 125 462 105 462 105 C 462 105 476 125 476 160 Z" fill="url(#stsBooster)" />
+      <rect x="448" y="160" width="28" height="540" fill="url(#stsBooster)" />
+      <line x1="448" y1="280" x2="476" y2="280" stroke-width="1.4" />
+      <line x1="448" y1="410" x2="476" y2="410" stroke-width="1.4" />
+      <line x1="448" y1="550" x2="476" y2="550" stroke-width="1.4" />
+      <polygon points="444,700 480,700 484,735 440,735" fill="currentColor" opacity="0.35" />
+      <polygon points="450,735 474,735 478,755 446,755" fill="currentColor" opacity="0.5" />
+    </g>
+
+    <!-- Orbiter Mounted Front Silhouette -->
+    <!-- Wings (Double Delta) -->
+    <path d="M 386 280 L 260 620 L 265 650 L 360 645 L 370 655 L 430 655 L 440 645 L 535 650 L 540 620 L 414 280 Z" fill="url(#stsWing)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
+    <!-- Orbiter Fuselage & Nose -->
+    <path d="M 384 220 C 384 190 400 175 400 175 C 400 175 416 190 416 220 L 416 645 L 384 645 Z" fill="url(#stsBody)" stroke="currentColor" stroke-width="2" />
+    <!-- Cockpit Windshield Facets -->
+    <polygon points="392,215 398,210 402,210 408,215 400,218" fill="currentColor" opacity="0.75" />
+    <!-- Wing Elevons & Panel Lines -->
+    <g stroke="currentColor" stroke-width="1" opacity="0.6">
+      <line x1="280" y1="625" x2="360" y2="625" />
+      <line x1="440" y1="625" x2="520" y2="625" />
+      <line x1="384" y1="280" x2="416" y2="280" />
+      <line x1="384" y1="440" x2="416" y2="440" />
+      <line x1="384" y1="580" x2="416" y2="580" />
+    </g>
+    <!-- Vertical Stabilizer Fin Center Line -->
+    <line x1="400" y1="480" x2="400" y2="655" stroke="currentColor" stroke-width="2.5" />
+    <!-- 3 SSME Main Engine Bells -->
+    <circle cx="400" cy="672" r="12" fill="currentColor" opacity="0.5" stroke="currentColor" stroke-width="1.8" />
+    <circle cx="384" cy="690" r="11" fill="currentColor" opacity="0.5" stroke="currentColor" stroke-width="1.8" />
+    <circle cx="416" cy="690" r="11" fill="currentColor" opacity="0.5" stroke="currentColor" stroke-width="1.8" />
+  </g>
+</svg>

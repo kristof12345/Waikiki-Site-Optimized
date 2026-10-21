@@ -7,14 +7,14 @@
     <meta name="theme-color" content="#fbf7f0" />
     <link rel="stylesheet" href="../css/fonts.css" />
     <script>
-        (function(d) {
+        (function (d) {
             var h = d.documentElement;
             h.classList.add('js');
             try {
                 if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
                 if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
-            } catch (e) {}
-            setTimeout(function() {
+            } catch (e) { }
+            setTimeout(function () {
                 if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
             }, 3500)
         })(document);
@@ -149,7 +149,7 @@
                 <div class="hero-stats">
                     <div class="stat-item"><span class="stat-number">$200B+</span><span class="stat-label">Station Budget</span></div>
                     <div class="stat-item"><span class="stat-number">270t</span><span class="stat-label">Delta IV Payload</span></div>
-                    <div class="stat-item"><span class="stat-number">2035-2040</span><span class="stat-label">Mars Mission Goal</span></div>
+                    <div class="stat-item"><span class="stat-number">2035</span><span class="stat-label">Mars Mission Goal</span></div>
                     <div class="stat-item"><span class="stat-number">12</span><span class="stat-label">Permanent Crew</span></div>
                 </div>
             </div>
@@ -162,7 +162,7 @@
                 <svg class="ill" viewBox="0 0 1160 520" role="img" aria-label="Waikiki National Space Station Orbital Complex and Telemetry Diagram">
                     <defs>
                         <clipPath id="sr-clip1">
-                            <rect width="1160" height="520" rx="20" />
+                            <rect width="1160" height="520" />
                         </clipPath>
                         <radialGradient id="sr-space-bg" cx="50%" cy="30%" r="70%">
                             <stop offset="0%" stop-color="#0c2f2b" />
@@ -409,12 +409,12 @@
         </section>
         <section id="lunar-mars" class="light-bg fade-in">
             <h2 class="section-title">Lunar and Mars Exploration</h2>
-            <p class="section-intro">In close partnership with international space agencies and aerospace leaders, WSA researchers are preparing the next decade's most ambitious deep-space endeavours: the crewed Moon Program targeted for 2026-2030 and the historic Mars expedition planned for 2035-2040.</p>
+            <p class="section-intro">In close partnership with international space agencies and aerospace leaders, WSA researchers are preparing the next decade's most ambitious deep-space endeavours. In the current cycle, priority is given to the crewed Moon Program targeted for 2026-2030, while preparations for the 2035-2040 Mars expedition are already underway.</p>
             <div class="ill-panel">
                 <svg class="ill" viewBox="0 0 1160 480" role="img" aria-label="Earth Moon and Mars Interplanetary Transfer Corridor Map">
                     <defs>
                         <clipPath id="sr-clip2">
-                            <rect width="1160" height="480" rx="20" />
+                            <rect width="1160" height="480" />
                         </clipPath>
                         <radialGradient id="sr-deep-space" cx="50%" cy="40%" r="65%">
                             <stop offset="0%" stop-color="#0e2423" />
@@ -477,7 +477,7 @@
                             <!-- WNSS Station Orbit Indicator -->
                             <circle cx="0" cy="0" r="82" fill="none" stroke="#f5c46e" stroke-width="1" stroke-dasharray="4 4" />
                             <circle cx="58" cy="-58" r="4" fill="#fbf7f0" stroke="#003366" stroke-width="1.2" />
-                            <text x="0" y="105" fill="#fbf7f0" font-family="Manrope, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1.5">EARTH · WNSS</text>
+                            <text x="0" y="105" fill="#fbf7f0" font-family="Manrope, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1.5">EARTH</text>
                             <text x="0" y="122" fill="#6BA4D9" font-family="Manrope, sans-serif" font-size="10" font-weight="600" text-anchor="middle">PRIMARY BASE</text>
                         </g>
                         <!-- 2. MOON NODE AND LUNAR BASE -->
@@ -492,8 +492,8 @@
                             <!-- Planned Landing Zone Beacon -->
                             <circle cx="8" cy="-14" r="3" fill="#2ecc71" />
                             <circle class="pulse" cx="8" cy="-14" r="12" fill="none" stroke="#2ecc71" stroke-width="1.5" />
-                            <text x="0" y="65" fill="#fbf7f0" font-family="Manrope, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1.5">PLANNED LUNAR BASE</text>
-                            <text x="0" y="82" fill="#f5c46e" font-family="Manrope, sans-serif" font-size="10" font-weight="600" text-anchor="middle">SATURN X · 2026-2030</text>
+                            <text x="0" y="65" fill="#fbf7f0" font-family="Manrope, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1.5">LUNAR MISSION</text>
+                            <text x="0" y="82" fill="#f5c46e" font-family="Manrope, sans-serif" font-size="10" font-weight="600" text-anchor="middle">2026-2030</text>
                         </g>
                         <!-- 3. MARS NODE AND ORBITAL BASE STATION -->
                         <g transform="translate(960, 240)">
@@ -504,7 +504,7 @@
                             <circle cx="0" cy="0" r="58" fill="none" stroke="#ffdcd3" stroke-width="1.5" opacity=".8" />
                             <!-- Mars Dark Surface Albedo -->
                             <path d="M-30 0 c20-10 40 5 45 20 c-20 15 -45 5 -45 -20 z" fill="#692417" opacity=".6" />
-                            <!-- Lockheed Martin Mars Orbital Base Station -->
+                            <!-- Mars Orbital Base Station -->
                             <g transform="translate(0, -76)">
                                 <circle cx="0" cy="0" r="6" fill="#fbf7f0" stroke="#c95a41" stroke-width="1.5" />
                                 <line x1="-14" y1="0" x2="14" y2="0" stroke="#f5c46e" stroke-width="2" />
@@ -514,7 +514,7 @@
                             <polygon points="-8,-12 0,-24 8,-12" fill="#f5c46e" />
                             <circle cx="0" cy="-14" r="2" fill="#003366" />
                             <text x="0" y="105" fill="#fbf7f0" font-family="Manrope, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1.5">MARS EXPEDITION</text>
-                            <text x="0" y="122" fill="#e3735a" font-family="Manrope, sans-serif" font-size="10" font-weight="600" text-anchor="middle">TARGET: 2035-2040 CREW</text>
+                            <text x="0" y="122" fill="#e3735a" font-family="Manrope, sans-serif" font-size="10" font-weight="600" text-anchor="middle">2035-2040</text>
                         </g>
                         <!-- Interplanetary Ship in Transit to Mars -->
                         <g>
@@ -548,11 +548,11 @@
             <div class="card-grid">
                 <div class="card"><span class="card-icon"><img src="../icons/mdi/moon-waxing-crescent.svg" alt="" /></span>
                     <span class="spec-badge">Planned Initiative</span>
-                    <h3>The National Moon Program and Base Architecture</h3>
-                    <p>Waikiki has not yet landed humans on the Moon, and there is currently no active lunar surface base: the initiative represents the nation's premier strategic space objective planned between 2026 and 2030. Developed jointly by the WSA and NASA, the program utilizes consecutive Saturn X launches to conduct orbital surveys before executing the historic crewed landing and building a permanent scientific surface outpost.</p>
+                    <h3>The National Moon Program</h3>
+                    <p>The mission represents the nation's premier strategic space objective planned between 2026 and 2030. Developed jointly by the WSA and NASA, the program utilizes consecutive Saturn X launches to conduct orbital surveys before executing the historic crewed landing and building a permanent scientific surface outpost.</p>
                     <ul class="spec-list">
                         <li><span>Target Window</span><strong>Phased Rollout 2026-2030</strong></li>
-                        <li><span>Current Status</span><strong class="mission-status-pill">Planning and Systems Testing</strong></li>
+                        <li><span>Current Status</span><strong>Planning and Systems Testing</strong></li>
                         <li><span>Target Site</span><strong>South Pole Aitken Basin</strong></li>
                     </ul>
                 </div>
@@ -568,7 +568,7 @@
                 </div>
                 <div class="card"><span class="card-icon"><img src="../icons/mdi/earth.svg" alt="" /></span>
                     <span class="spec-badge">Interplanetary Goal</span>
-                    <h3>Manned Mars Mission (2035-2040)</h3>
+                    <h3>Manned Mars Mission</h3>
                     <p>WSA researchers are committed to sending the first human crew to Mars between 2035 and 2040 and returning them safely. In partnership with SpaceX and leveraging reusable interplanetary starship propulsion, cislunar orbital refuelling, and the WNSS station as staging nexus, Waikiki astronauts will conduct surface explorations and establish humanity's multi-planetary foothold.</p>
                     <ul class="spec-list">
                         <li><span>Launch Window</span><strong>2035-2040 Launch Windows</strong></li>
@@ -578,7 +578,7 @@
                 </div>
                 <div class="card"><span class="card-icon"><img src="../icons/mdi/satellite-variant.svg" alt="" /></span>
                     <span class="spec-badge">Orbital Concept</span>
-                    <h3>Lockheed Martin Mars Base Station</h3>
+                    <h3>Mars Base Station</h3>
                     <p>Engineers at Lockheed Martin have designed a sustainable Mars architecture consisting of a permanent orbital mother station paired with two landing vessels. The mother station houses eight astronauts in four-person surface deployment shifts, eliminating the need to haul heavy living quarters out of the Martian gravity well.</p>
                     <ul class="spec-list">
                         <li><span>Crew Capacity</span><strong>8 Astronauts (2 Landing Craft)</strong></li>
@@ -637,171 +637,6 @@
         <section id="propulsion" class="light-bg fade-in">
             <h2 class="section-title">Next-Generation Propulsion and Launch Systems</h2>
             <p class="section-intro">Aerospace leadership relies on industry-leading rocketry and zero-emission spaceport logistics developed through alliances between domestic industries and international aerospace partners.</p>
-            <div class="ill-panel">
-                <svg class="ill" viewBox="0 0 1160 520" width="1160" height="520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Delta IV Super-Heavy Booster and Deep Space Cycler Propulsion">
-                    <defs>
-                        <radialGradient id="pr-sky" cx="50%" cy="40%" r="70%">
-                            <stop offset="0%" stop-color="#0a2a26" />
-                            <stop offset="60%" stop-color="#051715" />
-                            <stop offset="100%" stop-color="#020a09" />
-                        </radialGradient>
-                        <linearGradient id="pr-booster-skin" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" stop-color="#fdfdfd" />
-                            <stop offset="50%" stop-color="#e2efed" />
-                            <stop offset="100%" stop-color="#b1d1cc" />
-                        </linearGradient>
-                        <linearGradient id="pr-cryo-tank" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" stop-color="#003366" />
-                            <stop offset="50%" stop-color="#1A528F" />
-                            <stop offset="100%" stop-color="#093836" />
-                        </linearGradient>
-                        <linearGradient id="pr-flame" x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" stop-color="#ffffff" />
-                            <stop offset="25%" stop-color="#ffb142" />
-                            <stop offset="65%" stop-color="#ff5252" />
-                            <stop offset="100%" stop-color="rgba(255, 82, 82, 0)" />
-                        </linearGradient>
-                        <linearGradient id="pr-ion-plume" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" stop-color="#ffffff" />
-                            <stop offset="25%" stop-color="#6BA4D9" />
-                            <stop offset="70%" stop-color="#003366" />
-                            <stop offset="100%" stop-color="rgba(0, 51, 102, 0)" />
-                        </linearGradient>
-                        <radialGradient id="pr-palladium-glow" cx="50%" cy="50%" r="50%">
-                            <stop offset="0%" stop-color="#ffffff" />
-                            <stop offset="40%" stop-color="#dfba76" />
-                            <stop offset="80%" stop-color="#1A528F" />
-                            <stop offset="100%" stop-color="rgba(26, 82, 143, 0)" />
-                        </radialGradient>
-                    </defs>
-                    <rect width="1160" height="520" fill="url(#pr-sky)" />
-                    <g stroke="rgba(107, 164, 217, 0.08)" stroke-width="1">
-                        <line x1="0" y1="130" x2="1160" y2="130" />
-                        <line x1="0" y1="260" x2="1160" y2="260" />
-                        <line x1="0" y1="390" x2="1160" y2="390" />
-                        <line x1="290" y1="0" x2="290" y2="520" />
-                        <line x1="580" y1="0" x2="580" y2="520" />
-                        <line x1="870" y1="0" x2="870" y2="520" />
-                    </g>
-                    <g transform="translate(260, 240)">
-                        <polygon points="0,-165 -32,-115 32,-115" fill="url(#pr-booster-skin)" stroke="#003366" stroke-width="2" />
-                        <rect x="-32" y="-115" width="64" height="40" fill="url(#pr-booster-skin)" stroke="#003366" stroke-width="2" />
-                        <text x="0" y="-90" fill="#093836" font-family="Manrope, sans-serif" font-size="8" font-weight="800" text-anchor="middle" letter-spacing="1">270 T CARGO</text>
-                        <rect x="-32" y="-75" width="64" height="155" fill="url(#pr-booster-skin)" stroke="#003366" stroke-width="2" />
-                        <rect x="-24" y="-65" width="48" height="55" rx="8" fill="url(#pr-cryo-tank)" stroke="#6BA4D9" stroke-width="1.2" />
-                        <text x="0" y="-35" fill="#fcedc7" font-family="Manrope, sans-serif" font-size="8" font-weight="700" text-anchor="middle">LIQUID O2</text>
-                        <rect x="-24" y="-2" width="48" height="68" rx="8" fill="url(#pr-cryo-tank)" stroke="#6BA4D9" stroke-width="1.2" />
-                        <text x="0" y="35" fill="#fcedc7" font-family="Manrope, sans-serif" font-size="8" font-weight="700" text-anchor="middle">LIQUID H2</text>
-                        <g transform="translate(-56, 0)">
-                            <polygon points="0,-115 -18,-80 18,-80" fill="url(#pr-booster-skin)" stroke="#003366" stroke-width="1.5" />
-                            <rect x="-18" y="-80" width="36" height="155" rx="3" fill="url(#pr-booster-skin)" stroke="#003366" stroke-width="1.5" />
-                            <line x1="18" y1="-40" x2="24" y2="-40" stroke="#dfba76" stroke-width="3" />
-                            <line x1="18" y1="50" x2="24" y2="50" stroke="#dfba76" stroke-width="3" />
-                            <polygon points="-12,75 12,75 16,92 -16,92" fill="#2b2b2b" stroke="#dfba76" stroke-width="1.5" />
-                            <polygon points="-14,92 14,92 0,165" fill="url(#pr-flame)" class="flame-pulse" />
-                        </g>
-                        <g transform="translate(56, 0)">
-                            <polygon points="0,-115 -18,-80 18,-80" fill="url(#pr-booster-skin)" stroke="#003366" stroke-width="1.5" />
-                            <rect x="-18" y="-80" width="36" height="155" rx="3" fill="url(#pr-booster-skin)" stroke="#003366" stroke-width="1.5" />
-                            <line x1="-18" y1="-40" x2="-24" y2="-40" stroke="#dfba76" stroke-width="3" />
-                            <line x1="-18" y1="50" x2="-24" y2="50" stroke="#dfba76" stroke-width="3" />
-                            <polygon points="-12,75 12,75 16,92 -16,92" fill="#2b2b2b" stroke="#dfba76" stroke-width="1.5" />
-                            <polygon points="-14,92 14,92 0,165" fill="url(#pr-flame)" class="flame-pulse" />
-                        </g>
-                        <g transform="translate(0, 80)">
-                            <polygon points="-24,0 -8,0 -6,18 -26,18" fill="#1b1b1b" stroke="#dfba76" stroke-width="1.2" />
-                            <polygon points="-6,0 10,0 12,18 -4,18" fill="#1b1b1b" stroke="#dfba76" stroke-width="1.2" />
-                            <polygon points="10,0 26,0 28,18 8,18" fill="#1b1b1b" stroke="#dfba76" stroke-width="1.2" />
-                            <polygon points="-26,18 -6,18 -16,115" fill="url(#pr-flame)" class="flame-pulse" />
-                            <polygon points="-4,18 12,18 4,125" fill="url(#pr-flame)" class="flame-pulse" style="animation-delay: 0.1s;" />
-                            <polygon points="8,18 28,18 18,115" fill="url(#pr-flame)" class="flame-pulse" style="animation-delay: 0.18s;" />
-                        </g>
-                    </g>
-                    <g transform="translate(860, 240)">
-                        <rect x="-195" y="-12" width="390" height="24" rx="4" fill="#0b2c2a" stroke="#6BA4D9" stroke-width="2" />
-                        <line x1="-180" y1="-12" x2="-160" y2="12" stroke="#1A528F" stroke-width="1.5" />
-                        <line x1="-140" y1="-12" x2="-120" y2="12" stroke="#1A528F" stroke-width="1.5" />
-                        <line x1="-100" y1="-12" x2="-80" y2="12" stroke="#1A528F" stroke-width="1.5" />
-                        <line x1="80" y1="-12" x2="100" y2="12" stroke="#1A528F" stroke-width="1.5" />
-                        <line x1="120" y1="-12" x2="140" y2="12" stroke="#1A528F" stroke-width="1.5" />
-                        <line x1="160" y1="-12" x2="180" y2="12" stroke="#1A528F" stroke-width="1.5" />
-                        <circle cx="0" cy="0" r="48" fill="#061e1d" stroke="#dfba76" stroke-width="2" />
-                        <circle cx="0" cy="0" r="38" fill="url(#pr-palladium-glow)" class="pulse" />
-                        <g class="spin">
-                            <circle cx="0" cy="0" r="34" fill="none" stroke="#fcedc7" stroke-width="3" stroke-dasharray="14 10" />
-                        </g>
-                        <text x="0" y="4" fill="#061e1d" font-family="Manrope, sans-serif" font-size="9" font-weight="800" text-anchor="middle">Pd-CORE</text>
-                        <g transform="translate(0, -70)">
-                            <rect x="-55" y="0" width="110" height="42" rx="3" fill="#082220" stroke="#6BA4D9" stroke-width="1.2" opacity=".9" />
-                            <line x1="-55" y1="14" x2="55" y2="14" stroke="#6BA4D9" stroke-width="1" />
-                            <line x1="-55" y1="28" x2="55" y2="28" stroke="#6BA4D9" stroke-width="1" />
-                        </g>
-                        <g transform="translate(0, 28)">
-                            <rect x="-55" y="0" width="110" height="42" rx="3" fill="#082220" stroke="#6BA4D9" stroke-width="1.2" opacity=".9" />
-                            <line x1="-55" y1="14" x2="55" y2="14" stroke="#6BA4D9" stroke-width="1" />
-                            <line x1="-55" y1="28" x2="55" y2="28" stroke="#6BA4D9" stroke-width="1" />
-                        </g>
-                        <g transform="translate(140, 0)">
-                            <ellipse cx="40" cy="0" rx="35" ry="24" fill="url(#pr-booster-skin)" stroke="#003366" stroke-width="1.8" />
-                            <g transform="translate(15, -45)">
-                                <polygon points="-16,0 16,0 22,-22 -22,-22" fill="#fbf7f0" stroke="#003366" stroke-width="1.2" />
-                                <rect x="-10" y="0" width="20" height="8" fill="#dfba76" />
-                                <text x="0" y="-10" fill="#093836" font-family="Manrope, sans-serif" font-size="7" font-weight="700" text-anchor="middle">LANDER 1</text>
-                            </g>
-                            <g transform="translate(15, 45)">
-                                <polygon points="-16,0 16,0 22,22 -22,22" fill="#fbf7f0" stroke="#003366" stroke-width="1.2" />
-                                <rect x="-10" y="-8" width="20" height="8" fill="#dfba76" />
-                                <text x="0" y="14" fill="#093836" font-family="Manrope, sans-serif" font-size="7" font-weight="700" text-anchor="middle">LANDER 2</text>
-                            </g>
-                        </g>
-                        <g transform="translate(-195, 0)">
-                            <rect x="-14" y="-30" width="14" height="20" rx="2" fill="#2b2b2b" stroke="#6BA4D9" stroke-width="1.5" />
-                            <rect x="-14" y="10" width="14" height="20" rx="2" fill="#2b2b2b" stroke="#6BA4D9" stroke-width="1.5" />
-                            <polygon points="-14,-28 -95,-20 -14,-12" fill="url(#pr-ion-plume)" class="pulse" />
-                            <polygon points="-14,12 -95,20 -14,28" fill="url(#pr-ion-plume)" class="pulse" style="animation-delay: 0.5s;" />
-                            <line x1="-14" y1="-20" x2="-140" y2="-20" stroke="#6BA4D9" stroke-width="2" class="dash-rev" stroke-dasharray="6 8" />
-                            <line x1="-14" y1="20" x2="-140" y2="20" stroke="#6BA4D9" stroke-width="2" class="dash-rev" stroke-dasharray="6 8" />
-                        </g>
-                    </g>
-                    <g transform="translate(560, 240)">
-                        <rect x="-110" y="-95" width="220" height="190" rx="12" fill="#061e1d" stroke="#1A528F" stroke-width="1.5" opacity=".95" />
-                        <rect x="-110" y="-95" width="220" height="28" rx="12" fill="#082826" />
-                        <text x="0" y="-76" fill="#fcedc7" font-family="Manrope, sans-serif" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="1">PROPULSION DYNAMICS</text>
-                        <text x="-92" y="-45" fill="#6BA4D9" font-family="Manrope, sans-serif" font-size="9" font-weight="700">DELTA IV SUPER-HEAVY</text>
-                        <rect x="-92" y="-38" width="184" height="8" rx="4" fill="#041615" />
-                        <rect x="-92" y="-38" width="175" height="8" rx="4" fill="#dfba76" />
-                        <text x="-92" y="-18" fill="#d5ede9" font-family="Manrope, sans-serif" font-size="8">THRUST: 38,500 KN · LEO: 270 T</text>
-                        <text x="-92" y="8" fill="#6BA4D9" font-family="Manrope, sans-serif" font-size="9" font-weight="700">ION DRIVE SPECIFIC IMPULSE</text>
-                        <rect x="-92" y="15" width="184" height="8" rx="4" fill="#041615" />
-                        <rect x="-92" y="15" width="168" height="8" rx="4" fill="#2ecc71" />
-                        <text x="-92" y="35" fill="#d5ede9" font-family="Manrope, sans-serif" font-size="8">ISP: 4,800 S · PALLADIUM HYBRID</text>
-                        <line x1="-92" y1="48" x2="92" y2="48" stroke="rgba(107, 164, 217, 0.2)" stroke-width="1" />
-                        <text x="0" y="65" fill="#fcedc7" font-family="Manrope, sans-serif" font-size="9" font-weight="700" text-anchor="middle">TRANSIT: 118 DAYS TO MARS</text>
-                        <text x="0" y="79" fill="#6BA4D9" font-family="Manrope, sans-serif" font-size="8" text-anchor="middle">ZERO-LOSS CRYOGENIC CYCLER</text>
-                    </g>
-                    <g font-family="Manrope, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">
-                        <rect x="230" y="18" width="700" height="32" rx="16" fill="#061c1b" stroke="#6BA4D9" stroke-width="1.2" opacity=".95" />
-                        <circle cx="252" cy="34" r="4" fill="#2ecc71" class="pulse" />
-                        <text x="268" y="38" fill="#fbf7f0">DELTA IV SUPER-HEAVY AND MARS CYCLER PROPULSION</text>
-                        <text x="735" y="38" fill="#dfba76">PAYLOAD: 270 T</text>
-                        <text x="860" y="38" fill="#2ecc71">ISP: 4800 S</text>
-                    </g>
-                    <g font-family="Manrope, sans-serif" font-size="10" font-weight="600" letter-spacing="1">
-                        <rect x="30" y="445" width="240" height="50" rx="8" fill="#061c1b" stroke="rgba(107, 164, 217, 0.4)" stroke-width="1" opacity=".9" />
-                        <text x="44" y="468" fill="#f5c46e">DELTA IV LAUNCH SYSTEM</text>
-                        <text x="44" y="484" fill="#bedbd6">4 VECTOR GIMBAL NOZZLES · 60T SHUTTLE</text>
-                    </g>
-                    <g font-family="Manrope, sans-serif" font-size="10" font-weight="600" letter-spacing="1" text-anchor="end">
-                        <rect x="890" y="445" width="240" height="50" rx="8" fill="#061c1b" stroke="rgba(107, 164, 217, 0.4)" stroke-width="1" opacity=".9" />
-                        <text x="1116" y="468" fill="#6BA4D9">LOCKHEED MARS CYCLER</text>
-                        <text x="1116" y="484" fill="#bedbd6">8 CREW · 2 SURFACE LANDERS · Pd DRIVE</text>
-                    </g>
-                </svg>
-                <div class="ill-caption">
-                    <span><strong>Figure 1.4:</strong> Multi-core Delta IV super-heavy booster staging alongside the Lockheed deep space cycler with palladium reactor and dual landers.</span>
-                    <span>270 Metric Tonnes to Orbit · High-Efficiency Xenon Ion Cruise</span>
-                </div>
-            </div>
             <div class="card-grid">
                 <div class="card"><span class="card-icon"><img src="../icons/mdi/fire.svg" alt="" /></span>
                     <span class="spec-badge">Super-Heavy Lift</span>
@@ -845,382 +680,172 @@
                 </div>
             </div>
         </section>
-        <section id="digital-space" class="fade-in">
-            <h2 class="section-title">Digital state, orbital reach</h2>
-            <p class="section-intro">Waikiki's most ambitious infrastructure is invisible from the street: a secure digital backbone for every citizen and a permanent presence 200 kilometres above the Earth.</p>
-            <figure class="ill-panel" data-reveal="zoom">
-                <svg class="ill" viewBox="0 0 1160 540" role="img" aria-label="Waikiki National Space Station in low Earth orbit">
-                    <defs>
-                        <clipPath id="sp-clip">
-                            <rect width="1160" height="540" rx="28" />
-                        </clipPath>
-                        <radialGradient id="sp-space-glow" cx="50%" cy="35%" r="65%">
-                            <stop offset="0%" stop-color="#092825" />
-                            <stop offset="55%" stop-color="#051717" />
-                            <stop offset="100%" stop-color="#020d0d" />
-                        </radialGradient>
-                        <radialGradient id="sp-earth" cx="50%" cy="0%" r="85%">
-                            <stop offset="0%" stop-color="#5eb8ab" />
-                            <stop offset="25%" stop-color="#24877e" />
-                            <stop offset="60%" stop-color="#0f4944" />
-                            <stop offset="100%" stop-color="#051f1e" />
-                        </radialGradient>
-                        <linearGradient id="sp-solar" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#ffdc89" />
-                            <stop offset="35%" stop-color="#d9a74a" />
-                            <stop offset="70%" stop-color="#b07d2b" />
-                            <stop offset="100%" stop-color="#7a5416" />
-                        </linearGradient>
-                        <linearGradient id="sp-mod-h" x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" stop-color="#ffffff" />
-                            <stop offset="35%" stop-color="#eaf3f1" />
-                            <stop offset="75%" stop-color="#cbe0dc" />
-                            <stop offset="100%" stop-color="#99b6b1" />
-                        </linearGradient>
-                        <linearGradient id="sp-mod-v" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" stop-color="#ffffff" />
-                            <stop offset="40%" stop-color="#eaf3f1" />
-                            <stop offset="75%" stop-color="#cbe0dc" />
-                            <stop offset="100%" stop-color="#99b6b1" />
-                        </linearGradient>
-                        <linearGradient id="sp-rad" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" stop-color="#f0f7f6" />
-                            <stop offset="50%" stop-color="#d4e8e4" />
-                            <stop offset="100%" stop-color="#a8cac4" />
-                        </linearGradient>
-                        <linearGradient id="sp-shut" x1="0%" y1="0%" x2="100%" y2="40%">
-                            <stop offset="0%" stop-color="#ffffff" />
-                            <stop offset="50%" stop-color="#edf6f4" />
-                            <stop offset="100%" stop-color="#bed6d1" />
-                        </linearGradient>
-                    </defs>
-                    <g clip-path="url(#sp-clip)">
-                        <!-- Space Canvas and Nebula Background -->
-                        <rect width="1160" height="540" fill="url(#sp-space-glow)" />
-                        <ellipse cx="280" cy="130" rx="360" ry="110" fill="#14514c" opacity=".22" />
-                        <ellipse cx="880" cy="160" rx="320" ry="120" fill="#1a5a54" opacity=".18" />
-                        <ellipse cx="580" cy="70" rx="260" ry="60" fill="#6BA4D9" opacity=".08" />
-                        <!-- Starfield -->
-                        <g fill="#fbf7f0">
-                            <circle class="twinkle" cx="45" cy="45" r="1.5" />
-                            <circle class="twinkle" cx="95" cy="110" r="1" />
-                            <circle class="twinkle" cx="160" cy="50" r="1.8" />
-                            <circle class="twinkle" cx="230" cy="95" r="1.2" />
-                            <circle class="twinkle" cx="310" cy="40" r="1.6" />
-                            <circle class="twinkle" cx="390" cy="85" r="1" />
-                            <circle class="twinkle" cx="460" cy="30" r="2" />
-                            <circle class="twinkle" cx="520" cy="70" r="1.3" />
-                            <circle class="twinkle" cx="620" cy="35" r="1.7" />
-                            <circle class="twinkle" cx="700" cy="80" r="1.1" />
-                            <circle class="twinkle" cx="780" cy="45" r="1.9" />
-                            <circle class="twinkle" cx="850" cy="90" r="1.2" />
-                            <circle class="twinkle" cx="930" cy="35" r="1.6" />
-                            <circle class="twinkle" cx="1010" cy="75" r="1.3" />
-                            <circle class="twinkle" cx="1080" cy="40" r="1.8" />
-                            <circle class="twinkle" cx="1120" cy="110" r="1" />
-                            <circle class="twinkle" cx="80" cy="170" r="1.2" />
-                            <circle class="twinkle" cx="190" cy="180" r="1.5" />
-                            <circle class="twinkle" cx="980" cy="160" r="1.4" />
-                            <circle class="twinkle" cx="1070" cy="190" r="1.1" />
-                            <circle class="twinkle" cx="50" cy="260" r="1" />
-                            <circle class="twinkle" cx="1110" cy="250" r="1.3" />
-                            <circle cx="130" cy="75" r="0.8" opacity=".6" />
-                            <circle cx="270" cy="65" r="0.9" opacity=".5" />
-                            <circle cx="360" cy="115" r="0.7" opacity=".7" />
-                            <circle cx="430" cy="60" r="0.8" opacity=".5" />
-                            <circle cx="650" cy="55" r="0.9" opacity=".6" />
-                            <circle cx="740" cy="110" r="0.8" opacity=".7" />
-                            <circle cx="820" cy="65" r="0.7" opacity=".6" />
-                            <circle cx="890" cy="115" r="0.9" opacity=".5" />
-                            <circle cx="1050" cy="110" r="0.8" opacity=".7" />
-                            <circle cx="30" cy="130" r="0.7" opacity=".6" />
-                        </g>
-                        <!-- Planet Earth Horizon Arc -->
-                        <path d="M-60 620 C 260 410, 900 410, 1220 620 L 1220 680 L -60 680 Z" fill="url(#sp-earth)" />
-                        <!-- Atmospheric Glow Layers -->
-                        <path d="M-60 620 C 260 410, 900 410, 1220 620" fill="none" stroke="#6BA4D9" stroke-width="26" opacity=".18" />
-                        <path d="M-60 620 C 260 410, 900 410, 1220 620" fill="none" stroke="#66c9bc" stroke-width="12" opacity=".38" />
-                        <path d="M-60 620 C 260 410, 900 410, 1220 620" fill="none" stroke="#d5f6f1" stroke-width="3" opacity=".85" />
-                        <!-- Earth Continents, Coastal Shelves and Ocean Patterns -->
-                        <path d="M180 500 c60-25 150-30 220-10 c40 12 90 8 130-15 c30-18 80-20 120-4 c50 20 120 15 170-12 c40-22 90-18 130 5" fill="none" stroke="#3db6a6" stroke-width="16" stroke-linecap="round" opacity=".55" />
-                        <path d="M160 505 c50-20 130-24 190-8 c35 10 75 6 110-14 c28-16 70-18 105-3 c45 18 105 14 150-10 c38-20 85-15 120 8" fill="none" stroke="#4a8b60" stroke-width="10" stroke-linecap="round" opacity=".8" />
-                        <path d="M290 480 c30-6 60 2 85 14 c-20 6-50 4-75-6 z" fill="#62a56f" opacity=".7" />
-                        <path d="M480 460 c40-10 80-8 115 6 c-30 8-70 6-105-4 z" fill="#62a56f" opacity=".7" />
-                        <path d="M680 470 c35-12 75-10 110 5 c-25 7-65 6-95-3 z" fill="#62a56f" opacity=".7" />
-                        <!-- City Night Lights Sparkling Below -->
-                        <g fill="#f5c46e" opacity=".85">
-                            <circle cx="230" cy="500" r="1.5" />
-                            <circle cx="245" cy="496" r="1.2" />
-                            <circle cx="260" cy="502" r="1" />
-                            <circle cx="280" cy="490" r="1.4" />
-                            <circle cx="340" cy="485" r="1.6" />
-                            <circle cx="355" cy="482" r="1.2" />
-                            <circle cx="370" cy="488" r="1.4" />
-                            <circle cx="390" cy="480" r="1.8" />
-                            <circle cx="510" cy="460" r="1.8" />
-                            <circle cx="530" cy="458" r="1.3" />
-                            <circle cx="550" cy="462" r="1.5" />
-                            <circle cx="620" cy="465" r="1.4" />
-                            <circle cx="640" cy="462" r="1.6" />
-                            <circle cx="665" cy="468" r="1.2" />
-                            <circle cx="730" cy="475" r="1.5" />
-                            <circle cx="750" cy="472" r="1.7" />
-                            <circle cx="780" cy="478" r="1.3" />
-                        </g>
-                        <!-- Cloud Bands -->
-                        <path d="M120 480 C 240 440, 360 460, 440 445 M 500 435 C 600 425, 720 440, 840 430 M 890 440 C 960 435, 1040 455, 1100 475" stroke="#f0fbf9" stroke-width="7" stroke-linecap="round" fill="none" opacity=".28" />
-                        <path d="M220 520 C 320 490, 420 500, 520 480 M 640 485 C 750 475, 860 490, 950 480" stroke="#f0fbf9" stroke-width="4" stroke-linecap="round" fill="none" opacity=".22" />
-                        <!-- Orbital Trajectory Line -->
-                        <path d="M40 330 C 300 200, 860 200, 1120 330" fill="none" stroke="#f5c46e" stroke-width="1.8" stroke-dasharray="6 8" opacity=".7" class="dash" />
-                        <!-- Approaching Spacecraft in Flight -->
-                        <g>
-                            <path d="M-10 -4h14l6 4-6 4h-14z" fill="#fbf7f0" />
-                            <path d="M-10 -4l-4-4h4zM-10 4l-4 4h4z" fill="#e3735a" />
-                            <circle cx="0" cy="0" r="2" fill="#6BA4D9" />
-                            <animateMotion dur="14s" repeatCount="indefinite" rotate="auto" path="M40 330 C 300 200, 860 200, 1120 330" />
-                        </g>
-                        <!-- Top HUD Header and Telemetry Data -->
-                        <g font-family="Manrope, sans-serif" letter-spacing="2">
-                            <rect x="390" y="16" width="380" height="28" rx="14" fill="#0b2c29" stroke="#f5c46e" stroke-width="1.2" opacity=".95" />
-                            <circle cx="412" cy="30" r="4" fill="#e3735a" class="pulse" />
-                            <text x="586" y="34" text-anchor="middle" font-size="11" font-weight="700" fill="#f5c46e">WAIKIKI NATIONAL SPACE STATION</text>
-                        </g>
-                        <g font-family="Manrope, sans-serif" font-size="9" fill="#bfe4de" letter-spacing="1.2">
-                            <text x="50" y="44" font-weight="700" fill="#f5c46e">WSA // ORBITAL RESEARCH COMPLEX</text>
-                            <text x="50" y="60" opacity=".85">ALTITUDE: 200 KM · INCLINATION: 28.5°</text>
-                            <text x="50" y="76" opacity=".85">ORBITAL VELOCITY: 7.76 KM/S · PERIOD: 88.4 MIN</text>
-                        </g>
-                        <g font-family="Manrope, sans-serif" font-size="9" fill="#bfe4de" letter-spacing="1.2" text-anchor="end">
-                            <text x="1110" y="44" font-weight="700" fill="#f5c46e">INVESTMENT: $200B · EST. 2006</text>
-                            <text x="1110" y="60" opacity=".85">MODULES: CORE · LABS · CUPOLA · AIRLOCK</text>
-                            <text x="1110" y="76" opacity=".85">FLEET: ANDROMEDA · ALDRIN · COLUMBUS</text>
-                        </g>
-                        <!-- THE WAIKIKI NATIONAL SPACE STATION COMPLEX -->
-                        <g class="bob">
-                            <g transform="translate(580 230)">
-                                <!-- Integrated Truss Structure (ITS) Beam -->
-                                <rect x="-310" y="-8" width="620" height="16" rx="2" fill="#183633" stroke="#6BA4D9" stroke-width="1.2" />
-                                <path d="M-310-8 L-295 8 L-280-8 L-265 8 L-250-8 L-235 8 L-220-8 L-205 8 L-190-8 L-175 8 L-160-8 L-145 8 L-130-8 L-115 8 L-100-8 L-85 8 L-70-8 L-55 8 L-40-8 L-25 8 L-10-8 L5 8 L20-8 L35 8 L50-8 L65 8 L80-8 L95 8 L110-8 L125 8 L140-8 L155 8 L170-8 L185 8 L200-8 L215 8 L230-8 L245 8 L260-8 L275 8 L290-8 L305 8" stroke="#3c7f7a" stroke-width="1" fill="none" opacity=".85" />
-                                <path d="M-310 8 L-295-8 L-280 8 L-265-8 L-250 8 L-235-8 L-220 8 L-205-8 L-190 8 L-175-8 L-160 8 L-145-8 L-130 8 L-115-8 L-100 8 L-85-8 L-70 8 L-55-8 L-40 8 L-25-8 L-10 8 L5-8 L20 8 L35-8 L50 8 L65-8 L80 8 L95-8 L110 8 L125-8 L140 8 L155-8 L170 8 L185-8 L200 8 L215-8 L230 8 L245-8 L260 8 L275-8 L290 8 L305-8" stroke="#3c7f7a" stroke-width="1" fill="none" opacity=".85" />
-                                <line x1="-310" y1="0" x2="310" y2="0" stroke="#f5c46e" stroke-width="1.2" opacity=".6" />
-                                <!-- Solar Alpha Rotary Joints (SARJ) -->
-                                <rect x="-215" y="-14" width="16" height="28" rx="4" fill="#d9efeb" stroke="#003366" stroke-width="1.2" />
-                                <rect x="199" y="-14" width="16" height="28" rx="4" fill="#d9efeb" stroke="#003366" stroke-width="1.2" />
-                                <!-- Active Thermal Radiators (Heat Rejection Panels) -->
-                                <g transform="translate(-155 -10)">
-                                    <rect x="-20" y="-80" width="16" height="70" rx="2" fill="url(#sp-rad)" stroke="#1a4642" stroke-width="0.8" />
-                                    <rect x="0" y="-80" width="16" height="70" rx="2" fill="url(#sp-rad)" stroke="#1a4642" stroke-width="0.8" />
-                                    <rect x="20" y="-80" width="16" height="70" rx="2" fill="url(#sp-rad)" stroke="#1a4642" stroke-width="0.8" />
-                                    <path d="M-20-60h56M-20-40h56M-20-20h56" stroke="#1A528F" stroke-width="0.8" opacity=".5" />
-                                </g>
-                                <g transform="translate(135 -10)">
-                                    <rect x="-20" y="-80" width="16" height="70" rx="2" fill="url(#sp-rad)" stroke="#1a4642" stroke-width="0.8" />
-                                    <rect x="0" y="-80" width="16" height="70" rx="2" fill="url(#sp-rad)" stroke="#1a4642" stroke-width="0.8" />
-                                    <rect x="20" y="-80" width="16" height="70" rx="2" fill="url(#sp-rad)" stroke="#1a4642" stroke-width="0.8" />
-                                    <path d="M-20-60h56M-20-40h56M-20-20h56" stroke="#1A528F" stroke-width="0.8" opacity=".5" />
-                                </g>
-                                <!-- Port Upper Solar Wing -->
-                                <g transform="translate(-260 0)">
-                                    <line x1="0" y1="-16" x2="0" y2="-155" stroke="#f5c46e" stroke-width="3" />
-                                    <rect x="-65" y="-150" width="58" height="128" rx="2" fill="url(#sp-solar)" stroke="#061a1a" stroke-width="1.2" />
-                                    <rect x="6" y="-150" width="58" height="128" rx="2" fill="url(#sp-solar)" stroke="#061a1a" stroke-width="1.2" />
-                                    <path d="M-65-134h58M-65-118h58M-65-102h58M-65-86h58M-65-70h58M-65-54h58M-65-38h58 M6-134h58M6-118h58M6-102h58M6-86h58M6-70h58M6-54h58M6-38h58" stroke="#001830" stroke-width="0.9" opacity=".65" />
-                                    <path d="M-46-150v128M-26-150v128 M25-150v128M45-150v128" stroke="#001830" stroke-width="0.7" opacity=".55" />
-                                    <rect x="-68" y="-154" width="136" height="5" rx="1.5" fill="#fbf7f0" />
-                                </g>
-                                <!-- Port Lower Solar Wing -->
-                                <g transform="translate(-260 0)">
-                                    <line x1="0" y1="16" x2="0" y2="155" stroke="#f5c46e" stroke-width="3" />
-                                    <rect x="-65" y="22" width="58" height="128" rx="2" fill="url(#sp-solar)" stroke="#061a1a" stroke-width="1.2" />
-                                    <rect x="6" y="22" width="58" height="128" rx="2" fill="url(#sp-solar)" stroke="#061a1a" stroke-width="1.2" />
-                                    <path d="M-65 38h58M-65 54h58M-65 70h58M-65 86h58M-65 102h58M-65 118h58M-65 134h58 M6 38h58M6 54h58M6 70h58M6 86h58M6 102h58M6 118h58M6 134h58" stroke="#001830" stroke-width="0.9" opacity=".65" />
-                                    <path d="M-46 22v128M-26 22v128 M25 22v128M45 22v128" stroke="#001830" stroke-width="0.7" opacity=".55" />
-                                    <rect x="-68" y="149" width="136" height="5" rx="1.5" fill="#fbf7f0" />
-                                </g>
-                                <!-- Starboard Upper Solar Wing -->
-                                <g transform="translate(254 0)">
-                                    <line x1="0" y1="-16" x2="0" y2="-155" stroke="#f5c46e" stroke-width="3" />
-                                    <rect x="-65" y="-150" width="58" height="128" rx="2" fill="url(#sp-solar)" stroke="#061a1a" stroke-width="1.2" />
-                                    <rect x="6" y="-150" width="58" height="128" rx="2" fill="url(#sp-solar)" stroke="#061a1a" stroke-width="1.2" />
-                                    <path d="M-65-134h58M-65-118h58M-65-102h58M-65-86h58M-65-70h58M-65-54h58M-65-38h58 M6-134h58M6-118h58M6-102h58M6-86h58M6-70h58M6-54h58M6-38h58" stroke="#001830" stroke-width="0.9" opacity=".65" />
-                                    <path d="M-46-150v128M-26-150v128 M25-150v128M45-150v128" stroke="#001830" stroke-width="0.7" opacity=".55" />
-                                    <rect x="-68" y="-154" width="136" height="5" rx="1.5" fill="#fbf7f0" />
-                                </g>
-                                <!-- Starboard Lower Solar Wing -->
-                                <g transform="translate(254 0)">
-                                    <line x1="0" y1="16" x2="0" y2="155" stroke="#f5c46e" stroke-width="3" />
-                                    <rect x="-65" y="22" width="58" height="128" rx="2" fill="url(#sp-solar)" stroke="#061a1a" stroke-width="1.2" />
-                                    <rect x="6" y="22" width="58" height="128" rx="2" fill="url(#sp-solar)" stroke="#061a1a" stroke-width="1.2" />
-                                    <path d="M-65 38h58M-65 54h58M-65 70h58M-65 86h58M-65 102h58M-65 118h58M-65 134h58 M6 38h58M6 54h58M6 70h58M6 86h58M6 102h58M6 118h58M6 134h58" stroke="#001830" stroke-width="0.9" opacity=".65" />
-                                    <path d="M-46 22v128M-26 22v128 M25 22v128M45 22v128" stroke="#001830" stroke-width="0.7" opacity=".55" />
-                                    <rect x="-68" y="149" width="136" height="5" rx="1.5" fill="#fbf7f0" />
-                                </g>
-                                <!-- Central Habitation and Research Node 1 -->
-                                <rect x="-24" y="-22" width="48" height="44" rx="8" fill="url(#sp-mod-h)" stroke="#003366" stroke-width="1.4" />
-                                <circle cx="0" cy="0" r="10" fill="#1A528F" stroke="#f5c46e" stroke-width="1.2" />
-                                <!-- Core Module (Aurelia-1, 2006 Foundation) -->
-                                <rect x="-102" y="-18" width="78" height="36" rx="10" fill="url(#sp-mod-h)" stroke="#003366" stroke-width="1.4" />
-                                <path d="M-86-18v36M-70-18v36M-54-18v36M-38-18v36" stroke="#1A528F" stroke-width="1" opacity=".45" />
-                                <rect x="-82" y="-13" width="24" height="26" rx="3" fill="#d4af37" stroke="#9e7428" stroke-width="0.8" opacity=".9" />
-                                <circle cx="-54" cy="0" r="5" fill="#e3735a" stroke="#f5c46e" stroke-width="1" />
-                                <polygon points="-54,-3 -51,2 -57,2" fill="#fbf7f0" />
-                                <circle cx="-92" cy="-6" r="2.2" fill="#6BA4D9" />
-                                <circle cx="-92" cy="6" r="2.2" fill="#6BA4D9" />
-                                <rect x="-114" y="-10" width="12" height="20" rx="3" fill="#1b3936" stroke="#6BA4D9" stroke-width="1" />
-                                <polygon points="-114,-8 -124,-12 -124,12 -114,8" fill="#0d2623" stroke="#e3735a" stroke-width="1" />
-                                <!-- Aldrin Science Laboratory Module -->
-                                <rect x="24" y="-18" width="74" height="36" rx="9" fill="url(#sp-mod-h)" stroke="#003366" stroke-width="1.4" />
-                                <path d="M40-18v36M58-18v36M76-18v36" stroke="#1A528F" stroke-width="1" opacity=".45" />
-                                <rect x="36" y="-28" width="34" height="10" rx="2" fill="#1b4642" stroke="#f5c46e" stroke-width="1" />
-                                <rect x="40" y="-25" width="6" height="5" fill="#6BA4D9" />
-                                <rect x="50" y="-25" width="6" height="5" fill="#e3735a" />
-                                <rect x="60" y="-25" width="6" height="5" fill="#f5c46e" />
-                                <!-- Zenith EVA Airlock and Spacelab Module -->
-                                <rect x="-14" y="-74" width="28" height="52" rx="8" fill="url(#sp-mod-v)" stroke="#003366" stroke-width="1.4" />
-                                <circle cx="-16" cy="-48" r="6" fill="#f5c46e" stroke="#003366" stroke-width="0.8" />
-                                <circle cx="16" cy="-48" r="6" fill="#e3735a" stroke="#003366" stroke-width="0.8" />
-                                <circle cx="-16" cy="-34" r="6" fill="#6BA4D9" stroke="#003366" stroke-width="0.8" />
-                                <circle cx="16" cy="-34" r="6" fill="#f5c46e" stroke="#003366" stroke-width="0.8" />
-                                <circle cx="0" cy="-70" r="5" fill="#113533" stroke="#f5c46e" stroke-width="1.2" />
-                                <!-- Spacewalking Astronauts (Angelina and Taylor EVA) -->
-                                <path d="M0 -66 Q 25 -85, 38 -76" stroke="#f5c46e" stroke-width="0.9" stroke-dasharray="2 2" fill="none" />
-                                <g transform="translate(42 -76)">
-                                    <rect x="-4" y="-7" width="8" height="14" rx="3.5" fill="#ffffff" stroke="#003366" stroke-width="0.8" />
-                                    <circle cx="0" cy="-4" r="2.8" fill="#d4af37" />
-                                    <rect x="-5" y="-5" width="2" height="7" rx="1" fill="#e3735a" />
-                                    <rect x="3" y="-5" width="2" height="7" rx="1" fill="#ffffff" />
-                                </g>
-                                <g transform="translate(24 -56)">
-                                    <rect x="-3.5" y="-6" width="7" height="12" rx="3" fill="#ffffff" stroke="#003366" stroke-width="0.8" />
-                                    <circle cx="0" cy="-3.5" r="2.4" fill="#d4af37" />
-                                </g>
-                                <!-- Nadir Biology and Microgravity Habitat Module -->
-                                <rect x="-15" y="22" width="30" height="56" rx="8" fill="url(#sp-mod-v)" stroke="#003366" stroke-width="1.4" />
-                                <rect x="-8" y="36" width="16" height="20" rx="3" fill="#0d3b2e" stroke="#4e8b5a" stroke-width="1" />
-                                <circle cx="0" cy="46" r="4" fill="#62a56f" opacity=".85" />
-                                <!-- Earth Observation Cupola ("The Pearl") -->
-                                <path d="M-18 78 L-14 96 L14 96 L18 78 Z" fill="url(#sp-mod-h)" stroke="#003366" stroke-width="1.2" />
-                                <path d="M-14 96 C-12 104, 12 104, 14 96 Z" fill="#1A528F" stroke="#f5c46e" stroke-width="1.4" />
-                                <polygon points="-10,82 -6,94 -12,94" fill="#f5c46e" opacity=".9" />
-                                <polygon points="-5,82 5,82 4,94 -4,94" fill="#6BA4D9" opacity=".95" />
-                                <polygon points="10,82 12,94 6,94" fill="#f5c46e" opacity=".9" />
-                                <ellipse cx="0" cy="98" rx="7" ry="2.5" fill="#f5c46e" opacity=".85" />
-                                <!-- Robotic Manipulator Arm ("Mano" RMS) -->
-                                <g transform="translate(110 -8)">
-                                    <rect x="-8" y="-6" width="16" height="12" rx="2" fill="#d9efeb" stroke="#003366" stroke-width="1" />
-                                    <circle cx="0" cy="-6" r="4.5" fill="#e3735a" stroke="#003366" stroke-width="1" />
-                                    <path d="M0 -6 L36 -32" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" />
-                                    <path d="M14 -16 L22 -22" stroke="#003366" stroke-width="4.5" />
-                                    <circle cx="36" cy="-32" r="4" fill="#f5c46e" stroke="#003366" stroke-width="1" />
-                                    <path d="M36 -32 L74 -18" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
-                                    <circle cx="74" cy="-18" r="3.2" fill="#e3735a" />
-                                    <path d="M74 -18 L84 -14" stroke="#6BA4D9" stroke-width="2" stroke-linecap="round" />
-                                    <rect x="84" y="-22" width="16" height="16" rx="2" fill="#1b4642" stroke="#f5c46e" stroke-width="1" />
-                                    <circle cx="92" cy="-14" r="2.5" fill="#e3735a" />
-                                </g>
-                                <!-- Docking Adapter and WSA Space Shuttle "Andromeda" -->
-                                <rect x="98" y="-11" width="16" height="22" rx="3" fill="#a0c2bc" stroke="#003366" stroke-width="1.2" />
-                                <circle cx="106" cy="0" r="4" fill="#0d2623" stroke="#f5c46e" stroke-width="1" />
-                                <g transform="translate(114 0)">
-                                    <path d="M0 -8 L54 -14 L98 -7 L114 0 L98 7 L54 14 L0 8 Z" fill="url(#sp-shut)" stroke="#003366" stroke-width="1.4" />
-                                    <path d="M0 4 L54 10 L98 6 L114 0 L98 7 L54 14 L0 8 Z" fill="#122b28" opacity=".7" />
-                                    <polygon points="12,-8 48,-36 68,-36 56,-8" fill="url(#sp-shut)" stroke="#003366" stroke-width="1.2" />
-                                    <polygon points="12,8 48,36 68,36 56,8" fill="url(#sp-shut)" stroke="#003366" stroke-width="1.2" />
-                                    <path d="M12 -8 L48 -36 L52 -36 L16 -8 Z" fill="#0d2623" />
-                                    <path d="M12 8 L48 36 L52 36 L16 8 Z" fill="#0d2623" />
-                                    <polygon points="2,-4 22,-20 34,-20 18,-4" fill="#ffffff" stroke="#003366" stroke-width="1.2" />
-                                    <polygon points="86,-4 98,-2 98,2 86,4 82,0" fill="#6BA4D9" stroke="#003366" stroke-width="0.8" />
-                                    <path d="M10 -2 H80" stroke="#e3735a" stroke-width="2.2" />
-                                    <path d="M10 1 H80" stroke="#1A528F" stroke-width="1.4" />
-                                    <text x="48" y="-16" font-size="6.5" font-weight="700" fill="#003366">WSA</text>
-                                    <rect x="-4" y="-6" width="4" height="4" fill="#1b3936" stroke="#6BA4D9" stroke-width="0.6" />
-                                    <rect x="-4" y="2" width="4" height="4" fill="#1b3936" stroke="#6BA4D9" stroke-width="0.6" />
-                                    <circle cx="-2" cy="-4" r="1.5" fill="#6BA4D9" opacity=".9" />
-                                    <circle cx="-2" cy="4" r="1.5" fill="#6BA4D9" opacity=".9" />
-                                </g>
-                                <!-- High-Gain Communications Antenna -->
-                                <g transform="translate(-175 14)">
-                                    <path d="M0 0 L-22 36" stroke="#6BA4D9" stroke-width="2.5" stroke-linecap="round" />
-                                    <circle cx="-22" cy="36" r="3.5" fill="#f5c46e" />
-                                    <path d="M-38 30 C-32 44, -14 52, -6 48" fill="none" stroke="#fbf7f0" stroke-width="3" stroke-linecap="round" />
-                                    <line x1="-22" y1="36" x2="-22" y2="44" stroke="#e3735a" stroke-width="1.5" />
-                                    <circle cx="-22" cy="44" r="2" fill="#f5c46e" />
-                                    <line x1="-22" y1="46" x2="-35" y2="92" stroke="#6BA4D9" stroke-width="1.2" stroke-dasharray="3 3" opacity=".7" />
-                                </g>
-                                <!-- Navigation Strobes and Beacons -->
-                                <circle cx="-328" cy="0" r="4.5" fill="#e3735a" class="pulse" />
-                                <circle cx="-328" cy="0" r="2.5" fill="#ffffff" />
-                                <circle cx="322" cy="0" r="4.5" fill="#6BA4D9" class="pulse" />
-                                <circle cx="322" cy="0" r="2.5" fill="#ffffff" />
-                                <circle cx="0" cy="-78" r="3.5" fill="#f5c46e" class="pulse" />
-                                <circle cx="0" cy="-78" r="1.8" fill="#ffffff" />
-                            </g>
-                        </g>
-                        <!-- Annotation Callouts -->
-                        <g font-family="Manrope, sans-serif" letter-spacing="1">
-                            <!-- Callout 01: Solar Array -->
-                            <path d="M190 85 h100 l40 30" stroke="#f5c46e" stroke-width="1" fill="none" opacity=".8" />
-                            <circle cx="330" cy="115" r="2.5" fill="#f5c46e" />
-                            <text x="180" y="88" text-anchor="end" font-size="9" font-weight="700" fill="#f5c46e">01 · ARTICULATING SOLAR ARRAYS (84 M)</text>
-                            <!-- Callout 02: Core Module and Labs -->
-                            <path d="M190 380 h220 l80 -120" stroke="#f5c46e" stroke-width="1" fill="none" opacity=".8" />
-                            <circle cx="490" cy="260" r="2.5" fill="#f5c46e" />
-                            <text x="180" y="383" text-anchor="end" font-size="9" font-weight="700" fill="#f5c46e">02 · AURELIA CORE MODULE AND LABS</text>
-                            <!-- Callout 03: Observation Cupola -->
-                            <path d="M580 385 v-40" stroke="#6BA4D9" stroke-width="1" fill="none" opacity=".8" />
-                            <circle cx="580" cy="345" r="2.5" fill="#6BA4D9" />
-                            <text x="580" y="405" text-anchor="middle" font-size="9" font-weight="700" fill="#6BA4D9">03 · EARTH OBSERVATION CUPOLA</text>
-                            <!-- Callout 04: EVA Airlock -->
-                            <path d="M580 85 h40 l20 45" stroke="#6BA4D9" stroke-width="1" fill="none" opacity=".8" />
-                            <circle cx="640" cy="130" r="2.5" fill="#6BA4D9" />
-                            <text x="580" y="80" text-anchor="middle" font-size="9" font-weight="700" fill="#6BA4D9">04 · EVA AIRLOCK AND SPACEWALK PLATFORM</text>
-                            <!-- Callout 05: Robotic Arm -->
-                            <path d="M970 85 h-120 l-40 60" stroke="#f5c46e" stroke-width="1" fill="none" opacity=".8" />
-                            <circle cx="810" cy="145" r="2.5" fill="#f5c46e" />
-                            <text x="980" y="88" text-anchor="start" font-size="9" font-weight="700" fill="#f5c46e">05 · ROBOTIC MANIPULATOR ARM</text>
-                            <!-- Callout 06: Shuttle Andromeda -->
-                            <path d="M970 380 h-160 l-50 -120" stroke="#f5c46e" stroke-width="1" fill="none" opacity=".8" />
-                            <circle cx="760" cy="260" r="2.5" fill="#f5c46e" />
-                            <text x="980" y="383" text-anchor="start" font-size="9" font-weight="700" fill="#f5c46e">06 · DOCKED WSA SHUTTLE ANDROMEDA</text>
-                        </g>
-                    </g>
-                </svg>
-                <figcaption class="ill-caption">The Waikiki National Space Station in Low Earth Orbit (200 km). Fully assembled orbital complex featuring advanced bioscience laboratories, panoramic observation cupola, robotic assembly arm, and the docked WSA shuttle Andromeda.</figcaption>
-            </figure>
+        <section id="fleet" class="fade-in">
+            <h2 class="section-title">Waikiki Spacecraft and Launch Systems</h2>
+            <p class="section-intro">The Waikiki Space Agency (WSA) and national aerospace partners operate the world's most versatile and capable space fleet. Alongside operational launchers and crewed orbiters, next-generation reusable spacecraft and super-heavy boosters currently under development will spearhead humanity's expansion into deep space.</p>
+            <h3 class="fleet-group-title">Operational Spacecraft and Launch Vehicles</h3>
+            <p class="fleet-group-lead">Active flight hardware supporting continuous orbital presence, space station logistics, and cislunar missions.</p>
             <div class="card-grid">
-                <article class="card"><span class="card-icon">
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <rect x="7" y="2" width="10" height="20" rx="2.5" />
-                            <path d="M11 18h2" />
-                        </svg></span>
-                    <h3>Waikiki One</h3>
-                    <p>The integrated citizen platform: identity, tax, healthcare, voting and payments in one secure application.</p>
-                </article>
-                <article class="card"><span class="card-icon">
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z" />
-                            <path d="M4 21V5M8 7h7" />
-                        </svg></span>
-                    <h3>Digital Education Bridge</h3>
-                    <p>Launched in 2020, it delivered tablets and portable modems to students on remote islands and in Amazonia.</p>
-                </article>
-                <article class="card"><span class="card-icon">
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M12 2c3 2 5 6 5 10l-2 4H9l-2-4c0-4 2-8 5-10z" />
-                            <circle cx="12" cy="9" r="1.6" />
-                            <path d="M9 16l-2 4M15 16l2 4M12 17v4" />
-                        </svg></span>
-                    <h3>National Space Station</h3>
-                    <p>A $200 billion orbital complex, served by the Andromeda, Aldrin and Columbus shuttles of the Waikiki Space Agency.</p>
-                </article>
-                <article class="card"><span class="card-icon">
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <rect x="5" y="11" width="14" height="10" rx="2" />
-                            <path d="M8 11V7a4 4 0 0 1 8 0v4" />
-                        </svg></span>
-                    <h3>Cyber resilience</h3>
-                    <p>Election integrity and digital security are institutional priorities, strengthened by NATO cyber-defence cooperation.</p>
-                </article>
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/rocket.svg" alt="" /></span>
+                    <span class="spec-badge">Active Fleet · Heavy Cargo Launcher</span>
+                    <h3>Delta III A</h3>
+                    <p>The Delta III A is Waikiki's heavy-lift uncrewed cargo workhorse, engineered to loft massive space station modules and orbital logistics infrastructure. Boasting 35,000 kN of launch thrust, it delivers up to 180,000 kg of payload to low Earth orbit, anchoring the nation's automated heavy logistics.</p>
+                    <ul class="spec-list">
+                        <li><span>Height</span><strong>115 m</strong></li>
+                        <li><span>Crew Capacity</span><strong>0 (Automated Cargo)</strong></li>
+                        <li><span>Payload Capacity</span><strong>180,000 kg</strong></li>
+                        <li><span>Launch Thrust</span><strong>35,000 kN</strong></li>
+                        <li><span>Unit Cost</span><strong>$300 Million</strong></li>
+                    </ul>
+                    <img src="../icons/rockets/rocket-delta-3a.svg" alt="" class="aircraft-watermark aircraft-watermark--plane" aria-hidden="true" />
+                </div>
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/airplane.svg" alt="" /></span>
+                    <span class="spec-badge">Active Fleet · Reusable Shuttle</span>
+                    <h3>Space Shuttle</h3>
+                    <p>The iconic winged Space Shuttle serves as the primary crew transport vehicle of the Waikiki Space Agency. Accommodating ten astronauts alongside a 40,000 kg payload bay, it conducts routine WNSS crew rotations, orbital construction, and premium spaceflight missions.</p>
+                    <ul class="spec-list">
+                        <li><span>Height</span><strong>72 m</strong></li>
+                        <li><span>Crew Capacity</span><strong>10 Astronauts</strong></li>
+                        <li><span>Payload Capacity</span><strong>40,000 kg</strong></li>
+                        <li><span>Launch Thrust</span><strong>18,000 kN</strong></li>
+                        <li><span>Unit Cost</span><strong>$2 Billion</strong></li>
+                    </ul>
+                    <img src="../icons/rockets/rocket-shuttle.svg" alt="" class="aircraft-watermark aircraft-watermark--plane" aria-hidden="true" />
+                </div>
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/rocket-launch.svg" alt="" /></span>
+                    <span class="spec-badge">Active Fleet · Super-Heavy Launcher</span>
+                    <h3>Saturn X</h3>
+                    <p>Standing 125 metres tall, the Saturn X is Waikiki's flagship super-heavy launcher. Generating 40,000 kN of thrust to deliver 200,000 kg into orbit, it ferries a crew of six and lunar expedition hardware, providing the backbone for the 2026-2030 Moon Program.</p>
+                    <ul class="spec-list">
+                        <li><span>Height</span><strong>125 m</strong></li>
+                        <li><span>Crew Capacity</span><strong>6 Astronauts</strong></li>
+                        <li><span>Payload Capacity</span><strong>200,000 kg</strong></li>
+                        <li><span>Launch Thrust</span><strong>40,000 kN</strong></li>
+                        <li><span>Unit Cost</span><strong>$500 Million</strong></li>
+                    </ul>
+                    <img src="../icons/rockets/rocket-saturn-x.svg" alt="" class="aircraft-watermark aircraft-watermark--plane" aria-hidden="true" />
+                </div>
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/rocket.svg" alt="" /></span>
+                    <span class="spec-badge">Active Fleet · Medium Reusable Rocket</span>
+                    <h3>Falcon</h3>
+                    <p>The Falcon provides highly economical, rapid-turnaround orbital transit. Carrying up to four astronauts and 25,000 kg of payload at an exceptional unit cost of $50 million, it serves as the agile workhorse for routine low Earth orbit logistics and satellite deployments.</p>
+                    <ul class="spec-list">
+                        <li><span>Height</span><strong>90 m</strong></li>
+                        <li><span>Crew Capacity</span><strong>4 Astronauts</strong></li>
+                        <li><span>Payload Capacity</span><strong>25,000 kg</strong></li>
+                        <li><span>Launch Thrust</span><strong>8,000 kN</strong></li>
+                        <li><span>Unit Cost</span><strong>$50 Million</strong></li>
+                    </ul>
+                    <img src="../icons/rockets/rocket-falcon.svg" alt="" class="aircraft-watermark aircraft-watermark--plane" aria-hidden="true" />
+                </div>
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/rocket-launch.svg" alt="" /></span>
+                    <span class="spec-badge">Active Fleet · Multi-Core Heavy Launcher</span>
+                    <h3>Falcon Heavy</h3>
+                    <p>Combining three clustered booster cores, the Falcon Heavy delivers 24,000 kN of liftoff thrust and carries 70,000 kg into orbit. Optimized for automated high-energy insertions, it deploys defense satellites, orbital relays, and interplanetary science probes.</p>
+                    <ul class="spec-list">
+                        <li><span>Height</span><strong>98 m</strong></li>
+                        <li><span>Crew Capacity</span><strong>0 (Automated Cargo)</strong></li>
+                        <li><span>Payload Capacity</span><strong>70,000 kg</strong></li>
+                        <li><span>Launch Thrust</span><strong>24,000 kN</strong></li>
+                        <li><span>Unit Cost</span><strong>$90 Million</strong></li>
+                    </ul>
+                    <img src="../icons/rockets/rocket-falcon-heavy.svg" alt="" class="aircraft-watermark aircraft-watermark--plane" aria-hidden="true" />
+                </div>
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/rocket.svg" alt="" /></span>
+                    <span class="spec-badge">Active Fleet · Crewed Deep-Space Transport</span>
+                    <h3>Delta III B</h3>
+                    <p>The crew-rated variant of the Delta III series stands 120 metres tall and accommodates eight astronauts. With 35,000 kN of thrust and an 80,000 kg payload capacity, it ferries expedition teams and scientific payloads to high orbital and cislunar staging regimes.</p>
+                    <ul class="spec-list">
+                        <li><span>Height</span><strong>120 m</strong></li>
+                        <li><span>Crew Capacity</span><strong>8 Astronauts</strong></li>
+                        <li><span>Payload Capacity</span><strong>80,000 kg</strong></li>
+                        <li><span>Launch Thrust</span><strong>35,000 kN</strong></li>
+                        <li><span>Unit Cost</span><strong>$300 Million</strong></li>
+                    </ul>
+                    <img src="../icons/rockets/rocket-delta-3b.svg" alt="" class="aircraft-watermark aircraft-watermark--plane" aria-hidden="true" />
+                </div>
+            </div>
+            <h3 class="fleet-group-title">Planned Spacecraft and Future Concepts</h3>
+            <p class="fleet-group-lead">Next-generation space exploration vehicles engineered for long-term Moon bases and the colonization of Mars.</p>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/airplane.svg" alt="" /></span>
+                    <span class="spec-badge">Planned Fleet · Next-Gen Shuttle</span>
+                    <h3>Space Shuttle v2</h3>
+                    <p>The Space Shuttle v2 represents a modern leap forward in winged spaceflight, incorporating advanced carbon-composite thermal shielding. Designed for twelve astronauts and 50,000 kg of cargo with 30,000 kN of thrust, it streamlines sustainable crew rotation and orbital missions.</p>
+                    <ul class="spec-list">
+                        <li><span>Height</span><strong>78 m</strong></li>
+                        <li><span>Crew Capacity</span><strong>12 Astronauts</strong></li>
+                        <li><span>Payload Capacity</span><strong>50,000 kg</strong></li>
+                        <li><span>Launch Thrust</span><strong>30,000 kN</strong></li>
+                        <li><span>Projected Cost</span><strong>$2.5 Billion</strong></li>
+                    </ul>
+                    <img src="../icons/rockets/rocket-shuttle-v2.svg" alt="" class="aircraft-watermark aircraft-watermark--plane" aria-hidden="true" />
+                </div>
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/rocket-launch.svg" alt="" /></span>
+                    <span class="spec-badge">Planned Fleet · Colossal Heavy Launcher</span>
+                    <h3>Saturn Nova</h3>
+                    <p>Reaching 137 metres into the sky, the Saturn Nova commands an immense 80,000 kN of liftoff thrust. Capable of carrying twelve astronauts and 200,000 kg directly into translunar or interplanetary corridors, it represents the primary logistics anchor for long-term Moon base outposts and Mars flights.</p>
+                    <ul class="spec-list">
+                        <li><span>Height</span><strong>137 m</strong></li>
+                        <li><span>Crew Capacity</span><strong>12 Astronauts</strong></li>
+                        <li><span>Payload Capacity</span><strong>200,000 kg</strong></li>
+                        <li><span>Launch Thrust</span><strong>80,000 kN</strong></li>
+                        <li><span>Projected Cost</span><strong>$550 Million</strong></li>
+                    </ul>
+                    <img src="../icons/rockets/rocket-saturn-nova.svg" alt="" class="aircraft-watermark aircraft-watermark--plane" aria-hidden="true" />
+                </div>
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/rocket.svg" alt="" /></span>
+                    <span class="spec-badge">Planned Fleet · Autonomous Cargo Launcher</span>
+                    <h3>Falcon v2</h3>
+                    <p>The Falcon v2 is an uncrewed, high-efficiency evolution tailored for automated supply chains. At 94 metres tall with 25,000 kg payload capacity and 8,000 kN of thrust, it provides high-frequency orbital resupply missions at an ultra-competitive $50 million price point.</p>
+                    <ul class="spec-list">
+                        <li><span>Height</span><strong>94 m</strong></li>
+                        <li><span>Crew Capacity</span><strong>0 (Automated Cargo)</strong></li>
+                        <li><span>Payload Capacity</span><strong>25,000 kg</strong></li>
+                        <li><span>Launch Thrust</span><strong>8,000 kN</strong></li>
+                        <li><span>Projected Cost</span><strong>$50 Million</strong></li>
+                    </ul>
+                    <img src="../icons/rockets/rocket-falcon-v2.svg" alt="" class="aircraft-watermark aircraft-watermark--plane" aria-hidden="true" />
+                </div>
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/rocket-launch.svg" alt="" /></span>
+                    <span class="spec-badge">Planned Fleet · Interplanetary Starship</span>
+                    <h3>Big Falcon Rocket</h3>
+                    <p>The 106-metre Big Falcon Rocket is a fully reusable interplanetary starship and booster architecture. Generating 52,000 kN of thrust to deliver 150,000 kg into space, it carries twelve astronauts on long-duration journeys to the Moon and Mars with vertical propulsive landing capability.</p>
+                    <ul class="spec-list">
+                        <li><span>Height</span><strong>106 m</strong></li>
+                        <li><span>Crew Capacity</span><strong>12 Astronauts</strong></li>
+                        <li><span>Payload Capacity</span><strong>150,000 kg</strong></li>
+                        <li><span>Launch Thrust</span><strong>52,000 kN</strong></li>
+                        <li><span>Projected Cost</span><strong>$400 Million</strong></li>
+                    </ul>
+                    <img src="../icons/rockets/rocket-bfr.svg" alt="" class="aircraft-watermark aircraft-watermark--plane" aria-hidden="true" />
+                </div>
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/rocket.svg" alt="" /></span>
+                    <span class="spec-badge">Planned Fleet · Super-Heavy Cargo Vehicle</span>
+                    <h3>Delta IV</h3>
+                    <p>The Delta IV stands as the ultimate cargo titan of the Delta rocket dynasty. With a 120-metre airframe, 50,000 kN of thrust, and an immense 250,000 kg payload capacity, it is purpose-built to launch monolithic surface base modules, planetary extractors, and next-generation space telescopes.</p>
+                    <ul class="spec-list">
+                        <li><span>Height</span><strong>120 m</strong></li>
+                        <li><span>Crew Capacity</span><strong>0 (Automated Cargo)</strong></li>
+                        <li><span>Payload Capacity</span><strong>250,000 kg</strong></li>
+                        <li><span>Launch Thrust</span><strong>50,000 kN</strong></li>
+                        <li><span>Projected Cost</span><strong>$350 Million</strong></li>
+                    </ul>
+                    <img src="../icons/rockets/rocket-delta-4.svg" alt="" class="aircraft-watermark aircraft-watermark--plane" aria-hidden="true" />
+                </div>
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/space-station.svg" alt="" /></span>
+                    <span class="spec-badge">Planned Fleet · Interplanetary Flagship</span>
+                    <h3>Interplanetary Shuttle</h3>
+                    <p>The crown jewel of future exploration is the 140-metre Interplanetary Shuttle, delivering an unprecedented 100,000 kN of thrust. With a monumental 500,000 kg payload rating and self-sustaining closed-loop habitats for twelve crew members, it is the ultimate flagship for the 2035-2040 human Mars expedition.</p>
+                    <ul class="spec-list">
+                        <li><span>Height</span><strong>140 m</strong></li>
+                        <li><span>Crew Capacity</span><strong>12 Astronauts</strong></li>
+                        <li><span>Payload Capacity</span><strong>500,000 kg</strong></li>
+                        <li><span>Launch Thrust</span><strong>100,000 kN</strong></li>
+                        <li><span>Projected Cost</span><strong>$1.5 Billion</strong></li>
+                    </ul>
+                    <img src="../icons/rockets/rocket-interplanetary-shuttle.svg" alt="" class="aircraft-watermark aircraft-watermark--plane" aria-hidden="true" />
+                </div>
             </div>
         </section>
         <!-- @chrome:next -->

@@ -107,17 +107,74 @@
     100% { transform: scaleY(1.08) scaleX(1.04); opacity: 1; }
 }
 
-/* Digital State and Orbital Reach section */
-#digital-space .ill-panel {
-    max-width: var(--width-s, 1160px);
-    width: 100%;
-    margin: 2.5rem auto;
+/* Space Fleet Section */
+.fleet-group-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+    color: var(--heading);
+    margin: 3.5rem auto 1rem;
+    text-align: center;
+    position: relative;
+    max-width: var(--width-full);
 }
 
-#digital-space .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
-    gap: var(--card-gap, 1.5rem);
-    max-width: var(--width-m);
-    margin: 0 auto;
+.fleet-group-title:first-of-type {
+    margin-top: 1rem;
+}
+
+.fleet-group-title::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0.75rem auto 0;
+    border-radius: var(--radius-pill);
+}
+
+.fleet-group-lead {
+    text-align: center;
+    max-width: var(--width-xs);
+    margin: 0 auto 2rem;
+    color: var(--text-muted);
+    font-size: 1.02rem;
+    line-height: 1.6;
+}
+
+/* Rocket and Shuttle Card Watermark Schematics */
+#fleet .card {
+    position: relative;
+    overflow: hidden;
+}
+
+#fleet .card > * {
+    position: relative;
+    z-index: 1;
+}
+
+#fleet .card .aircraft-watermark {
+    position: absolute;
+    bottom: -15px;
+    right: -20px;
+    width: clamp(210px, 25vw, 290px);
+    height: clamp(210px, 25vw, 290px);
+    opacity: 0.13;
+    transform: rotate(-18deg);
+    pointer-events: none;
+    z-index: 0;
+    transition: transform 0.8s var(--ease-out), opacity 0.8s;
+}
+
+#fleet .card:hover .aircraft-watermark {
+    transform: rotate(-10deg) scale(1.1);
+    opacity: 0.24;
+}
+
+.body-dark #fleet .card .aircraft-watermark {
+    filter: brightness(0) invert(1);
+    opacity: 0.16;
+}
+
+.body-dark #fleet .card:hover .aircraft-watermark {
+    opacity: 0.28;
 }
