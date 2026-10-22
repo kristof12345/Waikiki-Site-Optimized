@@ -19,6 +19,9 @@ Usage:
 
     # Show only imbalanced sections
     python3 .agents/skills/text-balance/scripts/text_balance.py --imbalanced hu/plane.html
+
+    # Specify maximum allowed line imbalance (default: 2 lines)
+    python3 .agents/skills/text-balance/scripts/text_balance.py --max-imbalance 2 hu/space-research.html
 """
 
 from __future__ import annotations
@@ -236,7 +239,7 @@ def measure_with_browser(file_path: Path, width: int = VIEWPORT_WIDTH, height: i
     return None
 
 
-def audit_file(file_path: Path, use_browser: bool = False, only_imbalanced: bool = False, width: int = VIEWPORT_WIDTH) -> int:
+def audit_file(file_path: Path, use_browser: bool = False, only_imbalanced: bool = False, width: int = VIEWPORT_WIDTH, max_imbalance: int = 2) -> int:
     parser = ComponentParser()
     try:
         content = file_path.read_text(encoding="utf-8", errors="ignore")
@@ -293,8 +296,9 @@ def audit_file(file_path: Path, use_browser: bool = False, only_imbalanced: bool
         avg_lines = sum(line_counts) / len(line_counts)
         line_variance = max_lines - min_lines
 
-        # Criteria: variance >= 2 lines is considered imbalanced for peer cards
-        is_imbalanced = line_variance >= 2
+        # Criteria: variance > max_imbalance lines is considered imbalanced for peer cards
+        # (Default max_imbalance = 2: 4 and 6 are ok [diff=2], 4 and 7 are not ok [diff=3])
+        is_imbalanced = line_variance > max_imbalance
 
         if is_imbalanced:
             imbalanced_sections += 1
@@ -337,11 +341,12 @@ def main():
     parser.add_argument("--browser", "-b", action="store_true", help="Use headless Google Chrome for exact rendered line counts (at 2560px)")
     parser.add_argument("--width", "-w", type=int, default=VIEWPORT_WIDTH, help=f"Viewport width for browser test (default: {VIEWPORT_WIDTH}px)")
     parser.add_argument("--all", "-a", action="store_true", help="Audit all English and Hungarian content pages")
-    parser.add_argument("--imbalanced", "-i", action="store_true", help="Only display sections with imbalanced line counts (variance >= 2 lines)")
+    parser.add_argument("--imbalanced", "-i", action="store_true", help="Only display sections with imbalanced line counts (variance > max_imbalance)")
+    parser.add_argument("--max-imbalance", "-m", type=int, default=2, help="Maximum allowed line variance between min and max cards in a section grid (default: 2; e.g. 4 and 6 are ok, 4 and 7 are imbalanced)")
     args = parser.parse_args()
 
     print("=================================================================")
-    print(f" Sovereign Nation of Waikiki — Component Text Balance Auditor ({args.width}px)")
+    print(f" Sovereign Nation of Waikiki — Component Text Balance Auditor ({args.width}px, max imbalance: {args.max_imbalance})")
     print("=================================================================")
 
     if args.file:
@@ -363,7 +368,13 @@ def main():
 
     total_imbalanced = 0
     for f in target_files:
-        total_imbalanced += audit_file(f, use_browser=args.browser, only_imbalanced=args.imbalanced, width=args.width)
+        total_imbalanced += audit_file(
+            f,
+            use_browser=args.browser,
+            only_imbalanced=args.imbalanced,
+            width=args.width,
+            max_imbalance=args.max_imbalance,
+        )
 
     if total_imbalanced > 0:
         print(f"\n[ATTENTION] Found {total_imbalanced} imbalanced component row(s). Review suggestions above to unify line counts.")
