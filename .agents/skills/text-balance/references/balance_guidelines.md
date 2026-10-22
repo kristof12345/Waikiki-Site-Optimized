@@ -8,7 +8,7 @@ This reference details the visual design principles, measurement techniques, and
 
 In modern responsive layouts, cards, grid teasers, and column blocks are displayed side-by-side in visual rows:
 - **Equal-Height Harmony**: When cards in a row have approximately the same amount of text, their paragraphs, spec lists, and action areas align consistently, preventing ragged, staggered bottoms.
-- **Rhythm Over Rigidity**: The goal is **not exact character matching**, but **visual line count parity** ($\pm 1$ line tolerance). For example, having cards in a 3-column row take 4, 4, and 5 lines looks harmonious, whereas 2 lines next to 6 lines looks visibly broken.
+- **Rhythm Over Rigidity**: The goal is **not exact character matching**, but **visual line count parity** (maximum line imbalance $\le 2$ lines between min and max card by default). For example, having cards in a 3-column row span 4 to 6 lines (variance of 2) is considered balanced and OK, whereas 4 lines next to 7 lines (variance of 3) is flagged as imbalanced.
 - **Bilingual Symmetry**: When balancing text on a page, always ensure the corresponding language counterpart (`hu/` <-> `en/`) maintains approximately the same line count balance.
 
 ---
@@ -47,6 +47,8 @@ When a card is too sparse and creates an empty gap:
    ```bash
    python3 .agents/skills/text-balance/scripts/text_balance.py <page.html>
    python3 .agents/skills/text-balance/scripts/text_balance.py --browser <page.html>
+   # Optionally adjust max line imbalance threshold (default: 2)
+   python3 .agents/skills/text-balance/scripts/text_balance.py --max-imbalance 2 <page.html>
    ```
 2. Edit flagged cards to bring line counts within the recommended target ($\pm 1$ line).
 3. Synchronize adjustments with the counterpart language using `locale-sync`:

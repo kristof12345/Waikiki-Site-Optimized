@@ -23,9 +23,10 @@ Activate this skill when:
 ## Core Visual Balancing Principles
 
 1. **Visual Parity Over Exact Counts**:
-   - The goal is **not exact character matching**, but **visual line count harmony** ($\pm 1$ line tolerance).
-   - If a row of 3 cards has descriptions of 4, 4, and 5 lines, they look cohesive and balanced.
-   - If a card has 2 lines while its neighbors have 6 lines, the layout looks uneven and empty.
+   - The goal is **not exact character matching**, but **visual line count harmony** (maximum line imbalance $\le 2$ lines between min and max cards by default).
+   - If a row of cards spans 4 to 6 lines (imbalance = 2 lines), they are cohesive and considered **balanced (OK)**.
+   - If a row of cards spans 4 to 7 lines (imbalance = 3 lines), the spread exceeds the limit and is flagged as **imbalanced (not OK)**.
+   - If a card has 2 lines while its neighbors have 6 lines, the layout looks ragged and visibly uneven.
 2. **Peer Group Context**:
    - Sibling cards within the same `<section>` or `.cards` container share a visual row on desktop screens and must be harmonized together.
 3. **Bilingual Coordination**:
@@ -38,7 +39,7 @@ Activate this skill when:
 The workspace includes a dedicated inspection script supporting static analysis, headless Chrome, and **Playwright live browser rendering** (which **always evaluates at 2560px ultra-wide desktop width**):
 
 ```bash
-# 1. Audit text balance on a specific page (static line estimation based on 2560px desktop grid width)
+# 1. Audit text balance on a specific page (static line estimation based on 2560px desktop grid width, default max imbalance = 2)
 python3 .agents/skills/text-balance/scripts/text_balance.py hu/space-research.html
 
 # 2. Audit with live Playwright browser for exact pixel-rendered line counts at 2560px width
@@ -47,16 +48,20 @@ python3 .agents/skills/text-balance/scripts/text_balance.py --browser hu/space-r
 # Direct Playwright runner via Node:
 node .agents/skills/text-balance/scripts/playwright_balance.js hu/space-research.html
 
-# 3. Only display sections with imbalanced rows (variance >= 2 lines)
+# 3. Only display sections with imbalanced rows (variance > max_imbalance, default > 2 lines)
 python3 .agents/skills/text-balance/scripts/text_balance.py --browser --imbalanced hu/space-research.html
 
-# 4. Audit all pages across the website
+# 4. Set custom maximum line imbalance threshold (default: 2)
+python3 .agents/skills/text-balance/scripts/text_balance.py --max-imbalance 2 hu/space-research.html
+python3 .agents/skills/text-balance/scripts/text_balance.py -m 1 hu/space-research.html
+
+# 5. Audit all pages across the website
 python3 .agents/skills/text-balance/scripts/text_balance.py --browser --all
 ```
 
 ### What the Auditor Reports:
 - **Rendered Line Count**: Calculated live via browser DOM `Range.getClientRects()` at the canonical 2560px desktop width, or calibrated desktop column character estimation (~52 chars/line for 3-column cards).
-- **Line Variance**: Difference between the shortest and longest card in each section. Sections with variance $\ge 2$ lines are flagged as `[IMBALANCED]`.
+- **Line Variance & Max Imbalance**: Difference between the shortest and longest card in each section. Sections with variance $>$ max_imbalance (default: 2 lines) are flagged as `[IMBALANCED]`. For instance, 4 and 6 lines are OK, while 4 and 7 lines are imbalanced.
 - **Target Line Count**: Recommended unified line count (average of the row) and specific suggestions for each card (`+1 lines, trim text` or `-2 lines, expand text`).
 
 ---
