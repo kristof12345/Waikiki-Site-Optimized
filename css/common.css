@@ -1508,6 +1508,7 @@ html.menu-open .menu-aside {
 .card p {
   color: var(--text);
   line-height: 1.78;
+  text-align: justify;
 }
 
 .card p+p {

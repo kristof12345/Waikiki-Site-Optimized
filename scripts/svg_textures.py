@@ -267,12 +267,12 @@ def render_planet(kind: str, size: int, seed: int, light=(-0.62, -0.48, 0.62), h
                     t = max(0.0, (0.53 - h) / 0.12)
                     base = _ramp([(0, (52, 160, 178)), (0.25, (22, 96, 150)), (1, (8, 42, 96))], t)
                     spec = 1.0
-                if lat > 0.86 - n3c.noise(sx * 3, sy * 3, sz * 3) * 0.12:
-                    base, spec = (236, 242, 248), 0.0
                 # Clouds with domain warping
                 cw = n3c.fbm(sx * 2.2, sy * 2.2 + 4, sz * 2.2, 3)
                 cl = n3c.fbm(sx * 3.1 + cw * 1.8, sy * 5.0 + cw * 1.4, sz * 3.1, 5)
                 cloud = max(0.0, min(1.0, (cl - 0.5) / 0.16))
+                if lat > 0.72:
+                    cloud *= max(0.0, 1.0 - (lat - 0.72) / 0.2)
                 col = _lerp(base, (250, 252, 255), cloud * 0.92)
                 shade = 0.12 + 0.95 * max(0.0, lam)
                 col = tuple(c * shade for c in col)
@@ -297,8 +297,6 @@ def render_planet(kind: str, size: int, seed: int, light=(-0.62, -0.48, 0.62), h
                 rift = abs(sy - 0.08 - 0.12 * math.sin(sx * 3)) 
                 if rift < 0.035 and -0.55 < sx < 0.45 and sz > 0:
                     base = _lerp(base, (70, 26, 14), (1 - rift / 0.035) * 0.8)
-                if sy < -0.84 + n3c.noise(sx * 4, sy * 4, sz * 4) * 0.08:
-                    base = (248, 240, 236)
                 shade = 0.06 + 1.0 * max(0.0, lam)
                 col = tuple(c * shade for c in base)
                 rim = (1 - z) ** 3

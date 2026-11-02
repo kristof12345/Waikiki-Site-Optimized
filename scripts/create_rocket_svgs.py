@@ -908,7 +908,7 @@ def svg_interplanetary_shuttle():
     <!-- ==================== FIRST STAGE: ITS BOOSTER ==================== -->
 
     <!-- Booster Cylindrical Core (12m Diameter) -->
-    <rect x="365" y="270" width="70" height="440" fill="url(#{id_p}Body)" stroke="currentColor" stroke-width="2.4" />
+    <rect x="365" y="270" width="70" height="454" fill="url(#{id_p}Body)" stroke="currentColor" stroke-width="2.4" />
 
     <!-- Diamond Planar Titanium Grid Fin Assembly (Upper Core) -->
     <!-- Grid Fin Mounting Bracket -->
@@ -927,8 +927,8 @@ def svg_interplanetary_shuttle():
     </g>
 
     <!-- Longitudinal Aerodynamic Raceways / Stringers -->
-    <line x1="371" y1="270" x2="371" y2="710" stroke="currentColor" stroke-width="1" opacity="0.4" />
-    <line x1="429" y1="270" x2="429" y2="710" stroke="currentColor" stroke-width="1" opacity="0.4" />
+    <line x1="371" y1="270" x2="371" y2="724" stroke="currentColor" stroke-width="1" opacity="0.4" />
+    <line x1="429" y1="270" x2="429" y2="724" stroke="currentColor" stroke-width="1" opacity="0.4" />
 
     <!-- Prominent Vertical "SPACEX" Fuselage Lettering -->
     <g font-family="sans-serif" font-weight="900" font-size="20" fill="currentColor" letter-spacing="4" text-anchor="middle" opacity="0.9">
@@ -962,30 +962,30 @@ def svg_interplanetary_shuttle():
 
     <!-- Aft Flared Aerodynamic Landing Leg Fairings (Matching ITS Stance) -->
     <!-- Left Flare -->
-    <polygon points="365,640 344,710 365,710" fill="url(#{id_p}Wing)" stroke="currentColor" stroke-width="2" />
-    <line x1="352" y1="675" x2="352" y2="710" stroke="currentColor" stroke-width="1" opacity="0.6" />
+    <polygon points="365,640 344,724 365,724" fill="url(#{id_p}Wing)" stroke="currentColor" stroke-width="2" />
+    <line x1="352" y1="675" x2="352" y2="724" stroke="currentColor" stroke-width="1" opacity="0.6" />
     <!-- Right Flare -->
-    <polygon points="435,640 456,710 435,710" fill="url(#{id_p}Wing)" stroke="currentColor" stroke-width="2" />
-    <line x1="448" y1="675" x2="448" y2="710" stroke="currentColor" stroke-width="1" opacity="0.6" />
+    <polygon points="435,640 456,724 435,724" fill="url(#{id_p}Wing)" stroke="currentColor" stroke-width="2" />
+    <line x1="448" y1="675" x2="448" y2="724" stroke="currentColor" stroke-width="1" opacity="0.6" />
     <!-- Center Flared Chine Ridge -->
-    <line x1="400" y1="640" x2="400" y2="710" stroke="currentColor" stroke-width="1.8" />
-    <polygon points="394,675 406,675 404,710 396,710" fill="currentColor" opacity="0.25" stroke="currentColor" stroke-width="1.2" />
+    <line x1="400" y1="640" x2="400" y2="724" stroke="currentColor" stroke-width="1.8" />
+    <polygon points="394,675 406,675 404,724 396,724" fill="currentColor" opacity="0.25" stroke="currentColor" stroke-width="1.2" />
 
     <!-- Aft Dark Engine Skirt Base -->
-    <rect x="358" y="710" width="84" height="16" fill="currentColor" opacity="0.85" stroke="currentColor" stroke-width="2" />
+    <rect x="358" y="724" width="84" height="17" fill="currentColor" opacity="0.85" stroke="currentColor" stroke-width="2" />
 
     <!-- 42 Raptor Engine Cluster Bell Nozzles (Dense Array at Base) -->
     <g stroke="currentColor" stroke-width="1.2">
       <!-- Outer Ring Engine Bell Nozzles protruding slightly from base -->
-      <polygon points="361,726 369,726 368,734 362,734" fill="currentColor" opacity="0.75" />
-      <polygon points="370,726 378,726 377,734 371,734" fill="currentColor" opacity="0.75" />
-      <polygon points="379,726 387,726 386,734 380,734" fill="currentColor" opacity="0.75" />
-      <polygon points="388,726 396,726 395,734 389,734" fill="currentColor" opacity="0.75" />
-      <polygon points="396,726 404,726 403,734 397,734" fill="currentColor" opacity="0.85" />
-      <polygon points="404,726 412,726 411,734 405,734" fill="currentColor" opacity="0.75" />
-      <polygon points="413,726 421,726 420,734 414,734" fill="currentColor" opacity="0.75" />
-      <polygon points="422,726 430,726 429,734 423,734" fill="currentColor" opacity="0.75" />
-      <polygon points="431,726 439,726 438,734 432,734" fill="currentColor" opacity="0.75" />
+      <polygon points="361,741 369,741 368,755 362,755" fill="currentColor" opacity="0.75" />
+      <polygon points="370,741 378,741 377,755 371,755" fill="currentColor" opacity="0.75" />
+      <polygon points="379,741 387,741 386,755 380,755" fill="currentColor" opacity="0.75" />
+      <polygon points="388,741 396,741 395,755 389,755" fill="currentColor" opacity="0.75" />
+      <polygon points="396,741 404,741 403,755 397,755" fill="currentColor" opacity="0.85" />
+      <polygon points="404,741 412,741 411,755 405,755" fill="currentColor" opacity="0.75" />
+      <polygon points="413,741 421,741 420,755 414,755" fill="currentColor" opacity="0.75" />
+      <polygon points="422,741 430,741 429,755 423,755" fill="currentColor" opacity="0.75" />
+      <polygon points="431,741 439,741 438,755 432,755" fill="currentColor" opacity="0.75" />
     </g>"""
     return wrap_svg("ips", "140.0 M", "CORE 12.0 M · SPAN 18.0 M", content)
 
