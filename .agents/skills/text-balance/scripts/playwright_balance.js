@@ -64,7 +64,7 @@ async function measurePage(filePath, width = 2560, height = 1440) {
                 const secId = sec.id || sec.className.split(' ')[0] || 'section';
                 const rawCards = Array.from(sec.querySelectorAll('.card, [class*="-card"], [class^="card-"]')).filter(el => {
                     const cls = typeof el.className === 'string' ? el.className : '';
-                    if (/-(title|desc|description|role|name|image|img|icon|badge|meta|header|footer|body|actions|label|wrapper|inner|content|banner|tagline)/.test(cls)) return false;
+                    if (/-(title|desc|description|role|name|image|img|icon|badge|meta|header|footer|body|actions|label|wrapper|inner|content|banner|tagline|top|stats|bottom|lead|row|grid|list)/.test(cls)) return false;
                     if (/card-(grid|list|container|group|icon|media|image|img|header|body|footer|actions)/.test(cls)) return false;
                     return true;
                 });
@@ -76,7 +76,11 @@ async function measurePage(filePath, width = 2560, height = 1440) {
                         const ps = Array.from(c.querySelectorAll('p, [class*="description"], [class*="desc"], [class*="bio"], [class*="text"]'));
                         let p = ps.find(el => /(description|desc|bio)/.test(el.className));
                         if (!p && ps.length > 0) {
-                            p = ps.reduce((max, el) => (el.innerText.trim().length > max.innerText.trim().length ? el : max), ps[0]);
+                            p = ps.reduce((max, el) => {
+                                const elLen = (el && el.innerText) ? el.innerText.trim().length : 0;
+                                const maxLen = (max && max.innerText) ? max.innerText.trim().length : 0;
+                                return elLen > maxLen ? el : max;
+                            }, ps[0]);
                         }
                         if (p) {
                             let lines = 0;
