@@ -263,17 +263,72 @@ def build_station_svg(lang="en") -> str:
         items.append(f'<line x1="{w / 2}" y1="0" x2="{w / 2}" y2="{h}" stroke="#ffffff" stroke-width="1.2" opacity="0.8" />')
         return g(items, transform=f"translate({x}, {y})", class_="pulse-glow")
 
-    body.append('<!-- Port Solar Array Wings (Left) -->')
-    body.append(solar_wing(150, 136, 80, 84))
-    body.append(solar_wing(150, 244, 80, 84))
-    body.append('<rect x="228" y="228" width="24" height="8" rx="1" fill="#cbe0dc" stroke="#486872" stroke-width="1" />')
-    body.append('<circle cx="240" cy="232" r="5" fill="#f5c46e" />')
+    prefix = "sr-" if lang == "en" else "sr-hu-"
+    port_assembly_id = f"{prefix}port-solar-assembly"
+    starboard_assembly_id = f"{prefix}starboard-solar-assembly"
 
-    body.append('<!-- Starboard Solar Array Wings (Right) -->')
-    body.append(solar_wing(930, 136, 80, 84))
-    body.append(solar_wing(930, 244, 80, 84))
-    body.append('<rect x="908" y="228" width="24" height="8" rx="1" fill="#cbe0dc" stroke="#486872" stroke-width="1" />')
-    body.append('<circle cx="920" cy="232" r="5" fill="#f5c46e" />')
+    sw_port_top = "\n".join("    " + line for line in solar_wing(150, 136, 80, 84).splitlines())
+    sw_port_bot = "\n".join("    " + line for line in solar_wing(150, 244, 80, 84).splitlines())
+    sw_stbd_top = "\n".join("    " + line for line in solar_wing(930, 136, 80, 84).splitlines())
+    sw_stbd_bot = "\n".join("    " + line for line in solar_wing(930, 244, 80, 84).splitlines())
+
+    body.append(f"""<!-- Port Solar Array Wings (Left) -->
+<g id="{port_assembly_id}">
+    <!-- Port Outrigger Extension Boom -->
+    <rect x="188" y="227" width="52" height="10" rx="2" fill="#2d424b" stroke="#6BA4D9" stroke-width="1.2" />
+    <line x1="188" y1="232" x2="240" y2="232" stroke="#d5ede9" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.85" />
+    <path d="M188,227 L200,237 M200,227 L188,237 M200,227 L212,237 M212,227 L200,237 M212,227 L224,237 M224,227 L212,237 M224,227 L236,237 M236,227 L224,237" stroke="#466570" stroke-width="1.0" opacity="0.75" />
+    <!-- Structural Support Struts -->
+    <line x1="234" y1="227" x2="194" y2="221" stroke="#8faeb6" stroke-width="1.6" stroke-linecap="round" />
+    <line x1="234" y1="237" x2="194" y2="243" stroke="#8faeb6" stroke-width="1.6" stroke-linecap="round" />
+    <!-- Solar Blanket Deployment Canisters and Spreaders -->
+    <rect x="148" y="218" width="84" height="4" rx="1" fill="#1b2a30" stroke="#6BA4D9" stroke-width="1" />
+    <rect x="148" y="242" width="84" height="4" rx="1" fill="#1b2a30" stroke="#6BA4D9" stroke-width="1" />
+    <line x1="149" y1="136" x2="231" y2="136" stroke="#8faeb6" stroke-width="1.6" stroke-linecap="round" />
+    <line x1="149" y1="328" x2="231" y2="328" stroke="#8faeb6" stroke-width="1.6" stroke-linecap="round" />
+    <!-- Continuous Central Mast -->
+    <line x1="190" y1="218" x2="190" y2="246" stroke="#ffffff" stroke-width="2" />
+    <!-- Beta Gimbal Assembly (BGA) Hub -->
+    <rect x="182" y="224" width="16" height="16" rx="2.5" fill="url(#sr-hull-cyl)" stroke="#003366" stroke-width="1.2" />
+    <circle cx="190" cy="232" r="4.5" fill="#f5c46e" stroke="#003366" stroke-width="0.8" />
+    <circle cx="190" cy="232" r="2" fill="#42d0f5" />
+    <!-- Solar Array Wings (Photovoltaic Blankets) -->
+{sw_port_top}
+{sw_port_bot}
+    <!-- Solar Alpha Rotary Joint (SARJ) -->
+    <rect x="228" y="228" width="24" height="8" rx="1" fill="#cbe0dc" stroke="#486872" stroke-width="1" />
+    <circle cx="240" cy="232" r="5" fill="#f5c46e" />
+    <circle cx="240" cy="232" r="2.2" fill="#1a3b68" />
+</g>""")
+
+    body.append(f"""<!-- Starboard Solar Array Wings (Right) -->
+<g id="{starboard_assembly_id}">
+    <!-- Starboard Outrigger Extension Boom -->
+    <rect x="920" y="227" width="52" height="10" rx="2" fill="#2d424b" stroke="#6BA4D9" stroke-width="1.2" />
+    <line x1="920" y1="232" x2="972" y2="232" stroke="#d5ede9" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.85" />
+    <path d="M924,227 L936,237 M936,227 L924,237 M936,227 L948,237 M948,227 L936,237 M948,227 L960,237 M960,227 L948,237 M960,227 L972,237 M972,227 L960,237" stroke="#466570" stroke-width="1.0" opacity="0.75" />
+    <!-- Structural Support Struts -->
+    <line x1="926" y1="227" x2="966" y2="221" stroke="#8faeb6" stroke-width="1.6" stroke-linecap="round" />
+    <line x1="926" y1="237" x2="966" y2="243" stroke="#8faeb6" stroke-width="1.6" stroke-linecap="round" />
+    <!-- Solar Blanket Deployment Canisters and Spreaders -->
+    <rect x="928" y="218" width="84" height="4" rx="1" fill="#1b2a30" stroke="#6BA4D9" stroke-width="1" />
+    <rect x="928" y="242" width="84" height="4" rx="1" fill="#1b2a30" stroke="#6BA4D9" stroke-width="1" />
+    <line x1="929" y1="136" x2="1011" y2="136" stroke="#8faeb6" stroke-width="1.6" stroke-linecap="round" />
+    <line x1="929" y1="328" x2="1011" y2="328" stroke="#8faeb6" stroke-width="1.6" stroke-linecap="round" />
+    <!-- Continuous Central Mast -->
+    <line x1="970" y1="218" x2="970" y2="246" stroke="#ffffff" stroke-width="2" />
+    <!-- Beta Gimbal Assembly (BGA) Hub -->
+    <rect x="962" y="224" width="16" height="16" rx="2.5" fill="url(#sr-hull-cyl)" stroke="#003366" stroke-width="1.2" />
+    <circle cx="970" cy="232" r="4.5" fill="#f5c46e" stroke="#003366" stroke-width="0.8" />
+    <circle cx="970" cy="232" r="2" fill="#42d0f5" />
+    <!-- Solar Array Wings (Photovoltaic Blankets) -->
+{sw_stbd_top}
+{sw_stbd_bot}
+    <!-- Solar Alpha Rotary Joint (SARJ) -->
+    <rect x="908" y="228" width="24" height="8" rx="1" fill="#cbe0dc" stroke="#486872" stroke-width="1" />
+    <circle cx="920" cy="232" r="5" fill="#f5c46e" />
+    <circle cx="920" cy="232" r="2.2" fill="#1a3b68" />
+</g>""")
 
     # Central Rotating Torus Ring (Rock-solid exact rotation around its local center 0, 0)
     ring_svg = """<!-- Central Artificial-Gravity Rotating Torus Ring -->
@@ -517,23 +572,6 @@ def build_lunar_mars_svg(lang="en") -> str:
     body.append(f'<path id="{path_mars_id}" d="M245,265 C380,405 760,405 895,265 C760,340 380,340 245,265" fill="none" stroke="#e3735a" stroke-width="2.5" stroke-dasharray="8 8" class="dash" />')
     body.append(f'<path d="M245,265 C380,405 760,405 895,265 C760,340 380,340 245,265" fill="none" stroke="#e3735a" stroke-width="10" opacity="0.2" filter="url(#sr-planet-glow)" />')
 
-    # Delta-v Burn Vectors & Lagrange Point Markers (pulse in place without position drift)
-    burn_points = [
-        (295, 162, "TLI Δv: 3.1 km/s", "#f5c46e"),
-        (370, 375, "TMI Δv: 3.8 km/s", "#e3735a"),
-        (770, 375, "MOI Δv: 2.1 km/s", "#e3735a"),
-        (470, 185, "L1 GATEWAY", "#6BA4D9"),
-    ]
-    for bx, by, btxt, bcol in burn_points:
-        body.append(f"""<g transform="translate({bx}, {by})">
-            <circle cx="0" cy="0" r="4" fill="{bcol}" />
-            <circle cx="0" cy="0" r="7" fill="none" stroke="{bcol}" stroke-width="1.2">
-                <animate attributeName="r" values="5;11;5" dur="3s" repeatCount="indefinite" />
-                <animate attributeName="opacity" values="0.9;0.25;0.9" dur="3s" repeatCount="indefinite" />
-            </circle>
-            <text x="0" y="-12" fill="{bcol}" font-family="Manrope, sans-serif" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="1">{btxt}</text>
-        </g>""")
-
     # 3. PLANET EARTH NODE (x=180, y=240, r=65) - Orbit ring & satellite rotate rock-solid around planet center (0, 0)
     earth_group = f"""<!-- 3D Photorealistic Earth Node -->
     <g transform="translate(180, 240)">
@@ -673,11 +711,13 @@ def main():
     print("Generating standalone Space Research SVGs...")
     for lang in ("en", "hu"):
         station_svg = build_station_svg(lang)
+        station_svg = "\n".join(line for line in station_svg.splitlines() if line.strip())
         station_file = OUT_DIR / f"station-{lang}.svg"
         station_file.write_text(station_svg + "\n", encoding="utf-8")
         print(f"  Saved {station_file.relative_to(ROOT)} ({len(station_svg)/1024:.1f} KB)")
 
         corridor_svg = build_lunar_mars_svg(lang)
+        corridor_svg = "\n".join(line for line in corridor_svg.splitlines() if line.strip())
         corridor_file = OUT_DIR / f"corridor-{lang}.svg"
         corridor_file.write_text(corridor_svg + "\n", encoding="utf-8")
         print(f"  Saved {corridor_file.relative_to(ROOT)} ({len(corridor_svg)/1024:.1f} KB)")

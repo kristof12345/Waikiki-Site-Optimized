@@ -238,71 +238,117 @@
         <line x1="28" y1="-12" x2="28" y2="0" stroke="#8faeb6" stroke-width="2.5" />
     </g>
 <!-- Port Solar Array Wings (Left) -->
-<g transform="translate(150, 136)" class="pulse-glow">
-<rect x="0" y="0" width="80" height="84" rx="2" fill="url(#sr-solar-wafer)" stroke="#8c6218" stroke-width="1.4" />
-<rect x="0" y="0" width="80" height="84" rx="2" fill="url(#sr-solar-gold)" opacity="0.38" />
-<line x1="20" y1="0" x2="20" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
-<line x1="40" y1="0" x2="40" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
-<line x1="60" y1="0" x2="60" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
-<line x1="0" y1="8" x2="80" y2="8" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="0" y1="20" x2="80" y2="20" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="0" y1="32" x2="80" y2="32" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="0" y1="44" x2="80" y2="44" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="0" y1="56" x2="80" y2="56" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="0" y1="68" x2="80" y2="68" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="0" y1="80" x2="80" y2="80" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="40.0" y1="0" x2="40.0" y2="84" stroke="#ffffff" stroke-width="1.2" opacity="0.8" />
+<g id="sr-hu-port-solar-assembly">
+    <!-- Port Outrigger Extension Boom -->
+    <rect x="188" y="227" width="52" height="10" rx="2" fill="#2d424b" stroke="#6BA4D9" stroke-width="1.2" />
+    <line x1="188" y1="232" x2="240" y2="232" stroke="#d5ede9" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.85" />
+    <path d="M188,227 L200,237 M200,227 L188,237 M200,227 L212,237 M212,227 L200,237 M212,227 L224,237 M224,227 L212,237 M224,227 L236,237 M236,227 L224,237" stroke="#466570" stroke-width="1.0" opacity="0.75" />
+    <!-- Structural Support Struts -->
+    <line x1="234" y1="227" x2="194" y2="221" stroke="#8faeb6" stroke-width="1.6" stroke-linecap="round" />
+    <line x1="234" y1="237" x2="194" y2="243" stroke="#8faeb6" stroke-width="1.6" stroke-linecap="round" />
+    <!-- Solar Blanket Deployment Canisters and Spreaders -->
+    <rect x="148" y="218" width="84" height="4" rx="1" fill="#1b2a30" stroke="#6BA4D9" stroke-width="1" />
+    <rect x="148" y="242" width="84" height="4" rx="1" fill="#1b2a30" stroke="#6BA4D9" stroke-width="1" />
+    <line x1="149" y1="136" x2="231" y2="136" stroke="#8faeb6" stroke-width="1.6" stroke-linecap="round" />
+    <line x1="149" y1="328" x2="231" y2="328" stroke="#8faeb6" stroke-width="1.6" stroke-linecap="round" />
+    <!-- Continuous Central Mast -->
+    <line x1="190" y1="218" x2="190" y2="246" stroke="#ffffff" stroke-width="2" />
+    <!-- Beta Gimbal Assembly (BGA) Hub -->
+    <rect x="182" y="224" width="16" height="16" rx="2.5" fill="url(#sr-hull-cyl)" stroke="#003366" stroke-width="1.2" />
+    <circle cx="190" cy="232" r="4.5" fill="#f5c46e" stroke="#003366" stroke-width="0.8" />
+    <circle cx="190" cy="232" r="2" fill="#42d0f5" />
+    <!-- Solar Array Wings (Photovoltaic Blankets) -->
+    <g transform="translate(150, 136)" class="pulse-glow">
+    <rect x="0" y="0" width="80" height="84" rx="2" fill="url(#sr-solar-wafer)" stroke="#8c6218" stroke-width="1.4" />
+    <rect x="0" y="0" width="80" height="84" rx="2" fill="url(#sr-solar-gold)" opacity="0.38" />
+    <line x1="20" y1="0" x2="20" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
+    <line x1="40" y1="0" x2="40" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
+    <line x1="60" y1="0" x2="60" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
+    <line x1="0" y1="8" x2="80" y2="8" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="20" x2="80" y2="20" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="32" x2="80" y2="32" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="44" x2="80" y2="44" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="56" x2="80" y2="56" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="68" x2="80" y2="68" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="80" x2="80" y2="80" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="40.0" y1="0" x2="40.0" y2="84" stroke="#ffffff" stroke-width="1.2" opacity="0.8" />
+    </g>
+    <g transform="translate(150, 244)" class="pulse-glow">
+    <rect x="0" y="0" width="80" height="84" rx="2" fill="url(#sr-solar-wafer)" stroke="#8c6218" stroke-width="1.4" />
+    <rect x="0" y="0" width="80" height="84" rx="2" fill="url(#sr-solar-gold)" opacity="0.38" />
+    <line x1="20" y1="0" x2="20" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
+    <line x1="40" y1="0" x2="40" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
+    <line x1="60" y1="0" x2="60" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
+    <line x1="0" y1="8" x2="80" y2="8" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="20" x2="80" y2="20" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="32" x2="80" y2="32" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="44" x2="80" y2="44" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="56" x2="80" y2="56" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="68" x2="80" y2="68" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="80" x2="80" y2="80" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="40.0" y1="0" x2="40.0" y2="84" stroke="#ffffff" stroke-width="1.2" opacity="0.8" />
+    </g>
+    <!-- Solar Alpha Rotary Joint (SARJ) -->
+    <rect x="228" y="228" width="24" height="8" rx="1" fill="#cbe0dc" stroke="#486872" stroke-width="1" />
+    <circle cx="240" cy="232" r="5" fill="#f5c46e" />
+    <circle cx="240" cy="232" r="2.2" fill="#1a3b68" />
 </g>
-<g transform="translate(150, 244)" class="pulse-glow">
-<rect x="0" y="0" width="80" height="84" rx="2" fill="url(#sr-solar-wafer)" stroke="#8c6218" stroke-width="1.4" />
-<rect x="0" y="0" width="80" height="84" rx="2" fill="url(#sr-solar-gold)" opacity="0.38" />
-<line x1="20" y1="0" x2="20" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
-<line x1="40" y1="0" x2="40" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
-<line x1="60" y1="0" x2="60" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
-<line x1="0" y1="8" x2="80" y2="8" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="0" y1="20" x2="80" y2="20" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="0" y1="32" x2="80" y2="32" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="0" y1="44" x2="80" y2="44" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="0" y1="56" x2="80" y2="56" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="0" y1="68" x2="80" y2="68" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="0" y1="80" x2="80" y2="80" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="40.0" y1="0" x2="40.0" y2="84" stroke="#ffffff" stroke-width="1.2" opacity="0.8" />
-</g>
-<rect x="228" y="228" width="24" height="8" rx="1" fill="#cbe0dc" stroke="#486872" stroke-width="1" />
-<circle cx="240" cy="232" r="5" fill="#f5c46e" />
 <!-- Starboard Solar Array Wings (Right) -->
-<g transform="translate(930, 136)" class="pulse-glow">
-<rect x="0" y="0" width="80" height="84" rx="2" fill="url(#sr-solar-wafer)" stroke="#8c6218" stroke-width="1.4" />
-<rect x="0" y="0" width="80" height="84" rx="2" fill="url(#sr-solar-gold)" opacity="0.38" />
-<line x1="20" y1="0" x2="20" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
-<line x1="40" y1="0" x2="40" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
-<line x1="60" y1="0" x2="60" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
-<line x1="0" y1="8" x2="80" y2="8" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="0" y1="20" x2="80" y2="20" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="0" y1="32" x2="80" y2="32" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="0" y1="44" x2="80" y2="44" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="0" y1="56" x2="80" y2="56" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="0" y1="68" x2="80" y2="68" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="0" y1="80" x2="80" y2="80" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="40.0" y1="0" x2="40.0" y2="84" stroke="#ffffff" stroke-width="1.2" opacity="0.8" />
+<g id="sr-hu-starboard-solar-assembly">
+    <!-- Starboard Outrigger Extension Boom -->
+    <rect x="920" y="227" width="52" height="10" rx="2" fill="#2d424b" stroke="#6BA4D9" stroke-width="1.2" />
+    <line x1="920" y1="232" x2="972" y2="232" stroke="#d5ede9" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.85" />
+    <path d="M924,227 L936,237 M936,227 L924,237 M936,227 L948,237 M948,227 L936,237 M948,227 L960,237 M960,227 L948,237 M960,227 L972,237 M972,227 L960,237" stroke="#466570" stroke-width="1.0" opacity="0.75" />
+    <!-- Structural Support Struts -->
+    <line x1="926" y1="227" x2="966" y2="221" stroke="#8faeb6" stroke-width="1.6" stroke-linecap="round" />
+    <line x1="926" y1="237" x2="966" y2="243" stroke="#8faeb6" stroke-width="1.6" stroke-linecap="round" />
+    <!-- Solar Blanket Deployment Canisters and Spreaders -->
+    <rect x="928" y="218" width="84" height="4" rx="1" fill="#1b2a30" stroke="#6BA4D9" stroke-width="1" />
+    <rect x="928" y="242" width="84" height="4" rx="1" fill="#1b2a30" stroke="#6BA4D9" stroke-width="1" />
+    <line x1="929" y1="136" x2="1011" y2="136" stroke="#8faeb6" stroke-width="1.6" stroke-linecap="round" />
+    <line x1="929" y1="328" x2="1011" y2="328" stroke="#8faeb6" stroke-width="1.6" stroke-linecap="round" />
+    <!-- Continuous Central Mast -->
+    <line x1="970" y1="218" x2="970" y2="246" stroke="#ffffff" stroke-width="2" />
+    <!-- Beta Gimbal Assembly (BGA) Hub -->
+    <rect x="962" y="224" width="16" height="16" rx="2.5" fill="url(#sr-hull-cyl)" stroke="#003366" stroke-width="1.2" />
+    <circle cx="970" cy="232" r="4.5" fill="#f5c46e" stroke="#003366" stroke-width="0.8" />
+    <circle cx="970" cy="232" r="2" fill="#42d0f5" />
+    <!-- Solar Array Wings (Photovoltaic Blankets) -->
+    <g transform="translate(930, 136)" class="pulse-glow">
+    <rect x="0" y="0" width="80" height="84" rx="2" fill="url(#sr-solar-wafer)" stroke="#8c6218" stroke-width="1.4" />
+    <rect x="0" y="0" width="80" height="84" rx="2" fill="url(#sr-solar-gold)" opacity="0.38" />
+    <line x1="20" y1="0" x2="20" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
+    <line x1="40" y1="0" x2="40" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
+    <line x1="60" y1="0" x2="60" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
+    <line x1="0" y1="8" x2="80" y2="8" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="20" x2="80" y2="20" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="32" x2="80" y2="32" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="44" x2="80" y2="44" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="56" x2="80" y2="56" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="68" x2="80" y2="68" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="80" x2="80" y2="80" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="40.0" y1="0" x2="40.0" y2="84" stroke="#ffffff" stroke-width="1.2" opacity="0.8" />
+    </g>
+    <g transform="translate(930, 244)" class="pulse-glow">
+    <rect x="0" y="0" width="80" height="84" rx="2" fill="url(#sr-solar-wafer)" stroke="#8c6218" stroke-width="1.4" />
+    <rect x="0" y="0" width="80" height="84" rx="2" fill="url(#sr-solar-gold)" opacity="0.38" />
+    <line x1="20" y1="0" x2="20" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
+    <line x1="40" y1="0" x2="40" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
+    <line x1="60" y1="0" x2="60" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
+    <line x1="0" y1="8" x2="80" y2="8" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="20" x2="80" y2="20" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="32" x2="80" y2="32" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="44" x2="80" y2="44" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="56" x2="80" y2="56" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="68" x2="80" y2="68" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="80" x2="80" y2="80" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="40.0" y1="0" x2="40.0" y2="84" stroke="#ffffff" stroke-width="1.2" opacity="0.8" />
+    </g>
+    <!-- Solar Alpha Rotary Joint (SARJ) -->
+    <rect x="908" y="228" width="24" height="8" rx="1" fill="#cbe0dc" stroke="#486872" stroke-width="1" />
+    <circle cx="920" cy="232" r="5" fill="#f5c46e" />
+    <circle cx="920" cy="232" r="2.2" fill="#1a3b68" />
 </g>
-<g transform="translate(930, 244)" class="pulse-glow">
-<rect x="0" y="0" width="80" height="84" rx="2" fill="url(#sr-solar-wafer)" stroke="#8c6218" stroke-width="1.4" />
-<rect x="0" y="0" width="80" height="84" rx="2" fill="url(#sr-solar-gold)" opacity="0.38" />
-<line x1="20" y1="0" x2="20" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
-<line x1="40" y1="0" x2="40" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
-<line x1="60" y1="0" x2="60" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
-<line x1="0" y1="8" x2="80" y2="8" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="0" y1="20" x2="80" y2="20" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="0" y1="32" x2="80" y2="32" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="0" y1="44" x2="80" y2="44" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="0" y1="56" x2="80" y2="56" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="0" y1="68" x2="80" y2="68" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="0" y1="80" x2="80" y2="80" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
-<line x1="40.0" y1="0" x2="40.0" y2="84" stroke="#ffffff" stroke-width="1.2" opacity="0.8" />
-</g>
-<rect x="908" y="228" width="24" height="8" rx="1" fill="#cbe0dc" stroke="#486872" stroke-width="1" />
-<circle cx="920" cy="232" r="5" fill="#f5c46e" />
 <!-- Central Artificial-Gravity Rotating Torus Ring -->
     <g transform="translate(580, 232)">
         <g>
