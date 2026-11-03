@@ -7,11 +7,11 @@
 
 ## Graphics, SVGs and Icon Guidelines
 
-1. **Complex Graphics and Icons in Separate Files**:
+1. **Complex Graphics, Hero Arts and Icons in Separate Files**:
    - All SVG icons (e.g. MDI icons, card icons, location markers, badges, action buttons) must be stored as separate standalone `.svg` files in `icons/mdi/` and linked via `<img>` tags (`<img src="../icons/mdi/<name>.svg" alt="" />`).
-   - Complex graphics, network topologies, blueprints, and standalone technical illustrations (e.g., in `icons/banking/`, `icons/space/`, `icons/nature/`) must also be kept as separate files in the `icons/` directory.
+   - Hero illustrations (`.hero-art`), complex graphics, network topologies, blueprints, and standalone technical illustrations (e.g., in `icons/ski/`, `icons/infrastructure/`, `icons/travel/`, `icons/nova-aurelia/`, `icons/banking/`, `icons/space/`, `icons/nature/`) must also be kept as separate files in the `icons/` directory and linked via `<img>` tags (`<img class="ill" src="../icons/<path>/hero-art.svg" alt="..." width="640" height="480" />`).
 2. **Card Grid Arts Directly in HTML**:
-   - Card grid artwork and inline card illustrations (such as `.building-art`, `.hotel-art`, `.city-ill-frame`, `.hero-art`, `.ill-panel`, or scenic visuals tied directly to card grid structures) should be directly included inline within the HTML document.
+   - Card grid artwork and inline card illustrations (such as `.building-art`, `.hotel-art`, `.city-ill-frame`, `.ill-panel`, or scenic visuals tied directly to card grid structures) should be directly included inline within the HTML document.
 3. **Pure Vector SVGs (No Rasterized Parts)**:
    - All SVGs must consist purely of native vector elements (`<path>`, `<polygon>`, `<rect>`, `<circle>`, `<ellipse>`, `<line>`, vector gradients, SVG patterns, etc.).
    - SVGs should not contain rasterized parts: never embed `<image>` tags, base64 bitmap data URIs (`data:image/png`, `data:image/jpeg`, etc.), or pixel bitmaps inside SVG files or inline SVG markup.

@@ -196,8 +196,16 @@ def build_ski_hero(lang: str = "hu") -> str:
         else "Illusztráció: A Waikiki Síparadicsom alpesi csúcsai, felvonója és a Grand Palace"
     )
     o = [
-        f'<svg class="ill" viewBox="0 0 640 480" role="img" aria-label="{aria}">',
+        f'<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 640 480" width="100%" height="100%" role="img" aria-label="{aria}">',
         "<defs>",
+        "<style>",
+        "@keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.3); opacity: 0.5; } }",
+        "@keyframes twinkle { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }",
+        ".pulse { animation: pulse 2s infinite ease-in-out; transform-origin: center; }",
+        ".twinkle { animation: twinkle 3s infinite ease-in-out; }",
+        ".twinkle:nth-of-type(2n) { animation-delay: 1s; }",
+        ".twinkle:nth-of-type(3n) { animation-delay: 2s; }",
+        "</style>",
         '<linearGradient id="skiHeroSky" x1="0" y1="0" x2="0" y2="1">',
         '<stop offset="0%" stop-color="#07162c" />',
         '<stop offset="38%" stop-color="#133a6c" />',
@@ -289,21 +297,37 @@ def build_ski_hero(lang: str = "hu") -> str:
         '<line x1="242" y1="296" x2="238" y2="252" />',
         '<line x1="228" y1="252" x2="248" y2="252" />',
         "</g>",
-        # Gondola Cabins (nested in outer g with translate so class="bob" does not reset translate)
-        '<g transform="translate(152, 304)">',
-        '<g class="bob">',
-        '<line x1="0" y1="-12" x2="0" y2="0" stroke="#0f172a" stroke-width="1.5" />',
-        '<rect x="-11" y="0" width="22" height="14" rx="4" fill="#c95a41" stroke="#ffffff" stroke-width="1" />',
-        '<rect x="-7" y="3" width="14" height="6" rx="1.5" fill="#e0f2fe" />',
-        "</g>",
-        "</g>",
-        '<g transform="translate(332, 178)">',
-        '<g class="bob">',
-        '<line x1="0" y1="-11" x2="0" y2="0" stroke="#0f172a" stroke-width="1.4" />',
-        '<rect x="-9" y="0" width="18" height="12" rx="3.5" fill="#0f2c52" stroke="#fbbf24" stroke-width="1" />',
-        '<rect x="-6" y="2.5" width="12" height="5" rx="1" fill="#bae6fd" />',
-        "</g>",
-        "</g>",
+        # Gondola Cabins Moving Along Cables with animateMotion
+        # Ascending Cabins (Red)
+        '<g>',
+        '<circle cx="0" cy="0" r="2.2" fill="#0f172a" />',
+        '<line x1="0" y1="0" x2="0" y2="12" stroke="#0f172a" stroke-width="1.5" />',
+        '<rect x="-11" y="12" width="22" height="14" rx="4" fill="#c95a41" stroke="#ffffff" stroke-width="1" />',
+        '<rect x="-7" y="15" width="14" height="6" rx="1.5" fill="#e0f2fe" opacity="0.9" />',
+        '<animateMotion dur="16s" begin="0s" repeatCount="indefinite" path="M74,360 Q256,234 435,110" />',
+        '</g>',
+        '<g>',
+        '<circle cx="0" cy="0" r="2.2" fill="#0f172a" />',
+        '<line x1="0" y1="0" x2="0" y2="12" stroke="#0f172a" stroke-width="1.5" />',
+        '<rect x="-11" y="12" width="22" height="14" rx="4" fill="#c95a41" stroke="#ffffff" stroke-width="1" />',
+        '<rect x="-7" y="15" width="14" height="6" rx="1.5" fill="#e0f2fe" opacity="0.9" />',
+        '<animateMotion dur="16s" begin="-8s" repeatCount="indefinite" path="M74,360 Q256,234 435,110" />',
+        '</g>',
+        # Descending Cabins (Royal Blue and Gold)
+        '<g>',
+        '<circle cx="0" cy="0" r="2" fill="#0f172a" />',
+        '<line x1="0" y1="0" x2="0" y2="11" stroke="#0f172a" stroke-width="1.4" />',
+        '<rect x="-9" y="11" width="18" height="12" rx="3.5" fill="#0f2c52" stroke="#fbbf24" stroke-width="1" />',
+        '<rect x="-6" y="13.5" width="12" height="5" rx="1" fill="#bae6fd" opacity="0.9" />',
+        '<animateMotion dur="16s" begin="-4s" repeatCount="indefinite" path="M435,114 Q256,238 74,364" />',
+        '</g>',
+        '<g>',
+        '<circle cx="0" cy="0" r="2" fill="#0f172a" />',
+        '<line x1="0" y1="0" x2="0" y2="11" stroke="#0f172a" stroke-width="1.4" />',
+        '<rect x="-9" y="11" width="18" height="12" rx="3.5" fill="#0f2c52" stroke="#fbbf24" stroke-width="1" />',
+        '<rect x="-6" y="13.5" width="12" height="5" rx="1" fill="#bae6fd" opacity="0.9" />',
+        '<animateMotion dur="16s" begin="-12s" repeatCount="indefinite" path="M435,114 Q256,238 74,364" />',
+        '</g>',
     ]
     # Grand Alpine Palace & Thermal Infinity Pool in foreground right
     o += [
@@ -631,8 +655,12 @@ def build_travel_hero(lang: str) -> str:
         else "Illusztráció: Waikiki karibi partjára érkező repülőútvonal"
     )
     o = [
-        f'<svg class="ill" viewBox="0 0 640 480" role="img" aria-label="{aria}">',
+        f'<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 640 480" width="100%" height="100%" role="img" aria-label="{aria}">',
         "<defs>",
+        "<style>",
+        "@keyframes drift { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(25px); } }",
+        ".drift { animation: drift 14s ease-in-out infinite alternate; }",
+        "</style>",
         '<linearGradient id="tgHeroSky" x1="0" y1="0" x2="0" y2="1">',
         '<stop offset="0%" stop-color="#1e3a8a" />',
         '<stop offset="35%" stop-color="#3b82f6" />',
@@ -1093,8 +1121,15 @@ def build_infra_hero(lang: str) -> str:
         else "Illusztráció: Nova Aurelia maglev vonala, kikötője, szélerőműparkja és a Mega Piramis"
     )
     o = [
-        f'<svg class="ill" viewBox="0 0 640 480" role="img" aria-label="{aria}">',
+        f'<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 640 480" width="100%" height="100%" role="img" aria-label="{aria}">',
         "<defs>",
+        "<style>",
+        "@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }",
+        "@keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.3); opacity: 0.5; } }",
+        ".spin { animation: spin 4s linear infinite; transform-origin: center; }",
+        ".spin.slow { animation: spin 8s linear infinite; }",
+        ".pulse { animation: pulse 2s infinite ease-in-out; transform-origin: center; }",
+        "</style>",
         '<linearGradient id="infHeroSky" x1="0" y1="0" x2="0" y2="1">',
         '<stop offset="0%" stop-color="#0a192f" />',
         '<stop offset="48%" stop-color="#1e3a8a" />',
@@ -1586,41 +1621,62 @@ def main() -> None:
         sys.path.insert(0, str(ROOT / "scripts"))
         from build_pages import format_and_remove_empty_lines
 
+    if args.page in ("ski", "all"):
+        ski_hero_svg = build_ski_hero("en")
+        validate_svg(ski_hero_svg, "ski-hero")
+        ski_hero_out = ROOT / "icons" / "ski" / "hero-art.svg"
+        ski_hero_out.parent.mkdir(parents=True, exist_ok=True)
+        ski_hero_out.write_text(ski_hero_svg + "\n", encoding="utf-8")
+        print(f"Generated {ski_hero_out.relative_to(ROOT)} ({len(ski_hero_svg) / 1024:.1f} KB)")
+
+    if args.page in ("travel", "all"):
+        travel_hero_svg = build_travel_hero("en")
+        validate_svg(travel_hero_svg, "travel-hero")
+        travel_hero_out = ROOT / "icons" / "travel" / "hero-art.svg"
+        travel_hero_out.parent.mkdir(parents=True, exist_ok=True)
+        travel_hero_out.write_text(travel_hero_svg + "\n", encoding="utf-8")
+        print(f"Generated {travel_hero_out.relative_to(ROOT)} ({len(travel_hero_svg) / 1024:.1f} KB)")
+
+    if args.page in ("infra", "all"):
+        infra_hero_svg = build_infra_hero("en")
+        validate_svg(infra_hero_svg, "infra-hero")
+        infra_hero_out = ROOT / "icons" / "infrastructure" / "hero-art.svg"
+        infra_hero_out.parent.mkdir(parents=True, exist_ok=True)
+        infra_hero_out.write_text(infra_hero_svg + "\n", encoding="utf-8")
+        print(f"Generated {infra_hero_out.relative_to(ROOT)} ({len(infra_hero_svg) / 1024:.1f} KB)")
+
     for lang in ("en", "hu"):
         if args.page in ("ski", "all"):
-            # 1. ski-paradise.html (indices: [1] Hero, [4] Height Chart, [5..9] 5 Resort Cards)
+            # 1. ski-paradise.html (indices: [3] Height Chart, [4..8] 5 Resort Cards)
             ski_path = ROOT / lang / "ski-paradise.html"
             ski_repl = {
-                1: build_ski_hero(lang),
-                4: build_ski_height_chart(lang),
-                **{5 + i: build_ski_resort_card(i) for i in range(5)},
+                3: build_ski_height_chart(lang),
+                **{4 + i: build_ski_resort_card(i) for i in range(5)},
             }
             ski_html = replace_svgs_by_index(ski_path.read_text(encoding="utf-8"), ski_repl, f"{lang}/ski-paradise.html")
             ski_path.write_text(format_and_remove_empty_lines(ski_html), encoding="utf-8")
-            print(f"Updated {ski_path.relative_to(ROOT)} (Hero + Height Chart + 5 Resort Cards)")
+            print(f"Updated {ski_path.relative_to(ROOT)} (Height Chart + 5 Resort Cards)")
 
         if args.page in ("travel", "all"):
-            # 2. travel-guide.html (indices: [1] Hero, [2..16] 15 Luxury Hotel & Sanctuary Cards)
+            # 2. travel-guide.html (indices: [1..15] 15 Luxury Hotel & Sanctuary Cards)
             tg_path = ROOT / lang / "travel-guide.html"
             tg_repl = {
-                1: build_travel_hero(lang),
-                **{2 + i: build_travel_card(i) for i in range(15)},
+                **{1 + i: build_travel_card(i) for i in range(15)},
             }
             tg_html = replace_svgs_by_index(tg_path.read_text(encoding="utf-8"), tg_repl, f"{lang}/travel-guide.html")
             tg_path.write_text(format_and_remove_empty_lines(tg_html), encoding="utf-8")
-            print(f"Updated {tg_path.relative_to(ROOT)} (Hero + 15 Hotel & Sanctuary Cards)")
+            print(f"Updated {tg_path.relative_to(ROOT)} (15 Hotel & Sanctuary Cards)")
 
         if args.page in ("infra", "all"):
-            # 3. infrastructure.html (indices: [1] Hero, [3] Height Chart, [4..13] 10 Landmark Architecture Cards)
+            # 3. infrastructure.html (indices: [2] Height Chart, [3..12] 10 Landmark Architecture Cards)
             inf_path = ROOT / lang / "infrastructure.html"
             inf_repl = {
-                1: build_infra_hero(lang),
-                3: build_infra_height_chart(lang),
-                **{4 + i: build_infra_card(i) for i in range(10)},
+                2: build_infra_height_chart(lang),
+                **{3 + i: build_infra_card(i) for i in range(10)},
             }
             inf_html = replace_svgs_by_index(inf_path.read_text(encoding="utf-8"), inf_repl, f"{lang}/infrastructure.html")
             inf_path.write_text(format_and_remove_empty_lines(inf_html), encoding="utf-8")
-            print(f"Updated {inf_path.relative_to(ROOT)} (Hero + Height Chart + 10 Landmark Cards)")
+            print(f"Updated {inf_path.relative_to(ROOT)} (Height Chart + 10 Landmark Cards)")
 
 
 if __name__ == "__main__":

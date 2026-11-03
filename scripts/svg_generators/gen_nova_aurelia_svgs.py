@@ -1639,6 +1639,16 @@ def build_night_lagoon(t: dict[str, str]) -> str:
 def build_hero_art(t: dict[str, str]) -> str:
     s = Scene("hero-art", 640, 480, 909)
     rng = s.rng
+    s.raw(
+        "<style>"
+        "@keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.3); opacity: 0.5; } }"
+        "@keyframes beaconPulse { 0%, 100% { opacity: 0.35; transform: scale(0.96); } 50% { opacity: 1; transform: scale(1.05); } }"
+        "@keyframes shimmer { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.95; } }"
+        ".pulse { animation: pulse 2s infinite ease-in-out; transform-origin: center; }"
+        ".city-anim-beacon { animation: beaconPulse 2.8s ease-in-out infinite; transform-origin: center center; }"
+        ".shimmer { animation: shimmer 3s ease-in-out infinite; }"
+        "</style>"
+    )
     patterns(s, "#081324")
     glass_gradients(
         s,
@@ -1847,6 +1857,8 @@ def update_pages(rendered: dict[str, dict[str, str]]) -> None:
             continue
         text = path.read_text(encoding="utf-8")
         for key, svg in rendered[lang].items():
+            if key == "hero-art":
+                continue
             pattern = re.compile(CONTAINER_RE.format(key=key), re.S)
             match = pattern.search(text)
             if not match:
