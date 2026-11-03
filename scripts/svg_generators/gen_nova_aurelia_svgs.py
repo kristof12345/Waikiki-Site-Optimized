@@ -24,7 +24,7 @@ from gen_nature_svgs import (  # noqa: E402
     sea_fan, seagrass, smooth, tube_sponge, turtle, water_lines,
 )
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parent.parent.parent
 OUT_DIR = ROOT / "icons" / "nova-aurelia"
 TAU = math.tau
 
@@ -1733,6 +1733,7 @@ def inline(svg: str) -> str:
 
 
 def update_pages(rendered: dict[str, dict[str, str]]) -> None:
+    sys.path.insert(0, str(ROOT / "scripts"))
     from build_pages import format_and_remove_empty_lines
 
     for lang in ("en", "hu"):

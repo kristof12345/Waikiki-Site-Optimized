@@ -4,9 +4,11 @@ Modeled after icons/planes/plane-af1.svg and plane-concorde.svg.
 """
 
 import os
+from pathlib import Path
 
-SVG_DIR = "/Volumes/Samsung X5 SSD/Projektek/Site/icons/rockets"
-os.makedirs(SVG_DIR, exist_ok=True)
+ROOT = Path(__file__).resolve().parent.parent.parent
+SVG_DIR = ROOT / "icons" / "rockets"
+SVG_DIR.mkdir(parents=True, exist_ok=True)
 
 def wrap_svg(id_prefix, height_str, width_str, content):
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%" fill="none" style="color: #003366;">

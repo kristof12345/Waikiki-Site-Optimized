@@ -4,6 +4,9 @@ import sys
 import os
 import math
 import subprocess
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent.parent
 
 # ==============================================================================
 # CONST ARRAY OF CITIES
@@ -681,7 +684,8 @@ def main():
     cuba_group = get_cuba_group()
     print("Found Cuba group, size:", len(cuba_group))
     
-    for lang, filepath in [("en", "en/infrastructure.html"), ("hu", "hu/infrastructure.html")]:
+    for lang, rel_path in [("en", "en/infrastructure.html"), ("hu", "hu/infrastructure.html")]:
+        filepath = ROOT / rel_path
         svg_content = build_svg(lang, cuba_group)
         
         # Validate XML parsing
@@ -715,7 +719,7 @@ def main():
             f.write(new_content)
         print(f"Updated {filepath} successfully!")
         
-        subprocess.run(["python3", "scripts/build_pages.py", "--format", filepath], check=False)
+        subprocess.run(["python3", str(ROOT / "scripts" / "build_pages.py"), "--format", str(filepath)], check=False)
 
 if __name__ == '__main__':
     main()

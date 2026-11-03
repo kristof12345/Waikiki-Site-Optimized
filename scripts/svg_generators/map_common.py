@@ -6,7 +6,7 @@ import re
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parent.parent.parent
 
 # Regex to find island SVG blocks in infrastructure.html
 SVG_RE = re.compile(r'<svg class="ill" viewBox="0 0 1200 700".*?</svg>', re.S)
@@ -151,7 +151,7 @@ def update_island_map(map_index: int, svg_generator):
     try:
         from build_pages import format_and_remove_empty_lines
     except ImportError:
-        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        sys.path.insert(0, str(ROOT / "scripts"))
         from build_pages import format_and_remove_empty_lines
 
     map_name = MAP_NAMES.get(map_index, f"map {map_index}")

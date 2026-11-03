@@ -6,7 +6,7 @@ import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parent.parent.parent
 DEFAULT_SVG_PATH = ROOT / "icons" / "planes" / "plane-deck.svg"
 
 DECKPLAN_SVG_RE = re.compile(
@@ -114,7 +114,7 @@ def update_plane_html(svg_path: Path = DEFAULT_SVG_PATH) -> None:
     try:
         from build_pages import format_and_remove_empty_lines
     except ImportError:
-        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        sys.path.insert(0, str(ROOT / "scripts"))
         from build_pages import format_and_remove_empty_lines
 
     if not svg_path.is_file():

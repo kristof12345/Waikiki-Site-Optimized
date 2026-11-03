@@ -18,7 +18,7 @@ import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parent.parent.parent
 
 
 def n(val: float) -> str:
@@ -1583,7 +1583,7 @@ def main() -> None:
     try:
         from build_pages import format_and_remove_empty_lines
     except ImportError:
-        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        sys.path.insert(0, str(ROOT / "scripts"))
         from build_pages import format_and_remove_empty_lines
 
     for lang in ("en", "hu"):

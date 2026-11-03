@@ -23,7 +23,7 @@ import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parent.parent.parent
 SKI_ICONS_DIR = ROOT / "icons" / "ski"
 ANDES_SVG_PATH = SKI_ICONS_DIR / "andes-map.svg"
 HAITI_SVG_PATH = SKI_ICONS_DIR / "haiti-map.svg"
@@ -1263,7 +1263,7 @@ def update_ski_pages(andes_raw: str, haiti_raw: str) -> None:
     try:
         from build_pages import format_and_remove_empty_lines
     except ImportError:
-        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        sys.path.insert(0, str(ROOT / "scripts"))
         from build_pages import format_and_remove_empty_lines
 
     for lang in ("en", "hu"):

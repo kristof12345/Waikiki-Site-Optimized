@@ -35,7 +35,7 @@ import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parent.parent.parent
 from functools import lru_cache
 
 OUT_DIR = ROOT / "icons" / "nature"
@@ -3659,7 +3659,7 @@ def validate(svg: str, key: str) -> None:
 
 
 def update_pages(rendered: dict[str, dict[str, str]]) -> None:
-    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    sys.path.insert(0, str(ROOT / "scripts"))
     from build_pages import format_and_remove_empty_lines
 
     dims = {
