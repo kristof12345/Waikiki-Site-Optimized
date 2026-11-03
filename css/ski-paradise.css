@@ -39,10 +39,15 @@
   box-shadow: var(--shadow-md);
 }
 
-.fact svg {
+.fact svg,
+.fact img {
   flex: 0 0 28px;
   width: 28px;
   height: 28px;
+  object-fit: contain;
+}
+
+.fact svg {
   fill: none;
   stroke: var(--accent-hover);
   stroke-width: 1.6;
@@ -52,6 +57,10 @@
 
 .body-dark .fact svg {
   stroke: var(--accent);
+}
+
+.body-dark .fact img {
+  filter: brightness(2.1) saturate(0.7);
 }
 
 .fact dt {
@@ -106,11 +115,30 @@
   box-shadow: var(--shadow-xs);
 }
 
-.island-tab-btn svg {
+.island-tab-btn svg,
+.island-tab-btn img {
   width: 20px;
   height: 20px;
-  color: var(--accent);
+  object-fit: contain;
   transition: transform 0.3s var(--ease-spring);
+}
+
+.island-tab-btn svg {
+  color: var(--accent);
+}
+
+.island-tab-btn.is-active img,
+.island-tab-btn[aria-selected="true"] img {
+  filter: brightness(0) invert(1);
+}
+
+.body-dark .island-tab-btn img {
+  filter: brightness(2.1) saturate(0.7);
+}
+
+.body-dark .island-tab-btn.is-active img,
+.body-dark .island-tab-btn[aria-selected="true"] img {
+  filter: brightness(0);
 }
 
 .island-tab-btn:hover {
@@ -633,13 +661,22 @@
   font-size: 0.82rem;
 }
 
-.hotel-loc svg {
+.hotel-loc svg,
+.hotel-loc img {
   width: 14px;
   height: 14px;
   flex-shrink: 0;
+  object-fit: contain;
+}
+
+.hotel-loc svg {
   fill: none;
   stroke: currentColor;
   stroke-width: 1.8;
+}
+
+.body-dark .hotel-loc img {
+  filter: brightness(2.1) saturate(0.7);
 }
 
 .hotel ul.perks {
@@ -686,12 +723,21 @@
   flex-shrink: 0;
 }
 
-.travel-callout-icon svg {
+.travel-callout-icon svg,
+.travel-callout-icon img {
   width: 32px;
   height: 32px;
+  object-fit: contain;
+}
+
+.travel-callout-icon svg {
   stroke: var(--neutral-50);
   fill: none;
   stroke-width: 1.8;
+}
+
+.travel-callout-icon img {
+  filter: brightness(0) invert(1);
 }
 
 .travel-callout h3 {

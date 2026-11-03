@@ -344,9 +344,14 @@
     justify-content: center;
 }
 
-.heirs-icon svg {
+.heirs-icon svg,
+.heirs-icon img {
     width: 2.25rem;
     height: 2.25rem;
+    object-fit: contain;
+}
+
+.heirs-icon svg {
     stroke: currentColor;
 }
 
@@ -678,10 +683,20 @@
     margin-bottom: 1.25rem;
 }
 
-.matrix-icon-wrap svg {
+.matrix-icon-wrap svg,
+.matrix-icon-wrap img {
     width: 24px;
     height: 24px;
+    object-fit: contain;
+}
+
+.matrix-icon-wrap svg {
     stroke: currentColor;
+}
+
+.body-dark .heirs-icon img,
+.body-dark .matrix-icon-wrap img {
+    filter: brightness(2.1) saturate(0.7);
 }
 
 .matrix-card h3 {
