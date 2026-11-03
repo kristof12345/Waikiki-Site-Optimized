@@ -32,6 +32,7 @@ Whenever you build, edit, or create an HTML page in this project:
 - **Graphics, SVGs and Icons**:
   - Complex graphics, technical schematics, and SVG icons must be kept in separate files (e.g. in `icons/mdi/<name>.svg`, `icons/banking/`, `icons/space/`, etc.) and linked via `<img>` tags.
   - Card grid artwork and inline card illustrations (such as `.building-art`, `.hotel-art`, `.city-ill-frame`, `.hero-art`, `.ill-panel`) should be directly included inline within the HTML document.
+  - Pure Vector SVGs: SVGs must not contain rasterized parts. Never embed `<image>` tags, base64 data URIs (`data:image/png`, `data:image/jpeg`), or pixel bitmaps within SVG files or inline SVGs.
 - **Continuous text**: Use formal, natural continuous text, avoid lists if possible
 - **Avoid special characters**: Avoid using ':', ';', '(' and ')' characters if possible
 - **Use correct hyphen**: Always prefer '-' over '‑'

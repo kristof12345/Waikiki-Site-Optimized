@@ -37,20 +37,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 from functools import lru_cache
-sys.path.insert(0, str(ROOT / "scripts"))
-import svg_textures
-
-@lru_cache(maxsize=1)
-def get_relief_pattern_uri():
-    return svg_textures.relief_tile(size=128, seed=11, octaves=4)
-
-@lru_cache(maxsize=1)
-def get_ripple_pattern_uri():
-    return svg_textures.ripple_tile(w=128, h=64, seed=21)
-
-@lru_cache(maxsize=1)
-def get_grain_pattern_uri():
-    return svg_textures.grain_tile(size=96, seed=7)
 
 OUT_DIR = ROOT / "icons" / "nature"
 TAU = math.tau
@@ -219,10 +205,13 @@ class Scene:
     def relief_pattern(self) -> str:
         if not hasattr(self, "_has_relief") or not self._has_relief:
             self._has_relief = True
-            uri = get_relief_pattern_uri()
             self.defs.append(
-                f'<pattern id="{self.id("relief")}" width="128" height="128" patternUnits="userSpaceOnUse">'
-                f'<image href="{uri}" width="128" height="128" preserveAspectRatio="none"/>'
+                f'<pattern id="{self.id("relief")}" width="32" height="32" patternUnits="userSpaceOnUse">'
+                f'<path d="M0,6 L12,2 M16,14 L30,8 M2,22 L18,17 M14,30 L32,24 M6,12 L10,10 M22,28 L28,26" stroke="#1b3022" stroke-width="0.75" opacity="0.45" stroke-linecap="round"/>'
+                f'<circle cx="8" cy="18" r="0.6" fill="#1b3022" opacity="0.4"/>'
+                f'<circle cx="24" cy="6" r="0.7" fill="#1b3022" opacity="0.4"/>'
+                f'<circle cx="20" cy="22" r="0.6" fill="#1b3022" opacity="0.4"/>'
+                f'<circle cx="4" cy="28" r="0.5" fill="#1b3022" opacity="0.4"/>'
                 f'</pattern>'
             )
         return self.url("relief")
@@ -230,10 +219,9 @@ class Scene:
     def ripple_pattern(self) -> str:
         if not hasattr(self, "_has_ripple") or not self._has_ripple:
             self._has_ripple = True
-            uri = get_ripple_pattern_uri()
             self.defs.append(
-                f'<pattern id="{self.id("ripple")}" width="128" height="64" patternUnits="userSpaceOnUse">'
-                f'<image href="{uri}" width="128" height="64" preserveAspectRatio="none"/>'
+                f'<pattern id="{self.id("ripple")}" width="64" height="32" patternUnits="userSpaceOnUse">'
+                f'<path d="M0,8 Q16,4 32,8 T64,8 M-16,24 Q0,20 16,24 T48,24" fill="none" stroke="#ffffff" stroke-width="0.8" opacity="0.35"/>'
                 f'</pattern>'
             )
         return self.url("ripple")
@@ -241,10 +229,12 @@ class Scene:
     def grain_pattern(self) -> str:
         if not hasattr(self, "_has_grain") or not self._has_grain:
             self._has_grain = True
-            uri = get_grain_pattern_uri()
             self.defs.append(
-                f'<pattern id="{self.id("grain")}" width="96" height="96" patternUnits="userSpaceOnUse">'
-                f'<image href="{uri}" width="96" height="96" preserveAspectRatio="none"/>'
+                f'<pattern id="{self.id("grain")}" width="24" height="24" patternUnits="userSpaceOnUse">'
+                f'<circle cx="4" cy="4" r="0.6" fill="#000000" opacity="0.3"/>'
+                f'<circle cx="16" cy="10" r="0.5" fill="#000000" opacity="0.25"/>'
+                f'<circle cx="8" cy="18" r="0.7" fill="#000000" opacity="0.3"/>'
+                f'<circle cx="20" cy="20" r="0.5" fill="#000000" opacity="0.25"/>'
                 f'</pattern>'
             )
         return self.url("grain")
@@ -3622,7 +3612,7 @@ LABELS = {
             "transect": "Waikiki keresztmetszete a tengertől a csúcsokig: korallzátony, mangrovepart, karszttornyok, amazóniai esőerdő, Pantanal vizes élőhely, Cerrado szavanna, zuhatagerdő és a havas hegyvidék",
             "reef": "Waikiki mangrovepartja és az alatta húzódó korallzátony osztott nézetben, tengeri teknőssel, ördögrájával, zátonyhalakkal és korallkertekkel",
             "rainforest": "Amazóniai folyó rétegzett lombkoronával, kiemelkedő kapokfákkal, óriás tündérrózsákkal, rózsaszín folyami delfinnel, arákkal és tukánnal",
-            "highlands": "Brazilia hegyvidéke gleccserrel, türkiz gleccsertóval, páramo füves pusztával, köderdei vízeséssel és köröző andoki kondorokkal",
+            "highlands": "Brazília hegyvidéke gleccserrel, türkiz gleccsertóval, páramo füves pusztával, köderdei vízeséssel és köröző andoki kondorokkal",
             "mogotes": "Dohányvölgy fölé magasodó karsztos mogote-tornyok királypálmákkal",
             "enriquillo": "A sós Enriquillo-tó flamingókkal, kaktuszokkal, orrszarvúleguánnal és hegyesorrú krokodillal",
             "pantanal": "Elárasztott Pantanal szavanna naplementében jabiru gólyákkal, vízidisznókkal és kajmánnal",

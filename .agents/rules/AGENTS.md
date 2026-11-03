@@ -12,6 +12,9 @@
    - Complex graphics, network topologies, blueprints, and standalone technical illustrations (e.g., in `icons/banking/`, `icons/space/`, `icons/nature/`) must also be kept as separate files in the `icons/` directory.
 2. **Card Grid Arts Directly in HTML**:
    - Card grid artwork and inline card illustrations (such as `.building-art`, `.hotel-art`, `.city-ill-frame`, `.hero-art`, `.ill-panel`, or scenic visuals tied directly to card grid structures) should be directly included inline within the HTML document.
+3. **Pure Vector SVGs (No Rasterized Parts)**:
+   - All SVGs must consist purely of native vector elements (`<path>`, `<polygon>`, `<rect>`, `<circle>`, `<ellipse>`, `<line>`, vector gradients, SVG patterns, etc.).
+   - SVGs should not contain rasterized parts: never embed `<image>` tags, base64 bitmap data URIs (`data:image/png`, `data:image/jpeg`, etc.), or pixel bitmaps inside SVG files or inline SVG markup.
 
 ## CSS & Media Query Guidelines
 

@@ -147,3 +147,4 @@ All motion follows natural organic physics with custom cubic Bézier curves:
 - **Graphics, SVGs and Icons**:
   - Complex graphics, technical illustrations, and standalone diagrams (such as banking topologies, space blueprints, and nature schematics) along with all SVG icons must be kept in separate standalone files under `icons/` (e.g. `icons/mdi/`) and linked via `<img>` tags.
   - Card grid artwork and inline card illustrations (such as `.building-art`, `.hotel-art`, `.city-ill-frame`, `.hero-art`, `.ill-panel`, or visuals directly embedded into card grid layouts) should be included directly inline within the HTML document.
+  - Pure Vector SVGs: SVGs should not contain rasterized parts. Never embed `<image>` tags, base64 data URIs (`data:image/png`, `data:image/jpeg`), or pixel bitmaps inside SVG assets. All graphics must be composed purely of native SVG vector elements.

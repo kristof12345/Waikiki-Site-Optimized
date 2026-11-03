@@ -13,12 +13,9 @@ import math
 import random
 import re
 import sys
-from functools import lru_cache
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT / "scripts"))
-import svg_textures
 
 OUT_DIR = ROOT / "icons" / "space"
 
@@ -52,19 +49,6 @@ def g(children, **attrs):
     return f"<g{attr_str}>\n{inner}\n</g>"
 
 
-@lru_cache(maxsize=1)
-def get_earth_limb_uri() -> str:
-    return svg_textures.render_earth_limb(580, 250, 950, seed=42)
-
-
-@lru_cache(maxsize=1)
-def get_planets_uris() -> tuple[str, str, str]:
-    earth = svg_textures.render_planet("earth", 130, seed=42, halo=0.18)
-    moon = svg_textures.render_planet("moon", 76, seed=7, halo=0.0)
-    mars = svg_textures.render_planet("mars", 124, seed=19, halo=0.12)
-    return earth, moon, mars
-
-
 # ==============================================================================
 # 1. WNSS ORBITAL COMPLEX SVG (1160 x 520)
 # ==============================================================================
@@ -92,11 +76,13 @@ def build_station_svg(lang="en") -> str:
         hud_badge_r2 = "RENDEZVOUS APPROACH READY"
 
     rng = random.Random(42)
-    earth_limb_uri = get_earth_limb_uri()
 
     defs = f"""    <defs>
         <clipPath id="{clip_id}">
             <rect width="1160" height="520" />
+        </clipPath>
+        <clipPath id="{clip_id}-earth-limb">
+            <path d="M-80,560 C250,395 910,395 1240,560 L1240,600 L-80,600 Z" />
         </clipPath>
         <style>
             @keyframes pulse-glow {{ 0%, 100% {{ opacity: 0.85; filter: drop-shadow(0 0 2px rgba(245, 196, 110, 0.4)); }} 50% {{ opacity: 1; filter: drop-shadow(0 0 10px rgba(245, 196, 110, 0.9)); }} }}
@@ -125,6 +111,18 @@ def build_station_svg(lang="en") -> str:
             <stop offset="60%" stop-color="#0d2440" stop-opacity="0.12" />
             <stop offset="100%" stop-color="#02080e" stop-opacity="0" />
         </radialGradient>
+        <linearGradient id="sr-earth-surface" x1="0%" y1="0%" x2="100%" y2="50%">
+            <stop offset="0%" stop-color="#0284c7" />
+            <stop offset="25%" stop-color="#0369a1" />
+            <stop offset="55%" stop-color="#0c4a6e" />
+            <stop offset="78%" stop-color="#082f49" />
+            <stop offset="100%" stop-color="#020617" />
+        </linearGradient>
+        <linearGradient id="sr-earth-terminator" x1="45%" y1="0%" x2="90%" y2="0%">
+            <stop offset="0%" stop-color="#020617" stop-opacity="0" />
+            <stop offset="40%" stop-color="#020617" stop-opacity="0.65" />
+            <stop offset="100%" stop-color="#020617" stop-opacity="0.98" />
+        </linearGradient>
         <linearGradient id="sr-solar-wafer" x1="0%" y1="0%" x2="0%" y2="100%">
             <stop offset="0%" stop-color="#1e3b6e" />
             <stop offset="30%" stop-color="#13264b" />
@@ -187,9 +185,32 @@ def build_station_svg(lang="en") -> str:
     body.append('<g fill="#ffffff" opacity="0.65">\n' + "\n".join(faint_stars) + "\n</g>")
     body.append('<g>\n' + "\n".join(stars) + "\n</g>")
 
-    # 3. Realistic Photorealistic Earth Curvature Below
-    body.append('<!-- Photorealistic Earth Limb from LEO Orbit -->')
-    body.append(f'<image href="{earth_limb_uri}" x="0" y="270" width="1160" height="250" preserveAspectRatio="none" opacity="0.96" />')
+    # 3. Realistic Pure Vector Earth Curvature Below
+    body.append('<!-- Pure Vector Earth Limb from LEO Orbit -->')
+    limb_clip = f"url(#{clip_id}-earth-limb)"
+    earth_limb_elements = f"""    <g clip-path="{limb_clip}">
+        <rect x="-80" y="380" width="1320" height="200" fill="url(#sr-earth-surface)" />
+        <!-- Coastal Waters & Reefs -->
+        <path d="M40,490 C120,440 220,430 310,460 C260,490 140,510 40,490 Z" fill="#38bdf8" opacity="0.35" />
+        <path d="M380,455 C460,425 560,430 640,470 C580,495 480,495 380,455 Z" fill="#38bdf8" opacity="0.35" />
+        <!-- Landmasses & Continents -->
+        <path d="M60,500 C130,450 200,445 290,470 C250,495 150,515 60,500 Z" fill="#166534" opacity="0.75" />
+        <path d="M90,495 C140,465 190,460 250,480 C220,495 150,505 90,495 Z" fill="#22c55e" opacity="0.5" />
+        <path d="M410,465 C480,440 550,442 620,478 C570,495 490,495 410,465 Z" fill="#15803d" opacity="0.7" />
+        <path d="M430,468 C490,450 530,452 580,480 C540,490 480,490 430,468 Z" fill="#4ade80" opacity="0.45" />
+        <path d="M660,475 C720,455 800,460 880,495 C820,510 740,505 660,475 Z" fill="#1e3a24" opacity="0.65" />
+        <!-- Weather Patterns & Swirling Cloud Bands -->
+        <path d="M-40,480 C120,420 280,425 460,460 C380,475 220,455 80,485 C20,495 -20,500 -40,480 Z" fill="#ffffff" opacity="0.6" />
+        <path d="M180,450 C320,410 490,420 680,465 C590,480 440,450 290,465 C230,472 190,465 180,450 Z" fill="#ffffff" opacity="0.55" />
+        <path d="M480,460 C620,430 780,445 960,490 C880,500 740,475 600,480 C530,482 490,475 480,460 Z" fill="#ffffff" opacity="0.45" />
+        <path d="M310,445 C350,432 390,435 420,450 C390,458 350,455 310,445 Z" fill="#f8fafc" opacity="0.75" />
+        <path d="M720,470 C770,458 830,462 890,485 C840,492 780,488 720,470 Z" fill="#f8fafc" opacity="0.4" />
+        <path d="M140,465 Q165,455 190,465 T215,480 Q190,485 165,475 Z" fill="#ffffff" opacity="0.7" />
+        <ellipse cx="178" cy="468" rx="8" ry="4" fill="#0369a1" opacity="0.6" />
+        <!-- Terminator Shadow Overlay -->
+        <rect x="-80" y="380" width="1320" height="200" fill="url(#sr-earth-terminator)" />
+    </g>"""
+    body.append(earth_limb_elements)
     # Atmospheric Limb Scattering Overlay
     body.append('<path d="M-80,560 C250,395 910,395 1240,560" fill="none" stroke="#003366" stroke-width="26" opacity="0.4" />')
     body.append('<path d="M-80,560 C250,395 910,395 1240,560" fill="none" stroke="#1d8cf8" stroke-width="14" opacity="0.35" />')
@@ -497,11 +518,19 @@ def build_lunar_mars_svg(lang="en") -> str:
         lbl_mars_sub = "2035-2040"
 
     rng = random.Random(108)
-    earth_uri, moon_uri, mars_uri = get_planets_uris()
 
     defs = f"""    <defs>
         <clipPath id="{clip_id}">
             <rect width="1160" height="480" />
+        </clipPath>
+        <clipPath id="{clip_id}-earth">
+            <circle cx="0" cy="0" r="65" />
+        </clipPath>
+        <clipPath id="{clip_id}-moon">
+            <circle cx="0" cy="0" r="38" />
+        </clipPath>
+        <clipPath id="{clip_id}-mars">
+            <circle cx="0" cy="0" r="62" />
         </clipPath>
         <style>
             @keyframes twinkle {{ 0%, 100% {{ opacity: 0.25; }} 50% {{ opacity: 1; }} }}
@@ -517,6 +546,31 @@ def build_lunar_mars_svg(lang="en") -> str:
             <stop offset="45%" stop-color="#051018" />
             <stop offset="85%" stop-color="#02080e" />
             <stop offset="100%" stop-color="#010408" />
+        </radialGradient>
+        <radialGradient id="sr-earth-ocean-rad" cx="32%" cy="28%" r="68%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="30%" stop-color="#0284c7" />
+            <stop offset="65%" stop-color="#0369a1" />
+            <stop offset="100%" stop-color="#082f49" />
+        </radialGradient>
+        <radialGradient id="sr-moon-rad" cx="32%" cy="28%" r="68%">
+            <stop offset="0%" stop-color="#f8fafc" />
+            <stop offset="35%" stop-color="#cbd5e1" />
+            <stop offset="70%" stop-color="#94a3b8" />
+            <stop offset="100%" stop-color="#475569" />
+        </radialGradient>
+        <radialGradient id="sr-mars-rad" cx="32%" cy="28%" r="68%">
+            <stop offset="0%" stop-color="#fb923c" />
+            <stop offset="35%" stop-color="#ea580c" />
+            <stop offset="70%" stop-color="#c2410c" />
+            <stop offset="90%" stop-color="#7c2d12" />
+            <stop offset="100%" stop-color="#431407" />
+        </radialGradient>
+        <radialGradient id="sr-planet-shadow" cx="32%" cy="28%" r="68%">
+            <stop offset="0%" stop-color="#020617" stop-opacity="0" />
+            <stop offset="48%" stop-color="#020617" stop-opacity="0" />
+            <stop offset="78%" stop-color="#020617" stop-opacity="0.65" />
+            <stop offset="100%" stop-color="#020617" stop-opacity="0.95" />
         </radialGradient>
         <filter id="sr-planet-glow" x="-20%" y="-20%" width="140%" height="140%">
             <feGaussianBlur stdDeviation="4" result="blur" />
@@ -573,42 +627,106 @@ def build_lunar_mars_svg(lang="en") -> str:
     body.append(f'<path d="M245,265 C380,405 760,405 895,265 C760,340 380,340 245,265" fill="none" stroke="#e3735a" stroke-width="10" opacity="0.2" filter="url(#sr-planet-glow)" />')
 
     # 3. PLANET EARTH NODE (x=180, y=240, r=65) - Orbit ring & satellite rotate rock-solid around planet center (0, 0)
-    earth_group = f"""<!-- 3D Photorealistic Earth Node -->
+    earth_clip_url = f"url(#{clip_id}-earth)"
+    earth_group = f"""<!-- 3D Pure Vector Earth Node -->
     <g transform="translate(180, 240)">
         <g>
             <circle cx="0" cy="0" r="76" fill="none" stroke="#6BA4D9" stroke-width="1.2" stroke-dasharray="6 6" opacity="0.8" />
             <circle cx="0" cy="-76" r="3.5" fill="#2ecc71" />
             <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="24s" repeatCount="indefinite" />
         </g>
-        <image href="{earth_uri}" x="-65" y="-65" width="130" height="130" preserveAspectRatio="none" />
+        <g clip-path="{earth_clip_url}">
+            <circle cx="0" cy="0" r="65" fill="url(#sr-earth-ocean-rad)" />
+            <!-- Continents -->
+            <path d="M-42,-38 C-36,-44 -26,-36 -28,-24 C-30,-12 -22,-6 -18,2 C-14,10 -22,22 -26,35 C-30,46 -36,40 -40,30 C-36,22 -32,15 -35,5 C-38,-4 -48,-10 -52,-22 C-55,-32 -48,-34 -42,-38 Z" fill="#15803d" opacity="0.85" />
+            <path d="M-30,-22 C-26,-28 -20,-24 -22,-16 C-24,-10 -30,-12 -30,-22 Z" fill="#65a30d" opacity="0.6" />
+            <path d="M-24,12 C-18,18 -20,28 -26,32 C-28,24 -24,18 -24,12 Z" fill="#22c55e" opacity="0.65" />
+            <path d="M2,-36 C12,-40 22,-34 26,-26 C28,-20 22,-16 26,-10 C32,-2 38,12 34,26 C30,40 18,48 10,42 C8,34 14,24 16,14 C18,4 12,-4 8,-12 C6,-20 0,-26 2,-36 Z" fill="#166534" opacity="0.85" />
+            <path d="M12,-2 C20,6 24,18 20,28 C16,22 14,12 12,-2 Z" fill="#a16207" opacity="0.5" />
+            <ellipse cx="-20" cy="-56" rx="24" ry="8" fill="#f8fafc" opacity="0.9" />
+            <ellipse cx="0" cy="58" rx="28" ry="7" fill="#f8fafc" opacity="0.85" />
+            <!-- Cloud Swirls -->
+            <path d="M-55,-15 C-35,-25 -10,-10 15,-20 C35,-28 50,-15 62,-5 C52,2 35,-10 15,-5 C-10,0 -35,-8 -55,-15 Z" fill="#ffffff" opacity="0.65" />
+            <path d="M-45,15 C-20,5 5,20 30,10 C45,5 55,18 60,25 C50,28 35,22 15,28 C-5,32 -30,25 -45,15 Z" fill="#ffffff" opacity="0.55" />
+            <path d="M-30,-42 C-10,-48 15,-40 40,-45 C30,-38 10,-35 -15,-38 Z" fill="#ffffff" opacity="0.5" />
+            <!-- 3D Shadow -->
+            <circle cx="0" cy="0" r="65" fill="url(#sr-planet-shadow)" />
+        </g>
+        <circle cx="0" cy="0" r="65" fill="none" stroke="#38bdf8" stroke-width="2.2" opacity="0.75" filter="url(#sr-planet-glow)" />
+        <circle cx="0" cy="0" r="66" fill="none" stroke="#bae6fd" stroke-width="0.9" opacity="0.8" />
         <text x="0" y="88" fill="#fbf7f0" font-family="Manrope, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1.5">{lbl_earth_title}</text>
         <text x="0" y="105" fill="#6BA4D9" font-family="Manrope, sans-serif" font-size="10" font-weight="600" text-anchor="middle">{lbl_earth_sub}</text>
     </g>"""
     body.append(earth_group)
 
     # 4. MOON NODE & LUNAR BASE (x=540, y=190, r=38) - Orbit ring & base rotate rock-solid around Moon center (0, 0)
-    moon_group = f"""<!-- 3D Photorealistic Moon Node -->
+    moon_clip_url = f"url(#{clip_id}-moon)"
+    moon_group = f"""<!-- 3D Pure Vector Moon Node -->
     <g transform="translate(540, 190)">
         <g>
             <circle cx="0" cy="0" r="48" fill="none" stroke="#f5c46e" stroke-width="1.2" stroke-dasharray="4 4" opacity="0.8" />
             <circle cx="0" cy="-48" r="3" fill="#ffd54f" />
             <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="16s" repeatCount="indefinite" />
         </g>
-        <image href="{moon_uri}" x="-38" y="-38" width="76" height="76" preserveAspectRatio="none" />
+        <g clip-path="{moon_clip_url}">
+            <circle cx="0" cy="0" r="38" fill="url(#sr-moon-rad)" />
+            <!-- Lunar Maria Basalt Plains -->
+            <path d="M-15,-22 C-5,-28 8,-24 14,-15 C18,-5 12,5 4,8 C-4,10 -14,6 -18,-2 C-22,-10 -20,-18 -15,-22 Z" fill="#334155" opacity="0.75" />
+            <path d="M-26,-10 C-18,-14 -12,-8 -15,0 C-18,6 -26,4 -28,-2 Z" fill="#475569" opacity="0.65" />
+            <path d="M-8,12 C2,10 12,16 10,24 C8,28 -2,30 -6,24 Z" fill="#334155" opacity="0.6" />
+            <path d="M12,-8 C20,-12 28,-6 26,2 C24,8 16,6 12,-2 Z" fill="#1e293b" opacity="0.55" />
+            <!-- Impact Craters -->
+            <circle cx="12" cy="22" r="3" fill="#f8fafc" stroke="#64748b" stroke-width="0.8" />
+            <circle cx="12" cy="22" r="1.2" fill="#0f172a" />
+            <line x1="12" y1="22" x2="28" y2="30" stroke="#f8fafc" stroke-width="0.6" opacity="0.5" stroke-dasharray="2 3" />
+            <line x1="12" y1="22" x2="-4" y2="28" stroke="#f8fafc" stroke-width="0.6" opacity="0.5" stroke-dasharray="2 3" />
+            <line x1="12" y1="22" x2="16" y2="6" stroke="#f8fafc" stroke-width="0.6" opacity="0.5" stroke-dasharray="2 3" />
+            <circle cx="-12" cy="-6" r="2.5" fill="#f8fafc" stroke="#475569" stroke-width="0.7" />
+            <circle cx="-12" cy="-6" r="1" fill="#1e293b" />
+            <circle cx="-4" cy="-26" r="1.8" fill="#cbd5e1" stroke="#334155" stroke-width="0.6" />
+            <circle cx="20" cy="-14" r="2" fill="#cbd5e1" stroke="#334155" stroke-width="0.6" />
+            <circle cx="-22" cy="14" r="1.5" fill="#cbd5e1" stroke="#334155" stroke-width="0.5" />
+            <!-- 3D Shadow -->
+            <circle cx="0" cy="0" r="38" fill="url(#sr-planet-shadow)" />
+        </g>
+        <circle cx="0" cy="0" r="38" fill="none" stroke="#e2e8f0" stroke-width="1" opacity="0.75" />
         <text x="0" y="62" fill="#fbf7f0" font-family="Manrope, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1.5">{lbl_moon_title}</text>
         <text x="0" y="79" fill="#f5c46e" font-family="Manrope, sans-serif" font-size="10" font-weight="600" text-anchor="middle">{lbl_moon_sub}</text>
     </g>"""
     body.append(moon_group)
 
     # 5. MARS NODE & EXPEDITION CORRIDOR (x=960, y=240, r=62) - Orbit ring & base rotate rock-solid around Mars center (0, 0)
-    mars_group = f"""<!-- 3D Photorealistic Mars Node -->
+    mars_clip_url = f"url(#{clip_id}-mars)"
+    mars_group = f"""<!-- 3D Pure Vector Mars Node -->
     <g transform="translate(960, 240)">
         <g>
             <circle cx="0" cy="0" r="74" fill="none" stroke="#e3735a" stroke-width="1.2" stroke-dasharray="6 6" opacity="0.8" />
             <circle cx="0" cy="-74" r="3.5" fill="#ff7043" />
             <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="28s" repeatCount="indefinite" />
         </g>
-        <image href="{mars_uri}" x="-62" y="-62" width="124" height="124" preserveAspectRatio="none" />
+        <g clip-path="{mars_clip_url}">
+            <circle cx="0" cy="0" r="62" fill="url(#sr-mars-rad)" />
+            <!-- Dark Basalt Regions -->
+            <path d="M-25,-15 C-15,-28 5,-22 15,-12 C25,2 18,18 5,24 C-10,28 -28,20 -35,5 C-38,-6 -30,-10 -25,-15 Z" fill="#451a03" opacity="0.7" />
+            <path d="M8,-32 C20,-38 34,-30 38,-18 C40,-8 32,-4 26,-8 C20,-14 12,-24 8,-32 Z" fill="#3c1404" opacity="0.65" />
+            <path d="M-42,-5 C-32,-12 -25,-5 -28,5 C-32,15 -44,12 -45,2 Z" fill="#451a03" opacity="0.6" />
+            <!-- Valles Marineris Canyon -->
+            <path d="M-28,4 Q-5,8 18,2 T42,-4" fill="none" stroke="#260c02" stroke-width="2.4" stroke-linecap="round" opacity="0.8" />
+            <path d="M-26,5 Q-4,9 18,3 T40,-3" fill="none" stroke="#78350f" stroke-width="1" stroke-linecap="round" opacity="0.6" />
+            <!-- Olympus Mons -->
+            <ellipse cx="-34" cy="-16" rx="9" ry="6" fill="#78350f" opacity="0.6" />
+            <ellipse cx="-34" cy="-16" rx="3.5" ry="2" fill="#260c02" opacity="0.8" />
+            <ellipse cx="-34" cy="-16" rx="1.5" ry="1" fill="#ea580c" opacity="0.7" />
+            <!-- Polar Ice Cap -->
+            <ellipse cx="4" cy="-56" rx="22" ry="7" fill="#f0fdfa" opacity="0.95" />
+            <ellipse cx="4" cy="-56" rx="14" ry="4.5" fill="#ffffff" opacity="0.8" />
+            <!-- Dust Storms -->
+            <path d="M-50,22 C-30,15 0,32 30,24 C45,20 54,30 58,35 C48,38 25,32 -5,38 C-30,42 -45,32 -50,22 Z" fill="#fed7aa" opacity="0.32" />
+            <!-- 3D Shadow -->
+            <circle cx="0" cy="0" r="62" fill="url(#sr-planet-shadow)" />
+        </g>
+        <circle cx="0" cy="0" r="62" fill="none" stroke="#fb923c" stroke-width="2" opacity="0.6" filter="url(#sr-planet-glow)" />
+        <circle cx="0" cy="0" r="63" fill="none" stroke="#fdba74" stroke-width="0.8" opacity="0.75" />
         <polygon points="-8,-12 0,-24 8,-12" fill="#f5c46e" />
         <circle cx="0" cy="-14" r="2" fill="#003366" />
         <text x="0" y="88" fill="#fbf7f0" font-family="Manrope, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1.5">{lbl_mars_title}</text>
