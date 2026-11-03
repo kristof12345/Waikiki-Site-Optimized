@@ -25,6 +25,10 @@
    - Compact multi-line comments into clean, single-line comments without `=` marks.
    - Standardize dark mode comments (`Lagoon Night (Dark Mode) Theme Engine` » `Dark Mode`).
 
+## Git & Publishing Guidelines
+
+1. **Never Automatically Push or Publish**: Never run `git push` or execute the `publish` skill (`publish.py`) automatically. Pushing and publishing must only occur when explicitly instructed by the user.
+
 ## HTML Page Builds and Edits
 
 After building or editing any HTML page:

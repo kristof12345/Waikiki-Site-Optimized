@@ -93,7 +93,7 @@ def svg_delta_3a():
 
     <!-- First Stage Core (2.44m diameter core) -->
     <rect x="372" y="260" width="56" height="455" fill="url(#{id_p}Body)" stroke="currentColor" stroke-width="2.2" rx="1" />
-    <!-- Core Stage Panel Lines & Weld Ribs -->
+    <!-- Core Stage Panel Lines and Weld Ribs -->
     <g stroke="currentColor" stroke-width="1" opacity="0.65">
       <line x1="372" y1="310" x2="428" y2="310" />
       <line x1="372" y1="370" x2="428" y2="370" />
@@ -123,7 +123,7 @@ def svg_delta_3a():
     <!-- Fairing Split Line -->
     <line x1="400" y1="45" x2="400" y2="150" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 2" />
 
-    <!-- Main RS-27A Engine & Twin Vernier Nozzles -->
+    <!-- Main RS-27A Engine and Twin Vernier Nozzles -->
     <path d="M 388 715 L 382 745 L 418 745 L 412 715 Z" fill="currentColor" opacity="0.4" stroke="currentColor" stroke-width="2" />
     <path d="M 374 715 L 372 735 L 380 735 L 378 715 Z" fill="currentColor" opacity="0.4" stroke="currentColor" stroke-width="1.4" />
     <path d="M 422 715 L 420 735 L 428 735 L 426 715 Z" fill="currentColor" opacity="0.4" stroke="currentColor" stroke-width="1.4" />"""
@@ -164,7 +164,7 @@ def svg_shuttle():
       <line x1="583" y1="598" x2="583" y2="618" stroke-width="1" opacity="0.6" />
     </g>
 
-    <!-- Wing Panel Expansion & Tile Grid Lines -->
+    <!-- Wing Panel Expansion and Tile Grid Lines -->
     <g stroke="currentColor" stroke-width="0.8" opacity="0.55">
       <line x1="210" y1="595" x2="260" y2="535" />
       <line x1="260" y1="595" x2="310" y2="535" />
@@ -216,8 +216,8 @@ def svg_shuttle():
     <circle cx="397" cy="112" r="1.5" fill="currentColor" opacity="0.8" />
     <circle cx="403" cy="112" r="1.5" fill="currentColor" opacity="0.8" />
 
-    <!-- Payload Bay (60-foot Bay with Centerline Split & Segmented Doors) -->
-    <!-- Door Outer Contours & Center Seam -->
+    <!-- Payload Bay (60-foot Bay with Centerline Split and Segmented Doors) -->
+    <!-- Door Outer Contours and Center Seam -->
     <rect x="360" y="165" width="80" height="350" fill="url(#{id_p}Body)" stroke="currentColor" stroke-width="1.4" opacity="0.8" />
     <line x1="400" y1="165" x2="400" y2="515" stroke="currentColor" stroke-width="1.8" />
     <!-- 4 Segment Door Hinges / Seams -->
@@ -254,7 +254,7 @@ def svg_shuttle():
       <polygon points="448,625 458,625 460,642 446,642" fill="currentColor" opacity="0.5" />
     </g>
 
-    <!-- Vertical Stabilizer (Fin & Centerline Rudder / Speed Brake) -->
+    <!-- Vertical Stabilizer (Fin and Centerline Rudder / Speed Brake) -->
     <!-- Dorsal Fin Base -->
     <path d="M 400 390 L 396 460 L 396 630 L 404 630 L 404 460 Z" fill="currentColor" opacity="0.4" stroke="currentColor" stroke-width="1.6" />
     <line x1="400" y1="390" x2="400" y2="630" stroke="currentColor" stroke-width="2" />
@@ -305,7 +305,7 @@ def svg_saturn_x():
     <line x1="395" y1="90" x2="405" y2="75" stroke="currentColor" stroke-width="0.8" />
     <line x1="405" y1="90" x2="395" y2="75" stroke="currentColor" stroke-width="0.8" />
 
-    <!-- Command & Service Module (CSM) -->
+    <!-- Command and Service Module (CSM) -->
     <!-- Command Module Cone -->
     <polygon points="394,105 406,105 412,130 388,130" fill="url(#{id_p}Body)" stroke="currentColor" stroke-width="1.8" />
     <!-- Service Module Cylinder -->
@@ -333,7 +333,7 @@ def svg_saturn_x():
     <line x1="420" y1="530" x2="420" y2="720" stroke="currentColor" stroke-width="1" opacity="0.6" />
     <line x1="368" y1="625" x2="432" y2="625" stroke="currentColor" stroke-width="1.2" opacity="0.7" />
 
-    <!-- 4 Aerodynamic Stabilizing Fins & Engine Fairings -->
+    <!-- 4 Aerodynamic Stabilizing Fins and Engine Fairings -->
     <!-- Left Fin -->
     <polygon points="368,665 310,720 310,735 368,720" fill="url(#{id_p}Wing)" stroke="currentColor" stroke-width="2" />
     <!-- Right Fin -->
@@ -395,7 +395,7 @@ def svg_falcon():
     <polygon points="418,530 446,715 436,715 418,590" fill="currentColor" opacity="0.3" stroke="currentColor" stroke-width="1.8" />
     <line x1="418" y1="700" x2="444" y2="715" stroke="currentColor" stroke-width="2" />
 
-    <!-- Octaweb Base & Merlin 1D Engine Cluster (9 engines) -->
+    <!-- Octaweb Base and Merlin 1D Engine Cluster (9 engines) -->
     <polygon points="380,715 420,715 416,735 384,735" fill="currentColor" opacity="0.5" stroke="currentColor" stroke-width="2" />
     <!-- Engine Bells -->
     <path d="M 386 735 L 382 750 L 396 750 L 392 735 Z" fill="currentColor" opacity="0.6" stroke="currentColor" stroke-width="1.4" />
@@ -417,7 +417,7 @@ def svg_falcon_heavy():
       <line x1="314" y1="250" x2="314" y2="265" stroke-width="1" />
       <!-- Folded Leg Left Booster -->
       <polygon points="326,550 304,715 312,715 326,605" fill="currentColor" opacity="0.3" stroke-width="1.6" />
-      <!-- Octaweb & Engine Bells -->
+      <!-- Octaweb and Engine Bells -->
       <polygon points="324,715 364,715 360,735 328,735" fill="currentColor" opacity="0.5" />
       <path d="M 330 735 L 327 748 L 342 748 L 338 735 Z" fill="currentColor" opacity="0.6" />
       <path d="M 346 735 L 344 748 L 358 748 L 354 735 Z" fill="currentColor" opacity="0.6" />
@@ -434,7 +434,7 @@ def svg_falcon_heavy():
       <line x1="486" y1="250" x2="486" y2="265" stroke-width="1" />
       <!-- Folded Leg Right Booster -->
       <polygon points="474,550 496,715 488,715 474,605" fill="currentColor" opacity="0.3" stroke-width="1.6" />
-      <!-- Octaweb & Engine Bells -->
+      <!-- Octaweb and Engine Bells -->
       <polygon points="436,715 476,715 472,735 440,735" fill="currentColor" opacity="0.5" />
       <path d="M 442 735 L 440 748 L 454 748 L 450 735 Z" fill="currentColor" opacity="0.6" />
       <path d="M 458 735 L 456 748 L 470 748 L 466 735 Z" fill="currentColor" opacity="0.6" />
@@ -446,7 +446,7 @@ def svg_falcon_heavy():
     <line x1="362" y1="680" x2="382" y2="680" stroke="currentColor" stroke-width="3" />
     <line x1="418" y1="680" x2="438" y2="680" stroke="currentColor" stroke-width="3" />
 
-    <!-- Center Core & Upper Stage with 5.2m Fairing -->
+    <!-- Center Core and Upper Stage with 5.2m Fairing -->
     <!-- Payload Fairing -->
     <path d="M 374 150 L 374 105 C 374 60 400 35 400 35 C 400 35 426 60 426 105 L 426 150 Z" fill="url(#{id_p}Body)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
     <!-- Center Upper Stage -->
@@ -455,7 +455,7 @@ def svg_falcon_heavy():
     <rect x="382" y="245" width="36" height="35" fill="currentColor" opacity="0.3" stroke="currentColor" stroke-width="2" />
     <!-- Center Core Body -->
     <rect x="382" y="280" width="36" height="435" fill="url(#{id_p}Body)" stroke="currentColor" stroke-width="2.2" />
-    <!-- Center Core Octaweb & Engines -->
+    <!-- Center Core Octaweb and Engines -->
     <polygon points="380,715 420,715 416,735 384,735" fill="currentColor" opacity="0.6" stroke="currentColor" stroke-width="2" />
     <path d="M 386 735 L 383 750 L 398 750 L 394 735 Z" fill="currentColor" opacity="0.7" stroke="currentColor" stroke-width="1.6" />
     <path d="M 404 735 L 402 750 L 417 750 L 413 735 Z" fill="currentColor" opacity="0.7" stroke="currentColor" stroke-width="1.6" />"""
@@ -628,7 +628,7 @@ def svg_saturn_nova():
     <polygon points="362,375 438,375 455,445 345,445" fill="url(#{id_p}Body)" stroke="currentColor" stroke-width="2.4" />
     <rect x="345" y="445" width="110" height="270" fill="url(#{id_p}Body)" stroke="currentColor" stroke-width="2.6" />
 
-    <!-- First Stage Structural Stiffeners & Feedlines -->
+    <!-- First Stage Structural Stiffeners and Feedlines -->
     <line x1="365" y1="445" x2="365" y2="715" stroke="currentColor" stroke-width="1.4" opacity="0.6" />
     <line x1="385" y1="445" x2="385" y2="715" stroke="currentColor" stroke-width="1.4" opacity="0.6" />
     <line x1="415" y1="445" x2="415" y2="715" stroke="currentColor" stroke-width="1.4" opacity="0.6" />
@@ -705,7 +705,7 @@ def svg_bfr():
     <polygon points="372,130 330,140 330,165 372,150" fill="url(#{id_p}Wing)" stroke="currentColor" stroke-width="2" />
     <polygon points="428,130 470,140 470,165 428,150" fill="url(#{id_p}Wing)" stroke="currentColor" stroke-width="2" />
 
-    <!-- Starship Gothic Curved Nosecone & Hull -->
+    <!-- Starship Gothic Curved Nosecone and Hull -->
     <path d="M 372 320 L 372 160 C 372 90 400 45 400 45 C 400 45 428 90 428 160 L 428 320 Z" fill="url(#{id_p}Body)" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" />
     <!-- Thermal Protection Tile Division Curve -->
     <path d="M 400 45 Q 418 160 418 320" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 2" opacity="0.7" />
@@ -742,7 +742,7 @@ def svg_bfr():
       <line x1="372" y1="655" x2="428" y2="655" />
     </g>
 
-    <!-- 33 Raptor Engine Cluster & Skirt -->
+    <!-- 33 Raptor Engine Cluster and Skirt -->
     <polygon points="370,715 430,715 425,745 375,745" fill="currentColor" opacity="0.6" stroke="currentColor" stroke-width="2" />
     <circle cx="388" cy="740" r="5" fill="currentColor" opacity="0.8" />
     <circle cx="400" cy="740" r="5" fill="currentColor" opacity="0.8" />
@@ -762,7 +762,7 @@ def svg_delta_4():
       <line x1="325" y1="330" x2="365" y2="330" stroke-width="1" opacity="0.65" />
       <line x1="325" y1="450" x2="365" y2="450" stroke-width="1" opacity="0.65" />
       <line x1="325" y1="570" x2="365" y2="570" stroke-width="1" opacity="0.65" />
-      <!-- RS-68A Main Engine Bell & Turbine Exhaust Duct -->
+      <!-- RS-68A Main Engine Bell and Turbine Exhaust Duct -->
       <polygon points="332,715 358,715 362,745 328,745" fill="currentColor" opacity="0.5" />
       <line x1="358" y1="715" x2="362" y2="745" stroke-width="3" />
     </g>
@@ -777,7 +777,7 @@ def svg_delta_4():
       <line x1="435" y1="330" x2="475" y2="330" stroke-width="1" opacity="0.65" />
       <line x1="435" y1="450" x2="475" y2="450" stroke-width="1" opacity="0.65" />
       <line x1="435" y1="570" x2="475" y2="570" stroke-width="1" opacity="0.65" />
-      <!-- RS-68A Main Engine Bell & Turbine Exhaust Duct -->
+      <!-- RS-68A Main Engine Bell and Turbine Exhaust Duct -->
       <polygon points="442,715 468,715 472,745 438,745" fill="currentColor" opacity="0.5" />
       <line x1="468" y1="715" x2="472" y2="745" stroke-width="3" />
     </g>
@@ -887,11 +887,11 @@ def svg_interplanetary_shuttle():
       <circle cx="430" cy="116" r="1.6" />
     </g>
 
-    <!-- Large Panoramic Observation Viewports (Left & Right) -->
+    <!-- Large Panoramic Observation Viewports (Left and Right) -->
     <rect x="372" y="145" width="16" height="24" rx="4" fill="none" stroke="currentColor" stroke-width="1.8" />
     <rect x="412" y="145" width="16" height="24" rx="4" fill="none" stroke="currentColor" stroke-width="1.8" />
 
-    <!-- Center Aerodynamic Chine & Recessed Thermal Shield -->
+    <!-- Center Aerodynamic Chine and Recessed Thermal Shield -->
     <path d="M 400 95 L 405 200 L 400 255 L 395 200 Z" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.6" />
     <polygon points="388,205 412,205 418,255 382,255" fill="currentColor" opacity="0.35" stroke="currentColor" stroke-width="1.2" />
     <!-- Inner Dark Ventral Sponson Chine -->
