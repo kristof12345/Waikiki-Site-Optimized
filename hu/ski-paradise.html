@@ -7,14 +7,14 @@
     <meta name="theme-color" content="#fbf7f0" />
     <link rel="stylesheet" href="../css/fonts.css" />
     <script>
-        (function(d) {
+        (function (d) {
             var h = d.documentElement;
             h.classList.add('js');
             try {
                 if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
                 if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
-            } catch (e) {}
-            setTimeout(function() {
+            } catch (e) { }
+            setTimeout(function () {
                 if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
             }, 3500)
         })(document);
@@ -5790,7 +5790,7 @@
                     <div class="hotel-body">
                         <div class="hotel-stars">★ ★ ★ ★ ★ ★ ★ ★ ★ ★</div>
                         <h3>Grand Palace Val d'Aurelia</h3>
-                        <p class="hotel-loc"><img src="../icons/mdi/map-marker.svg" alt="" /> Val d'Aurelia · 2150 m · Magas-Andok </p>
+                        <p class="hotel-loc"><img src="../icons/mdi/map-marker.svg" alt="" />Val d'Aurelia · 2150 m · Magas-Andok </p>
                         <p>Huszonnégy karátos aranykupolákkal és 200 méteres szabadtéri geotermikus lagúnával büszkélkedő alpesi luxuspalota, amelynek márvány előcsarnokából közvetlen, fűtött maglev kabinos lift vezet a csúcsra.</p>
                         <ul class="perks">
                             <li>Privát kabinos lift</li>
@@ -5895,7 +5895,7 @@
                     <div class="hotel-body">
                         <div class="hotel-stars">★ ★ ★ ★ ★</div>
                         <h3>Ski Paradise Királyi Chalet-k</h3>
-                        <p class="hotel-loc"><img src="../icons/mdi/map-marker.svg" alt="" /> Soberano-gerinc · 3100 m · Magas-Andok </p>
+                        <p class="hotel-loc"><img src="../icons/mdi/map-marker.svg" alt="" />Soberano-gerinc · 3100 m · Magas-Andok </p>
                         <p>Negyven önálló, illatos cédrusfából és ónixból emelt magánrezidencia a napsütötte hegygerincen, saját gourmet séffel, ritka évjáratokat őrző borospincével és gőzölgő szabadtéri dézsafürdővel.</p>
                         <ul class="perks">
                             <li>Közvetlen sípálya</li>
@@ -5964,7 +5964,7 @@
                     <div class="hotel-body">
                         <div class="hotel-stars">★ ★ ★ ★ ★</div>
                         <h3>Monte Rosa Obszervatórium</h3>
-                        <p class="hotel-loc"><img src="../icons/mdi/map-marker.svg" alt="" /> Monte Rosa-gerinc · 3200 m · Magas-Andok </p>
+                        <p class="hotel-loc"><img src="../icons/mdi/map-marker.svg" alt="" />Monte Rosa-gerinc · 3200 m · Magas-Andok </p>
                         <p>Fűtött geodéziai üveglakosztályok a kristálytiszta andoki csillagos ég alatt: professzionális kutatótávcsövekkel, privát csillagászati terasszal és gőzölgő vulkáni ásványmedencékkel a gleccser peremén.</p>
                         <ul class="perks">
                             <li>Geodéziai kupolák</li>
@@ -6054,7 +6054,7 @@
                     <div class="hotel-body">
                         <div class="hotel-stars">★ ★ ★ ★ ★ ★ ★</div>
                         <h3>Haiti Gleccserkorona Resort</h3>
-                        <p class="hotel-loc"><img src="../icons/mdi/map-marker.svg" alt="" /> Gleccserkorona · 3180 m · Haiti-sziget </p>
+                        <p class="hotel-loc"><img src="../icons/mdi/map-marker.svg" alt="" />Gleccserkorona · 3180 m · Haiti-sziget </p>
                         <p>Haiti legmagasabb kriohűtött gleccserének peremére épült alpesi fellegvár páratlan, 360 fokos körpanorámával a Karib-tengerre, valamint közvetlen lifttel a tengerpartra száguldó 18 perces vákuumsiklóhoz.</p>
                         <ul class="perks">
                             <li>18 perc a strandig</li>
@@ -6144,7 +6144,7 @@
                     <div class="hotel-body">
                         <div class="hotel-stars">★ ★ ★ ★ ★</div>
                         <h3>Edelweiss Termálfalu</h3>
-                        <p class="hotel-loc"><img src="../icons/mdi/map-marker.svg" alt="" /> Keleti-völgy · 2250 m · Magas-Andok </p>
+                        <p class="hotel-loc"><img src="../icons/mdi/map-marker.svg" alt="" />Keleti-völgy · 2250 m · Magas-Andok </p>
                         <p>Gépkocsiforgalomtól elzárt, festői alpesi üdülőfalu természetes melegvizű ásványbarlangok mentén, lankás azúrkék tanulópályákkal, prémium síakadémiával és kézműves fondüpavilonokkal.</p>
                         <ul class="perks">
                             <li>Termálbarlangok</li>
@@ -6392,40 +6392,40 @@
     <!-- /@chrome:footer -->
     <script src="../js/common.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             var tabBtns = document.querySelectorAll('.island-tab-btn');
             var panels = document.querySelectorAll('.island-panel');
-            tabBtns.forEach(function(btn) {
-                btn.addEventListener('click', function() {
+            tabBtns.forEach(function (btn) {
+                btn.addEventListener('click', function () {
                     var target = btn.getAttribute('data-tab');
-                    tabBtns.forEach(function(b) {
+                    tabBtns.forEach(function (b) {
                         var active = b === btn;
                         b.classList.toggle('is-active', active);
                         b.setAttribute('aria-selected', active ? 'true' : 'false');
                     });
-                    panels.forEach(function(panel) {
+                    panels.forEach(function (panel) {
                         var match = panel.id === 'panel-' + target;
                         panel.classList.toggle('is-active', match);
                     });
                 });
             });
-            panels.forEach(function(panel) {
+            panels.forEach(function (panel) {
                 var pins = panel.querySelectorAll('.map-hotspot[data-spot]');
                 var cards = panel.querySelectorAll('.island-hotspot-card[data-spot]');
                 function activateSpot(spotId) {
-                    pins.forEach(function(p) {
+                    pins.forEach(function (p) {
                         p.classList.toggle('is-active', p.getAttribute('data-spot') === spotId);
                     });
-                    cards.forEach(function(c) {
+                    cards.forEach(function (c) {
                         c.classList.toggle('is-active', c.getAttribute('data-spot') === spotId);
                     });
                 }
-                pins.forEach(function(pin) {
+                pins.forEach(function (pin) {
                     var id = pin.getAttribute('data-spot');
-                    pin.addEventListener('mouseenter', function() {
+                    pin.addEventListener('mouseenter', function () {
                         activateSpot(id);
                     });
-                    pin.addEventListener('click', function() {
+                    pin.addEventListener('click', function () {
                         activateSpot(id);
                         var card = panel.querySelector('.island-hotspot-card[data-spot="' + id + '"]');
                         if (card) card.scrollIntoView({
@@ -6434,12 +6434,12 @@
                         });
                     });
                 });
-                cards.forEach(function(card) {
+                cards.forEach(function (card) {
                     var id = card.getAttribute('data-spot');
-                    card.addEventListener('mouseenter', function() {
+                    card.addEventListener('mouseenter', function () {
                         activateSpot(id);
                     });
-                    card.addEventListener('click', function() {
+                    card.addEventListener('click', function () {
                         activateSpot(id);
                     });
                 });

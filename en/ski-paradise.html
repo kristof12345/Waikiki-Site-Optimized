@@ -7,14 +7,14 @@
     <meta name="theme-color" content="#fbf7f0" />
     <link rel="stylesheet" href="../css/fonts.css" />
     <script>
-        (function(d) {
+        (function (d) {
             var h = d.documentElement;
             h.classList.add('js');
             try {
                 if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
                 if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
-            } catch (e) {}
-            setTimeout(function() {
+            } catch (e) { }
+            setTimeout(function () {
                 if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
             }, 3500)
         })(document);
@@ -5791,7 +5791,7 @@
                     <div class="hotel-body">
                         <div class="hotel-stars">★ ★ ★ ★ ★ ★ ★ ★ ★ ★</div>
                         <h3>Grand Palace Val d'Aurelia</h3>
-                        <p class="hotel-loc"><img src="../icons/mdi/map-marker.svg" alt="" /> Val d'Aurelia · 2,150 m · High Andes </p>
+                        <p class="hotel-loc"><img src="../icons/mdi/map-marker.svg" alt="" />Val d'Aurelia · 2,150 m · High Andes </p>
                         <p>Crowned with 24-karat leaf domes and a 200-meter outdoor geothermal lagoon, the flagship alpine palace offers private gondola boarding directly from its marble grand lobby.</p>
                         <ul class="perks">
                             <li>Private Gondola</li>
@@ -5897,7 +5897,7 @@
                     <div class="hotel-body">
                         <div class="hotel-stars">★ ★ ★ ★ ★</div>
                         <h3>Ski Paradise Royal Chalets</h3>
-                        <p class="hotel-loc"><img src="../icons/mdi/map-marker.svg" alt="" /> Soberano Ridge · 3,100 m · High Andes </p>
+                        <p class="hotel-loc"><img src="../icons/mdi/map-marker.svg" alt="" />Soberano Ridge · 3,100 m · High Andes </p>
                         <p>Forty standalone cedar-and-onyx chalets perched on the sun-drenched mid-mountain ridge, each complete with a dedicated chef, sommelier cellar and outdoor cedar hot tub.</p>
                         <ul class="perks">
                             <li>Ski-In / Ski-Out</li>
@@ -5967,7 +5967,7 @@
                     <div class="hotel-body">
                         <div class="hotel-stars">★ ★ ★ ★ ★</div>
                         <h3>Monte Rosa Sky Observatory</h3>
-                        <p class="hotel-loc"><img src="../icons/mdi/map-marker.svg" alt="" /> Monte Rosa Ridge · 3,200 m · High Andes </p>
+                        <p class="hotel-loc"><img src="../icons/mdi/map-marker.svg" alt="" />Monte Rosa Ridge · 3,200 m · High Andes </p>
                         <p>Heated geodesic glass suites under the crystal-clear Andean night sky, pairing private research-grade telescopes with steaming volcanic mineral pools on the glacier edge.</p>
                         <ul class="perks">
                             <li>Geodesic Domes</li>
@@ -6058,7 +6058,7 @@
                     <div class="hotel-body">
                         <div class="hotel-stars">★ ★ ★ ★ ★ ★ ★</div>
                         <h3>Haiti Glacier Crown Resort</h3>
-                        <p class="hotel-loc"><img src="../icons/mdi/map-marker.svg" alt="" /> Glacier Crown · 3,180 m · Haiti Island </p>
+                        <p class="hotel-loc"><img src="../icons/mdi/map-marker.svg" alt="" />Glacier Crown · 3,180 m · Haiti Island </p>
                         <p>Suspended atop Haiti Island's highest cryo-glacier with 360-degree views of the Caribbean Sea and a private elevator directly into the 18-minute Coral Bay funicular.</p>
                         <ul class="perks">
                             <li>18-Min to Beach</li>
@@ -6149,7 +6149,7 @@
                     <div class="hotel-body">
                         <div class="hotel-stars">★ ★ ★ ★ ★</div>
                         <h3>Edelweiss Thermal Village</h3>
-                        <p class="hotel-loc"><img src="../icons/mdi/map-marker.svg" alt="" /> East Valley · 2,250 m · High Andes </p>
+                        <p class="hotel-loc"><img src="../icons/mdi/map-marker.svg" alt="" />East Valley · 2,250 m · High Andes </p>
                         <p>Car-free alpine sanctuary woven around subterranean mineral grottos, gentle azure learning slopes, royal ski academies for children and artisanal fondue pavilions.</p>
                         <ul class="perks">
                             <li>Thermal Grottos</li>
@@ -6397,40 +6397,40 @@
     <!-- /@chrome:footer -->
     <script src="../js/common.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             var tabBtns = document.querySelectorAll('.island-tab-btn');
             var panels = document.querySelectorAll('.island-panel');
-            tabBtns.forEach(function(btn) {
-                btn.addEventListener('click', function() {
+            tabBtns.forEach(function (btn) {
+                btn.addEventListener('click', function () {
                     var target = btn.getAttribute('data-tab');
-                    tabBtns.forEach(function(b) {
+                    tabBtns.forEach(function (b) {
                         var active = b === btn;
                         b.classList.toggle('is-active', active);
                         b.setAttribute('aria-selected', active ? 'true' : 'false');
                     });
-                    panels.forEach(function(panel) {
+                    panels.forEach(function (panel) {
                         var match = panel.id === 'panel-' + target;
                         panel.classList.toggle('is-active', match);
                     });
                 });
             });
-            panels.forEach(function(panel) {
+            panels.forEach(function (panel) {
                 var pins = panel.querySelectorAll('.map-hotspot[data-spot]');
                 var cards = panel.querySelectorAll('.island-hotspot-card[data-spot]');
                 function activateSpot(spotId) {
-                    pins.forEach(function(p) {
+                    pins.forEach(function (p) {
                         p.classList.toggle('is-active', p.getAttribute('data-spot') === spotId);
                     });
-                    cards.forEach(function(c) {
+                    cards.forEach(function (c) {
                         c.classList.toggle('is-active', c.getAttribute('data-spot') === spotId);
                     });
                 }
-                pins.forEach(function(pin) {
+                pins.forEach(function (pin) {
                     var id = pin.getAttribute('data-spot');
-                    pin.addEventListener('mouseenter', function() {
+                    pin.addEventListener('mouseenter', function () {
                         activateSpot(id);
                     });
-                    pin.addEventListener('click', function() {
+                    pin.addEventListener('click', function () {
                         activateSpot(id);
                         var card = panel.querySelector('.island-hotspot-card[data-spot="' + id + '"]');
                         if (card) card.scrollIntoView({
@@ -6439,12 +6439,12 @@
                         });
                     });
                 });
-                cards.forEach(function(card) {
+                cards.forEach(function (card) {
                     var id = card.getAttribute('data-spot');
-                    card.addEventListener('mouseenter', function() {
+                    card.addEventListener('mouseenter', function () {
                         activateSpot(id);
                     });
-                    card.addEventListener('click', function() {
+                    card.addEventListener('click', function () {
                         activateSpot(id);
                     });
                 });
