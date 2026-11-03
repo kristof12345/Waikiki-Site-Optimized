@@ -239,11 +239,8 @@ class Scene:
             )
         return self.url("grain")
 
-    def render(self, label: str) -> str:
-        head = (
-            f'<svg xmlns="http://www.w3.org/2000/svg" class="nature-ill" viewBox="0 0 {self.w} {self.h}" '
-            f'role="img" aria-label="{html.escape(label, quote=True)}">'
-        )
+    def render(self) -> str:
+        head = f'<svg xmlns="http://www.w3.org/2000/svg" class="nature-ill" viewBox="0 0 {self.w} {self.h}">'
         lines = [head, "<defs>", *self.defs, "</defs>", *self.body, "</svg>"]
         return "\n".join(lines)
 
@@ -2012,7 +2009,7 @@ def build_transect(labels):
         lab.append(el("path", d=f"M{n(x)},{n(H - 46)} L{n(x)},{n(H - 64)}", stroke="#f5c46e", stroke_width=1, opacity=0.55))
         lab.append(el("circle", cx=x, cy=H - 64, r=2.2, fill="#f5c46e", opacity=0.8))
     s.add(g(lab))
-    return s.render(labels["aria"]["transect"])
+    return s.render()
 
 
 # ==============================================================================
@@ -2223,7 +2220,7 @@ def build_reef(labels):
             nurs.append(el("path", d=f"M{n(fx)},{n(by + 14)} l0,9 M{n(fx - 2.5)},{n(by + 20)} l2.5,-3 l2.5,3",
                            stroke="#f28452", stroke_width=2.2, stroke_linecap="round", fill="none"))
     s.add(g(nurs))
-    return s.render(labels["aria"]["reef"])
+    return s.render()
 
 
 # ==============================================================================
@@ -2327,7 +2324,7 @@ def build_rainforest(labels):
     s.add(toucan(1018, 298, 1.15))
     s.add(morpho(538, 448, 1.5), morpho(762, 478, 1.25), morpho(330, 540, 1.3))
     s.add(mist(s, 565, 502, 260, 22, op=0.45))
-    return s.render(labels["aria"]["rainforest"])
+    return s.render()
 
 
 # ==============================================================================
@@ -2520,7 +2517,7 @@ def build_highlands(labels):
     s.add(condor(640, 228, 1.55), condor(902, 258, 0.95))
     s.add(hummingbird(218, 488, 1.65))
     s.add(g([bird_v(1000, 120, 8), bird_v(1032, 110, 6.5)]))
-    return s.render(labels["aria"]["highlands"])
+    return s.render()
 
 
 # ==============================================================================
@@ -2650,7 +2647,7 @@ def build_mogotes(labels):
     for x, y, h, lean in ((38, 272, 118, 4), (432, 274, 128, -5), (262, 252, 92, 3), (388, 252, 88, -3)):
         s.add(palm(rng, x, y, h, lean, 25 * (h / 110), royal=True, nfr=11, trunk_col="#d6cfc0"))
     s.add(g([bird_v(210, 72, 6.5), bird_v(228, 65, 5.5)]))
-    return s.render(labels["aria"]["mogotes"])
+    return s.render()
 
 
 def build_enriquillo(labels):
@@ -2706,7 +2703,7 @@ def build_enriquillo(labels):
     s.add(el("path", d="M364,270 L392,275 L402,284 L368,284Z", fill="#75654e"))
     s.add(iguana(364, 271, 1.18))
     s.add(caiman(108, 236, 0.92))
-    return s.render(labels["aria"]["enriquillo"])
+    return s.render()
 
 
 def build_pantanal(labels):
@@ -2763,7 +2760,7 @@ def build_pantanal(labels):
     s.add(capybara(154, 210, 1.24), capybara(116, 212, 0.94, flip=True), capybara(184, 212, 0.68))
     s.add(caiman(242, 250, 1.32))
     s.add(g([bird_v(178, 78, 7.5), bird_v(198, 72, 6.5), bird_v(215, 84, 6.5), bird_v(232, 76, 5.5)]))
-    return s.render(labels["aria"]["pantanal"])
+    return s.render()
 
 
 def build_cerrado(labels):
@@ -2807,7 +2804,7 @@ def build_cerrado(labels):
     # Fauna: Maned Wolf (Chrysocyon brachyurus) on savanna turf & Hyacinth Macaw in flight
     s.add(maned_wolf(228, 268, 1.25))
     s.add(macaw(152, 108, 0.78, palette=("#2452b5", "#193b8a", "#f5c428")))
-    return s.render(labels["aria"]["cerrado"])
+    return s.render()
 
 
 def build_lencois(labels):
@@ -2894,7 +2891,7 @@ def build_lencois(labels):
     s.add(dune_lagoon(fg_lag, lag_turq, 245, 276, 110))
     s.add(water_lines(rng, 70, 420, 264, 292, 24, op=0.68))
     s.add(g([bird_v(210, 88, 6.5), bird_v(232, 80, 5.5), bird_v(250, 90, 5.5)]))
-    return s.render(labels["aria"]["lencois"])
+    return s.render()
 
 
 def build_caatinga(labels):
@@ -2962,7 +2959,7 @@ def build_caatinga(labels):
     # Fauna: Pair of Indigo / Lear's Macaws (Anodorhynchus leari) in flight
     s.add(macaw(198, 98, 0.82, palette=("#2255a8", "#173c7d", "#f5c428")))
     s.add(macaw(145, 114, 0.62, flip=True, palette=("#2255a8", "#173c7d", "#f5c428")))
-    return s.render(labels["aria"]["caatinga"])
+    return s.render()
 
 
 def build_bluehole(labels):
@@ -3040,7 +3037,7 @@ def build_bluehole(labels):
         el("rect", x=204, y=103, width=15, height=2.5, rx=0.8, fill="#8cd2f0"),
         el("line", x1=212, y1=102, x2=212, y2=96, stroke="#444444", stroke_width=0.9),
     ]))
-    return s.render(labels["aria"]["bluehole"])
+    return s.render()
 
 
 def build_tepui(labels):
@@ -3142,7 +3139,7 @@ def build_tepui(labels):
         el("circle", cx=fx + 4.0, cy=fy - 2.2, r=0.6, fill="#111111"),
     ]))
     s.add(condor(290, 48, 0.62))
-    return s.render(labels["aria"]["tepui"])
+    return s.render()
 
 
 def build_cataracts(labels):
@@ -3224,7 +3221,7 @@ def build_cataracts(labels):
     # White-collared swifts (Streptoprocne zonaris) darting across the falls
     for bx, by, bs in ((208, 164, 5.8), (244, 152, 4.8), (282, 168, 5.8), (312, 158, 4.5)):
         s.add(bird_v(bx, by, bs, "#ffffff"))
-    return s.render(labels["aria"]["cataracts"])
+    return s.render()
 
 
 def cuban_trogon(x, y, s, flip=False):
@@ -3346,7 +3343,7 @@ def build_elnicho(labels):
     s.add(el("path", d="M0,172 Q48,168 96,176", stroke="#6c963e", stroke_width=1.8, fill="none", stroke_linecap="round"))
     s.add(bromeliad(rng, 88, 176, 9.5))
     s.add(cuban_trogon(56, 166, 0.96))
-    return s.render(labels["aria"]["elnicho"])
+    return s.render()
 
 
 def build_anavilhanas(labels):
@@ -3444,7 +3441,7 @@ def build_anavilhanas(labels):
     # Scarlet Macaws flying over the archipelago channels
     s.add(macaw(168, 62, 0.72))
     s.add(macaw(212, 74, 0.56))
-    return s.render(labels["aria"]["anavilhanas"])
+    return s.render()
 
 
 def build_chapada(labels):
@@ -3578,7 +3575,7 @@ def build_chapada(labels):
     s.add(bromeliad(rng, 62, 100, 9.5, col="#5c8f36", flower="#e0367a"))
     s.add(bromeliad(rng, 184, 98, 9.5, col="#5c8f36", flower="#e0367a"))
     s.add(condor(405, 56, 0.55))
-    return s.render(labels["aria"]["chapada"])
+    return s.render()
 
 
 # ==============================================================================
@@ -3587,7 +3584,7 @@ def build_chapada(labels):
 LABELS = {
     "en": {
         "transect": ["CORAL REEF", "MANGROVES", "KARST", "RAINFOREST", "PANTANAL", "CERRADO", "CATARACTS", "ANDES"],
-        "aria": {
+        "alt": {
             "transect": "Sea-to-summit cross-section of Waikiki: coral reef, mangrove coast, karst towers, Amazon rainforest, Pantanal wetland, Cerrado savanna, cataract forest and the snow-capped highlands",
             "reef": "Split-level view of a Waikiki mangrove coast and the coral reef beneath it, with sea turtle, manta ray, reef fish and coral nursery frames",
             "rainforest": "Amazonian river scene with layered canopy, emergent kapok trees, giant water lilies, pink river dolphin, macaws and a toucan",
@@ -3608,7 +3605,7 @@ LABELS = {
     },
     "hu": {
         "transect": ["KORALLZÁTONY", "MANGROVE", "KARSZT", "ESŐERDŐ", "PANTANAL", "CERRADO", "ZUHATAGOK", "ANDOK"],
-        "aria": {
+        "alt": {
             "transect": "Waikiki keresztmetszete a tengertől a csúcsokig: korallzátony, mangrovepart, karszttornyok, amazóniai esőerdő, Pantanal vizes élőhely, Cerrado szavanna, zuhatagerdő és a havas hegyvidék",
             "reef": "Waikiki mangrovepartja és az alatta húzódó korallzátony osztott nézetben, tengeri teknőssel, ördögrájával, zátonyhalakkal és korallkertekkel",
             "rainforest": "Amazóniai folyó rétegzett lombkoronával, kiemelkedő kapokfákkal, óriás tündérrózsákkal, rózsaszín folyami delfinnel, arákkal és tukánnal",
@@ -3675,7 +3672,7 @@ def update_pages(rendered: dict[str, dict[str, str]]) -> None:
         text = path.read_text(encoding="utf-8")
         for key in BUILDERS.keys():
             w, h = dims.get(key, default_dim)
-            alt_txt = LABELS[lang]["aria"].get(key, "")
+            alt_txt = LABELS[lang]["alt"].get(key, "")
             src_file = f"transect-{lang}.svg" if key == "transect" else f"{key}.svg"
             img_tag = f'<img class="nature-ill" src="../icons/nature/{src_file}" alt="{html.escape(alt_txt, quote=True)}" width="{w}" height="{h}" loading="lazy" />'
             pattern = re.compile(CONTAINER_RE.format(key=key), re.S)

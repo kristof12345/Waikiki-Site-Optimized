@@ -18,7 +18,6 @@ OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 def build_network_svg(locale: str) -> str:
     is_hu = locale == "hu"
-    aria_label = "A Hármas Pénzügyi Hálózat" if is_hu else "Tripartite Financial Network Diagram"
     apex_title = "WAIKIKI NEMZETI BANKJA" if is_hu else "NATIONAL BANK OF WAIKIKI"
     apex_badge = "KIZÁRÓLAGOS KIBOCSÁTÓ" if is_hu else "EXCLUSIVE ISSUER"
     apex_badge_letter_spacing = "0.8" if is_hu else "1"
@@ -37,7 +36,7 @@ def build_network_svg(locale: str) -> str:
     hud_right = "100%-OS BETÉTBIZTOSÍTÁS" if is_hu else "100% DEPOSIT GUARANTEE"
     hud_right_spacing = "0.5" if is_hu else "0.6"
 
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 1160 520" width="1160" height="520" role="img" aria-label="{aria_label}">
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 1160 520" width="1160" height="520">
     <defs>
         <clipPath id="bk-clip1">
             <rect width="1160" height="520" rx="20" />
@@ -163,11 +162,6 @@ def build_network_svg(locale: str) -> str:
 
 def build_rates_svg(locale: str) -> str:
     is_hu = locale == "hu"
-    aria_label = (
-        "Kettős Alapkamat-Transzmisszió és Retroaktív Inflációs Stabilitási Folyosó"
-        if is_hu
-        else "Dual Benchmark Rate Transmission and Zero-Percent Retroactive Inflation Stability Corridor"
-    )
     gold_title = "NEMZETI ARANYFEDEZET" if is_hu else "NATIONAL GOLD ANCHOR"
     gold_tonnes = "4 000 TONNA ARANYTÖMB" if is_hu else "4,000 TONNES BULLION"
     gold_val = "ÉRTÉK: > 100 MILLIÁRD WUD" if is_hu else "VALUATION: > 100 BILLION WUD"
@@ -222,7 +216,7 @@ def build_rates_svg(locale: str) -> str:
         else "DAILY YIELD + 5-YR DEVELOPMENT LOANS"
     )
 
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 1160 440" width="1160" height="440" role="img" aria-label="{aria_label}">
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 1160 440" width="1160" height="440">
     <defs>
         <linearGradient id="bk2-gold-bar" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stop-color="#fff5db" />

@@ -38,11 +38,8 @@ class Scene(NT.Scene):
     def raw(self, markup: str) -> None:
         self.defs.append(markup)
 
-    def render(self, label: str) -> str:
-        head = (
-            f'<svg xmlns="http://www.w3.org/2000/svg" class="city-ill" viewBox="0 0 {self.w} {self.h}" '
-            f'role="img" aria-label="{html.escape(label, quote=True)}">'
-        )
+    def render(self) -> str:
+        head = f'<svg xmlns="http://www.w3.org/2000/svg" class="city-ill" viewBox="0 0 {self.w} {self.h}">'
         return "\n".join([head, "<defs>", *self.defs, "</defs>", *self.body, "</svg>"])
 
 
@@ -704,7 +701,7 @@ def build_skyline(t: dict[str, str]) -> str:
         (t["monorail_line"], 310, 365, 310, 393),
         (t["marina_aurelia"], 255, 552, 255, 505),
     ])
-    return s.render(t["skyline_title"])
+    return s.render()
 
 
 # ==============================================================================
@@ -839,7 +836,7 @@ def build_pyramid(t: dict[str, str]) -> str:
         (t["amphitheater"], 205, 430, 355, 435),
         (t["colonnade"], 618, 452, 618, 485),
     ])
-    return s.render(t["pyramid_title"])
+    return s.render()
 
 
 
@@ -1044,7 +1041,7 @@ def build_undersea_hub(t: dict[str, str]) -> str:
         (t["acrylic_tube"], 1045, 432, 1045, 464),
         (t["coral_sanctuary"], 915, 668, 915, 626),
     ], accent="#5ceeff", bg="#062238")
-    return s.render(t["undersea_title"])
+    return s.render()
 
 
 # ==============================================================================
@@ -1187,7 +1184,7 @@ def build_archipelago_map(t: dict[str, str]) -> str:
         (t["coral_barrier"], 955, 305, 922, 305),
         (t["subsea_maglev"], 285, 132, 335, 168),
     ])
-    return s.render(t["archipelago_title"])
+    return s.render()
 
 
 
@@ -1289,7 +1286,7 @@ def build_marina(t: dict[str, str]) -> str:
     s.add(sailboat(68, 342, 34, flip=False))
 
     vignette_badge(s, t["marina_title"])
-    return s.render(t["marina_title"])
+    return s.render()
 
 
 # ==============================================================================
@@ -1395,7 +1392,7 @@ def build_boulevard(t: dict[str, str]) -> str:
     s.add(crowd(rng, 475, 585, 285, 395, 14, 22))
 
     vignette_badge(s, t["boulevard_title"])
-    return s.render(t["boulevard_title"])
+    return s.render()
 
 
 # ==============================================================================
@@ -1531,7 +1528,7 @@ def build_aerotropolis(t: dict[str, str]) -> str:
     ]))
 
     vignette_badge(s, t["aerotropolis_title"])
-    return s.render(t["aerotropolis_title"])
+    return s.render()
 
 
 # ==============================================================================
@@ -1630,7 +1627,7 @@ def build_night_lagoon(t: dict[str, str]) -> str:
     s.add(g(boardwalk))
 
     vignette_badge(s, t["night_title"], accent="#00f7ff", bg="#061528")
-    return s.render(t["night_title"])
+    return s.render()
 
 
 # ==============================================================================
@@ -1741,7 +1738,7 @@ def build_hero_art(t: dict[str, str]) -> str:
     s.add(person(114, 364, 17, col="#475569", rng=rng))
 
     s.body = [f'<g clip-path="url(#{s.id("clip")})">', *s.body, '</g>']
-    return s.render(t.get("hero_art_title", "Illustration of Nova Aurelia's imperial skyline, Sky City spire, and Caribbean lagoon"))
+    return s.render()
 
 
 # ==============================================================================
@@ -1749,8 +1746,6 @@ def build_hero_art(t: dict[str, str]) -> str:
 # ==============================================================================
 LABELS = {
     "en": {
-        "hero_art_title": "Illustration of Nova Aurelia's imperial skyline, Sky City spire, and Caribbean lagoon",
-        "skyline_title": "Nova Aurelia Imperial Lagoon Panorama",
         "sky_city": "Sky City (956 m)",
         "infinity_tower": "Infinity Tower",
         "gov_center": "World Government Center",
@@ -1758,19 +1753,16 @@ LABELS = {
         "pyramid_monument": "Grand Sovereign Pyramid",
         "marina_aurelia": "Marina Aurelia",
         "monorail_line": "Trans-Lagoon Monorail",
-        "pyramid_title": "The Grand Sovereign Pyramid and Royal Court",
         "apex_beacon": "Apex Beacon and Hall of Nations",
         "hanging_gardens": "Cascading Terraces and Waterfalls",
         "solar_skin": "Solar-Glass Photovoltaic Skin",
         "amphitheater": "Sovereign Assembly Amphitheater",
         "colonnade": "Ceremonial Colonnade and Pools",
-        "undersea_title": "Trans-Lagoon Maglev and Marine Concourse",
         "surface_terminal": "Surface Harbor Terminal",
         "acrylic_tube": "Acrylic Vacuum Transit Tube",
         "maglev_train": "High-Speed Maglev Train",
         "coral_sanctuary": "Protected Living Coral Sanctuary",
         "obs_dome": "Subsea Observation Concourse",
-        "archipelago_title": "Archipelago Masterplan: Palm Island, World Isles and Chameleon Atolls",
         "palm_island": "Palm Island",
         "hotel_khalifa": "Hotel Khalifa and Waterpark",
         "world_islands": "World Islands (130 Isles)",
@@ -1784,8 +1776,6 @@ LABELS = {
         "night_title": "The Bioluminescent Smart Lagoon",
     },
     "hu": {
-        "hero_art_title": "Illusztráció: Nova Aurelia birodalmi sziluettje, a Sky City torony és a karibi lagúna",
-        "skyline_title": "Nova Aurelia Császári Lagúna Panoráma",
         "sky_city": "Sky City (956 m)",
         "infinity_tower": "Infinity Torony",
         "gov_center": "Világkormányzati Központ",
@@ -1793,19 +1783,16 @@ LABELS = {
         "pyramid_monument": "Nagy Szuverén Piramis",
         "marina_aurelia": "Marina Aurelia",
         "monorail_line": "Lagúna Egysínű Vasút",
-        "pyramid_title": "A Nagy Szuverén Piramis és Királyi Udvar",
         "apex_beacon": "Csúcsfényszóró és Nemzetek Csarnoka",
         "hanging_gardens": "Lépcsős Függőkertek és Vízesések",
         "solar_skin": "Napelemes Üveghomlokzat",
         "amphitheater": "Szuverén Nemzetgyűlési Amfiteátrum",
         "colonnade": "Díszkolonnád és Tükörmedencék",
-        "undersea_title": "Lagúna alatti Maglev és Tenger alatti Terminál",
         "surface_terminal": "Felszíni Kikötői Terminál",
         "acrylic_tube": "Akril Vákuumcsöves Pályatest",
         "maglev_train": "Nagysebességű Maglev Vonat",
         "coral_sanctuary": "Védett Élő Korallzátony",
         "obs_dome": "Tenger alatti Megfigyelő Dóm",
-        "archipelago_title": "Szigetvilág Mesterterv: Palm Island, Világszigetek és Kaméleon Atollok",
         "palm_island": "Palm Island",
         "hotel_khalifa": "Hotel Khalifa és Vízipark",
         "world_islands": "Világszigetek (130 Sziget)",

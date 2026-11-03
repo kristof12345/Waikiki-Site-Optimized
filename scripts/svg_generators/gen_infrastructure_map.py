@@ -605,12 +605,6 @@ def generate_cities_xml(g_florida, g_bahamas, g_jamaica):
 def build_svg(lang="en", cuba_xml=""):
     is_hu = (lang == "hu")
     
-    aria_label = (
-        "Waikiki szigeti közlekedési folyosóinak sematikus térképe: Florida, Kuba és Haiti összeköttetései"
-        if is_hu else
-        "Schematic map of Waikiki transport corridors connecting Florida, Cuba, and Haiti"
-    )
-    
     fl_xml = get_florida_group()
     jm_xml = get_jamaica_group()
     hi_xml = get_hispaniola_group()
@@ -638,7 +632,7 @@ def build_svg(lang="en", cuba_xml=""):
     art_ty = na_y - 292
 
     # Assemble SVG text
-    svg = f'''<svg class="ill" viewBox="0 0 1800 650" role="img" aria-label="{aria_label}">
+    svg = f'''<svg class="ill" viewBox="0 0 1800 650">
                     <defs>
                         <clipPath id="rm-clip">
                             <rect width="1800" height="650" rx="28" />

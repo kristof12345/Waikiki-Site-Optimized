@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="nature-ill" viewBox="0 0 1600 600" role="img" aria-label="Sea-to-summit cross-section of Waikiki: coral reef, mangrove coast, karst towers, Amazon rainforest, Pantanal wetland, Cerrado savanna, cataract forest and the snow-capped highlands">
+<svg xmlns="http://www.w3.org/2000/svg" class="nature-ill" viewBox="0 0 1600 600">
 <defs>
 <filter id="nt-transect-mist" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>
 <filter id="nt-transect-soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>

@@ -57,7 +57,6 @@ def build_station_svg(lang="en") -> str:
 
     # Localized text labels
     if lang == "hu":
-        aria_label = "Waikiki Nemzeti Űrállomás pályamenti felépítése és telemetriai ábrája"
         hud_alt = "MAGASSÁG: 420.4 KM"
         hud_vel = "SEBESSÉG: 7.66 KM/S"
         hud_crew = "12 FŐ AKTÍV"
@@ -66,7 +65,6 @@ def build_station_svg(lang="en") -> str:
         hud_badge_r1 = "DOKKOLÓKAPUK: 6 AKTÍV"
         hud_badge_r2 = "AUTOMATIKUS KÖZELÍTÉSRE KÉSZ"
     else:
-        aria_label = "Waikiki National Space Station Orbital Complex and Telemetry Diagram"
         hud_alt = "ALT: 420.4 KM"
         hud_vel = "VEL: 7.66 KM/S"
         hud_crew = "CREW: 12 NOMINAL"
@@ -484,7 +482,7 @@ def build_station_svg(lang="en") -> str:
     body.append(badges)
 
     inner_content = "\n".join(body)
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 1160 520" role="img" aria-label="{aria_label}">
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 1160 520">
 {defs}
     <g clip-path="url(#{clip_id})">
 {inner_content}
@@ -499,7 +497,6 @@ def build_lunar_mars_svg(lang="en") -> str:
     clip_id = "sr-clip2" if lang == "en" else "sr-hu-clip2"
 
     if lang == "hu":
-        aria_label = "Föld, Hold és Mars bolygóközi transzferfolyosó térkép"
         hud_header = "HOLD-BÁZIS ÉS MARS KÖZI TRANSZFERFOLYOSÓ"
         lbl_earth_title = "FÖLD"
         lbl_earth_sub = "BÁZISÁLLOMÁS"
@@ -508,7 +505,6 @@ def build_lunar_mars_svg(lang="en") -> str:
         lbl_mars_title = "MARS EXPEDÍCIÓ"
         lbl_mars_sub = "2035-2040"
     else:
-        aria_label = "Earth Moon and Mars Interplanetary Transfer Corridor Map"
         hud_header = "MOON BASE AND MARS INTERPLANETARY CORRIDOR"
         lbl_earth_title = "EARTH"
         lbl_earth_sub = "PRIMARY BASE"
@@ -768,7 +764,7 @@ def build_lunar_mars_svg(lang="en") -> str:
     body.append(hud_header_svg)
 
     inner_content = "\n".join(body)
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 1160 480" role="img" aria-label="{aria_label}">
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 1160 480">
 {defs}
     <g clip-path="url(#{clip_id})">
 {inner_content}
@@ -782,19 +778,19 @@ def build_lunar_mars_svg(lang="en") -> str:
 def update_space_page(file_path: Path, lang: str = "en") -> None:
     content = file_path.read_text(encoding="utf-8")
 
-    aria_station = (
+    alt_station = (
         "Waikiki National Space Station Orbital Complex and Telemetry Diagram"
         if lang == "en"
         else "Waikiki Nemzeti Űrállomás pályamenti komplexum és telemetriai diagram"
     )
-    station_img = f'<img class="ill" src="../icons/space/station-{lang}.svg" alt="{aria_station}" width="1160" height="520" loading="lazy" />'
+    station_img = f'<img class="ill" src="../icons/space/station-{lang}.svg" alt="{alt_station}" width="1160" height="520" loading="lazy" />'
 
-    aria_corridor = (
+    alt_corridor = (
         "Earth Moon and Mars Interplanetary Transfer Corridor Map"
         if lang == "en"
         else "Föld, Hold és Mars bolygóközi transzferfolyosó térkép"
     )
-    corridor_img = f'<img class="ill" src="../icons/space/corridor-{lang}.svg" alt="{aria_corridor}" width="1160" height="480" loading="lazy" />'
+    corridor_img = f'<img class="ill" src="../icons/space/corridor-{lang}.svg" alt="{alt_corridor}" width="1160" height="480" loading="lazy" />'
 
     # Replace SVG or existing img in #station section
     station_pattern = re.compile(

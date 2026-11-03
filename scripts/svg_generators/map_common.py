@@ -99,19 +99,6 @@ def hotspot(i, x, y, color, r=11):
         "</g>",
     ]
 
-L = {
-    "en": {
-        "palm_aria": "Detailed map of Palm Island infrastructure: curved palm leaves branching from central spine, trunk and protective crescent",
-        "world_aria": "Detailed map of World Islands infrastructure: archipelago of multiple distinct islands arranged into the seven continents",
-        "cham_aria": "Detailed map of Chameleon Islands infrastructure: tightly grouped larger and smaller islands forming a chameleon gripping a branch",
-    },
-    "hu": {
-        "palm_aria": "A Pálma-sziget részletes infrastruktúra-térképe: központi törzsből kinyíló ívelt pálmalevelek, törzs és védő félhold",
-        "world_aria": "A Világ-szigetek részletes infrastruktúra-térképe: több különálló szigetből álló kontinens alakú szigetcsoport",
-        "cham_aria": "A Kaméleon-szigetek részletes infrastruktúra-térképe: szorosan csoportosuló kisebb és nagyobb szigetekből álló, ágon kapaszkodó kaméleon",
-    },
-}
-
 MAP_NAMES = {
     0: "Palm Island",
     1: "World Islands",
@@ -119,9 +106,9 @@ MAP_NAMES = {
 }
 
 
-def map_header(aria_label):
+def map_header():
     return [
-        f'<svg class="ill" viewBox="0 0 1200 700" role="img" aria-label="{aria_label}">',
+        '<svg class="ill" viewBox="0 0 1200 700">',
         "<defs>",
         '<linearGradient id="island-sea" x1="0" y1="0" x2="0" y2="1">',
         '<stop offset="0%" stop-color="#0c3461" />',
@@ -155,6 +142,7 @@ def update_island_map(map_index: int, svg_generator):
         from build_pages import format_and_remove_empty_lines
 
     map_name = MAP_NAMES.get(map_index, f"map {map_index}")
+    new_svg = "\n".join(svg_generator())
     for lang in ("en", "hu"):
         path = ROOT / lang / "infrastructure.html"
         html = path.read_text(encoding="utf-8")
@@ -162,8 +150,6 @@ def update_island_map(map_index: int, svg_generator):
         if len(matches) != 3:
             sys.exit(f"{lang}: expected 3 island maps, found {len(matches)}")
         target = matches[map_index]
-        t = L[lang]
-        new_svg = "\n".join(svg_generator(t))
         start, end = target.span()
         updated_html = html[:start] + new_svg + html[end:]
         updated_html, _ = SCRIPT_RE.subn(r'\1\n<script src="../js/infrastructure.js"></script>', updated_html)

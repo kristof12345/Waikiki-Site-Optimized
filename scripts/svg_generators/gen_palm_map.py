@@ -6,16 +6,16 @@ import sys
 from pathlib import Path
 
 try:
-    from map_common import n, pt, poly_path, hotspot, map_header, L, update_island_map
+    from map_common import n, pt, poly_path, hotspot, map_header, update_island_map
 except ImportError:
     sys.path.insert(0, str(Path(__file__).resolve().parent))
-    from map_common import n, pt, poly_path, hotspot, map_header, L, update_island_map
+    from map_common import n, pt, poly_path, hotspot, map_header, update_island_map
 
 
-def palm_svg(t):
+def palm_svg():
     cx, cy = 600, 380
     R_CRES = 315
-    o = map_header(t["palm_aria"])
+    o = map_header()
     o += [
         "<!-- Shallow Lagoon inside the Crescent -->",
         f'<circle cx="{cx}" cy="{cy}" r="310" fill="url(#lagoon-glow)" />',

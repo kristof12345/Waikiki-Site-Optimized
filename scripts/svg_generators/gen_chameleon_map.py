@@ -212,7 +212,7 @@ CH_LIMBS = {
 }
 
 
-def chameleon_svg(t):
+def chameleon_svg():
     g = CH_GAP
     body = Tube(CH_BODY_KNOTS)
     sx = body.s_at_x
@@ -451,7 +451,7 @@ def chameleon_svg(t):
     # ---------------------------------------------------------------------------------------
     # SVG OUTPUT
     # ---------------------------------------------------------------------------------------
-    o = map_header(t["cham_aria"])
+    o = map_header()
     o += [
         "<!-- Shallow Lagoon -->",
         '<ellipse cx="600" cy="345" rx="540" ry="290" fill="url(#lagoon-glow)" />',

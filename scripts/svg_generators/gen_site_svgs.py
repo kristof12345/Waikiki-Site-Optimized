@@ -190,13 +190,8 @@ def window_grid(x0: float, y0: float, w: float, h: float, cols: int, rows: int, 
 # ==============================================================================
 def build_ski_hero(lang: str = "hu") -> str:
     """Hero 640x480: Twilight Alpine Panorama of Pico Soberano, Cryo-Dome, Gondola & Grand Palace."""
-    aria = (
-        "Illustration of Waikiki Ski Paradise alpine peaks, gondola and Grand Palace"
-        if lang == "en"
-        else "Illusztráció: A Waikiki Síparadicsom alpesi csúcsai, felvonója és a Grand Palace"
-    )
     o = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 640 480" width="100%" height="100%" role="img" aria-label="{aria}">',
+        '<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 640 480" width="100%" height="100%">',
         "<defs>",
         "<style>",
         "@keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.3); opacity: 0.5; } }",
@@ -376,11 +371,6 @@ def build_ski_hero(lang: str = "hu") -> str:
 
 def build_ski_height_chart(lang: str) -> str:
     """Summit Elevation Comparison Chart (viewBox 0 0 960 390) with 6 realistic 3D peaks."""
-    aria = (
-        "Alpine summit elevation comparison chart"
-        if lang == "en"
-        else "Alpesi csúcsmagasságok összehasonlító diagramja"
-    )
     ticks = (
         [("5,000 m", 54), ("3,750 m", 124), ("2,500 m", 194), ("1,250 m", 264), ("0 m", 334)]
         if lang == "en"
@@ -407,7 +397,7 @@ def build_ski_height_chart(lang: str) -> str:
     )
 
     o = [
-        f'<svg class="ill height-chart" viewBox="0 0 960 390" data-reveal aria-label="{aria}">',
+        '<svg class="ill height-chart" viewBox="0 0 960 390" data-reveal>',
         "<defs>",
         '<linearGradient id="hcPeakAndesLit" x1="0" y1="0" x2="1" y2="1">',
         '<stop offset="0%" stop-color="#3b82f6" />',
@@ -649,13 +639,8 @@ def build_ski_resort_card(idx: int) -> str:
 # ==============================================================================
 def build_travel_hero(lang: str) -> str:
     """Hero 640x480: Golden-hour Caribbean arrival panorama with widebody jetliner, Nova Aurelia skyline, lagoon & palms."""
-    aria = (
-        "Illustration of a flight route arriving on Waikiki's Caribbean coast"
-        if lang == "en"
-        else "Illusztráció: Waikiki karibi partjára érkező repülőútvonal"
-    )
     o = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 640 480" width="100%" height="100%" role="img" aria-label="{aria}">',
+        '<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 640 480" width="100%" height="100%">',
         "<defs>",
         "<style>",
         "@keyframes drift { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(25px); } }",
@@ -1115,13 +1100,8 @@ def build_travel_card(idx: int) -> str:
 # ==============================================================================
 def build_infra_hero(lang: str) -> str:
     """Hero 640x480: Nova Aurelia bayfront panorama with Mega Pyramid, supertall skyline, offshore wind farm, port & maglev."""
-    aria = (
-        "Illustration of Nova Aurelia's maglev, port, wind farm and Mega Pyramid"
-        if lang == "en"
-        else "Illusztráció: Nova Aurelia maglev vonala, kikötője, szélerőműparkja és a Mega Piramis"
-    )
     o = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 640 480" width="100%" height="100%" role="img" aria-label="{aria}">',
+        '<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 640 480" width="100%" height="100%">',
         "<defs>",
         "<style>",
         "@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }",
@@ -1231,11 +1211,6 @@ def build_infra_hero(lang: str) -> str:
 
 def build_infra_height_chart(lang: str) -> str:
     """Tallest Structures Height Comparison Chart (viewBox 0 0 1120 420) with 10 architectural silhouettes."""
-    aria = (
-        "Height comparison of Waikiki's tallest structures"
-        if lang == "en"
-        else "Waikiki legmagasabb építményeinek magasság-összehasonlítása"
-    )
     ref_word = "reference" if lang == "en" else "viszonyítás"
     m_1000 = "~1,000 m" if lang == "en" else "~1000 m"
     burj_name = "Burj Khalifa" if lang == "en" else "Burdzs Kalifa"
@@ -1246,7 +1221,7 @@ def build_infra_height_chart(lang: str) -> str:
     eiffel_name = "Eiffel Tower" if lang == "en" else "Eiffel-torony"
 
     o = [
-        f'<svg class="ill height-chart" data-reveal="fade" viewBox="0 0 1120 420" role="img" aria-label="{aria}">',
+        '<svg class="ill height-chart" data-reveal="fade" viewBox="0 0 1120 420">',
         '<g class="k-line" stroke-width="1">',
         '<path d="M30 70H1090M30 140H1090M30 210H1090M30 280H1090" stroke-dasharray="3 6" />',
         "</g>",

@@ -659,7 +659,7 @@ SMALL_LODGE = [
 # ==============================================================================
 def build_andes_svg() -> str:
     o = [
-        '<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 1200 700" role="img" aria-label="Detailed 3D panoramic ski trail map of the Grand Andes Massif in Waikiki">',
+        '<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 1200 700">',
         "<defs>",
         '<linearGradient id="andes-sky" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="420">',
         '<stop offset="0" stop-color="#06162e" />',
@@ -900,7 +900,7 @@ def build_andes_svg() -> str:
 # ==============================================================================
 def build_haiti_svg() -> str:
     o = [
-        '<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 1200 700" role="img" aria-label="Detailed 3D panoramic Sea-to-Summit ski map of Haiti Highland Glacier rising from the Caribbean Sea">',
+        '<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 1200 700">',
         "<defs>",
         '<linearGradient id="haiti-sky" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="410">',
         '<stop offset="0" stop-color="#0a2547" />',
@@ -1225,14 +1225,6 @@ def build_haiti_svg() -> str:
 # LOCALIZATION & HTML INJECTION
 # ==============================================================================
 EN_TO_HU = [
-    (
-        'aria-label="Detailed 3D panoramic ski trail map of the Grand Andes Massif in Waikiki"',
-        'aria-label="A Magas-Andok Masszívum részletes 3D panoráma sítérképe"',
-    ),
-    (
-        'aria-label="Detailed 3D panoramic Sea-to-Summit ski map of Haiti Highland Glacier rising from the Caribbean Sea"',
-        'aria-label="A Karib-tengerből kiemelkedő Haiti Gleccserfennsík részletes 3D panoráma sítérképe"',
-    ),
     (">▲ CONDOR PEAK<", ">▲ CONDOR-CSÚCS<"),
     (">▲ GLACIER CROWN<", ">▲ GLECCSERKORONA<"),
     (">▲ CRYO-DOME PEAK<", ">▲ KRIO-KUPOLA CSÚCS<"),

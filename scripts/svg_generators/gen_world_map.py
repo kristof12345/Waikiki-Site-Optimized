@@ -308,9 +308,9 @@ bridges = [
         ((494, 128), (524, 166)),  # Iceland to Great Britain
 ]
 
-def world_svg(t):
+def world_svg():
     ecx, ecy, erx, ery = 600, 345, 540, 305
-    o = map_header(t["world_aria"])
+    o = map_header()
     o += [
         "<!-- Lagoon Shallows -->",
         f'<ellipse cx="{ecx}" cy="{ecy}" rx="{erx}" ry="{ery}" fill="url(#lagoon-glow)" />',
