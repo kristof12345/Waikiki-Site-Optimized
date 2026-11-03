@@ -143,7 +143,109 @@
     <main id="main">
         <section class="hero hero--compact hero--art" data-hero>
             <div class="hero-art" aria-hidden="true">
-                <img class="ill" src="../icons/infrastructure/hero-art.svg" alt="Illustration of Nova Aurelia's maglev, port, wind farm and Mega Pyramid" width="640" height="480" />
+                <svg class="ill" viewBox="0 0 640 480" role="img" aria-label="Illustration of Nova Aurelia's maglev, port, wind farm and Mega Pyramid">
+                    <defs>
+                        <clipPath id="ih-clip">
+                            <rect width="640" height="480" rx="40" />
+                        </clipPath>
+                        <linearGradient id="ih-sky" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0" style="stop-color:var(--ill-sky-2)" />
+                            <stop offset="1" style="stop-color:var(--ill-sky)" />
+                        </linearGradient>
+                        <linearGradient id="ih-sea" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0" style="stop-color:var(--ill-sea-2)" />
+                            <stop offset="1" style="stop-color:var(--ill-sea)" />
+                        </linearGradient>
+                    </defs>
+                    <g clip-path="url(#ih-clip)">
+                        <rect width="640" height="480" fill="url(#ih-sky)" />
+                        <circle cx="500" cy="118" r="78" class="f-sun2" opacity=".35" />
+                        <circle cx="500" cy="118" r="50" class="f-sun" />
+                        <g class="drift">
+                            <ellipse cx="150" cy="96" rx="54" ry="12" class="f-white" opacity=".85" />
+                            <ellipse cx="182" cy="84" rx="32" ry="13" class="f-white" opacity=".85" />
+                        </g>
+                        <g class="drift" style="animation-delay:-6s">
+                            <ellipse cx="350" cy="60" rx="40" ry="9" class="f-white" opacity=".7" />
+                        </g>
+                        <path d="M40 300V236" class="k-ink2" stroke-width="2.4" />
+                        <g transform="translate(40 236)">
+                            <g class="spin">
+                                <circle r="28" fill="none" />
+                                <path d="M0 0V-28M0 0L24.2 14.0M0 0L-24.2 14.0" class="k-ink2" stroke-width="3.0" stroke-linecap="round" />
+                                <circle r="3.0" class="f-ink2" />
+                            </g>
+                        </g>
+                        <path d="M86 300V246" class="k-ink2" stroke-width="2.0" />
+                        <g transform="translate(86 246)">
+                            <g class="spin">
+                                <circle r="24" fill="none" />
+                                <path d="M0 0V-24M0 0L20.6 11.9M0 0L-20.6 11.9" class="k-ink2" stroke-width="2.5" stroke-linecap="round" />
+                                <circle r="2.5" class="f-ink2" />
+                            </g>
+                        </g>
+                        <path d="M128 300V254" class="k-ink2" stroke-width="1.7" />
+                        <g transform="translate(128 254)">
+                            <g class="spin slow">
+                                <circle r="20" fill="none" />
+                                <path d="M0 0V-20M0 0L17.0 9.8M0 0L-17.0 9.8" class="k-ink2" stroke-width="2.1" stroke-linecap="round" />
+                                <circle r="2.1" class="f-ink2" />
+                            </g>
+                        </g>
+                        <rect x="150" y="296" width="380" height="8" class="f-sand" />
+                        <rect x="166" y="214" width="26" height="86" class="f-ink3" />
+                        <rect x="196" y="178" width="22" height="122" class="f-ink2" />
+                        <rect x="222" y="232" width="30" height="68" class="f-ink3" />
+                        <polygon points="248,300 330,172 412,300" class="f-glass" />
+                        <polygon points="248,300 330,172 412,300" class="k-gold" stroke-width="2.2" stroke-linejoin="round" />
+                        <path d="M330 172 L312 300M330 172 L352 300M298 222H362M282 248H378M266 274H394" class="k-gold" stroke-width="1" opacity=".75" />
+                        <polygon points="321,186 330,172 339,186" class="f-gold" />
+                        <circle cx="330" cy="160" r="3" class="f-gold twinkle" />
+                        <rect x="420" y="160" width="20" height="140" class="f-ink2" />
+                        <polygon points="416,160 430,124 444,160" class="f-ink" />
+                        <circle cx="430" cy="180" r="8" class="f-gold" />
+                        <path d="M430 180v-5M430 180h4" class="k-ink" stroke-width="1.4" stroke-linecap="round" />
+                        <rect x="446" y="202" width="24" height="98" class="f-ink3" />
+                        <rect x="474" y="228" width="20" height="72" class="f-ink2" />
+                        <rect x="498" y="190" width="18" height="110" class="f-ink3" />
+                        <g class="f-sun2">
+                            <rect class="twinkle" x="172" y="226" width="4" height="4" />
+                            <rect class="twinkle" x="202" y="196" width="4" height="4" />
+                            <rect class="twinkle" x="208" y="236" width="4" height="4" />
+                            <rect class="twinkle" x="452" y="216" width="4" height="4" />
+                            <rect class="twinkle" x="504" y="206" width="4" height="4" />
+                            <rect class="twinkle" x="480" y="244" width="4" height="4" />
+                        </g>
+                        <rect y="300" width="640" height="180" fill="url(#ih-sea)" />
+                        <rect y="300" width="640" height="6" class="f-sea3" opacity=".7" />
+                        <rect x="526" y="296" width="114" height="12" class="f-sand" />
+                        <path d="M566 296V236h44M566 248l26-12M604 236v18" class="k-ink" stroke-width="3" stroke-linecap="round" />
+                        <path d="M614 296V244h30M614 254l20-10" class="k-ink" stroke-width="3" stroke-linecap="round" />
+                        <rect x="536" y="284" width="18" height="12" class="f-coral" />
+                        <rect x="580" y="286" width="18" height="10" class="f-gold" />
+                        <rect x="580" y="276" width="18" height="10" class="f-sea2" />
+                        <g class="bob">
+                            <path d="M540 330h86l-10 14h-68z" class="f-ink" />
+                            <rect x="552" y="320" width="14" height="10" class="f-coral" />
+                            <rect x="568" y="320" width="14" height="10" class="f-gold" />
+                            <rect x="584" y="320" width="14" height="10" class="f-sea3" />
+                            <rect x="568" y="310" width="14" height="10" class="f-coral" />
+                        </g>
+                        <g stroke-width="2" stroke-linecap="round" opacity=".8">
+                            <path d="M40 340h30M120 360h24M250 330h28M420 396h30M300 440h40M90 450h30" class="k-white" />
+                        </g>
+                        <g class="k-ink2" stroke-width="5">
+                            <path d="M90 401V480M210 380V480M330 366V480M450 358V480M570 353V480" />
+                        </g>
+                        <path d="M-20 436 C 150 386, 300 362, 660 350" class="k-ink2" stroke-width="9" stroke-linecap="round" />
+                        <path d="M-20 436 C 150 386, 300 362, 660 350" class="k-gold" stroke-width="1.5" opacity=".9" />
+                        <g>
+                            <rect x="-40" y="-8" width="80" height="13" rx="6.5" class="f-coral" />
+                            <rect x="-30" y="-5" width="56" height="4" rx="2" class="f-white" opacity=".9" />
+                            <animateMotion dur="9s" repeatCount="indefinite" rotate="auto" path="M-60 432 C 150 378, 300 354, 700 342" />
+                        </g>
+                    </g>
+                </svg>
             </div>
             <div class="hero-content"><span class="hero-eyebrow">Prosperity · Infrastructure</span>
                 <h1 class="hero-title">The <em>arteries</em> of the most advanced nation</h1>
