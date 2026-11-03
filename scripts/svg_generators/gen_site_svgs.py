@@ -1621,62 +1621,7 @@ def main() -> None:
         sys.path.insert(0, str(ROOT / "scripts"))
         from build_pages import format_and_remove_empty_lines
 
-    if args.page in ("ski", "all"):
-        ski_hero_svg = build_ski_hero("en")
-        validate_svg(ski_hero_svg, "ski-hero")
-        ski_hero_out = ROOT / "icons" / "ski" / "hero-art.svg"
-        ski_hero_out.parent.mkdir(parents=True, exist_ok=True)
-        ski_hero_out.write_text(ski_hero_svg + "\n", encoding="utf-8")
-        print(f"Generated {ski_hero_out.relative_to(ROOT)} ({len(ski_hero_svg) / 1024:.1f} KB)")
-
-    if args.page in ("travel", "all"):
-        travel_hero_svg = build_travel_hero("en")
-        validate_svg(travel_hero_svg, "travel-hero")
-        travel_hero_out = ROOT / "icons" / "travel" / "hero-art.svg"
-        travel_hero_out.parent.mkdir(parents=True, exist_ok=True)
-        travel_hero_out.write_text(travel_hero_svg + "\n", encoding="utf-8")
-        print(f"Generated {travel_hero_out.relative_to(ROOT)} ({len(travel_hero_svg) / 1024:.1f} KB)")
-
-    if args.page in ("infra", "all"):
-        infra_hero_svg = build_infra_hero("en")
-        validate_svg(infra_hero_svg, "infra-hero")
-        infra_hero_out = ROOT / "icons" / "infrastructure" / "hero-art.svg"
-        infra_hero_out.parent.mkdir(parents=True, exist_ok=True)
-        infra_hero_out.write_text(infra_hero_svg + "\n", encoding="utf-8")
-        print(f"Generated {infra_hero_out.relative_to(ROOT)} ({len(infra_hero_svg) / 1024:.1f} KB)")
-
-    for lang in ("en", "hu"):
-        if args.page in ("ski", "all"):
-            # 1. ski-paradise.html (indices: [3] Height Chart, [4..8] 5 Resort Cards)
-            ski_path = ROOT / lang / "ski-paradise.html"
-            ski_repl = {
-                3: build_ski_height_chart(lang),
-                **{4 + i: build_ski_resort_card(i) for i in range(5)},
-            }
-            ski_html = replace_svgs_by_index(ski_path.read_text(encoding="utf-8"), ski_repl, f"{lang}/ski-paradise.html")
-            ski_path.write_text(format_and_remove_empty_lines(ski_html), encoding="utf-8")
-            print(f"Updated {ski_path.relative_to(ROOT)} (Height Chart + 5 Resort Cards)")
-
-        if args.page in ("travel", "all"):
-            # 2. travel-guide.html (indices: [1..15] 15 Luxury Hotel & Sanctuary Cards)
-            tg_path = ROOT / lang / "travel-guide.html"
-            tg_repl = {
-                **{1 + i: build_travel_card(i) for i in range(15)},
-            }
-            tg_html = replace_svgs_by_index(tg_path.read_text(encoding="utf-8"), tg_repl, f"{lang}/travel-guide.html")
-            tg_path.write_text(format_and_remove_empty_lines(tg_html), encoding="utf-8")
-            print(f"Updated {tg_path.relative_to(ROOT)} (15 Hotel & Sanctuary Cards)")
-
-        if args.page in ("infra", "all"):
-            # 3. infrastructure.html (indices: [2] Height Chart, [3..12] 10 Landmark Architecture Cards)
-            inf_path = ROOT / lang / "infrastructure.html"
-            inf_repl = {
-                2: build_infra_height_chart(lang),
-                **{3 + i: build_infra_card(i) for i in range(10)},
-            }
-            inf_html = replace_svgs_by_index(inf_path.read_text(encoding="utf-8"), inf_repl, f"{lang}/infrastructure.html")
-            inf_path.write_text(format_and_remove_empty_lines(inf_html), encoding="utf-8")
-            print(f"Updated {inf_path.relative_to(ROOT)} (Height Chart + 10 Landmark Cards)")
+    print("Note: Hero arts are canonical standalone files in icons/ and not procedurally overwritten.")
 
 
 if __name__ == "__main__":
