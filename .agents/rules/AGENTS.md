@@ -5,6 +5,14 @@
 1. **Prefer "and" / "és" over ampersand ("&")**: Use the word "and" (in English) and "és" (in Hungarian) instead of the "&" symbol in titles, section headings, card headers, labels, and copy.
 2. **Alternating Section Styles**: Top-level page sections must alternate between normal and `light-bg` styles.
 
+## Graphics, SVGs and Icon Guidelines
+
+1. **Complex Graphics and Icons in Separate Files**:
+   - All SVG icons (e.g. MDI icons, card icons, location markers, badges, action buttons) must be stored as separate standalone `.svg` files in `icons/mdi/` and linked via `<img>` tags (`<img src="../icons/mdi/<name>.svg" alt="" />`).
+   - Complex graphics, network topologies, blueprints, and standalone technical illustrations (e.g., in `icons/banking/`, `icons/space/`, `icons/nature/`) must also be kept as separate files in the `icons/` directory.
+2. **Card Grid Arts Directly in HTML**:
+   - Card grid artwork and inline card illustrations (such as `.building-art`, `.hotel-art`, `.city-ill-frame`, `.hero-art`, `.ill-panel`, or scenic visuals tied directly to card grid structures) should be directly included inline within the HTML document.
+
 ## CSS & Media Query Guidelines
 
 1. **Desktop-First Media Queries**: Write default styles for large screens (desktop). Use `@media (max-width: ...)` queries to adapt for smaller screens, avoiding `min-width` media queries.
