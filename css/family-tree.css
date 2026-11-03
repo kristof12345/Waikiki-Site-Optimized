@@ -344,15 +344,10 @@
     justify-content: center;
 }
 
-.heirs-icon svg,
 .heirs-icon img {
     width: 2.25rem;
     height: 2.25rem;
     object-fit: contain;
-}
-
-.heirs-icon svg {
-    stroke: currentColor;
 }
 
 .heirs-body h4 {
@@ -683,15 +678,10 @@
     margin-bottom: 1.25rem;
 }
 
-.matrix-icon-wrap svg,
 .matrix-icon-wrap img {
     width: 24px;
     height: 24px;
     object-fit: contain;
-}
-
-.matrix-icon-wrap svg {
-    stroke: currentColor;
 }
 
 .body-dark .heirs-icon img,

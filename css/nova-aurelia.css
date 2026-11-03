@@ -413,19 +413,10 @@
     color: var(--tertiary-light);
 }
 
-.city-pillar-badge svg,
 .city-pillar-badge img {
     width: 24px;
     height: 24px;
     object-fit: contain;
-}
-
-.city-pillar-badge svg {
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
 }
 
 .body-dark .city-pillar-badge img {

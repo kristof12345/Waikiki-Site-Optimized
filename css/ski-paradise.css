@@ -39,24 +39,11 @@
   box-shadow: var(--shadow-md);
 }
 
-.fact svg,
 .fact img {
   flex: 0 0 28px;
   width: 28px;
   height: 28px;
   object-fit: contain;
-}
-
-.fact svg {
-  fill: none;
-  stroke: var(--accent-hover);
-  stroke-width: 1.6;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.body-dark .fact svg {
-  stroke: var(--accent);
 }
 
 .body-dark .fact img {
@@ -115,7 +102,6 @@
   box-shadow: var(--shadow-xs);
 }
 
-.island-tab-btn svg,
 .island-tab-btn img {
   width: 20px;
   height: 20px;
@@ -123,13 +109,10 @@
   transition: transform 0.3s var(--ease-spring);
 }
 
-.island-tab-btn svg {
-  color: var(--accent);
-}
-
 .island-tab-btn.is-active img,
 .island-tab-btn[aria-selected="true"] img {
   filter: brightness(0) invert(1);
+  transform: scale(1.1);
 }
 
 .body-dark .island-tab-btn img {
@@ -155,21 +138,10 @@
   box-shadow: 0 6px 18px rgba(0, 34, 68, 0.22);
 }
 
-.island-tab-btn.is-active svg,
-.island-tab-btn[aria-selected="true"] svg {
-  color: var(--accent-light);
-  transform: scale(1.1);
-}
-
 .body-dark .island-tab-btn.is-active,
 .body-dark .island-tab-btn[aria-selected="true"] {
   background: var(--accent);
   border-color: var(--accent);
-  color: var(--neutral-900);
-}
-
-.body-dark .island-tab-btn.is-active svg,
-.body-dark .island-tab-btn[aria-selected="true"] svg {
   color: var(--neutral-900);
 }
 
@@ -661,18 +633,11 @@
   font-size: 0.82rem;
 }
 
-.hotel-loc svg,
 .hotel-loc img {
   width: 14px;
   height: 14px;
   flex-shrink: 0;
   object-fit: contain;
-}
-
-.hotel-loc svg {
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.8;
 }
 
 .body-dark .hotel-loc img {
@@ -723,20 +688,10 @@
   flex-shrink: 0;
 }
 
-.travel-callout-icon svg,
 .travel-callout-icon img {
   width: 32px;
   height: 32px;
   object-fit: contain;
-}
-
-.travel-callout-icon svg {
-  stroke: var(--neutral-50);
-  fill: none;
-  stroke-width: 1.8;
-}
-
-.travel-callout-icon img {
   filter: brightness(0) invert(1);
 }
 
