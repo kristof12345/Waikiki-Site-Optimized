@@ -451,7 +451,7 @@ def chameleon_svg(t):
     # ---------------------------------------------------------------------------------------
     # SVG OUTPUT
     # ---------------------------------------------------------------------------------------
-    o = map_header("cham_aria")
+    o = map_header(t["cham_aria"])
     o += [
         "<!-- Shallow Lagoon -->",
         '<ellipse cx="600" cy="345" rx="540" ry="290" fill="url(#lagoon-glow)" />',
@@ -625,7 +625,10 @@ def chameleon_svg(t):
     return o
 
 def main():
-    update_island_map(2, chameleon_svg)
+    if "--write" in sys.argv:
+        update_island_map(2, chameleon_svg)
+    else:
+        print("Dry run: Pass --write to update infrastructure.html")
 
 if __name__ == "__main__":
     main()

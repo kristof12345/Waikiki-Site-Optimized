@@ -418,7 +418,10 @@ def world_svg(t):
     return o
 
 def main():
-    update_island_map(1, world_svg)
+    if "--write" in sys.argv:
+        update_island_map(1, world_svg)
+    else:
+        print("Dry run: Pass --write to update infrastructure.html")
 
 if __name__ == "__main__":
     main()
