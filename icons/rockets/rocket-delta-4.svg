@@ -58,7 +58,7 @@
       <line x1="325" y1="330" x2="365" y2="330" stroke-width="1" opacity="0.65" />
       <line x1="325" y1="450" x2="365" y2="450" stroke-width="1" opacity="0.65" />
       <line x1="325" y1="570" x2="365" y2="570" stroke-width="1" opacity="0.65" />
-      <!-- RS-68A Main Engine Bell & Turbine Exhaust Duct -->
+      <!-- RS-68A Main Engine Bell and Turbine Exhaust Duct -->
       <polygon points="332,715 358,715 362,745 328,745" fill="currentColor" opacity="0.5" />
       <line x1="358" y1="715" x2="362" y2="745" stroke-width="3" />
     </g>
@@ -73,7 +73,7 @@
       <line x1="435" y1="330" x2="475" y2="330" stroke-width="1" opacity="0.65" />
       <line x1="435" y1="450" x2="475" y2="450" stroke-width="1" opacity="0.65" />
       <line x1="435" y1="570" x2="475" y2="570" stroke-width="1" opacity="0.65" />
-      <!-- RS-68A Main Engine Bell & Turbine Exhaust Duct -->
+      <!-- RS-68A Main Engine Bell and Turbine Exhaust Duct -->
       <polygon points="442,715 468,715 472,745 438,745" fill="currentColor" opacity="0.5" />
       <line x1="468" y1="715" x2="472" y2="745" stroke-width="3" />
     </g>

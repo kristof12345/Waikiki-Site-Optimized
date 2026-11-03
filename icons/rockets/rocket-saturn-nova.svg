@@ -69,7 +69,7 @@
     <polygon points="362,375 438,375 455,445 345,445" fill="url(#novaBody)" stroke="currentColor" stroke-width="2.4" />
     <rect x="345" y="445" width="110" height="270" fill="url(#novaBody)" stroke="currentColor" stroke-width="2.6" />
 
-    <!-- First Stage Structural Stiffeners & Feedlines -->
+    <!-- First Stage Structural Stiffeners and Feedlines -->
     <line x1="365" y1="445" x2="365" y2="715" stroke="currentColor" stroke-width="1.4" opacity="0.6" />
     <line x1="385" y1="445" x2="385" y2="715" stroke="currentColor" stroke-width="1.4" opacity="0.6" />
     <line x1="415" y1="445" x2="415" y2="715" stroke="currentColor" stroke-width="1.4" opacity="0.6" />
