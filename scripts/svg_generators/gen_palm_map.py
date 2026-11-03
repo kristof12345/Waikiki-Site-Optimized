@@ -247,10 +247,7 @@ def palm_svg(t):
     return o
 
 def main():
-    if "--write" in sys.argv:
-        update_island_map(0, palm_svg)
-    else:
-        print("Dry run: Pass --write to update infrastructure.html")
+    update_island_map(0, palm_svg)
 
 if __name__ == "__main__":
     main()
