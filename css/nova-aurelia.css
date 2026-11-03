@@ -21,6 +21,10 @@
 }
 
 /* Metric Stats Row */
+.hero--art .hero-content > .city-stats-row {
+    max-width: 100%;
+}
+
 .city-stats-row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

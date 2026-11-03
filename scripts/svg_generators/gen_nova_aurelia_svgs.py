@@ -1634,10 +1634,112 @@ def build_night_lagoon(t: dict[str, str]) -> str:
 
 
 # ==============================================================================
+# 9. HERO ART: NOVA AURELIA IMPERIAL METROPOLIS (640 x 480)
+# ==============================================================================
+def build_hero_art(t: dict[str, str]) -> str:
+    s = Scene("hero-art", 640, 480, 909)
+    rng = s.rng
+    patterns(s, "#081324")
+    glass_gradients(
+        s,
+        [(0, "#ffe8c6"), (0.42, "#89b9dc"), (1, "#21476b")],
+        [(0, "#234668"), (1, "#0e2034")],
+    )
+    rip = ripple(s, "rip", fx=0.005, fy=0.085, scale=8)
+    mmask = fade_mask(s, "mmask", 0, 275, 640, 205, top=0.55, bottom=0.05)
+    s.raw(f'<clipPath id="{s.id("clip")}"><rect width="640" height="480" rx="28" /></clipPath>')
+
+    NT.sky(s, [
+        (0.0, "#0a182e"),
+        (0.38, "#1a3a68"),
+        (0.68, "#634768"),
+        (0.86, "#c66c52"),
+        (0.96, "#f4a864"),
+        (1.0, "#fedca0"),
+    ], h=285)
+
+    NT.sun(s, 505, 140, 32, glow="#ffe08a")
+
+    for cx, cy, cw in [(140, 80, 180), (370, 68, 210), (530, 102, 160)]:
+        s.add(cloud(rng, cx, cy, cw, col="#fff5e6", shade="#9e7686", op=0.76, cls="city-anim-cloud"))
+
+    NT.mountain(s, "h-mtn", [(-20, 260), (120, 220), (280, 246), (460, 212), (660, 250)],
+                275, "#342b48", shade="#1b1428", shade_op=0.5, rough=8, depth=4)
+
+    s.add(far_city(rng, 20, 620, 272, 25, 95, "#22324e", wmin=10, wmax=22, lights=0.35))
+
+    top_grp = []
+    top_grp.extend(sky_city(s, 220, 272, 42))
+
+    gold = s.linear("h-gold", [(0, "#fff4be"), (0.5, "#e5b33a"), (1, "#8a5e12")], x1=0, y1=0, x2=1, y2=0)
+    marble = s.linear("h-mrb", [(0, "#fffbf2"), (0.6, "#eadbc0"), (1, "#bfa67c")], x1=0, y1=0, x2=1, y2=0)
+    top_grp.extend([
+        el("rect", x=128, y=87, width=28, height=185, fill=s.url("glass-face"), stroke="#3a6088", stroke_width=0.8),
+        el("rect", x=128, y=87, width=28, height=185, fill=s.url("pat-curtain"), opacity=0.8),
+        el("path", d="M126,87 A16,14 0 0,1 158,87 Z", fill=gold, stroke="#7a5210", stroke_width=0.8),
+        el("line", x1=142, y1=73, x2=142, y2=56, stroke=gold, stroke_width=1.8),
+        el("circle", cx=142, cy=55, r=2.5, fill="#ef4444", class_="pulse"),
+    ])
+
+    top_grp.extend(clock_tower(s, 305, 272, 138))
+
+    for bx, bh, bw, ck in [(68, 128, 24, "diamond"), (98, 105, 20, "slant"), (342, 118, 22, "spire"), (372, 95, 18, "flat")]:
+        top_grp.append(tower(s, bx, 272, bw, bh, d=6, pat="curtain", lit=0.08, crown_kind=ck))
+
+    top_grp.extend([
+        el("polygon", points="395,272 490,118 490,272", fill="#1b395c", stroke="#60a5fa", stroke_width=1),
+        el("polygon", points="490,118 585,272 490,272", fill="#38bdf8", opacity=0.75, stroke="#bae6fd", stroke_width=1),
+        el("polygon", points="485,126 490,118 495,126", fill=gold),
+    ])
+
+    s.add(g(top_grp, id=s.id("skyline-grp")))
+
+    refl = reflection(s, "skyline-grp", 272, mask=mmask, filt=rip, op=0.85)
+    s.add(refl)
+
+    sea_grad = s.linear("sea-g", [
+        (0.0, "#084e7a", 0.65),
+        (0.25, "#0284c7", 0.75),
+        (0.65, "#0369a1", 0.9),
+        (1.0, "#0a2542", 0.98),
+    ], x1=0, y1=0, x2=0, y2=1)
+    s.add(el("rect", x=0, y=272, width=640, height=208, fill=sea_grad))
+
+    s.add(glitter(rng, 505, 275, 410, 160, 48, col="#fed7aa", w=1.5))
+    s.add(water_lines(rng, 0, 276, 640, 420, 28, col="#7dd3fc", op=0.35))
+
+    s.add(superyacht(365, 335, 96, flip=False, hull="#ffffff", glass="#13273e", accent="#eab308"))
+    s.add(wake(365, 342, 110, flip=False, op=0.55))
+
+    prom_p = "0,380 180,350 240,480 0,480"
+    s.add(el("polygon", points=prom_p, fill=s.linear("prom-f", [
+        (0, "#ebd9bd"), (0.5, "#d5c09e"), (1, "#9c8665")
+    ])))
+    s.add(el("path", d="M0,380 L180,350 L240,480", stroke=gold, stroke_width=2.5, fill="none"))
+
+    s.add(el("path", d="M0,372 L178,342", stroke=marble, stroke_width=4.5, fill="none"))
+    for px, py in [(18, 376), (52, 369), (88, 362), (124, 355), (160, 348)]:
+        s.add(el("rect", x=px-3, y=py-12, width=6, height=12, fill=marble, stroke="#8c7044", stroke_width=0.6))
+
+    s.add(lamp_post(162, 344, 42, glow_fill="#fffae0", col="#1e293b"))
+    s.add(lamp_post(45, 368, 52, glow_fill="#fffae0", col="#1e293b"))
+
+    s.add(palm(rng, 22, 375, 92, -4, 38, cols=("#1e3a24", "#2e5c36"), trunk_col="#543c26"))
+    s.add(palm(rng, 75, 365, 78, 6, 32, cols=("#254d30", "#3b7044"), trunk_col="#63472d"))
+
+    s.add(person(105, 364, 18, col="#1e293b", rng=rng))
+    s.add(person(114, 364, 17, col="#475569", rng=rng))
+
+    s.body = [f'<g clip-path="url(#{s.id("clip")})">', *s.body, '</g>']
+    return s.render(t.get("hero_art_title", "Illustration of Nova Aurelia's imperial skyline, Sky City spire, and Caribbean lagoon"))
+
+
+# ==============================================================================
 # LOCALIZED DICTIONARY AND PAGE INJECTION
 # ==============================================================================
 LABELS = {
     "en": {
+        "hero_art_title": "Illustration of Nova Aurelia's imperial skyline, Sky City spire, and Caribbean lagoon",
         "skyline_title": "Nova Aurelia Imperial Lagoon Panorama",
         "sky_city": "Sky City (956 m)",
         "infinity_tower": "Infinity Tower",
@@ -1672,6 +1774,7 @@ LABELS = {
         "night_title": "The Bioluminescent Smart Lagoon",
     },
     "hu": {
+        "hero_art_title": "Illusztráció: Nova Aurelia birodalmi sziluettje, a Sky City torony és a karibi lagúna",
         "skyline_title": "Nova Aurelia Császári Lagúna Panoráma",
         "sky_city": "Sky City (956 m)",
         "infinity_tower": "Infinity Torony",
@@ -1708,6 +1811,7 @@ LABELS = {
 }
 
 BUILDERS = {
+    "hero-art": build_hero_art,
     "skyline": build_skyline,
     "pyramid": build_pyramid,
     "undersea-hub": build_undersea_hub,
