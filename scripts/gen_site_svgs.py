@@ -11,6 +11,7 @@ Formats all updated HTML files with 4-space indentation and zero blank lines.
 
 from __future__ import annotations
 
+import argparse
 import math
 import re
 import sys
@@ -187,10 +188,15 @@ def window_grid(x0: float, y0: float, w: float, h: float, cols: int, rows: int, 
 # ==============================================================================
 # 1. SKI PARADISE SVGS
 # ==============================================================================
-def build_ski_hero() -> str:
-    """Hero 640x540: Twilight Alpine Panorama of Pico Soberano, Cryo-Dome, Gondola & Grand Palace."""
+def build_ski_hero(lang: str = "hu") -> str:
+    """Hero 640x480: Twilight Alpine Panorama of Pico Soberano, Cryo-Dome, Gondola & Grand Palace."""
+    aria = (
+        "Illustration of Waikiki Ski Paradise alpine peaks, gondola and Grand Palace"
+        if lang == "en"
+        else "Illusztráció: A Waikiki Síparadicsom alpesi csúcsai, felvonója és a Grand Palace"
+    )
     o = [
-        '<svg class="ill" viewBox="0 0 640 540">',
+        f'<svg class="ill" viewBox="0 0 640 480" role="img" aria-label="{aria}">',
         "<defs>",
         '<linearGradient id="skiHeroSky" x1="0" y1="0" x2="0" y2="1">',
         '<stop offset="0%" stop-color="#07162c" />',
@@ -218,78 +224,90 @@ def build_ski_hero() -> str:
         '<stop offset="45%" stop-color="#f59e0b" stop-opacity="0.45" />',
         '<stop offset="100%" stop-color="#f59e0b" stop-opacity="0" />',
         "</radialGradient>",
+        '<clipPath id="skiHeroClip">',
+        '<rect width="640" height="480" rx="28" />',
+        "</clipPath>",
         "</defs>",
-        '<rect width="640" height="540" rx="28" fill="url(#skiHeroSky)" />',
+        '<g clip-path="url(#skiHeroClip)">',
+        '<rect width="640" height="480" rx="28" fill="url(#skiHeroSky)" />',
         # Stars and aurora glow
         '<g fill="#ffffff" opacity="0.8">',
-        '<circle cx="64" cy="48" r="1.4" class="twinkle" />',
-        '<circle cx="142" cy="34" r="1.8" class="twinkle" />',
-        '<circle cx="235" cy="62" r="1.2" class="twinkle" />',
-        '<circle cx="318" cy="28" r="1.6" class="twinkle" />',
-        '<circle cx="412" cy="44" r="1.3" class="twinkle" />',
-        '<circle cx="568" cy="52" r="1.7" class="twinkle" />',
-        '<circle cx="515" cy="26" r="1.2" class="twinkle" />',
+        '<circle cx="64" cy="42" r="1.4" class="twinkle" />',
+        '<circle cx="142" cy="30" r="1.8" class="twinkle" />',
+        '<circle cx="235" cy="54" r="1.2" class="twinkle" />',
+        '<circle cx="318" cy="24" r="1.6" class="twinkle" />',
+        '<circle cx="412" cy="38" r="1.3" class="twinkle" />',
+        '<circle cx="568" cy="46" r="1.7" class="twinkle" />',
+        '<circle cx="515" cy="22" r="1.2" class="twinkle" />',
         "</g>",
         # Alpenglow sun disk behind eastern col
-        '<circle cx="485" cy="158" r="95" fill="url(#skiSunGlow)" />',
-        '<circle cx="485" cy="158" r="28" fill="#fffbeb" opacity="0.95" />',
+        '<circle cx="485" cy="142" r="85" fill="url(#skiSunGlow)" />',
+        '<circle cx="485" cy="142" r="26" fill="#fffbeb" opacity="0.95" />',
     ]
     # Distant range
-    o += draw_mountain_3d((115, 168), 125, 135, 360, "#4a78a6", "#1e3f66", "#f1f5f9", "#93c5fd", 0.55, seed=2.1)
-    o += draw_mountain_3d((535, 152), 145, 125, 360, "#4a78a6", "#1b3a5c", "#fff7ed", "#93c5fd", 0.58, seed=5.4)
+    o += draw_mountain_3d((115, 148), 125, 135, 320, "#4a78a6", "#1e3f66", "#f1f5f9", "#93c5fd", 0.55, seed=2.1)
+    o += draw_mountain_3d((535, 136), 145, 125, 320, "#4a78a6", "#1b3a5c", "#fff7ed", "#93c5fd", 0.58, seed=5.4)
     # Main Pico Soberano (center-left) & Monte Rosa (center-right)
     o += draw_mountain_3d(
-        (265, 76), 195, 205, 375, "#2b5c8f", "#0f2c52", "url(#skiPeakLit)", "url(#skiPeakShade)", 0.68, seed=8.2, rock_col="#091d36"
+        (265, 68), 195, 205, 335, "#2b5c8f", "#0f2c52", "url(#skiPeakLit)", "url(#skiPeakShade)", 0.68, seed=8.2, rock_col="#091d36"
     )
     o += draw_mountain_3d(
-        (435, 118), 155, 185, 375, "#31669d", "#12325c", "url(#skiPeakLit)", "url(#skiPeakShade)", 0.64, seed=11.7, rock_col="#0c2240"
+        (435, 108), 155, 185, 335, "#31669d", "#12325c", "url(#skiPeakLit)", "url(#skiPeakShade)", 0.64, seed=11.7, rock_col="#0c2240"
     )
-    # Summit Observatory & Cryo-Beacon on Pico Soberano (265, 76)
+    # Summit Observatory & Cryo-Beacon on Pico Soberano (265, 68)
     o += [
-        '<g transform="translate(265, 76)">',
+        '<g transform="translate(265, 68)">',
         '<rect x="-14" y="-4" width="28" height="6" rx="1.5" fill="#1e293b" stroke="#fbbf24" stroke-width="0.9" />',
         '<path d="M-10,-4 A10,9 0 0,1 10,-4 Z" fill="#38bdf8" stroke="#ffffff" stroke-width="1" />',
         '<line x1="0" y1="-13" x2="0" y2="-24" stroke="#fbbf24" stroke-width="1.6" />',
         '<circle cx="0" cy="-25" r="3" fill="#f97316" class="pulse" />',
         "</g>",
-        # Monte Rosa Glass Dome on (435, 118)
-        '<g transform="translate(435, 118)">',
+        # Monte Rosa Glass Dome on (435, 108)
+        '<g transform="translate(435, 108)">',
         '<ellipse cx="0" cy="0" rx="16" ry="4" fill="#0f172a" />',
         '<path d="M-13,-1 A13,11 0 0,1 13,-1 Z" fill="#7dd3fc" opacity="0.88" stroke="#fde68a" stroke-width="1" />',
         "</g>",
         # Sweeping snow slopes & groomed pistes in mid/foreground
-        '<path d="M0,345 Q165,318 335,342 T640,332 L640,540 L0,540 Z" fill="url(#skiSlopeGrad)" />',
-        '<path d="M0,415 Q210,382 420,412 T640,398 L640,540 L0,540 Z" fill="#e2e8f0" opacity="0.85" />',
-        '<path d="M0,468 Q260,442 640,465 L640,540 L0,540 Z" fill="#cbd5e1" opacity="0.7" />',
+        '<path d="M0,305 Q165,282 335,304 T640,295 L640,480 L0,480 Z" fill="url(#skiSlopeGrad)" />',
+        '<path d="M0,368 Q210,338 420,366 T640,352 L640,480 L0,480 Z" fill="#e2e8f0" opacity="0.85" />',
+        '<path d="M0,418 Q260,392 640,415 L640,480 L0,480 Z" fill="#cbd5e1" opacity="0.7" />',
         # Carved ski pistes from summit to valley
-        '<path d="M265,86 C235,148 288,210 232,278 C178,342 268,395 195,468" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity="0.78" />',
-        '<path d="M265,86 C235,148 288,210 232,278 C178,342 268,395 195,468" fill="none" stroke="#38bdf8" stroke-width="1.6" stroke-dasharray="5 5" class="dash" />',
-        '<path d="M435,124 C405,178 448,235 395,295 C345,352 418,405 375,462" fill="none" stroke="#ffffff" stroke-width="5.5" stroke-linecap="round" opacity="0.72" />',
-        '<path d="M435,124 C405,178 448,235 395,295 C345,352 418,405 375,462" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="5 5" />',
-        # Aerial Gondola Cableway & Pylons
-        '<path d="M82,428 Q262,258 432,120" fill="none" stroke="#0f172a" stroke-width="1.6" opacity="0.8" />',
-        '<path d="M82,432 Q262,262 432,124" fill="none" stroke="#334155" stroke-width="1.1" opacity="0.65" />',
-        # Support pylon at (228, 304)
-        '<g stroke="#1e293b" stroke-width="1.6" fill="none">',
-        '<line x1="224" y1="332" x2="228" y2="286" />',
-        '<line x1="232" y1="332" x2="228" y2="286" />',
-        '<line x1="218" y1="286" x2="238" y2="286" />',
+        '<path d="M265,78 C235,138 288,195 232,258 C178,318 268,368 195,435" fill="none" stroke="#ffffff" stroke-width="6.5" stroke-linecap="round" opacity="0.78" />',
+        '<path d="M265,78 C235,138 288,195 232,258 C178,318 268,368 195,435" fill="none" stroke="#38bdf8" stroke-width="1.6" stroke-dasharray="5 5" class="dash" />',
+        '<path d="M435,114 C405,165 448,218 395,272 C345,325 418,372 375,425" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.72" />',
+        '<path d="M435,114 C405,165 448,218 395,272 C345,325 418,372 375,425" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="5 5" />',
+        # Aerial Gondola Cableway & Base Station
+        '<g transform="translate(74, 376)">',
+        '<rect x="-12" y="-8" width="24" height="18" rx="2" fill="#1e293b" stroke="#64748b" stroke-width="1" />',
+        '<polygon points="-14,-8 0,-20 14,-8" fill="#c95a41" stroke="#fde68a" stroke-width="1" />',
         "</g>",
-        # Gondola Cabins
-        '<g class="bob" transform="translate(168, 344)">',
+        '<path d="M74,360 Q256,234 435,110" fill="none" stroke="#0f172a" stroke-width="1.6" opacity="0.8" />',
+        '<path d="M74,364 Q256,238 435,114" fill="none" stroke="#334155" stroke-width="1.1" opacity="0.65" />',
+        # Support pylon at (238, 270)
+        '<g stroke="#1e293b" stroke-width="1.6" fill="none">',
+        '<line x1="234" y1="296" x2="238" y2="252" />',
+        '<line x1="242" y1="296" x2="238" y2="252" />',
+        '<line x1="228" y1="252" x2="248" y2="252" />',
+        "</g>",
+        # Gondola Cabins (nested in outer g with translate so class="bob" does not reset translate)
+        '<g transform="translate(152, 304)">',
+        '<g class="bob">',
         '<line x1="0" y1="-12" x2="0" y2="0" stroke="#0f172a" stroke-width="1.5" />',
         '<rect x="-11" y="0" width="22" height="14" rx="4" fill="#c95a41" stroke="#ffffff" stroke-width="1" />',
         '<rect x="-7" y="3" width="14" height="6" rx="1.5" fill="#e0f2fe" />',
         "</g>",
-        '<g class="bob" transform="translate(318, 212)">',
+        "</g>",
+        '<g transform="translate(332, 178)">',
+        '<g class="bob">',
         '<line x1="0" y1="-11" x2="0" y2="0" stroke="#0f172a" stroke-width="1.4" />',
         '<rect x="-9" y="0" width="18" height="12" rx="3.5" fill="#0f2c52" stroke="#fbbf24" stroke-width="1" />',
         '<rect x="-6" y="2.5" width="12" height="5" rx="1" fill="#bae6fd" />',
         "</g>",
+        "</g>",
     ]
-    # Grand Alpine Palace & Thermal Infinity Pool in foreground right (x=370..575, y=385..475)
+    # Grand Alpine Palace & Thermal Infinity Pool in foreground right
     o += [
-        '<g transform="translate(385, 388)">',
+        '<g transform="translate(385, 342)">',
         # Stone terrace & steaming infinity pool
         '<path d="M-25,62 L185,62 L198,84 L-38,84 Z" fill="#475569" stroke="#94a3b8" stroke-width="1" />',
         '<polygon points="-18,66 115,66 122,79 -24,79" fill="#38bdf8" stroke="#e0f2fe" stroke-width="1.2" />',
@@ -317,15 +335,17 @@ def build_ski_hero() -> str:
         window_grid(102, 16, 12, 38, 2, 4, "#fde68a", 0.92),
         "</g>",
     ]
-    # Layered Alpine Spruce Forest across mid-ground and foreground
+    # Layered Alpine Spruce Forest
     for sx, sy, sc in [
-        (42, 388, 0.85), (68, 396, 1.05), (96, 392, 0.9), (128, 404, 1.15), (156, 398, 0.95),
-        (292, 412, 0.9), (322, 418, 1.1), (348, 414, 0.85),
-        (578, 402, 1.0), (606, 412, 1.2), (28, 465, 1.35), (62, 478, 1.5), (105, 472, 1.25),
-        (595, 475, 1.4),
+        (42, 348, 0.85), (68, 356, 1.05), (96, 352, 0.9), (128, 364, 1.15), (156, 358, 0.95),
+        (292, 372, 0.9), (322, 378, 1.1), (348, 374, 0.85),
+        (578, 362, 1.0), (606, 372, 1.2), (28, 425, 1.35), (62, 438, 1.5), (105, 432, 1.25),
+        (595, 435, 1.4),
     ]:
         o += draw_spruce(sx, sy, sc, snow=True)
 
+    o.append("</g>")
+    o.append('<rect width="640" height="480" rx="28" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" />')
     o.append("</svg>")
     return "".join(o)
 
@@ -1556,6 +1576,10 @@ def replace_svgs_by_index(html: str, replacements: dict[int, str], page_label: s
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Generate site illustrations")
+    parser.add_argument("--page", choices=["ski", "travel", "infra", "all"], default="ski", help="Target page to generate (default: ski)")
+    args = parser.parse_args()
+
     try:
         from build_pages import format_and_remove_empty_lines
     except ImportError:
@@ -1563,37 +1587,40 @@ def main() -> None:
         from build_pages import format_and_remove_empty_lines
 
     for lang in ("en", "hu"):
-        # 1. ski-paradise.html (indices: [1] Hero, [4] Height Chart, [5..9] 5 Resort Cards)
-        ski_path = ROOT / lang / "ski-paradise.html"
-        ski_repl = {
-            1: build_ski_hero(),
-            4: build_ski_height_chart(lang),
-            **{5 + i: build_ski_resort_card(i) for i in range(5)},
-        }
-        ski_html = replace_svgs_by_index(ski_path.read_text(encoding="utf-8"), ski_repl, f"{lang}/ski-paradise.html")
-        ski_path.write_text(format_and_remove_empty_lines(ski_html), encoding="utf-8")
-        print(f"Updated {ski_path.relative_to(ROOT)} (Hero + Height Chart + 5 Resort Cards)")
+        if args.page in ("ski", "all"):
+            # 1. ski-paradise.html (indices: [1] Hero, [4] Height Chart, [5..9] 5 Resort Cards)
+            ski_path = ROOT / lang / "ski-paradise.html"
+            ski_repl = {
+                1: build_ski_hero(lang),
+                4: build_ski_height_chart(lang),
+                **{5 + i: build_ski_resort_card(i) for i in range(5)},
+            }
+            ski_html = replace_svgs_by_index(ski_path.read_text(encoding="utf-8"), ski_repl, f"{lang}/ski-paradise.html")
+            ski_path.write_text(format_and_remove_empty_lines(ski_html), encoding="utf-8")
+            print(f"Updated {ski_path.relative_to(ROOT)} (Hero + Height Chart + 5 Resort Cards)")
 
-        # 2. travel-guide.html (indices: [1] Hero, [2..16] 15 Luxury Hotel & Sanctuary Cards)
-        tg_path = ROOT / lang / "travel-guide.html"
-        tg_repl = {
-            1: build_travel_hero(lang),
-            **{2 + i: build_travel_card(i) for i in range(15)},
-        }
-        tg_html = replace_svgs_by_index(tg_path.read_text(encoding="utf-8"), tg_repl, f"{lang}/travel-guide.html")
-        tg_path.write_text(format_and_remove_empty_lines(tg_html), encoding="utf-8")
-        print(f"Updated {tg_path.relative_to(ROOT)} (Hero + 15 Hotel & Sanctuary Cards)")
+        if args.page in ("travel", "all"):
+            # 2. travel-guide.html (indices: [1] Hero, [2..16] 15 Luxury Hotel & Sanctuary Cards)
+            tg_path = ROOT / lang / "travel-guide.html"
+            tg_repl = {
+                1: build_travel_hero(lang),
+                **{2 + i: build_travel_card(i) for i in range(15)},
+            }
+            tg_html = replace_svgs_by_index(tg_path.read_text(encoding="utf-8"), tg_repl, f"{lang}/travel-guide.html")
+            tg_path.write_text(format_and_remove_empty_lines(tg_html), encoding="utf-8")
+            print(f"Updated {tg_path.relative_to(ROOT)} (Hero + 15 Hotel & Sanctuary Cards)")
 
-        # 3. infrastructure.html (indices: [1] Hero, [3] Height Chart, [4..13] 10 Landmark Architecture Cards)
-        inf_path = ROOT / lang / "infrastructure.html"
-        inf_repl = {
-            1: build_infra_hero(lang),
-            3: build_infra_height_chart(lang),
-            **{4 + i: build_infra_card(i) for i in range(10)},
-        }
-        inf_html = replace_svgs_by_index(inf_path.read_text(encoding="utf-8"), inf_repl, f"{lang}/infrastructure.html")
-        inf_path.write_text(format_and_remove_empty_lines(inf_html), encoding="utf-8")
-        print(f"Updated {inf_path.relative_to(ROOT)} (Hero + Height Chart + 10 Landmark Cards)")
+        if args.page in ("infra", "all"):
+            # 3. infrastructure.html (indices: [1] Hero, [3] Height Chart, [4..13] 10 Landmark Architecture Cards)
+            inf_path = ROOT / lang / "infrastructure.html"
+            inf_repl = {
+                1: build_infra_hero(lang),
+                3: build_infra_height_chart(lang),
+                **{4 + i: build_infra_card(i) for i in range(10)},
+            }
+            inf_html = replace_svgs_by_index(inf_path.read_text(encoding="utf-8"), inf_repl, f"{lang}/infrastructure.html")
+            inf_path.write_text(format_and_remove_empty_lines(inf_html), encoding="utf-8")
+            print(f"Updated {inf_path.relative_to(ROOT)} (Hero + Height Chart + 10 Landmark Cards)")
 
 
 if __name__ == "__main__":
