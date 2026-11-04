@@ -42,15 +42,6 @@
     filter: drop-shadow(0 0 10px rgba(245, 196, 110, 0.5));
 }
 
-.nat-zone-badge {
-    cursor: pointer;
-    transition: transform 0.25s var(--ease-out), opacity 0.25s var(--ease-out);
-}
-
-.nat-zone-badge:hover {
-    transform: translateY(-2px);
-    opacity: 0.95;
-}
 
 /* Section Feature Split Layout */
 .nature-feature-split {

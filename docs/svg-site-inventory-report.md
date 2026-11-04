@@ -139,7 +139,6 @@ Complex sector infographics are generated as separate `-en.svg` and `-hu.svg` ve
 | **Sovereign Rate Corridor** | `icons/banking/rates-en.svg`<br/>`icons/banking/rates-hu.svg` | [banking-system.html](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/en/banking-system.html) | [gen_banking_svgs.py](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/scripts/svg_generators/gen_banking_svgs.py) | Policy rate corridor, liquidity bounds, overnight repo rates, and reserve tranche bands. |
 | **Interplanetary Space Station** | `icons/space/station-en.svg`<br/>`icons/space/station-hu.svg` | [space-research.html](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/en/space-research.html) | [gen_space_svgs.py](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/scripts/svg_generators/gen_space_svgs.py) | Orbital Deep Space Gateway: solar arrays, centrifuge habitation rings, and docking nodes. |
 | **Interplanetary Corridor** | `icons/space/corridor-en.svg`<br/>`icons/space/corridor-hu.svg` | [space-research.html](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/en/space-research.html) | [gen_space_svgs.py](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/scripts/svg_generators/gen_space_svgs.py) | Orbital trajectory transfer ellipses, Lagrange points, and Lunar/Mars transit corridors. |
-| **Sea-to-Summit Biome Transect**| `icons/nature/transect-en.svg`<br/>`icons/nature/transect-hu.svg` | [nature.html](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/en/nature.html) | [gen_nature_svgs.py](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/scripts/svg_generators/gen_nature_svgs.py) | Elevation cross-section showing 8 ecological biomes from Caribbean coral reefs to Andean glaciated peaks. |
 
 ---
 
@@ -156,7 +155,8 @@ Fixed standalone vector files stored permanently in `icons/` and referenced via 
    - [icons/nova-aurelia/skyline.svg](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/icons/nova-aurelia/skyline.svg): Metropolis skyline panorama (1600x600).
    - [icons/nova-aurelia/pyramid.svg](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/icons/nova-aurelia/pyramid.svg): Monumental 450m Arcology Mega Pyramid (1200x700).
    - [icons/nova-aurelia/undersea-hub.svg](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/icons/nova-aurelia/undersea-hub.svg): Submerged transit and oceanographic hub (1200x700).
-3. **Nature Biomes & Vignettes** ([icons/nature/](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/icons/nature/)):
+3. **Nature Biomes & Transect** ([icons/nature/](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/icons/nature/)):
+   - [icons/nature/transect.svg](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/icons/nature/transect.svg): Sea-to-Summit Biome Transect elevation cross-section (1600x600) uniting 8 national ecological biomes without text labels.
    - 15 standalone SVG files representing specific national ecosystems: `reef.svg`, `rainforest.svg`, `highlands.svg`, `mogotes.svg`, `enriquillo.svg`, `pantanal.svg`, `cerrado.svg`, `lencois.svg`, `caatinga.svg`, `bluehole.svg`, `tepui.svg`, `cataracts.svg`, `elnicho.svg`, `chapada.svg`, `anavilhanas.svg`.
 4. **Aerospace Launch Vehicles** ([icons/rockets/](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/icons/rockets/)):
    - 12 technical rocket silhouettes: `rocket-bfr.svg`, `rocket-delta-3a.svg`, `rocket-delta-3b.svg`, `rocket-delta-4.svg`, `rocket-falcon-heavy.svg`, `rocket-falcon.svg`, `rocket-saturn-nova.svg`, `rocket-saturn-x.svg`, `rocket-shuttle-v2.svg`, `rocket-shuttle.svg`, `rocket-vulcan.svg`, `rocket-ariane.svg`.
@@ -252,7 +252,7 @@ The following table provides the exhaustive dimensional catalog for every vector
 | **Sovereign Rate Corridor** | `icons/banking/rates-en.svg`<br/>`icons/banking/rates-hu.svg` | `0 0 1160 440` | `29:11` (~2.636:1) | Linked via `<img>`<br/>HTML tag: `width="1160" height="440"` | Inner card frame `border-radius: var(--radius-xl)` | `linked, generated` |
 | **Deep Space Station** | `icons/space/station-en.svg`<br/>`icons/space/station-hu.svg` | `0 0 1160 520` | `29:13` (~2.231:1) | Linked via `<img>`<br/>HTML tag: `width="1160" height="520"` | Inner card frame `border-radius: var(--radius-xl)` | `linked, generated` |
 | **Interplanetary Corridor** | `icons/space/corridor-en.svg`<br/>`icons/space/corridor-hu.svg` | `0 0 1160 480` | `29:12` (~2.417:1) | Linked via `<img>`<br/>HTML tag: `width="1160" height="480"` | Inner card frame `border-radius: var(--radius-xl)` | `linked, generated` |
-| **Sea-to-Summit Transects** | `icons/nature/transect-en.svg`<br/>`icons/nature/transect-hu.svg` | `0 0 1600 600` | `8:3` (2.667:1) | Linked via `<img>`<br/>HTML tag: `width="1600" height="600"` | Section wrapper rounded | `linked, generated` |
+| **Sea-to-Summit Transect** | `icons/nature/transect.svg` | `0 0 1600 600` | `8:3` (2.667:1) | Linked via `<img>`<br/>HTML tag: `width="1600" height="600"` | Section wrapper rounded | `linked, not generated` |
 | **Standard Biome Vignettes** | 12 files in `icons/nature/` (`anavilhanas`, `bluehole`, `caatinga`, `cataracts`, `cerrado`, `chapada`, `elnicho`, `enriquillo`, `lencois`, `mogotes`, `pantanal`, `tepui`) | `0 0 480 300` | `8:5` (16:10, 1.600:1) | Linked via `<img>`<br/>HTML tag: `width="480" height="300"`<br/>Grid card thumbnail | Card container `border-radius: var(--radius-m)` | `linked, generated` |
 | **Panoramic Biome Landscapes** | `icons/nature/highlands.svg`<br/>`icons/nature/reef.svg`<br/>`icons/nature/rainforest.svg` | Highlands: `0 0 1200 700`<br/>Reef / Rainforest: `0 0 1200 720` | `12:7` (~1.714:1)<br/>`5:3` (1.667:1) | Linked via `<img>`<br/>Wide feature section illustration | Section container rounded | `linked, generated` |
 | **Nova Aurelia Landmarks** | `icons/nova-aurelia/skyline.svg`<br/>`icons/nova-aurelia/pyramid.svg`<br/>`icons/nova-aurelia/undersea-hub.svg` | Skyline: `0 0 1600 600`<br/>Pyramid / Hub: `0 0 1200 700` | `8:3` (2.667:1)<br/>`12:7` (~1.714:1) | Linked via `<img>`<br/>Feature showcase panels | Showcase card rounded | `linked, fix file` |
@@ -313,7 +313,7 @@ scripts/svg_generators/
 ├── gen_plane.py               # Boeing 7107-B cutaway deckplan localization & injection
 ├── gen_banking_svgs.py        # Banking tripartite network and rate corridor SVGs
 ├── gen_space_svgs.py          # Space station and interplanetary corridor SVGs
-└── gen_nature_svgs.py         # 15 Nature biome illustrations and transects
+└── gen_nature_svgs.py         # 15 Nature biome illustrations
 ```
 
 ### Script Execution Reference

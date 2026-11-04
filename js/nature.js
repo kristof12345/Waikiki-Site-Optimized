@@ -52,11 +52,9 @@
 
     function initRealmHotspots() {
         const realmZones = Array.from(document.querySelectorAll('.nat-realm-zone'));
-        const zoneBadges = Array.from(document.querySelectorAll('.nat-zone-badge'));
         const provinceCards = Array.from(document.querySelectorAll('.province-card'));
 
-        const allHotspots = [...realmZones, ...zoneBadges];
-        if (!allHotspots.length) return;
+        if (!realmZones.length) return;
 
         function highlightRealm(realmName) {
             realmZones.forEach(zone => {

@@ -7,7 +7,7 @@ SVGs into en/nature.html and hu/nature.html. Every illustration container in
 the pages is marked with data-nature-svg="KEY"; the <svg> inside it is replaced.
 
 Scenes
-  transect     Sea-to-summit cross-section through eight biomes of the nation
+  # transect   (Standalone static file in icons/nature/transect.svg)
   reef         Split-level Caribbean mangrove coast and Jardines coral reef
   rainforest   Amazonian river, canopy strata, emergent kapok trees
   highlands    Brazilia highlands: glacier, paramo, cloud forest, cataract
@@ -1985,30 +1985,6 @@ def build_transect(labels):
         s.add(el("path", d=f"M{n(x - r)},{n(y)} L{n(x - r * 0.6)},{n(y - r * 0.7)} L{n(x + r * 0.5)},{n(y - r * 0.65)} L{n(x + r)},{n(y)}Z",
                  fill="#7a7b75"))
     s.add(condor(1420, 118, 0.75))
-
-    # Interactive Biome Badges
-    lab = []
-    zones = [
-        (165, 0, "waikiki"),
-        (375, 1, "waikiki"),
-        (500, 2, "waikiki"),
-        (712, 3, "amazonia"),
-        (950, 4, "amazonia"),
-        (1130, 5, "brazilia"),
-        (1280, 6, "brazilia"),
-        (1480, 7, "brazilia"),
-    ]
-    for (x, idx, realm) in zones:
-        txt = labels["transect"][idx]
-        w = len(txt) * 6.4 + 24
-        lab.append(g([
-            el("rect", x=x - w / 2, y=H - 46, width=w, height=24, rx=12, fill="#001830", stroke="#f5c46e", stroke_width=0.7, opacity=0.88),
-            el("text", txt, x=x, y=H - 30, text_anchor="middle", fill="#fbf7f0", font_family="Manrope, sans-serif",
-               font_size=11, font_weight=700, letter_spacing="0.08em"),
-        ], class_="nat-zone-badge", data_realm=realm))
-        lab.append(el("path", d=f"M{n(x)},{n(H - 46)} L{n(x)},{n(H - 64)}", stroke="#f5c46e", stroke_width=1, opacity=0.55))
-        lab.append(el("circle", cx=x, cy=H - 64, r=2.2, fill="#f5c46e", opacity=0.8))
-    s.add(g(lab))
     return s.render()
 
 
@@ -3627,7 +3603,7 @@ LABELS = {
 }
 
 BUILDERS = {
-    "transect": build_transect,
+    # "transect": build_transect,  # Canonical standalone file in icons/nature/transect.svg (linked, not generated)
     "reef": build_reef,
     "rainforest": build_rainforest,
     "highlands": build_highlands,
@@ -3660,7 +3636,6 @@ def update_pages(rendered: dict[str, dict[str, str]]) -> None:
     from build_pages import format_and_remove_empty_lines
 
     dims = {
-        "transect": (1600, 600),
         "reef": (1200, 720),
         "rainforest": (1200, 720),
         "highlands": (1200, 700),
@@ -3673,7 +3648,7 @@ def update_pages(rendered: dict[str, dict[str, str]]) -> None:
         for key in BUILDERS.keys():
             w, h = dims.get(key, default_dim)
             alt_txt = LABELS[lang]["alt"].get(key, "")
-            src_file = f"transect-{lang}.svg" if key == "transect" else f"{key}.svg"
+            src_file = f"{key}.svg"
             img_tag = f'<img class="nature-ill" src="../icons/nature/{src_file}" alt="{html.escape(alt_txt, quote=True)}" width="{w}" height="{h}" loading="lazy" />'
             pattern = re.compile(CONTAINER_RE.format(key=key), re.S)
             match = pattern.search(text)
@@ -3694,16 +3669,9 @@ def main() -> None:
             svg = builder(LABELS[lang])
             validate(svg, key)
             rendered[lang][key] = svg
-        if key == "transect":
-            out_en = OUT_DIR / "transect-en.svg"
-            out_hu = OUT_DIR / "transect-hu.svg"
-            out_en.write_text(rendered["en"][key] + "\n", encoding="utf-8")
-            out_hu.write_text(rendered["hu"][key] + "\n", encoding="utf-8")
-            print(f"Generated {out_en.relative_to(ROOT)} and {out_hu.relative_to(ROOT)}")
-        else:
-            out = OUT_DIR / f"{key}.svg"
-            out.write_text(rendered["en"][key] + "\n", encoding="utf-8")
-            print(f"Generated {out.relative_to(ROOT)} ({len(rendered['en'][key]) / 1024:.1f} KB)")
+        out = OUT_DIR / f"{key}.svg"
+        out.write_text(rendered["en"][key] + "\n", encoding="utf-8")
+        print(f"Generated {out.relative_to(ROOT)} ({len(rendered['en'][key]) / 1024:.1f} KB)")
     if "--no-inject" not in sys.argv:
         update_pages(rendered)
 
