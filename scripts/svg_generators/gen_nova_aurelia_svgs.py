@@ -1844,7 +1844,7 @@ def update_pages(rendered: dict[str, dict[str, str]]) -> None:
             continue
         text = path.read_text(encoding="utf-8")
         for key, svg in rendered[lang].items():
-            if key == "hero-art":
+            if key in ("hero-art", "skyline", "pyramid", "undersea-hub", "archipelago-map"):
                 continue
             pattern = re.compile(CONTAINER_RE.format(key=key), re.S)
             match = pattern.search(text)
