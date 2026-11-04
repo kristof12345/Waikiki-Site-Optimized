@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 640 540" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 640 480" width="100%" height="100%">
     <defs>
         <style>
             .twinkle { animation: illTwinkle 3.2s ease-in-out infinite; }
@@ -15,6 +15,9 @@
                 .twinkle, .pulse, .bob, .dash, animateMotion { animation: none !important; }
             }
         </style>
+        <clipPath id="ski-clip">
+            <rect width="640" height="480" rx="40" />
+        </clipPath>
         <clipPath id="skiCableClip">
             <rect x="70" y="90" width="375" height="360" />
         </clipPath>
@@ -45,7 +48,8 @@
                             <stop offset="100%" stop-color="#f59e0b" stop-opacity="0" />
                         </radialGradient>
     </defs>
-    <rect width="640" height="540" rx="28" fill="url(#skiHeroSky)" />
+    <g clip-path="url(#ski-clip)">
+        <rect width="640" height="480" fill="url(#skiHeroSky)" />
                     <g fill="#ffffff" opacity="0.8">
                         <circle cx="64" cy="48" r="1.4" class="twinkle" />
                         <circle cx="142" cy="34" r="1.8" class="twinkle" />
@@ -107,9 +111,9 @@
                         <ellipse cx="0" cy="0" rx="16" ry="4" fill="#0f172a" />
                         <path d="M-13,-1 A13,11 0 0,1 13,-1 Z" fill="#7dd3fc" opacity="0.88" stroke="#fde68a" stroke-width="1" />
                     </g>
-                    <path d="M0,345 Q165,318 335,342 T640,332 L640,540 L0,540 Z" fill="url(#skiSlopeGrad)" />
-                    <path d="M0,415 Q210,382 420,412 T640,398 L640,540 L0,540 Z" fill="#e2e8f0" opacity="0.85" />
-                    <path d="M0,468 Q260,442 640,465 L640,540 L0,540 Z" fill="#cbd5e1" opacity="0.7" />
+                    <path d="M0,345 Q165,318 335,342 T640,332 L640,480 L0,480 Z" fill="url(#skiSlopeGrad)" />
+                    <path d="M0,415 Q210,382 420,412 T640,398 L640,480 L0,480 Z" fill="#e2e8f0" opacity="0.85" />
+                    <path d="M0,468 Q260,442 640,465 L640,480 L0,480 Z" fill="#cbd5e1" opacity="0.7" />
                     <path d="M265,86 C235,148 288,210 232,278 C178,342 268,395 195,468" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity="0.78" />
                     <path d="M265,86 C235,148 288,210 232,278 C178,342 268,395 195,468" fill="none" stroke="#38bdf8" stroke-width="1.6" stroke-dasharray="5 5" class="dash" />
                     <path d="M435,124 C405,178 448,235 395,295 C345,352 418,405 375,462" fill="none" stroke="#ffffff" stroke-width="5.5" stroke-linecap="round" opacity="0.72" />
@@ -315,4 +319,5 @@
                     <path d="M595,441.7 L588.7,455.9 Q595,458.4 601.3,455.9 Z" fill="#1d6e6a" />
                     <path d="M595,441.7 L590.1,454.1 Q594.1,456.2 597.7,452.8 Z" fill="#f0f9ff" opacity="0.92" />
                     <path d="M588.2,462.7 Q592.8,464.5 598.3,462.1" fill="none" stroke="#e0f2fe" stroke-width="1.8" stroke-linecap="round" opacity="0.8" />
+    </g>
 </svg>

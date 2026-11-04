@@ -1654,7 +1654,7 @@ def build_hero_art(t: dict[str, str]) -> str:
     )
     rip = ripple(s, "rip", fx=0.005, fy=0.085, scale=8)
     mmask = fade_mask(s, "mmask", 0, 275, 640, 205, top=0.55, bottom=0.05)
-    s.raw(f'<clipPath id="{s.id("clip")}"><rect width="640" height="480" rx="28" /></clipPath>')
+    s.raw(f'<clipPath id="{s.id("clip")}"><rect width="640" height="480" rx="40" /></clipPath>')
 
     NT.sky(s, [
         (0.0, "#0a182e"),
@@ -1808,7 +1808,7 @@ LABELS = {
 }
 
 BUILDERS = {
-    "hero-art": build_hero_art,
+    # "hero-art": build_hero_art,  # Canonical standalone file in icons/nova-aurelia/hero-art.svg (linked, not generated)
     "skyline": build_skyline,
     "pyramid": build_pyramid,
     "undersea-hub": build_undersea_hub,
