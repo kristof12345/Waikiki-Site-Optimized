@@ -500,10 +500,6 @@
     .city-ill .bob {
         animation: cityBob 3.8s ease-in-out infinite;
     }
-
-    .city-ill .swim {
-        animation: citySwim 6s ease-in-out infinite;
-    }
 }
 
 @keyframes cityFlowDash {
@@ -518,15 +514,6 @@
     }
     50% {
         transform: translateY(-2.5px);
-    }
-}
-
-@keyframes citySwim {
-    0%, 100% {
-        transform: translateX(0) translateY(0);
-    }
-    50% {
-        transform: translateX(6px) translateY(-2px);
     }
 }
 
