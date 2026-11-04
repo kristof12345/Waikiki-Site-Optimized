@@ -3697,10 +3697,8 @@ def main() -> None:
         if key == "transect":
             out_en = OUT_DIR / "transect-en.svg"
             out_hu = OUT_DIR / "transect-hu.svg"
-            out_std = OUT_DIR / "transect.svg"
             out_en.write_text(rendered["en"][key] + "\n", encoding="utf-8")
             out_hu.write_text(rendered["hu"][key] + "\n", encoding="utf-8")
-            out_std.write_text(rendered["en"][key] + "\n", encoding="utf-8")
             print(f"Generated {out_en.relative_to(ROOT)} and {out_hu.relative_to(ROOT)}")
         else:
             out = OUT_DIR / f"{key}.svg"
