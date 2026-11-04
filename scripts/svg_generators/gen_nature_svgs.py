@@ -7,7 +7,6 @@ SVGs into en/nature.html and hu/nature.html. Every illustration container in
 the pages is marked with data-nature-svg="KEY"; the <svg> inside it is replaced.
 
 Scenes
-  # transect   (Standalone static file in icons/nature/transect.svg)
   reef         Split-level Caribbean mangrove coast and Jardines coral reef
   rainforest   Amazonian river, canopy strata, emergent kapok trees
   highlands    Brazilia highlands: glacier, paramo, cloud forest, cataract
@@ -1693,302 +1692,6 @@ def light_rays(s: Scene, x0, x1, y0, y1, count, op=0.18):
 
 
 # ==============================================================================
-# SCENE: SEA-TO-SUMMIT TRANSECT
-# ==============================================================================
-def build_transect(labels):
-    s = Scene("transect", 1600, 600, 1999)
-    rng = s.rng
-    W, H = s.w, s.h
-    s.blur("mist", 9)
-    s.blur("soft", 3)
-    sky(s, [(0, "#6ba8d9"), (0.42, "#b4d9ef"), (0.78, "#dfeef5"), (1, "#f6efe1")])
-    sun(s, 1180, 92, 26)
-    for cx, cy, w in ((175, 88, 175), (555, 68, 145), (900, 118, 200), (1355, 58, 160)):
-        s.add(cloud(rng, cx, cy, w))
-
-    # Distant cordillera across the right half
-    far, _ = mountain(s, "far", [(620, 365), (700, 322), (760, 295), (830, 266), (925, 296), (1055, 226), (1175, 276),
-                                 (1285, 186), (1415, 146), (1500, 168), (1600, 136)],
-                      425, "#9cb5cc", shade="#5f7996", shade_op=0.35, snow=212, rough=11)
-    s.add(far)
-    s.add(mist(s, 1080, 310, 260, 18, op=0.45))
-
-    # Continuous topographic ground profile from sea floor (x=0) to Andean summit foothills (x=1600)
-    # Recessed basins for the Caribbean Sea (0..368), Amazon River (685..805), Pantanal (855..1045), and Cataract Pool (1260..1295)
-    keys = [
-        (0, 556), (70, 546), (150, 552), (235, 534), (295, 502),
-        (335, 452), (368, 412), (402, 392), (430, 385), (560, 385),
-        (620, 382), (682, 383), (712, 395), (750, 397), (785, 394), (808, 383),
-        (852, 384), (882, 396), (950, 399), (1018, 396), (1048, 384),
-        (1110, 372), (1175, 360), (1228, 352), (1258, 354), (1285, 354),
-        (1302, 304), (1345, 302), (1415, 294), (1505, 284), (1600, 276),
-    ]
-    terrain = interp(keys)
-
-    # Andes massif on the right with cirque glacier seated in the high saddle and blending into the alpine páramo
-    andes, _ = mountain(s, "andes", [(1310, 320), (1362, 244), (1405, 178), (1438, 142), (1475, 96), (1512, 146), (1548, 114), (1600, 162)],
-                        325, "#786454", shade="#24202c", shade_op=0.44, snow=168, rough=10)
-    s.add(andes)
-    # Mid-ground vegetated Yungas / cloud-forest foothill ridge bridging Cerrado -> Cataracts -> Andes massif
-    foothill, _ = hill(s, [(1165, 366), (1225, 336), (1275, 298), (1328, 268), (1372, 256), (1425, 294)],
-                       370, "#4f6e48", rough=6)
-    s.add(foothill)
-    # Realistic branching alpine cirque & valley glacier descending from the snow saddle into a turquoise moraine tarn
-    glac_grad = s.linear("tr_glac", [(0, "#f5fafe"), (0.55, "#d4eaf7"), (1, "#8fc0de")])
-    glac_poly = [
-        (1474, 108), (1492, 134), (1512, 144), (1536, 124), (1544, 136),
-        (1522, 168), (1496, 204), (1474, 244), (1454, 276), (1440, 293),
-        (1414, 294), (1428, 268), (1448, 232), (1462, 192), (1468, 148),
-    ]
-    s.add(el("path", d=smooth(glac_poly, closed=True), fill=glac_grad, opacity=0.95))
-    # 3D blue-ice serac shading & dark rock lateral/medial moraines
-    s.add(el("path", d="M1512,144 L1536,124 L1544,136 L1522,168 L1496,204 L1474,244 L1454,276 L1440,293 L1430,293 L1462,235 L1492,175Z",
-             fill="#78adc9", opacity=0.48))
-    s.add(el("path", d="M1468,148 Q1460,195 1444,238 Q1428,270 1414,294 M1524,164 Q1495,205 1472,246 Q1454,276 1442,293",
-             stroke="#594d43", stroke_width=2.2, fill="none", opacity=0.65))
-    s.add(el("path", d="M1510,145 Q1488,185 1465,232", stroke="#695c50", stroke_width=1.3, fill="none", opacity=0.55))
-    s.add(el("path", d="M1464,178 Q1482,186 1500,178 M1452,208 Q1470,218 1486,208 M1438,242 Q1455,252 1470,242 M1425,270 Q1440,278 1454,270",
-             stroke="#4282a8", stroke_width=1.1, fill="none", opacity=0.72))
-    # Proglacial turquoise moraine tarn at glacier toe (1426, 294)
-    s.add(el("ellipse", cx=1426, cy=294, rx=22, ry=4.2, fill="#564e46"))
-    s.add(el("ellipse", cx=1426, cy=293.5, rx=19, ry=3.4, fill="#4dc4d6"))
-    s.add(mist(s, 1465, 242, 135, 16, op=0.52))
-
-    # Caribbean Sea water column (x=0..368, bounded smoothly by the sloping beach shoreline)
-    sea_top = 412
-    sea_poly = [(0, sea_top), (368, sea_top)] + [(x, terrain(x)) for x in range(365, -1, -15)]
-    s.add(el("path", d=P(sea_poly),
-             fill=s.linear("sea", [(0, "#35b8d4"), (0.35, "#1b89b0"), (0.75, "#105882"), (1, "#083152")])))
-    s.add(el("path", d=smooth([(x, sea_top + 2 * math.sin(x / 18)) for x in range(0, 369, 14)]) + f" L368,{sea_top - 3} L0,{sea_top - 3}Z",
-             fill="#a8e8f2", opacity=0.78))
-    s.add(light_rays(s, 0, 310, sea_top, 545, 8, op=0.20))
-
-    # Continuous continental & marine lithosphere cross-section (zero vertical cut between sea and land!)
-    land_pts = [(x, terrain(x)) for x in range(0, 1601, 8)]
-    s.add(el("path", d=smooth(land_pts) + f" L1600,{H} L0,{H}Z", fill=s.linear("land", [(0, "#8f6e48"), (1, "#4d3826")])))
-
-    # Smooth subsurface geological strata following a damped baseline so surface cliffs don't create spikes
-    def base_prof(x):
-        if x < 368:
-            return 556 - 156 * ((x / 368) ** 1.4)
-        if x < 1050:
-            return 400 - 12 * math.sin((x - 368) / 682 * math.pi)
-        return 400 - 110 * (((x - 1050) / 550) ** 1.25)
-
-    strata = []
-    for k, (col, amp) in enumerate((("#75573a", 6), ("#634830", 8), ("#523a27", 6), ("#402c1e", 5))):
-        pts = [(x, max(terrain(x) + 14 + k * 8, base_prof(x) + 26 + k * 36 + amp * math.sin(x / 75 + k * 1.1)))
-               for x in range(0, 1601, 20)]
-        strata.append(el("path", d=smooth(pts) + f" L1600,{H} L0,{H}Z", fill=col))
-    # Karst limestone subterranean cave system & stalactites under mogotes (x=440..555)
-    strata.append(el("path", d="M442,425 Q468,412 495,422 Q525,410 548,426 Q535,442 495,438 Q460,442 442,425Z", fill="#2a1f18", opacity=0.65))
-    strata.append(el("path", d="M458,418 l2,9 l2,-9 M480,419 l2,11 l2,-11 M518,416 l2,10 l2,-10 M534,420 l1.5,8 l1.5,-8", fill="#9c9684", opacity=0.6))
-    s.add(g(strata, opacity=0.92))
-
-    # ==========================================================================
-    # CONTINUOUS BIOME SURFACE BELTS & ECOTONE TRANSITIONS (Left -> Right)
-    # ==========================================================================
-
-    # 1. Reef carbonate sand bed & sloping coastal beach berm (x=0..432, tapering smoothly into karst valley)
-    sand_top = [(x, terrain(x)) for x in range(0, 433, 12)]
-    sand_bot = [(432, terrain(432) + 2), (395, terrain(395) + 12), (355, terrain(355) + 18),
-                (295, terrain(295) + 22), (180, 578), (0, 585)]
-    s.add(el("path", d=smooth(sand_top) + " " + " ".join(f"L{n(x)},{n(y)}" for x, y in sand_bot) + "Z",
-             fill=s.linear("reefbed", [(0, "#f0dfb4"), (0.45, "#dfd0a6"), (1, "#a89467")])))
-
-    # 2. Karst terra-rossa valley floor & green pasture transition (x=415..575)
-    karst_top = [(x, terrain(x)) for x in range(415, 576, 10)]
-    karst_bot = [(575, terrain(575) + 3), (540, terrain(540) + 10), (445, terrain(445) + 10), (415, terrain(415) + 2)]
-    s.add(el("path", d=smooth(karst_top) + " " + " ".join(f"L{n(x)},{n(y)}" for x, y in karst_bot) + "Z", fill="#7a4428"))
-
-    # 3. Amazon rainforest humus & mossy floor belt (x=555..875)
-    rf_top = [(x, terrain(x)) for x in range(555, 876, 10)]
-    rf_bot = [(875, terrain(875) + 3), (840, terrain(840) + 11), (585, terrain(585) + 11), (555, terrain(555) + 2)]
-    s.add(el("path", d=smooth(rf_top) + " " + " ".join(f"L{n(x)},{n(y)}" for x, y in rf_bot) + "Z", fill="#34592c"))
-
-    # 4. Pantanal marsh sedge & wetland mud belt (x=850..1060)
-    pan_top = [(x, terrain(x)) for x in range(850, 1061, 10)]
-    pan_bot = [(1060, terrain(1060) + 2), (1025, terrain(1025) + 10), (880, terrain(880) + 10), (850, terrain(850) + 2)]
-    s.add(el("path", d=smooth(pan_top) + " " + " ".join(f"L{n(x)},{n(y)}" for x, y in pan_bot) + "Z", fill="#56783a"))
-
-    # 5. Cerrado golden-ochre savanna topsoil belt (x=1038..1245)
-    cer_top = [(x, terrain(x)) for x in range(1038, 1246, 10)]
-    cer_bot = [(1245, terrain(1245) + 3), (1210, terrain(1210) + 11), (1070, terrain(1070) + 11), (1038, terrain(1038) + 2)]
-    s.add(el("path", d=smooth(cer_top) + " " + " ".join(f"L{n(x)},{n(y)}" for x, y in cer_bot) + "Z", fill="#ab8e44"))
-
-    # 6. Cataracts basalt rock cliff escarpment (x=1235..1345)
-    basalt_pts = [
-        (1235, terrain(1235) + 4), (1258, 355), (1285, 355), (1302, 304), (1345, 302),
-        (1345, 326), (1312, 336), (1292, 366), (1255, 364), (1235, terrain(1235) + 4),
-    ]
-    s.add(el("path", d=P(basalt_pts), fill="#4a433d"))
-    s.add(el("path", d="M1285,355 L1302,304 L1328,303 L1312,336 L1292,366Z", fill="#332e2a"))
-    s.add(el("path", d="M1292,318 L1338,316 M1288,334 L1325,332", stroke="#24201d", stroke_width=1.4, opacity=0.6))
-
-    # 7. Andean alpine páramo & cloud-forest turf belt (x=1320..1600)
-    and_top = [(x, terrain(x)) for x in range(1320, 1601, 12)]
-    and_bot = [(1600, terrain(1600) + 14), (1350, terrain(1350) + 12), (1320, terrain(1320) + 2)]
-    s.add(el("path", d=smooth(and_top) + " " + " ".join(f"L{n(x)},{n(y)}" for x, y in and_bot) + "Z", fill="#7d8548"))
-    # Meltwater stream connecting the glacier toe (1430, 293) along the páramo to the cataract rim (1302, 304)
-    s.add(el("path", d=smooth([(1432, 293), (1395, 298), (1350, 302), (1300, 304)]),
-             stroke="#8ad4e6", stroke_width=3.2, fill="none", stroke_linecap="round", opacity=0.85))
-
-    # ==========================================================================
-    # ZONE DETAILS & ECOTONE FLORA/FAUNA
-    # ==========================================================================
-
-    # Zone 0: Coral Reef Shelf & Seagrass Slope (0-335)
-    s.add(seagrass(rng, 255, 332, 520, 28, 16, "#4d8f3c"))
-    for x, c in ((28, "#e06d53"), (88, "#d4a43c"), (148, "#e89c48"), (208, "#d65c82"), (268, "#e06d53")):
-        s.add(branch_coral(rng, x, terrain(x) + 2, 17, 3, c, 2.6))
-    s.add(brain_coral(rng, 118, terrain(118) + 3, 14), brain_coral(rng, 242, terrain(242) + 3, 12, "#c29438"))
-    s.add(sea_fan(rng, 58, terrain(58) + 2, 28), sea_fan(rng, 182, terrain(182) + 2, 24, "#9e4895"))
-    s.add(tube_sponge(168, terrain(168) + 2, 18, "#b552bd"), tube_sponge(45, terrain(45) + 2, 15, "#e08238"))
-    s.add(school(rng, 125, 476, 11, 32, 4.2, "#38a6e2", stripe="#f5d438"))
-    s.add(school(rng, 232, 496, 7, 24, 5.0, "#f5c428", stripe="#182636", flip=True))
-    s.add(manta(195, 446, 0.52))
-    s.add(turtle(68, 458, 0.75))
-    s.add(water_lines(rng, 0, 355, sea_top + 2, sea_top + 22, 28, op=0.52))
-
-    # Zone 1: Intertidal Mangroves & Coastal Palms (335-425)
-    # Mangroves rooted across the shoreline (prop roots arching into the shallow water & wet sand)
-    for x in (342, 356, 370, 384):
-        y = terrain(x)
-        yc = min(y - 22, sea_top - 16)
-        roots = " ".join(f"M{n(x)},{n(yc + 6)} Q{n(x + d * 0.65)},{n((yc + y) * 0.5 + 4)} {n(x + d)},{n(y + 6)}"
-                         for d in (-14, -8, -3, 3, 8, 14))
-        s.add(el("path", d=roots, stroke="#523f2b", stroke_width=1.6, fill="none"))
-        s.add(crown(rng, x, yc - 2, 15, ("#24522a", "#387436", "#609c4a"), k=6, flat=0.62))
-    s.add(egret(362, sea_top - 42, 0.55))
-    for x, h, lean in ((398, 68, 9), (414, 56, -7)):
-        s.add(palm(rng, x, terrain(x) + 2, h, lean, 24, nfr=10))
-
-    # Zone 2: Mogotes Karst (425-565) with realistic sheer limestone cliffs, talus cones, & piedmont vegetation transitions
-    for keys_m, r_lit, r_sh in (
-        ([(424, 386), (429, 326), (434, 304), (446, 292), (461, 297), (469, 324), (476, 386)], "#c2beb0", "#7c796c"),
-        ([(502, 386), (508, 316), (515, 290), (530, 280), (547, 288), (556, 318), (564, 386)], "#c8c4b4", "#827e70"),
-    ):
-        x0, x1 = keys_m[0][0], keys_m[-1][0]
-        top = min(p[1] for p in keys_m)
-        mw = x1 - x0
-        d = smooth(keys_m) + "Z"
-        s.add(el("path", d=d, fill=r_lit))
-        cid = s.clip(f"mog{x0}", d)
-        m_in = [
-            # 3D faceted limestone shadow face
-            el("path", d=f"M{n(x0 + mw * 0.46)},{n(top)} L{n(x1)},{n(top)} L{n(x1)},388 L{n(x0 + mw * 0.56)},388 L{n(x0 + mw * 0.42)},{n(top + 42)}Z",
-               fill=r_sh, opacity=0.92),
-            # Mid-tone limestone cliff facet & basal talus apron
-            el("path", d=f"M{n(x0 + mw * 0.24)},{n(top + 16)} L{n(x0 + mw * 0.48)},{n(top + 8)} L{n(x0 + mw * 0.54)},386 L{n(x0 + mw * 0.28)},386Z",
-               fill=mix(r_lit, r_sh, 0.45), opacity=0.55),
-            el("path", d=f"M{n(x0)},386 L{n(x0 + mw * 0.22)},354 L{n(x0 + mw * 0.55)},362 L{n(x0 + mw * 0.82)},348 L{n(x1)},386Z",
-               fill="#455436", opacity=0.55),
-        ]
-        # Natural diagonal karst fissures & solution flutes (no regular prison bars!)
-        fiss = (
-            f"M{n(x0 + mw * 0.22)},{n(top + 18)} Q{n(x0 + mw * 0.26)},345 {n(x0 + mw * 0.20)},382 "
-            f"M{n(x0 + mw * 0.48)},{n(top + 14)} Q{n(x0 + mw * 0.44)},340 {n(x0 + mw * 0.52)},382 "
-            f"M{n(x0 + mw * 0.72)},{n(top + 18)} Q{n(x0 + mw * 0.76)},345 {n(x0 + mw * 0.70)},382 "
-            f"M{n(x0)},{n(top + 38)} Q{n((x0 + x1) * 0.5)},{n(top + 44)} {n(x1)},{n(top + 36)} "
-            f"M{n(x0)},{n(top + 64)} Q{n((x0 + x1) * 0.5)},{n(top + 59)} {n(x1)},{n(top + 65)}"
-        )
-        m_in.append(el("path", d=fiss, stroke="#3d4238", stroke_width=1.0, opacity=0.52, fill="none"))
-        m_in.append(el("path", d=f"M{n(x0 + mw * 0.30)},386 Q{n(x0 + mw * 0.41)},366 {n(x0 + mw * 0.52)},386Z",
-                       fill="#162012", opacity=0.88))
-        # Overhanging jungle cap & basal piedmont shrub skirt inside clip
-        m_in.append(el("path", d=f"M{n(x0)},{n(top + 22)} Q{n((x0 + x1) * 0.5)},{n(top + 12)} {n(x1)},{n(top + 22)} L{n(x1)},{n(top)} L{n(x0)},{n(top)}Z",
-                       fill="#24471e"))
-        s.add(g(m_in, clip_path=cid))
-        # Lush overhanging summit dome cap following the curved top contour naturally
-        for i in range(11):
-            t_ = i / 10
-            vx = x0 + mw * (0.06 + 0.88 * t_)
-            arch = ((t_ - 0.5) * 2) ** 2
-            vy = top - 2 + arch * 13 + rng.uniform(-1.2, 1.5)
-            s.add(crown(rng, vx, vy, rng.uniform(7.0, 9.5),
-                        ("#20481e", "#3c6e2e", "#6ea044"), k=5, detail=False))
-        # Basal piedmont shrubs blending the mogote base smoothly into the valley & adjacent biomes
-        for i in range(7):
-            bx = x0 + mw * (0.04 + 0.92 * i / 6)
-            s.add(crown(rng, bx, 381 + rng.uniform(-3, 2), rng.uniform(6.0, 9.0),
-                        ("#1e441c", "#346428", "#5c8e3c"), k=5, detail=False))
-    # Tobacco valley rows & curing bohío between mogotes
-    rows = " ".join(f"M{n(474 + i * 4.5)},384 l2,3" for i in range(7))
-    s.add(el("path", d=rows, stroke="#6ca338", stroke_width=2.6, stroke_linecap="round"))
-    s.add(el("rect", x=480, y=378, width=14, height=6, fill="#6e5230"),
-          el("path", d="M477,379 L487,368 L497,379Z", fill="#a67e46"),
-          el("path", d="M487,368 L497,379 L489,379Z", fill="#75562e"))
-    s.add(palm(rng, 499, 384, 48, 2, 16, royal=True, nfr=10, trunk_col="#d4ccb8"))
-
-    # Zone 3: Amazon Rainforest (555-865) with continuous deep forest backdrop & recessed meandering river channel
-    # Deep atmospheric forest silhouette wall so no empty gaps appear behind the canopy
-    bg_rf = [(550, 384), (568, 336), (625, 318), (695, 326), (765, 320), (835, 332), (875, 384)]
-    s.add(el("path", d=smooth(bg_rf) + "Z", fill="#193d22", opacity=0.88))
-    # Recessed Amazon river water filling the concave channel (x=682..808) BEFORE foreground bank foliage
-    s.add(el("path", d=smooth([(680, 384), (745, 385), (810, 384)]) +
-                       " " + " ".join(f"L{n(x)},{n(terrain(x) + 1)}" for x in range(810, 679, -10)) + "Z",
-             fill=s.linear("amz_riv", [(0, "#8fa472"), (1, "#586e44")])))
-    s.add(water_lines(rng, 692, 798, 386, 394, 8, op=0.48))
-    s.add(dolphin(746, 388, 0.55))
-
-    # Continuous multi-tier rainforest canopy bridging smoothly from the second mogote (x=552) to the Pantanal edge (x=868)
-    s.add(g(canopy_band(s, 550, 870, lambda x: min(terrain(x), 383), 36, 15, 24, ("#15381e", "#24582c", "#427d3a"), lift=24, k=6)))
-    s.add(g(canopy_band(s, 552, 868, lambda x: min(terrain(x), 383), 32, 14, 22, ("#194224", "#296432", "#4b8c42"), lift=10, k=6)))
-    s.add(g(canopy_band(s, 558, 692, terrain, 12, 14, 21, ("#204f2b", "#367838", "#64a44c"), lift=2, k=6)))
-    s.add(g(canopy_band(s, 798, 865, terrain, 8, 13, 19, ("#204f2b", "#367838", "#64a44c"), lift=2, k=6)))
-    s.add(broadleaf_tree(rng, 636, terrain(636), 96, 32, ("#1f4a27", "#387838", "#72ae50"), emergent=True))
-    s.add(broadleaf_tree(rng, 792, terrain(792), 88, 28, ("#24542c", "#40823e", "#78b456"), emergent=True))
-    s.add(macaw(700, 268, 0.58), macaw(742, 252, 0.52, flip=True))
-    s.add(toucan(812, 328, 0.52))
-    s.add(mist(s, 712, 332, 125, 14, op=0.52))
-
-    # Zone 4: Pantanal Wetland (855-1048) nestled in its concave floodplain basin with tapering shorelines
-    pan_water = [(854, 385), (950, 386), (1046, 385)] + [(x, terrain(x) + 1) for x in range(1046, 853, -10)]
-    s.add(el("path", d=P(pan_water), fill=s.linear("pan_w", [(0, "#5ea0bd"), (1, "#38728c")])))
-    s.add(water_lines(rng, 868, 1034, 387, 396, 15, op=0.55))
-    for lx, ly, lr in ((895, 393, 6.5), (930, 395, 8.0), (972, 394, 7.0)):
-        s.add(water_lily(rng, lx, ly, lr))
-    # Ecotone sedges & gallery palms bridging Rainforest -> Pantanal (850..885) and Pantanal -> Cerrado (1020..1055)
-    s.add(tufts(rng, 850, 1052, lambda x: min(terrain(x), 387), 32, 9, "#6e9438"))
-    for x in (866, 1028):
-        s.add(palm(rng, x, terrain(x) + 1, 48, rng.uniform(-4, 4), 15, nfr=9, coconuts=False, trunk_col="#6c5a46"))
-    s.add(jabiru(946, 382, 0.58), caiman(992, 391, 0.55), capybara(912, 386, 0.58))
-
-    # Zone 5: Cerrado Savanna (1045-1230) rising smoothly toward the Atlantic Forest escarpment
-    s.add(tufts(rng, 1042, 1235, terrain, 64, 10, "#c4ab50"))
-    for x in (1068, 1122, 1192):
-        s.add(gnarled_tree(rng, x, terrain(x), 42))
-    s.add(ipe(rng, 1152, terrain(1152), 48))
-    s.add(termite_mound(1096, terrain(1096), 16), termite_mound(1210, terrain(1210), 13))
-    s.add(maned_wolf(1170, terrain(1170) - 5, 0.58))
-
-    # Zone 6: Atlantic Forest Escarpment and Cataracts (1225-1345)
-    # Foothill shrubs & upper rim gallery forest clothing the basalt cliff transition on both sides
-    s.add(g(canopy_band(s, 1225, 1272, terrain, 7, 9, 14, ("#1d4828", "#2f6a35", "#5a9846"), lift=2, k=5)))
-    s.add(g(canopy_band(s, 1298, 1362, terrain, 9, 10, 15, ("#1b4628", "#2b6834", "#589846"), lift=3, k=5)))
-    s.add(waterfall(s, 1290, 303, 353, 14))
-    s.add(el("ellipse", cx=1286, cy=355, rx=23, ry=4.8, fill=s.linear("cat_pool", [(0, "#72cce0"), (1, "#3b8da8")])))
-    s.add(water_lines(rng, 1268, 1302, 353, 357, 5, op=0.65))
-    # Mossy basalt bank stones framing the plunge pool transition
-    for bx, by, br in ((1262, 356, 5.5), (1306, 356, 6.0)):
-        s.add(el("path", d=f"M{n(bx - br)},{n(by)} Q{n(bx)},{n(by - br * 0.9)} {n(bx + br)},{n(by)}Z", fill="#3d3834"))
-
-    # Zone 7: Andes Alpine Páramo & Cordillera (1340-1600)
-    s.add(tufts(rng, 1345, 1595, terrain, 58, 9, "#b8a854"))
-    # Puya raimondii spikes & Espeletia frailejón rosettes on the high Andean páramo slope
-    for x in (1382, 1445, 1518, 1565):
-        y = terrain(x) + 1
-        s.add(el("path", d=f"M{n(x - 5)},{n(y)} L{n(x)},{n(y - 5)} L{n(x + 5)},{n(y)}", stroke="#4d6b42", stroke_width=1.4, fill="none"))
-        s.add(el("ellipse", cx=x, cy=y - 10, rx=2.2, ry=7.5, fill="#c4bc72"))
-    for x, r in ((1368, 7), (1492, 9), (1545, 8)):
-        y = terrain(x) + 2
-        s.add(el("path", d=f"M{n(x - r)},{n(y)} L{n(x - r * 0.6)},{n(y - r * 0.7)} L{n(x + r * 0.5)},{n(y - r * 0.65)} L{n(x + r)},{n(y)}Z",
-                 fill="#7a7b75"))
-    s.add(condor(1420, 118, 0.75))
-    return s.render()
-
-
-# ==============================================================================
 # SCENE: CORAL REEF AND MANGROVE COAST (SPLIT LEVEL)
 # ==============================================================================
 def build_reef(labels):
@@ -3559,9 +3262,7 @@ def build_chapada(labels):
 # ==============================================================================
 LABELS = {
     "en": {
-        "transect": ["CORAL REEF", "MANGROVES", "KARST", "RAINFOREST", "PANTANAL", "CERRADO", "CATARACTS", "ANDES"],
         "alt": {
-            "transect": "Sea-to-summit cross-section of Waikiki: coral reef, mangrove coast, karst towers, Amazon rainforest, Pantanal wetland, Cerrado savanna, cataract forest and the snow-capped highlands",
             "reef": "Split-level view of a Waikiki mangrove coast and the coral reef beneath it, with sea turtle, manta ray, reef fish and coral nursery frames",
             "rainforest": "Amazonian river scene with layered canopy, emergent kapok trees, giant water lilies, pink river dolphin, macaws and a toucan",
             "highlands": "Brazilia highlands with glacier, turquoise glacial lake, paramo grassland, cloud forest waterfall and soaring Andean condors",
@@ -3580,9 +3281,7 @@ LABELS = {
         },
     },
     "hu": {
-        "transect": ["KORALLZÁTONY", "MANGROVE", "KARSZT", "ESŐERDŐ", "PANTANAL", "CERRADO", "ZUHATAGOK", "ANDOK"],
         "alt": {
-            "transect": "Waikiki keresztmetszete a tengertől a csúcsokig: korallzátony, mangrovepart, karszttornyok, amazóniai esőerdő, Pantanal vizes élőhely, Cerrado szavanna, zuhatagerdő és a havas hegyvidék",
             "reef": "Waikiki mangrovepartja és az alatta húzódó korallzátony osztott nézetben, tengeri teknőssel, ördögrájával, zátonyhalakkal és korallkertekkel",
             "rainforest": "Amazóniai folyó rétegzett lombkoronával, kiemelkedő kapokfákkal, óriás tündérrózsákkal, rózsaszín folyami delfinnel, arákkal és tukánnal",
             "highlands": "Brazília hegyvidéke gleccserrel, türkiz gleccsertóval, páramo füves pusztával, köderdei vízeséssel és köröző andoki kondorokkal",
@@ -3603,7 +3302,6 @@ LABELS = {
 }
 
 BUILDERS = {
-    # "transect": build_transect,  # Canonical standalone file in icons/nature/transect.svg (linked, not generated)
     "reef": build_reef,
     "rainforest": build_rainforest,
     "highlands": build_highlands,
