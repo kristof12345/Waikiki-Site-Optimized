@@ -49,7 +49,6 @@
 
 
 #megaprojects .card-grid {
-  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: clamp(1rem, 1.25vw, 1.35rem);
   max-width: var(--width-l);

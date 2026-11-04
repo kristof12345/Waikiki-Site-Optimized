@@ -1,4 +1,7 @@
 /* Nova Aurelia Stylesheet */
+.card-grid {
+  max-width: var(--width-l);
+}
 
 /* Illustration Container and Frames */
 .ill-panel {
