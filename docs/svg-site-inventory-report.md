@@ -147,7 +147,7 @@ Complex sector infographics are generated as separate `-en.svg` and `-hu.svg` ve
 
 Fixed standalone vector files stored permanently in `icons/` and referenced via `<img>` tags:
 
-1. **Hero Art Panoramas** (Standardized to `viewBox="0 0 640 480" width="100%" height="100%"` with `rx="40"` outer boundary corner rounding clipPaths):
+1. **Hero Art Panoramas** (Standardized to pure `viewBox="0 0 640 480"` with `rx="40"` outer boundary corner rounding clipPaths):
    - [icons/infrastructure/hero-art.svg](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/icons/infrastructure/hero-art.svg): Nova Aurelia bayfront panorama with Mega Pyramid, supertall skyline, offshore wind farm, and maglev railway.
    - [icons/travel/hero-art.svg](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/icons/travel/hero-art.svg): Tropical lagoon resort with overwater bungalows, superyacht marina, and coconut palms.
    - [icons/ski/hero-art.svg](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/icons/ski/hero-art.svg): Alpine ski mountain panorama with animated CSS cableway gondola motion.

@@ -36,7 +36,7 @@ def build_network_svg(locale: str) -> str:
     hud_right = "100%-OS BETÉTBIZTOSÍTÁS" if is_hu else "100% DEPOSIT GUARANTEE"
     hud_right_spacing = "0.5" if is_hu else "0.6"
 
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 1160 520" width="1160" height="520">
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 1160 520">
     <defs>
         <clipPath id="bk-clip1">
             <rect width="1160" height="520" rx="20" />
@@ -216,7 +216,7 @@ def build_rates_svg(locale: str) -> str:
         else "DAILY YIELD + 5-YR DEVELOPMENT LOANS"
     )
 
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 1160 440" width="1160" height="440">
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 1160 440">
     <defs>
         <linearGradient id="bk2-gold-bar" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stop-color="#fff5db" />
