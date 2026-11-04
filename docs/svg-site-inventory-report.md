@@ -157,7 +157,7 @@ Fixed standalone vector files stored permanently in `icons/` and referenced via 
    - [icons/nova-aurelia/pyramid.svg](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/icons/nova-aurelia/pyramid.svg): Monumental 450m Arcology Mega Pyramid (1200x700).
    - [icons/nova-aurelia/undersea-hub.svg](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/icons/nova-aurelia/undersea-hub.svg): Submerged transit and oceanographic hub (1200x700).
 3. **Nature Biomes & Vignettes** ([icons/nature/](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/icons/nature/)):
-   - 15 standalone SVG files representing specific national ecosystems: `reef.svg`, `rainforest.svg`, `highlands.svg`, `mogotes.svg`, `enriquillo.svg`, `pantanal.svg`, `cerrado.svg`, `lencois.svg`, `caatinga.svg`, `bluehole.svg`, `tepui.svg`, `cataracts.svg`, `elnicho.svg`, `cahabon.svg`, `anavilhanas.svg`.
+   - 15 standalone SVG files representing specific national ecosystems: `reef.svg`, `rainforest.svg`, `highlands.svg`, `mogotes.svg`, `enriquillo.svg`, `pantanal.svg`, `cerrado.svg`, `lencois.svg`, `caatinga.svg`, `bluehole.svg`, `tepui.svg`, `cataracts.svg`, `elnicho.svg`, `chapada.svg`, `anavilhanas.svg`.
 4. **Aerospace Launch Vehicles** ([icons/rockets/](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/icons/rockets/)):
    - 12 technical rocket silhouettes: `rocket-bfr.svg`, `rocket-delta-3a.svg`, `rocket-delta-3b.svg`, `rocket-delta-4.svg`, `rocket-falcon-heavy.svg`, `rocket-falcon.svg`, `rocket-saturn-nova.svg`, `rocket-saturn-x.svg`, `rocket-shuttle-v2.svg`, `rocket-shuttle.svg`, `rocket-vulcan.svg`, `rocket-ariane.svg`.
 5. **Aviation Topviews** ([icons/planes/](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/icons/planes/)):
@@ -176,14 +176,14 @@ Every HTML document on the site includes 4 inline SVGs providing universal UI na
 ```html
 <!-- 1. Language Toggle Icon in Navbar -->
 <a class="lang-pill" href="../hu/page.html" hreflang="hu" lang="hu" aria-label="Magyar nyelv">
-    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
         <path d="M12.87 15.07l-2.54-2.51.03-.08c1.74-1.94 2.98-4.17 3.71-6.48H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z" fill="currentColor"/>
     </svg>HU
 </a>
 
 <!-- 2. Dark/Light Theme Engine Toggle -->
 <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Toggle theme">
-    <svg class="theme-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+    <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
         <path class="sun" d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0z" fill="currentColor"/>
         <path class="moon" d="M12.3 2a10 10 0 0 0-1.9 20 10 10 0 0 0 9.8-8.1 1 1 0 0 0-1.2-1.2 8 8 0 0 1-5.6-1.9 8 8 0 0 1-2.3-6.9 1 1 0 0 0-1.2-1.2A10 10 0 0 0 12.3 2z" fill="currentColor"/>
     </svg>
@@ -192,7 +192,7 @@ Every HTML document on the site includes 4 inline SVGs providing universal UI na
 <!-- 3. Site Footer Wave Vector Divider -->
 <footer class="site-footer">
     <div class="footer-wave-wrap" aria-hidden="true">
-        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none">
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
             <path d="M0,45 C240,85 480,5 720,45 C960,85 1200,5 1440,45 L1440,90 L0,90 Z"/>
         </svg>
     </div>
@@ -200,7 +200,7 @@ Every HTML document on the site includes 4 inline SVGs providing universal UI na
 
 <!-- 4. Scroll-to-Top Floating Action Button -->
 <button class="to-top" type="button" aria-label="Back to top" data-to-top>
-    <svg viewBox="0 0 54 54" width="22" height="22" aria-hidden="true">
+    <svg viewBox="0 0 54 54" aria-hidden="true">
         <circle cx="27" cy="27" r="23" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="144.5" stroke-dashoffset="144.5"/>
         <path d="M27 34V20M20 27l7-7 7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
@@ -209,7 +209,89 @@ Every HTML document on the site includes 4 inline SVGs providing universal UI na
 
 ---
 
-## 3. Python Generator Pipeline Architecture
+## 3. SVG Illustration Dimensions, ViewBox & Aspect Ratio Specifications
+
+A core engineering principle of the Sovereign Nation of Waikiki design system is **resolution-independent intrinsic vector geometry**. All illustration SVGs across the repository adhere to strict dimensional profiles, aspect ratios, and container scaling rules.
+
+### 3.1 Intrinsic Sizing Architecture & The Pure `viewBox` Standard
+
+Under the W3C SVG specification, vector graphics achieve maximum fluid responsiveness when explicit `width` and `height` attributes on the root `<svg>` tag are completely omitted in favor of a normalized `viewBox="minX minY width height"`.
+
+1. **Fluid Responsive Scaling**:
+   - Omitting root `width` and `height` prevents rigid pixel-locking and eliminates inline attribute clashes with CSS layout engines (`flexbox`, CSS Grid, `clamp()`, and container queries).
+   - The browser automatically calculates the intrinsic aspect ratio from the `viewBox` coordinates ($W / H$) and effortlessly scales the graphic to fit its host container.
+2. **Elimination of Cumulative Layout Shift (CLS)**:
+   - For linked vector images (`<img>`), dimensional reservation is shifted entirely to the **HTML markup layer**:
+     ```html
+     <img class="ill" src="../icons/travel/hero-art.svg" alt="Resort Panorama" width="640" height="480" loading="eager" decoding="async">
+     ```
+   - The browser calculates the element aspect ratio box immediately during DOM and CSSOM layout construction before network assets arrive, completely eliminating layout jumps and CLS degradation while leaving the SVG file pure and fluid.
+3. **Container-Governed Inline Sizing**:
+   - For inline `<svg>` elements embedded in card grids and sections, wrapper elements enforce explicit aspect ratios (e.g. `.hotel-art { aspect-ratio: 16 / 10; }`), and child SVGs expand automatically via `.ill { width: 100%; height: 100%; display: block; }`.
+
+---
+
+### 3.2 Master Dimensions, ViewBox & Aspect Ratio Specification Matrix
+
+The following table provides the exhaustive dimensional catalog for every vector asset and illustration family across the site:
+
+| Asset Classification & Purpose | File Path or Target Location | Canonical `viewBox` | Aspect Ratio | Display Size / CSS Sizing Rule | Border Radius / Corner Clip | Inclusion & Generation |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Hero Art Panoramas** | `icons/travel/hero-art.svg`<br/>`icons/infrastructure/hero-art.svg`<br/>`icons/ski/hero-art.svg`<br/>`icons/nova-aurelia/hero-art.svg` | `0 0 640 480` | `4:3` (1.333:1) | Desktop (>1920px): `min(46vw, 720px)`<br/>Responsive (≤1920px): `min(100%, 560px)`<br/>HTML tag: `width="640" height="480"` | `rx="40"` outer boundary `<clipPath>` on all 4 corners | `linked, fix file` (Ski, Travel, Infra)<br/>`linked, fix file` (Nova Aurelia) |
+| **Hotel, Sanctuary & Resort Cards** | 30 cards in [travel-guide.html](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/en/travel-guide.html), [infrastructure.html](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/en/infrastructure.html), [ski-paradise.html](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/en/ski-paradise.html) | `0 0 320 200` | `16:10` (8:5, 1.600:1) | Container: `.hotel-art`, `.building-art`<br/>CSS: `aspect-ratio: 16 / 10; width: 100%;`<br/>Child: `.ill { width: 100%; height: 100%; }`<br/>Hover: `transform: scale(1.05);` | Card container `border-radius: var(--radius-l)` (16px / 20px) | `inline, generated` |
+| **Imperial District Cards** | 4 district cards in [nova-aurelia.html](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/en/nova-aurelia.html) & `icons/nova-aurelia/*.svg` | `0 0 640 420` | `32:21` (16:10.5, ~1.524:1) | Container: `.district-art`<br/>Child: `.city-ill { width: 100%; height: auto; }` | Card container `border-radius: var(--radius-l)` | `inline, generated` & `linked, fix file` |
+| **Tallest Structures Chart** | [infrastructure.html#skyscrapers](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/en/infrastructure.html#L457) | `0 0 1120 420` | `8:3` (2.667:1) | Container: `.infra-chart-card`<br/>CSS: `.height-chart { width: 100%; max-width: 1120px; }`<br/>Dynamic bar animations: `scaleY()` | Card container `border-radius: var(--radius-xl)` | `inline, generated` |
+| **Summit Elevation Chart** | [ski-paradise.html#elevation](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/en/ski-paradise.html#L380) | `0 0 960 390` | `32:13` (~2.462:1) | Container: `.ski-chart-card`<br/>CSS: `.height-chart { width: 100%; max-width: 960px; }` | Card container `border-radius: var(--radius-xl)` | `inline, generated` |
+| **Double-Deck Cutaway Plan** | [plane.html#deckplan](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/en/plane.html#L254)<br/>`icons/planes/plane-deck.svg` | `0 0 1800 1020` | `30:17` (~1.765:1) | Container: `.deckplan-container`<br/>CSS: `.deckplan-ill { width: 100%; height: auto; }` | Card container `border-radius: var(--radius-xl)` | `inline, generated` (from fix template) |
+| **Mobility Transit Map** | [infrastructure.html#mobility](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/en/infrastructure.html#L140) | `0 0 1800 650` | `36:13` (~2.769:1) | Ultra-wide panoramic transport map<br/>CSS: `.ill { width: 100%; height: auto; }` | Section container clipping | `inline, generated` |
+| **Artificial Island Maps** | Palm, World, Chameleon in [infrastructure.html#islands](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/en/infrastructure.html#L300) | `0 0 1200 700` | `12:7` (~1.714:1) | Container: `.island-map-card`<br/>CSS: `.ill { width: 100%; height: auto; }` | Card container `border-radius: var(--radius-xl)` | `inline, generated` |
+| **Alpine Ski Trail Maps** | Andes & Haiti maps in [ski-paradise.html#trail-maps](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/en/ski-paradise.html#L210)<br/>`icons/ski/andes-map.svg`, `haiti-map.svg` | `0 0 1200 700` | `12:7` (~1.714:1) | Container: `.ski-trail-card`<br/>CSS: `.ill { width: 100%; height: auto; }` | Card container `border-radius: var(--radius-xl)` | `inline & linked, generated` |
+| **Archipelago Masterplan** | [nova-aurelia.html#masterplan](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/en/nova-aurelia.html)<br/>`icons/nova-aurelia/archipelago-map.svg` | `0 0 1100 600` | `11:6` (~1.833:1) | Linked via `<img>`<br/>HTML tag: `width="1100" height="600"` | Masterplan card container rounded | `linked, generated` |
+| **Sovereign Territory Map** | [society.html#territory](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/en/society.html) | `0 0 1800 1020` | `30:17` (~1.765:1) | National geographic territorial atlas<br/>CSS: `width: 100%; height: auto;` | Map frame wrapper rounded | `inline, fix file` |
+| **Banking Network Diagram** | `icons/banking/network-en.svg`<br/>`icons/banking/network-hu.svg` | `0 0 1160 520` | `29:13` (~2.231:1) | Linked via `<img>`<br/>HTML tag: `width="1160" height="520"` | Inner card frame `border-radius: var(--radius-xl)` | `linked, generated` |
+| **Sovereign Rate Corridor** | `icons/banking/rates-en.svg`<br/>`icons/banking/rates-hu.svg` | `0 0 1160 440` | `29:11` (~2.636:1) | Linked via `<img>`<br/>HTML tag: `width="1160" height="440"` | Inner card frame `border-radius: var(--radius-xl)` | `linked, generated` |
+| **Deep Space Station** | `icons/space/station-en.svg`<br/>`icons/space/station-hu.svg` | `0 0 1160 520` | `29:13` (~2.231:1) | Linked via `<img>`<br/>HTML tag: `width="1160" height="520"` | Inner card frame `border-radius: var(--radius-xl)` | `linked, generated` |
+| **Interplanetary Corridor** | `icons/space/corridor-en.svg`<br/>`icons/space/corridor-hu.svg` | `0 0 1160 480` | `29:12` (~2.417:1) | Linked via `<img>`<br/>HTML tag: `width="1160" height="480"` | Inner card frame `border-radius: var(--radius-xl)` | `linked, generated` |
+| **Sea-to-Summit Transects** | `icons/nature/transect-en.svg`<br/>`icons/nature/transect-hu.svg` | `0 0 1600 600` | `8:3` (2.667:1) | Linked via `<img>`<br/>HTML tag: `width="1600" height="600"` | Section wrapper rounded | `linked, generated` |
+| **Standard Biome Vignettes** | 12 files in `icons/nature/` (`anavilhanas`, `bluehole`, `caatinga`, `cataracts`, `cerrado`, `chapada`, `elnicho`, `enriquillo`, `lencois`, `mogotes`, `pantanal`, `tepui`) | `0 0 480 300` | `8:5` (16:10, 1.600:1) | Linked via `<img>`<br/>HTML tag: `width="480" height="300"`<br/>Grid card thumbnail | Card container `border-radius: var(--radius-m)` | `linked, generated` |
+| **Panoramic Biome Landscapes** | `icons/nature/highlands.svg`<br/>`icons/nature/reef.svg`<br/>`icons/nature/rainforest.svg` | Highlands: `0 0 1200 700`<br/>Reef / Rainforest: `0 0 1200 720` | `12:7` (~1.714:1)<br/>`5:3` (1.667:1) | Linked via `<img>`<br/>Wide feature section illustration | Section container rounded | `linked, generated` |
+| **Nova Aurelia Landmarks** | `icons/nova-aurelia/skyline.svg`<br/>`icons/nova-aurelia/pyramid.svg`<br/>`icons/nova-aurelia/undersea-hub.svg` | Skyline: `0 0 1600 600`<br/>Pyramid / Hub: `0 0 1200 700` | `8:3` (2.667:1)<br/>`12:7` (~1.714:1) | Linked via `<img>`<br/>Feature showcase panels | Showcase card rounded | `linked, fix file` |
+| **Aerospace Launch Vehicles** | 12 rocket files in `icons/rockets/` | `0 0 800 800` | `1:1` (Square) | Linked via `<img>`<br/>HTML tag: `width="800" height="800"`<br/>Rendered in vehicle comparison cards | Card container rounded | `linked, fix file` |
+| **Aviation Wireframes & Topviews** | 4 aircraft files in `icons/planes/` (`plane-747`, `plane-777`, `plane-af1`, `plane-concorde`) | `0 0 800 800` | `1:1` (Square) | Background watermark in `plane.html`:<br/>CSS: `.aircraft-watermark` (150px)<br/>CSS: `.aircraft-watermark--plane` (`clamp(240px, 28vw, 360px)`) | Watermark background overlay | `linked, fix file` |
+| **National Coat of Arms** | `icons/logo.svg` | `0 0 120 120` | `1:1` (Square) | Navbar header: `36px` to `48px`<br/>Hero / Footer: `64px` to `120px` | Embedded vector insignia | `linked, fix file` |
+| **Language Switcher Icon** | Page navbar `.lang-pill` | `0 0 24 24` | `1:1` (Square) | Navbar link icon: `16px x 16px` | Inline vector glyph | `inline, fix file` |
+| **Theme Toggle Engine Icon** | Page navbar `.theme-toggle` | `0 0 24 24` | `1:1` (Square) | Navbar button icon: `20px x 20px` (`.theme-icon`) | Inline vector glyph | `inline, fix file` |
+| **Scroll-to-Top Floating Button** | Fixed floating action button `.to-top` | `0 0 54 54` | `1:1` (Square) | Circular progress FAB: `22px x 22px` (`.to-top svg`) | Circular outer track | `inline, fix file` |
+| **Site Footer Wave Divider** | Page footer `.footer-wave-wrap` | `0 0 1440 90` | Dynamic Wave | Fluid full-width vector banner<br/>CSS: `.footer-wave { width: 100%; height: 90px; }`<br/>`preserveAspectRatio="none"` | Full viewport width horizontal divider | `inline, fix file` |
+| **Material Design System Icons** | 211 files in `icons/mdi/` | `0 0 24 24` | `1:1` (Square) | Displayed at exact preset sizes (`12px`, `14px`, `20px`, `28px`, `32px`, `56px`) matching typography and badge scales | Standalone icon glyphs | `linked, fix file` |
+
+---
+
+### 3.3 Visual Geometry & Corner Clipping Standards
+
+Visual consistency across the site is anchored by geometric hierarchy:
+
+1. **Hero Art Corner Rounding**:
+   - All four hero panoramas (`travel`, `infrastructure`, `ski`, `nova-aurelia`) strictly enforce a $40\text{px}$ corner radius using a standardized root clip path:
+     ```xml
+     <clipPath id="hero-art-clip">
+         <rect width="640" height="480" rx="40"/>
+     </clipPath>
+     ```
+   - All graphical layers (skylines, slopes, water surfaces, atmospheric gradients) are wrapped in `<g clip-path="url(#hero-art-clip)">` so visual elements terminate cleanly with rounded corners.
+2. **Card Grid Harmony**:
+   - The 30 hotel and infrastructure cards share an identical coordinate box of `320 x 200` ($16:10$), perfectly matching the `aspect-ratio: 16 / 10;` declared on `.hotel-art` and `.building-art`. This ensures that across multi-column grids (3-column on desktop, 2-column on tablet, 1-column on mobile), every card illustration aligns horizontally and vertically with zero grid distortion.
+3. **Aspect Ratio Categorization Summary**:
+   - **4:3**: Hero Art Panoramas (`640 x 480`).
+   - **16:10 (8:5)**: Card Illustrations (`320 x 200`) and Standard Biome Vignettes (`480 x 300`).
+   - **16:10.5 (32:21)**: Imperial District Cards (`640 x 420`).
+   - **12:7**: Artificial Island Maps, Ski Trail Maps, and Mountain Panoramas (`1200 x 700`).
+   - **8:3**: Height Comparison Charts (`1120 x 420`), Skyline Panoramas (`1600 x 600`), and Transect Cross-Sections (`1600 x 600`).
+   - **1:1**: Aerospace Rockets (`800 x 800`), Aircraft Topviews (`800 x 800`), National Logo (`120 x 120`), and UI Glyphs (`24 x 24`, `54 x 54`).
+
+---
+
+## 4. Python Generator Pipeline Architecture
 
 All procedural vector creation scripts are housed in [scripts/svg_generators/](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/scripts/svg_generators/):
 
@@ -253,7 +335,7 @@ python3 scripts/svg_generators/gen_site_svgs.py --everything
 
 ---
 
-## 4. Pure Vector Compliance Verification
+## 5. Pure Vector Compliance Verification
 
 According to Rule 2 of the Graphics Guidelines in [AGENTS.md](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/.agents/rules/AGENTS.md):
 - **Native Vector Elements**: All SVGs are constructed entirely using `<path>`, `<polygon>`, `<rect>`, `<circle>`, `<ellipse>`, `<line>`, `<linearGradient>`, and `<filter>`.
