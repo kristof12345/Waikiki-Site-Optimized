@@ -63,9 +63,6 @@
 }
 
 /* Banking System SVG animations */
-.ill-panel {
-    max-width: var(--width-m);
-}
 
 .ill .glow {
     animation: illGlow 3s ease-in-out infinite alternate;

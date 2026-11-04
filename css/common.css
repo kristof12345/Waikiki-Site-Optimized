@@ -2084,7 +2084,7 @@ video {
 /* Illustrated Panels and Captions */
 .ill-panel {
   margin: 2.5rem auto;
-  max-width: var(--width-l);
+  max-width: var(--width-m);
   width: 100%;
   border-radius: var(--radius);
   overflow: hidden;

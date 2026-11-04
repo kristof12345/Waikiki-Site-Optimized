@@ -44,28 +44,9 @@
 }
 
 .ill-panel {
-  padding: clamp(1rem, 2.5vw, 2rem);
-  border-radius: var(--radius-lg);
-  background:
-    radial-gradient(600px 300px at 0% 0%, var(--tertiary-alpha-16), transparent 60%),
-    radial-gradient(500px 300px at 100% 100%, var(--ill-sun-alpha-10), transparent 60%),
-    var(--surface);
-}
-
-.ill-caption {
-  margin-top: 1rem;
-  color: var(--muted);
-  font-size: 0.82rem;
-  letter-spacing: 0.04em;
-  text-align: center;
-}
-
-#mobility .ill-panel,
-#megaprojects .ill-panel {
   max-width: var(--width-l);
-  width: 100%;
-  margin: 0 auto 2.5rem;
 }
+
 
 #megaprojects .card-grid {
   display: grid;
