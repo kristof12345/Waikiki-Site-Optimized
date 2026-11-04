@@ -29,11 +29,8 @@
 
 .nature-ill {
     display: block;
-    width: 100%;
     max-width: 100%;
     height: auto;
-    overflow: hidden;
-    border-radius: calc(var(--radius-lg) - 2px);
 }
 
 /* Interactive SVG Hotspots */
