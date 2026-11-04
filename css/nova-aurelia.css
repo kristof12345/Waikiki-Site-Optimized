@@ -1,6 +1,10 @@
 /* Nova Aurelia Stylesheet */
 
 /* Illustration Container and Frames */
+.ill-panel {
+    max-width: var(--width-l);
+}
+
 .city-ill-frame {
     width: 100%;
     max-width: 100%;
@@ -118,11 +122,13 @@
     font-weight: 700;
 }
 
-/* Districts 2x2 Grid */
+/* Districts Grid */
 .city-districts-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--card-gap);
+    max-width: var(--width-full);
+    width: 100%;
     margin-top: 2.5rem;
 }
 
@@ -161,9 +167,12 @@
 
 /* Vector Animation Keyframes */
 @keyframes beaconPulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.35;
     }
+
     50% {
         opacity: 1;
     }
@@ -173,19 +182,24 @@
     0% {
         transform: translateX(0);
     }
+
     50% {
         transform: translateX(12px);
     }
+
     100% {
         transform: translateX(0);
     }
 }
 
 @keyframes biolumPulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.55;
         filter: drop-shadow(0 0 4px #00ffff);
     }
+
     50% {
         opacity: 0.95;
         filter: drop-shadow(0 0 10px #00ffff);
@@ -221,16 +235,25 @@
 }
 
 @keyframes cityBob {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-2.5px);
     }
 }
 
 /* Responsive Desktop-First Media Queries */
-@media (max-width: 900px) {
+@media (max-width: 1400px) {
+    .city-districts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
     .city-districts-grid {
         grid-template-columns: 1fr;
     }

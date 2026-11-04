@@ -1,6 +1,10 @@
 /* Nature and Sanctuaries Stylesheet */
 
 /* Illustration System Tokens and Classes */
+.ill-panel {
+    max-width: var(--width-l);
+}
+
 .nature-ill-frame {
     width: 100%;
     max-width: 100%;
@@ -304,7 +308,7 @@
     border-top-color: var(--tertiary-subtle);
 }
 
-.province-card-stats > div {
+.province-card-stats>div {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
@@ -374,7 +378,8 @@
         grid-template-columns: 1fr;
         gap: 0.65rem;
     }
-    .province-card-stats > div {
+
+    .province-card-stats>div {
         flex-direction: row;
         justify-content: space-between;
         align-items: baseline;
@@ -551,6 +556,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     .sanctuary-item:hover .sanctuary-art .nature-ill,
     .charter-rule-card:hover .charter-index-num {
         transform: none !important;
