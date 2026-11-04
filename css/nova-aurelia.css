@@ -451,11 +451,9 @@
 @keyframes beaconPulse {
     0%, 100% {
         opacity: 0.35;
-        transform: scale(0.96);
     }
     50% {
         opacity: 1;
-        transform: scale(1.05);
     }
 }
 
@@ -485,7 +483,6 @@
 @media (prefers-reduced-motion: no-preference) {
     .city-anim-beacon {
         animation: beaconPulse 2.8s ease-in-out infinite;
-        transform-origin: center center;
     }
 
     .city-anim-cloud {

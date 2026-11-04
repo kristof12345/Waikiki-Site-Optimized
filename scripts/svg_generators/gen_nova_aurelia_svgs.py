@@ -1638,11 +1638,11 @@ def build_hero_art(t: dict[str, str]) -> str:
     rng = s.rng
     s.raw(
         "<style>"
-        "@keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.3); opacity: 0.5; } }"
-        "@keyframes beaconPulse { 0%, 100% { opacity: 0.35; transform: scale(0.96); } 50% { opacity: 1; transform: scale(1.05); } }"
+        "@keyframes pulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }"
+        "@keyframes beaconPulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }"
         "@keyframes shimmer { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.95; } }"
-        ".pulse { animation: pulse 2s infinite ease-in-out; transform-origin: center; }"
-        ".city-anim-beacon { animation: beaconPulse 2.8s ease-in-out infinite; transform-origin: center center; }"
+        ".pulse { animation: pulse 2s infinite ease-in-out; }"
+        ".city-anim-beacon { animation: beaconPulse 2.8s ease-in-out infinite; }"
         ".shimmer { animation: shimmer 3s ease-in-out infinite; }"
         "</style>"
     )
