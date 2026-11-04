@@ -7,7 +7,6 @@
 
 .nature-ill-frame {
     width: 100%;
-    max-width: 100%;
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: var(--radius-lg);
@@ -68,10 +67,8 @@
 }
 
 .nature-feature-text h3 {
-    font-family: var(--font-display);
     font-size: clamp(1.6rem, 2.8vw, 2.4rem);
     font-weight: 600;
-    color: var(--heading);
     margin-bottom: 1rem;
     position: relative;
     padding-bottom: 0.8rem;
@@ -97,14 +94,9 @@
     margin-bottom: 1.25rem;
 }
 
-.body-dark .nature-feature-text p {
-    color: var(--text-secondary);
-}
-
 .nature-feature-list {
     list-style: none;
-    padding: 0;
-    margin: 1.5rem 0 0 0;
+    margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 0.85rem;
@@ -118,6 +110,7 @@
     color: var(--text);
 }
 
+.body-dark .nature-feature-text p,
 .body-dark .nature-feature-list li {
     color: var(--text-secondary);
 }
@@ -272,22 +265,22 @@
 }
 
 .province-card h3 {
-    font-family: var(--font-display);
     font-size: 1.35rem;
     font-weight: 600;
-    color: var(--heading);
     margin-bottom: 0.75rem;
     line-height: 1.3;
 }
 
-.province-card p {
+.province-card p,
+.sanctuary-item p {
     font-size: 0.95rem;
     line-height: 1.65;
     color: var(--text);
     margin-bottom: 1.25rem;
 }
 
-.body-dark .province-card p {
+.body-dark .province-card p,
+.body-dark .sanctuary-item p {
     color: var(--text-secondary);
 }
 
@@ -441,10 +434,8 @@
 }
 
 .sanctuary-item h3 {
-    font-family: var(--font-display);
     font-size: 1.35rem;
     font-weight: 600;
-    color: var(--heading);
     margin: 0.75rem 0 0.5rem 0;
     line-height: 1.3;
 }
@@ -463,17 +454,6 @@
 
 .sanctuary-item:hover .sanctuary-art .nature-ill {
     transform: scale(1.05);
-}
-
-.sanctuary-item p {
-    font-size: 0.95rem;
-    line-height: 1.65;
-    color: var(--text);
-    margin-bottom: 1.25rem;
-}
-
-.body-dark .sanctuary-item p {
-    color: var(--text-secondary);
 }
 
 /* Sovereign Green Charter Banner and Cards */
@@ -533,10 +513,8 @@
 }
 
 .charter-rule-card h3 {
-    font-family: var(--font-display);
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--heading);
     margin-bottom: 0.65rem;
     line-height: 1.3;
 }

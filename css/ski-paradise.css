@@ -46,7 +46,9 @@
   object-fit: contain;
 }
 
-.body-dark .fact img {
+.body-dark .fact img,
+.body-dark .island-tab-btn img,
+.body-dark .hotel-loc img {
   filter: brightness(2.1) saturate(0.7);
 }
 
@@ -113,10 +115,6 @@
 .island-tab-btn[aria-selected="true"] img {
   filter: brightness(0) invert(1);
   transform: scale(1.1);
-}
-
-.body-dark .island-tab-btn img {
-  filter: brightness(2.1) saturate(0.7);
 }
 
 .body-dark .island-tab-btn.is-active img,
@@ -234,9 +232,7 @@
 }
 
 .island-map-title-group h3 {
-  font-family: var(--font-display);
   font-size: 1.35rem;
-  color: var(--heading);
   margin: 0;
 }
 
@@ -271,12 +267,6 @@
   width: 100%;
   overflow: hidden;
   background: #0a223d;
-}
-
-.island-map-canvas .ill {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 /* Interactive Hotspots */
@@ -363,9 +353,7 @@
 }
 
 .island-hotspot-card h4 {
-  font-family: var(--font-display);
   font-size: 1.12rem;
-  color: var(--heading);
   margin-bottom: 0.4rem;
 }
 
@@ -445,7 +433,8 @@
   font-size: 0.9rem;
 }
 
-.piste-legend li {
+.piste-legend li,
+.season-legend li {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -569,7 +558,6 @@
 }
 
 .hotel-art .ill {
-  width: 100%;
   height: 100%;
   transition: transform 1.4s var(--ease-out);
 }
@@ -627,10 +615,6 @@
   object-fit: contain;
 }
 
-.body-dark .hotel-loc img {
-  filter: brightness(2.1) saturate(0.7);
-}
-
 .hotel ul.perks {
   display: flex;
   flex-wrap: wrap;
@@ -683,9 +667,7 @@
 }
 
 .travel-callout h3 {
-  font-family: var(--font-display);
   font-size: clamp(1.3rem, 2vw, 1.65rem);
-  color: var(--heading);
   margin-bottom: 0.5rem;
 }
 
@@ -769,12 +751,6 @@
   margin-top: 1.4rem;
   font-size: 0.88rem;
   color: var(--text);
-}
-
-.season-legend li {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
 .season-legend i {

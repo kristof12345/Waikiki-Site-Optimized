@@ -87,6 +87,29 @@ python3 .agents/skills/layout-audit/scripts/layout_audit.py --json hu/space-rese
 
 ---
 
+## Critical Browser Rendering & Wait Guidelines
+
+When visually inspecting pages or capturing screenshots in Playwright / Google Chrome:
+
+1. **Serve via HTTP (Never `file://`)**:
+   Always serve the site root through a local HTTP server (`127.0.0.1:8080`). Relative paths (`../css/common.css`, `../images/`, `../icons/`) fail or 404 when opened through `file://` URIs outside the repository root.
+2. **Progressive Step Scroll with Compositor Sync**:
+   Elements marked with `data-reveal` (`.card`, `.stat-card`, `.section-title`, `.timeline-item`, etc.) use an `IntersectionObserver` with `rootMargin: '0px 0px -5% 0px'`. They remain hidden (`opacity: 0`, `transform: translate3d(0, 44px, 0)`) until scrolled into view.
+   - Do **not** jump instantly to the bottom in a tight loop.
+   - Scroll down in 300–400px steps with dual `requestAnimationFrame` and a 30–45ms delay at each step to let the browser compositor dispatch intersection events and attach `.is-in`.
+3. **Wait for CSS Transitions at Page Bottom**:
+   Reveal animations take 1.0s–1.2s plus `--delay-increment: 50ms` stagger delays (up to `--i: 8`). Always wait **at least 2.0–2.2 seconds** after reaching the bottom before taking screenshots or checking opacity, ensuring all cards complete their transition to `opacity: 1` and resting position (`transform: none`).
+4. **Asynchronous Galleries & Eager Images**:
+   On gallery pages (`*gallery.html`), wait for the Google Apps Script endpoint (`Gallery.init`) to populate `#gallery-grid` before scrolling. Convert `loading="lazy"` to eager and await all `img.decode()` / `onload` promises.
+5. **Dismiss Curtain & Settle Top Position**:
+   Dismiss `.page-curtain` (`display: none !important`) so its 1.05s exit animation never obscures screenshots. When capturing full-page or hero screenshots, scroll back to `(0, 0)` and pause 500–600ms for sticky navigation, header state, and top layout to settle.
+6. **Card Visibility Verification**:
+   Before saving screenshots, audit the DOM to confirm `hiddenCardsCount === 0` and all cards have `opacity: 1`.
+7. **Gitignored Screenshot Directory**:
+   Store all screenshot artifacts inside `screenshots/` in the repository root. Never commit screenshots to git.
+
+---
+
 ## Step-by-Step Layout Audit Workflow
 
 ### Step 1: Run the Layout Auditor

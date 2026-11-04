@@ -23,7 +23,6 @@
     line-height: 1.9;
     color: var(--text-secondary);
     margin-bottom: 1.75rem;
-    font-feature-settings: "kern" 1, "liga" 1;
 }
 
 .bio-summary::before {
@@ -38,14 +37,12 @@
 
 /* Narrative Section Titles */
 #narrative .section-title {
-    font-family: var(--font-display);
     font-size: clamp(1.6rem, 3vw, 2.2rem);
     font-weight: 700;
     color: var(--primary-dark);
     margin-top: clamp(2.5rem, 5vw, 4rem);
     margin-bottom: 1.25rem;
     letter-spacing: -0.01em;
-    position: relative;
     padding-bottom: 0.5rem;
 }
 
@@ -55,7 +52,6 @@
     line-height: 1.9;
     color: var(--text-secondary);
     margin-bottom: 1.75rem;
-    font-feature-settings: "kern" 1, "liga" 1;
 }
 
 /* Bio Closing Quote */

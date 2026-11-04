@@ -1498,11 +1498,8 @@ html.menu-open .menu-aside {
 
 .card h3 {
   margin-bottom: 0.9rem;
-  color: var(--heading);
-  font-family: var(--font-display);
   font-size: clamp(1.35rem, 1.8vw, 1.6rem);
   font-weight: 420;
-  letter-spacing: -0.01em;
 }
 
 .card p {
@@ -1634,7 +1631,6 @@ html.menu-open .menu-aside {
 }
 
 .milestones h3 {
-  color: var(--heading);
   font: 450 1.12rem/1.3 var(--font-display);
   margin-bottom: 0.4rem;
 }
@@ -1657,7 +1653,6 @@ html.menu-open .menu-aside {
 }
 
 .narrative-content h3 {
-  color: var(--heading);
   font-size: clamp(1.45rem, 2vw, 1.8rem);
   font-weight: 420;
 }
@@ -2107,10 +2102,6 @@ video {
   gap: 0.75rem;
 }
 
-.ill-caption strong {
-  color: var(--heading);
-}
-
 /* Illustration System Utility Classes */
 .ill {
   display: block;
@@ -2434,7 +2425,6 @@ html.header-hidden .subnav {
   background: var(--primary-dark);
   color: rgba(251, 247, 240, 0.72);
   font-size: 0.95rem;
-  overflow: visible;
 }
 
 .footer-wave {
@@ -2743,7 +2733,8 @@ html.header-hidden .subnav {
   background: var(--dark-surface-3);
 }
 
-.body-dark .section-link-btn {
+.body-dark .section-link-btn,
+.body-dark .subnav-list a[aria-current="page"] {
   background: var(--tertiary);
   color: var(--primary-dark);
 }
@@ -2752,15 +2743,7 @@ html.header-hidden .subnav {
   color: var(--neutral-50);
 }
 
-.body-dark .subnav-list a[aria-current="page"] {
-  background: var(--tertiary);
-  color: var(--primary-dark);
-}
-
-.body-dark .stat-card h3 {
-  color: var(--tertiary);
-}
-
+.body-dark .stat-card h3,
 .body-dark .faq-item:hover .faq-question,
 .body-dark .faq-item[open] .faq-question {
   color: var(--tertiary);
@@ -2808,10 +2791,6 @@ html.header-hidden .subnav {
 
   .brand-word {
     font-size: 1.65rem;
-  }
-
-  .brand-word small {
-    display: none !important;
   }
 
   .brand-mark {

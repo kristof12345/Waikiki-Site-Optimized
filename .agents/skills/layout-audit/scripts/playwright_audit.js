@@ -271,21 +271,56 @@ async function runAudit(filePath, requestedWidths, requestedModes) {
                 });
 
                 await page.goto(fileUrl, { waitUntil: 'domcontentloaded' });
-                // Force all lazy images to load eagerly and wait for them to finish
+
+                // Dismiss page curtain
+                await page.evaluate(() => {
+                    const c = document.querySelector('.page-curtain');
+                    if (c) { c.style.display = 'none'; c.style.animation = 'none'; }
+                });
+
+                // Progressive step-by-step scroll to bottom with rAF compositor sync
                 await page.evaluate(async () => {
                     document.querySelectorAll('img[loading="lazy"]').forEach(img => {
                         img.loading = 'eager';
                     });
-                    await Promise.all(Array.from(document.querySelectorAll('img')).map(img => {
-                        if (img.complete) return Promise.resolve();
-                        return new Promise(resolve => {
-                            img.addEventListener('load', resolve, { once: true });
-                            img.addEventListener('error', resolve, { once: true });
-                            setTimeout(resolve, 2500);
+                    document.querySelectorAll('img[data-src]').forEach(img => {
+                        if (!img.src) img.src = img.dataset.src;
+                    });
+                    const max = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+                    const vh = window.innerHeight;
+                    const step = Math.max(Math.floor(vh * 0.75), 350);
+                    for (let y = 0; y <= max; y += step) {
+                        window.scrollTo(0, y);
+                        await new Promise(r => setTimeout(r, 35));
+                    }
+                    window.scrollTo(0, max);
+                });
+
+                // Wait for image decoding and transitions to settle
+                await page.evaluate(async () => {
+                    const imgs = Array.from(document.querySelectorAll('img'));
+                    await Promise.all(imgs.map(async img => {
+                        if (img.complete) {
+                            if (img.decode) {
+                                try { await img.decode(); } catch(e) {}
+                            }
+                            return;
+                        }
+                        return new Promise(res => {
+                            img.addEventListener('load', res, { once: true });
+                            img.addEventListener('error', res, { once: true });
+                            setTimeout(res, 2000);
                         });
                     }));
+                    // Ensure all reveal elements are attached
+                    document.querySelectorAll('[data-reveal], .card, .stat-card').forEach(el => {
+                        el.classList.add('is-in');
+                    });
                 });
-                await page.waitForTimeout(150);
+
+                // Scroll back to top and let layout stabilize
+                await page.evaluate(() => window.scrollTo(0, 0));
+                await page.waitForTimeout(400);
 
                 const auditData = await page.evaluate(evaluatePage, isDark);
 

@@ -1,5 +1,6 @@
 /* Infrastructure Stylesheet */
-.milestones {
+.milestones,
+.ill-panel {
   max-width: var(--width-l);
 }
 
@@ -39,20 +40,10 @@
   letter-spacing: 0.08em;
 }
 
-.ill .spin.slow {
-  animation-duration: 11s;
-}
-
-.ill-panel {
-  max-width: var(--width-l);
-}
-
-
 #megaprojects .card-grid {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: clamp(1rem, 1.25vw, 1.35rem);
   max-width: var(--width-l);
-  margin: 0 auto;
 }
 
 #megaprojects .card {
@@ -70,9 +61,7 @@
 }
 
 .building-art .ill {
-  width: 100%;
   height: 100%;
-  display: block;
   transition: transform 1.4s var(--ease-out);
 }
 
@@ -123,7 +112,8 @@
   object-fit: contain;
 }
 
-.body-dark .building-loc img {
+.body-dark .building-loc img,
+.body-dark .island-tab-btn img {
   filter: brightness(2.1) saturate(0.7);
 }
 
@@ -164,7 +154,6 @@
 }
 
 .feature-list h3 {
-  color: var(--heading);
   font: 450 1.2rem/1.3 var(--font-display);
   margin-bottom: 0.35rem;
 }
@@ -337,10 +326,6 @@
   transform: scale(1.1);
 }
 
-.body-dark .island-tab-btn img {
-  filter: brightness(2.1) saturate(0.7);
-}
-
 .body-dark .island-tab-btn.is-active img,
 .body-dark .island-tab-btn[aria-selected="true"] img {
   filter: brightness(0);
@@ -360,7 +345,9 @@
   box-shadow: 0 6px 18px rgba(0, 34, 68, 0.22);
 }
 
-.body-dark .island-tab-btn {
+.body-dark .island-tab-btn,
+.body-dark .island-spec-item,
+.body-dark .island-hotspot-card {
   border-color: var(--line-strong);
 }
 
@@ -438,10 +425,6 @@
   color: var(--text-secondary);
 }
 
-.body-dark .island-spec-item {
-  border-color: var(--line-strong);
-}
-
 /* Island Map Container */
 .island-map-container {
   position: relative;
@@ -472,7 +455,6 @@
 
 .island-map-title-group h3 {
   font: 500 1.22rem/1.2 var(--font-display);
-  color: var(--heading);
   margin: 0;
 }
 
@@ -689,7 +671,6 @@
   transform: translateY(6px) scale(0.97);
   transform-origin: var(--arrow-x) 100%;
   transition: opacity 0.18s var(--ease-out), transform 0.22s var(--ease-out);
-  pointer-events: auto;
 }
 
 .map-tooltip[hidden] {
@@ -753,8 +734,6 @@
   width: 26px;
   height: 26px;
   margin-left: auto;
-  padding: 0;
-  border: 0;
   border-radius: 50%;
   background: var(--white-alpha-10);
   color: var(--neutral-50);
@@ -888,7 +867,6 @@
 
 .island-hotspot-card h4 {
   font: 500 1.08rem/1.3 var(--font-display);
-  color: var(--heading);
   margin: 0;
 }
 
@@ -897,10 +875,6 @@
   font-size: 0.92rem;
   line-height: 1.55;
   margin: 0;
-}
-
-.body-dark .island-hotspot-card {
-  border-color: var(--line-strong);
 }
 
 /* Responsive adjustments */
@@ -918,26 +892,10 @@
 
 @media (prefers-reduced-motion: reduce) {
 
-  .ill .spin,
-  .ill .bob,
-  .ill .drift,
-  .ill .pulse,
-  .ill .twinkle {
-    animation: none !important;
-  }
-
   .energy-seg,
   .height-chart .tower {
     transition: none !important;
   }
-}
-
-html.no-reveal .ill .spin,
-html.no-reveal .ill .bob,
-html.no-reveal .ill .drift,
-html.no-reveal .ill .pulse,
-html.no-reveal .ill .twinkle {
-  animation: none !important;
 }
 
 html.no-reveal .energy-bar .energy-seg {

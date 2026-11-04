@@ -7,7 +7,6 @@
 
 .mission h2 {
     margin-bottom: 1.75rem;
-    color: var(--heading);
     font-size: clamp(2.2rem, 4.6vw, 3.6rem);
     font-weight: 330;
     letter-spacing: -0.02em;

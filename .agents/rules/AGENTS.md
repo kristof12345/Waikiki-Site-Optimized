@@ -29,6 +29,26 @@
 
 1. **Never Automatically Push or Publish**: Never run `git push` or execute the `publish` skill (`publish.py`) automatically. Pushing and publishing must only occur when explicitly instructed by the user.
 
+## Visual Testing & Browser Inspection Guidelines
+
+1. **Local HTTP Server Required**: Always serve site files via a local HTTP static server (e.g., `http://127.0.0.1:8080/`) when auditing or capturing screenshots with Playwright / Chrome. Never load via `file://` URLs outside the site root, as relative paths (`../css/`, `../images/`, `../icons/`) will fail or 404.
+2. **Progressive Step-by-Step Scrolling with Compositor Sync**:
+   - Elements with `data-reveal` (`.card`, `.stat-card`, `.section-title`, `.timeline-item`, etc.) use `IntersectionObserver` with `rootMargin: '0px 0px -5% 0px'`. Cards and content will stay hidden (`opacity: 0`, `transform: translate3d(0, 44px, 0)`) unless scrolled into the viewport.
+   - Do not jump instantly to the bottom in a tight JS loop. Scroll down in progressive increments (300–400px) paired with dual `requestAnimationFrame` and a short delay (30–45ms) at each step so Chromium's compositor updates and triggers `.is-in`.
+3. **Wait for CSS Transitions and Stagger Delays**:
+   - `css/common.css` transitions take `1s–1.2s` with `--delay-increment: 50ms` (staggering up to `--i: 8`).
+   - Always wait **at least 2.0–2.2 seconds** after reaching the bottom for all animations, stagger delays, and image decodes to complete before taking screenshots.
+4. **Asynchronous Galleries & Lazy Data**:
+   - For photo galleries (`*gallery.html`), wait for the Google Apps Script endpoint (`Gallery.init`) to populate `#gallery-grid` before scrolling.
+   - Convert `img[loading="lazy"]` to eager, ensure `data-src` is assigned to `src`, and await all `img.decode()` / load events.
+5. **Dismiss Curtain & Reset Scroll for Top Viewports**:
+   - Dismiss or hide `.page-curtain` (`display: none !important`) so the 1.05s exit animation never obscures screenshots.
+   - When capturing full-page or top-of-page screenshots, scroll back to `(0, 0)` and pause (500–600ms) for sticky navigation, header state, and top layout to settle.
+6. **Card Visibility Verification**:
+   - Verify before taking screenshots that `hiddenCardsCount === 0` and all cards have `opacity: 1` and resting transform (`none`).
+7. **Screenshot Location**:
+   - Save all visual test screenshots into the gitignored `screenshots/` directory at the repository root. Never commit screenshots to git.
+
 ## HTML Page Builds and Edits
 
 After building or editing any HTML page:

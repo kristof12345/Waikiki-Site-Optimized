@@ -4,5 +4,6 @@
 **/webpro.js
 img/**
 node_modules/
+screenshots/
 __pycache__/
 *.pyc

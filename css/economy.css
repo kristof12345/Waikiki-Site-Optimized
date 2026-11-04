@@ -2,10 +2,7 @@
 
 .stat-card .stat-number {
   margin: 0.4rem 0;
-  color: var(--accent);
-  font-family: var(--font-display);
   font-size: clamp(2rem, 3vw, 2.6rem);
-  font-weight: 330;
   line-height: 1.1;
 }
 
@@ -195,10 +192,6 @@
     margin-bottom: 0;
 }
 
-.timeline-item:nth-child(odd) {
-    flex-direction: row;
-}
-
 .timeline-item:nth-child(even) {
     flex-direction: row-reverse;
 }
@@ -331,7 +324,8 @@
 
 .body-dark .chart-title,
 .body-dark .data-viz-container h3,
-.body-dark .data-viz-container-half h3 {
+.body-dark .data-viz-container-half h3,
+.body-dark .timeline-content h4 {
     color: var(--tertiary-light);
 }
 
@@ -339,7 +333,8 @@
     color: var(--neutral-100);
 }
 
-.body-dark .legend-text {
+.body-dark .legend-text,
+.body-dark .timeline-content p {
     color: var(--neutral-300);
 }
 
@@ -356,12 +351,4 @@
 
 .body-dark .timeline-content {
     box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.5);
-}
-
-.body-dark .timeline-content h4 {
-    color: var(--tertiary-light);
-}
-
-.body-dark .timeline-content p {
-    color: var(--neutral-300);
 }

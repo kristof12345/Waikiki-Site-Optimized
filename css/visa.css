@@ -110,8 +110,6 @@
 
 .visa-specs {
     list-style: none;
-    padding: 0;
-    margin: 0;
     border-top: 1px solid var(--line);
     padding-top: 1rem;
     display: flex;
@@ -128,7 +126,6 @@
 }
 
 .visa-specs li strong {
-    color: var(--heading);
     font-weight: 600;
     text-align: right;
 }
@@ -169,12 +166,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.65rem;
-}
-
-@media (max-width: 560px) {
-    .tier-selector-grid {
-        grid-template-columns: 1fr;
-    }
 }
 
 .tier-card {
@@ -405,6 +396,7 @@
 }
 
 @media (max-width: 560px) {
+    .tier-selector-grid,
     .result-req-grid {
         grid-template-columns: 1fr;
     }
@@ -447,11 +439,6 @@
 .result-stat-pill {
     font-size: 0.85rem;
     color: var(--text-muted);
-}
-
-.result-stat-pill strong {
-    color: var(--heading);
-    font-weight: 700;
 }
 
 /* 3. Four-Step Arrival Flow */
@@ -504,14 +491,19 @@
     font-family: var(--font-sans);
 }
 
-.process-step-card h3 {
+.process-step-card h3,
+.customs-card h3 {
     font-size: 1.15rem;
     font-weight: 700;
-    color: var(--heading);
-    margin: 0 0 0.5rem;
+    margin: 0;
 }
 
-.process-step-card p {
+.process-step-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.process-step-card p,
+.customs-card p {
     font-size: 0.9rem;
     line-height: 1.6;
     color: var(--text-muted);
@@ -561,20 +553,6 @@
 
 .body-dark .customs-icon img {
     filter: brightness(2.1) saturate(0.7);
-}
-
-.customs-card h3 {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: var(--heading);
-    margin: 0;
-}
-
-.customs-card p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: var(--text-muted);
-    margin: 0;
 }
 
 .customs-list {

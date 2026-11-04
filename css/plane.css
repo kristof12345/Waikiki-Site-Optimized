@@ -8,9 +8,7 @@
 }
 
 .plane-fleet-header .section-title {
-  font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 3.2rem);
-  color: var(--heading);
   margin-bottom: 1rem;
   font-weight: 380;
   letter-spacing: -0.015em;
@@ -233,7 +231,6 @@
   gap: 0.55rem;
   padding: 0.75rem 1.25rem;
   background: transparent;
-  border: none;
   border-bottom: 2px solid transparent;
   font-family: var(--font-sans);
   font-size: 0.82rem;
@@ -259,15 +256,12 @@
   color: var(--heading);
 }
 
-.aircraft-tab-btn:hover img {
-  opacity: 1;
-}
-
 .aircraft-tab-btn.is-active {
   color: var(--primary);
   border-bottom-color: var(--primary);
 }
 
+.aircraft-tab-btn:hover img,
 .aircraft-tab-btn.is-active img {
   opacity: 1;
 }
@@ -687,7 +681,10 @@
   border-bottom-color: var(--white-alpha-12);
 }
 
-.body-dark .aircraft-tab-btn {
+.body-dark .aircraft-tab-btn,
+.body-dark .spec-label,
+.body-dark .topview-caption,
+.body-dark .deckplan-zone-area {
   color: var(--dark-text);
 }
 
@@ -698,10 +695,6 @@
 .body-dark .aircraft-tab-btn.is-active {
   color: var(--tertiary);
   border-bottom-color: var(--tertiary);
-}
-
-.body-dark .spec-label {
-  color: var(--dark-text);
 }
 
 .body-dark .interior-card:hover {
@@ -717,10 +710,6 @@
 
 .body-dark .topview-svg {
   filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.5));
-}
-
-.body-dark .topview-caption {
-  color: var(--dark-text);
 }
 
 .body-dark .deckplan-toolbar {
@@ -788,10 +777,6 @@
   background: var(--tertiary-alpha-16);
   border-color: rgba(107, 164, 217, 0.35);
   color: #93c5fd;
-}
-
-.body-dark .deckplan-zone-area {
-  color: var(--dark-text);
 }
 
 /* Responsive adjustments */

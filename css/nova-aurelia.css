@@ -1,16 +1,11 @@
 /* Nova Aurelia Stylesheet */
-.card-grid {
-    max-width: var(--width-l);
-}
-
-/* Illustration Container and Frames */
+.card-grid,
 .ill-panel {
     max-width: var(--width-l);
 }
 
 .city-ill-frame {
     width: 100%;
-    max-width: 100%;
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: var(--radius-lg);
@@ -60,10 +55,8 @@
 }
 
 .city-feature-text h3 {
-    font-family: var(--font-display);
     font-size: clamp(1.6rem, 2.8vw, 2.4rem);
     font-weight: 600;
-    color: var(--heading);
     margin-bottom: 1rem;
     position: relative;
     padding-bottom: 0.8rem;
@@ -89,14 +82,9 @@
     margin-bottom: 1.25rem;
 }
 
-.body-dark .city-feature-text p {
-    color: var(--text-secondary);
-}
-
 .city-feature-list {
     list-style: none;
-    padding: 0;
-    margin: 1.5rem 0 0 0;
+    margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 0.85rem;
@@ -110,6 +98,7 @@
     color: var(--text);
 }
 
+.body-dark .city-feature-text p,
 .body-dark .city-feature-list li {
     color: var(--text-secondary);
 }
@@ -157,12 +146,7 @@
 }
 
 .city-district-body h3 {
-    margin-top: 0;
     margin-bottom: 0.75rem;
-}
-
-.city-district-body p {
-    margin: 0;
 }
 
 /* Vector Animation Keyframes */

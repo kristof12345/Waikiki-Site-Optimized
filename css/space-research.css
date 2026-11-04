@@ -24,8 +24,7 @@
 
 .spec-list {
     list-style: none;
-    padding: 0;
-    margin: 1.25rem 0 0;
+    margin-top: 1.25rem;
     border-top: 1px solid var(--line);
     padding-top: 1rem;
     display: flex;
@@ -41,7 +40,6 @@
 }
 
 .spec-list li strong {
-    color: var(--heading);
     font-weight: 600;
     text-align: end;
 }
@@ -83,11 +81,6 @@
 }
 
 /* Rocket and Shuttle Card Watermark Schematics */
-#fleet .card {
-    position: relative;
-    overflow: hidden;
-}
-
 #fleet .card > * {
     position: relative;
     z-index: 1;
