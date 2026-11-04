@@ -633,17 +633,11 @@ def build_svg(lang="en", cuba_xml=""):
 
     # Assemble SVG text
     svg = f'''<svg class="ill" viewBox="0 0 1800 650">
-                    <defs>
-                        <clipPath id="rm-clip">
-                            <rect width="1800" height="650" rx="28" />
-                        </clipPath>
-                    </defs>
-                    <g clip-path="url(#rm-clip)">
-                        <rect width="1800" height="650" class="f-sea3" />
-                        <!-- Geographic Coordinate Grid -->
-                        <g class="k-white" stroke-width="1" opacity=".3">
-                            <path d="M0 130h1800M0 260h1800M0 390h1800M0 520h1800M300 0v650M600 0v650M900 0v650M1200 0v650M1500 0v650" />
-                        </g>
+                    <rect width="1800" height="650" class="f-sea3" />
+                    <!-- Geographic Coordinate Grid -->
+                    <g class="k-white" stroke-width="1" opacity=".3">
+                        <path d="M0 130h1800M0 260h1800M0 390h1800M0 520h1800M300 0v650M600 0v650M900 0v650M1200 0v650M1500 0v650" />
+                    </g>
 {fl_xml}
                         <!-- ==================== BAHAMAS ARCHIPELAGO ==================== -->
                         <g class="f-sand" opacity=".88" transform="translate(200, -45) scale(1.15)">
@@ -670,7 +664,6 @@ def build_svg(lang="en", cuba_xml=""):
                             <path d="M125 26h26" class="k-ink2" stroke-width="4" stroke-linecap="round" /><text x="159" y="29.5" font-weight="600">{lbl_mainline}</text>
                             <path d="M0 46h26" class="k-sea" stroke-width="3.5" stroke-dasharray="5 3" stroke-linecap="round" /><text x="34" y="49.5" font-weight="600">{lbl_maritime}</text>
                         </g>
-                    </g>
                 </svg>'''
     return svg
 
