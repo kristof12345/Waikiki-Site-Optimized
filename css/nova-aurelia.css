@@ -1,6 +1,6 @@
 /* Nova Aurelia Stylesheet */
 .card-grid {
-  max-width: var(--width-l);
+    max-width: var(--width-l);
 }
 
 /* Illustration Container and Frames */
@@ -33,10 +33,7 @@
 .city-ill {
     display: block;
     width: 100%;
-    max-width: 100%;
     height: auto;
-    overflow: hidden;
-    border-radius: calc(var(--radius-lg) - 2px);
 }
 
 /* Section Feature Split Layout */
