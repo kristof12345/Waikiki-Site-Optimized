@@ -1068,8 +1068,6 @@ html.menu-open .menu-aside {
   position: absolute;
   inset: -6% 0 -6% 0;
   z-index: -2;
-  transform: translate3d(0, var(--hero-shift, 0px), 0);
-  will-change: transform;
 }
 
 .hero-media img,
