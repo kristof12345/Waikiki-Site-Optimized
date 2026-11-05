@@ -3347,7 +3347,7 @@ def update_pages(rendered: dict[str, dict[str, str]]) -> None:
             w, h = dims.get(key, default_dim)
             alt_txt = LABELS[lang]["alt"].get(key, "")
             src_file = f"{key}.svg"
-            img_tag = f'<img class="nature-ill" src="../icons/nature/{src_file}" alt="{html.escape(alt_txt, quote=True)}" width="{w}" height="{h}" loading="lazy" />'
+            img_tag = f'<img class="nature-ill" src="../icons/nature/{src_file}" alt="{html.escape(alt_txt, quote=True)}" width="{w}" height="{h}" />'
             pattern = re.compile(CONTAINER_RE.format(key=key), re.S)
             match = pattern.search(text)
             if not match:

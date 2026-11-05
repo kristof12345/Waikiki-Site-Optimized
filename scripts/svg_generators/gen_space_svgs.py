@@ -783,14 +783,14 @@ def update_space_page(file_path: Path, lang: str = "en") -> None:
         if lang == "en"
         else "Waikiki Nemzeti Űrállomás pályamenti komplexum és telemetriai diagram"
     )
-    station_img = f'<img class="ill" src="../icons/space/station-{lang}.svg" alt="{alt_station}" width="1160" height="520" loading="lazy" />'
+    station_img = f'<img class="ill" src="../icons/space/station-{lang}.svg" alt="{alt_station}" width="1160" height="520" />'
 
     alt_corridor = (
         "Earth Moon and Mars Interplanetary Transfer Corridor Map"
         if lang == "en"
         else "Föld, Hold és Mars bolygóközi transzferfolyosó térkép"
     )
-    corridor_img = f'<img class="ill" src="../icons/space/corridor-{lang}.svg" alt="{alt_corridor}" width="1160" height="480" loading="lazy" />'
+    corridor_img = f'<img class="ill" src="../icons/space/corridor-{lang}.svg" alt="{alt_corridor}" width="1160" height="480" />'
 
     # Replace SVG or existing img in #station section
     station_pattern = re.compile(
