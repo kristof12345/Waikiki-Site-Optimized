@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- @chrome:head -->
+    <meta name="theme-color" content="#fbf7f0" />
+    <link rel="stylesheet" href="../css/fonts.css" />
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
+    <!-- /@chrome:head -->
+    <title>Vízum és belépési követelmények</title>
+    <link rel="icon" href="../icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo-blue.png" />
+    <link href="../manifest.json" rel="manifest" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/visa.css" />
+    <link rel="preload" as="image" href="../images/UniversalUpscaler_Pro_Precise_2_1f1c8726-8cda-62d0-a130-3eed92bc8395.jpg" fetchpriority="high" />
+</head>
+<body class="page-visa group-visit">
+    <!-- @chrome:header -->
+    <div class="page-curtain" aria-hidden="true"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="64" height="64" loading="eager" /></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <header class="site-header">
+        <a href="index.html" class="brand"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" /><span class="brand-word">Waikiki</span></a>
+        <nav class="primary-nav">
+            <a href="tourism.html" aria-current="page">Utazás</a><a href="society.html">Társadalom</a><a href="economy.html">Gazdaság</a><a href="government.html">Kormány</a><a href="history.html">Történelem</a><a href="dynasty.html">Királyi Család</a>
+        </nav>
+        <div class="header-actions">
+            <a class="lang-pill" href="../en/visa.html" hreflang="en" lang="en" title="English">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg>
+                <span>EN</span>
+            </a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+                <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg>
+            </button>
+            <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+                <span class="menu-lines" aria-hidden="true"></span>
+                <span class="menu-label-open">Menü</span>
+                <span class="menu-label-close">Bezárás</span>
+                <span class="visually-hidden">Menü</span>
+            </button>
+        </div>
+    </header>
+    <div class="site-menu" id="site-menu" aria-hidden="true" inert>
+        <div class="site-menu-inner">
+            <aside class="menu-aside">
+                <div class="menu-clock-block">
+                    <div class="menu-clock-header">
+                        <p class="menu-clock-label">Helyi idő a fővárosban</p>
+                        <div class="menu-weather" data-capital-weather><span class="weather-icon" aria-hidden="true">☀️</span> <span class="weather-temp">28°C</span> <span class="weather-desc">Napos</span></div>
+                    </div>
+                    <p class="menu-clock" data-capital-clock>--:--</p>
+                    <p class="menu-clock-city">Nova Aurelia, Waikiki tartomány</p>
+                </div>
+                <p class="menu-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
+                <div class="menu-aside-row">
+                    <a class="menu-chip" href="../en/visa.html" hreflang="en" lang="en">English</a><a class="menu-chip is-active" href="../hu/visa.html" hreflang="hu" lang="hu">Magyar</a>
+                    <button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Éjszakai mód</button>
+                    <button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animáció</button>
+                </div>
+            </aside>
+            <div class="menu-group">
+                <h2>Nemzet</h2>
+                <ul>
+                    <li><a href="index.html">Főoldal</a></li>
+                    <li><a href="overview.html">Áttekintés</a></li>
+                    <li><a href="history.html">Történelem</a></li>
+                    <li><a href="society.html">Társadalom</a></li>
+                    <li><a href="culture.html">Kultúra</a></li>
+                    <li><a href="ideology.html">Ideológia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Kormányzás</h2>
+                <ul>
+                    <li><a href="government.html">Kormány</a></li>
+                    <li><a href="leadership.html">Vezetés</a></li>
+                    <li><a href="parties.html">Politika</a></li>
+                    <li><a href="constitution.html">Alkotmány</a></li>
+                    <li><a href="military.html">Hadsereg</a></li>
+                    <li><a href="diplomacy.html">Diplomácia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Jólét</h2>
+                <ul>
+                    <li><a href="economy.html">Gazdaság</a></li>
+                    <li><a href="banking-system.html">Bankrendszer</a></li>
+                    <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                    <li><a href="citizenship.html">Állampolgárság</a></li>
+                    <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                    <li><a href="space-research.html">Űrkutatás</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Királyi Család</h2>
+                <ul>
+                    <li><a href="dynasty.html">Dinasztia</a></li>
+                    <li><a href="family-tree.html">Családfa</a></li>
+                    <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                    <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Látogatás</h2>
+                <ul>
+                    <li><a href="tourism.html">Turizmus</a></li>
+                    <li><a href="sights.html">Látnivalók</a></li>
+                    <li><a href="nature.html">Természet</a></li>
+                    <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                    <li><a href="visa.html" aria-current="page">Vízum és belépés</a></li>
+                    <li><a href="faq.html">GYIK</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /@chrome:header -->
+    <main id="main">
+        <section class="hero" data-hero>
+            <div class="hero-media"><img src="../images/UniversalUpscaler_Pro_Precise_2_1f1c8726-8cda-62d0-a130-3eed92bc8395.jpg" alt="Érkezési csarnok" fetchpriority="high" /></div>
+            <div class="hero-veil"></div>
+            <div class="hero-content">
+                <span class="hero-eyebrow">Látogatás · Vízum és belépés</span>
+                <h1 class="hero-title">Vízum és belépési követelmények</h1>
+                <p class="hero-lead">Átlátható beutazási szabályok, biometrikus SmartBorder kapuk és digitális e-vízum megoldások a világ legfejlettebb határátlépési élményéért. Ismerje meg az egyes vízumkategóriákat, a vámmentes belépési előírásokat és az érkezési folyamatot, hogy látogatása már az első pillanattól fogva felhőtlen és zökkenőmentes legyen és tényleg csak a nyaralással kelljen foglalkoznod.</p>
+                <div class="hero-stats">
+                    <div class="stat-item"><span class="stat-number">120+</span><span class="stat-label">Vízummentes vagy e-vízum</span></div>
+                    <div class="stat-item"><span class="stat-number">12 mp</span><span class="stat-label">Biometrikus átlépési idő</span></div>
+                    <div class="stat-item"><span class="stat-number">100%</span><span class="stat-label">Papírmentes SmartBorder</span></div>
+                    <div class="stat-item"><span class="stat-number">0 WUD</span><span class="stat-label">Partner turista díj</span></div>
+                </div>
+            </div>
+        </section>
+        <!-- @chrome:subnav --><!-- /@chrome:subnav -->
+        <section id="policy">
+            <h2 class="section-title">Vendégszerető és biztonságos határfilozófia</h2>
+            <p class="section-intro">Waikiki megteremti a tökéletes egyensúlyt a területi biztonság és a világszínvonalú vendéglátás között. Évente több mint 45 millió nemzetközi látogató érkezik három tartományunkba, a fizikai bürokráciát és a sorban állást pedig teljesen felváltotta az érintésmentes digitális beléptetés.</p>
+            <div class="visa-grid">
+                <div class="visa-card">
+                    <div class="visa-card-header">
+                        <span class="visa-badge is-green">Nemzetközi egyezmények</span>
+                        <h3 class="visa-card-title">Kölcsönös utazási szabadság</h3>
+                    </div>
+                    <p class="visa-card-desc">Az Amerikai Unióval, az Európai Unióval, a Nemzetközösséggel és kelet-ázsiai partnereinkkel kötött kétoldalú szerződések garantálják a nyaralók, kutatók és üzletemberek akadálytalan beutazását.</p>
+                    <ul class="visa-specs">
+                        <li><span>Standard tartózkodás</span><strong>Legfeljebb 30 nap</strong></li>
+                        <li><span>Vízumdíj</span><strong>0 WUD (Díjmentes belépés)</strong></li>
+                        <li><span>Kedvezményezett államok</span><strong>65 szerződéses partner</strong></li>
+                    </ul>
+                </div>
+                <div class="visa-card">
+                    <div class="visa-card-header">
+                        <span class="visa-badge">Biometrikus infrastruktúra</span>
+                        <h3 class="visa-card-title">SmartBorder érintésmentes kapuk</h3>
+                    </div>
+                    <p class="visa-card-desc">A 3D multispektrális arcfelismerő és íriszleolvasó folyosók másodpercek alatt azonosítják az utazókat, teljesen feleslegessé téve az útlevélpecséteket és papíralapú belépési nyilatkozatokat.</p>
+                    <ul class="visa-specs">
+                        <li><span>Kapu leolvasási ideje</span><strong>Kevesebb mint 10 másodperc</strong></li>
+                        <li><span>Azonosítási pontosság</span><strong>99% multimodális</strong></li>
+                        <li><span>Átlagos terminálátjutás</span><strong>12 másodperc összesen</strong></li>
+                    </ul>
+                </div>
+                <div class="visa-card">
+                    <div class="visa-card-header">
+                        <span class="visa-badge is-blue">Digitális ökoszisztéma</span>
+                        <h3 class="visa-card-title">Waikiki One látogatói integráció</h3>
+                    </div>
+                    <p class="visa-card-desc">Titkosított beutazási engedélye automatikusan összekapcsolódik a Waikiki One mobilalkalmazással, amely digitális tömegközlekedési bérletként és érintésmentes fizetőeszközként is szolgál.</p>
+                    <ul class="visa-specs">
+                        <li><span>Alkalmazás integráció</span><strong>Minden egyben digitális kártya</strong></li>
+                        <li><span>Helyi közlekedés</span><strong>Waikiki One érintéses bérletek</strong></li>
+                        <li><span>Sürgősségi egészségügy</span><strong>24/7 többnyelvű orvosi támogatás</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="categories" class="light-bg">
+            <h2 class="section-title">Belépési kategóriák és engedélyek</h2>
+            <p class="section-intro">Akár kikapcsolódásra, nemzetközi kereskedelmi csúcstalálkozóra, a Nova Aurelia Űrközpont tudományos projektjére vagy tengeri jachtos felfedezésre érkezik, válassza az utazási céljának megfelelő kategóriát.</p>
+            <div class="visa-grid">
+                <div class="visa-card">
+                    <div class="visa-card-header">
+                        <span class="visa-badge is-green">A kategória · Mentesség</span>
+                        <h3 class="visa-card-title">Vízummentes turista belépés</h3>
+                    </div>
+                    <p class="visa-card-desc">Az Amerikai Unió, az Európai Unió tagállamai, az Egyesült Királyság, Kanada, Japán, Dél-Korea, Ausztrália, Új-Zéland és Szingapúr állampolgárai számára érvényes útlevéllel.</p>
+                    <ul class="visa-specs">
+                        <li><span>Megengedett tartózkodás</span><strong>Legfeljebb 30 nap</strong></li>
+                        <li><span>Igénylési feltétel</span><strong>Indulás előtti Waikiki One regisztráció</strong></li>
+                        <li><span>Költség</span><strong>0 WUD (Díjmentes)</strong></li>
+                    </ul>
+                </div>
+                <div class="visa-card">
+                    <div class="visa-card-header">
+                        <span class="visa-badge">B kategória · Általános</span>
+                        <h3 class="visa-card-title">Waikiki One e-vízum</h3>
+                    </div>
+                    <p class="visa-card-desc">Minden más elismert állam állampolgárai számára. Töltse fel útlevele digitális másolatát hivatalos konzuli portálunkon, és az automatizált jóváhagyást akár percek alatt kézhez kapja.</p>
+                    <ul class="visa-specs">
+                        <li><span>Megengedett tartózkodás</span><strong>30 nap (egyszeri vagy többszöri)</strong></li>
+                        <li><span>Érvényességi ablak</span><strong>90 nap a kiállítástól</strong></li>
+                        <li><span>Hivatalos díj</span><strong>35 WUD</strong></li>
+                    </ul>
+                </div>
+                <div class="visa-card">
+                    <div class="visa-card-header">
+                        <span class="visa-badge is-blue">C kategória · Kiemelt</span>
+                        <h3 class="visa-card-title">Üzleti és befektetői engedély</h3>
+                    </div>
+                    <p class="visa-card-desc">Vállalati vezetők, kereskedelmi delegációk és a Vagyonalappal, a Nova Aurelia Pénzügyi Negyeddel vagy az ipari parkokkal együttműködő üzleti partnerek számára.</p>
+                    <ul class="visa-specs">
+                        <li><span>Tartózkodás / alkalom</span><strong>90 nap látogatásonként</strong></li>
+                        <li><span>Engedély érvényessége</span><strong>1-től 3 évig többszöri belépéssel</strong></li>
+                        <li><span>Hivatalos díj</span><strong>120 WUD</strong></li>
+                    </ul>
+                </div>
+                <div class="visa-card">
+                    <div class="visa-card-header">
+                        <span class="visa-badge is-red">D kategória · Tranzit</span>
+                        <h3 class="visa-card-title">Tranzit és tengeri hajózás</h3>
+                    </div>
+                    <p class="visa-card-desc">Az Aurelia Interkontinentális Repülőtéren átszálló repülőgépes utasok, valamint a felségvizeinken hajózó magánjachtok és utasszállító hajók számára.</p>
+                    <ul class="visa-specs">
+                        <li><span>Tranzit időtartama</span><strong>Legfeljebb 48 óra</strong></li>
+                        <li><span>Tengeri tartózkodás</span><strong>30 napos szigeti hajózási engedély</strong></li>
+                        <li><span>Légi tranzit díja</span><strong>0 WUD (Díjmentes)</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="checker">
+            <h2 class="section-title">Interaktív beutazási feltételkereső</h2>
+            <p class="section-intro">Tájékozódjon a pontos okmány, előzetes regisztrációs és határellenőrzési szabályokról indulás előtt. Válassza ki a hat kategória egyikét.</p>
+            <div class="checker-wrapper" id="visa-checker">
+                <div class="checker-grid">
+                    <div class="checker-controls-col">
+                        <div class="tier-selector-grid" role="group">
+                            <button type="button" class="tier-card is-active" data-checker-tier="us_ca">
+                                <span class="tier-card-top">
+                                    <span class="tier-badge badge-green">Nincs regisztráció</span>
+                                    <span class="tier-gate">Digitális kapu</span>
+                                </span>
+                                <strong class="tier-card-title">Egyesült Államok és Kanada</strong>
+                                <span class="tier-card-sub">Nem szükséges előzetes regisztráció és útlevél, egy fényképes igazolvány elegendő</span>
+                            </button>
+                            <button type="button" class="tier-card" data-checker-tier="eu_ch_au_uk">
+                                <span class="tier-card-top">
+                                    <span class="tier-badge badge-teal">24 órás regisztráció</span>
+                                    <span class="tier-gate">Digitális kapu</span>
+                                </span>
+                                <strong class="tier-card-title">EU, Egyesült Királyság, Svájc, Ausztrália és Új-Zéland</strong>
+                                <span class="tier-card-sub">Útlevél és előzetes regisztráció szükséges 24 órával az utazás előtt</span>
+                            </button>
+                            <button type="button" class="tier-card" data-checker-tier="jp_ar_partners">
+                                <span class="tier-card-top">
+                                    <span class="tier-badge badge-teal">48 órás regisztráció</span>
+                                    <span class="tier-gate">Digitális kapu</span>
+                                </span>
+                                <strong class="tier-card-title">Amerikai Unió, Japán, Argentína, Dél-Korea és Szingapúr</strong>
+                                <span class="tier-card-sub">Útlevél és előzetes regisztráció szükséges 48 órával az utazás előtt</span>
+                            </button>
+                            <button type="button" class="tier-card" data-checker-tier="partner_other">
+                                <span class="tier-card-top">
+                                    <span class="tier-badge badge-amber">Egyszerűsített e-Visa</span>
+                                    <span class="tier-gate">Digitális kapu</span>
+                                </span>
+                                <strong class="tier-card-title">További partner országok</strong>
+                                <span class="tier-card-sub">Egyszerűsített e-Visa igénylés és gyors digitális határellenőrzés</span>
+                            </button>
+                            <button type="button" class="tier-card" data-checker-tier="developed_other">
+                                <span class="tier-card-top">
+                                    <span class="tier-badge badge-amber">Normál e-Visa</span>
+                                    <span class="tier-gate">Személyes</span>
+                                </span>
+                                <strong class="tier-card-title">További fejlett országok</strong>
+                                <span class="tier-card-sub">Online e-Visa kérelem és személyes határellenőrzés</span>
+                            </button>
+                            <button type="button" class="tier-card" data-checker-tier="other_world">
+                                <span class="tier-card-top">
+                                    <span class="tier-badge badge-coral">Vízum igénylés</span>
+                                    <span class="tier-gate">Személyes</span>
+                                </span>
+                                <strong class="tier-card-title">Egyéb országok</strong>
+                                <span class="tier-card-sub">Előzetes vízumigénylés és személyes határellenőrzés</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="checker-result-panel" data-checker-result>
+                        <div>
+                            <div class="result-status-header">
+                                <span class="result-tag tag-free" data-result-tag>Igazolvánnyal szabad belépés</span>
+                                <span class="result-region-pill" data-result-region>Egyesült Államok és Kanada</span>
+                            </div>
+                            <h3 class="result-title" data-result-title>Belépés igazolvánnyal és digitális határellenőrzéssel</h3>
+                            <p class="result-lead" data-result-lead>Az Egyesült Államok és Kanada állampolgárainak nem kell előzetes regisztráció és útlevél. Elég egy fényképes igazolvány, a belépés pedig digitális határellenőrzéssel történik.</p>
+                            <div class="result-req-grid">
+                                <div class="result-req-card">
+                                    <span class="result-req-label">Szükséges okmány</span>
+                                    <strong class="result-req-value" data-result-doc>Elég egy igazolvány</strong>
+                                </div>
+                                <div class="result-req-card">
+                                    <span class="result-req-label">Előzetes regisztráció / vízum</span>
+                                    <strong class="result-req-value" data-result-prereg>Nem kell regisztráció</strong>
+                                </div>
+                                <div class="result-req-card">
+                                    <span class="result-req-label">Határellenőrzés</span>
+                                    <strong class="result-req-value" data-result-border>Digitális határellenőrzés</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="result-footer">
+                            <span class="result-stat-pill">Megengedett tartózkodás: <strong data-result-stay>Legfeljebb 60 nap</strong></span>
+                            <span class="result-stat-pill">Eljárási díj: <strong data-result-fee>0 WUD (Díjmentes)</strong></span>
+                            <span class="result-stat-pill">Feldolgozás: <strong data-result-time>Azonnali beléptetés</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="process" class="light-bg">
+            <h2 class="section-title">Négy egyszerű lépés az érkezésig</h2>
+            <p class="section-intro">Az okostelefonos indulás előtti regisztrációtól egészen a Nova Aurelia pálmafákkal szegélyezett sugárútjaiig kövesse átlátható, négyállomásos útmutatónkat.</p>
+            <div class="process-grid">
+                <div class="process-step-card">
+                    <div class="step-num">01 <span class="step-badge">Felszállás előtt</span></div>
+                    <h3>Digitális regisztráció</h3>
+                    <p>Az indulás előtt 72 és 2 óra közötti időszakban regisztrálja útlevelét a Waikiki One applikációban, töltse fel arcképét és válaszoljon a rövid környezetvédelmi kérdésekre.</p>
+                </div>
+                <div class="process-step-card">
+                    <div class="step-num">02 <span class="step-badge">Beszállás</span></div>
+                    <h3>Beszállókártya szinkron</h3>
+                    <p>A légitársaság automatikusan visszaigazolja a határátlépési engedélyt a nemzetközi konzuli API-n keresztül. Készülékére megérkezik a titkosított QR-kódos digitális kártya.</p>
+                </div>
+                <div class="process-step-card">
+                    <div class="step-num">03 <span class="step-badge">Érkezés</span></div>
+                    <h3>SmartBorder kapuk</h3>
+                    <p>Nova Aurelia nemzetközi terminálján vagy a kikötőben haladjon át a biometrikus e-kapukon. A három másodperces kameraolvasás azonosítja profilját és nyitja a kaput.</p>
+                </div>
+                <div class="process-step-card">
+                    <div class="step-num">04 <span class="step-badge">Az országban</span></div>
+                    <h3>Üdvözlés és utazás</h3>
+                    <p>Vegye fel csomagjait az automatizált csarnokban, érintse telefonját az expressz maglev kapujához, és élvezze a 24/7 többnyelvű támogatást az egész országban.</p>
+                </div>
+            </div>
+        </section>
+        <section id="customs">
+            <h2 class="section-title">Vámszabályok és környezetvédelmi előírások</h2>
+            <p class="section-intro">Az érzékeny karibi korallzátonyok és a háborítatlan amazóniai esőerdők védelmezőjeként Waikiki világos vámmentességi kereteket és szigorú ökológiai szabályokat alkalmaz.</p>
+            <div class="customs-grid">
+                <div class="customs-card">
+                    <div class="customs-icon"><img src="../icons/mdi/briefcase.svg" alt="" /></div>
+                    <h3>Vámmentes keretek</h3>
+                    <p>A felnőtt látogatók a törvényben meghatározott bőséges keretek között vámmentesen hozhatnak be személyes használati tárgyakat és ajándékokat.</p>
+                    <ul class="customs-list">
+                        <li>Személyes elektronika, fényképezőgépek és laptopok</li>
+                        <li>Legfeljebb 1 liter égetett szesz vagy 2 liter bor</li>
+                        <li>1 000 WUD értékhatárig személyes ajándéktárgyak</li>
+                        <li>Személyes vényköteles gyógyszerek a tartózkodás idejére</li>
+                    </ul>
+                </div>
+                <div class="customs-card">
+                    <div class="customs-icon"><img src="../icons/mdi/currency-usd.svg" alt="" /></div>
+                    <h3>Valutabejelentési szabályok</h3>
+                    <p>A külföldi devizák és az arany bevitele és kivitele korlátlan. Az átláthatósági nyilatkozat digitálisan tehető meg a terminálokon.</p>
+                    <ul class="customs-list">
+                        <li>Bankkártyákra és digitális számlákra nincs korlátozás</li>
+                        <li>5 000 WUD feletti készpénz digitális bejelentést igényel</li>
+                        <li>WUD látogatói számlák azonnal igényelhetők</li>
+                        <li>Hivatalos átváltópontok minden nemzetközi terminálon</li>
+                    </ul>
+                </div>
+                <div class="customs-card">
+                    <div class="customs-icon"><img src="../icons/mdi/shield-check.svg" alt="" /></div>
+                    <h3>Szigorú ökológiai tiltások</h3>
+                    <p>Veszélyeztetett ökoszisztémáink megóvása érdekében a tiltott tárgyakat az ellenőrző pontokon azonnal elkobozzák.</p>
+                    <ul class="customs-list">
+                        <li>Cigaretta és szivarok</li>
+                        <li>Nem ellenőrzött friss gyümölcsök, zöldségek, magvak és termőföld</li>
+                        <li>Élő állatok előzetes hatósági állatorvosi engedély nélkül</li>
+                        <li>Védett vadon élő állatokból és növényekből származó cikkek</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="faq" class="light-bg">
+            <h2 class="section-title">Gyakran ismételt kérdések</h2>
+            <p class="section-intro">Fontos válaszok az útlevél érvényességével, a tartózkodás meghosszabbításával, a családi utazásokkal és a konzuli támogatással kapcsolatban.</p>
+            <div class="faq-container">
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="../icons/mdi/passport-32.svg" alt="" /><span class="faq-question-text">Meddig kell érvényesnek lennie az útlevelemnek a beutazáskor?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Minden látogatónak rendelkeznie kell a tervezett távozás napjától számított legalább hat hónapig érvényes útlevéllel. Bár a rutinszerű beléptetés teljesen elektronikus, egy üres oldal szükséges az esetleges sürgősségi bejegyzésekhez.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="../icons/mdi/calendar-clock-32.svg" alt="" /><span class="faq-question-text">Meghosszabbíthatom-e a tartózkodásomat az országban tartózkodva?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Igen. A vízummentes utazók és a Waikiki One e-vízummal rendelkezők közvetlenül az alkalmazáson keresztül kérhetnek 30 napos hosszabbítást bevándorlási hivatal felkeresése nélkül. A hosszabbítás díja 25 WUD.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="../icons/mdi/medical-bag-32.svg" alt="" /><span class="faq-question-text">Szükséges-e kötelező utasbiztosítás?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Külön kötelező utasbiztosítás nem szükséges a belépéshez, azonban az ellátás a külföldi látogatók számára költségtérítéses. A Waikiki One regisztrációval az utazó automatikusan elfogadja az esetleg felmerülő fizetési kötelezettségeket, így nemzetközi utasbiztosítás megkötése kifejezetten ajánlott.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="../icons/mdi/swap-horizontal-32.svg" alt="" /><span class="faq-question-text">Szükséges-e vízum vagy Waikiki One regisztráció nemzetközi átszállás esetén?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Ha az utas nem hagyja el a nemzetközi tranzitzónát és a csatlakozó járata 24 órán belül indul, nincs szükség vízumra. Amennyiben elhagyja a tranzitterületet a poggyász felvétele vagy reptéri szálloda igénybevétele céljából, a normál beutazási feltételek és a Waikiki One regisztráció érvényesek.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <div class="faq-icon"><img src="../icons/mdi/airplane-32.svg" alt="" /><span class="faq-question-text">Milyen szabályok vonatkoznak a magánjachtokra és magánrepülőkre?</span></div>
+                        <div class="faq-toggle"></div>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>A hajóskapitányoknak és pilótáknak legalább tizenkét órával a felségterületre való belépés előtt elektronikus utas- és rakománylistát kell leadniuk a Waikiki One tengeri és repülési portálján. A kikötési engedély a kijelölt marinákban vehető át.</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+        <!-- @chrome:next -->
+        <section class="next-chapter">
+            <a class="next-card" href="faq.html">
+                <div class="next-media"><img src="../images/UniversalUpscaler_82625004-8a28-4ed6-9515-e204957d9457.jpg" alt="" /></div>
+                <span class="next-body">
+                    <span class="next-eyebrow">Folytassa az utazást · Látogatás</span>
+                    <span class="next-title">GYIK</span>
+                    <span class="next-arrow" aria-hidden="true">→</span>
+                </span>
+            </a>
+        </section>
+        <!-- /@chrome:next -->
+    </main>
+    <!-- @chrome:footer -->
+    <footer class="site-footer">
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" /><span class="brand-word">Waikiki</span></a>
+                    <p class="footer-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
+                    <p class="footer-about">Waikiki Állam hivatalos portálja. Alapítva 1999. március 10-én · Nova Aurelia. Ez az oldal mesterséges intelligenciával készült, bármilyen hasonlóság valós személyekhez, országokhoz vagy intézményekhez pusztán a véletlen műve.</p>
+                </div>
+                <div class="footer-col">
+                    <h2>Nemzet</h2>
+                    <ul>
+                        <li><a href="index.html">Főoldal</a></li>
+                        <li><a href="overview.html">Áttekintés</a></li>
+                        <li><a href="history.html">Történelem</a></li>
+                        <li><a href="society.html">Társadalom</a></li>
+                        <li><a href="culture.html">Kultúra</a></li>
+                        <li><a href="ideology.html">Ideológia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Kormányzás</h2>
+                    <ul>
+                        <li><a href="government.html">Kormány</a></li>
+                        <li><a href="leadership.html">Vezetés</a></li>
+                        <li><a href="parties.html">Politika</a></li>
+                        <li><a href="constitution.html">Alkotmány</a></li>
+                        <li><a href="military.html">Hadsereg</a></li>
+                        <li><a href="diplomacy.html">Diplomácia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Jólét</h2>
+                    <ul>
+                        <li><a href="economy.html">Gazdaság</a></li>
+                        <li><a href="banking-system.html">Bankrendszer</a></li>
+                        <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                        <li><a href="citizenship.html">Állampolgárság</a></li>
+                        <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                        <li><a href="space-research.html">Űrkutatás</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Királyi Család</h2>
+                    <ul>
+                        <li><a href="dynasty.html">Dinasztia</a></li>
+                        <li><a href="family-tree.html">Családfa</a></li>
+                        <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Látogatás</h2>
+                    <ul>
+                        <li><a href="tourism.html">Turizmus</a></li>
+                        <li><a href="sights.html">Látnivalók</a></li>
+                        <li><a href="nature.html">Természet</a></li>
+                        <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                        <li><a href="visa.html">Vízum és belépés</a></li>
+                        <li><a href="faq.html">GYIK</a></li>
+                    </ul>
+                </div>
+            </div>
+            <span class="footer-mega" aria-hidden="true">Waikiki</span>
+            <div class="footer-bottom">
+                <p>© 2026 Waikiki Szuverén Állam. Minden jog fenntartva.</p>
+                <nav>
+                    <a style="margin-right: 40px" href="../en/visa.html" hreflang="en" lang="en">English</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <button class="to-top" type="button">
+        <svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span>
+    </button>
+    <!-- /@chrome:footer -->
+    <script src="../js/common.js"></script>
+    <script src="../js/visa.js"></script>
+</body>
+</html>

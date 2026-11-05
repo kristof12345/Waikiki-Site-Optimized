@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- @chrome:head -->
+    <meta name="theme-color" content="#fbf7f0" />
+    <link rel="stylesheet" href="../css/fonts.css" />
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
+    <!-- /@chrome:head -->
+    <title>A Királyi Családfa</title>
+    <link rel="icon" href="../icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo-blue.png" />
+    <link href="../manifest.json" rel="manifest" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/family-tree.css" />
+    <link rel="preload" as="image" href="../images/UniversalUpscaler_Pro_Precise_2_1f1d4851-15cf-6680-95a6-317865e3e9a0.jpg" fetchpriority="high" />
+</head>
+<body class="page-family-tree group-royal">
+    <!-- @chrome:header -->
+    <div class="page-curtain" aria-hidden="true"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="64" height="64" loading="eager" /></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <header class="site-header">
+        <a href="index.html" class="brand"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" /><span class="brand-word">Waikiki</span></a>
+        <nav class="primary-nav">
+            <a href="tourism.html">Utazás</a><a href="society.html">Társadalom</a><a href="economy.html">Gazdaság</a><a href="government.html">Kormány</a><a href="history.html">Történelem</a><a href="dynasty.html" aria-current="page">Királyi Család</a>
+        </nav>
+        <div class="header-actions">
+            <a class="lang-pill" href="../en/family-tree.html" hreflang="en" lang="en" title="English">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg>
+                <span>EN</span>
+            </a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+                <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg>
+            </button>
+            <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+                <span class="menu-lines" aria-hidden="true"></span>
+                <span class="menu-label-open">Menü</span>
+                <span class="menu-label-close">Bezárás</span>
+                <span class="visually-hidden">Menü</span>
+            </button>
+        </div>
+    </header>
+    <div class="site-menu" id="site-menu" aria-hidden="true" inert>
+        <div class="site-menu-inner">
+            <aside class="menu-aside">
+                <div class="menu-clock-block">
+                    <div class="menu-clock-header">
+                        <p class="menu-clock-label">Helyi idő a fővárosban</p>
+                        <div class="menu-weather" data-capital-weather><span class="weather-icon" aria-hidden="true">☀️</span> <span class="weather-temp">28°C</span> <span class="weather-desc">Napos</span></div>
+                    </div>
+                    <p class="menu-clock" data-capital-clock>--:--</p>
+                    <p class="menu-clock-city">Nova Aurelia, Waikiki tartomány</p>
+                </div>
+                <p class="menu-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
+                <div class="menu-aside-row">
+                    <a class="menu-chip" href="../en/family-tree.html" hreflang="en" lang="en">English</a><a class="menu-chip is-active" href="../hu/family-tree.html" hreflang="hu" lang="hu">Magyar</a>
+                    <button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Éjszakai mód</button>
+                    <button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animáció</button>
+                </div>
+            </aside>
+            <div class="menu-group">
+                <h2>Nemzet</h2>
+                <ul>
+                    <li><a href="index.html">Főoldal</a></li>
+                    <li><a href="overview.html">Áttekintés</a></li>
+                    <li><a href="history.html">Történelem</a></li>
+                    <li><a href="society.html">Társadalom</a></li>
+                    <li><a href="culture.html">Kultúra</a></li>
+                    <li><a href="ideology.html">Ideológia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Kormányzás</h2>
+                <ul>
+                    <li><a href="government.html">Kormány</a></li>
+                    <li><a href="leadership.html">Vezetés</a></li>
+                    <li><a href="parties.html">Politika</a></li>
+                    <li><a href="constitution.html">Alkotmány</a></li>
+                    <li><a href="military.html">Hadsereg</a></li>
+                    <li><a href="diplomacy.html">Diplomácia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Jólét</h2>
+                <ul>
+                    <li><a href="economy.html">Gazdaság</a></li>
+                    <li><a href="banking-system.html">Bankrendszer</a></li>
+                    <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                    <li><a href="citizenship.html">Állampolgárság</a></li>
+                    <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                    <li><a href="space-research.html">Űrkutatás</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Királyi Család</h2>
+                <ul>
+                    <li><a href="dynasty.html">Dinasztia</a></li>
+                    <li><a href="family-tree.html" aria-current="page">Családfa</a></li>
+                    <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                    <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Látogatás</h2>
+                <ul>
+                    <li><a href="tourism.html">Turizmus</a></li>
+                    <li><a href="sights.html">Látnivalók</a></li>
+                    <li><a href="nature.html">Természet</a></li>
+                    <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                    <li><a href="visa.html">Vízum és belépés</a></li>
+                    <li><a href="faq.html">GYIK</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /@chrome:header -->
+    <main id="main">
+        <section class="hero" data-hero>
+            <div class="hero-media"><img src="../images/UniversalUpscaler_Pro_Precise_2_1f1d4851-15cf-6680-95a6-317865e3e9a0.jpg" alt="A Chease-ház családfája" fetchpriority="high" /></div>
+            <div class="hero-veil"></div>
+            <div class="hero-content">
+                <span class="hero-eyebrow">Chease-ház</span>
+                <h1 class="hero-title">A Királyi <em>Családfa</em></h1>
+                <p class="hero-lead">Waikiki uralkodó dinasztiája, alkotmányos berendezkedése és családi alapú államvezetési modellje az államalapítóktól a kulcstárcákat irányító testvéreken át az érdemalapú monarchia ifjú örököseiig ível. Ismerje meg a Chease-ház családfáját, a trónöröklés alkotmányos rendjét és a nemzet jövőjét szavatoló generációk történelmi küldetését.</p>
+            </div>
+        </section>
+        <!-- @chrome:subnav --><!-- /@chrome:subnav -->
+        <section id="overview" class="fade-in">
+            <div class="tree-section-header">
+                <h2 class="section-title">A Chease-ház uralkodói vérvonala</h2>
+                <p class="section-intro">Átfogó szerkezeti és történelmi áttekintés Waikiki alkotmányos berendezkedéséről és érdemalapú államvezetési modelljéről, amely a megosztott vezetői felelősségre, a szilárd intézményi folytonosságra és a nemzet jövőjét szavatoló, nemzedékeken átívelő stratégiai gondoskodásra épül.</p>
+            </div>
+            <div class="overview-pillars-grid">
+                <div class="pillar-card">
+                    <span class="pillar-badge">A dinasztia eredete</span>
+                    <h3>Az alapító szövetség (1992-1999)</h3>
+                    <p>A modern dinasztia gyökerei Chease Young és Jessica Walker New Yorkban kibontakozó, intellektuális és stratégiai szövetségére nyúlnak vissza. A mély pénzügyi szakértelmet átfogó jövőképpel ötvözve 1993-ban kötöttek házasságot, majd 1999. március 10-én megalapították a független Waikiki Államot, ahol a nemzet szolgálata családi hivatássá és felelős gondoskodássá nemesült.</p>
+                </div>
+                <div class="pillar-card">
+                    <span class="pillar-badge">Alkotmányos rang</span>
+                    <h3>Pápai koronázás és érdemalapú monarchia (2005)</h3>
+                    <p>A Csendes-óceáni háború lezárását és Waikiki gyors felvirágzását követően a lakosság 2005-ben népszavazáson, elsöprő többséggel emelte uralkodóházzá a családot. XVI. Benedek pápa 2005. augusztus 4-én koronázta királlyá Chease Youngot, összhangba hozva a dinasztikus legitimitást az érdemalapú monarchia elveivel, amelyek szerint a valódi tekintély mércéje a polgárok kézzelfogható jóléte.</p>
+                </div>
+                <div class="pillar-card">
+                    <span class="pillar-badge">Végrehajtó folytonosság</span>
+                    <h3>A hárompilléres generációváltás (2017-től napjainkig)</h3>
+                    <p>A legfelsőbb diktátori tisztség átadása Raimondo Chease trónörökösnek 2017-ben a dinasztikus államvezetés új korszakát nyitotta meg. Testvérei, Angelina és Jennifer, valamint házastársaik a Szenátusban és a felső szintű döntéshozatalban töltenek be kulcsszerepet. A család ágai a nemzetvédelem, a monetáris politika, a fenntarthatóság és a digitális államigazgatás összehangolt támaszai.</p>
+                </div>
+            </div>
+        </section>
+        <section id="tree" class="light-bg fade-in">
+            <div class="tree-section-header">
+                <h2 class="section-title">Generációs családfa</h2>
+                <p class="section-intro">A Chease-ház négy nemzedéken átívelő fejlődéstörténete és családi felépítése, amely átfogóan mutatja be az alapozó ősök szellemi örökségét, az államalapító uralkodópár történelmi szövetségét, a kormányzati kulcsterületeket irányító három alkotmányos pillért és a nemzet jövőjét hordozó ifjú generációt.</p>
+            </div>
+            <div class="pedigree-viewport">
+                <div class="pedigree-tree">
+                    <div class="tree-generation">
+                        <span class="generation-label">0. generáció · Az ősök öröksége</span>
+                        <div class="tree-roots-cluster">
+                            <div class="tree-node-card ancestor-card">
+                                <div class="tree-node-thumb">
+                                    <img src="../images/UniversalUpscaler_13200b7d-454a-405a-838e-f6c8924fe894.jpg" alt="A Young vérvonal" />
+                                </div>
+                                <div class="tree-node-info">
+                                    <span class="tree-node-role">Apai vérvonal</span>
+                                    <h4 class="tree-node-name">A Chease család</h4>
+                                    <span class="tree-node-office">New York-i vendéglátóipari pátriárka, a Starlight Hotels szállodalánc alapítója.</span>
+                                </div>
+                            </div>
+                            <div class="tree-node-card ancestor-card">
+                                <div class="tree-node-thumb">
+                                    <img src="../images/UniversalUpscaler_14c6b937-7f3c-4aa9-aaf7-e06d69d2aa25.jpg" alt="A Walker vérvonal" />
+                                </div>
+                                <div class="tree-node-info">
+                                    <span class="tree-node-role">Anyai vérvonal</span>
+                                    <h4 class="tree-node-name">A Walker család</h4>
+                                    <span class="tree-node-office">New York-i jogi és diplomáciai örökség, manhattani közszolgálati felmenők.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tree-fork-up"></div>
+                    <div class="tree-connector-down"></div>
+                    <div class="tree-generation">
+                        <span class="generation-label">I. generáció · Az alapító uralkodópár</span>
+                        <div class="tree-sovereign-pair">
+                            <span class="tree-marriage-badge">Uralkodói szövetség 1993 · Pápai koronázás 2005</span>
+                            <div class="tree-node-card founder-card">
+                                <div class="tree-node-thumb">
+                                    <img src="../images/UniversalUpscaler_13200b7d-454a-405a-838e-f6c8924fe894.jpg" alt="Chease Young király" />
+                                </div>
+                                <div class="tree-node-info">
+                                    <span class="tree-node-role">Államalapító király</span>
+                                    <h3 class="tree-node-name">Chease Young király</h3>
+                                    <span class="tree-node-office">Született 1972 · Diktátor 2000-2017 · Király 2005-től · Kancellár 2017-től · Világkormány elnöke 2018-2022 · Nobel-díj 2009</span>
+                                </div>
+                            </div>
+                            <div class="tree-node-card founder-card">
+                                <div class="tree-node-thumb">
+                                    <img src="../images/UniversalUpscaler_14c6b937-7f3c-4aa9-aaf7-e06d69d2aa25.jpg" alt="Jessica Walker királyné" />
+                                </div>
+                                <div class="tree-node-info">
+                                    <span class="tree-node-role">Társalapító királyné</span>
+                                    <h3 class="tree-node-name">Jessica Walker királyné</h3>
+                                    <span class="tree-node-office">Született 1972 · Királyné 2005-től · Nemzeti Bank elnök 2008-2015 és 2024-től · Konzul 2017-2023 · Nobel-díj 2009</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tree-connector-down"></div>
+                    <div class="tree-fork-line">
+                        <div class="tree-fork-mid"></div>
+                    </div>
+                    <div class="tree-generation">
+                        <span class="generation-label">II. generáció · A kormányzó testvérek és házastársaik</span>
+                        <div class="tree-branches-row">
+                            <div class="tree-branch-column">
+                                <span class="branch-pillar-tag">I. pillér · Végrehajtás és diplomácia</span>
+                                <div class="branch-pair-grid">
+                                    <div class="tree-node-card">
+                                        <div class="tree-node-thumb">
+                                            <img src="../images/UniversalUpscaler_Legacy_Cinematic_2_1f17dff4-aa66-6f70-a4dd-3fb4e94170bd-U.jpg" alt="Raimondo Chease trónörökös" />
+                                        </div>
+                                        <div class="tree-node-info">
+                                            <span class="tree-node-role">Trónörökös herceg · Diktátor</span>
+                                            <h4 class="tree-node-name">Raimondo Chease</h4>
+                                            <span class="tree-node-office">Született 1996 · Koronaherceg 2005-től · Szenátor 2015-2017 · Diktátor 2017-től · Főparancsnok</span>
+                                        </div>
+                                    </div>
+                                    <div class="tree-node-card">
+                                        <div class="tree-node-thumb">
+                                            <img src="../images/UniversalUpscaler_Legacy_Cinematic_2_1f1746e1-6eb4-6ce0-b476-70bb9ed319de.jpg" alt="Selena Gomez hercegnő" />
+                                        </div>
+                                        <div class="tree-node-info">
+                                            <span class="tree-node-role">Hercegnő · Konzul</span>
+                                            <h4 class="tree-node-name">Selena Gomez</h4>
+                                            <span class="tree-node-office">Született 1992 · Hercegnő 2017-től · Szenátor 2015-2017 · Konzul 2017-2023 · UNICEF diplomáciai nagykövet 2012-től</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tree-branch-column">
+                                <span class="branch-pillar-tag">II. pillér · Ökológia és monetáris politika</span>
+                                <div class="branch-pair-grid">
+                                    <div class="tree-node-card">
+                                        <div class="tree-node-thumb">
+                                            <img src="../images/UniversalUpscaler_Legacy_Cinematic_2_1f16667b-d88f-6490-a4c4-ea5c452c156a.jpg" alt="Angelina Chease hercegnő" />
+                                        </div>
+                                        <div class="tree-node-info">
+                                            <span class="tree-node-role">Hercegnő · Szenátor</span>
+                                            <h4 class="tree-node-name">Angelina Chease</h4>
+                                            <span class="tree-node-office">Született 1993 · Hercegnő 2005-től · Szenátor 2015-től · Monetáris Tanács tagja 2024-től · GaiaNova-alapító 2017</span>
+                                        </div>
+                                    </div>
+                                    <div class="tree-node-card">
+                                        <div class="tree-node-thumb">
+                                            <img src="../images/UniversalUpscaler_Pro_Precise_2_1f185c11-4e6a-6c00-868b-10816a1d038f.jpg" alt="Taylor Lautner herceg" />
+                                        </div>
+                                        <div class="tree-node-info">
+                                            <span class="tree-node-role">Herceg · Szenátor</span>
+                                            <h4 class="tree-node-name">Taylor Lautner</h4>
+                                            <span class="tree-node-office">Született 1992 · Szenátor 2015-től · Herceg 2017-től · Infrastruktúra-stratéga · Hobby asztronauta</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tree-branch-column">
+                                <span class="branch-pillar-tag">III. pillér · Digitális állam és innováció</span>
+                                <div class="branch-pair-grid">
+                                    <div class="tree-node-card">
+                                        <div class="tree-node-thumb">
+                                            <img src="../images/UniversalUpscaler_87e18912-5c93-406d-9da8-d9c729acdbea.jpg" alt="Jennifer Chease hercegnő" />
+                                        </div>
+                                        <div class="tree-node-info">
+                                            <span class="tree-node-role">Hercegnő · Szenátor</span>
+                                            <h4 class="tree-node-name">Jennifer Chease</h4>
+                                            <span class="tree-node-office">Született 1996 · Hercegnő 2005-től · Szenátor 2015-től · E-kormányzási stratéga · Digitális véleményformáló</span>
+                                        </div>
+                                    </div>
+                                    <div class="tree-node-card">
+                                        <div class="tree-node-thumb">
+                                            <img src="../images/UniversalUpscaler_93281a3c-f408-4f55-b29b-e8a6b87ab85d-U.jpg" alt="Tyler Posey herceg" />
+                                        </div>
+                                        <div class="tree-node-info">
+                                            <span class="tree-node-role">Herceg · Szenátor</span>
+                                            <h4 class="tree-node-name">Tyler Posey</h4>
+                                            <span class="tree-node-office">Született 1991 · Szenátor 2015-től · Herceg 2017-től · Rendszermérnök · Várostechnológiai építész</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tree-connector-down"></div>
+                    <div class="tree-generation">
+                        <span class="generation-label">III. generáció · Dinasztikus utódlás és örökösök</span>
+                        <div class="heirs-strip">
+                            <div class="heirs-body">
+                                <h4>A felnövekvő harmadik nemzedék</h4>
+                                <p>Chease Young király és Jessica Walker királyné unokái testesítik majd meg a dinasztia élő folytonosságát. A család következő generációi Nova Aureliában, közvetlen családi mentorálás mellett sajátítják el az államférfiúi hivatás, a modern gazdaságpolitika és a felelősségteljes közéleti szolgálat alapjait, biztosítva Waikiki önállóságát és töretlen fejlődését az elkövetkező évszázadban.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="members" class="fade-in">
+            <div class="tree-section-header">
+                <h2 class="section-title">A Chease-uralkodóház portréi</h2>
+                <p class="section-intro">Részletes életrajzi arcképcsarnok a királyi ház meghatározó személyiségeiről, bemutatva alkotmányos feladatköreiket, nemzetközi akadémiai felkészültségüket és a Waikiki modernizációját vezérlő portfólióikat.</p>
+            </div>
+            <div class="dossiers-grid">
+                <div class="dossier-card">
+                    <div class="dossier-hero">
+                        <img src="../images/UniversalUpscaler_13200b7d-454a-405a-838e-f6c8924fe894.jpg" alt="Chease Young király" style="object-position: top center;" />
+                        <div class="dossier-veil"></div>
+                        <div class="dossier-title-overlay">
+                            <h3 class="dossier-name">Chease Young király</h3>
+                            <p class="dossier-title">Waikiki alapítója és kancellárja</p>
+                        </div>
+                    </div>
+                    <div class="dossier-content">
+                        <ul class="dossier-specs-list">
+                            <li class="dossier-spec-item"><span class="spec-key">Születési idő</span><strong class="spec-val">1972 (New York)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Kormányzati tisztség</span><strong class="spec-val">Kancellár (2017-től napjainkig)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Nemzetközi tisztség</span><strong class="spec-val">A Világkormány elnöke (2018-2022)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Tanulmányok</span><strong class="spec-val">Stanford Egyetem (közgazdaságtan, 1991)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Koronázás</span><strong class="spec-val">2005. augusztus 4.</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Főbb elismerés</span><strong class="spec-val">Közgazdasági Nobel-díj (2009)</strong></li>
+                        </ul>
+                        <p class="dossier-bio-text">Waikiki stratégiai megálmodója és alapítója. A Starlight Hotels nemzetközi szállodalánc felépítését követően 1999. március 10-én vette át a válság sújtotta terület irányítását, kikiáltotta a független államiságot, és az országot a világ egyik legvirágzóbb gazdaságává formálta. Kancellárként a globális külpolitikát, a kiemelt nemzetközi képviseletet és a leendő államférfiak felkészítését irányítja.</p>
+                        <div class="dossier-achievements">
+                            <span class="achievement-chip">Államalapító</span>
+                            <span class="achievement-chip">Nobel-díjas 2009</span>
+                            <span class="achievement-chip">Atomhatalmak Szövetsége</span>
+                            <span class="achievement-chip">Trilaterális Bizottság</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dossier-card">
+                    <div class="dossier-hero">
+                        <img src="../images/UniversalUpscaler_14c6b937-7f3c-4aa9-aaf7-e06d69d2aa25.jpg" alt="Jessica Walker királyné" style="object-position: top center;" />
+                        <div class="dossier-veil"></div>
+                        <div class="dossier-title-overlay">
+                            <h3 class="dossier-name">Jessica Walker királyné</h3>
+                            <p class="dossier-title">Királyné és a WNB elnöke</p>
+                        </div>
+                    </div>
+                    <div class="dossier-content">
+                        <ul class="dossier-specs-list">
+                            <li class="dossier-spec-item"><span class="spec-key">Házasságkötés</span><strong class="spec-val">1993 (Csendes-óceáni birtok)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Kormányzati tisztség</span><strong class="spec-val">A WNB elnöke (2008-tól napjainkig)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Nemzetközi tisztség</span><strong class="spec-val">Korábbi ENSZ-főtitkárhelyettes</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Tanulmányok</span><strong class="spec-val">New York-i pénzügyi tanulmányok</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Koronázás</span><strong class="spec-val">2005. augusztus 4. (Waikiki királynéja)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Főbb elismerés</span><strong class="spec-val">Közgazdasági Nobel-díj (2009)</strong></li>
+                        </ul>
+                        <p class="dossier-bio-text">A nemzeti fizetőeszköz stabilitásának és a pénzügyi rendnek a legfőbb őre. Jessica királyné vezényelte le a világ első, teljes körű készpénzmentes gazdasági reformját 2018-ban, és felügyelte a Nemzeti Vagyonalap nemzetközi tőkebefektetéseit. 2024-es visszatérésével a Nemzeti Bank élére megerősítette a valuta értékállóságát, a fegyelmezett költségvetést és a gazdasági stabilitást.</p>
+                        <div class="dossier-achievements">
+                            <span class="achievement-chip">Készpénzmentes gazdaság 2018</span>
+                            <span class="achievement-chip">Nobel-díjas 2009</span>
+                            <span class="achievement-chip">Világbanki igazgató</span>
+                            <span class="achievement-chip">Vagyonalap felügyelő</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dossier-card">
+                    <div class="dossier-hero">
+                        <img src="../images/UniversalUpscaler_Legacy_Cinematic_2_1f17dff4-aa66-6f70-a4dd-3fb4e94170bd-U.jpg" alt="Raimondo Chease trónörökös" style="object-position: top center;" />
+                        <div class="dossier-veil"></div>
+                        <div class="dossier-title-overlay">
+                            <h3 class="dossier-name">Raimondo Chease trónörökös</h3>
+                            <p class="dossier-title">Waikiki trónörököse és diktátora</p>
+                        </div>
+                    </div>
+                    <div class="dossier-content">
+                        <ul class="dossier-specs-list">
+                            <li class="dossier-spec-item"><span class="spec-key">Születési idő</span><strong class="spec-val">1996. július 7. (Washington D.C.)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Kormányzati tisztség</span><strong class="spec-val">Waikiki diktátora (2017-től napjainkig)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Nemzetközi tisztség</span><strong class="spec-val">A Kék Öv Szövetség elnöke (2019-től)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Törvényhozási tisztség</span><strong class="spec-val">Waikiki szenátora (2015-től napjainkig)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Tanulmányok</span><strong class="spec-val">Waikiki Közgazdasági Egyetem (BSc és MSc)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Globális rang</span><strong class="spec-val">Forbes #1 legbefolyásosabb vezető (2018)</strong></li>
+                        </ul>
+                        <p class="dossier-bio-text">Waikiki legfőbb végrehajtó hatalmának birtokosa. Miután 2017. július 7-én hivatalba lépett, vezetése alatt olyan korszakos jelentőségű fejlesztések valósultak meg, mint a Megapiramis felépítése, a Florida és Waikiki közötti mélytengeri maglev vasútvonal kiépítése, a négynapos munkahét bevezetése, valamint a 2025-ös NATO-csatlakozás. Főparancsnokként közvetlenül vezeti a fegyveres erőket és koordinálja az ország gazdasági ökoszisztémáját.</p>
+                        <div class="dossier-achievements">
+                            <span class="achievement-chip">Diktátor 2017 óta</span>
+                            <span class="achievement-chip">Űrmisszió 2018</span>
+                            <span class="achievement-chip">Kék Öv Egyezmény</span>
+                            <span class="achievement-chip">NATO-csatlakozás 2025</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dossier-card">
+                    <div class="dossier-hero">
+                        <img src="../images/UniversalUpscaler_Legacy_Cinematic_2_1f1746e1-6eb4-6ce0-b476-70bb9ed319de.jpg" alt="Selena Gomez hercegnő" style="object-position: top center;" />
+                        <div class="dossier-veil"></div>
+                        <div class="dossier-title-overlay">
+                            <h3 class="dossier-name">Selena Gomez hercegnő</h3>
+                            <p class="dossier-title">Waikiki hercegnője és konzulja</p>
+                        </div>
+                    </div>
+                    <div class="dossier-content">
+                        <ul class="dossier-specs-list">
+                            <li class="dossier-spec-item"><span class="spec-key">Születési idő</span><strong class="spec-val">1992. július 22. (Grand Prairie, Texas)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Kormányzati tisztség</span><strong class="spec-val">Waikiki konzulja (2017-től napjainkig)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Nemzetközi tisztség</span><strong class="spec-val">UNICEF diplomáciai nagykövet (2012-től)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Törvényhozási tisztség</span><strong class="spec-val">Waikiki szenátora (2015-től napjainkig)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Házasságkötés</span><strong class="spec-val">2026. február 7. (Ducal Palota)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Beiktatás</span><strong class="spec-val">Hercegnővé avatva (2017. október)</strong></li>
+                        </ul>
+                        <p class="dossier-bio-text">Waikiki nemzetközi kulturális és diplomáciai küldetésének vezéralakja. 2015-ben szerzett szenátori mandátumot, majd 2017-ben hercegnői és konzuli rangra emelkedett. Rendszeresen képviseli a hazát a washingtoni és európai csúcstalálkozókon. Raimondo Chease-zel 2026 februárjában kötött házasságot; diplomáciai hivatásában a közvetlen, mély empátiát kiváló stratégiai tárgyalókészséggel ötvözi.</p>
+                        <div class="dossier-achievements">
+                            <span class="achievement-chip">Waikiki konzulja</span>
+                            <span class="achievement-chip">UNICEF nagykövet</span>
+                            <span class="achievement-chip">Diplomáciai követ</span>
+                            <span class="achievement-chip">Kulturális ikon</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dossier-card">
+                    <div class="dossier-hero">
+                        <img src="../images/UniversalUpscaler_Legacy_Cinematic_2_1f16667b-d88f-6490-a4c4-ea5c452c156a.jpg" alt="Angelina Chease hercegnő" style="object-position: top center;" />
+                        <div class="dossier-veil"></div>
+                        <div class="dossier-title-overlay">
+                            <h3 class="dossier-name">Angelina Chease hercegnő</h3>
+                            <p class="dossier-title">Hercegnő és szenátor</p>
+                        </div>
+                    </div>
+                    <div class="dossier-content">
+                        <ul class="dossier-specs-list">
+                            <li class="dossier-spec-item"><span class="spec-key">Születési idő</span><strong class="spec-val">1993 (Washington D.C.)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Kormányzati tisztség</span><strong class="spec-val">Monetáris Tanács tagja (2024-től napjainkig)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Nemzetközi tisztség</span><strong class="spec-val">Davosi Világgazdasági Fórum előadója (2014-től)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Törvényhozási tisztség</span><strong class="spec-val">Waikiki szenátora (2015-től napjainkig)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Tanulmányok</span><strong class="spec-val">WKE (BSc 2011, MSc 2013), IESE Barcelona</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Vállalati tisztség</span><strong class="spec-val">A GaiaNova Holding alapítója és elnöke</strong></li>
+                        </ul>
+                        <p class="dossier-bio-text">A dinasztia ökológiai lelkiismerete és a fenntartható gazdaság etikai iránymutatója. Szenátorként, valamint a Monetáris Tanács tagjaként vezeti a zöld pénzügyi reformokat, a stratégiai tisztaenergia-beruházásokat és a 2030-as karbonsemlegességi programot. 2021-ben sikeres, tíznapos tudományos kutatóküldetést hajtott végre a Nemzeti Űrállomás fedélzetén.</p>
+                        <div class="dossier-achievements">
+                            <span class="achievement-chip">GaiaNova Holding</span>
+                            <span class="achievement-chip">Monetáris Tanács 2024</span>
+                            <span class="achievement-chip">Asztronauta 2021</span>
+                            <span class="achievement-chip">Davosi előadó</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dossier-card">
+                    <div class="dossier-hero">
+                        <img src="../images/UniversalUpscaler_Pro_Precise_2_1f185c11-4e6a-6c00-868b-10816a1d038f.jpg" alt="Taylor Lautner herceg" style="object-position: top center;" />
+                        <div class="dossier-veil"></div>
+                        <div class="dossier-title-overlay">
+                            <h3 class="dossier-name">Taylor Lautner herceg</h3>
+                            <p class="dossier-title">Waikiki hercege és szenátora</p>
+                        </div>
+                    </div>
+                    <div class="dossier-content">
+                        <ul class="dossier-specs-list">
+                            <li class="dossier-spec-item"><span class="spec-key">Születési idő</span><strong class="spec-val">1992. február 11. (Grand Rapids, MI)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Kormányzati tisztség</span><strong class="spec-val">Infrastruktúra- és közbiztonsági megbízott</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Nemzetközi tisztség</span><strong class="spec-val">Nemzetközi sportdiplomáciai nagykövet</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Törvényhozási tisztség</span><strong class="spec-val">Waikiki szenátora (2015-től napjainkig)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Szövetség</span><strong class="spec-val">Angelina Chease társa (2012 óta)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Tanulmányok</span><strong class="spec-val">Waikiki Közgazdasági Egyetem</strong></li>
+                        </ul>
+                        <p class="dossier-bio-text">A kritikus infrastruktúra védelmének és a nemzetközi sportdiplomáciának meghatározó alakja. 2012-ben Angelinával közösen hozta létre az egyetemi fenntarthatósági műhelyt, majd 2015-ben szenátori mandátumot szerzett. Tevékeny szerepet vállalt a modern védelmi képességek megszervezésében és a 2021-es űrexpedíció során teljesített űrsétákban, megbízható szövetségesként támogatva hitvesét az államvezetésben.</p>
+                        <div class="dossier-achievements">
+                            <span class="achievement-chip">Szenátusi mandátum 2015</span>
+                            <span class="achievement-chip">Asztronauta 2021</span>
+                            <span class="achievement-chip">Sportdiplomácia</span>
+                            <span class="achievement-chip">Közbiztonsági megbízott</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dossier-card">
+                    <div class="dossier-hero">
+                        <img src="../images/UniversalUpscaler_87e18912-5c93-406d-9da8-d9c729acdbea.jpg" alt="Jennifer Chease hercegnő" style="object-position: top center;" />
+                        <div class="dossier-veil"></div>
+                        <div class="dossier-title-overlay">
+                            <h3 class="dossier-name">Jennifer Chease hercegnő</h3>
+                            <p class="dossier-title">Hercegnő és a digitális állam vezetője</p>
+                        </div>
+                    </div>
+                    <div class="dossier-content">
+                        <ul class="dossier-specs-list">
+                            <li class="dossier-spec-item"><span class="spec-key">Születési idő</span><strong class="spec-val">1996 (Washington D.C.)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Kormányzati tisztség</span><strong class="spec-val">Digitális állam és médiapolitika vezetője</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Nemzetközi tisztség</span><strong class="spec-val">Nemzetközi e-kormányzási delegált</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Törvényhozási tisztség</span><strong class="spec-val">Waikiki szenátora (2015-től napjainkig)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Tanulmányok</span><strong class="spec-val">Közigazgatási és jóléti közgazdaságtani PhD</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Főbb törvény</span><strong class="spec-val">Digitális Alapvető Jogok Chartája</strong></li>
+                        </ul>
+                        <p class="dossier-bio-text">A közigazgatás digitális átalakításának vezető alakja. Személyesen irányítja a bürokrácia automatizálását és az emberközpontú elektronikus államigazgatás kiépítését. A Szenátusban Tyler Poseyval szoros partnerségben vezeti a mesterséges intelligenciára támaszkodó oktatási reformot, az országos telemedicina-hálózatot és az ifjúsági innovációs programokat.</p>
+                        <div class="dossier-achievements">
+                            <span class="achievement-chip">Digitális Charta</span>
+                            <span class="achievement-chip">Oktatás 2030</span>
+                            <span class="achievement-chip">Egészségügyi Innovációs Alap</span>
+                            <span class="achievement-chip">Szenátusi gépház</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dossier-card">
+                    <div class="dossier-hero">
+                        <img src="../images/UniversalUpscaler_93281a3c-f408-4f55-b29b-e8a6b87ab85d-U.jpg" alt="Tyler Posey herceg" style="object-position: top center;" />
+                        <div class="dossier-veil"></div>
+                        <div class="dossier-title-overlay">
+                            <h3 class="dossier-name">Tyler Posey herceg</h3>
+                            <p class="dossier-title">Waikiki hercege és rendszermérnöke</p>
+                        </div>
+                    </div>
+                    <div class="dossier-content">
+                        <ul class="dossier-specs-list">
+                            <li class="dossier-spec-item"><span class="spec-key">Születési idő</span><strong class="spec-val">1991. október 18. (Santa Monica, CA)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Kormányzati tisztség</span><strong class="spec-val">Várostechnológiai és okoshálózat-felelős</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Nemzetközi tisztség</span><strong class="spec-val">Nemzetközi technológiai diplomáciai megbízott</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Törvényhozási tisztség</span><strong class="spec-val">Waikiki szenátora (2015-től napjainkig)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Szövetség</span><strong class="spec-val">Jennifer Chease társa (2015 óta)</strong></li>
+                            <li class="dossier-spec-item"><span class="spec-key">Szakmai háttér</span><strong class="spec-val">Alkalmazott rendszer és hálózatépítő mérnök</strong></li>
+                        </ul>
+                        <p class="dossier-bio-text">A műszaki innováció és a közigazgatási korszerűsítés elismert mérnöke. Fegyelmezett rendszerszemléletet honosított meg a törvényhozásban: nagy sebességű optikai gerinchálózatokat, korszerű intelligens energiahálózatokat és digitális oktatási infrastruktúrát tervez. Munkásságával megbízható hidat képez a jogalkotás és az élenjáró technológiai kutatások között.</p>
+                        <div class="dossier-achievements">
+                            <span class="achievement-chip">Okos hálózat fejlesztés</span>
+                            <span class="achievement-chip">Várostechnológiai megbízott</span>
+                            <span class="achievement-chip">Szenátusi gépház</span>
+                            <span class="achievement-chip">Univerzális szélessáv</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="succession" class="light-bg fade-in">
+            <div class="tree-section-header">
+                <h2 class="section-title">Alkotmányos utódlási rend</h2>
+                <p class="section-intro">A waikiki királyi trón és a korona öröklési rendje, amely rögzíti a dinasztikus folytonosság pontos alkotmányos sorrendjét a Chease-uralkodóház tagjai között.</p>
+            </div>
+            <div class="succession-grid">
+                <div class="succession-card">
+                    <span class="succession-order-num">0.</span>
+                    <span class="succession-role">Király</span>
+                    <h3>Chease Young</h3>
+                    <p>A monarchia államalapító uralkodója és a waikiki korona jelenlegi birtokosa. Az 1999-es államalapítást és a 2005-ös koronázást követően megteremtette az alkotmányos királyság intézményi alapjait, a Chease-dinasztia fejeként megtestesítve a nemzet függetlenségét és a királyi méltóság folytonosságát.</p>
+                </div>
+                <div class="succession-card">
+                    <span class="succession-order-num">1.</span>
+                    <span class="succession-role">Koronaherceg</span>
+                    <h3>Raimondo Chease</h3>
+                    <p>Első számú trónörökös (Heir Apparent), a királyi korona közvetlen dinasztikus várományosa. A dinasztia egyetlen fiúörököseként születése és a 2005-ös alkotmányos dekrétum óta a trón első várományosa, aki a legfelsőbb államvezetési tapasztalatokat és a nemzetközi szövetségi képviseletet egyesíti hivatásában.</p>
+                </div>
+                <div class="succession-card">
+                    <span class="succession-order-num">2.</span>
+                    <span class="succession-role">Hercegnő</span>
+                    <h3>Angelina Chease</h3>
+                    <p>A királyi pár elsőszülött leánya, a trónöröklési rend második helyén álló dinasztikus örökös. Élethosszig tartó szenátori mandátuma, a Monetáris Tanácsban betöltött tagsága és a nemzetközi fenntarthatósági kezdeményezések vezetése révén az uralkodóház stabilitásának és etikai iránymutatásának kiemelkedő záloga.</p>
+                </div>
+                <div class="succession-card">
+                    <span class="succession-order-num">3.</span>
+                    <span class="succession-role">Hercegnő</span>
+                    <h3>Jennifer Chease</h3>
+                    <p>A királyi pár leánya, a trónöröklési rend harmadik helyén álló dinasztikus várományos. Közigazgatási és jóléti doktori felkészültségével, a digitális államreform irányításával és kiterjedt társadalmi hatásával az alkotmányos rend modernizációjának és intézményi megújulásának letéteményese.</p>
+                </div>
+                <div class="succession-card">
+                    <span class="succession-order-num">4.</span>
+                    <span class="succession-role">Királynő</span>
+                    <h3>Jessica Walker</h3>
+                    <p>Waikiki királynéja, a trónöröklési rend negyedik helyén álló alkotmányos rangidős örökös. Az államalapítás óta a király egyenrangú hitveseként és a Nemzeti Bank elnökeként a dinasztikus vagyon, a monetáris szuverenitás és a királyi család belső egységének legfőbb őre.</p>
+                </div>
+                <div class="succession-card">
+                    <span class="succession-order-num">5.</span>
+                    <span class="succession-role">Hercegnő</span>
+                    <h3>Selena Gomez</h3>
+                    <p>A koronaherceg hitvese, a trónöröklési rend ötödik helyén álló királyi hercegnő. Waikiki konzuli méltóságának birtokosaként és nemzetközi diplomáciai nagykövetként a királyi ház globális kulturális hídját és a modern humanitárius diplomácia élvonalát képviseli.</p>
+                </div>
+                <div class="succession-card">
+                    <span class="succession-order-num">6.</span>
+                    <span class="succession-role">Herceg</span>
+                    <h3>Taylor Lautner</h3>
+                    <p>Angelina hercegnő hitvese, a trónöröklési rend hatodik helyén álló királyi herceg. A Szenátus tagjaként, a kritikus infrastruktúráért és közbiztonságért felelős megbízottként szilárd intézményi hátteret nyújt hitvese ökológiai és gazdaságpolitikai küldetéseihez.</p>
+                </div>
+                <div class="succession-card">
+                    <span class="succession-order-num">7.</span>
+                    <span class="succession-role">Herceg</span>
+                    <h3>Tyler Posey</h3>
+                    <p>Jennifer hercegnő hitvese és hűséges szövetségese, a trónöröklési rend hetedik helyén álló királyi herceg. Rendszermérnöki felkészültségével és a technológiai diplomáciában vállalt szerepével biztosítja a modern államgépezet és a királyi dinasztia közötti műszaki-tudományos szövetséget.</p>
+                </div>
+            </div>
+        </section>
+        <section id="governance" class="fade-in">
+            <div class="tree-section-header">
+                <h2 class="section-title">Stratégiai kormányzati portfóliómátrix</h2>
+                <p class="section-intro">Az állami feladatkörök összehangolt megosztása a királyi ház tagjai között, amely közvetlen vezetői elszámoltathatóságot, átlátható felelősségvállalást és gyors, bürokráciamentes döntéshozatalt biztosít hat kiemelt stratégiai ágazatban.</p>
+            </div>
+            <div class="governance-matrix-grid">
+                <div class="matrix-card">
+                    <div class="matrix-icon-wrap" aria-hidden="true"><img src="../icons/mdi/shield-check.svg" alt="" /></div>
+                    <span class="branch-pillar-tag">Honvédelem és végrehajtás</span>
+                    <h3>Nemzetvédelem és hadászati stratégia</h3>
+                    <p class="matrix-officials">Raimondo Chease és Chease Young</p>
+                    <p>A fegyveres erők főparancsnoksága, a védelmi képességek fejlesztése, a hírszerzés koordinálása, valamint a szövetségi partnerségek stratégiai irányítása.</p>
+                </div>
+                <div class="matrix-card">
+                    <div class="matrix-icon-wrap" aria-hidden="true"><img src="../icons/mdi/bank.svg" alt="" /></div>
+                    <span class="branch-pillar-tag">Pénzügyek és gazdaság</span>
+                    <h3>Pénzügyi stabilitás és vagyongazdálkodás</h3>
+                    <p class="matrix-officials">Jessica Walker és Angelina Chease</p>
+                    <p>A Waikiki Nemzeti Bank vezetése, a Nemzeti Vagyonalap kezelése, a készpénzmentes gazdasági modell működtetése, valamint a fenntartható stratégiai tőkebefektetések irányítása.</p>
+                </div>
+                <div class="matrix-card">
+                    <div class="matrix-icon-wrap" aria-hidden="true"><img src="../icons/mdi/earth.svg" alt="" /></div>
+                    <span class="branch-pillar-tag">Diplomácia és kultúra</span>
+                    <h3>Külügyek és nemzetközi szerződések</h3>
+                    <p class="matrix-officials">Selena Gomez és Raimondo Chease</p>
+                    <p>Nemzetközi diplomáciai missziók vezetése, a kulturális nagyköveti hálózat felügyelete, kétoldalú államközi egyezmények előkészítése, valamint képviselet az ENSZ és a Világbank testületeiben.</p>
+                </div>
+                <div class="matrix-card">
+                    <div class="matrix-icon-wrap" aria-hidden="true"><img src="../icons/mdi/leaf.svg" alt="" /></div>
+                    <span class="branch-pillar-tag">Ökológia és megaépítmények</span>
+                    <h3>Zöld átállás és infrastruktúra</h3>
+                    <p class="matrix-officials">Angelina Chease és Taylor Lautner</p>
+                    <p>A 2030-as karbonsemlegességi program végrehajtása, a GaiaNova amazóniai megújulóenergia-beruházásai, az infrastruktúra védelme, valamint az űrállomáson zajló ökológiai kísérletek felügyelete.</p>
+                </div>
+                <div class="matrix-card">
+                    <div class="matrix-icon-wrap" aria-hidden="true"><img src="../icons/mdi/flash.svg" alt="" /></div>
+                    <span class="branch-pillar-tag">Digitális állam és technológia</span>
+                    <h3>Közigazgatási modernizáció</h3>
+                    <p class="matrix-officials">Jennifer Chease és Tyler Posey</p>
+                    <p>A Digitális Alapvető Jogok Chartájának érvényesítése, az intelligens oktatási és telemedicinális rendszerek fejlesztése, valamint a nemzeti okos energiahálózat kiépítése.</p>
+                </div>
+                <div class="matrix-card">
+                    <div class="matrix-icon-wrap" aria-hidden="true"><img src="../icons/mdi/handshake.svg" alt="" /></div>
+                    <span class="branch-pillar-tag">Dinasztikus mentorálás</span>
+                    <h3>Generációs felkészítés</h3>
+                    <p class="matrix-officials">Chease Young és Jessica Walker</p>
+                    <p>A dinasztikus tanács munkájának összehangolása, a felnövekvő generációk államférfiúi felkészítése, a történelmi örökség gondozása és a családi összetartozás erősítése.</p>
+                </div>
+            </div>
+        </section>
+        <section id="chronology" class="light-bg fade-in">
+            <div class="tree-section-header">
+                <h2 class="section-title">A királyi dinasztia kronológiája</h2>
+                <p class="section-intro">A Chease-ház és a modern szuverén Waikiki fejlődését meghatározó legfontosabb történelmi mérföldkövek, közjogi fordulópontok és nemzetközi sikerek időrendi áttekintése az államalapítás előzményeitől napjainkig.</p>
+            </div>
+            <div class="dynasty-timeline">
+                <div class="dynasty-milestone-item">
+                    <div class="milestone-marker">1992</div>
+                    <div class="milestone-card">
+                        <h4>A szövetség kezdete New Yorkban</h4>
+                        <p>Chease Young és Jessica Walker találkozása a New York-i Starlight Hotelben: közös stratégiai jövőképük megalapozza a leendő államvezetést és a modern pénzügyi intézményrendszert.</p>
+                    </div>
+                </div>
+                <div class="dynasty-milestone-item">
+                    <div class="milestone-marker">1993</div>
+                    <div class="milestone-card">
+                        <h4>Házasságkötés és Angelina születése</h4>
+                        <p>Házasságkötés egy csendes-óceáni magánbirtokon; még ugyanebben az évben megszületik első gyermekük, Angelina Chease hercegnő.</p>
+                    </div>
+                </div>
+                <div class="dynasty-milestone-item">
+                    <div class="milestone-marker">1996</div>
+                    <div class="milestone-card">
+                        <h4>Raimondo és Jennifer születése</h4>
+                        <p>Július 7-én világra jön Raimondo Chease trónörökös, majd még az év folyamán Jennifer Chease hercegnő, teljessé formálva a második nemzedék testvéri körét.</p>
+                    </div>
+                </div>
+                <div class="dynasty-milestone-item">
+                    <div class="milestone-marker">1999</div>
+                    <div class="milestone-card">
+                        <h4>Waikiki Állam megalapítása</h4>
+                        <p>1999. március 10-én Chease Young kikiáltja a független Waikiki Állam megalakulását; Jessica Walker irányításával kezdetét veszi a korszerű nemzeti intézményrendszer felépítése.</p>
+                    </div>
+                </div>
+                <div class="dynasty-milestone-item">
+                    <div class="milestone-marker">2005</div>
+                    <div class="milestone-card">
+                        <h4>Pápai koronázás és uralkodóházzá emelés</h4>
+                        <p>Az országos népszavazás döntését követően 2005. augusztus 4-én XVI. Benedek pápa a parlament előtti téren ünnepélyesen királlyá koronázza Chease Youngot és királynévá Jessica Walkert.</p>
+                    </div>
+                </div>
+                <div class="dynasty-milestone-item">
+                    <div class="milestone-marker">2009</div>
+                    <div class="milestone-card">
+                        <h4>Közgazdasági Nobel-díj</h4>
+                        <p>Chease Young és Jessica Walker közgazdasági Nobel-díjat kap a nemzetközi pénzügyi válság idején kidolgozott, úttörő monetáris stabilitási modelljük elismeréseként.</p>
+                    </div>
+                </div>
+                <div class="dynasty-milestone-item">
+                    <div class="milestone-marker">2015</div>
+                    <div class="milestone-card">
+                        <h4>A Szenátus megalapítása</h4>
+                        <p>Megalakul Waikiki Szenátusa. Raimondo, Angelina és Jennifer Chease, valamint Taylor Lautner, Tyler Posey és Selena Gomez élethosszig tartó szenátori mandátumot nyer.</p>
+                    </div>
+                </div>
+                <div class="dynasty-milestone-item">
+                    <div class="milestone-marker">2017</div>
+                    <div class="milestone-card">
+                        <h4>A diktátori tisztség átadása</h4>
+                        <p>2017. július 7-én Chease Young átadja a diktátori tisztséget Raimondo Chease trónörökösnek. Ezzel egyidejűleg Taylor Lautner és Tyler Posey hercegi, míg Selena Gomez hercegnői és konzuli rangra emelkedik.</p>
+                    </div>
+                </div>
+                <div class="dynasty-milestone-item">
+                    <div class="milestone-marker">2018</div>
+                    <div class="milestone-card">
+                        <h4>Űrállomás-küldetés és készpénzmentes gazdaság</h4>
+                        <p>Raimondo és Selena kéthetes, sikeres tudományos kutatóküldetést teljesít a Waikiki Űrállomáson. Ezzel párhuzamosan életbe lép a világ első, teljes egészében készpénzmentes gazdasági rendszere.</p>
+                    </div>
+                </div>
+                <div class="dynasty-milestone-item">
+                    <div class="milestone-marker">2024</div>
+                    <div class="milestone-card">
+                        <h4>A Monetáris Tanács kibővítése</h4>
+                        <p>Jessica Walker visszatér a Waikiki Nemzeti Bank élére, míg Angelina Chease hercegnő a Monetáris Tanács tagjaként veszi át a zöld befektetések felügyeletét.</p>
+                    </div>
+                </div>
+                <div class="dynasty-milestone-item">
+                    <div class="milestone-marker">2026</div>
+                    <div class="milestone-card">
+                        <h4>Az évszázad királyi esküvője</h4>
+                        <p>2026. február 7-én Raimondo Chease trónörökös és Selena Gomez hercegnő a Nova Aurelia-i Ducal Palotában, rangos külföldi delegációk és államfők jelenlétében köt házasságot.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- @chrome:next -->
+        <section class="next-chapter">
+            <a class="next-card" href="chease-and-jessica.html">
+                <div class="next-media"><img src="../images/UniversalUpscaler_f257fcea-c942-4c07-91fd-e0d5374df3f1.jpg" alt="" /></div>
+                <span class="next-body">
+                    <span class="next-eyebrow">Folytassa az utazást · Királyi Család</span>
+                    <span class="next-title">Chease és Jessica</span>
+                    <span class="next-arrow" aria-hidden="true">→</span>
+                </span>
+            </a>
+        </section>
+        <!-- /@chrome:next -->
+    </main>
+    <!-- @chrome:footer -->
+    <footer class="site-footer">
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" /><span class="brand-word">Waikiki</span></a>
+                    <p class="footer-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
+                    <p class="footer-about">Waikiki Állam hivatalos portálja. Alapítva 1999. március 10-én · Nova Aurelia. Ez az oldal mesterséges intelligenciával készült, bármilyen hasonlóság valós személyekhez, országokhoz vagy intézményekhez pusztán a véletlen műve.</p>
+                </div>
+                <div class="footer-col">
+                    <h2>Nemzet</h2>
+                    <ul>
+                        <li><a href="index.html">Főoldal</a></li>
+                        <li><a href="overview.html">Áttekintés</a></li>
+                        <li><a href="history.html">Történelem</a></li>
+                        <li><a href="society.html">Társadalom</a></li>
+                        <li><a href="culture.html">Kultúra</a></li>
+                        <li><a href="ideology.html">Ideológia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Kormányzás</h2>
+                    <ul>
+                        <li><a href="government.html">Kormány</a></li>
+                        <li><a href="leadership.html">Vezetés</a></li>
+                        <li><a href="parties.html">Politika</a></li>
+                        <li><a href="constitution.html">Alkotmány</a></li>
+                        <li><a href="military.html">Hadsereg</a></li>
+                        <li><a href="diplomacy.html">Diplomácia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Jólét</h2>
+                    <ul>
+                        <li><a href="economy.html">Gazdaság</a></li>
+                        <li><a href="banking-system.html">Bankrendszer</a></li>
+                        <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                        <li><a href="citizenship.html">Állampolgárság</a></li>
+                        <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                        <li><a href="space-research.html">Űrkutatás</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Királyi Család</h2>
+                    <ul>
+                        <li><a href="dynasty.html">Dinasztia</a></li>
+                        <li><a href="family-tree.html">Családfa</a></li>
+                        <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Látogatás</h2>
+                    <ul>
+                        <li><a href="tourism.html">Turizmus</a></li>
+                        <li><a href="sights.html">Látnivalók</a></li>
+                        <li><a href="nature.html">Természet</a></li>
+                        <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                        <li><a href="visa.html">Vízum és belépés</a></li>
+                        <li><a href="faq.html">GYIK</a></li>
+                    </ul>
+                </div>
+            </div>
+            <span class="footer-mega" aria-hidden="true">Waikiki</span>
+            <div class="footer-bottom">
+                <p>© 2026 Waikiki Szuverén Állam. Minden jog fenntartva.</p>
+                <nav>
+                    <a style="margin-right: 40px" href="../en/family-tree.html" hreflang="en" lang="en">English</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <button class="to-top" type="button">
+        <svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span>
+    </button>
+    <!-- /@chrome:footer -->
+    <script src="../js/common.js"></script>
+</body>
+</html>

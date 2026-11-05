@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- @chrome:head -->
+    <meta name="theme-color" content="#fbf7f0" />
+    <link rel="stylesheet" href="../css/fonts.css" />
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
+    <!-- /@chrome:head -->
+    <title>Waikiki Űrkutatás</title>
+    <link rel="icon" href="../icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo-blue.png" />
+    <link href="../manifest.json" rel="manifest" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/space-research.css" />
+</head>
+<body class="page-space-research group-prosperity">
+    <!-- @chrome:header -->
+    <div class="page-curtain" aria-hidden="true"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="64" height="64" loading="eager" /></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <header class="site-header">
+        <a href="index.html" class="brand"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" /><span class="brand-word">Waikiki</span></a>
+        <nav class="primary-nav">
+            <a href="tourism.html">Utazás</a><a href="society.html">Társadalom</a><a href="economy.html" aria-current="page">Gazdaság</a><a href="government.html">Kormány</a><a href="history.html">Történelem</a><a href="dynasty.html">Királyi Család</a>
+        </nav>
+        <div class="header-actions">
+            <a class="lang-pill" href="../en/space-research.html" hreflang="en" lang="en" title="English">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg>
+                <span>EN</span>
+            </a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+                <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg>
+            </button>
+            <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+                <span class="menu-lines" aria-hidden="true"></span>
+                <span class="menu-label-open">Menü</span>
+                <span class="menu-label-close">Bezárás</span>
+                <span class="visually-hidden">Menü</span>
+            </button>
+        </div>
+    </header>
+    <div class="site-menu" id="site-menu" aria-hidden="true" inert>
+        <div class="site-menu-inner">
+            <aside class="menu-aside">
+                <div class="menu-clock-block">
+                    <div class="menu-clock-header">
+                        <p class="menu-clock-label">Helyi idő a fővárosban</p>
+                        <div class="menu-weather" data-capital-weather><span class="weather-icon" aria-hidden="true">☀️</span> <span class="weather-temp">28°C</span> <span class="weather-desc">Napos</span></div>
+                    </div>
+                    <p class="menu-clock" data-capital-clock>--:--</p>
+                    <p class="menu-clock-city">Nova Aurelia, Waikiki tartomány</p>
+                </div>
+                <p class="menu-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
+                <div class="menu-aside-row">
+                    <a class="menu-chip" href="../en/space-research.html" hreflang="en" lang="en">English</a><a class="menu-chip is-active" href="../hu/space-research.html" hreflang="hu" lang="hu">Magyar</a>
+                    <button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Éjszakai mód</button>
+                    <button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animáció</button>
+                </div>
+            </aside>
+            <div class="menu-group">
+                <h2>Nemzet</h2>
+                <ul>
+                    <li><a href="index.html">Főoldal</a></li>
+                    <li><a href="overview.html">Áttekintés</a></li>
+                    <li><a href="history.html">Történelem</a></li>
+                    <li><a href="society.html">Társadalom</a></li>
+                    <li><a href="culture.html">Kultúra</a></li>
+                    <li><a href="ideology.html">Ideológia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Kormányzás</h2>
+                <ul>
+                    <li><a href="government.html">Kormány</a></li>
+                    <li><a href="leadership.html">Vezetés</a></li>
+                    <li><a href="parties.html">Politika</a></li>
+                    <li><a href="constitution.html">Alkotmány</a></li>
+                    <li><a href="military.html">Hadsereg</a></li>
+                    <li><a href="diplomacy.html">Diplomácia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Jólét</h2>
+                <ul>
+                    <li><a href="economy.html">Gazdaság</a></li>
+                    <li><a href="banking-system.html">Bankrendszer</a></li>
+                    <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                    <li><a href="citizenship.html">Állampolgárság</a></li>
+                    <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                    <li><a href="space-research.html" aria-current="page">Űrkutatás</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Királyi Család</h2>
+                <ul>
+                    <li><a href="dynasty.html">Dinasztia</a></li>
+                    <li><a href="family-tree.html">Családfa</a></li>
+                    <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                    <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Látogatás</h2>
+                <ul>
+                    <li><a href="tourism.html">Turizmus</a></li>
+                    <li><a href="sights.html">Látnivalók</a></li>
+                    <li><a href="nature.html">Természet</a></li>
+                    <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                    <li><a href="visa.html">Vízum és belépés</a></li>
+                    <li><a href="faq.html">GYIK</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /@chrome:header -->
+    <main id="main">
+        <section class="hero" data-hero>
+            <div class="hero-media"><img src="../images/UniversalUpscaler_Pro_Precise_2_1f1c2357-5be5-6860-9aa6-0dca8e8888b7.jpg" alt="Űrkutatás" fetchpriority="high" /></div>
+            <div class="hero-veil"></div>
+            <div class="hero-content"><span class="hero-eyebrow">Jólét · Űrkutatás</span>
+                <h1 class="hero-title">Űrkutatás</h1>
+                <p class="hero-lead">Waikiki még magasabbra tört, meg sem állt a csillagos égig, így a világ legfejlettebb gazdasági hatalma immár átvette a vezető szerepet az űrkutatás területén is. Nemzetünk a modern kor legambiciózusabb mélyűri programjaival a globális űrkutatás élvonalába tartozik.</p>
+                <div class="hero-stats">
+                    <div class="stat-item"><span class="stat-number">$200 Mrd</span><span class="stat-label">Űrállomás költségvetés</span></div>
+                    <div class="stat-item"><span class="stat-number">270 T</span><span class="stat-label">Delta IV teherbírás</span></div>
+                    <div class="stat-item"><span class="stat-number">2035</span><span class="stat-label">Emberes Mars-misszió</span></div>
+                    <div class="stat-item"><span class="stat-number">12 fő</span><span class="stat-label">Kutatói legénység</span></div>
+                </div>
+            </div>
+        </section>
+        <!-- @chrome:subnav --><!-- /@chrome:subnav -->
+        <section id="station" class="light-bg fade-in">
+            <h2 class="section-title">Waikiki Nemzeti Űrállomás</h2>
+            <p class="section-intro">Waikiki megteremtette az űrkutatás biztonságos bázisát. Előretolt helyőrségünk, a Waikiki Nemzeti Űrállomás (WNSS) a legmodernebb technológia felhasználásával készült. Az ott folyó kísérletek és kutatások pedig egyedülálló lehetőséget teremtenek a további innovációra.</p>
+            <div class="ill-panel">
+                <img class="ill" src="../icons/space/station-hu.svg" alt="Waikiki Nemzeti Űrállomás pályamenti komplexum és telemetriai diagram" width="1160" height="520" />
+                <div class="ill-caption">
+                    <span>A Waikiki Nemzeti Űrállomás (WNSS) pályamenti felépítése és telemetriája.</span>
+                </div>
+            </div>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/space-station.svg" alt="" /></span>
+                    <span class="spec-badge">Orbitális Zászlóshajó</span>
+                    <h3>A WNSS Tudományos Laboratórium</h3>
+                    <p>A Waikiki Nemzeti Űrállomás építése 2007-ben vette kezdetét, a központi mag 2012-ben állt pályára, az utolsó kutatómodul beillesztésével pedig 2018-ban vált teljessé. A több mint 200 milliárd dolláros beruházással megvalósult komplexum ma az emberiség történetének legnagyobb mesterséges orbitális létesítménye.</p>
+                    <ul class="spec-list">
+                        <li><span>Állandó személyzet</span><strong>12 asztronauta és kutató</strong></li>
+                        <li><span>Pályamagasság</span><strong>420 km Föld körüli pálya</strong></li>
+                        <li><span>Energiaellátás</span><strong>Többgenerációs napelemtáblák</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/rocket-launch.svg" alt="" /></span>
+                    <span class="spec-badge">Mélyűri Kikötő</span>
+                    <h3>Kiindulópont a Naprendszerbe</h3>
+                    <p>A WNSS nem csupán egy modern tudományos kutatólaboratórium, hanem Waikiki jövőbeli mélyűri küldetéseinek központi logisztikai bázisa. A tervek szerint innen indulhatnak majd útnak a Holdat megkerülő, illetve a Marsra tartó űrhajók, a közvetlen orbitális üzemanyag-utántöltést, a készletek felhalmozását és az átfogó műszaki ellenőrzést követően.</p>
+                    <ul class="spec-list">
+                        <li><span>Dokkolóegységek</span><strong>6 univerzális dokkolókapu</strong></li>
+                        <li><span>Küldetési profil</span><strong>Hold- és Mars-expedíciók</strong></li>
+                        <li><span>Bővítések</span><strong>Folyamatos korszerűsítés 2038-ig</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/ticket-confirmation.svg" alt="" /></span>
+                    <span class="spec-badge">Polgári Űrrepülés</span>
+                    <h3>Űrturizmus az Állomáson</h3>
+                    <p>2018 óta a WNSS a polgári űrhajózás előtt is nyitva áll. A szigorú felkészítésen átesett magánszemélyek nemcsak a fedélzetre léphetnek, hanem űrsétát is tehetnek a nyílt világűrben. A program a globális űrturizmus legexkluzívabb vállalkozásává vált, a komplexumot eddig a királyi család hat tagja és nyolc kereskedelmi űrutazó látogatta meg.</p>
+                    <ul class="spec-list">
+                        <li><span>Első kereskedelmi út</span><strong>2018-as orbitális látogatás</strong></li>
+                        <li><span>Program</span><strong>10 napos űrállomás és űrséta</strong></li>
+                        <li><span>Szállítóeszköz</span><strong>Dragon kapszulák és űrsiklók</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/orbit.svg" alt="" /></span>
+                    <span class="spec-badge">Új Távlatok</span>
+                    <h3>Hold Körüli Állandó Űrállomás</h3>
+                    <p>A WNSS sikereire alapozva a kormány a WSA és a NASA partnerségében állandó Hold körüli kutatóállomás létesítését készíti elő a 2030-as évek második felére. A holdi pályán keringő komplexum olyan mélyűri és gravitációs kísérletek elvégzését teszi lehetővé, amelyek alacsony Föld körüli pályán nem valósíthatók meg.</p>
+                    <ul class="spec-list">
+                        <li><span>Tervezett pálya</span><strong>Hold körüli halópálya</strong></li>
+                        <li><span>Partnerintézmények</span><strong>WSA és NASA közös fejlesztés</strong></li>
+                        <li><span>Célkitűzés</span><strong>Extrém mélyűri kísérletek</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="lunar-mars" class="fade-in">
+            <h2 class="section-title">Hold- és Mars-küldetések</h2>
+            <p class="section-intro">A WSA kutatói nemzetközi partnereikkel és a vezető űripari vállalatokkal együttműködve készítik elő a következő évtized legjelentősebb mélyűri misszióit. A jelenlegi stratégiai ciklus középpontjában a 2026-2030 közötti emberes Hold-program áll, miközben folyamatosan zajlanak a 2035-2040-es távlatú Mars-expedíció műszaki előkészületei is.</p>
+            <div class="ill-panel">
+                <img class="ill" src="../icons/space/corridor-hu.svg" alt="Föld, Hold és Mars bolygóközi transzferfolyosó térkép" width="1160" height="480" />
+                <div class="ill-caption">
+                    <span>Mélyűri repülési folyosók: Föld-WNSS bázis, a tervezett Hold-program (2026-2030) és az emberes Mars-misszió (2035-2040).</span>
+                </div>
+            </div>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/moon-waxing-crescent.svg" alt="" /></span>
+                    <span class="spec-badge">Tervezett Program</span>
+                    <h3>A Nemzeti Hold-program</h3>
+                    <p>A Hold-program a nemzet legfontosabb stratégiai űrvállalkozása a 2026-2030 közötti időszakban. A WSA és a NASA együttműködésében, a Saturn X rakétával végrehajtott átfogó tesztrepülések után valósul meg a történelmi emberes holdraszállás, amelyet egy állandó, autonóm kutatóbázis kiépítése követ az Aitken-medencében.</p>
+                    <ul class="spec-list">
+                        <li><span>Tervezett időkeret</span><strong>2026-2030 közötti fázisok</strong></li>
+                        <li><span>Jelenlegi állapot</span><strong>Tesztrepülések alatt</strong></li>
+                        <li><span>Tervezett helyszín</span><strong>Aitken-medence</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/rocket-launch.svg" alt="" /></span>
+                    <span class="spec-badge">Szupernehéz Hordozórakéta</span>
+                    <h3>Saturn X Rakétarendszer</h3>
+                    <p>A mélyűri küldetések és a Hold-program sarokköve a WSA és a Techno Industries által kifejlesztett Saturn X szupernehéz hordozórakéta. A több mint 120 méter magas szerkezet az űrkutatás történetének egyik legerőteljesebb indítórendszere, amely több mint 150 tonna hasznos terhet képes Föld körüli pályára állítani.</p>
+                    <ul class="spec-list">
+                        <li><span>Méret</span><strong>120+ méter magas</strong></li>
+                        <li><span>Teherbírás</span><strong>150 t LEO / 50 t Hold felé</strong></li>
+                        <li><span>Fő alkalmazás</span><strong>Hold-expedíciók</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/earth.svg" alt="" /></span>
+                    <span class="spec-badge">Interplanetáris Cél</span>
+                    <h3>Emberes Mars-misszió</h3>
+                    <p>A WSA távlati célkitűzése, hogy a 2035 és 2040 közötti indítási ablakban emberes expedíciót juttasson a Mars felszínére, garantálva a kutatók biztonságos visszatérését. A küldetés a SpaceX fejlett csillaghajó-architektúrájára és a Hold körüli pályán végzett üzemanyag-vételezésre építve valósítja meg az interplanetáris utazást.</p>
+                    <ul class="spec-list">
+                        <li><span>Tervezett indítás</span><strong>2035-2040 között</strong></li>
+                        <li><span>Hordozórendszer</span><strong>Interplanetary Shuttle</strong></li>
+                        <li><span>Fő feladat</span><strong>Felszíni kutatás</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/satellite-variant.svg" alt="" /></span>
+                    <span class="spec-badge">Pályamenti Koncepció</span>
+                    <h3>Marsi Bázisállomás</h3>
+                    <p>A Lockheed Martin terveire épülő koncepció szerint az űrhajósok egy Mars körül folyamatosan keringő orbitális bázisállomásról, dedikált leszállóegységekkel érik el a felszínt. Mivel a nagyméretű lakómodulokat nem kell levinni és újra felbocsátani, az expedíció lényegesen kevesebb üzemanyagot igényelne.</p>
+                    <ul class="spec-list">
+                        <li><span>Kapacitás</span><strong>8 asztronauta (2 leszállóegység)</strong></li>
+                        <li><span>Energiaforrás</span><strong>Napelemek és palládium-reaktor</strong></li>
+                        <li><span>Előny</span><strong>Bolygóközi logisztika</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/robot-industrial.svg" alt="" /></span>
+                    <span class="spec-badge">Robotikus Felderítés</span>
+                    <h3>A Spirit II Marsjáró</h3>
+                    <p>Waikiki második robotikus felderítője, a Spirit II 2018-ban indult el a vörös bolygó felé. Sikeres landolása óta folyamatos kőzetelemzést és spektrometriás vizsgálatokat végez, nagy felbontású felvételei pedig adatokat szolgáltatnak a leendő emberes expedíciók felszíni műveleteinek megtervezéséhez.</p>
+                    <ul class="spec-list">
+                        <li><span>Indítás éve</span><strong>2018</strong></li>
+                        <li><span>Műszerek</span><strong>Kőzetelemzés és kamerák</strong></li>
+                        <li><span>Küldetés státusza</span><strong>Aktív működés</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="deep-space" class="light-bg fade-in">
+            <h2 class="section-title">Kozmikus Megfigyelés és Űrtávcsövek</h2>
+            <p class="section-intro">A Föld körüli pályán keringő űrtávcsövektől a Brazília tartomány hegyvidéki lankáin elterülő gigantikus rádióantennákig Waikiki a világegyetem keletkezésének rejtett titkait kutatja, miközben az idegen civilizációk létezésének nyomait fürkészi.</p>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/telescope.svg" alt="" /></span>
+                    <span class="spec-badge">Orbitális Obszervatórium</span>
+                    <h3>A Kepler Űrtávcső</h3>
+                    <p>Kivételes méretei miatt a Kepler űrtávcsövet két különálló egységben juttatták pályára Delta III hordozórakétákkal, majd 2017-ben az űrben kapcsolták össze. A földi légkör torzításaitól mentes környezetben végzi a Naprendszeren kívüli exobolygók és az Androméda-galaxis részletgazdag feltérképezését.</p>
+                    <ul class="spec-list">
+                        <li><span>Összeszerelés</span><strong>2017-es űrbéli dokkolás</strong></li>
+                        <li><span>Hordozórakéták</span><strong>2x Delta III típusú rakéta</strong></li>
+                        <li><span>Fő kutatási terület</span><strong>Exobolygók és távoli galaxisok</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/antenna.svg" alt="" /></span>
+                    <span class="spec-badge">Óriás Földi Antenna</span>
+                    <h3>A Minas Gerais Rádióteleszkóp</h3>
+                    <p>Brazília tartományban, Minas Gerais védett völgyeiben épül a Föld legnagyobb tányérátmérőjű rádióteleszkópja. Az üzembe helyezését követően a kozmosz legtávolabbi szegleteit térképezi fel, és mesterséges eredetű rádiófrekvenciás jelek után kutat a földönkívüli civilizációk felderítésére.</p>
+                    <ul class="spec-list">
+                        <li><span>Elhelyezkedés</span><strong>Minas Gerais, Brazília tartomány</strong></li>
+                        <li><span>Antenna mérete</span><strong>A világ legnagyobb tányérantennája</strong></li>
+                        <li><span>Küldetés</span><strong>SETI és mélyűr-térképezés</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/shield-star.svg" alt="" /></span>
+                    <span class="spec-badge">Bolygóvédelem</span>
+                    <h3>Kozmikus Megfigyelőhálózat</h3>
+                    <p>Waikiki mélyűri érzékelőhálózata a földközeli aszteroidák és az űrszemét pályájának korai észlelését, valamint folyamatos pályamodellezését végzi. A magasan integrált orbitális és földi radarrendszer szavatolja a stratégiai űrinfrastruktúra sérthetetlenségét és a bolygószintű védelmi készenlétet.</p>
+                    <ul class="spec-list">
+                        <li><span>Radarrendszer</span><strong>Orbitális és földi szenzorok</strong></li>
+                        <li><span>Reakcióidő</span><strong>Valós idejű pálya-előrejelzés</strong></li>
+                        <li><span>Lefedettség</span><strong>360 fokos Föld körüli tér</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="propulsion" class="fade-in">
+            <h2 class="section-title">Új Generációs Hordozórakéták és Hajtóművek</h2>
+            <p class="section-intro">A technológiai fölény letéteményesei az állami és magánintézmények közreműködésével megalkotott új generációs hordozórakéták, a zéró emissziós űrkikötők és a forradalmi ionhajtóművek.</p>
+            <div class="card-grid">
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/fire.svg" alt="" /></span>
+                    <span class="spec-badge">Szupernehéz Teherbírás</span>
+                    <h3>Delta IV Űrrakéta</h3>
+                    <p>A fejlesztés alatt álló Delta IV a szupernehéz hordozórakéták új etalonjának készül. A mérnöki számítások alapján több mint 270 tonna hasznos teher pályára állítására lesz képes, új korszakot nyitva a tartós marsi bázisépítés és a nagy léptékű bolygóközi nehézlogisztika előtt.</p>
+                    <ul class="spec-list">
+                        <li><span>Hasznos teher</span><strong>270+ tonna kapacitás</strong></li>
+                        <li><span>Felépítés</span><strong>Többfokozatú kriogenikus hajtás</strong></li>
+                        <li><span>Elsődleges feladat</span><strong>Mélyűri és marsi rakomány</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/engine.svg" alt="" /></span>
+                    <span class="spec-badge">Irányított Tolóerő</span>
+                    <h3>Négyfúvókás Gyorsítórakéták</h3>
+                    <p>A tesztelés alatt álló új hordozórendszerek négy vektorálható tolóerőkamrával rendelkeznek, ami ugrásszerűen növeli meg manőverezőképességüket és hatásfokukat. Segítségükkel a második generációs űrsiklók akár 60 tonna berendezést is alacsony Föld körüli pályára juttathatnak.</p>
+                    <ul class="spec-list">
+                        <li><span>Fúvóka-kialakítás</span><strong>4 vektoros tolóerőkamra</strong></li>
+                        <li><span>Sikló teherbírása</span><strong>Akár 60 tonna</strong></li>
+                        <li><span>Hatékonyságnövekedés</span><strong>+35% üzemanyag-optimalizálás</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/lightning-bolt.svg" alt="" /></span>
+                    <span class="spec-badge">Ionmeghajtás</span>
+                    <h3>Expeditioner Osztályú Űrsiklók</h3>
+                    <p>Az Expeditioner osztályú űrhajók korszerű xenongázos ionhajtóműveikkel kiemelkedő üzemanyag-hatékonyságot nyújtanak a hosszú távú bolygóközi küldetésekben. Minimális hajtóanyag-felhasználásuk révén rutinszerűen képesek a Hold megkerülésére és az orbitális állomásra történő visszatérésre.</p>
+                    <ul class="spec-list">
+                        <li><span>Hajtóműtípus</span><strong>Nagy teljesítményű xenon-ion hajtás</strong></li>
+                        <li><span>Hatótávolság</span><strong>Hold- és földközeli aszteroidák</strong></li>
+                        <li><span>Üzemeltetés</span><strong>Autonóm repülés</strong></li>
+                    </ul>
+                </div>
+                <div class="card"><span class="card-icon"><img src="../icons/mdi/solar-power.svg" alt="" /></span>
+                    <span class="spec-badge">Zöld Űrközpont</span>
+                    <h3>Nova Aurelia Kilövőkomplexum</h3>
+                    <p>A SpaceX-szel együttműködésben 2018-ban felavatott Nova Aurelia Launch Complex a világ első, kizárólag megújuló energiával működő űrkikötője. A helyszíni nap- és tengeri szélerőművekkel táplált elektrolízisüzemek helyben állítják elő a folyékony hidrogént és oxigént, megteremtve a zéró kibocsátású űrrepülés feltételeit.</p>
+                    <ul class="spec-list">
+                        <li><span>Elhelyezkedés</span><strong>Nova Aurelia szektor</strong></li>
+                        <li><span>Energiaellátás</span><strong>Nap és szélenergia</strong></li>
+                        <li><span>Átadás dátuma</span><strong>2018-as megnyitó</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="fleet" class="light-bg fade-in">
+            <h2 class="section-title">Waikiki Űrhajói és Hordozórakétái</h2>
+            <p class="section-intro">A Waikiki Űrügynökség és a hazai űripar a világ egyik legsokoldalúbb és legnagyobb kapacitású űrhajóflottáját hozta létre. A teher és emberes missziókra optimalizált, aktív hordozóeszközök mellett új generációs űrsiklók és szupernehéz rakétarendszerek alapozzák meg a következő évtizedek mélyűri expedícióit.</p>
+            <h3 class="fleet-group-title">Jelenlegi Űrhajók és Hordozórakéták</h3>
+            <p class="fleet-group-lead">Aktív szolgálatban álló, bevált űreszközök az alacsony Föld körüli pálya és a cislunáris térség meghódítására.</p>
+            <div class="card-grid">
+                <div class="card">
+                    <span class="spec-badge">Nehéz Teherrakéta</span>
+                    <h3>Delta III A</h3>
+                    <p>A Delta III A a nemzetközi űrállomás és a cislunáris infrastruktúra moduljainak felbocsátására tervezett nehéz teherrakéta. Robusztus kriogenikus felépítése és 35 000 kN-os tolóereje révén 180 000 kg hasznos terhet juttat Föld körüli pályára, a nehéz űreszközök elsőrendű hordozójaként.</p>
+                    <ul class="spec-list">
+                        <li><span>Magasság</span><strong>115 m</strong></li>
+                        <li><span>Legénység</span><strong>0 fő (Automata)</strong></li>
+                        <li><span>Rakomány</span><strong>180 000 kg</strong></li>
+                        <li><span>Gyorsulási tolóerő</span><strong>35 000 kN</strong></li>
+                        <li><span>Indítási költség</span><strong>300 millió $</strong></li>
+                    </ul>
+                    <img src="../icons/rockets/rocket-delta-3a.svg" alt="" class="aircraft-watermark aircraft-watermark--plane" aria-hidden="true" />
+                </div>
+                <div class="card">
+                    <span class="spec-badge">Újrafelhasználható Sikló</span>
+                    <h3>Space Shuttle</h3>
+                    <p>A szárnyas Space Shuttle a Waikiki Űrügynökség elsődleges orbitális személyszállító rendszere. Tízfős kabinja és 40 000 kg-os tehertere ideális a WNSS személyzetcseréjére, laboratóriumi modulok szállítására, valamint az űrséták és a kereskedelmi űrutazások kiszolgálására.</p>
+                    <ul class="spec-list">
+                        <li><span>Magasság</span><strong>72 m</strong></li>
+                        <li><span>Legénység</span><strong>10 fő</strong></li>
+                        <li><span>Rakomány</span><strong>40 000 kg</strong></li>
+                        <li><span>Gyorsulási tolóerő</span><strong>18 000 kN</strong></li>
+                        <li><span>Indítási költség</span><strong>2 milliárd $</strong></li>
+                    </ul>
+                    <img src="../icons/rockets/rocket-shuttle.svg" alt="" class="aircraft-watermark aircraft-watermark--plane" aria-hidden="true" />
+                </div>
+                <div class="card">
+                    <span class="spec-badge">Szupernehéz Rakéta</span>
+                    <h3>Saturn X</h3>
+                    <p>A 125 méteres Saturn X a flotta csúcsát képviseli: 40 000 kN-os tolóerejével és 200 000 kg-os teherbírásával képes hat asztronautát és komplex holdi egységeket mélyűri pályára állítani. A rakéta a 2026 és 2030 közötti nemzeti Hold-program és az interplanetáris átmenetek oszlopa.</p>
+                    <ul class="spec-list">
+                        <li><span>Magasság</span><strong>125 m</strong></li>
+                        <li><span>Legénység</span><strong>6 fő</strong></li>
+                        <li><span>Rakomány</span><strong>200 000 kg</strong></li>
+                        <li><span>Gyorsulási tolóerő</span><strong>40 000 kN</strong></li>
+                        <li><span>Indítási költség</span><strong>500 millió $</strong></li>
+                    </ul>
+                    <img src="../icons/rockets/rocket-saturn-x.svg" alt="" class="aircraft-watermark aircraft-watermark--plane" aria-hidden="true" />
+                </div>
+                <div class="card">
+                    <span class="spec-badge">Közepes Rakéta</span>
+                    <h3>Falcon</h3>
+                    <p>A Falcon egy gazdaságos, gyorsan újraindítható kétfokozatú rakéta négyfős legénységi kabinnal és 25 000 kg teherbírással. Alacsony költségével és nagyfokú megbízhatóságával a rutinszerű logisztikai küldetések és a gyors műhold-pályáraállítások legfőbb eszköze.</p>
+                    <ul class="spec-list">
+                        <li><span>Magasság</span><strong>90 m</strong></li>
+                        <li><span>Legénység</span><strong>4 fő</strong></li>
+                        <li><span>Rakomány</span><strong>25 000 kg</strong></li>
+                        <li><span>Gyorsulási tolóerő</span><strong>8 000 kN</strong></li>
+                        <li><span>Indítási költség</span><strong>50 millió $</strong></li>
+                    </ul>
+                    <img src="../icons/rockets/rocket-falcon.svg" alt="" class="aircraft-watermark aircraft-watermark--plane" aria-hidden="true" />
+                </div>
+                <div class="card">
+                    <span class="spec-badge">Többmagos Nehézrakéta</span>
+                    <h3>Falcon Heavy</h3>
+                    <p>A három gyorsítófokozatból álló Falcon Heavy 70 000 kg-os kapacitást kínál 24 000 kN-os tolóerő mellett. Személyzet nélküli, kifejezetten nehéz távközlési műholdak, geostacionárius adatrelék és távoli tudományos szondák nagy pontosságú pályára állítására alkalmazzák.</p>
+                    <ul class="spec-list">
+                        <li><span>Magasság</span><strong>98 m</strong></li>
+                        <li><span>Legénység</span><strong>0 fő (Automata)</strong></li>
+                        <li><span>Rakomány</span><strong>70 000 kg</strong></li>
+                        <li><span>Gyorsulási tolóerő</span><strong>24 000 kN</strong></li>
+                        <li><span>Indítási költség</span><strong>90 millió $</strong></li>
+                    </ul>
+                    <img src="../icons/rockets/rocket-falcon-heavy.svg" alt="" class="aircraft-watermark aircraft-watermark--plane" aria-hidden="true" />
+                </div>
+                <div class="card">
+                    <span class="spec-badge">Emberes Mélyűri Hordozó</span>
+                    <h3>Delta III B</h3>
+                    <p>A Delta III család emberes változata megnövelt, 120 méteres testtel és nyolcfős legénységi kabinnal épült. 80 000 kg hasznos teherbírása és 35 000 kN tolóereje révén a WSA kutatócsoportjait és expedíciós ellátmányát juttatja el a magasabb Föld körüli és cislunáris pályákra.</p>
+                    <ul class="spec-list">
+                        <li><span>Magasság</span><strong>120 m</strong></li>
+                        <li><span>Legénység</span><strong>8 fő</strong></li>
+                        <li><span>Rakomány</span><strong>80 000 kg</strong></li>
+                        <li><span>Gyorsulási tolóerő</span><strong>35 000 kN</strong></li>
+                        <li><span>Indítási költség</span><strong>300 millió $</strong></li>
+                    </ul>
+                    <img src="../icons/rockets/rocket-delta-3b.svg" alt="" class="aircraft-watermark aircraft-watermark--plane" aria-hidden="true" />
+                </div>
+            </div>
+            <h3 class="fleet-group-title">Tervezett Űrhajók és Jövőbeli Rendszerek</h3>
+            <p class="fleet-group-lead">Fejlesztés alatt álló, új generációs űrjárművek a Mars kolonizálására és a mélyűri logisztikára.</p>
+            <div class="card-grid">
+                <div class="card">
+                    <span class="spec-badge">Új Generációs Sikló</span>
+                    <h3>Space Shuttle v2</h3>
+                    <p>A Space Shuttle v2 az űrsikló korszerűsített, kompozit szerkezetű változata. 78 méteres testtel, 12 fős befogadóképességgel, 50 000 kg hasznos teherbírással és 30 000 kN tolóerővel épül az orbitális személyszállítás és a gyors újrafelhasználhatóság jegyében.</p>
+                    <ul class="spec-list">
+                        <li><span>Magasság</span><strong>78 m</strong></li>
+                        <li><span>Legénység</span><strong>12 fő</strong></li>
+                        <li><span>Rakomány</span><strong>50 000 kg</strong></li>
+                        <li><span>Gyorsulási tolóerő</span><strong>30 000 kN</strong></li>
+                        <li><span>Indítási költség</span><strong>2,5 milliárd $</strong></li>
+                    </ul>
+                    <img src="../icons/rockets/rocket-shuttle-v2.svg" alt="" class="aircraft-watermark aircraft-watermark--plane" aria-hidden="true" />
+                </div>
+                <div class="card">
+                    <span class="spec-badge">Kolosszális Szuperrakéta</span>
+                    <h3>Saturn Nova</h3>
+                    <p>A 137 méteres Saturn Nova a valaha épített legnagyobb teljesítményű rakétakonstrukció, amely elképesztő 80 000 kN-os tolóerőt fejt ki. Tizenkét fős személyzetet és 200 000 kg-os szállítmányt juttat mélyűri pályára, megalapozva az állandó holdbázis és a marsi expedíciók ellátását.</p>
+                    <ul class="spec-list">
+                        <li><span>Magasság</span><strong>137 m</strong></li>
+                        <li><span>Legénység</span><strong>12 fő</strong></li>
+                        <li><span>Rakomány</span><strong>200 000 kg</strong></li>
+                        <li><span>Gyorsulási tolóerő</span><strong>80 000 kN</strong></li>
+                        <li><span>Indítási költség</span><strong>550 millió $</strong></li>
+                    </ul>
+                    <img src="../icons/rockets/rocket-saturn-nova.svg" alt="" class="aircraft-watermark aircraft-watermark--plane" aria-hidden="true" />
+                </div>
+                <div class="card">
+                    <span class="spec-badge">Automata Teherrakéta</span>
+                    <h3>Falcon v2</h3>
+                    <p>A Falcon v2 a népszerű hordozórakéta optimalizált, kifejezetten személyzet nélküli változata. 94 méteres magasságával, 25 000 kg-os kapacitásával és kedvező indítási költségével az állandó, automatizált orbitális utánpótlást szolgálja kiemelkedő megbízhatóság mellett.</p>
+                    <ul class="spec-list">
+                        <li><span>Magasság</span><strong>94 m</strong></li>
+                        <li><span>Legénység</span><strong>0 fő (Automata)</strong></li>
+                        <li><span>Rakomány</span><strong>25 000 kg</strong></li>
+                        <li><span>Gyorsulási tolóerő</span><strong>8 000 kN</strong></li>
+                        <li><span>Indítási költség</span><strong>50 millió $</strong></li>
+                    </ul>
+                    <img src="../icons/rockets/rocket-falcon-v2.svg" alt="" class="aircraft-watermark aircraft-watermark--plane" aria-hidden="true" />
+                </div>
+                <div class="card">
+                    <span class="spec-badge">Bolygóközi Csillaghajó</span>
+                    <h3>Big Falcon Rocket</h3>
+                    <p>A 106 méteres Big Falcon Rocket egy teljesen integrált, újrafelhasználható bolygóközi hordozó- és űrhajórendszer. 52 000 kN tolóerejével és 150 000 kg-os kapacitásával 12 fős legénységet képes eljuttatni a Holdra és a Marsra, önállóan végrehajtva a légköri fékezést és a függőleges leszállást.</p>
+                    <ul class="spec-list">
+                        <li><span>Magasság</span><strong>106 m</strong></li>
+                        <li><span>Legénység</span><strong>12 fő</strong></li>
+                        <li><span>Rakomány</span><strong>150 000 kg</strong></li>
+                        <li><span>Gyorsulási tolóerő</span><strong>52 000 kN</strong></li>
+                        <li><span>Indítási költség</span><strong>400 millió $</strong></li>
+                    </ul>
+                    <img src="../icons/rockets/rocket-bfr.svg" alt="" class="aircraft-watermark aircraft-watermark--plane" aria-hidden="true" />
+                </div>
+                <div class="card">
+                    <span class="spec-badge">Szupernehéz Teherrakéta</span>
+                    <h3>Delta IV</h3>
+                    <p>A Delta IV a Delta család csúcsa: 120 méteres testtel, 50 000 kN tolóerővel és 250 000 kg-os teherbírással készül. Személyzet nélküli gigászi hordozóként stratégiai báziselemek, ipari berendezések és tudományos űrteleszkópok pályára bocsátását végzi megbízható működéssel.</p>
+                    <ul class="spec-list">
+                        <li><span>Magasság</span><strong>120 m</strong></li>
+                        <li><span>Legénység</span><strong>0 fő (Automata)</strong></li>
+                        <li><span>Rakomány</span><strong>250 000 kg</strong></li>
+                        <li><span>Gyorsulási tolóerő</span><strong>50 000 kN</strong></li>
+                        <li><span>Indítási költség</span><strong>350 millió $</strong></li>
+                    </ul>
+                    <img src="../icons/rockets/rocket-delta-4.svg" alt="" class="aircraft-watermark aircraft-watermark--plane" aria-hidden="true" />
+                </div>
+                <div class="card">
+                    <span class="spec-badge">Bolygóközi Zászlóshajó</span>
+                    <h3>Interplanetary Shuttle</h3>
+                    <p>A flotta legnagyobb méretű, 140 méteres óriása az Interplanetary Shuttle, amely páratlan, 100 000 kN-os tolóerőt fejt ki. Kiemelkedő, 500 000 kg-os teherbírásával és 12 fős életfenntartó rendszerével az emberes Mars-missziók és a mélyűri transzfer végső letéteményese.</p>
+                    <ul class="spec-list">
+                        <li><span>Magasság</span><strong>140 m</strong></li>
+                        <li><span>Legénység</span><strong>12 fő</strong></li>
+                        <li><span>Rakomány</span><strong>500 000 kg</strong></li>
+                        <li><span>Gyorsulási tolóerő</span><strong>100 000 kN</strong></li>
+                        <li><span>Indítási költség</span><strong>1,5 milliárd $</strong></li>
+                    </ul>
+                    <img src="../icons/rockets/rocket-interplanetary-shuttle.svg" alt="" class="aircraft-watermark aircraft-watermark--plane" aria-hidden="true" />
+                </div>
+            </div>
+        </section>
+        <!-- @chrome:next -->
+        <section class="next-chapter">
+            <a class="next-card" href="dynasty.html">
+                <div class="next-media"><img src="../images/UniversalUpscaler_e38222ed-70b3-4c90-9777-c114aa60d527.jpg" alt="" /></div>
+                <span class="next-body">
+                    <span class="next-eyebrow">Folytassa az utazást · Királyi Család</span>
+                    <span class="next-title">Dinasztia</span>
+                    <span class="next-arrow" aria-hidden="true">→</span>
+                </span>
+            </a>
+        </section>
+        <!-- /@chrome:next -->
+    </main>
+    <!-- @chrome:footer -->
+    <footer class="site-footer">
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" /><span class="brand-word">Waikiki</span></a>
+                    <p class="footer-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
+                    <p class="footer-about">Waikiki Állam hivatalos portálja. Alapítva 1999. március 10-én · Nova Aurelia. Ez az oldal mesterséges intelligenciával készült, bármilyen hasonlóság valós személyekhez, országokhoz vagy intézményekhez pusztán a véletlen műve.</p>
+                </div>
+                <div class="footer-col">
+                    <h2>Nemzet</h2>
+                    <ul>
+                        <li><a href="index.html">Főoldal</a></li>
+                        <li><a href="overview.html">Áttekintés</a></li>
+                        <li><a href="history.html">Történelem</a></li>
+                        <li><a href="society.html">Társadalom</a></li>
+                        <li><a href="culture.html">Kultúra</a></li>
+                        <li><a href="ideology.html">Ideológia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Kormányzás</h2>
+                    <ul>
+                        <li><a href="government.html">Kormány</a></li>
+                        <li><a href="leadership.html">Vezetés</a></li>
+                        <li><a href="parties.html">Politika</a></li>
+                        <li><a href="constitution.html">Alkotmány</a></li>
+                        <li><a href="military.html">Hadsereg</a></li>
+                        <li><a href="diplomacy.html">Diplomácia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Jólét</h2>
+                    <ul>
+                        <li><a href="economy.html">Gazdaság</a></li>
+                        <li><a href="banking-system.html">Bankrendszer</a></li>
+                        <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                        <li><a href="citizenship.html">Állampolgárság</a></li>
+                        <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                        <li><a href="space-research.html">Űrkutatás</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Királyi Család</h2>
+                    <ul>
+                        <li><a href="dynasty.html">Dinasztia</a></li>
+                        <li><a href="family-tree.html">Családfa</a></li>
+                        <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Látogatás</h2>
+                    <ul>
+                        <li><a href="tourism.html">Turizmus</a></li>
+                        <li><a href="sights.html">Látnivalók</a></li>
+                        <li><a href="nature.html">Természet</a></li>
+                        <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                        <li><a href="visa.html">Vízum és belépés</a></li>
+                        <li><a href="faq.html">GYIK</a></li>
+                    </ul>
+                </div>
+            </div>
+            <span class="footer-mega" aria-hidden="true">Waikiki</span>
+            <div class="footer-bottom">
+                <p>© 2026 Waikiki Szuverén Állam. Minden jog fenntartva.</p>
+                <nav>
+                    <a style="margin-right: 40px" href="../en/space-research.html" hreflang="en" lang="en">English</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <button class="to-top" type="button">
+        <svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span>
+    </button>
+    <!-- /@chrome:footer -->
+    <script src="../js/common.js"></script>
+</body>
+</html>

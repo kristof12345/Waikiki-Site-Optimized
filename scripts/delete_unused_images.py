@@ -46,14 +46,10 @@ for filename in sorted(unreferenced):
     print(f"  - {filename}")
 
 if unreferenced:
-    confirm = input(f"\nDelete {len(unreferenced)} files? (yes/no): ").strip().lower()
-    if confirm == 'yes':
-        for filename in unreferenced:
-            path = os.path.join(images_dir, filename)
-            os.remove(path)
-            print(f"Deleted: {filename}")
-        print("Done.")
-    else:
-        print("Aborted. No files were deleted.")
+    for filename in unreferenced:
+        path = os.path.join(images_dir, filename)
+        os.remove(path)
+        print(f"Deleted: {filename}")
+    print("Done.")
 else:
     print("Nothing to delete.")

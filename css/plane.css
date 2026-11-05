@@ -1,0 +1,819 @@
+/* Diplomatic Fleet (Plane Showcase) Stylesheet */
+
+/* Page layout container */
+.plane-fleet-section {
+  max-width: var(--width-full);
+  margin: 0 auto;
+  padding: clamp(3rem, 6vw, 5.5rem) var(--gutter);
+}
+
+.plane-fleet-header .section-title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin-bottom: 1rem;
+  font-weight: 380;
+  letter-spacing: -0.015em;
+}
+
+.plane-fleet-header .section-intro {
+  color: var(--text-muted);
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  line-height: 1.75;
+}
+
+/* Aircraft cards stack */
+.aircraft-stack {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.aircraft-card {
+  display: grid;
+  grid-template-columns: minmax(300px, 380px) 1fr;
+  min-height: 560px;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  border: var(--border-width-hairline) solid var(--line);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition:
+    transform 0.5s var(--ease-out),
+    box-shadow 0.5s var(--ease-out),
+    border-color 0.4s var(--ease-out);
+}
+
+.aircraft-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--line-strong);
+}
+
+/* Banner (Left column) */
+.aircraft-banner {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  color: var(--neutral-50);
+  isolation: isolate;
+}
+
+.aircraft-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, var(--white-alpha-20), transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.aircraft-watermark {
+  position: absolute;
+  bottom: -24px;
+  right: -24px;
+  width: 150px;
+  height: 150px;
+  opacity: 0.12;
+  transform: rotate(-12deg);
+  pointer-events: none;
+  z-index: 0;
+  transition: transform 0.8s var(--ease-out), opacity 0.8s;
+}
+
+.aircraft-card:hover .aircraft-watermark {
+  transform: rotate(0deg) scale(1.1);
+  opacity: 0.2;
+}
+
+.aircraft-watermark--plane {
+  width: clamp(240px, 28vw, 360px);
+  height: clamp(240px, 28vw, 360px);
+  bottom: 50px;
+  right: 0px;
+  opacity: 0.14;
+  filter: brightness(0) invert(1);
+  transform: rotate(-22deg);
+}
+
+.aircraft-card:hover .aircraft-watermark--plane {
+  transform: rotate(-12deg) scale(1.08);
+  opacity: 0.24;
+}
+
+/* Individual card themes */
+.aircraft-card--af1 .aircraft-banner {
+  background: linear-gradient(145deg, var(--accent-hover), #923422);
+}
+
+.aircraft-card--concorde .aircraft-banner {
+  background: linear-gradient(145deg, var(--waikiki), #15554f);
+}
+
+.aircraft-card--af23 .aircraft-banner {
+  background: linear-gradient(145deg, var(--primary), var(--primary-dark));
+}
+
+.aircraft-card--dynasty .aircraft-banner {
+  background: linear-gradient(145deg, var(--secondary), var(--adventure));
+}
+
+.banner-content-top {
+  position: relative;
+  z-index: 2;
+}
+
+.aircraft-role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0.95rem;
+  background: var(--line-strong);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-pill);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--neutral-50);
+  margin-bottom: 1.25rem;
+}
+
+.aircraft-role-badge img {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.aircraft-name {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.2vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: var(--neutral-50);
+  margin: 0 0 0.85rem;
+}
+
+.aircraft-accent-bar {
+  width: 44px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: var(--radius-3xs);
+  margin-bottom: 0.9rem;
+}
+
+.aircraft-tagline {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0;
+}
+
+.banner-content-bottom {
+  position: relative;
+  z-index: 2;
+  margin-top: 2rem;
+}
+
+.aircraft-model-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: monospace, var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.aircraft-model-badge img {
+  width: 14px;
+  height: 14px;
+  opacity: 0.9;
+}
+
+/* Details (Right column) */
+.aircraft-details {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: var(--surface);
+  transition: background-color 0.4s ease;
+  overflow: auto;
+}
+
+.aircraft-intro {
+  color: var(--text);
+  font-size: 1.02rem;
+  line-height: 1.7;
+  margin: 0 0 0.5rem;
+}
+
+/* Tab controls */
+.aircraft-tabs-nav {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 1.5rem;
+}
+
+.aircraft-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.75rem 1.25rem;
+  background: transparent;
+  border-bottom: 2px solid transparent;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  cursor: pointer;
+  margin-bottom: -1px;
+  transition:
+    color 0.25s var(--ease-out),
+    border-color 0.25s var(--ease-out);
+}
+
+.aircraft-tab-btn img {
+  width: 15px;
+  height: 15px;
+  opacity: 0.65;
+  transition: opacity 0.25s var(--ease-out);
+}
+
+.aircraft-tab-btn:hover {
+  color: var(--heading);
+}
+
+.aircraft-tab-btn.is-active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.aircraft-tab-btn:hover img,
+.aircraft-tab-btn.is-active img {
+  opacity: 1;
+}
+
+/* Tab panes */
+.aircraft-tab-pane {
+  display: none;
+  animation: fadeInPane 0.35s var(--ease-out) both;
+}
+
+.aircraft-tab-pane.is-active {
+  display: block;
+}
+
+/* Specifications list */
+.specs-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  background: var(--surface-2);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  border: var(--border-width-hairline) solid var(--line);
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.65rem 0.5rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.92rem;
+  transition: background-color 0.2s;
+}
+
+.spec-row:last-child {
+  border-bottom: none;
+}
+
+.spec-label {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.spec-val {
+  color: var(--heading);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+/* Interior features grid */
+.interior-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.interior-card {
+  padding: 1rem 1.25rem;
+  height: 120px;
+  background: var(--surface-2);
+  border: var(--border-width-hairline) solid var(--line);
+  border-radius: var(--radius-md);
+  transition:
+    transform 0.3s var(--ease-out),
+    border-color 0.3s var(--ease-out),
+    background-color 0.3s var(--ease-out);
+}
+
+.interior-card:hover {
+  transform: translateX(4px);
+  border-color: var(--tertiary);
+  background: var(--surface);
+}
+
+.interior-card-title {
+  font-family: var(--font-sans);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--heading);
+  margin: 0 0 0.35rem;
+}
+
+.interior-card-desc {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0;
+}
+
+/* Top View Schematic Panel */
+.topview-schematic {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.topview-canvas-wrapper {
+  position: relative;
+  background: var(--surface-2);
+  border: var(--border-width-hairline) solid var(--line);
+  border-radius: var(--radius-md);
+  padding-bottom: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  background-image:
+    linear-gradient(var(--primary-alpha-05) 1px, transparent 1px),
+    linear-gradient(90deg, var(--primary-alpha-05) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: center center;
+  transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease;
+}
+
+.topview-svg {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  max-height: 340px;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 6px 16px rgba(0, 51, 102, 0.1));
+  transition: transform 0.4s var(--ease-out);
+}
+
+.topview-canvas-wrapper:hover .topview-svg {
+  transform: scale(1.02);
+}
+
+.topview-caption {
+  margin-top: 0.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.ill text {
+  font-family: var(--font-sans);
+  font-weight: 700;
+}
+
+/* Full-Width Air Force One Architectural Deck Plan Section */
+.af1-deckplan-section {
+  max-width: var(--width-full);
+  margin: 0 auto;
+  padding: clamp(3.5rem, 6.5vw, 6rem) var(--gutter);
+}
+
+.deckplan-showcase {
+  max-width: var(--width-l);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.deckplan-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1.35rem;
+  background: var(--surface);
+  border: var(--border-width-hairline) solid var(--line-strong);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.deckplan-toolbar-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.deckplan-model-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(135deg, var(--ill-sun), var(--accent-hover));
+  color: var(--neutral-50);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px var(--accent-hover-alpha-30);
+}
+
+.deckplan-toolbar-title {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--heading);
+  letter-spacing: 0.03em;
+}
+
+.deckplan-filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.deckplan-filter-btn {
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line-strong);
+  background: var(--surface-2);
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background-color 0.25s var(--ease-out),
+    color 0.25s var(--ease-out),
+    border-color 0.25s var(--ease-out),
+    transform 0.2s var(--ease-out);
+}
+
+.deckplan-filter-btn:hover {
+  color: var(--heading);
+  border-color: var(--primary);
+}
+
+.deckplan-filter-btn.is-active {
+  background: var(--primary);
+  color: var(--neutral-50);
+  border-color: var(--primary);
+}
+
+.deckplan-svg-scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.deckplan-svg-scroll .ill {
+  min-width: 900px;
+}
+
+.deckplan-ill .deck-tier {
+  transition: opacity 0.35s ease, filter 0.35s ease;
+}
+
+.ill-panel[data-active-tier="elevation"] .deck-tier:not(.deck-tier--elevation),
+.ill-panel[data-active-tier="upper"] .deck-tier:not(.deck-tier--upper),
+.ill-panel[data-active-tier="main"] .deck-tier:not(.deck-tier--main) {
+  opacity: 0.2;
+  filter: grayscale(0.45);
+}
+
+.deckplan-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.15rem;
+  align-items: center;
+}
+
+.deckplan-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--heading);
+}
+
+.deckplan-legend-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-2xs);
+  display: inline-block;
+  box-shadow: inset 0 0 0 1px rgba(0, 34, 68, 0.2);
+}
+
+/* Architectural Compartment Cards Grid */
+.deckplan-zones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
+  gap: 1.1rem;
+}
+
+.deckplan-zone-card {
+  background: var(--surface);
+  border: var(--border-width-hairline) solid var(--line-strong);
+  border-top: 4px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 1.2rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.3s var(--ease-out),
+    border-color 0.3s var(--ease-out),
+    box-shadow 0.3s var(--ease-out);
+}
+
+.deckplan-zone-card--royal {
+  border-top-color: var(--accent-hover);
+}
+
+.deckplan-zone-card--diplo {
+  border-top-color: var(--accent);
+}
+
+.deckplan-zone-card--cmd {
+  border-top-color: var(--waikiki);
+}
+
+.deckplan-zone-card--vip {
+  border-top-color: var(--primary-light);
+}
+
+.deckplan-zone-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.deckplan-zone-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.deckplan-zone-code {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.22rem 0.6rem;
+  border-radius: var(--radius-pill);
+  background: var(--accent-subtle);
+  border: 1px solid rgba(194, 154, 87, 0.32);
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--accent-dark);
+  letter-spacing: 0.08em;
+}
+
+.deckplan-zone-card--royal .deckplan-zone-code {
+  background: rgba(201, 90, 65, 0.12);
+  border-color: var(--accent-hover-alpha-30);
+  color: #b5452d;
+}
+
+.deckplan-zone-card--cmd .deckplan-zone-code {
+  background: rgba(42, 140, 131, 0.12);
+  border-color: rgba(42, 140, 131, 0.3);
+  color: #1d6c65;
+}
+
+.deckplan-zone-card--vip .deckplan-zone-code {
+  background: var(--primary-light-alpha-12);
+  border-color: var(--primary-light-alpha-30);
+  color: var(--primary-light);
+}
+
+.deckplan-zone-area {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--text-muted);
+}
+
+.deckplan-zone-title {
+  font-family: var(--font-sans);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--heading);
+  margin: 0.15rem 0 0;
+}
+
+.deckplan-zone-desc {
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0;
+}
+
+/* Dark Mode */
+.body-dark .aircraft-card {
+  border-color: var(--white-alpha-12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.body-dark .aircraft-tabs-nav {
+  border-bottom-color: var(--white-alpha-12);
+}
+
+.body-dark .aircraft-tab-btn,
+.body-dark .spec-label,
+.body-dark .topview-caption,
+.body-dark .deckplan-zone-area {
+  color: var(--dark-text);
+}
+
+.body-dark .aircraft-tab-btn img {
+  filter: brightness(1.8) invert(0.8);
+}
+
+.body-dark .aircraft-tab-btn.is-active {
+  color: var(--tertiary);
+  border-bottom-color: var(--tertiary);
+}
+
+.body-dark .interior-card:hover {
+  background: var(--dark-surface-3);
+}
+
+.body-dark .topview-canvas-wrapper {
+  color: var(--tertiary);
+  background-image:
+    linear-gradient(rgba(107, 164, 217, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(107, 164, 217, 0.08) 1px, transparent 1px);
+}
+
+.body-dark .topview-svg {
+  filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.5));
+}
+
+.body-dark .deckplan-toolbar {
+  border-color: var(--white-alpha-12);
+}
+
+.body-dark .deckplan-filter-btn {
+  border-color: var(--white-alpha-10);
+  color: var(--dark-text);
+}
+
+.body-dark .deckplan-filter-btn:hover {
+  border-color: var(--tertiary);
+}
+
+.body-dark .deckplan-filter-btn.is-active {
+  background: var(--tertiary);
+  color: #061527;
+  border-color: var(--tertiary);
+}
+
+.body-dark .deckplan-zone-card {
+  border-color: var(--white-alpha-10);
+}
+
+.body-dark .deckplan-zone-card--royal {
+  border-top-color: var(--ill-sun);
+}
+
+.body-dark .deckplan-zone-card--diplo {
+  border-top-color: var(--accent-light);
+}
+
+.body-dark .deckplan-zone-card--cmd {
+  border-top-color: #5ce1cf;
+}
+
+.body-dark .deckplan-zone-card--vip {
+  border-top-color: var(--tertiary);
+}
+
+.body-dark .deckplan-zone-card:hover {
+  background: var(--dark-surface-2);
+}
+
+.body-dark .deckplan-zone-code {
+  background: rgba(245, 196, 110, 0.14);
+  border-color: rgba(245, 196, 110, 0.3);
+  color: var(--accent-light);
+}
+
+.body-dark .deckplan-zone-card--royal .deckplan-zone-code {
+  background: rgba(227, 115, 90, 0.16);
+  border-color: rgba(227, 115, 90, 0.35);
+  color: #f8a28f;
+}
+
+.body-dark .deckplan-zone-card--cmd .deckplan-zone-code {
+  background: rgba(92, 225, 207, 0.14);
+  border-color: rgba(92, 225, 207, 0.32);
+  color: #5ce1cf;
+}
+
+.body-dark .deckplan-zone-card--vip .deckplan-zone-code {
+  background: var(--tertiary-alpha-16);
+  border-color: rgba(107, 164, 217, 0.35);
+  color: #93c5fd;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .aircraft-card {
+    grid-template-columns: 1fr;
+  }
+
+  .aircraft-banner {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 600px) {
+  .aircraft-tabs-nav {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .aircraft-tabs-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .aircraft-tab-btn {
+    white-space: nowrap;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.76rem;
+  }
+
+  .spec-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .spec-val {
+    text-align: left;
+  }
+}
+
+/* Animations */
+@keyframes fadeInPane {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

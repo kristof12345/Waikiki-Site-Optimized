@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- @chrome:head -->
+    <meta name="theme-color" content="#fbf7f0" />
+    <link rel="stylesheet" href="../css/fonts.css" />
+    <script>
+        (function(d) {
+            var h = d.documentElement;
+            h.classList.add('js');
+            try {
+                if (localStorage.getItem('isDarkMode') === 'true') h.classList.add('body-dark');
+                if (localStorage.getItem('isAnimationDisabled') === 'true') h.classList.add('no-reveal')
+            } catch (e) {}
+            setTimeout(function() {
+                if (!h.classList.contains('reveal-ready')) h.classList.remove('js')
+            }, 3500)
+        })(document);
+    </script>
+    <!-- /@chrome:head -->
+    <title>Waikiki Természete</title>
+    <link rel="icon" href="../icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="1024x1024" href="../icons/logo-blue.png" />
+    <link href="../manifest.json" rel="manifest" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/nature.css" />
+    <link rel="preload" as="image" href="../images/UniversalUpscaler_Pro_Precise_2_1f1cafd8-c168-69e0-8654-e23fef3eb0b0.jpg" fetchpriority="high" />
+</head>
+<body class="page-nature group-visit">
+    <!-- @chrome:header -->
+    <div class="page-curtain" aria-hidden="true"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="64" height="64" loading="eager" /></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <header class="site-header">
+        <a href="index.html" class="brand"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" loading="eager" /><span class="brand-word">Waikiki</span></a>
+        <nav class="primary-nav">
+            <a href="tourism.html" aria-current="page">Utazás</a><a href="society.html">Társadalom</a><a href="economy.html">Gazdaság</a><a href="government.html">Kormány</a><a href="history.html">Történelem</a><a href="dynasty.html">Királyi Család</a>
+        </nav>
+        <div class="header-actions">
+            <a class="lang-pill" href="../en/nature.html" hreflang="en" lang="en" title="English">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+                </svg>
+                <span>EN</span>
+            </a>
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+                <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <mask id="theme-mask">
+                        <rect width="24" height="24" fill="#fff" />
+                        <circle class="theme-cut" cx="26" cy="2" r="6" fill="#000" />
+                    </mask>
+                    <circle class="theme-core" cx="12" cy="12" r="5" fill="currentColor" mask="url(#theme-mask)" />
+                    <g class="theme-rays" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+                    </g>
+                </svg>
+            </button>
+            <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+                <span class="menu-lines" aria-hidden="true"></span>
+                <span class="menu-label-open">Menü</span>
+                <span class="menu-label-close">Bezárás</span>
+                <span class="visually-hidden">Menü</span>
+            </button>
+        </div>
+    </header>
+    <div class="site-menu" id="site-menu" aria-hidden="true" inert>
+        <div class="site-menu-inner">
+            <aside class="menu-aside">
+                <div class="menu-clock-block">
+                    <div class="menu-clock-header">
+                        <p class="menu-clock-label">Helyi idő a fővárosban</p>
+                        <div class="menu-weather" data-capital-weather><span class="weather-icon" aria-hidden="true">☀️</span> <span class="weather-temp">28°C</span> <span class="weather-desc">Napos</span></div>
+                    </div>
+                    <p class="menu-clock" data-capital-clock>--:--</p>
+                    <p class="menu-clock-city">Nova Aurelia, Waikiki tartomány</p>
+                </div>
+                <p class="menu-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
+                <div class="menu-aside-row">
+                    <a class="menu-chip" href="../en/nature.html" hreflang="en" lang="en">English</a><a class="menu-chip is-active" href="../hu/nature.html" hreflang="hu" lang="hu">Magyar</a>
+                    <button class="menu-chip" type="button" data-theme-toggle aria-pressed="false">Éjszakai mód</button>
+                    <button class="menu-chip is-active" type="button" data-animate-toggle aria-pressed="true">Animáció</button>
+                </div>
+            </aside>
+            <div class="menu-group">
+                <h2>Nemzet</h2>
+                <ul>
+                    <li><a href="index.html">Főoldal</a></li>
+                    <li><a href="overview.html">Áttekintés</a></li>
+                    <li><a href="history.html">Történelem</a></li>
+                    <li><a href="society.html">Társadalom</a></li>
+                    <li><a href="culture.html">Kultúra</a></li>
+                    <li><a href="ideology.html">Ideológia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Kormányzás</h2>
+                <ul>
+                    <li><a href="government.html">Kormány</a></li>
+                    <li><a href="leadership.html">Vezetés</a></li>
+                    <li><a href="parties.html">Politika</a></li>
+                    <li><a href="constitution.html">Alkotmány</a></li>
+                    <li><a href="military.html">Hadsereg</a></li>
+                    <li><a href="diplomacy.html">Diplomácia</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Jólét</h2>
+                <ul>
+                    <li><a href="economy.html">Gazdaság</a></li>
+                    <li><a href="banking-system.html">Bankrendszer</a></li>
+                    <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                    <li><a href="citizenship.html">Állampolgárság</a></li>
+                    <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                    <li><a href="space-research.html">Űrkutatás</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Királyi Család</h2>
+                <ul>
+                    <li><a href="dynasty.html">Dinasztia</a></li>
+                    <li><a href="family-tree.html">Családfa</a></li>
+                    <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                    <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                    <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                    <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                </ul>
+            </div>
+            <div class="menu-group">
+                <h2>Látogatás</h2>
+                <ul>
+                    <li><a href="tourism.html">Turizmus</a></li>
+                    <li><a href="sights.html">Látnivalók</a></li>
+                    <li><a href="nature.html" aria-current="page">Természet</a></li>
+                    <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                    <li><a href="visa.html">Vízum és belépés</a></li>
+                    <li><a href="faq.html">GYIK</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /@chrome:header -->
+    <main id="main">
+        <section class="hero" data-hero>
+            <div class="hero-media"><img src="../images/UniversalUpscaler_Pro_Precise_2_1f1cafd8-c168-69e0-8654-e23fef3eb0b0.jpg" alt="Természet" fetchpriority="high" /></div>
+            <div class="hero-veil"></div>
+            <div class="hero-content">
+                <span class="hero-eyebrow">Természeti csodák</span>
+                <h1 class="hero-title">Waikiki természeti <em>birodalma</em></h1>
+                <p class="hero-lead">A Karib-tenger kristálytiszta korallszigeteitől az ötmillió négyzetkilométeres érintetlen amazóniai őserdőn át egészen Brazília alpesi zuhatagaiig és hófödte hegycsúcsaiig Waikiki a bolygó legkiterjedtebb és legszigorúbban oltalmazott vadonbirodalmának ad otthont. Alkotmányos Zöld Chartánk és zéróemissziós védelmi doktrínánk örök időkre garantálja az ökológiai épséget.</p>
+            </div>
+        </section>
+        <!-- @chrome:subnav --><!-- /@chrome:subnav -->
+        <!-- 1. Szakasz: Ökológiai keresztmetszet a korallzátonyoktól a gleccserekig -->
+        <section id="transect" class="fade-in">
+            <h2 class="section-title">A korallzátonyoktól az andoki gleccserekig</h2>
+            <p class="section-intro">Waikiki 1999. március 10-i alapítása és a Brazíliával kötött történelmi 2006-os unió révén az állam 8 840 000 négyzetkilométeres területe három tartományra oszlik. Kevés ország fog össze nyolc ennyire sokszínű neotrópusi és magashegyi életközösséget egyetlen alkotmányos védelmi rendszerben: a karibi korallzátonyoktól és karsztvölgyektől az Amazonas-medencén és a Pantanal ártéri síkságain át Brazília hófedte csúcsaiig.</p>
+            <div class="ill-panel" data-nature-svg="transect">
+                <img class="nature-ill" src="../icons/nature/transect.svg" alt="Waikiki keresztmetszete a tengertől a csúcsokig: korallzátony, mangrovepart, karszttornyok, amazóniai esőerdő, Pantanal vizes élőhely, Cerrado szavanna, zuhatagerdő és a havas hegyvidék" width="1600" height="600" />
+            </div>
+            <div class="province-cards-container">
+                <article class="card province-card" data-prov="waikiki">
+                    <div>
+                        <div class="province-card-top">
+                            <span class="province-tag">Tenger és karszt</span>
+                            <span class="province-stat-lbl">Alapítva 1999</span>
+                        </div>
+                        <h3>Waikiki tartomány: zátonyok, mangrovék és mogoték</h3>
+                        <p>A Kuba, Hispaniola, Jamaica és a Nova Aurelia szigetvilága körül elterülő tartomány korallzátonyokat, vörös mangrove-bölcsődéket, látványos karszttornyokat, hiperszalin hasadéktavakat és a Selena Biolumineszcens Lagúnát öleli fel.</p>
+                    </div>
+                    <div class="province-card-stats">
+                        <div>
+                            <span class="province-stat-num">480+</span>
+                            <span class="province-stat-lbl">Élő korallfaj</span>
+                        </div>
+                        <div>
+                            <span class="province-stat-num">100%</span>
+                            <span class="province-stat-lbl">Elektromos hajózás</span>
+                        </div>
+                        <div>
+                            <span class="province-stat-num">32</span>
+                            <span class="province-stat-lbl">Világító öböl</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card province-card" data-prov="amazonia">
+                    <div>
+                        <div class="province-card-top">
+                            <span class="province-tag">Lombkorona és ártér</span>
+                            <span class="province-stat-lbl">Unió 2006</span>
+                        </div>
+                        <h3>Amazónia tartomány: esőerdő, várzea és Pantanal</h3>
+                        <p>A 2006-ban csatlakozott Amazónia a Föld legnagyobb összefüggő esőerdejét, a Pantanal vizes élőhelyeit és a part menti dűnelagúnákat oltalmazza. A tartomány területének több mint 80 százalékát szigorú alkotmányos érintetlenségi paktum védi.</p>
+                    </div>
+                    <div class="province-card-stats">
+                        <div>
+                            <span class="province-stat-num">5 200 000 km²</span>
+                            <span class="province-stat-lbl">Védett erdő</span>
+                        </div>
+                        <div>
+                            <span class="province-stat-num">80%</span>
+                            <span class="province-stat-lbl">Érintetlen mag</span>
+                        </div>
+                        <div>
+                            <span class="province-stat-num">1 240</span>
+                            <span class="province-stat-lbl">Madárfaj</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card province-card" data-prov="brazilia">
+                    <div>
+                        <div class="province-card-top">
+                            <span class="province-tag">Szavanna és Andok</span>
+                            <span class="province-stat-lbl">Unió 2006</span>
+                        </div>
+                        <h3>Brazília tartomány: Cerrado, köderdők és csúcsok</h3>
+                        <p>Az aranyló Cerrado-fennsíkoktól és a száraz Caatinga kaktuszerdőitől a bazalt vízeséseken át a magashegyi andoki csúcsokig húzódó tartomány a Monte Cristal orchidea-rezervátumainak és a Waikiki Síparadicsomnak ad otthont.</p>
+                    </div>
+                    <div class="province-card-stats">
+                        <div>
+                            <span class="province-stat-num">2 890 m</span>
+                            <span class="province-stat-lbl">Köderdei gerinc</span>
+                        </div>
+                        <div>
+                            <span class="province-stat-num">1 250 km</span>
+                            <span class="province-stat-lbl">Alpesi sípálya</span>
+                        </div>
+                        <div>
+                            <span class="province-stat-num">140+</span>
+                            <span class="province-stat-lbl">Védett zuhatag</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- 2. Szakasz: A Kék Öv és a Királyi Tengeri Rezervátumok -->
+        <section id="blue-belt" class="light-bg fade-in">
+            <h2 class="section-title">A Kék Öv és a királyi tengeri rezervátumok</h2>
+            <p class="section-intro">A Chease Young király által a COP26 klímacsúcson kezdeményezett Kék Öv Egyezmény több mint kétmillió négyzetkilométernyi karibi és atlanti felségvizet véd. Ahol a vörös mangrovék támasztógyökerei találkoznak a külső korallfallal, zátonyhalak ivadékai nevelkednek a korallkertek fölött.</p>
+            <div class="nature-feature-split">
+                <div class="nature-feature-media">
+                    <div class="nature-ill-frame" data-nature-svg="reef">
+                        <img class="nature-ill" src="../icons/nature/reef.svg" alt="Waikiki mangrovepartja és az alatta húzódó korallzátony osztott nézetben, tengeri teknőssel, ördögrájával, zátonyhalakkal és korallkertekkel" width="1200" height="720" />
+                    </div>
+                </div>
+                <div class="nature-feature-text">
+                    <h3>Mangrove-bölcsődék és élő korallfalak</h3>
+                    <p>Waikiki part menti bioszférája összefüggő tengeri bölcsődeként működik: a vörös mangrovékkal szegélyezett lagúnák természetes szűrőként tisztítják meg a szárazföldi vizeket, mielőtt azok elérnék a Jardines de la Reina és Nova Aurelia élő korallzátonyait, ahol levesteknősök, sasráják és óriás ördögráják találnak háborítatlan menedéket.</p>
+                    <ul class="nature-feature-list">
+                        <li><strong>Jessica királyné korallkertje:</strong> Víz alatti tartókereteken évente 300 000 hőtűrő agancs- és agykorall-telepet nevelnek, majd telepítenek át a sekély zátonyteraszokra.</li>
+                        <li><strong>Bahía Serena mangrove-öv:</strong> A szigorúan védett árapályerdők a papagájhalak, a doktorhalak és a karibi languszták legfontosabb ívó- és nevelőhelyei.</li>
+                        <li><strong>Selena Éjszakai Lagúna:</strong> A Fehér Flotta által felügyelt, kizárólag csendes, átlátszó kajakokkal látogatható öböl minden holdtalan éjszakán varázslatos, kékeszöld biolumineszcens fényárban pompázik.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- 3. Szakasz: Az Amazonia Lombkorona és a Chease Magbank -->
+        <section id="amazonia-vault" class="fade-in">
+            <h2 class="section-title">Az amazóniai lombkorona és a Chease Magbank</h2>
+            <p class="section-intro">Az elárasztott várzea folyóágaitól a hatvan méter magas óriásfák lombkoronájáig rétegződő Amazónia tartomány a Föld ismert szárazföldi fajainak mintegy egytizedét őrzi, föld alatti magbankkal és műholdas akusztikus védelmi hálózattal felvértezve.</p>
+            <div class="nature-feature-split reverse">
+                <div class="nature-feature-media">
+                    <div class="nature-ill-frame" data-nature-svg="rainforest">
+                        <img class="nature-ill" src="../icons/nature/rainforest.svg" alt="Amazóniai folyó rétegzett lombkoronával, kiemelkedő kapokfákkal, óriás tündérrózsákkal, rózsaszín folyami delfinnel, arákkal és tukánnal" width="1200" height="720" />
+                    </div>
+                </div>
+                <div class="nature-feature-text">
+                    <h3>Az élő esőerdő öt függőleges szintje</h3>
+                    <p>A Rio Esmeralda kanyargó mellékágain kétméteres Victoria amazonica tündérrózsák lebegnek a nyugodt holtágakon, ahol rózsaszín folyami delfinek bukkannak a felszínre skarlát arák, óriástukánok és színpompás morpho-pillangók alatt. A gránit alapkőzet mélyén húzódik a Nemzeti Genetikai Bárka.</p>
+                    <ul class="nature-feature-list">
+                        <li><strong>Nemzeti Genetikai Bárka:</strong> A kriogén gránitkamrák több mint 100 000 honos neotrópusi magfajtát és szövetkultúrát őriznek mínusz 196 Celsius-fokon.</li>
+                        <li><strong>A 80%-os érintetlenségi paktum:</strong> Négymillió négyzetkilométernyi elsődleges terra firme és várzea őserdő teljes alkotmányos védettséget élvez: a terület elzárt minden fakitermelés, bányászat és útépítés elől.</li>
+                        <li><strong>Orion-4 akusztikus őrszem:</strong> A Waikiki Űrügynökség műholdjai és a lombkoronába telepített napelemes szenzorok valós időben mérik be az illegális emberi jelenlét zajait, hatvan másodpercen belül riasztva a járőröző vadőri léghajókat.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- 4. Szakasz: Brazília Hegyvidéke, Köderdei és Alpesi Gleccserei -->
+        <section id="highlands" class="light-bg fade-in">
+            <h2 class="section-title">Brazília hegyvidéke, köderdei és gleccserei</h2>
+            <p class="section-intro">Ahol a meleg atlanti légtömegek találkoznak a déli hegyvonulatokkal, Brazília páfrányokkal borított köderdőkön és magashegyi páramo fennsíkokon át emelkedik az örök hómezők és türkizkék gleccsertavak világába.</p>
+            <div class="nature-feature-split">
+                <div class="nature-feature-media">
+                    <div class="nature-ill-frame" data-nature-svg="highlands">
+                        <img class="nature-ill" src="../icons/nature/highlands.svg" alt="Brazília hegyvidéke gleccserrel, türkiz gleccsertóval, páramo füves pusztával, köderdei vízeséssel és köröző andoki kondorokkal" width="1200" height="700" />
+                    </div>
+                </div>
+                <div class="nature-feature-text">
+                    <h3>A páramo üstökösfáktól az örök jégig</h3>
+                    <p>A Monte Cristal 2800 méteres felhőhatára felett a mohával borított köderdőket aranyló páramo füves puszták váltják fel, óriás Puya raimondii virágzatokkal és bársonyos frailejón-rozettákkal. A gleccserek kristálytiszta olvadékvize egyszerre táplálja a Waikiki Síparadicsom magaslati tározóit és a Chease Királyi Szőlőbirtokok vulkanikus teraszait.</p>
+                    <ul class="nature-feature-list">
+                        <li><strong>Andoki kondor rezervátum:</strong> A gránitkatlanok felszálló légáramlatai a kontinens legnagyobb védett andoki kondor fészkelőállományának biztosítanak ideális feltételeket.</li>
+                        <li><strong>Monte Cristal köderdei vízesések:</strong> Több mint 140 magaslati zuhatag zúdul smaragdzöld sziklamedencékbe, páfrányfák és 650 honos orchideafaj gyűrűjében.</li>
+                        <li><strong>Gleccservízgyűjtő egyezmény:</strong> A zárt olvadékvíz-tározók kizárólag megújuló hidrotermikus energiával látják el a magaslati kutatóállomásokat és a modern felvonórendszereket.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- 5. Szakasz: Különleges Életközösségek és Nemzeti Rezervátumok -->
+        <section id="sanctuaries" class="fade-in">
+            <h2 class="section-title">Különleges életközösségek és nemzeti rezervátumok</h2>
+            <p class="section-intro">A korallzátonyokon, síkvidéki esőerdőkön és alpesi csúcsokon túl Waikiki tizenkét egyedülálló regionális ökoszisztémát is oltalmába fogad. Válasszon az alábbi tartományi szűrők közül az egyes rezervátumok élővilágának és a Waikiki One rendszer látogatói kereteinek megismeréséhez.</p>
+            <div class="province-filter-nav" role="tablist">
+                <button class="province-btn is-active" data-prov-filter="all" type="button" aria-pressed="true">
+                    <span>Minden élőhely</span>
+                    <span class="prov-filter-count">12</span>
+                </button>
+                <button class="province-btn" data-prov-filter="waikiki" type="button" aria-pressed="false">
+                    <span>Waikiki tartomány</span>
+                    <span class="prov-filter-count">4</span>
+                </button>
+                <button class="province-btn" data-prov-filter="amazonia" type="button" aria-pressed="false">
+                    <span>Amazónia tartomány</span>
+                    <span class="prov-filter-count">4</span>
+                </button>
+                <button class="province-btn" data-prov-filter="brazilia" type="button" aria-pressed="false">
+                    <span>Brazília tartomány</span>
+                    <span class="prov-filter-count">4</span>
+                </button>
+            </div>
+            <div class="sanctuaries-grid">
+                <article class="card sanctuary-item" data-prov="waikiki">
+                    <div>
+                        <div class="sanctuary-art nature-ill-frame" data-nature-svg="mogotes">
+                            <img class="nature-ill" src="../icons/nature/mogotes.svg" alt="Dohányvölgy fölé magasodó karsztos mogote-tornyok királypálmákkal" width="480" height="300" />
+                        </div>
+                        <div class="province-card-top">
+                            <span class="sanctuary-badge-prov prov-waikiki">Waikiki tartomány</span>
+                            <span class="province-stat-lbl">Karsztvölgy</span>
+                        </div>
+                        <h3>Viñales karszt mogote rezervátum</h3>
+                        <p>A vörös talajú völgyekből függőlegesen kiemelkedő jura kori mészkőtornyok vidéke: királypálma-ligetekkel, hagyományos dohányszárító pajtákkal és föld alatti barlangi folyókkal.</p>
+                    </div>
+                    <div class="province-card-stats">
+                        <div><span class="province-stat-num">420 m</span><span class="province-stat-lbl">Karsztkúpok</span></div>
+                        <div><span class="province-stat-num">Királypálma</span><span class="province-stat-lbl">Vezérnövény</span></div>
+                        <div><span class="province-stat-num">180 / nap</span><span class="province-stat-lbl">Ösvénykvóta</span></div>
+                    </div>
+                </article>
+                <article class="card sanctuary-item" data-prov="waikiki">
+                    <div>
+                        <div class="sanctuary-art nature-ill-frame" data-nature-svg="enriquillo">
+                            <img class="nature-ill" src="../icons/nature/enriquillo.svg" alt="A sós Enriquillo-tó flamingókkal, kaktuszokkal, orrszarvúleguánnal és hegyesorrú krokodillal" width="480" height="300" />
+                        </div>
+                        <div class="province-card-top">
+                            <span class="sanctuary-badge-prov prov-waikiki">Waikiki tartomány</span>
+                            <span class="province-stat-lbl">Sós hasadéktó</span>
+                        </div>
+                        <h3>Lago Enriquillo medence rezervátum</h3>
+                        <p>Negyvenöt méterrel a tengerszint alatt fekvő hiperszalin tektonikus tó, amely karibi flamingócsapatoknak, honos orrszarvúleguánoknak és hegyesorrú krokodiloknak nyújt menedéket.</p>
+                    </div>
+                    <div class="province-card-stats">
+                        <div><span class="province-stat-num">-45 m</span><span class="province-stat-lbl">Tengerszint alatt</span></div>
+                        <div><span class="province-stat-num">Flamingó</span><span class="province-stat-lbl">Vezérfaj</span></div>
+                        <div><span class="province-stat-num">90 / nap</span><span class="province-stat-lbl">Hajókvóta</span></div>
+                    </div>
+                </article>
+                <article class="card sanctuary-item" data-prov="waikiki">
+                    <div>
+                        <div class="sanctuary-art nature-ill-frame" data-nature-svg="bluehole">
+                            <img class="nature-ill" src="../icons/nature/bluehole.svg" alt="Mély kobaltkékbe vesző tenger alatti víznyelő türkiz korallzátonyokkal, szirti cápával és tengeri teknőssel" width="480" height="300" />
+                        </div>
+                        <div class="province-card-top">
+                            <span class="sanctuary-badge-prov prov-waikiki">Waikiki tartomány</span>
+                            <span class="province-stat-lbl">Tengeri szakadék</span>
+                        </div>
+                        <h3>Selena Kék Szakadék víznyelő</h3>
+                        <p>Szabályos kör alakú tengeri víznyelő, amely 202 méteres mélységbe zuhan a mészkőtalapzatban, sekély, napfényes korallkertekkel, tengeri teknősökkel és szirti cápákkal övezve.</p>
+                    </div>
+                    <div class="province-card-stats">
+                        <div><span class="province-stat-num">202 m</span><span class="province-stat-lbl">Mélység</span></div>
+                        <div><span class="province-stat-num">Szirti cápa</span><span class="province-stat-lbl">Vezérfaj</span></div>
+                        <div><span class="province-stat-num">40 / nap</span><span class="province-stat-lbl">Merülési kvóta</span></div>
+                    </div>
+                </article>
+                <article class="card sanctuary-item" data-prov="waikiki">
+                    <div>
+                        <div class="sanctuary-art nature-ill-frame" data-nature-svg="elnicho">
+                            <img class="nature-ill" src="../icons/nature/elnicho.svg" alt="Lépcsőzetes türkizkék mésztufa-vízesések és medencék a kubai Escambray-hegység köderdejében királypálmákkal, páfrányfákkal és kubai trogonnal" width="480" height="300" />
+                        </div>
+                        <div class="province-card-top">
+                            <span class="sanctuary-badge-prov prov-waikiki">Waikiki tartomány</span>
+                            <span class="province-stat-lbl">Mésztufa vízesés</span>
+                        </div>
+                        <h3>El Nicho mésztufa-vízesések</h3>
+                        <p>Lépcsőzetes mésztufa-medencék és kristálytiszta vízesések az Escambray-hegység köderdejében, óriás páfrányfák, vadon nyíló orchideák és honos kubai trogonok árnyékában.</p>
+                    </div>
+                    <div class="province-card-stats">
+                        <div><span class="province-stat-num">820 m</span><span class="province-stat-lbl">Hegyi magasság</span></div>
+                        <div><span class="province-stat-num">Kubai trogon</span><span class="province-stat-lbl">Endemikus madár</span></div>
+                        <div><span class="province-stat-num">110 / nap</span><span class="province-stat-lbl">Medencekvóta</span></div>
+                    </div>
+                </article>
+                <article class="card sanctuary-item" data-prov="amazonia">
+                    <div>
+                        <div class="sanctuary-art nature-ill-frame" data-nature-svg="pantanal">
+                            <img class="nature-ill" src="../icons/nature/pantanal.svg" alt="Elárasztott Pantanal szavanna naplementében jabiru gólyákkal, vízidisznókkal és kajmánnal" width="480" height="300" />
+                        </div>
+                        <div class="province-card-top">
+                            <span class="sanctuary-badge-prov prov-amazonia">Amazónia tartomány</span>
+                            <span class="province-stat-lbl">Ártéri mocsár</span>
+                        </div>
+                        <h3>Pantanal birodalmi vizes élőhely</h3>
+                        <p>A világ legnagyobb trópusi ártéri síksága az évszakos áradások ritmusában telik meg sekély tükörlagúnákkal, jabiru gólyák, vízidisznók, kajmánok és jaguárok élőhelyeként.</p>
+                    </div>
+                    <div class="province-card-stats">
+                        <div><span class="province-stat-num">195 000 km²</span><span class="province-stat-lbl">Ártér</span></div>
+                        <div><span class="province-stat-num">Jabiru gólya</span><span class="province-stat-lbl">Vezérfaj</span></div>
+                        <div><span class="province-stat-num">E-csónak</span><span class="province-stat-lbl">Közlekedés</span></div>
+                    </div>
+                </article>
+                <article class="card sanctuary-item" data-prov="amazonia">
+                    <div>
+                        <div class="sanctuary-art nature-ill-frame" data-nature-svg="lencois">
+                            <img class="nature-ill" src="../icons/nature/lencois.svg" alt="Fehér homokdűnék türkiz esővíz-lagúnákkal" width="480" height="300" />
+                        </div>
+                        <div class="province-card-top">
+                            <span class="sanctuary-badge-prov prov-amazonia">Amazónia tartomány</span>
+                            <span class="province-stat-lbl">Dűnelagúnák</span>
+                        </div>
+                        <h3>Lençóis kvarcdűne-lagúnák</h3>
+                        <p>A keleti tengerpart mentén húzódó hófehér kvarchomok-dűnék mélyedéseit az esős évszakban kristálytiszta, türkizkék édesvizű esővíz-lagúnák ezrei töltik meg.</p>
+                    </div>
+                    <div class="province-card-stats">
+                        <div><span class="province-stat-num">1 550 km²</span><span class="province-stat-lbl">Dűnemező</span></div>
+                        <div><span class="province-stat-num">Esőlagúnák</span><span class="province-stat-lbl">Vízrajz</span></div>
+                        <div><span class="province-stat-num">120 / nap</span><span class="province-stat-lbl">Gyalogos kvóta</span></div>
+                    </div>
+                </article>
+                <article class="card sanctuary-item" data-prov="amazonia">
+                    <div>
+                        <div class="sanctuary-art nature-ill-frame" data-nature-svg="tepui">
+                            <img class="nature-ill" src="../icons/nature/tepui.svg" alt="Függőleges homokkősziklákkal a felhők fölé magasodó lapos tetejű tepui vízesésekkel és húsevő növényekkel" width="480" height="300" />
+                        </div>
+                        <div class="province-card-top">
+                            <span class="sanctuary-badge-prov prov-amazonia">Amazónia tartomány</span>
+                            <span class="province-stat-lbl">Homokkő táblás hegy</span>
+                        </div>
+                        <h3>Roraima táblás hegyvidék</h3>
+                        <p>Rózsaszínes kvarcit sziklafalak, amelyek 1000 méterrel emelkednek az esőerdő lombkoronája fölé, ősi kőfennsíkkal, húsevő kürtvirágokkal és mélybe zúduló zuhatagokkal.</p>
+                    </div>
+                    <div class="province-card-stats">
+                        <div><span class="province-stat-num">2 810 m</span><span class="province-stat-lbl">Fennsík csúcs</span></div>
+                        <div><span class="province-stat-num">Kürtvirág</span><span class="province-stat-lbl">Endemikus flóra</span></div>
+                        <div><span class="province-stat-num">50 / nap</span><span class="province-stat-lbl">Túrakvóta</span></div>
+                    </div>
+                </article>
+                <article class="card sanctuary-item" data-prov="amazonia">
+                    <div>
+                        <div class="sanctuary-art nature-ill-frame" data-nature-svg="anavilhanas">
+                            <img class="nature-ill" src="../icons/nature/anavilhanas.svg" alt="Az Anavilhanas folyami szigetvilág smaragdzöld ártéri szigetei és a fekete Rio Negro, valamint az okkersárga Solimões folyók találkozása rózsaszín folyami delfinekkel" width="480" height="300" />
+                        </div>
+                        <div class="province-card-top">
+                            <span class="sanctuary-badge-prov prov-amazonia">Amazónia tartomány</span>
+                            <span class="province-stat-lbl">Folyami szigetvilág</span>
+                        </div>
+                        <h3>Anavilhanas és Encontro vizek</h3>
+                        <p>Négyszáz smaragdzöld ártéri sziget hálózza be a Rio Negro sötét tükörcsatornáit a legendás folyamtalálkozás felett, ahol a fekete és az okkersárga víztömegek keveredés nélkül folynak egymás mellett.</p>
+                    </div>
+                    <div class="province-card-stats">
+                        <div><span class="province-stat-num">400 sziget</span><span class="province-stat-lbl">Ártéri labirintus</span></div>
+                        <div><span class="province-stat-num">Folyami delfin</span><span class="province-stat-lbl">Vezérfaj</span></div>
+                        <div><span class="province-stat-num">75 / nap</span><span class="province-stat-lbl">Kajakkvóta</span></div>
+                    </div>
+                </article>
+                <article class="card sanctuary-item" data-prov="brazilia">
+                    <div>
+                        <div class="sanctuary-art nature-ill-frame" data-nature-svg="cerrado">
+                            <img class="nature-ill" src="../icons/nature/cerrado.svg" alt="Cerrado szavanna virágzó ipéfákkal, termeszvárakkal és sörényes farkassal" width="480" height="300" />
+                        </div>
+                        <div class="province-card-top">
+                            <span class="sanctuary-badge-prov prov-brazilia">Brazília tartomány</span>
+                            <span class="province-stat-lbl">Fennsíki szavanna</span>
+                        </div>
+                        <h3>Cerrado birodalmi szavanna</h3>
+                        <p>Göcsörtös, tűzálló fákkal, arany- és bíborvirágú ipéligetekkel és vörös termeszvárakkal tarkított fennsík, a jácintarák és a hosszú lábú sörényes farkasok otthona.</p>
+                    </div>
+                    <div class="province-card-stats">
+                        <div><span class="province-stat-num">950 000 ha</span><span class="province-stat-lbl">Védett fennsík</span></div>
+                        <div><span class="province-stat-num">Sörényes farkas</span><span class="province-stat-lbl">Vezérfaj</span></div>
+                        <div><span class="province-stat-num">Vezetett szafari</span><span class="province-stat-lbl">Engedély</span></div>
+                    </div>
+                </article>
+                <article class="card sanctuary-item" data-prov="brazilia">
+                    <div>
+                        <div class="sanctuary-art nature-ill-frame" data-nature-svg="caatinga">
+                            <img class="nature-ill" src="../icons/nature/caatinga.svg" alt="Száraz Caatinga tüskeerdő mandacaru kaktuszokkal és jácintarával" width="480" height="300" />
+                        </div>
+                        <div class="province-card-top">
+                            <span class="sanctuary-badge-prov prov-brazilia">Brazília tartomány</span>
+                            <span class="province-stat-lbl">Száraz tüskeerdő</span>
+                        </div>
+                        <h3>Caatinga fehérerdő rezervátum</h3>
+                        <p>Ezüstös kérgű lombhullató fákkal és oszlopos mandacaru kaktuszokkal borított félszáraz tüskeerdő, amely az esők után smaragdzöldbe borul, és ritka kék arákat oltalmaz.</p>
+                    </div>
+                    <div class="province-card-stats">
+                        <div><span class="province-stat-num">840 000 ha</span><span class="province-stat-lbl">Száraz rezervátum</span></div>
+                        <div><span class="province-stat-num">Kék ara</span><span class="province-stat-lbl">Visszatelepített</span></div>
+                        <div><span class="province-stat-num">60 / nap</span><span class="province-stat-lbl">Kutatói kvóta</span></div>
+                    </div>
+                </article>
+                <article class="card sanctuary-item" data-prov="brazilia">
+                    <div>
+                        <div class="sanctuary-art nature-ill-frame" data-nature-svg="cataracts">
+                            <img class="nature-ill" src="../icons/nature/cataracts.svg" alt="Bazaltsziklákon lezúduló hatalmas vízesésrendszer szivárvánnyal, szubtrópusi páfrányokkal és tukánnal" width="480" height="300" />
+                        </div>
+                        <div class="province-card-top">
+                            <span class="sanctuary-badge-prov prov-brazilia">Brazília tartomány</span>
+                            <span class="province-stat-lbl">Bazalt zuhatag</span>
+                        </div>
+                        <h3>Rio Esmeralda óriás vízesések</h3>
+                        <p>Patkó alakú természeti amfiteátrum, ahol többlépcsős vízesések zúdulnak le a sötét vulkanikus bazalton a smaragdzöld szurdokba, örök szivárványok és páfrányfák ölelésében.</p>
+                    </div>
+                    <div class="province-card-stats">
+                        <div><span class="province-stat-num">180 m</span><span class="province-stat-lbl">Zuhanási magasság</span></div>
+                        <div><span class="province-stat-num">Szivárvány</span><span class="province-stat-lbl">Ködpermet</span></div>
+                        <div><span class="province-stat-num">250 / nap</span><span class="province-stat-lbl">Sétánykvóta</span></div>
+                    </div>
+                </article>
+                <article class="card sanctuary-item" data-prov="brazilia">
+                    <div>
+                        <div class="sanctuary-art nature-ill-frame" data-nature-svg="chapada">
+                            <img class="nature-ill" src="../icons/nature/chapada.svg" alt="A Chapada Diamantina lapos tetejű homokkő táblahegyei és a beszűrődő napsugártól kobaltkéken ragyogó földalatti Poço Encantado barlangi tó" width="480" height="300" />
+                        </div>
+                        <div class="province-card-top">
+                            <span class="sanctuary-badge-prov prov-brazilia">Brazília tartomány</span>
+                            <span class="province-stat-lbl">Táblás hegy és barlang</span>
+                        </div>
+                        <h3>Chapada Diamantina kristálybarlang</h3>
+                        <p>Szélformálta homokkő táblahegyek és mély kvarcitbarlangok, ahol a beszűrődő napsugár ragyogó kobaltkék fénybe borítja a földalatti Poço Encantado kristálytiszta vizét.</p>
+                    </div>
+                    <div class="province-card-stats">
+                        <div><span class="province-stat-num">1 120 m</span><span class="province-stat-lbl">Pai Inácio-hegy</span></div>
+                        <div><span class="province-stat-num">Kobaltkék tó</span><span class="province-stat-lbl">Barlangi medence</span></div>
+                        <div><span class="province-stat-num">65 / nap</span><span class="province-stat-lbl">Barlangkvóta</span></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- 6. Szakasz: A Nemzeti Zöld Karta és az Ökoturisztikai Irányelvek -->
+        <section id="charter" class="light-bg fade-in">
+            <h2 class="section-title">A Nemzeti Zöld Karta</h2>
+            <p class="section-intro">Waikiki jogrendszerében a természetes ökoszisztémák alkotmányos védelemmel felvértezett jogi személyiséggel bírnak. Minden állampolgárnak és külföldi látogatónak kötelező betartania a Nemzeti Zöld Karta négy alapelvét.</p>
+            <div class="charter-card-grid">
+                <div class="card charter-rule-card">
+                    <span class="charter-index-num">1</span>
+                    <h3>Waikiki One biometrikus engedélyek</h3>
+                    <p>A védett övezetekbe történő belépés előzetes digitális engedélyhez kötött a Waikiki One rendszerben. A napi keretszámot valós időben határozza meg a mesterséges intelligencia a talajnedvességi és fészkelési adatok alapján.</p>
+                </div>
+                <div class="card charter-rule-card">
+                    <span class="charter-index-num">2</span>
+                    <h3>100% csendes hidrogén és elektromos közlekedés</h3>
+                    <p>A rezervátumokban és a vizeken tilos belső égésű motorok üzemeltetése. A közlekedés kizárólag napelemes léghajókkal, csendes maglev vonatokkal és elektromos katamaránokkal engedélyezett.</p>
+                </div>
+                <div class="card charter-rule-card">
+                    <span class="charter-index-num">3</span>
+                    <h3>Egyszer használatos műanyagok importtilalma</h3>
+                    <p>A határállomásokon és kikötőkben 2015 óta szigorú behozatali tilalom érvényes a nem lebomló csomagolásokra. Minden utazási eszköz és csomagolás kizárólag tanúsítottan lebomló bambuszból és cellulózalapú bio-polimerekből készülhet.</p>
+                </div>
+                <div class="card charter-rule-card">
+                    <span class="charter-index-num">4</span>
+                    <h3>Nemzeti Vagyonalap újrabefektetés</h3>
+                    <p>A nemzeti parki belépőkből befolyó minden egyes dollár közvetlenül a Nemzeti Vagyonalap Ökológiai Helyreállítási Alapjába kerül, finanszírozva az élő korallkertek telepítését és az őshonos erdők regenerációját.</p>
+                </div>
+            </div>
+        </section>
+        <!-- @chrome:next -->
+        <section class="next-chapter">
+            <a class="next-card" href="travel-guide.html">
+                <div class="next-media"><img src="../images/UniversalUpscaler_Pro_Precise_2_1f1c1a3a-8488-6130-962d-09f15cdbb0eb.jpg" alt="" /></div>
+                <span class="next-body">
+                    <span class="next-eyebrow">Folytassa az utazást · Látogatás</span>
+                    <span class="next-title">Utazási Kalauz</span>
+                    <span class="next-arrow" aria-hidden="true">→</span>
+                </span>
+            </a>
+        </section>
+        <!-- /@chrome:next -->
+    </main>
+    <!-- @chrome:footer -->
+    <footer class="site-footer">
+        <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 50c160 0 160-36 320-36s160 36 320 36 160-36 320-36 160 36 320 36 160-36 160-36V90H0z" />
+        </svg>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand"><img class="brand-mark" src="../icons/logo.svg" alt="Waikiki" width="44" height="44" /><span class="brand-word">Waikiki</span></a>
+                    <p class="footer-motto">Jólét, stabilitás és haladás, a Karib-tengertől az Amazonasig.</p>
+                    <p class="footer-about">Waikiki Állam hivatalos portálja. Alapítva 1999. március 10-én · Nova Aurelia. Ez az oldal mesterséges intelligenciával készült, bármilyen hasonlóság valós személyekhez, országokhoz vagy intézményekhez pusztán a véletlen műve.</p>
+                </div>
+                <div class="footer-col">
+                    <h2>Nemzet</h2>
+                    <ul>
+                        <li><a href="index.html">Főoldal</a></li>
+                        <li><a href="overview.html">Áttekintés</a></li>
+                        <li><a href="history.html">Történelem</a></li>
+                        <li><a href="society.html">Társadalom</a></li>
+                        <li><a href="culture.html">Kultúra</a></li>
+                        <li><a href="ideology.html">Ideológia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Kormányzás</h2>
+                    <ul>
+                        <li><a href="government.html">Kormány</a></li>
+                        <li><a href="leadership.html">Vezetés</a></li>
+                        <li><a href="parties.html">Politika</a></li>
+                        <li><a href="constitution.html">Alkotmány</a></li>
+                        <li><a href="military.html">Hadsereg</a></li>
+                        <li><a href="diplomacy.html">Diplomácia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Jólét</h2>
+                    <ul>
+                        <li><a href="economy.html">Gazdaság</a></li>
+                        <li><a href="banking-system.html">Bankrendszer</a></li>
+                        <li><a href="wealth-fund.html">Vagyonalap</a></li>
+                        <li><a href="citizenship.html">Állampolgárság</a></li>
+                        <li><a href="infrastructure.html">Infrastruktúra</a></li>
+                        <li><a href="space-research.html">Űrkutatás</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Királyi Család</h2>
+                    <ul>
+                        <li><a href="dynasty.html">Dinasztia</a></li>
+                        <li><a href="family-tree.html">Családfa</a></li>
+                        <li><a href="chease-and-jessica.html">Chease és Jessica</a></li>
+                        <li><a href="raimondo-and-selena.html">Raimondo és Selena</a></li>
+                        <li><a href="angelina-and-taylor.html">Angelina és Taylor</a></li>
+                        <li><a href="jennifer-and-tyler.html">Jennifer és Tyler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Látogatás</h2>
+                    <ul>
+                        <li><a href="tourism.html">Turizmus</a></li>
+                        <li><a href="sights.html">Látnivalók</a></li>
+                        <li><a href="nature.html">Természet</a></li>
+                        <li><a href="travel-guide.html">Utazási Kalauz</a></li>
+                        <li><a href="visa.html">Vízum és belépés</a></li>
+                        <li><a href="faq.html">GYIK</a></li>
+                    </ul>
+                </div>
+            </div>
+            <span class="footer-mega" aria-hidden="true">Waikiki</span>
+            <div class="footer-bottom">
+                <p>© 2026 Waikiki Szuverén Állam. Minden jog fenntartva.</p>
+                <nav>
+                    <a style="margin-right: 40px" href="../en/nature.html" hreflang="en" lang="en">English</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <button class="to-top" type="button">
+        <svg viewBox="0 0 54 54" aria-hidden="true">
+            <circle class="ring-bg" cx="27" cy="27" r="24" />
+            <circle class="ring" cx="27" cy="27" r="24" />
+        </svg><span aria-hidden="true">↑</span>
+    </button>
+    <!-- /@chrome:footer -->
+    <script src="../js/common.js"></script>
+    <script src="../js/nature.js"></script>
+</body>
+</html>

@@ -1,0 +1,502 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 1160 520">
+    <defs>
+        <clipPath id="sr-clip1">
+            <rect width="1160" height="520" />
+        </clipPath>
+        <clipPath id="sr-clip1-earth-limb">
+            <path d="M-80,560 C250,395 910,395 1240,560 L1240,600 L-80,600 Z" />
+        </clipPath>
+        <style>
+            @keyframes pulse-glow { 0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 2px rgba(245, 196, 110, 0.4)); } 50% { opacity: 1; filter: drop-shadow(0 0 10px rgba(245, 196, 110, 0.9)); } }
+            @keyframes twinkle { 0%, 100% { opacity: 0.25; } 50% { opacity: 1; } }
+            @keyframes dash { to { stroke-dashoffset: -40; } }
+            .twinkle { animation: twinkle 3.2s ease-in-out infinite; }
+            .twinkle:nth-of-type(2n) { animation-duration: 4.5s; animation-delay: 0.8s; }
+            .twinkle:nth-of-type(3n) { animation-duration: 2.8s; animation-delay: 1.5s; }
+            .pulse-glow { animation: pulse-glow 4s ease-in-out infinite; }
+            .dash { animation: dash 2.5s linear infinite; }
+            text { font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        </style>
+        <radialGradient id="sr-space-bg" cx="50%" cy="25%" r="75%">
+            <stop offset="0%" stop-color="#0a1d2e" />
+            <stop offset="35%" stop-color="#05101a" />
+            <stop offset="70%" stop-color="#02080e" />
+            <stop offset="100%" stop-color="#010408" />
+        </radialGradient>
+        <radialGradient id="sr-nebula-teal" cx="35%" cy="20%" r="55%">
+            <stop offset="0%" stop-color="#145258" stop-opacity="0.32" />
+            <stop offset="50%" stop-color="#0c3238" stop-opacity="0.15" />
+            <stop offset="100%" stop-color="#02080e" stop-opacity="0" />
+        </radialGradient>
+        <radialGradient id="sr-nebula-blue" cx="75%" cy="30%" r="50%">
+            <stop offset="0%" stop-color="#183e68" stop-opacity="0.28" />
+            <stop offset="60%" stop-color="#0d2440" stop-opacity="0.12" />
+            <stop offset="100%" stop-color="#02080e" stop-opacity="0" />
+        </radialGradient>
+        <linearGradient id="sr-earth-surface" x1="0%" y1="0%" x2="100%" y2="50%">
+            <stop offset="0%" stop-color="#0284c7" />
+            <stop offset="25%" stop-color="#0369a1" />
+            <stop offset="55%" stop-color="#0c4a6e" />
+            <stop offset="78%" stop-color="#082f49" />
+            <stop offset="100%" stop-color="#020617" />
+        </linearGradient>
+        <linearGradient id="sr-earth-terminator" x1="45%" y1="0%" x2="90%" y2="0%">
+            <stop offset="0%" stop-color="#020617" stop-opacity="0" />
+            <stop offset="40%" stop-color="#020617" stop-opacity="0.65" />
+            <stop offset="100%" stop-color="#020617" stop-opacity="0.98" />
+        </linearGradient>
+        <linearGradient id="sr-solar-wafer" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#1e3b6e" />
+            <stop offset="30%" stop-color="#13264b" />
+            <stop offset="70%" stop-color="#0b1730" />
+            <stop offset="100%" stop-color="#040c1c" />
+        </linearGradient>
+        <linearGradient id="sr-solar-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ffd57a" />
+            <stop offset="35%" stop-color="#dfa438" />
+            <stop offset="70%" stop-color="#b27a20" />
+            <stop offset="100%" stop-color="#6e460e" />
+        </linearGradient>
+        <linearGradient id="sr-radiator" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#ffffff" />
+            <stop offset="45%" stop-color="#d4e6e6" />
+            <stop offset="85%" stop-color="#9eb6b6" />
+            <stop offset="100%" stop-color="#789292" />
+        </linearGradient>
+        <linearGradient id="sr-hull-cyl" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#ffffff" />
+            <stop offset="35%" stop-color="#e2eff2" />
+            <stop offset="75%" stop-color="#a4c2c8" />
+            <stop offset="100%" stop-color="#5a7a82" />
+        </linearGradient>
+        <linearGradient id="sr-hull-shadow" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#688a94" />
+            <stop offset="100%" stop-color="#18262a" />
+        </linearGradient>
+        <filter id="sr-glow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+    </defs>
+    <g clip-path="url(#sr-clip1)">
+<rect width="1160" height="520" fill="url(#sr-space-bg)" />
+<ellipse cx="340" cy="120" rx="360" ry="100" fill="url(#sr-nebula-teal)" />
+<ellipse cx="880" cy="140" rx="320" ry="110" fill="url(#sr-nebula-blue)" />
+<ellipse cx="580" cy="70" rx="260" ry="60" fill="#6BA4D9" opacity="0.08" />
+<g fill="#ffffff" opacity="0.65">
+<circle cx="738.9" cy="16.3" r="0.7" />
+<circle cx="264.5" cy="194.1" r="0.9" />
+<circle cx="1027.1" cy="31.7" r="0.8" />
+<circle cx="44" cy="64.7" r="0.8" />
+<circle cx="40.3" cy="59.7" r="0.9" />
+<circle cx="631.2" cy="65.1" r="0.8" />
+<circle cx="932.8" cy="11.6" r="0.9" />
+<circle cx="805.9" cy="95.1" r="0.7" />
+<circle cx="1101.2" cy="94.1" r="0.6" />
+<circle cx="120.3" cy="221.9" r="0.8" />
+<circle cx="930.1" cy="192.4" r="0.8" />
+<circle cx="1119.4" cy="104.6" r="0.8" />
+<circle cx="955.5" cy="164.6" r="0.9" />
+<circle cx="668.2" cy="186.1" r="0.6" />
+<circle cx="269.8" cy="82.3" r="0.6" />
+<circle cx="275.4" cy="35.3" r="0.7" />
+<circle cx="734.7" cy="101.2" r="0.7" />
+<circle cx="248.8" cy="76.7" r="1" />
+<circle cx="748.8" cy="162.3" r="0.7" />
+<circle cx="841.2" cy="50.9" r="0.8" />
+<circle cx="1138.1" cy="170" r="0.8" />
+<circle cx="790.5" cy="220.7" r="0.9" />
+<circle cx="271.1" cy="18" r="0.7" />
+<circle cx="315.2" cy="62.7" r="1" />
+<circle cx="1009.1" cy="88.7" r="0.9" />
+<circle cx="461" cy="238.6" r="0.8" />
+<circle cx="312" cy="71.7" r="0.8" />
+<circle cx="309.5" cy="156.1" r="1" />
+<circle cx="465.3" cy="64.8" r="1" />
+<circle cx="590.9" cy="32.7" r="0.6" />
+<circle cx="135" cy="166.9" r="0.9" />
+<circle cx="491.3" cy="25.9" r="0.8" />
+<circle cx="1145.6" cy="142.3" r="1" />
+<circle cx="991.3" cy="12.9" r="0.9" />
+<circle cx="787.1" cy="144.2" r="0.7" />
+<circle cx="740.7" cy="37.9" r="0.8" />
+<circle cx="527.2" cy="248.5" r="1" />
+<circle cx="310.3" cy="135.1" r="0.7" />
+<circle cx="1050.4" cy="227.6" r="0.7" />
+<circle cx="738.4" cy="162.2" r="0.7" />
+<circle cx="879.3" cy="144.8" r="0.9" />
+<circle cx="614.6" cy="10.1" r="0.7" />
+<circle cx="32.2" cy="242.3" r="1" />
+<circle cx="958.1" cy="86.9" r="0.6" />
+<circle cx="1010.9" cy="246.7" r="0.6" />
+<circle cx="564" cy="27.3" r="0.9" />
+<circle cx="883.1" cy="42.1" r="0.8" />
+<circle cx="636.8" cy="76.3" r="0.9" />
+<circle cx="492.4" cy="62.9" r="0.8" />
+<circle cx="842.1" cy="60.3" r="0.7" />
+<circle cx="1144.5" cy="172.5" r="0.8" />
+<circle cx="600" cy="40.3" r="0.7" />
+<circle cx="395.4" cy="157.1" r="0.7" />
+<circle cx="261" cy="27.7" r="0.9" />
+<circle cx="271" cy="236.4" r="0.9" />
+<circle cx="90.8" cy="69.5" r="0.9" />
+<circle cx="254.2" cy="43.1" r="1" />
+<circle cx="661" cy="128.2" r="0.9" />
+<circle cx="930.5" cy="57.6" r="0.6" />
+<circle cx="501.4" cy="115.9" r="0.8" />
+<circle cx="841.1" cy="178.3" r="1" />
+<circle cx="122.2" cy="110.7" r="0.7" />
+<circle cx="992.3" cy="72.2" r="0.7" />
+<circle cx="521.4" cy="115.5" r="0.7" />
+<circle cx="294.8" cy="240.8" r="0.8" />
+<circle cx="991.9" cy="147.6" r="0.6" />
+<circle cx="1149.2" cy="219" r="1" />
+<circle cx="1066.1" cy="222.2" r="0.7" />
+<circle cx="563.6" cy="63.4" r="0.8" />
+<circle cx="76.8" cy="104.7" r="1" />
+<circle cx="312.3" cy="206" r="0.8" />
+<circle cx="492.2" cy="249.3" r="1" />
+<circle cx="643.6" cy="189.6" r="0.7" />
+<circle cx="348.2" cy="252.2" r="0.8" />
+<circle cx="628.1" cy="197" r="0.6" />
+<circle cx="676" cy="135.7" r="0.9" />
+<circle cx="189.5" cy="250.2" r="0.6" />
+<circle cx="221.8" cy="158.8" r="0.9" />
+<circle cx="278.1" cy="40" r="1" />
+<circle cx="290.7" cy="158.6" r="0.8" />
+<circle cx="487.9" cy="155.9" r="0.8" />
+<circle cx="1075.6" cy="61.1" r="0.9" />
+<circle cx="282.1" cy="108.9" r="0.9" />
+<circle cx="352" cy="89" r="0.9" />
+<circle cx="92.7" cy="124.6" r="1" />
+<circle cx="1145.5" cy="28.3" r="0.7" />
+<circle cx="312.3" cy="243.3" r="1" />
+<circle cx="1012.4" cy="102.4" r="0.7" />
+<circle cx="960.5" cy="185.9" r="0.8" />
+<circle cx="1135.4" cy="173.5" r="0.6" />
+<circle cx="941.5" cy="84.8" r="0.9" />
+<circle cx="1080.4" cy="43.6" r="0.6" />
+<circle cx="132" cy="148.3" r="0.7" />
+<circle cx="699.5" cy="189.4" r="0.7" />
+<circle cx="733" cy="76" r="0.8" />
+</g>
+<g>
+<circle class="twinkle" cx="45" cy="42" r="1.6" fill="#ffffff" />
+<circle class="twinkle" cx="115" cy="110" r="1.3" fill="#aed8f2" />
+<circle class="twinkle" cx="185" cy="55" r="1.8" fill="#ffe8b8" />
+<circle class="twinkle" cx="275" cy="92" r="1.2" fill="#ffffff" />
+<circle class="twinkle" cx="365" cy="38" r="1.6" fill="#b8e2f8" />
+<circle class="twinkle" cx="455" cy="78" r="1.4" fill="#ffffff" />
+<circle class="twinkle" cx="545" cy="32" r="2.0" fill="#ffe0a0" />
+<circle class="twinkle" cx="635" cy="82" r="1.3" fill="#ffffff" />
+<circle class="twinkle" cx="725" cy="36" r="1.7" fill="#a8d8f8" />
+<circle class="twinkle" cx="815" cy="88" r="1.2" fill="#ffffff" />
+<circle class="twinkle" cx="905" cy="45" r="1.9" fill="#ffffff" />
+<circle class="twinkle" cx="995" cy="72" r="1.4" fill="#ffdca0" />
+<circle class="twinkle" cx="1085" cy="40" r="1.8" fill="#ffffff" />
+<circle class="twinkle" cx="75" cy="175" r="1.3" fill="#aed8f2" />
+<circle class="twinkle" cx="235" cy="155" r="1.5" fill="#ffffff" />
+<circle class="twinkle" cx="945" cy="165" r="1.4" fill="#ffffff" />
+<circle class="twinkle" cx="1055" cy="185" r="1.3" fill="#ffe2b0" />
+<circle class="twinkle" cx="1125" cy="120" r="1.5" fill="#ffffff" />
+</g>
+<!-- Pure Vector Earth Limb from LEO Orbit -->
+    <g clip-path="url(#sr-clip1-earth-limb)">
+        <rect x="-80" y="380" width="1320" height="200" fill="url(#sr-earth-surface)" />
+        <!-- Coastal Waters and Reefs -->
+        <path d="M40,490 C120,440 220,430 310,460 C260,490 140,510 40,490 Z" fill="#38bdf8" opacity="0.35" />
+        <path d="M380,455 C460,425 560,430 640,470 C580,495 480,495 380,455 Z" fill="#38bdf8" opacity="0.35" />
+        <!-- Landmasses and Continents -->
+        <path d="M60,500 C130,450 200,445 290,470 C250,495 150,515 60,500 Z" fill="#166534" opacity="0.75" />
+        <path d="M90,495 C140,465 190,460 250,480 C220,495 150,505 90,495 Z" fill="#22c55e" opacity="0.5" />
+        <path d="M410,465 C480,440 550,442 620,478 C570,495 490,495 410,465 Z" fill="#15803d" opacity="0.7" />
+        <path d="M430,468 C490,450 530,452 580,480 C540,490 480,490 430,468 Z" fill="#4ade80" opacity="0.45" />
+        <path d="M660,475 C720,455 800,460 880,495 C820,510 740,505 660,475 Z" fill="#1e3a24" opacity="0.65" />
+        <!-- Weather Patterns and Swirling Cloud Bands -->
+        <path d="M-40,480 C120,420 280,425 460,460 C380,475 220,455 80,485 C20,495 -20,500 -40,480 Z" fill="#ffffff" opacity="0.6" />
+        <path d="M180,450 C320,410 490,420 680,465 C590,480 440,450 290,465 C230,472 190,465 180,450 Z" fill="#ffffff" opacity="0.55" />
+        <path d="M480,460 C620,430 780,445 960,490 C880,500 740,475 600,480 C530,482 490,475 480,460 Z" fill="#ffffff" opacity="0.45" />
+        <path d="M310,445 C350,432 390,435 420,450 C390,458 350,455 310,445 Z" fill="#f8fafc" opacity="0.75" />
+        <path d="M720,470 C770,458 830,462 890,485 C840,492 780,488 720,470 Z" fill="#f8fafc" opacity="0.4" />
+        <path d="M140,465 Q165,455 190,465 T215,480 Q190,485 165,475 Z" fill="#ffffff" opacity="0.7" />
+        <ellipse cx="178" cy="468" rx="8" ry="4" fill="#0369a1" opacity="0.6" />
+        <!-- Terminator Shadow Overlay -->
+        <rect x="-80" y="380" width="1320" height="200" fill="url(#sr-earth-terminator)" />
+    </g>
+<path d="M-80,560 C250,395 910,395 1240,560" fill="none" stroke="#003366" stroke-width="26" opacity="0.4" />
+<path d="M-80,560 C250,395 910,395 1240,560" fill="none" stroke="#1d8cf8" stroke-width="14" opacity="0.35" />
+<path d="M-80,560 C250,395 910,395 1240,560" fill="none" stroke="#62d6ff" stroke-width="7" opacity="0.6" />
+<path d="M-80,560 C250,395 910,395 1240,560" fill="none" stroke="#dcf8ff" stroke-width="2" opacity="0.9" />
+<g fill="#ffcf70" opacity="0.85" filter="url(#sr-glow)">
+<circle cx="720" cy="482" r="1.4" />
+<circle cx="755" cy="488" r="1.8" />
+<circle cx="790" cy="478" r="1.6" />
+<circle cx="840" cy="474" r="2.0" />
+<circle cx="875" cy="468" r="1.8" />
+<circle cx="910" cy="462" r="1.5" />
+<circle cx="945" cy="472" r="1.7" />
+<circle cx="990" cy="465" r="1.9" />
+<circle cx="1030" cy="472" r="1.5" />
+<circle cx="1070" cy="480" r="1.8" />
+<circle cx="815" cy="492" r="1.3" />
+<circle cx="860" cy="484" r="1.4" />
+</g>
+<path id="sr-docking-path" d="M-40,110 C320,65 840,65 1200,110" fill="none" stroke="#f5c46e" stroke-width="1.8" stroke-dasharray="6 8" opacity="0.65" class="dash" />
+<!-- Approaching Autonomous Spacecraft -->
+    <g>
+        <path d="M-14,-5 L6,-5 L14,0 L6,5 L-14,5 L-10,0Z" fill="#ffffff" stroke="#003366" stroke-width="1.2" />
+        <polygon points="-14,-5 -19,-10 -9,-5" fill="#c95a41" />
+        <polygon points="-14,5 -19,10 -9,5" fill="#c95a41" />
+        <rect x="-8" y="-3" width="8" height="6" rx="1.5" fill="#1a528f" />
+        <circle cx="9" cy="0" r="2.2" fill="#6BA4D9" />
+        <animateMotion dur="20s" repeatCount="indefinite" rotate="auto">
+            <mpath href="#sr-docking-path" />
+        </animateMotion>
+    </g>
+<!-- Integrated Truss System (ITS) -->
+<rect x="250" y="226" width="660" height="12" rx="2" fill="#2d424b" stroke="#6BA4D9" stroke-width="1.2" />
+<line x1="250" y1="232" x2="910" y2="232" stroke="#d5ede9" stroke-width="2" stroke-dasharray="8 6" opacity="0.85" />
+<path d="M260,226 L272,238 M272,226 L260,238 M284,226 L296,238 M296,226 L284,238 M308,226 L320,238 M320,226 L308,238 M332,226 L344,238 M344,226 L332,238 M356,226 L368,238 M368,226 L356,238 M380,226 L392,238 M392,226 L380,238 M404,226 L416,238 M416,226 L404,238 M428,226 L440,238 M440,226 L428,238 M452,226 L464,238 M464,226 L452,238 M476,226 L488,238 M488,226 L476,238 M500,226 L512,238 M512,226 L500,238 M524,226 L536,238 M536,226 L524,238 M548,226 L560,238 M560,226 L548,238 M572,226 L584,238 M584,226 L572,238 M596,226 L608,238 M608,226 L596,238 M620,226 L632,238 M632,226 L620,238 M644,226 L656,238 M656,226 L644,238 M668,226 L680,238 M680,226 L668,238 M692,226 L704,238 M704,226 L692,238 M716,226 L728,238 M728,226 L716,238 M740,226 L752,238 M752,226 L740,238 M764,226 L776,238 M776,226 L764,238 M788,226 L800,238 M800,226 L788,238 M812,226 L824,238 M824,226 L812,238 M836,226 L848,238 M848,226 L836,238 M860,226 L872,238 M872,226 L860,238 M884,226 L896,238 M896,226 L884,238" stroke="#466570" stroke-width="1.0" opacity="0.75" />
+<!-- Port Thermal Radiators -->
+    <g transform="translate(365, 172)">
+        <rect x="0" y="0" width="56" height="42" rx="2" fill="url(#sr-radiator)" stroke="#527882" stroke-width="1.0" />
+        <line x1="14" y1="0" x2="14" y2="42" stroke="#789ea8" stroke-width="0.8" />
+        <line x1="28" y1="0" x2="28" y2="42" stroke="#789ea8" stroke-width="0.8" />
+        <line x1="42" y1="0" x2="42" y2="42" stroke="#789ea8" stroke-width="0.8" />
+        <line x1="28" y1="42" x2="28" y2="54" stroke="#8faeb6" stroke-width="2.5" />
+    </g>
+<!-- Starboard Thermal Radiators -->
+    <g transform="translate(738, 250)">
+        <rect x="0" y="0" width="56" height="42" rx="2" fill="url(#sr-radiator)" stroke="#527882" stroke-width="1.0" />
+        <line x1="14" y1="0" x2="14" y2="42" stroke="#789ea8" stroke-width="0.8" />
+        <line x1="28" y1="0" x2="28" y2="42" stroke="#789ea8" stroke-width="0.8" />
+        <line x1="42" y1="0" x2="42" y2="42" stroke="#789ea8" stroke-width="0.8" />
+        <line x1="28" y1="-12" x2="28" y2="0" stroke="#8faeb6" stroke-width="2.5" />
+    </g>
+<!-- Port Solar Array Wings (Left) -->
+<g id="sr-port-solar-assembly">
+    <!-- Port Outrigger Extension Boom -->
+    <rect x="188" y="227" width="52" height="10" rx="2" fill="#2d424b" stroke="#6BA4D9" stroke-width="1.2" />
+    <line x1="188" y1="232" x2="240" y2="232" stroke="#d5ede9" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.85" />
+    <path d="M188,227 L200,237 M200,227 L188,237 M200,227 L212,237 M212,227 L200,237 M212,227 L224,237 M224,227 L212,237 M224,227 L236,237 M236,227 L224,237" stroke="#466570" stroke-width="1.0" opacity="0.75" />
+    <!-- Structural Support Struts -->
+    <line x1="234" y1="227" x2="194" y2="221" stroke="#8faeb6" stroke-width="1.6" stroke-linecap="round" />
+    <line x1="234" y1="237" x2="194" y2="243" stroke="#8faeb6" stroke-width="1.6" stroke-linecap="round" />
+    <!-- Solar Blanket Deployment Canisters and Spreaders -->
+    <rect x="148" y="218" width="84" height="4" rx="1" fill="#1b2a30" stroke="#6BA4D9" stroke-width="1" />
+    <rect x="148" y="242" width="84" height="4" rx="1" fill="#1b2a30" stroke="#6BA4D9" stroke-width="1" />
+    <line x1="149" y1="136" x2="231" y2="136" stroke="#8faeb6" stroke-width="1.6" stroke-linecap="round" />
+    <line x1="149" y1="328" x2="231" y2="328" stroke="#8faeb6" stroke-width="1.6" stroke-linecap="round" />
+    <!-- Continuous Central Mast -->
+    <line x1="190" y1="218" x2="190" y2="246" stroke="#ffffff" stroke-width="2" />
+    <!-- Beta Gimbal Assembly (BGA) Hub -->
+    <rect x="182" y="224" width="16" height="16" rx="2.5" fill="url(#sr-hull-cyl)" stroke="#003366" stroke-width="1.2" />
+    <circle cx="190" cy="232" r="4.5" fill="#f5c46e" stroke="#003366" stroke-width="0.8" />
+    <circle cx="190" cy="232" r="2" fill="#42d0f5" />
+    <!-- Solar Array Wings (Photovoltaic Blankets) -->
+    <g transform="translate(150, 136)" class="pulse-glow">
+    <rect x="0" y="0" width="80" height="84" rx="2" fill="url(#sr-solar-wafer)" stroke="#8c6218" stroke-width="1.4" />
+    <rect x="0" y="0" width="80" height="84" rx="2" fill="url(#sr-solar-gold)" opacity="0.38" />
+    <line x1="20" y1="0" x2="20" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
+    <line x1="40" y1="0" x2="40" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
+    <line x1="60" y1="0" x2="60" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
+    <line x1="0" y1="8" x2="80" y2="8" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="20" x2="80" y2="20" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="32" x2="80" y2="32" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="44" x2="80" y2="44" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="56" x2="80" y2="56" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="68" x2="80" y2="68" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="80" x2="80" y2="80" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="40.0" y1="0" x2="40.0" y2="84" stroke="#ffffff" stroke-width="1.2" opacity="0.8" />
+    </g>
+    <g transform="translate(150, 244)" class="pulse-glow">
+    <rect x="0" y="0" width="80" height="84" rx="2" fill="url(#sr-solar-wafer)" stroke="#8c6218" stroke-width="1.4" />
+    <rect x="0" y="0" width="80" height="84" rx="2" fill="url(#sr-solar-gold)" opacity="0.38" />
+    <line x1="20" y1="0" x2="20" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
+    <line x1="40" y1="0" x2="40" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
+    <line x1="60" y1="0" x2="60" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
+    <line x1="0" y1="8" x2="80" y2="8" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="20" x2="80" y2="20" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="32" x2="80" y2="32" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="44" x2="80" y2="44" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="56" x2="80" y2="56" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="68" x2="80" y2="68" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="80" x2="80" y2="80" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="40.0" y1="0" x2="40.0" y2="84" stroke="#ffffff" stroke-width="1.2" opacity="0.8" />
+    </g>
+    <!-- Solar Alpha Rotary Joint (SARJ) -->
+    <rect x="228" y="228" width="24" height="8" rx="1" fill="#cbe0dc" stroke="#486872" stroke-width="1" />
+    <circle cx="240" cy="232" r="5" fill="#f5c46e" />
+    <circle cx="240" cy="232" r="2.2" fill="#1a3b68" />
+</g>
+<!-- Starboard Solar Array Wings (Right) -->
+<g id="sr-starboard-solar-assembly">
+    <!-- Starboard Outrigger Extension Boom -->
+    <rect x="920" y="227" width="52" height="10" rx="2" fill="#2d424b" stroke="#6BA4D9" stroke-width="1.2" />
+    <line x1="920" y1="232" x2="972" y2="232" stroke="#d5ede9" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.85" />
+    <path d="M924,227 L936,237 M936,227 L924,237 M936,227 L948,237 M948,227 L936,237 M948,227 L960,237 M960,227 L948,237 M960,227 L972,237 M972,227 L960,237" stroke="#466570" stroke-width="1.0" opacity="0.75" />
+    <!-- Structural Support Struts -->
+    <line x1="926" y1="227" x2="966" y2="221" stroke="#8faeb6" stroke-width="1.6" stroke-linecap="round" />
+    <line x1="926" y1="237" x2="966" y2="243" stroke="#8faeb6" stroke-width="1.6" stroke-linecap="round" />
+    <!-- Solar Blanket Deployment Canisters and Spreaders -->
+    <rect x="928" y="218" width="84" height="4" rx="1" fill="#1b2a30" stroke="#6BA4D9" stroke-width="1" />
+    <rect x="928" y="242" width="84" height="4" rx="1" fill="#1b2a30" stroke="#6BA4D9" stroke-width="1" />
+    <line x1="929" y1="136" x2="1011" y2="136" stroke="#8faeb6" stroke-width="1.6" stroke-linecap="round" />
+    <line x1="929" y1="328" x2="1011" y2="328" stroke="#8faeb6" stroke-width="1.6" stroke-linecap="round" />
+    <!-- Continuous Central Mast -->
+    <line x1="970" y1="218" x2="970" y2="246" stroke="#ffffff" stroke-width="2" />
+    <!-- Beta Gimbal Assembly (BGA) Hub -->
+    <rect x="962" y="224" width="16" height="16" rx="2.5" fill="url(#sr-hull-cyl)" stroke="#003366" stroke-width="1.2" />
+    <circle cx="970" cy="232" r="4.5" fill="#f5c46e" stroke="#003366" stroke-width="0.8" />
+    <circle cx="970" cy="232" r="2" fill="#42d0f5" />
+    <!-- Solar Array Wings (Photovoltaic Blankets) -->
+    <g transform="translate(930, 136)" class="pulse-glow">
+    <rect x="0" y="0" width="80" height="84" rx="2" fill="url(#sr-solar-wafer)" stroke="#8c6218" stroke-width="1.4" />
+    <rect x="0" y="0" width="80" height="84" rx="2" fill="url(#sr-solar-gold)" opacity="0.38" />
+    <line x1="20" y1="0" x2="20" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
+    <line x1="40" y1="0" x2="40" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
+    <line x1="60" y1="0" x2="60" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
+    <line x1="0" y1="8" x2="80" y2="8" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="20" x2="80" y2="20" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="32" x2="80" y2="32" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="44" x2="80" y2="44" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="56" x2="80" y2="56" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="68" x2="80" y2="68" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="80" x2="80" y2="80" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="40.0" y1="0" x2="40.0" y2="84" stroke="#ffffff" stroke-width="1.2" opacity="0.8" />
+    </g>
+    <g transform="translate(930, 244)" class="pulse-glow">
+    <rect x="0" y="0" width="80" height="84" rx="2" fill="url(#sr-solar-wafer)" stroke="#8c6218" stroke-width="1.4" />
+    <rect x="0" y="0" width="80" height="84" rx="2" fill="url(#sr-solar-gold)" opacity="0.38" />
+    <line x1="20" y1="0" x2="20" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
+    <line x1="40" y1="0" x2="40" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
+    <line x1="60" y1="0" x2="60" y2="84" stroke="#ffcc66" stroke-width="0.7" opacity="0.65" />
+    <line x1="0" y1="8" x2="80" y2="8" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="20" x2="80" y2="20" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="32" x2="80" y2="32" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="44" x2="80" y2="44" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="56" x2="80" y2="56" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="68" x2="80" y2="68" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="0" y1="80" x2="80" y2="80" stroke="#ffcc66" stroke-width="0.6" opacity="0.45" />
+    <line x1="40.0" y1="0" x2="40.0" y2="84" stroke="#ffffff" stroke-width="1.2" opacity="0.8" />
+    </g>
+    <!-- Solar Alpha Rotary Joint (SARJ) -->
+    <rect x="908" y="228" width="24" height="8" rx="1" fill="#cbe0dc" stroke="#486872" stroke-width="1" />
+    <circle cx="920" cy="232" r="5" fill="#f5c46e" />
+    <circle cx="920" cy="232" r="2.2" fill="#1a3b68" />
+</g>
+<!-- Central Artificial-Gravity Rotating Torus Ring -->
+    <g transform="translate(580, 232)">
+        <g>
+            <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-360 0 0" dur="32s" repeatCount="indefinite" />
+            <circle cx="0" cy="0" r="92" fill="none" stroke="#16383c" stroke-width="22" opacity="0.5" />
+            <circle cx="0" cy="0" r="92" fill="none" stroke="#dff0ec" stroke-width="16" />
+            <circle cx="0" cy="0" r="100.5" fill="none" stroke="#f5c46e" stroke-width="1.5" />
+            <circle cx="0" cy="0" r="83.5" fill="none" stroke="#6BA4D9" stroke-width="1.5" />
+            <circle cx="0" cy="0" r="92" fill="none" stroke="#003366" stroke-width="16" stroke-dasharray="2 18" opacity="0.6" />
+            <circle cx="0" cy="0" r="92" fill="none" stroke="#42d0f5" stroke-width="3" stroke-dasharray="10 10" opacity="0.85" />
+            <line x1="0" y1="-92" x2="0" y2="92" stroke="#b4d6d0" stroke-width="3.5" />
+            <line x1="-92" y1="0" x2="92" y2="0" stroke="#b4d6d0" stroke-width="3.5" />
+            <line x1="-65" y1="-65" x2="65" y2="65" stroke="#90b8b2" stroke-width="2.5" />
+            <line x1="-65" y1="65" x2="65" y2="-65" stroke="#90b8b2" stroke-width="2.5" />
+            <rect x="-5" y="-97" width="10" height="10" rx="2" fill="#ffffff" stroke="#003366" stroke-width="1.5" />
+            <rect x="-5" y="87" width="10" height="10" rx="2" fill="#ffffff" stroke="#003366" stroke-width="1.5" />
+            <rect x="-97" y="-5" width="10" height="10" rx="2" fill="#ffffff" stroke="#003366" stroke-width="1.5" />
+            <rect x="87" y="-5" width="10" height="10" rx="2" fill="#ffffff" stroke="#003366" stroke-width="1.5" />
+            <circle cx="0" cy="-92" r="2.5" fill="#2ecc71" />
+            <circle cx="0" cy="92" r="2.5" fill="#2ecc71" />
+        </g>
+        <circle cx="0" cy="0" r="26" fill="url(#sr-hull-cyl)" stroke="#003366" stroke-width="2" />
+        <circle cx="0" cy="0" r="14" fill="#04121a" stroke="#f5c46e" stroke-width="1.5" />
+        <circle cx="0" cy="0" r="6" fill="#42d0f5" />
+    </g>
+<!-- Primary Science and Habitation Spine -->
+    <g transform="translate(415, 216)">
+        <rect x="0" y="0" width="100" height="32" rx="6" fill="url(#sr-hull-cyl)" stroke="#003366" stroke-width="1.6" />
+        <line x1="25" y1="0" x2="25" y2="32" stroke="#003366" stroke-width="1.2" />
+        <line x1="50" y1="0" x2="50" y2="32" stroke="#003366" stroke-width="1.2" />
+        <line x1="75" y1="0" x2="75" y2="32" stroke="#003366" stroke-width="1.2" />
+        <rect x="12" y="8" width="76" height="4" fill="#ffd54f" opacity="0.65" />
+        <rect x="12" y="20" width="76" height="4" fill="#ffd54f" opacity="0.65" />
+        <!-- Nadir Multi-pane Sapphire Glass Observation Cupola -->
+        <path d="M25,32 L35,46 L65,46 L75,32Z" fill="#1565c0" stroke="#003366" stroke-width="1.4" />
+        <polygon points="38,44 62,44 58,34 42,34" fill="#64b5f6" opacity="0.9" />
+        <circle cx="37" cy="16" r="3.2" fill="#42d0f5" stroke="#003366" stroke-width="0.8" />
+        <circle cx="63" cy="16" r="3.2" fill="#42d0f5" stroke="#003366" stroke-width="0.8" />
+    </g>
+<!-- Starboard Habitation and Engineering Stack -->
+    <g transform="translate(640, 216)">
+        <rect x="0" y="0" width="100" height="32" rx="6" fill="url(#sr-hull-cyl)" stroke="#003366" stroke-width="1.6" />
+        <line x1="25" y1="0" x2="25" y2="32" stroke="#003366" stroke-width="1.2" />
+        <line x1="50" y1="0" x2="50" y2="32" stroke="#003366" stroke-width="1.2" />
+        <line x1="75" y1="0" x2="75" y2="32" stroke="#003366" stroke-width="1.2" />
+        <line x1="8" y1="5" x2="92" y2="5" stroke="#f5c46e" stroke-width="1.0" />
+        <line x1="8" y1="27" x2="92" y2="27" stroke="#f5c46e" stroke-width="1.0" />
+        <rect x="70" y="32" width="26" height="12" fill="#607d8b" stroke="#003366" stroke-width="1.0" />
+        <rect x="74" y="34" width="7" height="8" fill="#ffd54f" />
+        <rect x="85" y="34" width="7" height="8" fill="#81d4fa" />
+    </g>
+<!-- Articulated Robotic Manipulator Arm (Canadarm3) -->
+    <g transform="translate(485, 216)">
+        <rect x="-8" y="-7" width="16" height="7" rx="1.5" fill="#78909c" stroke="#37474f" stroke-width="0.9" />
+        <path d="M0,-7 L-18,-28 L-42,-18 L-65,-36" fill="none" stroke="#cfd8dc" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M0,-7 L-18,-28 L-42,-18 L-65,-36" fill="none" stroke="#263238" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+        <circle cx="0" cy="-7" r="3.5" fill="#f5c46e" stroke="#37474f" stroke-width="0.8" />
+        <circle cx="-18" cy="-28" r="3.2" fill="#f5c46e" stroke="#37474f" stroke-width="0.8" />
+        <circle cx="-42" cy="-18" r="3.2" fill="#f5c46e" stroke="#37474f" stroke-width="0.8" />
+        <circle cx="-65" cy="-36" r="3.8" fill="#ffffff" stroke="#c95a41" stroke-width="1.2" />
+        <line x1="-65" y1="-36" x2="-72" y2="-42" stroke="#42d0f5" stroke-width="1.2" />
+    </g>
+<!-- Docked Crew Transport Spaceplane -->
+    <g transform="translate(378, 232)">
+        <rect x="30" y="-7" width="12" height="14" rx="2" fill="#90a4ae" stroke="#37474f" stroke-width="1.0" />
+        <path d="M-4,-12 L30,-5 L30,5 L-4,12 L-10,0Z" fill="#ffffff" stroke="#003366" stroke-width="1.4" />
+        <path d="M-4,0 L30,2 L30,5 L-4,12 L-10,0Z" fill="#212121" opacity="0.65" />
+        <polygon points="10,-5 30,-22 30,-5" fill="#c95a41" />
+        <polygon points="10,5 30,22 30,5" fill="#c95a41" />
+        <ellipse cx="6" cy="0" rx="4.5" ry="2.2" fill="#42d0f5" />
+    </g>
+<!-- Docked Autonomous Cargo Capsule -->
+    <g transform="translate(690, 248)">
+        <rect x="-6" y="0" width="12" height="8" fill="#90a4ae" stroke="#37474f" stroke-width="0.9" />
+        <path d="M-12,8 L12,8 L16,28 L-16,28Z" fill="#ffffff" stroke="#003366" stroke-width="1.3" />
+        <line x1="-12" y1="18" x2="12" y2="18" stroke="#003366" stroke-width="1.0" />
+        <rect x="-32" y="16" width="16" height="10" fill="#1a3b68" stroke="#ffc107" stroke-width="0.8" />
+        <rect x="16" y="16" width="16" height="10" fill="#1a3b68" stroke="#ffc107" stroke-width="0.8" />
+    </g>
+<!-- High-Gain Deep Space Telemetry Antenna -->
+    <g transform="translate(580, 105)">
+        <line x1="0" y1="40" x2="0" y2="14" stroke="#b0bec5" stroke-width="2.5" />
+        <path d="M-22,8 C-12,-8 12,-8 22,8" fill="none" stroke="#f5c46e" stroke-width="3.2" stroke-linecap="round" />
+        <line x1="0" y1="14" x2="0" y2="-4" stroke="#ffffff" stroke-width="1.8" />
+        <circle cx="0" cy="-4" r="2.5" fill="#f5c46e" />
+        <circle cx="0" cy="-6" r="8" fill="none" stroke="#6BA4D9" stroke-width="1.8">
+            <animate attributeName="r" values="6;26" dur="2.4s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.9;0" dur="2.4s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="0" cy="-6" r="8" fill="none" stroke="#6BA4D9" stroke-width="1.8">
+            <animate attributeName="r" values="6;26" dur="2.4s" begin="1.2s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.9;0" dur="2.4s" begin="1.2s" repeatCount="indefinite" />
+        </circle>
+    </g>
+<!-- TOP HUD TELEMETRY BAR -->
+    <g font-family="Manrope, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">
+        <rect x="330" y="18" width="500" height="32" rx="16" fill="#04121a" stroke="#6BA4D9" stroke-width="1.2" opacity="0.95" />
+        <text x="355" y="38" fill="#6BA4D9">ALT: 420.4 KM</text>
+        <text x="520" y="38" fill="#f5c46e">VEL: 7.66 KM/S</text>
+        <text x="680" y="38" fill="#2ecc71">CREW: 12 NOMINAL</text>
+    </g>
+<!-- Bottom-left corner telemetry badge -->
+    <g font-family="Manrope, sans-serif" font-size="10" font-weight="600" letter-spacing="1">
+        <rect x="30" y="445" width="245" height="50" rx="8" fill="#04121a" stroke="rgba(107, 164, 217, 0.45)" stroke-width="1" opacity="0.95" />
+        <text x="44" y="468" fill="#f5c46e">WSA ORBITAL LOGISTICS</text>
+        <text x="44" y="484" fill="#bedbd6">SOLAR OUTPUT: 140 KW</text>
+    </g>
+    <!-- Bottom-right corner telemetry badge -->
+    <g font-family="Manrope, sans-serif" font-size="10" font-weight="600" letter-spacing="1" text-anchor="end">
+        <rect x="885" y="445" width="245" height="50" rx="8" fill="#04121a" stroke="rgba(107, 164, 217, 0.45)" stroke-width="1" opacity="0.95" />
+        <text x="1116" y="468" fill="#6BA4D9">DOCKING PORTS: 6 ACTIVE</text>
+        <text x="1116" y="484" fill="#bedbd6">RENDEZVOUS APPROACH READY</text>
+    </g>
+    </g>
+</svg>

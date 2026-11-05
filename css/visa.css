@@ -1,0 +1,585 @@
+/* Visa and Entry Requirements Stylesheet */
+/* Category and Spec Cards */
+.visa-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: var(--radius-pill);
+    background: var(--accent-subtle);
+    border: 1px solid rgba(194, 154, 87, 0.3);
+    color: var(--accent-dark);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 1rem;
+}
+
+.visa-badge.is-green {
+    background: var(--primary-light-alpha-12);
+    border-color: var(--primary-light-alpha-30);
+    color: var(--waikiki);
+}
+
+.visa-badge.is-blue {
+    background: var(--primary-light-alpha-12);
+    border-color: var(--primary-light-alpha-30);
+    color: var(--primary-light);
+}
+
+.visa-badge.is-red {
+    background: rgba(192, 57, 43, 0.12);
+    border-color: rgba(192, 57, 43, 0.3);
+    color: var(--chart-6);
+}
+
+.visa-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.visa-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg, 16px);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.visa-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    border-color: var(--accent);
+}
+
+.visa-card-header {
+    margin-bottom: 1rem;
+}
+
+.visa-card-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--heading);
+    margin: 0.35rem 0 0.5rem;
+    line-height: 1.3;
+}
+
+.visa-card-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+}
+
+.visa-specs {
+    list-style: none;
+    border-top: 1px solid var(--line);
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.visa-specs li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.visa-specs li strong {
+    font-weight: 600;
+    text-align: right;
+}
+
+/* Interactive Eligibility Checker */
+.checker-wrapper {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-xl, 20px);
+    padding: 2.25rem;
+    margin-top: 2rem;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.04);
+}
+
+.checker-grid {
+    display: grid;
+    grid-template-columns: 1.08fr 1fr;
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.checker-controls-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.tier-selector-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+}
+
+.tier-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+    text-align: left;
+    padding: 1rem;
+    border-radius: var(--radius-md, 12px);
+    border: 1.5px solid var(--line);
+    background: var(--surface);
+    color: var(--text);
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tier-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.tier-card.is-active {
+    border-color: var(--primary);
+    background: rgba(26, 82, 143, 0.06);
+    box-shadow: 0 0 0 2px var(--primary-light-alpha-14);
+}
+
+.tier-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 0.4rem;
+    margin-bottom: 0.1rem;
+}
+
+.tier-badge {
+    display: inline-block;
+    padding: 0.16rem 0.5rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.tier-badge.badge-green {
+    background: rgba(29, 114, 107, 0.14);
+    color: #16655f;
+}
+
+.tier-badge.badge-teal {
+    background: var(--primary-light-alpha-14);
+    color: var(--primary-light);
+}
+
+.tier-badge.badge-amber {
+    background: rgba(194, 138, 41, 0.16);
+    color: #8c6015;
+}
+
+.tier-badge.badge-coral {
+    background: rgba(185, 56, 44, 0.14);
+    color: #9e2a1f;
+}
+
+.tier-gate {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.tier-card-title {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--heading);
+    line-height: 1.3;
+}
+
+.tier-card-sub {
+    font-size: 0.76rem;
+    line-height: 1.38;
+    color: var(--text-muted);
+}
+
+.checker-result-panel {
+    background: var(--surface-2);
+    border: 1.5px solid var(--line);
+    border-radius: var(--radius-lg, 16px);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.result-status-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.1rem;
+}
+
+.result-region-pill {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    padding: 0.32rem 0.75rem;
+    border-radius: var(--radius-pill);
+}
+
+.result-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+
+.result-tag.tag-free {
+    background: rgba(29, 114, 107, 0.15);
+    color: #16655f;
+    border: 1px solid rgba(29, 114, 107, 0.3);
+}
+
+.result-tag.tag-fast {
+    background: var(--primary-light-alpha-14);
+    color: var(--primary-light);
+    border: 1px solid var(--primary-light-alpha-30);
+}
+
+.result-tag.tag-evisa {
+    background: rgba(194, 138, 41, 0.15);
+    color: #8c6015;
+    border: 1px solid rgba(194, 138, 41, 0.3);
+}
+
+.result-tag.tag-visa {
+    background: rgba(185, 56, 44, 0.14);
+    color: #9e2a1f;
+    border: 1px solid rgba(185, 56, 44, 0.3);
+}
+
+.result-title {
+    font-size: 1.32rem;
+    font-weight: 700;
+    color: var(--heading);
+    margin: 0 0 0.5rem;
+}
+
+.result-lead {
+    font-size: 0.93rem;
+    line-height: 1.58;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+}
+
+.result-req-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.65rem;
+    margin-bottom: 1.35rem;
+}
+
+.result-req-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md, 12px);
+    padding: 0.8rem 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.22rem;
+}
+
+.result-req-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+}
+
+.result-req-value {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--heading);
+    line-height: 1.25;
+}
+
+.result-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    border-top: 1px solid var(--line);
+    padding-top: 1.15rem;
+}
+
+.result-stat-pill {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* 3. Four-Step Arrival Flow */
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    position: relative;
+}
+
+.process-step-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg, 16px);
+    padding: 2rem 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.process-step-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+}
+
+.step-num {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--accent-subtle);
+    line-height: 1;
+    margin-bottom: 1rem;
+    font-family: var(--font-display);
+    letter-spacing: -0.04em;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.step-badge {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.25rem 0.6rem;
+    border-radius: var(--radius-pill);
+    background: var(--surface-2);
+    color: var(--text-muted);
+    font-family: var(--font-sans);
+}
+
+.process-step-card h3,
+.customs-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.process-step-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.process-step-card p,
+.customs-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Customs and Allowances Grid */
+.customs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.customs-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg, 16px);
+    padding: 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.customs-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--primary-subtle);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.customs-icon img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.customs-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.customs-list li {
+    font-size: 0.88rem;
+    color: var(--text);
+    padding-left: 1.25rem;
+    position: relative;
+    line-height: 1.5;
+}
+
+.customs-list li::before {
+    content: "•";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+    line-height: 1;
+    top: -1px;
+}
+
+/* Dark Mode */
+.body-dark .visa-badge {
+    background: rgba(223, 186, 118, 0.12);
+    border-color: rgba(223, 186, 118, 0.25);
+    color: var(--accent);
+}
+
+.body-dark .visa-badge.is-green {
+    background: rgba(58, 167, 156, 0.16);
+    border-color: rgba(58, 167, 156, 0.35);
+    color: var(--waikiki-hover);
+}
+
+.body-dark .visa-badge.is-blue {
+    background: var(--tertiary-alpha-16);
+    border-color: rgba(107, 164, 217, 0.35);
+    color: var(--tertiary);
+}
+
+.body-dark .visa-badge.is-red {
+    background: rgba(235, 94, 85, 0.16);
+    border-color: rgba(235, 94, 85, 0.35);
+    color: #eb5e55;
+}
+
+.body-dark .visa-card:hover {
+    box-shadow: 0 12px 32px var(--black-alpha-35);
+}
+
+.body-dark .tier-card.is-active {
+    border-color: var(--accent);
+    background: rgba(223, 186, 118, 0.09);
+    box-shadow: 0 0 0 2px rgba(223, 186, 118, 0.18);
+}
+
+.body-dark .tier-badge.badge-green {
+    background: rgba(58, 167, 156, 0.22);
+    color: #5ee2d4;
+}
+
+.body-dark .tier-badge.badge-teal {
+    background: rgba(74, 158, 245, 0.2);
+    color: #82c0ff;
+}
+
+.body-dark .tier-badge.badge-amber {
+    background: rgba(223, 186, 118, 0.22);
+    color: #f7d28b;
+}
+
+.body-dark .tier-badge.badge-coral {
+    background: rgba(235, 94, 80, 0.22);
+    color: #ff9d93;
+}
+
+.body-dark .checker-result-panel {
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.body-dark .result-tag.tag-free {
+    background: rgba(58, 167, 156, 0.2);
+    color: #4ed1c3;
+    border-color: rgba(58, 167, 156, 0.4);
+}
+
+.body-dark .result-tag.tag-fast {
+    background: rgba(74, 158, 245, 0.2);
+    color: #82c0ff;
+    border-color: rgba(74, 158, 245, 0.4);
+}
+
+.body-dark .result-tag.tag-evisa {
+    background: rgba(223, 186, 118, 0.2);
+    color: #f7d28b;
+    border-color: rgba(223, 186, 118, 0.4);
+}
+
+.body-dark .result-tag.tag-visa {
+    background: rgba(235, 94, 80, 0.2);
+    color: #ff9d93;
+    border-color: rgba(235, 94, 80, 0.4);
+}
+
+.body-dark .customs-icon {
+    background: var(--tertiary-subtle);
+    color: var(--tertiary-light);
+}
+
+.body-dark .customs-icon img {
+    filter: brightness(2.1) saturate(0.7);
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+    .checker-wrapper {
+        padding: 1.25rem;
+    }
+
+    .checker-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .tier-selector-grid,
+    .result-req-grid {
+        grid-template-columns: 1fr;
+    }
+}

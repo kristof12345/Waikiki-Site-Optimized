@@ -1,0 +1,112 @@
+/* Space Research Stylesheet */
+.spec-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: var(--radius-pill);
+    background: var(--primary-subtle);
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 1rem;
+}
+
+.spec-list {
+    list-style: none;
+    margin-top: 1.25rem;
+    border-top: 1px solid var(--line);
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.spec-list li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.92rem;
+    color: var(--text);
+}
+
+.spec-list li strong {
+    font-weight: 600;
+    text-align: end;
+}
+
+/* Space Fleet Section */
+.fleet-group-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+    color: var(--heading);
+    margin: 3.5rem auto 1rem;
+    text-align: center;
+    position: relative;
+    max-width: var(--width-full);
+}
+
+.fleet-group-title:first-of-type {
+    margin-top: 1rem;
+}
+
+.fleet-group-title::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0.75rem auto 0;
+    border-radius: var(--radius-pill);
+}
+
+.fleet-group-lead {
+    text-align: center;
+    max-width: var(--width-xs);
+    margin: 0 auto 2rem;
+    color: var(--text-muted);
+    font-size: 1.02rem;
+    line-height: 1.6;
+}
+
+/* Rocket and Shuttle Card Watermark Schematics */
+#fleet .card>* {
+    position: relative;
+    z-index: 1;
+}
+
+#fleet .card .aircraft-watermark {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: clamp(250px, 30vw, 350px);
+    height: clamp(250px, 30vw, 350px);
+    opacity: 0.13;
+    transform: rotate(-18deg);
+    pointer-events: none;
+    z-index: 0;
+    transition: transform 0.8s var(--ease-out), opacity 0.8s;
+}
+
+#fleet .card:hover .aircraft-watermark {
+    transform: rotate(-10deg) scale(1.1);
+    opacity: 0.24;
+}
+
+/* Dark Mode */
+.body-dark .spec-badge {
+    background: var(--tertiary-subtle);
+    border-color: var(--tertiary-border);
+    color: var(--tertiary);
+}
+
+.body-dark #fleet .card .aircraft-watermark {
+    filter: brightness(0) invert(1);
+    opacity: 0.16;
+}
+
+.body-dark #fleet .card:hover .aircraft-watermark {
+    opacity: 0.28;
+}

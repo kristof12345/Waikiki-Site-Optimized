@@ -23,8 +23,8 @@ Waikiki története gazdag régészeti és politikai rétegekből épül fel. Az
 - Aaron Shore kabinetfőnökként a közigazgatás professzionalizálását és a stratégiai tervezés bevezetését irányítja.
 - Létrejön a Waikiki Fejlesztési Ügynökség, amely az állami beruházások és külgazdasági programok összehangolásáért felel.
 
-## 2003 - A Pacifikus háború és a nemzetközi pozicionálás
-- Kitör a Pacifikus háború, amelybe Waikiki a békefenntartás és a regionális stabilitás érdekében lép be.
+## 2003 - A Csendes-óceáni háború és a nemzetközi pozicionálás
+- Kitör a Csendes-óceáni háború, amelybe Waikiki a békefenntartás és a regionális stabilitás érdekében lép be.
 - Létrejön az Atomhatalmak Szövetsége, amelynek Waikiki alapító tagja, biztosítva stratégiai befolyását a térségben.
 - Népszavazás dönt az ingyenes felsőoktatás bevezetéséről, amellyel Waikiki egyértelműen a tudásalapú gazdaság mellett köteleződik el.
 
@@ -70,7 +70,7 @@ Waikiki története gazdag régészeti és politikai rétegekből épül fel. Az
 ## 2018-2020 - Globális válságkezelés és társadalmi ellenállóképesség
 - 2018-ban megalakul a Világkormány, amelyben Waikiki alapító tagként vesz részt.
 - Raimondo és Selena moszkvai diplomáciai küldetése megerősíti az ország többpólusú külpolitikáját.
-- 2020-ban a COVID-19 járvány idején Waikiki a Digitális Védőháló Programmal gyors és hatékony választ ad a válságra, amelyet a nemzetközi közösség példaértékűnek tekint.
+- 2020-ban a Covid-19 járvány idején Waikiki a Digitális Védőháló Programmal gyors és hatékony választ ad a válságra, amelyet a nemzetközi közösség példaértékűnek tekint.
 - George Bush újraválasztása biztosítja a gazdasági és szociális reformok folytonosságát.
 
 ## 2021-2023 - Nemzetközi megbecsülés és stratégiai partnerségek

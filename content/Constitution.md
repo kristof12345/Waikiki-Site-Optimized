@@ -1,6 +1,6 @@
 # Alkotmány
 
-**Mi a Waikiki-i emberek szabad akaratunkból úgy döntöttünk, hogy saját országot alapítunk. Büszkék vagyunk arra, hogy az ókori Római Birodalom méltó utódaként megteremtjük a jólét és bőség birodalmát, ahol az emberek szabadon vállalkozhatnak és valósíthatják meg álmaikat.**
+**Mi, Waikiki polgárai szabad akaratunkból úgy döntöttünk, hogy saját országot alapítunk. Büszkék vagyunk arra, hogy az ókori Római Birodalom méltó utódaként megteremtjük a jólét és bőség birodalmát, ahol az emberek szabadon vállalkozhatnak és valósíthatják meg álmaikat.**
 
 ## Alapvetések
 Az országunk neve Waikiki.
@@ -186,7 +186,7 @@ A veszélyhelyzetre vonatkozó szabályozás hadiállapot esetén is alkalmazhat
 A békekötéshez a Parlamenti szavazatok kétharmada vagy országos népszavazás szükséges. Amennyiben ennek feltételei nem állnak fent, a Diktátor is köthet békét, melyet amint lehetősége nyílik rá, a Parlament elé terjeszt.
  
 ## Állampolgárság
-Waikiki-i szülők gyermeke születésétől fogva állampolgár.
+Waikiki állampolgárainak gyermeke születésétől fogva állampolgár.
 Állampolgári jogot kap, aki Waikiki területén születik, és legalább az egyik szülője állampolgár.
 Állampolgári jogokért bárki folyamodhat, az eljárás rendjét és követelményeit kiemelt törvény rögzíti.
 Waikiki védelmezi állampolgárait a külső és belső fenyegetésektől egyaránt. A törvények betartásának érdekében az állam erőszakot alkalmazhat.
