@@ -1,44 +1,9 @@
 /* Royal Family Tree Stylesheet */
 
-/* Tree Container and Controls */
-.tree-hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.35rem 1rem;
-    background: rgba(194, 138, 41, 0.15);
-    border: 1px solid var(--accent);
-    border-radius: 999px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 1.25rem;
-}
-
-.tree-section-header {
-    text-align: center;
-    max-width: 840px;
-    margin: 0 auto clamp(2rem, 4vw, 3.5rem);
-}
-
-.tree-section-header .section-title {
-    margin-bottom: 0.75rem;
-}
-
-.tree-section-header .section-intro {
-    line-height: 1.75;
-    color: var(--text-secondary);
-}
-
-/* Quick Nav Ribbon */
-
 /* Pedigree Tree Wrapper */
 .pedigree-viewport {
     width: 100%;
     overflow-x: auto;
-    padding: 1.5rem 0.5rem 3rem;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -59,7 +24,6 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin-bottom: 3.5rem;
 }
 
 .tree-generation:last-child {
@@ -129,6 +93,34 @@
     background: var(--accent);
 }
 
+.tree-fork-up {
+    position: relative;
+    width: calc(340px + clamp(1.25rem, 2.5vw, 2.5rem));
+    height: 2px;
+    background: var(--accent);
+    margin: 1.5rem auto 0;
+}
+
+.tree-fork-up::before,
+.tree-fork-up::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 2px;
+    height: 1.5rem;
+    background: var(--accent);
+}
+
+.tree-fork-up::before {
+    left: 0;
+    transform: translateX(-50%);
+}
+
+.tree-fork-up::after {
+    right: 0;
+    transform: translateX(50%);
+}
+
 /* Generational Clusters */
 .tree-roots-cluster {
     display: flex;
@@ -143,7 +135,7 @@
     justify-content: center;
     gap: 1.5rem;
     position: relative;
-    padding: 1rem 1.5rem;
+    padding: 1.5rem;
     background: rgba(194, 138, 41, 0.05);
     border: 1px solid rgba(194, 138, 41, 0.3);
     border-radius: var(--radius-xl);
@@ -225,7 +217,6 @@
     border-radius: var(--radius);
     box-shadow: var(--shadow-sm);
     width: 100%;
-    max-width: 380px;
     transition: all 0.3s var(--ease-out);
     position: relative;
 }
@@ -411,19 +402,20 @@
 }
 
 .pillar-card p {
+    text-align: justify;
     font-size: 0.98rem;
     line-height: 1.75;
     color: var(--text-secondary);
-    margin: 0;
-    flex-grow: 1;
 }
 
 /* Member Dossiers Showcase */
 .dossiers-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 800px));
+    justify-content: center;
     gap: clamp(1.5rem, 3vw, 2.5rem);
-    margin-top: 2rem;
+    max-width: calc(800px * 2 + clamp(1.5rem, 3vw, 2.5rem));
+    margin: 2rem auto 0;
 }
 
 .dossier-card {
@@ -434,6 +426,9 @@
     box-shadow: var(--shadow-md);
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
     transition: all 0.35s var(--ease-out);
 }
 
@@ -454,7 +449,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top center;
     transition: transform 0.8s var(--ease-out);
 }
 
@@ -466,23 +460,6 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(180deg, transparent 40%, rgba(0, 24, 48, 0.85) 100%);
-}
-
-.dossier-crown-tag {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    padding: 0.3rem 0.85rem;
-    background: rgba(0, 24, 48, 0.85);
-    backdrop-filter: blur(8px);
-    border: 1px solid var(--accent);
-    border-radius: 999px;
-    font-size: 0.75rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--accent-light);
-    box-shadow: var(--shadow-sm);
 }
 
 .dossier-title-overlay {
@@ -760,14 +737,7 @@
 }
 
 /* Dark Mode */
-.body-dark .tree-hero-badge {
-    background: rgba(194, 138, 41, 0.25);
-    color: var(--accent-light);
-}
-
-.body-dark .generation-label,
-.body-dark .milestone-marker {
-    background: var(--dark-surface);
+.body-dark .generation-label {
     border-color: var(--accent-light);
     color: var(--accent-light);
 }
@@ -838,8 +808,7 @@
 }
 
 .body-dark .pillar-badge {
-    background: rgba(194, 138, 41, 0.2);
-    color: var(--accent-light);
+    background: rgba(223, 186, 118, 0.12);
 }
 
 .body-dark .dossier-specs-list {
@@ -876,7 +845,7 @@
 
     .dossiers-grid {
         grid-template-columns: 1fr;
-        max-width: 760px;
+        max-width: 800px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -944,7 +913,8 @@
         border-radius: var(--radius-sm);
     }
 
-    .tree-fork-line {
+    .tree-fork-line,
+    .tree-fork-up {
         display: none;
     }
 

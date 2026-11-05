@@ -61,8 +61,6 @@
 /* Dark Mode */
 .body-dark .pillar-badge {
     background: rgba(223, 186, 118, 0.12);
-    border-color: rgba(223, 186, 118, 0.25);
-    color: var(--accent);
 }
 
 /* Animations */
