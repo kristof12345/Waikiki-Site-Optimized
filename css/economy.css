@@ -264,7 +264,46 @@
     font-size: 0.98rem;
 }
 
-/* Responsive Design */
+/* Dark Mode */
+.body-dark .data-viz-container,
+.body-dark .data-viz-container-half {
+    background: var(--surface-card);
+    border-color: var(--border-subtle);
+    box-shadow: 0 16px 40px -12px var(--black-alpha-60);
+}
+
+.body-dark .chart-title,
+.body-dark .data-viz-container h3,
+.body-dark .data-viz-container-half h3,
+.body-dark .timeline-content h4 {
+    color: var(--tertiary-light);
+}
+
+.body-dark .comparison-label {
+    color: var(--neutral-100);
+}
+
+.body-dark .legend-text,
+.body-dark .timeline-content p {
+    color: var(--neutral-300);
+}
+
+.body-dark .legend-item:hover {
+    background: var(--white-alpha-05);
+}
+
+.body-dark .timeline-year {
+    background: var(--surface-card);
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 8px 24px -4px var(--black-alpha-60);
+}
+
+.body-dark .timeline-content {
+    box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive */
 @media (max-width: 800px) {
     .chart-grid {
         grid-template-columns: 1fr;
@@ -312,43 +351,4 @@
         border-right: 1px solid var(--border-subtle);
         padding: 1.25rem 1.5rem;
     }
-}
-
-/* Dark Mode */
-.body-dark .data-viz-container,
-.body-dark .data-viz-container-half {
-    background: var(--surface-card);
-    border-color: var(--border-subtle);
-    box-shadow: 0 16px 40px -12px var(--black-alpha-60);
-}
-
-.body-dark .chart-title,
-.body-dark .data-viz-container h3,
-.body-dark .data-viz-container-half h3,
-.body-dark .timeline-content h4 {
-    color: var(--tertiary-light);
-}
-
-.body-dark .comparison-label {
-    color: var(--neutral-100);
-}
-
-.body-dark .legend-text,
-.body-dark .timeline-content p {
-    color: var(--neutral-300);
-}
-
-.body-dark .legend-item:hover {
-    background: var(--white-alpha-05);
-}
-
-.body-dark .timeline-year {
-    background: var(--surface-card);
-    border-color: var(--accent);
-    color: var(--accent);
-    box-shadow: 0 8px 24px -4px var(--black-alpha-60);
-}
-
-.body-dark .timeline-content {
-    box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.5);
 }

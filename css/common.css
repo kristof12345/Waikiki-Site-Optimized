@@ -254,25 +254,6 @@
   color-scheme: light;
 }
 
-.body-dark {
-  --bg: var(--neutral-900);
-  --surface: var(--dark-surface);
-  --surface-2: var(--dark-surface-2);
-  --heading: var(--dark-heading);
-  --text: var(--dark-text);
-  --muted: var(--neutral-500);
-  --line: rgba(255, 255, 255, 0.08);
-  --line-strong: rgba(255, 255, 255, 0.16);
-  --glass: rgba(10, 20, 32, 0.72);
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 30px -18px rgba(0, 0, 0, 0.7);
-  --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.3), 0 24px 48px -28px rgba(0, 0, 0, 0.85);
-  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.35), 0 40px 80px -36px rgba(0, 0, 0, 0.9);
-  --shadow-btn: 0 12px 30px -16px rgba(0, 0, 0, 0.8);
-  --shadow-btn-hover: 0 18px 40px -16px rgba(107, 164, 217, 0.5);
-
-  color-scheme: dark;
-}
-
 /* 2. RESET AND BASE */
 *,
 *::before,
@@ -766,20 +747,6 @@ html.menu-open .site-header.menu-scrolled {
   transition:
     transform 0.7s var(--ease-out),
     opacity 0.4s;
-}
-
-.body-dark .theme-icon .theme-core {
-  r: 8px;
-}
-
-.body-dark .theme-icon .theme-cut {
-  cx: 16px;
-  cy: 7px;
-}
-
-.body-dark .theme-icon .theme-rays {
-  transform: rotate(90deg) scale(0.4);
-  opacity: 0;
 }
 
 .menu-toggle {
@@ -1353,23 +1320,6 @@ html.menu-open .menu-aside {
 
 .hero--art .stat-item+.stat-item {
   border-left-color: var(--line);
-}
-
-@media (max-width: 1920px) {
-  .hero-art {
-    position: relative;
-    right: auto;
-    top: auto;
-    transform: none;
-    width: min(100%, 560px);
-    margin: 0 auto 2rem;
-    order: -1;
-  }
-
-  .hero--art {
-    flex-direction: column;
-    align-items: stretch;
-  }
 }
 
 /* Section headings */
@@ -2246,18 +2196,6 @@ video {
   animation-delay: 2s;
 }
 
-@media (prefers-reduced-motion: reduce) {
-
-  .ill .spin,
-  .ill .bob,
-  .ill .drift,
-  .ill .dash,
-  .ill .pulse,
-  .ill .twinkle {
-    animation: none !important;
-  }
-}
-
 html.no-reveal .ill .spin,
 html.no-reveal .ill .bob,
 html.no-reveal .ill .drift,
@@ -2678,7 +2616,40 @@ html.header-hidden .subnav {
   transform: translateY(-3px);
 }
 
-/* 17. NIGHT MODE */
+/* Dark Mode */
+.body-dark {
+  --bg: var(--neutral-900);
+  --surface: var(--dark-surface);
+  --surface-2: var(--dark-surface-2);
+  --heading: var(--dark-heading);
+  --text: var(--dark-text);
+  --muted: var(--neutral-500);
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --glass: rgba(10, 20, 32, 0.72);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 30px -18px rgba(0, 0, 0, 0.7);
+  --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.3), 0 24px 48px -28px rgba(0, 0, 0, 0.85);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.35), 0 40px 80px -36px rgba(0, 0, 0, 0.9);
+  --shadow-btn: 0 12px 30px -16px rgba(0, 0, 0, 0.8);
+  --shadow-btn-hover: 0 18px 40px -16px rgba(107, 164, 217, 0.5);
+
+  color-scheme: dark;
+}
+
+.body-dark .theme-icon .theme-core {
+  r: 8px;
+}
+
+.body-dark .theme-icon .theme-cut {
+  cx: 16px;
+  cy: 7px;
+}
+
+.body-dark .theme-icon .theme-rays {
+  transform: rotate(90deg) scale(0.4);
+  opacity: 0;
+}
+
 .body-dark .hero--compact::after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120' preserveAspectRatio='none'%3E%3Cpath d='M0 60c120 0 120-30 240-30s120 30 240 30 120-30 240-30 120 30 240 30 120-30 240-30 120 30 240 30v60H0z' fill='%230a1420'/%3E%3C/svg%3E");
 }
@@ -2754,7 +2725,24 @@ html.header-hidden .subnav {
   background: var(--tertiary);
 }
 
-/* 18. RESPONSIVE */
+/* Responsive */
+@media (max-width: 1920px) {
+  .hero-art {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    width: min(100%, 560px);
+    margin: 0 auto 2rem;
+    order: -1;
+  }
+
+  .hero--art {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
 @media (max-width: 1280px) {
   .primary-nav {
     display: none;
@@ -2910,7 +2898,6 @@ html.header-hidden .subnav {
   }
 }
 
-/* 19. REDUCED MOTION */
 @media (prefers-reduced-motion: reduce) {
 
   *,
@@ -2932,9 +2919,18 @@ html.header-hidden .subnav {
     transform: none !important;
     clip-path: none !important;
   }
+
+  .ill .spin,
+  .ill .bob,
+  .ill .drift,
+  .ill .dash,
+  .ill .pulse,
+  .ill .twinkle {
+    animation: none !important;
+  }
 }
 
-/* 20. KEYFRAMES */
+/* Animations */
 @keyframes curtainOut {
   from {
     transform: translate3d(0, 0, 0);

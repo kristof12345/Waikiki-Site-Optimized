@@ -1,5 +1,4 @@
 /* Visa and Entry Requirements Stylesheet */
-
 /* Category and Spec Cards */
 .visa-badge {
     display: inline-flex;
@@ -15,12 +14,6 @@
     text-transform: uppercase;
     letter-spacing: 0.12em;
     margin-bottom: 1rem;
-}
-
-.body-dark .visa-badge {
-    background: rgba(223, 186, 118, 0.12);
-    border-color: rgba(223, 186, 118, 0.25);
-    color: var(--accent);
 }
 
 .visa-badge.is-green {
@@ -39,24 +32,6 @@
     background: rgba(192, 57, 43, 0.12);
     border-color: rgba(192, 57, 43, 0.3);
     color: var(--chart-6);
-}
-
-.body-dark .visa-badge.is-green {
-    background: rgba(58, 167, 156, 0.16);
-    border-color: rgba(58, 167, 156, 0.35);
-    color: var(--waikiki-hover);
-}
-
-.body-dark .visa-badge.is-blue {
-    background: var(--tertiary-alpha-16);
-    border-color: rgba(107, 164, 217, 0.35);
-    color: var(--tertiary);
-}
-
-.body-dark .visa-badge.is-red {
-    background: rgba(235, 94, 85, 0.16);
-    border-color: rgba(235, 94, 85, 0.35);
-    color: #eb5e55;
 }
 
 .visa-grid {
@@ -83,10 +58,6 @@
     transform: translateY(-4px);
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
     border-color: var(--accent);
-}
-
-.body-dark .visa-card:hover {
-    box-shadow: 0 12px 32px var(--black-alpha-35);
 }
 
 .visa-card-header {
@@ -147,16 +118,6 @@
     align-items: stretch;
 }
 
-@media (max-width: 980px) {
-    .checker-wrapper {
-        padding: 1.25rem;
-    }
-
-    .checker-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 .checker-controls-col {
     display: flex;
     flex-direction: column;
@@ -196,12 +157,6 @@
     box-shadow: 0 0 0 2px var(--primary-light-alpha-14);
 }
 
-.body-dark .tier-card.is-active {
-    border-color: var(--accent);
-    background: rgba(223, 186, 118, 0.09);
-    box-shadow: 0 0 0 2px rgba(223, 186, 118, 0.18);
-}
-
 .tier-card-top {
     display: flex;
     justify-content: space-between;
@@ -226,19 +181,9 @@
     color: #16655f;
 }
 
-.body-dark .tier-badge.badge-green {
-    background: rgba(58, 167, 156, 0.22);
-    color: #5ee2d4;
-}
-
 .tier-badge.badge-teal {
     background: var(--primary-light-alpha-14);
     color: var(--primary-light);
-}
-
-.body-dark .tier-badge.badge-teal {
-    background: rgba(74, 158, 245, 0.2);
-    color: #82c0ff;
 }
 
 .tier-badge.badge-amber {
@@ -246,19 +191,9 @@
     color: #8c6015;
 }
 
-.body-dark .tier-badge.badge-amber {
-    background: rgba(223, 186, 118, 0.22);
-    color: #f7d28b;
-}
-
 .tier-badge.badge-coral {
     background: rgba(185, 56, 44, 0.14);
     color: #9e2a1f;
-}
-
-.body-dark .tier-badge.badge-coral {
-    background: rgba(235, 94, 80, 0.22);
-    color: #ff9d93;
 }
 
 .tier-gate {
@@ -289,10 +224,6 @@
     flex-direction: column;
     justify-content: space-between;
     transition: all 0.3s ease;
-}
-
-.body-dark .checker-result-panel {
-    background: rgba(255, 255, 255, 0.025);
 }
 
 .result-status-header {
@@ -332,22 +263,10 @@
     border: 1px solid rgba(29, 114, 107, 0.3);
 }
 
-.body-dark .result-tag.tag-free {
-    background: rgba(58, 167, 156, 0.2);
-    color: #4ed1c3;
-    border-color: rgba(58, 167, 156, 0.4);
-}
-
 .result-tag.tag-fast {
     background: var(--primary-light-alpha-14);
     color: var(--primary-light);
     border: 1px solid var(--primary-light-alpha-30);
-}
-
-.body-dark .result-tag.tag-fast {
-    background: rgba(74, 158, 245, 0.2);
-    color: #82c0ff;
-    border-color: rgba(74, 158, 245, 0.4);
 }
 
 .result-tag.tag-evisa {
@@ -356,22 +275,10 @@
     border: 1px solid rgba(194, 138, 41, 0.3);
 }
 
-.body-dark .result-tag.tag-evisa {
-    background: rgba(223, 186, 118, 0.2);
-    color: #f7d28b;
-    border-color: rgba(223, 186, 118, 0.4);
-}
-
 .result-tag.tag-visa {
     background: rgba(185, 56, 44, 0.14);
     color: #9e2a1f;
     border: 1px solid rgba(185, 56, 44, 0.3);
-}
-
-.body-dark .result-tag.tag-visa {
-    background: rgba(235, 94, 80, 0.2);
-    color: #ff9d93;
-    border-color: rgba(235, 94, 80, 0.4);
 }
 
 .result-title {
@@ -393,13 +300,6 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 0.65rem;
     margin-bottom: 1.35rem;
-}
-
-@media (max-width: 560px) {
-    .tier-selector-grid,
-    .result-req-grid {
-        grid-template-columns: 1fr;
-    }
 }
 
 .result-req-card {
@@ -546,15 +446,6 @@
     object-fit: contain;
 }
 
-.body-dark .customs-icon {
-    background: var(--tertiary-subtle);
-    color: var(--tertiary-light);
-}
-
-.body-dark .customs-icon img {
-    filter: brightness(2.1) saturate(0.7);
-}
-
 .customs-list {
     list-style: none;
     padding: 0;
@@ -580,4 +471,115 @@
     font-size: 1.2rem;
     line-height: 1;
     top: -1px;
+}
+
+/* Dark Mode */
+.body-dark .visa-badge {
+    background: rgba(223, 186, 118, 0.12);
+    border-color: rgba(223, 186, 118, 0.25);
+    color: var(--accent);
+}
+
+.body-dark .visa-badge.is-green {
+    background: rgba(58, 167, 156, 0.16);
+    border-color: rgba(58, 167, 156, 0.35);
+    color: var(--waikiki-hover);
+}
+
+.body-dark .visa-badge.is-blue {
+    background: var(--tertiary-alpha-16);
+    border-color: rgba(107, 164, 217, 0.35);
+    color: var(--tertiary);
+}
+
+.body-dark .visa-badge.is-red {
+    background: rgba(235, 94, 85, 0.16);
+    border-color: rgba(235, 94, 85, 0.35);
+    color: #eb5e55;
+}
+
+.body-dark .visa-card:hover {
+    box-shadow: 0 12px 32px var(--black-alpha-35);
+}
+
+.body-dark .tier-card.is-active {
+    border-color: var(--accent);
+    background: rgba(223, 186, 118, 0.09);
+    box-shadow: 0 0 0 2px rgba(223, 186, 118, 0.18);
+}
+
+.body-dark .tier-badge.badge-green {
+    background: rgba(58, 167, 156, 0.22);
+    color: #5ee2d4;
+}
+
+.body-dark .tier-badge.badge-teal {
+    background: rgba(74, 158, 245, 0.2);
+    color: #82c0ff;
+}
+
+.body-dark .tier-badge.badge-amber {
+    background: rgba(223, 186, 118, 0.22);
+    color: #f7d28b;
+}
+
+.body-dark .tier-badge.badge-coral {
+    background: rgba(235, 94, 80, 0.22);
+    color: #ff9d93;
+}
+
+.body-dark .checker-result-panel {
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.body-dark .result-tag.tag-free {
+    background: rgba(58, 167, 156, 0.2);
+    color: #4ed1c3;
+    border-color: rgba(58, 167, 156, 0.4);
+}
+
+.body-dark .result-tag.tag-fast {
+    background: rgba(74, 158, 245, 0.2);
+    color: #82c0ff;
+    border-color: rgba(74, 158, 245, 0.4);
+}
+
+.body-dark .result-tag.tag-evisa {
+    background: rgba(223, 186, 118, 0.2);
+    color: #f7d28b;
+    border-color: rgba(223, 186, 118, 0.4);
+}
+
+.body-dark .result-tag.tag-visa {
+    background: rgba(235, 94, 80, 0.2);
+    color: #ff9d93;
+    border-color: rgba(235, 94, 80, 0.4);
+}
+
+.body-dark .customs-icon {
+    background: var(--tertiary-subtle);
+    color: var(--tertiary-light);
+}
+
+.body-dark .customs-icon img {
+    filter: brightness(2.1) saturate(0.7);
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+    .checker-wrapper {
+        padding: 1.25rem;
+    }
+
+    .checker-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .tier-selector-grid,
+    .result-req-grid {
+        grid-template-columns: 1fr;
+    }
 }

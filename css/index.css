@@ -153,6 +153,7 @@
   box-shadow: 0 0 0 8px rgba(227, 115, 90, 0.25);
 }
 
+/* Responsive */
 @media (max-width: 800px) {
   .timeline::before,
   .timeline::after {

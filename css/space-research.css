@@ -1,5 +1,4 @@
 /* Space Research Stylesheet */
-
 .spec-badge {
     display: inline-flex;
     align-items: center;
@@ -14,12 +13,6 @@
     text-transform: uppercase;
     letter-spacing: 0.12em;
     margin-bottom: 1rem;
-}
-
-.body-dark .spec-badge {
-    background: var(--tertiary-subtle);
-    border-color: var(--tertiary-border);
-    color: var(--tertiary);
 }
 
 .spec-list {
@@ -43,8 +36,6 @@
     font-weight: 600;
     text-align: end;
 }
-
-/* Space Research SVG animations */
 
 /* Space Fleet Section */
 .fleet-group-title {
@@ -81,7 +72,7 @@
 }
 
 /* Rocket and Shuttle Card Watermark Schematics */
-#fleet .card > * {
+#fleet .card>* {
     position: relative;
     z-index: 1;
 }
@@ -102,6 +93,13 @@
 #fleet .card:hover .aircraft-watermark {
     transform: rotate(-10deg) scale(1.1);
     opacity: 0.24;
+}
+
+/* Dark Mode */
+.body-dark .spec-badge {
+    background: var(--tertiary-subtle);
+    border-color: var(--tertiary-border);
+    color: var(--tertiary);
 }
 
 .body-dark #fleet .card .aircraft-watermark {

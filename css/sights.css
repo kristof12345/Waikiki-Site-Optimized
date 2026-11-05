@@ -1,5 +1,4 @@
 /* Sights of Waikiki - Architectural and natural landmark comparisons and editorial showcases */
-
 .sight-section {
     display: flex;
     flex-wrap: wrap;
@@ -134,20 +133,6 @@
     font-size: 1.4rem;
 }
 
-@media (max-width: 1100px) {
-    .sight-section {
-        flex-direction: column;
-    }
-
-    .sight-section.reverse {
-        flex-direction: column-reverse;
-    }
-
-    .sight-section .section-link-wrapper {
-        order: -1;
-    }
-}
-
 .landmark-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
@@ -186,4 +171,19 @@
 
 html.no-reveal .sight-image:hover img {
     transform: none !important;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .sight-section {
+        flex-direction: column;
+    }
+
+    .sight-section.reverse {
+        flex-direction: column-reverse;
+    }
+
+    .sight-section .section-link-wrapper {
+        order: -1;
+    }
 }

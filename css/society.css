@@ -1,5 +1,4 @@
 /* Society and Provinces Stylesheet */
-
 /* Utility Icons */
 .check-icon {
     color: var(--primary-light);
@@ -490,29 +489,6 @@
     letter-spacing: 0.04em;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .map-container {
-        padding: 0.75rem;
-    }
-
-    .info-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.75rem;
-    }
-
-    .info-title {
-        font-size: 1.6rem;
-    }
-
-    .info-stats,
-    .admin-grid,
-    .cities-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* Dark Mode */
 .body-dark .map-container,
 .body-dark .province-info-panel,
@@ -567,11 +543,33 @@
     color: var(--neutral-100);
 }
 
-/* Ocean Map Night Gradient */
 .body-dark #ocean stop:first-child {
     stop-color: var(--teal-abyss) !important;
 }
 
 .body-dark #ocean stop:last-child {
     stop-color: var(--teal-lagoon) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .map-container {
+        padding: 0.75rem;
+    }
+
+    .info-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .info-title {
+        font-size: 1.6rem;
+    }
+
+    .info-stats,
+    .admin-grid,
+    .cities-grid {
+        grid-template-columns: 1fr;
+    }
 }

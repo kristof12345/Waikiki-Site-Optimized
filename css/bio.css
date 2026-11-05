@@ -1,13 +1,10 @@
-/* Biographies Stylesheet */
-
-/* Narrative Container */
+/* Biographies */
 #narrative {
     padding: clamp(60px, 8vw, 100px) clamp(1.5rem, 5vw, 4rem);
     background: var(--neutral-100);
     transition: background-color var(--duration-normal) var(--ease-out);
 }
 
-/* Bio Summary Royal Accolades Strip */
 .bio-summary {
     font-weight: 600;
     text-align: center;
@@ -35,7 +32,6 @@
     background: linear-gradient(90deg, transparent, var(--accent), transparent);
 }
 
-/* Narrative Section Titles */
 #narrative .section-title {
     font-size: clamp(1.6rem, 3vw, 2.2rem);
     font-weight: 700;
@@ -46,7 +42,6 @@
     padding-bottom: 0.5rem;
 }
 
-/* Narrative Text */
 #narrative .narrative-text {
     font-size: clamp(1.05rem, 1.4vw, 1.18rem);
     line-height: 1.9;
@@ -54,7 +49,6 @@
     margin-bottom: 1.75rem;
 }
 
-/* Bio Closing Quote */
 .bio-quote {
     font-family: var(--font-display) !important;
     font-style: italic;

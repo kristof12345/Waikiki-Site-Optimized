@@ -1,5 +1,4 @@
 /* Travel Guide Stylesheet */
-
 .card-grid {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr));
 }
@@ -42,11 +41,6 @@
   width: 28px;
   height: 28px;
   object-fit: contain;
-}
-
-.body-dark .fact img,
-.body-dark .hotel-loc img {
-  filter: brightness(2.1) saturate(0.7);
 }
 
 .fact dt {
@@ -169,10 +163,6 @@
   background: repeating-linear-gradient(135deg, rgba(26, 82, 143, 0.28) 0 6px, var(--primary-light-alpha-12) 6px 12px);
 }
 
-.body-dark .s-fair {
-  background: linear-gradient(160deg, var(--teal-badge-light), var(--teal-badge-dark));
-}
-
 .season-legend {
   display: flex;
   flex-wrap: wrap;
@@ -195,27 +185,6 @@
   width: 22px;
   height: 14px;
   border-radius: var(--radius-2xs);
-}
-
-@media (max-width: 720px) {
-  .season-row {
-    grid-template-columns: 82px repeat(12, 1fr);
-    gap: 3px;
-  }
-
-  .season-head span {
-    font-size: 0.56rem;
-    letter-spacing: 0;
-  }
-
-  .season-row>b {
-    font-size: 0.68rem;
-  }
-
-  .season-cell {
-    height: 30px;
-    border-radius: 6px;
-  }
 }
 
 /* Travel Info callout banners */
@@ -260,17 +229,6 @@
   color: var(--text);
   font-size: 0.98rem;
   line-height: 1.75;
-}
-
-@media (max-width: 720px) {
-  .travel-callout {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .travel-callout-icon {
-    margin: 0 auto;
-  }
 }
 
 /* Hotel Cards */
@@ -374,4 +332,45 @@
   font-size: 0.72rem;
   color: var(--text);
   white-space: nowrap;
+}
+
+/* Dark Mode */
+.body-dark .fact img,
+.body-dark .hotel-loc img {
+  filter: brightness(2.1) saturate(0.7);
+}
+
+.body-dark .s-fair {
+  background: linear-gradient(160deg, var(--teal-badge-light), var(--teal-badge-dark));
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .season-row {
+    grid-template-columns: 82px repeat(12, 1fr);
+    gap: 3px;
+  }
+
+  .season-head span {
+    font-size: 0.56rem;
+    letter-spacing: 0;
+  }
+
+  .season-row>b {
+    font-size: 0.68rem;
+  }
+
+  .season-cell {
+    height: 30px;
+    border-radius: 6px;
+  }
+
+  .travel-callout {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .travel-callout-icon {
+    margin: 0 auto;
+  }
 }

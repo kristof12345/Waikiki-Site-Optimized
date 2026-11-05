@@ -24,12 +24,6 @@
     margin-bottom: 1rem;
 }
 
-.body-dark .pillar-badge {
-    background: rgba(223, 186, 118, 0.12);
-    border-color: rgba(223, 186, 118, 0.25);
-    color: var(--accent);
-}
-
 .financial-specs {
     list-style: none;
     margin-top: 1.25rem;
@@ -60,12 +54,18 @@
     border-left-color: var(--accent);
 }
 
-/* Banking System SVG animations */
-
 .ill .glow {
     animation: illGlow 3s ease-in-out infinite alternate;
 }
 
+/* Dark Mode */
+.body-dark .pillar-badge {
+    background: rgba(223, 186, 118, 0.12);
+    border-color: rgba(223, 186, 118, 0.25);
+    color: var(--accent);
+}
+
+/* Animations */
 @keyframes illGlow {
     from {
         opacity: 0.5;

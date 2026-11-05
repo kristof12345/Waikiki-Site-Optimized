@@ -24,6 +24,11 @@
    - Simplify stylesheet titles by removing verbose prefixes and suffixes (`/* Sovereign Nation of Waikiki - Royal Family Tree Stylesheet */` » `/* Royal Family Tree Stylesheet */` and similar).
    - Compact multi-line comments into clean, single-line comments without `=` marks.
    - Standardize dark mode comments (`Lagoon Night (Dark Mode) Theme Engine` » `Dark Mode`).
+3. **Four-Part Stylesheet Structure**: All CSS stylesheets must strictly follow a 4-part structure in order:
+   - **Normal styles** (base components and layout, no new separate section comment line)
+   - **Dark mode** (`/* Dark Mode */`)
+   - **Responsive** (`/* Responsive */` with desktop-first `@media (max-width: ...)` queries)
+   - **Animations** (`/* Animations */` containing `@keyframes` definitions)
 
 ## Git & Publishing Guidelines
 

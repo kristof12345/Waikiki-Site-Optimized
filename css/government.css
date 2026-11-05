@@ -107,6 +107,7 @@
     color: var(--text);
 }
 
+/* Responsive */
 @media (max-width: 800px) {
     .reference-card {
         flex-direction: column;

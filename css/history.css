@@ -123,6 +123,7 @@
   line-height: 1.75;
 }
 
+/* Responsive */
 @media (max-width: 800px) {
   .timeline-events {
     padding-left: 1.75rem;

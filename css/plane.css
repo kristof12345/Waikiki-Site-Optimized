@@ -276,18 +276,6 @@
   display: block;
 }
 
-@keyframes fadeInPane {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Specifications list */
 .specs-list {
   display: grid;
@@ -779,7 +767,7 @@
   color: #93c5fd;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 900px) {
   .aircraft-card {
     grid-template-columns: 1fr;
@@ -814,5 +802,18 @@
 
   .spec-val {
     text-align: left;
+  }
+}
+
+/* Animations */
+@keyframes fadeInPane {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

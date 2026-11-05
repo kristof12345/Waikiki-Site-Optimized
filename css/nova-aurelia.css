@@ -19,12 +19,6 @@
     margin: 0;
 }
 
-.body-dark .city-ill-frame {
-    background: #0d1722;
-    border-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
-}
-
 .city-ill {
     display: block;
     width: 100%;
@@ -98,11 +92,6 @@
     color: var(--text);
 }
 
-.body-dark .city-feature-text p,
-.body-dark .city-feature-list li {
-    color: var(--text-secondary);
-}
-
 .city-feature-list li::before {
     content: '→';
     position: absolute;
@@ -149,7 +138,54 @@
     margin-bottom: 0.75rem;
 }
 
-/* Vector Animation Keyframes */
+/* Dark Mode */
+.body-dark .city-ill-frame {
+    background: #0d1722;
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+}
+
+.body-dark .city-feature-text p,
+.body-dark .city-feature-list li {
+    color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 1400px) {
+    .city-districts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .city-districts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .city-anim-beacon {
+        animation: beaconPulse 2.8s ease-in-out infinite;
+    }
+
+    .city-anim-cloud {
+        animation: cloudDrift 18s ease-in-out infinite;
+    }
+
+    .city-anim-biolum {
+        animation: biolumPulse 3.5s ease-in-out infinite;
+    }
+
+    .city-ill .flow {
+        animation: cityFlowDash 2.6s linear infinite;
+    }
+
+    .city-ill .bob {
+        animation: cityBob 3.8s ease-in-out infinite;
+    }
+}
+
+/* Animations */
 @keyframes beaconPulse {
 
     0%,
@@ -190,28 +226,6 @@
     }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .city-anim-beacon {
-        animation: beaconPulse 2.8s ease-in-out infinite;
-    }
-
-    .city-anim-cloud {
-        animation: cloudDrift 18s ease-in-out infinite;
-    }
-
-    .city-anim-biolum {
-        animation: biolumPulse 3.5s ease-in-out infinite;
-    }
-
-    .city-ill .flow {
-        animation: cityFlowDash 2.6s linear infinite;
-    }
-
-    .city-ill .bob {
-        animation: cityBob 3.8s ease-in-out infinite;
-    }
-}
-
 @keyframes cityFlowDash {
     to {
         stroke-dashoffset: -48;
@@ -227,18 +241,5 @@
 
     50% {
         transform: translateY(-2.5px);
-    }
-}
-
-/* Responsive Desktop-First Media Queries */
-@media (max-width: 1400px) {
-    .city-districts-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .city-districts-grid {
-        grid-template-columns: 1fr;
     }
 }

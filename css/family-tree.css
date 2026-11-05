@@ -664,11 +664,6 @@
     object-fit: contain;
 }
 
-.body-dark .heirs-icon img,
-.body-dark .matrix-icon-wrap img {
-    filter: brightness(2.1) saturate(0.7);
-}
-
 .matrix-card h3 {
     font-size: 1.25rem;
     font-weight: 700;
@@ -764,7 +759,115 @@
     margin: 0;
 }
 
-/* Desktop-First Media Queries */
+/* Dark Mode */
+.body-dark .tree-hero-badge {
+    background: rgba(194, 138, 41, 0.25);
+    color: var(--accent-light);
+}
+
+.body-dark .generation-label,
+.body-dark .milestone-marker {
+    background: var(--dark-surface);
+    border-color: var(--accent-light);
+    color: var(--accent-light);
+}
+
+.body-dark .tree-sovereign-pair {
+    background: rgba(194, 138, 41, 0.08);
+    border-color: rgba(194, 138, 41, 0.4);
+}
+
+.body-dark .branch-pillar-tag {
+    background: rgba(107, 164, 217, 0.15);
+    color: var(--tertiary);
+}
+
+.body-dark .tree-node-card {
+    background: var(--dark-surface-2);
+    border-color: rgba(107, 164, 217, 0.14);
+}
+
+.body-dark .tree-branch-column:hover,
+.body-dark .tree-node-card:hover {
+    border-color: var(--tertiary);
+}
+
+.body-dark .tree-node-card.founder-card {
+    border-color: rgba(194, 138, 41, 0.6);
+}
+
+.body-dark .tree-node-thumb {
+    border-color: var(--accent-light);
+}
+
+.body-dark .heirs-strip {
+    background: var(--dark-surface);
+    border-color: rgba(194, 138, 41, 0.6);
+}
+
+.body-dark .tree-branch-column,
+.body-dark .pillar-card,
+.body-dark .dossier-card,
+.body-dark .succession-card,
+.body-dark .matrix-card,
+.body-dark .milestone-card {
+    background: var(--dark-surface);
+    border-color: rgba(107, 164, 217, 0.16);
+}
+
+.body-dark .tree-node-name,
+.body-dark .heirs-body h4,
+.body-dark .pillar-card h3,
+.body-dark .spec-val,
+.body-dark .succession-card h3,
+.body-dark .matrix-card h3,
+.body-dark .milestone-card h4 {
+    color: var(--dark-heading);
+}
+
+.body-dark .tree-node-dates,
+.body-dark .tree-node-office,
+.body-dark .heirs-body p,
+.body-dark .pillar-card p,
+.body-dark .spec-key,
+.body-dark .dossier-bio-text,
+.body-dark .succession-card p,
+.body-dark .matrix-card p,
+.body-dark .milestone-card p {
+    color: var(--dark-text);
+}
+
+.body-dark .pillar-badge {
+    background: rgba(194, 138, 41, 0.2);
+    color: var(--accent-light);
+}
+
+.body-dark .dossier-specs-list {
+    border-bottom-color: rgba(107, 164, 217, 0.16);
+}
+
+.body-dark .achievement-chip {
+    background: var(--dark-surface-2);
+    border-color: rgba(107, 164, 217, 0.16);
+    color: var(--dark-text);
+}
+
+.body-dark .succession-role,
+.body-dark .matrix-officials {
+    color: var(--tertiary);
+}
+
+.body-dark .matrix-icon-wrap {
+    background: rgba(107, 164, 217, 0.16);
+    color: var(--tertiary);
+}
+
+.body-dark .heirs-icon img,
+.body-dark .matrix-icon-wrap img {
+    filter: brightness(2.1) saturate(0.7);
+}
+
+/* Responsive */
 
 @media (max-width: 1200px) {
     .pedigree-tree {
@@ -1026,108 +1129,4 @@
         font-size: 0.9rem;
         line-height: 1.55;
     }
-}
-
-/* Dark Mode */
-
-.body-dark .tree-hero-badge {
-    background: rgba(194, 138, 41, 0.25);
-    color: var(--accent-light);
-}
-
-.body-dark .generation-label,
-.body-dark .milestone-marker {
-    background: var(--dark-surface);
-    border-color: var(--accent-light);
-    color: var(--accent-light);
-}
-
-.body-dark .tree-sovereign-pair {
-    background: rgba(194, 138, 41, 0.08);
-    border-color: rgba(194, 138, 41, 0.4);
-}
-
-.body-dark .branch-pillar-tag {
-    background: rgba(107, 164, 217, 0.15);
-    color: var(--tertiary);
-}
-
-.body-dark .tree-node-card {
-    background: var(--dark-surface-2);
-    border-color: rgba(107, 164, 217, 0.14);
-}
-
-.body-dark .tree-branch-column:hover,
-.body-dark .tree-node-card:hover {
-    border-color: var(--tertiary);
-}
-
-.body-dark .tree-node-card.founder-card {
-    border-color: rgba(194, 138, 41, 0.6);
-}
-
-.body-dark .tree-node-thumb {
-    border-color: var(--accent-light);
-}
-
-.body-dark .heirs-strip {
-    background: var(--dark-surface);
-    border-color: rgba(194, 138, 41, 0.6);
-}
-
-.body-dark .tree-branch-column,
-.body-dark .pillar-card,
-.body-dark .dossier-card,
-.body-dark .succession-card,
-.body-dark .matrix-card,
-.body-dark .milestone-card {
-    background: var(--dark-surface);
-    border-color: rgba(107, 164, 217, 0.16);
-}
-
-.body-dark .tree-node-name,
-.body-dark .heirs-body h4,
-.body-dark .pillar-card h3,
-.body-dark .spec-val,
-.body-dark .succession-card h3,
-.body-dark .matrix-card h3,
-.body-dark .milestone-card h4 {
-    color: var(--dark-heading);
-}
-
-.body-dark .tree-node-dates,
-.body-dark .tree-node-office,
-.body-dark .heirs-body p,
-.body-dark .pillar-card p,
-.body-dark .spec-key,
-.body-dark .dossier-bio-text,
-.body-dark .succession-card p,
-.body-dark .matrix-card p,
-.body-dark .milestone-card p {
-    color: var(--dark-text);
-}
-
-.body-dark .pillar-badge {
-    background: rgba(194, 138, 41, 0.2);
-    color: var(--accent-light);
-}
-
-.body-dark .dossier-specs-list {
-    border-bottom-color: rgba(107, 164, 217, 0.16);
-}
-
-.body-dark .achievement-chip {
-    background: var(--dark-surface-2);
-    border-color: rgba(107, 164, 217, 0.16);
-    color: var(--dark-text);
-}
-
-.body-dark .succession-role,
-.body-dark .matrix-officials {
-    color: var(--tertiary);
-}
-
-.body-dark .matrix-icon-wrap {
-    background: rgba(107, 164, 217, 0.16);
-    color: var(--tertiary);
 }

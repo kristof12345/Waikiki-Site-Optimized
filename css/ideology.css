@@ -122,6 +122,7 @@
     text-transform: uppercase;
 }
 
+/* Responsive */
 @media (max-width: 800px) {
     .detail-section,
     .detail-section.alt {

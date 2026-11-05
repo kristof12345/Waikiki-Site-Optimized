@@ -1,4 +1,4 @@
-/* Waikiki — Style Override: Emerald Amazonia (Lush Amazonian Rainforest Sanctuary and Botanical Jade) */
+/* Emerald Amazonia Theme Stylesheet */
 
 :root {
   /* Primary — Deep Rainforest Emerald */
@@ -72,7 +72,6 @@
   --ill-glass: #d8eee0;
 }
 
-/* Light Mode Component Overrides */
 .light-bg {
   background:
     radial-gradient(1100px 420px at 8% 0%, rgba(72, 184, 132, 0.16), transparent 60%),
@@ -120,7 +119,7 @@
   filter: brightness(0) saturate(100%) invert(27%) sepia(27%) saturate(912%) hue-rotate(103deg) brightness(98%) contrast(97%);
 }
 
-/* Night Mode (Body-Dark) Overrides */
+/* Dark Mode */
 .body-dark {
   --bg: #06150e;
   --dark-surface: #0d2418;

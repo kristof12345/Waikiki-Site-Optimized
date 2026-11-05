@@ -1,4 +1,4 @@
-/* Waikiki — Style Override: Royal Velvet (Imperial Dynasty, Sovereign Burgundy and Crown Gold) */
+/* Royal Velvet Theme Stylesheet */
 
 :root {
   /* Primary — Imperial Velvet Wine */
@@ -72,7 +72,6 @@
   --ill-glass: #f6e2dd;
 }
 
-/* Light Mode Component Overrides */
 .light-bg {
   background:
     radial-gradient(1100px 420px at 8% 0%, rgba(212, 115, 140, 0.16), transparent 60%),
@@ -120,7 +119,7 @@
   filter: brightness(0) saturate(100%) invert(14%) sepia(23%) saturate(5985%) hue-rotate(318deg) brightness(93%) contrast(93%);
 }
 
-/* Night Mode (Body-Dark) Overrides */
+/* Dark Mode */
 .body-dark {
   --bg: #15070c;
   --dark-surface: #240c15;

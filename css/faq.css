@@ -17,6 +17,7 @@
   line-height: 1.8;
 }
 
+/* Dark Mode */
 .body-dark .faq-cta {
   border-color: var(--white-alpha-18);
   box-shadow: 0 0 0 1px var(--white-alpha-08), var(--shadow-sm);

@@ -1,4 +1,4 @@
-/* Waikiki — Style Override: Oceanic Riviera (Caribbean Azure, Crystal Lagoon and Living Reef Coral) */
+/* Oceanic Riviera Theme Stylesheet */
 
 :root {
   /* Primary — Deep Marine Cerulean */
@@ -72,7 +72,6 @@
   --ill-glass: #d8edf8;
 }
 
-/* Light Mode Component Overrides */
 .light-bg {
   background:
     radial-gradient(1100px 420px at 8% 0%, rgba(20, 184, 166, 0.16), transparent 60%),
@@ -120,7 +119,7 @@
   filter: brightness(0) saturate(100%) invert(22%) sepia(60%) saturate(1204%) hue-rotate(167deg) brightness(97%) contrast(94%);
 }
 
-/* Night Mode (Body-Dark) Overrides */
+/* Dark Mode */
 .body-dark {
   --bg: #04111c;
   --dark-surface: #0a1e2d;
