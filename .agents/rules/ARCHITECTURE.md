@@ -48,7 +48,8 @@ The Sovereign Nation of Waikiki web portal is engineered as a high-performance, 
 │   ├── gallery.js          # Fullscreen responsive gallery viewer and category filters
 │   └── chart.min.js        # Standalone Chart.js library
 ├── scripts/
-│   └── build_pages.py      # Idempotent automated page builder & chrome injection engine
+│   ├── build_pages.py      # Idempotent automated page builder & chrome injection engine
+│   └── svg_generators/     # Procedural SVG generators for inline card suites, maps, and localized diagrams
 ├── en/                     # 43 English localized pages
 │   ├── index.html          # Main English national portal
 │   ├── overview.html       # Sovereign overview & executive summary
@@ -68,7 +69,7 @@ The Sovereign Nation of Waikiki web portal is engineered as a high-performance, 
 │   ├── bio/                # Királyi életrajzok
 │   └── ...                 # 36 additional Hungarian topic pages
 ├── images/                 # Optimized high-resolution photography & web assets
-├── icons/                  # Vector heraldic symbols (icons/logo.svg), flags, coat of arms
+├── icons/                  # Vector symbols (logo.svg, flags) & standalone illustrations (hero/, nature/, etc.)
 └── index.html              # Multi-lingual entry portal (English & Magyar selector)
 ```
 

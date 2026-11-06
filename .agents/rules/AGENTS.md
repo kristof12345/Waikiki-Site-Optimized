@@ -8,10 +8,10 @@
 ## Graphics, SVGs and Icon Guidelines
 
 1. **Asset Structure and Generation Classification (All Pages)**:
-   - **Card illustrations**: `inline, generated` (e.g. hotel cards, resort cards, landmark cards, city district cards directly within HTML card grids).
-   - **Maps**: `linked, generated` (e.g. interactive ski trail maps, artificial island maps, infrastructure mobility maps, city archipelago masterplan map).
+   - **Card illustrations**: `inline, generated` (e.g. hotel cards, resort cards, landmark cards directly within HTML card grids).
+   - **Maps**: `linked, generated` (e.g. interactive ski trail maps, artificial island maps, infrastructure maps).
    - **Other localized**: `linked, generated` (e.g. banking tripartite network and rate corridor, space research station and interplanetary corridor — linked via `<img>` tags with `-en.svg` and `-hu.svg` variants).
-   - **Other not localized**: `linked, not generated` (e.g. hero illustrations, nature biomes, Nova Aurelia skyline, rockets, icons/mdi — linked via `<img>` tags to standalone `.svg` files in `icons/`).
+   - **Other not localized**: `linked, not generated` (e.g. hero illustrations, nature biomes, Nova Aurelia large illustrations and skyline, rockets, icons/mdi — linked via `<img>` tags to standalone `.svg` files in `icons/`, edited directly and never generated from Python scripts).
 2. **Pure Vector SVGs (No Rasterized Parts)**:
    - All SVGs must consist purely of native vector elements (`<path>`, `<polygon>`, `<rect>`, `<circle>`, `<ellipse>`, `<line>`, vector gradients, SVG patterns, etc.).
    - SVGs should not contain rasterized parts: never embed `<image>` tags, base64 bitmap data URIs (`data:image/png`, `data:image/jpeg`, etc.), or pixel bitmaps inside SVG files or inline SVG markup.

@@ -52,12 +52,12 @@ flowchart TD
 
 | Asset Category | Total Assets / Occurrences | Inclusion Mode | Creation Type | Localization Status | Primary Generator / Source |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Card Illustrations** | 34 cards across 4 pages | `inline` | `generated` | Universal / Style-synced | `gen_travel_svgs`, `gen_infrastructure_svgs`, `gen_ski_svgs`, `gen_nova_aurelia_svgs` |
+| **Card Illustrations** | 30 cards across 3 pages | `inline` | `generated` | Universal / Style-synced | `gen_travel_svgs`, `gen_infrastructure_svgs`, `gen_ski_svgs` |
 | **Elevation & Height Charts** | 2 comparison charts | `inline` | `generated` | Localized (`-en`, `-hu`) | `gen_infrastructure_svgs`, `gen_ski_svgs` |
 | **Aircraft Cutaway Plans** | 1 double-deck cutaway | `inline` | `generated` | Localized (`hu` translated) | `gen_plane.py` (from `icons/planes/plane-deck.svg`) |
 | **Geographic & Island Maps** | 6 interactive maps | `inline` & `linked` | `generated` & `fix` | Localized & Fixed | `gen_infrastructure_map`, `gen_ski_maps`, `gen_palm_map`, `gen_world_map`, `gen_chameleon_map` |
 | **Sector Visualizations** | 10 diagram files | `linked` | `generated` | Localized (`-en`, `-hu`) | `gen_banking_svgs`, `gen_space_svgs`, `gen_nature_svgs` |
-| **Hero Art & Panoramas** | 4 hero files + 3 landmarks | `linked` | `fix file` | Not localized (canonical) | Handcrafted vector art in `icons/*/` |
+| **Hero Art & Nova Aurelia Panoramas** | 4 hero files + 4 city landmarks | `linked` | `fix file` | Not localized (canonical) | Handcrafted vector art in `icons/*/` |
 | **Nature Biomes & Vignettes** | 15 standalone files | `linked` | `generated` | Not localized | `gen_nature_svgs.py` (in `icons/nature/`) |
 | **Aerospace & Aviation Topviews** | 16 technical files | `linked` | `fix file` | Not localized (telemetry) | `icons/rockets/` (12), `icons/planes/` (4) |
 | **Material Design System Icons** | 211 standalone files | `linked` | `fix file` | Universal UI icons | `icons/mdi/*.svg` |
@@ -77,7 +77,6 @@ Card illustrations are native `<svg class="ill">` elements rendered within `<div
 | [en/travel-guide.html](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/en/travel-guide.html) / [hu/travel-guide.html](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/hu/travel-guide.html) | 15 | `.hotel-art` | [gen_travel_svgs.py](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/scripts/svg_generators/gen_travel_svgs.py) | 15 Luxury Hotel and Sanctuary cards (Hotel President, Hotel Atlantis, Hotel Khalifa, Starlight Grand, Royal Towers Residences, Paradise Islands Water Villas, Ski Paradise Chalets, Amazonia Canopy Lodge, Copacabana Imperial Palace, Aurelia Cloud Suites, Laguna Azul Coral Resort, Monte Rosa Sky Observatory, Solaris Marina and Yacht Club, Amazonia Floating River Palace, Grand Riviera Palace). |
 | [en/infrastructure.html](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/en/infrastructure.html) / [hu/infrastructure.html](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/hu/infrastructure.html) | 10 | `.building-art` | [gen_infrastructure_svgs.py](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/scripts/svg_generators/gen_infrastructure_svgs.py) | 10 Megaproject Architecture & Transport cards (Sky City 956m, Princess Tower 720m, Commercial Center 650m, Hotel Atlantis 600m, Royal Clock Tower 580m, Infinity Tower 480m, Mega Pyramid City 450m, Miapolis 1000m, Ducal Palace, Nova Aurelia Airport). |
 | [en/ski-paradise.html](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/en/ski-paradise.html) / [hu/ski-paradise.html](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/hu/ski-paradise.html) | 5 | `.hotel-art` | [gen_ski_svgs.py](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/scripts/svg_generators/gen_ski_svgs.py) | 5 Alpine Resort cards (Pico Soberano Grand Alpine Resort, Condor Glacier Panorama Lodge, Monte Rosa Sky Observatory, Haiti Glacier Crown Eco-Resort, Pico Duarte Alpine & Thermal Spa). |
-| [en/nova-aurelia.html](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/en/nova-aurelia.html) / [hu/nova-aurelia.html](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/hu/nova-aurelia.html) | 4 | `.district-art` / `data-city-svg` | [gen_nova_aurelia_svgs.py](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/scripts/svg_generators/gen_nova_aurelia_svgs.py) | 4 Imperial City District cards (Marina District, Imperial Boulevard, Aerotropolis, Night Lagoon). |
 
 ---
 
@@ -124,7 +123,7 @@ Maps combine vector geography, transport routes, and interactive pulse hotspots:
 | **Chameleon Island Map** | `infrastructure.html#islands` | `inline` | `generated` | [gen_chameleon_map.py](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/scripts/svg_generators/gen_chameleon_map.py) | `1200x700`, organic reptile silhouette island with orbital eye, prehensile tail yacht lagoon, and dorsal luxury villas. |
 | **Andes Ski Trail Map** | `ski-paradise.html#trail-maps` | `inline` & `linked` | `generated` | [gen_ski_maps.py](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/scripts/svg_generators/gen_ski_maps.py) | `1200x700`, panoramic mountain relief with green/blue/red/black ski slopes, gondola lifts, and mountain chalets. Standalone file in `icons/ski/andes-map.svg`. |
 | **Haiti Ski Trail Map** | `ski-paradise.html#trail-maps` | `inline` & `linked` | `generated` | [gen_ski_maps.py](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/scripts/svg_generators/gen_ski_maps.py) | `1200x700`, tropical Caribbean high-altitude ski slopes with ocean vistas and cloud inversions. Standalone file in `icons/ski/haiti-map.svg`. |
-| **Nova Aurelia Masterplan** | `nova-aurelia.html#masterplan` | `linked` | `generated` | [gen_nova_aurelia_svgs.py](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/scripts/svg_generators/gen_nova_aurelia_svgs.py) | `1100x600`, archipelago city masterplan linked via `<img src="../icons/nova-aurelia/archipelago-map.svg">`. |
+| **Nova Aurelia Masterplan** | `nova-aurelia.html#masterplan` | `linked` | `fix file` | Handcrafted vector art in `icons/nova-aurelia/` | `1100x600`, archipelago city masterplan linked via `<img src="../icons/nova-aurelia/archipelago-map.svg">`. |
 | **Sovereign Territory Map** | `society.html#territory` | `inline` | `fix file` | Handcrafted SVG markup in HTML | `1800x1020`, nationwide geographic atlas showing Caribbean and South American territories, EEZ boundaries, and shipping corridors. |
 
 ---
@@ -151,10 +150,11 @@ Fixed standalone vector files stored permanently in `icons/` and referenced via 
    - [icons/travel/hero-art.svg](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/icons/travel/hero-art.svg): Tropical lagoon resort with overwater bungalows, superyacht marina, and coconut palms.
    - [icons/ski/hero-art.svg](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/icons/ski/hero-art.svg): Alpine ski mountain panorama with animated CSS cableway gondola motion.
    - [icons/nova-aurelia/hero-art.svg](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/icons/nova-aurelia/hero-art.svg): Imperial capital metropolis waterfront at sunset.
-2. **Nova Aurelia Landmark Panoramas**:
+2. **Nova Aurelia Large Illustrations & Landmarks** ([icons/nova-aurelia/](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/icons/nova-aurelia/)):
    - [icons/nova-aurelia/skyline.svg](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/icons/nova-aurelia/skyline.svg): Metropolis skyline panorama (1600x600).
    - [icons/nova-aurelia/pyramid.svg](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/icons/nova-aurelia/pyramid.svg): Monumental 450m Arcology Mega Pyramid (1200x700).
    - [icons/nova-aurelia/undersea-hub.svg](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/icons/nova-aurelia/undersea-hub.svg): Submerged transit and oceanographic hub (1200x700).
+   - [icons/nova-aurelia/archipelago-map.svg](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/icons/nova-aurelia/archipelago-map.svg): Archipelago city masterplan cartographic map (1100x600).
 3. **Nature Biomes & Transect** ([icons/nature/](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/icons/nature/)):
    - [icons/nature/transect.svg](file:///Volumes/Samsung%20X5%20SSD/Projektek/Site/icons/nature/transect.svg): Sea-to-Summit Biome Transect elevation cross-section (1600x600) uniting 8 national ecological biomes without text labels.
    - 15 standalone SVG files representing specific national ecosystems: `reef.svg`, `rainforest.svg`, `highlands.svg`, `mogotes.svg`, `enriquillo.svg`, `pantanal.svg`, `cerrado.svg`, `lencois.svg`, `caatinga.svg`, `bluehole.svg`, `tepui.svg`, `cataracts.svg`, `elnicho.svg`, `chapada.svg`, `anavilhanas.svg`.
@@ -297,14 +297,13 @@ All procedural vector creation scripts are housed in [scripts/svg_generators/](f
 
 ```
 scripts/svg_generators/
-├── gen_site_svgs.py           # Master CLI orchestrator (default: ski, travel, infra, nova-aurelia)
+├── gen_site_svgs.py           # Master CLI orchestrator (default: ski, travel, infra)
 ├── gen_all_svgs.py            # Alias runner for gen_site_svgs.py
 ├── site_common.py             # Shared math, 3D vector geometry, XML validation, and page injection
 ├── map_common.py              # Shared smoothing, Chaikin curves, and island map injection
 ├── gen_ski_svgs.py            # Ski Paradise summit chart and 5 resort cards
 ├── gen_travel_svgs.py         # Travel Guide 15 luxury hotel & sanctuary cards
 ├── gen_infrastructure_svgs.py # Infrastructure height chart and 10 landmark architecture cards
-├── gen_nova_aurelia_svgs.py   # Nova Aurelia 4 district cards & standalone assets
 ├── gen_ski_maps.py            # Andes and Haiti panoramic ski trail maps
 ├── gen_infrastructure_map.py  # Mobility transit network map
 ├── gen_palm_map.py            # Palm Island masterplan map
@@ -319,7 +318,7 @@ scripts/svg_generators/
 ### Script Execution Reference
 
 ```bash
-# Generate core site page illustrations (Ski, Travel, Infrastructure, Nova Aurelia)
+# Generate core site page illustrations (Ski, Travel, Infrastructure)
 python3 scripts/svg_generators/gen_site_svgs.py
 
 # Select individual page suites

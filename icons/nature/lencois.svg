@@ -1,35 +1,307 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="nature-ill" viewBox="0 0 480 300">
-<defs>
-<filter id="nt-lencois-mist" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter>
-<filter id="nt-lencois-soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.5"/></filter>
-<linearGradient id="nt-lencois-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3680c6"/><stop offset="0.55" stop-color="#82bee4"/><stop offset="1" stop-color="#dcf0f8"/></linearGradient>
-<radialGradient id="nt-lencois-sun-corona" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#fffef8" stop-opacity="0.96"/><stop offset="0.1" stop-color="#fffdf2" stop-opacity="0.84"/><stop offset="0.22" stop-color="#fff5d8" stop-opacity="0.56"/><stop offset="0.48" stop-color="#fff5d8" stop-opacity="0.2"/><stop offset="0.78" stop-color="#fff5d8" stop-opacity="0.05"/><stop offset="1" stop-color="#fff5d8" stop-opacity="0"/></radialGradient>
-<radialGradient id="nt-lencois-sun-core" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#ffffff" stop-opacity="1.0"/><stop offset="0.72" stop-color="#fffef6" stop-opacity="0.96"/><stop offset="1" stop-color="#fff8dc" stop-opacity="0.0"/></radialGradient>
-<linearGradient id="nt-lencois-lag1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4ce0d8"/><stop offset="0.45" stop-color="#1fb5c2"/><stop offset="1" stop-color="#0f7894"/></linearGradient>
-<linearGradient id="nt-lencois-lag2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#44d8b4"/><stop offset="0.45" stop-color="#1aa898"/><stop offset="1" stop-color="#0c6e72"/></linearGradient>
-</defs>
-<rect width="480" height="145" fill="url(#nt-lencois-sky)"/>
-<circle cx="82" cy="50" r="112" fill="url(#nt-lencois-sun-corona)"/>
-<circle cx="82" cy="50" r="16" fill="url(#nt-lencois-sun-core)"/>
-<g opacity="0.9"><path d="M247.6,61.8 C241.8,60.8 243.5,58.4 245,57.2 C246.5,56.1 253.6,56.1 256.9,54.5 C260.2,52.9 262.9,47 265.7,47 C268.5,47 273.7,55 274.4,54.5 C275.2,54 269.1,47.1 270.2,43.9 C271.4,40.6 278.1,34.1 281.7,34.1 C285.4,34.1 293.4,42.7 293.2,43.9 C293.1,45.1 280.7,43.8 280.7,41.7 C280.7,39.6 289.3,30.9 293.3,30.9 C297.4,30.9 305.1,40.8 305.9,41.7 C306.8,42.6 297.6,39.2 298.5,36.6 C299.5,34 307.4,25.4 311.6,25.4 C315.8,25.4 324.7,34.1 324.7,36.6 C324.8,39 312,41.9 312,40.9 C312,39.8 320.6,30.1 324.6,30.1 C328.7,30.1 336.6,38.8 337.3,40.9 C337.9,43 328,44.4 328.5,43.2 C329.1,41.9 336.6,33 340.5,33 C344.3,33 350.7,39.9 352.4,43.2 C354.1,46.5 349.9,53.2 351,53.7 C352.2,54.2 356.8,46.4 359.5,46.4 C362.3,46.4 365.6,51.9 368,53.7 C370.5,55.4 374.3,56 375,57.2 C375.7,58.5 378.2,60.8 372.4,61.8 C366.6,62.8 353.2,63.2 338.6,63.4 C324,63.7 296,63.7 281.4,63.4 C266.8,63.2 253.4,62.8 247.6,61.8 Z" fill="#ffffff"/><ellipse cx="314" cy="35.6" rx="25.7" ry="17.1" fill="#edf2f7" opacity="0.4"/><ellipse cx="310.2" cy="32.5" rx="23.3" ry="15.7" fill="#fffefb"/><ellipse cx="326.9" cy="40" rx="24.8" ry="16.5" fill="#edf2f7" opacity="0.4"/><ellipse cx="323.3" cy="37" rx="22.5" ry="15.2" fill="#fffefb"/><ellipse cx="295.6" cy="40.8" rx="24.8" ry="16.5" fill="#edf2f7" opacity="0.4"/><ellipse cx="291.9" cy="37.8" rx="22.5" ry="15.1" fill="#fffefb"/><ellipse cx="342.6" cy="42.3" rx="23.4" ry="15.6" fill="#edf2f7" opacity="0.4"/><ellipse cx="339.2" cy="39.5" rx="21.2" ry="14.3" fill="#fffefb"/><ellipse cx="283.8" cy="43" rx="22.6" ry="15" fill="#edf2f7" opacity="0.4"/><ellipse cx="280.5" cy="40.3" rx="20.5" ry="13.8" fill="#fffefb"/><ellipse cx="361.1" cy="53.1" rx="16.7" ry="11.1" fill="#edf2f7" opacity="0.4"/><ellipse cx="358.6" cy="51.1" rx="15.2" ry="10.2" fill="#fffefb"/><ellipse cx="267.3" cy="53.9" rx="17.2" ry="11.5" fill="#edf2f7" opacity="0.4"/><ellipse cx="264.7" cy="51.8" rx="15.6" ry="10.5" fill="#fffefb"/><path d="M247.6,60.5 C252.2,59.5 268.8,57 278.8,56.6 C288.8,56.2 300,58 310,57.9 C320,57.8 331.2,55.5 341.2,55.9 C351.2,56.4 367.8,59.4 372.4,60.5 C377,61.6 389.4,62.7 369.8,63.1 C350.2,63.5 269.8,63.5 250.2,63.1 C230.6,62.7 243,61.5 247.6,60.5 Z" fill="#d4e0ec" opacity="0.6"/></g>
-<g opacity="0.8"><path d="M94.2,71.1 C90.4,70.5 91.6,69.1 92.5,68.1 C93.4,67.1 97.5,66.4 99.8,64.9 C102.1,63.4 104.6,58.8 106.9,58.8 C109.2,58.8 113.1,65.4 114,64.9 C115,64.4 111.6,58.2 112.7,55.6 C113.8,53 118.2,48.7 120.8,48.7 C123.4,48.7 127.9,54 128.9,55.6 C130,57.2 126.2,59.6 127.5,58.8 C128.8,58 134,50.6 137.1,50.6 C140.2,50.6 146.1,57.9 146.8,58.8 C147.4,59.8 140.9,58 141.5,56.3 C142.1,54.7 147.7,48.5 150.7,48.5 C153.6,48.5 158.6,53.7 159.8,56.3 C161.1,59 157.5,64.7 158.4,65.2 C159.4,65.6 163.3,59.1 165.6,59.1 C167.9,59.1 170.8,63.7 172.7,65.2 C174.6,66.6 177,67.2 177.5,68.1 C178,69.1 179.6,70.5 175.8,71.1 C172,71.7 163.2,72 153.7,72.2 C144.2,72.3 125.8,72.3 116.3,72.2 C106.8,72 98,71.7 94.2,71.1 Z" fill="#ffffff"/><ellipse cx="122.3" cy="55" rx="15.9" ry="10.6" fill="#edf2f7" opacity="0.4"/><ellipse cx="119.9" cy="53.1" rx="14.4" ry="9.7" fill="#fffefb"/><ellipse cx="152.3" cy="55.7" rx="18" ry="12" fill="#edf2f7" opacity="0.4"/><ellipse cx="149.7" cy="53.5" rx="16.3" ry="11" fill="#fffefb"/><ellipse cx="138.9" cy="58.1" rx="18.9" ry="12.6" fill="#edf2f7" opacity="0.4"/><ellipse cx="136.1" cy="55.9" rx="17.2" ry="11.6" fill="#fffefb"/><ellipse cx="108.2" cy="64.4" rx="14" ry="9.3" fill="#edf2f7" opacity="0.4"/><ellipse cx="106.1" cy="62.7" rx="12.7" ry="8.5" fill="#fffefb"/><ellipse cx="166.9" cy="64.7" rx="14" ry="9.4" fill="#edf2f7" opacity="0.4"/><ellipse cx="164.8" cy="63" rx="12.7" ry="8.6" fill="#fffefb"/><path d="M94.2,70.2 C97.2,69.6 108.1,68 114.6,67.7 C121.1,67.4 128.5,68.6 135,68.5 C141.5,68.5 148.9,67 155.4,67.3 C161.9,67.5 172.8,69.5 175.8,70.2 C178.8,71 186.9,71.7 174.1,71.9 C161.3,72.2 108.7,72.2 95.9,71.9 C83.1,71.7 91.2,70.9 94.2,70.2 Z" fill="#d4e0ec" opacity="0.6"/></g>
-<rect x="0" y="132" width="480" height="168" fill="#f5f0e2"/>
-<g><path d="M-30,160 C6.9,155.3 32.3,134 52,134 C70.1,143.9 63.3,157.9 88.2,220 L-30,220Z" fill="#f7f4ea"/><path d="M52,134 C99.5,136.1 144.7,158.4 165,220 L88.2,220 C63.3,157.9 70.1,143.9 52,134Z" fill="#dfd7c4"/><path d="M52,134 C70.1,143.9 63.3,157.9 88.2,220" stroke="#ffffff" stroke-width="1.1" fill="none" opacity="0.8"/></g>
-<g><path d="M62,156.4 C68.7,152.6 93.7,150.4 112,150.4 C130.3,150.4 164.8,152.4 172,156.4 C179.2,160.4 171.7,171.6 155,174.4 C138.3,177.2 87.5,176.4 72,173.4 C56.5,170.4 55.3,160.2 62,156.4 Z" fill="#d4c79e"/><path d="M62,158 C68.7,154.2 93.7,152 112,152 C130.3,152 164.8,154 172,158 C179.2,162 171.7,173.2 155,176 C138.3,178.8 87.5,178 72,175 C56.5,172 55.3,161.8 62,158 Z" fill="url(#nt-lencois-lag1)"/><ellipse cx="114" cy="162" rx="26" ry="3.8" fill="#80ede2" opacity="0.4"/></g>
-<g><path d="M115,162 C160,156.6 191,132 215,132 C234.2,143.4 227,159.6 253.4,220 L115,220Z" fill="#f7f4ea"/><path d="M215,132 C265.4,134.4 313.4,160.2 335,220 L253.4,220 C227,159.6 234.2,143.4 215,132Z" fill="#dfd7c4"/><path d="M215,132 C234.2,143.4 227,159.6 253.4,220" stroke="#ffffff" stroke-width="1.1" fill="none" opacity="0.8"/></g>
-<g><path d="M228,157.4 C236.8,153.6 271.7,151.2 295,151.4 C318.3,151.6 359.2,154.2 368,158.4 C376.8,162.6 369,173.7 348,176.4 C327,179.1 262,177.6 242,174.4 C222,171.2 219.2,161.2 228,157.4 Z" fill="#d4c79e"/><path d="M228,159 C236.8,155.2 271.7,152.8 295,153 C318.3,153.2 359.2,155.8 368,160 C376.8,164.2 369,175.3 348,178 C327,180.7 262,179.2 242,176 C222,172.8 219.2,162.8 228,159 Z" fill="url(#nt-lencois-lag2)"/><ellipse cx="296" cy="163" rx="28" ry="3.8" fill="#80ede2" opacity="0.4"/></g>
-<g><path d="M275,160 C323.1,155 356.3,132 382,132 C402.5,142.6 394.8,157.8 423,220 L275,220Z" fill="#f7f4ea"/><path d="M382,132 C435.8,134.2 487,158.3 510,220 L423,220 C394.8,157.8 402.5,142.6 382,132Z" fill="#dfd7c4"/><path d="M382,132 C402.5,142.6 394.8,157.8 423,220" stroke="#ffffff" stroke-width="1.1" fill="none" opacity="0.8"/></g>
-<g><path d="M-40,206 C13.1,198.1 49.7,162 78,162 C101.5,178.7 92.7,202.5 125,275 L-40,275Z" fill="#faf7ef"/><path d="M78,162 C139.7,165.5 198.5,203.4 225,275 L125,275 C92.7,202.5 101.5,178.7 78,162Z" fill="#dbd2be"/><path d="M78,162 C101.5,178.7 92.7,202.5 125,275" stroke="#ffffff" stroke-width="1.1" fill="none" opacity="0.8"/></g>
-<g><path d="M92,196.4 C102.7,191.4 140.3,188.4 168,188.4 C195.7,188.4 240.7,190.4 258,196.4 C275.3,202.4 286.3,218.7 272,224.4 C257.7,230.1 200,231.4 172,230.4 C144,229.4 117.3,224.1 104,218.4 C90.7,212.7 81.3,201.4 92,196.4 Z" fill="#d4c79e"/><path d="M92,198 C102.7,193 140.3,190 168,190 C195.7,190 240.7,192 258,198 C275.3,204 286.3,220.3 272,226 C257.7,231.7 200,233 172,232 C144,231 117.3,225.7 104,220 C90.7,214.3 81.3,203 92,198 Z" fill="url(#nt-lencois-lag2)"/><ellipse cx="176" cy="208" rx="42" ry="3.8" fill="#80ede2" opacity="0.4"/></g>
-<path d="M159.1,208.6 q5.8,-0.8 11.5,0 t11.5,0 M203.2,210.5 q8.8,-0.8 17.5,0 t17.5,0 M173.9,209.8 q9.5,-0.8 19.1,0 t19.1,0 M207,216.6 q9.7,-0.8 19.4,0 t19.4,0 M126.9,206.4 q3.8,-0.8 7.6,0 t7.6,0 M143.5,200.5 q1.9,-0.8 3.8,0 t3.8,0 M169.7,213.7 q10.2,-0.8 20.5,0 t20.5,0 M228.1,209.6 q2.3,-0.8 4.6,0 t4.6,0 M135,199.1 q4.9,-0.8 9.7,0 t9.7,0 M150.4,212.5 q6.3,-0.8 12.6,0 t12.6,0" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.5" stroke-linecap="round"/>
-<g><path d="M178,210 C236.5,201.4 276.8,162 308,162 C331.5,180.2 322.7,206.2 355,275 L178,275Z" fill="#faf7ef"/><path d="M308,162 C369.7,165.8 428.5,207.1 455,275 L355,275 C322.7,206.2 331.5,180.2 308,162Z" fill="#dbd2be"/><path d="M308,162 C331.5,180.2 322.7,206.2 355,275" stroke="#ffffff" stroke-width="1.1" fill="none" opacity="0.8"/></g>
-<g><path d="M322,200.4 C330.3,194.6 364.7,193.1 388,193.4 C411.3,193.7 452,196.9 462,202.4 C472,207.9 468.7,222.1 448,226.4 C427.3,230.7 359,232.7 338,228.4 C317,224.1 313.7,206.2 322,200.4 Z" fill="#d4c79e"/><path d="M322,202 C330.3,196.2 364.7,194.7 388,195 C411.3,195.3 452,198.5 462,204 C472,209.5 468.7,223.7 448,228 C427.3,232.3 359,234.3 338,230 C317,225.7 313.7,207.8 322,202 Z" fill="url(#nt-lencois-lag1)"/><ellipse cx="388" cy="210" rx="36" ry="3.8" fill="#80ede2" opacity="0.4"/></g>
-<path d="M392.9,217.3 q8.8,-0.8 17.6,0 t17.6,0 M345,213.4 q5.1,-0.8 10.2,0 t10.2,0 M429.8,206.8 q3,-0.8 5.9,0 t5.9,0 M424.7,209.5 q2.4,-0.8 4.9,0 t4.9,0 M412.8,218.5 q7.6,-0.8 15.2,0 t15.2,0 M353.7,217.6 q5.9,-0.8 11.9,0 t11.9,0 M361.1,202.8 q4.8,-0.8 9.6,0 t9.6,0 M360.1,204.2 q3,-0.8 6,0 t6,0 M403.8,219.9 q5.1,-0.8 10.3,0 t10.3,0" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.5" stroke-linecap="round"/>
-<g><path d="M378,206 C415.8,199.5 441.8,170 462,170 C474.5,183.7 469.8,203.1 487,275 L378,275Z" fill="#faf7ef"/><path d="M462,170 C494.8,172.9 526,203.8 540,275 L487,275 C469.8,203.1 474.5,183.7 462,170Z" fill="#dbd2be"/><path d="M462,170 C474.5,183.7 469.8,203.1 487,275" stroke="#ffffff" stroke-width="1.1" fill="none" opacity="0.8"/></g>
-<g><path d="M-50,268 C21.1,257.2 70.1,208 108,208 C136.3,230.8 125.7,263.2 164.6,300 L-50,300Z" fill="#fdfbf5"/><path d="M108,208 C182.3,212.8 253.1,264.4 285,300 L164.6,300 C125.7,263.2 136.3,230.8 108,208Z" fill="#d4cbb6"/><path d="M108,208 C136.3,230.8 125.7,263.2 164.6,300" stroke="#ffffff" stroke-width="1.1" fill="none" opacity="0.8"/></g>
-<g><path d="M126,258.4 C139.3,253.1 183.7,249.7 218,248.4 C252.3,247.1 297.5,248.1 332,250.4 C366.5,252.7 405.7,256.7 425,262.4 C444.3,268.1 461.3,279.1 448,284.4 C434.7,289.7 385.5,292.7 345,294.4 C304.5,296.1 239.5,296.7 205,294.4 C170.5,292.1 151.2,286.4 138,280.4 C124.8,274.4 112.7,263.7 126,258.4 Z" fill="#d4c79e"/><path d="M126,260 C139.3,254.7 183.7,251.3 218,250 C252.3,248.7 297.5,249.7 332,252 C366.5,254.3 405.7,258.3 425,264 C444.3,269.7 461.3,280.7 448,286 C434.7,291.3 385.5,294.3 345,296 C304.5,297.7 239.5,298.3 205,296 C170.5,293.7 151.2,288 138,282 C124.8,276 112.7,265.3 126,260 Z" fill="url(#nt-lencois-lag1)"/><ellipse cx="278" cy="272" rx="85" ry="3.8" fill="#80ede2" opacity="0.4"/></g>
-<path d="M309.4,266.1 q6.4,-0.8 12.8,0 t12.8,0 M276.8,278.5 q9.3,-0.8 18.5,0 t18.5,0 M288.7,272.1 q2.1,-0.8 4.1,0 t4.1,0 M196.4,278.8 q8.7,-0.8 17.4,0 t17.4,0 M299.4,259.5 q4.3,-0.8 8.6,0 t8.6,0 M367.3,283.7 q9.7,-0.8 19.4,0 t19.4,0 M320.7,268.5 q4,-0.8 7.9,0 t7.9,0 M202.6,277.3 q5,-0.8 10,0 t10,0 M357.4,265 q3,-0.8 5.9,0 t5.9,0 M176.4,266.4 q6,-0.8 12,0 t12,0 M361.3,285.5 q3.2,-0.8 6.4,0 t6.4,0 M326.3,274.9 q4.8,-0.8 9.5,0 t9.5,0 M390,278.5 q5,-0.8 9.9,0 t9.9,0 M362.7,271.3 q5.1,-0.8 10.2,0 t10.2,0 M274.2,272.3 q2.2,-0.8 4.4,0 t4.4,0 M360,267.1 q4.3,-0.8 8.6,0 t8.6,0 M199.1,275 q2.7,-0.8 5.4,0 t5.4,0 M162.5,264.3 q6.1,-0.8 12.1,0 t12.1,0 M325.7,279.7 q3.3,-0.8 6.5,0 t6.5,0 M267.8,280.1 q8.8,-0.8 17.7,0 t17.7,0" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.7" stroke-linecap="round"/>
-<g><path d="M288,278 C343.8,268.6 382.2,226 412,226 C431.7,245.8 424.3,273.8 451.4,300 L288,300Z" fill="#fdfbf5"/><path d="M412,226 C463.7,230.2 512.9,274.9 535,300 L451.4,300 C424.3,273.8 431.7,245.8 412,226Z" fill="#d4cbb6"/><path d="M412,226 C431.7,245.8 424.3,273.8 451.4,300" stroke="#ffffff" stroke-width="1.1" fill="none" opacity="0.8"/></g>
-<path d="M16,252 q18,-3.2 36,0.8 M29,249.6 q18,-3.2 36,0.8 M42,247.2 q18,-3.2 36,0.8 M55,244.8 q18,-3.2 36,0.8 M68,242.4 q18,-3.2 36,0.8 M81,240 q18,-3.2 36,0.8 M315,264 q18,-3.2 36,0.8 M329,262 q18,-3.2 36,0.8 M343,260 q18,-3.2 36,0.8 M357,258 q18,-3.2 36,0.8 M371,256 q18,-3.2 36,0.8" stroke="#dfd6c0" stroke-width="1.1" fill="none" opacity="0.8"/>
-<g><path d="M203.5,86.2 Q207.1,83.8 210,88 Q212.9,83.8 216.5,86.2 Q212.9,85.3 210,88.9 Q207.1,85.3 203.5,86.2Z" fill="#2b3440"/><path d="M226.5,78.5 Q229.5,76.4 232,80 Q234.5,76.4 237.5,78.5 Q234.5,77.7 232,80.8 Q229.5,77.7 226.5,78.5Z" fill="#2b3440"/><path d="M244.5,88.5 Q247.5,86.4 250,90 Q252.5,86.4 255.5,88.5 Q252.5,87.7 250,90.8 Q247.5,87.7 244.5,88.5Z" fill="#2b3440"/></g>
+    <defs>
+        <clipPath id="lencois-vp">
+            <rect width="480" height="300"/>
+        </clipPath>
+        <linearGradient id="lencois-sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#1558a8"/>
+            <stop offset="0.38" stop-color="#3f95d6"/>
+            <stop offset="0.76" stop-color="#92cef0"/>
+            <stop offset="1" stop-color="#e4f5fc"/>
+        </linearGradient>
+        <radialGradient id="lencois-sun-glow" cx="86" cy="46" r="115" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#ffffff" stop-opacity="0.98"/>
+            <stop offset="0.14" stop-color="#fffce6" stop-opacity="0.85"/>
+            <stop offset="0.35" stop-color="#fff2be" stop-opacity="0.42"/>
+            <stop offset="0.68" stop-color="#dcf2fc" stop-opacity="0.12"/>
+            <stop offset="1" stop-color="#dcf2fc" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="lencois-sea" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#0d5e82"/>
+            <stop offset="0.55" stop-color="#1b82a4"/>
+            <stop offset="1" stop-color="#48b6cc"/>
+        </linearGradient>
+        <linearGradient id="lencois-dune-lit-1" x1="0.2" y1="0" x2="0.8" y2="1">
+            <stop offset="0" stop-color="#ffffff"/>
+            <stop offset="0.55" stop-color="#faf5e8"/>
+            <stop offset="1" stop-color="#eadfc8"/>
+        </linearGradient>
+        <linearGradient id="lencois-dune-shd-1" x1="0" y1="0" x2="1" y2="0.9">
+            <stop offset="0" stop-color="#dcd0b8"/>
+            <stop offset="0.55" stop-color="#c6b89c"/>
+            <stop offset="1" stop-color="#b0a082"/>
+        </linearGradient>
+        <linearGradient id="lencois-dune-lit-2" x1="0.15" y1="0" x2="0.75" y2="1">
+            <stop offset="0" stop-color="#ffffff"/>
+            <stop offset="0.5" stop-color="#fcf8ee"/>
+            <stop offset="1" stop-color="#ede2ca"/>
+        </linearGradient>
+        <linearGradient id="lencois-dune-shd-2" x1="0" y1="0" x2="1" y2="0.85">
+            <stop offset="0" stop-color="#d6c8ae"/>
+            <stop offset="0.5" stop-color="#beae90"/>
+            <stop offset="1" stop-color="#a29072"/>
+        </linearGradient>
+        <linearGradient id="lencois-dune-lit-3" x1="0.1" y1="0" x2="0.65" y2="1">
+            <stop offset="0" stop-color="#ffffff"/>
+            <stop offset="0.45" stop-color="#fdfbf4"/>
+            <stop offset="1" stop-color="#efe5ce"/>
+        </linearGradient>
+        <linearGradient id="lencois-dune-shd-3" x1="0" y1="0" x2="0.9" y2="1">
+            <stop offset="0" stop-color="#d0c2a6"/>
+            <stop offset="0.55" stop-color="#b5a486"/>
+            <stop offset="1" stop-color="#968466"/>
+        </linearGradient>
+        <linearGradient id="lencois-lag-turq" x1="0" y1="0" x2="0.15" y2="1">
+            <stop offset="0" stop-color="#98faf0"/>
+            <stop offset="0.2" stop-color="#3ce2d4"/>
+            <stop offset="0.55" stop-color="#0eaab6"/>
+            <stop offset="0.85" stop-color="#07708a"/>
+            <stop offset="1" stop-color="#044c66"/>
+        </linearGradient>
+        <linearGradient id="lencois-lag-em" x1="0" y1="0" x2="0.1" y2="1">
+            <stop offset="0" stop-color="#9ef8dc"/>
+            <stop offset="0.22" stop-color="#32d8b4"/>
+            <stop offset="0.58" stop-color="#0c9e8c"/>
+            <stop offset="0.88" stop-color="#066866"/>
+            <stop offset="1" stop-color="#044448"/>
+        </linearGradient>
+        <linearGradient id="lencois-lag-fg" x1="0" y1="0" x2="0.08" y2="1">
+            <stop offset="0" stop-color="#8ef8ee"/>
+            <stop offset="0.16" stop-color="#2cd8ce"/>
+            <stop offset="0.48" stop-color="#0a9eb0"/>
+            <stop offset="0.78" stop-color="#056886"/>
+            <stop offset="1" stop-color="#033e58"/>
+        </linearGradient>
+        <linearGradient id="lencois-cloud-top" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffffff"/>
+            <stop offset="0.68" stop-color="#f5f9fc"/>
+            <stop offset="1" stop-color="#dae7f4"/>
+        </linearGradient>
+    </defs>
+    <g clip-path="url(#lencois-vp)">
+        <!-- Sky & Circular Solar Corona -->
+        <rect width="480" height="126" fill="url(#lencois-sky)"/>
+        <circle cx="86" cy="46" r="115" fill="url(#lencois-sun-glow)"/>
+        <circle cx="86" cy="46" r="22" fill="#fffbe0" opacity="0.42"/>
+        <circle cx="86" cy="46" r="13.5" fill="#ffffff" opacity="0.98"/>
+
+        <!-- Sculpted Trade-Wind Cumulus Clouds -->
+        <g opacity="0.92">
+            <path d="M242,59 C234,59 232,53 239,50 C243,48 248,49 252,45 C257,39 266,36 274,39 C279,30 291,24 303,27 C310,19 325,17 335,24 C344,21 356,26 360,35 C369,34 378,39 380,46 C387,47 391,52 388,56 C385,59 372,60 354,60 L259,60 C249,60 245,59 242,59 Z" fill="url(#lencois-cloud-top)"/>
+            <path d="M254,46 C262,40 272,40 278,45 C284,35 298,31 307,38 C316,28 331,28 339,37 C348,33 359,37 363,45 C371,44 378,48 380,53 C366,51 346,50 316,50 C286,50 264,52 248,54 C249,50 251,48 254,46 Z" fill="#ffffff" opacity="0.88"/>
+            <path d="M239,56 C258,53 288,52 318,52 C348,52 372,54 387,56 C384,59 370,60 349,60 L262,60 C246,60 240,58 239,56 Z" fill="#c5d8ec" opacity="0.65"/>
+        </g>
+        <g opacity="0.84">
+            <path d="M108,71 C102,71 100,67 105,64 C109,62 113,62 117,58 C122,52 131,50 138,53 C144,45 156,43 165,49 C172,46 182,50 185,57 C192,57 198,61 197,66 C196,70 186,71 172,71 L120,71 C113,71 110,71 108,71 Z" fill="url(#lencois-cloud-top)"/>
+            <path d="M105,68 C122,65 146,65 168,65 C182,65 192,66 196,68 C193,70 184,71 170,71 L118,71 C109,71 106,70 105,68 Z" fill="#c8daec" opacity="0.58"/>
+        </g>
+        <g opacity="0.74">
+            <path d="M392,78 C387,78 386,74 391,72 C396,70 401,66 408,65 C414,59 425,58 432,63 C439,61 448,64 451,70 C457,71 461,74 459,77 C457,79 446,79 432,79 L400,79 Z" fill="url(#lencois-cloud-top)"/>
+        </g>
+
+        <!-- Atlantic Ocean Horizon & Restinga Mangrove Oasis Fringe -->
+        <rect x="0" y="114" width="480" height="14" fill="url(#lencois-sea)"/>
+        <path d="M0,114.8 L480,114.8" stroke="#88ecfa" stroke-width="0.8" opacity="0.7"/>
+        <path d="M28,118 L135,118 M195,117.5 L315,117.5 M365,118.5 L458,118.5" stroke="#ffffff" stroke-width="0.7" opacity="0.6" stroke-linecap="round"/>
+        <!-- White coastal surf line where dunes meet Atlantic -->
+        <path d="M0,122 Q120,120.5 240,122 T480,121.5" stroke="#ffffff" stroke-width="1.1" fill="none" opacity="0.75"/>
+        <!-- Distant Caburé Restinga Buriti-Palm Oasis on Right Horizon -->
+        <path d="M362,123 C384,119 418,118 452,119.5 C466,120 475,121 480,122 L480,126 L362,126 Z" fill="#2d5e4a"/>
+        <path d="M370,123 C388,120 416,119.5 446,120.5 L446,123.5 L370,123.5 Z" fill="#467e62" opacity="0.75"/>
+
+        <!-- Base White-Quartz Sand Sheet -->
+        <rect x="0" y="122" width="480" height="178" fill="#f4ecda"/>
+
+        <!-- ============================================================== -->
+        <!-- TIER 1: Distant Horizon Barchanoid Ridges & Far Lagoons        -->
+        <!-- ============================================================== -->
+        <!-- Far Left-Center Dune Ridge -->
+        <path d="M-10,144 C18,139 48,122 76,120 C94,127 92,142 114,166 L-10,166 Z" fill="url(#lencois-dune-lit-1)"/>
+        <path d="M76,120 C118,122 154,138 178,166 L114,166 C92,142 94,127 76,120 Z" fill="url(#lencois-dune-shd-1)"/>
+        <path d="M76,120 C94,127 92,142 114,166" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.88"/>
+
+        <!-- Far Center-Right Dune Ridge -->
+        <path d="M142,146 C182,139 218,120 248,118 C268,126 264,143 288,168 L142,168 Z" fill="url(#lencois-dune-lit-1)"/>
+        <path d="M248,118 C294,120 336,138 362,168 L288,168 C264,143 268,126 248,118 Z" fill="url(#lencois-dune-shd-1)"/>
+        <path d="M248,118 C268,126 264,143 288,168" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.88"/>
+
+        <!-- Far Right Dune Ridge -->
+        <path d="M324,145 C362,138 396,121 424,119 C442,127 438,143 460,168 L324,168 Z" fill="url(#lencois-dune-lit-1)"/>
+        <path d="M424,119 C454,121 474,136 490,168 L460,168 C438,143 442,127 424,119 Z" fill="url(#lencois-dune-shd-1)"/>
+        <path d="M424,119 C442,127 438,143 460,168" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.88"/>
+
+        <!-- Far Interdune Lagoon 1 (Nested at foot of Far Left-Center slip-face, occluded below by Tier 2) -->
+        <path d="M44,151 C64,144 108,141 148,143 C182,145 204,150 208,157 C212,164 188,172 146,173 C104,174 58,170 42,163 C32,158 32,155 44,151 Z" fill="#d8c69c"/>
+        <path d="M48,152.5 C68,146 110,143 148,145 C180,146.5 200,151 204,157.5 C208,164 184,171 144,172 C104,173 60,169 46,162.5 C36,158 36,156 48,152.5 Z" fill="url(#lencois-lag-turq)"/>
+        <path d="M52,151.5 C82,145 134,144 182,148" stroke="#cbfcf8" stroke-width="0.9" fill="none" opacity="0.75"/>
+        <path d="M84,154 Q106,152.5 128,154 M136,157 Q156,155.5 176,157" stroke="#ffffff" stroke-width="0.75" fill="none" opacity="0.6" stroke-linecap="round"/>
+
+        <!-- Far Interdune Lagoon 2 (Nested at foot of Far Center-Right slip-face, occluded below by Tier 2) -->
+        <path d="M222,150 C246,143 294,140 336,142 C372,144 396,150 400,157 C404,164 378,172 334,173 C290,174 238,170 220,162 C210,157 210,154 222,150 Z" fill="#d8c69c"/>
+        <path d="M226,151.5 C250,145 296,142 336,144 C370,145.5 392,151 396,157.5 C400,164 374,171 332,172 C290,173 240,169 224,161.5 C214,157 214,155 226,151.5 Z" fill="url(#lencois-lag-em)"/>
+        <path d="M230,150.5 C266,144 322,143 374,148" stroke="#ccf8ea" stroke-width="0.9" fill="none" opacity="0.75"/>
+        <path d="M268,153 Q292,151.5 316,153 M324,156 Q346,154.5 368,156" stroke="#ffffff" stroke-width="0.75" fill="none" opacity="0.6" stroke-linecap="round"/>
+
+        <!-- ============================================================== -->
+        <!-- TIER 2: Midground Sweeping Barchan Ridges & Lunate Lagoons     -->
+        <!-- ============================================================== -->
+        <!-- Mid Left Barchan Dune (rises in front of Far Lagoon 1, overlapping its front shore!) -->
+        <path d="M-15,190 C28,180 68,148 104,144 C126,158 118,184 148,228 L-15,228 Z" fill="url(#lencois-dune-lit-2)"/>
+        <path d="M104,144 C156,148 202,178 232,228 L148,228 C118,184 126,158 104,144 Z" fill="url(#lencois-dune-shd-2)"/>
+        <path d="M104,144 C126,158 118,184 148,228" stroke="#ffffff" stroke-width="1.2" fill="none" opacity="0.92"/>
+
+        <!-- Mid Center-Right Barchan Dune (rises in front of Far Lagoon 2, overlapping its front shore!) -->
+        <path d="M204,194 C254,184 298,148 336,144 C360,160 350,188 382,232 L204,232 Z" fill="url(#lencois-dune-lit-2)"/>
+        <path d="M336,144 C388,148 436,180 466,232 L382,232 C350,188 360,160 336,144 Z" fill="url(#lencois-dune-shd-2)"/>
+        <path d="M336,144 C360,160 350,188 382,232" stroke="#ffffff" stroke-width="1.2" fill="none" opacity="0.92"/>
+
+        <!-- Mid Far-Right Shoulder Dune -->
+        <path d="M398,192 C432,184 458,158 482,155 L490,155 L490,232 L398,232 Z" fill="url(#lencois-dune-lit-2)"/>
+
+        <!-- Midground Emerald Lagoon (Lagoa Bonita) — Sinuous crescent basin nestled directly against slip-face -->
+        <g>
+            <!-- Damp ochre sand shore along back and left/right horns -->
+            <path d="M78,194 C98,180 148,172 202,174 C256,176 298,186 308,200 C316,212 292,228 242,232 C192,236 122,232 90,218 C68,209 64,203 78,194 Z" fill="#cbb68c"/>
+            <!-- Shallow golden submerged shelf -->
+            <path d="M82,195.5 C102,182 150,174.5 202,176.5 C254,178.5 294,188 303,201 C310,212 288,226.5 240,230 C192,233.5 124,230 94,217 C73,208 69,204 82,195.5 Z" fill="#e6d4a6"/>
+            <!-- Main emerald lagoon water -->
+            <path d="M87,197 C107,184.5 153,177.5 202,179.5 C251,181.5 289,190 298,202 C305,212 284,225 238,228.5 C192,232 127,228.5 98,216 C78,207.5 74,205 87,197 Z" fill="url(#lencois-lag-em)"/>
+            <!-- Submerged slip-face sand fan entering water from left dune shadow slope -->
+            <path d="M104,188 C134,181 176,181 200,188 C216,193 202,204 168,206 C134,208 98,203 92,196 C88,192 92,190 104,188 Z" fill="#82f0d8" opacity="0.5"/>
+            <!-- Deep emerald-jade channel -->
+            <path d="M158,190 C202,186 254,191 276,201 C290,208 272,220 232,223 C192,226 144,221 130,211 C120,203 130,193 158,190 Z" fill="#033a3e" opacity="0.42"/>
+            <!-- Crisp foam waterline along upper shore -->
+            <path d="M88,196.5 C116,183 168,177 224,180.5 C264,183 290,191 297,201" stroke="#dcfff6" stroke-width="1.1" fill="none" opacity="0.82"/>
+            <!-- Specular ripples -->
+            <path d="M124,195 Q146,193 168,195 M184,193 Q210,191 236,193 M148,203 Q178,201 208,203 M222,201 Q246,199.5 270,201 M112,206 Q132,204.5 152,206 M176,211 Q206,209 236,211" stroke="#ffffff" stroke-width="0.9" fill="none" opacity="0.62" stroke-linecap="round"/>
+        </g>
+
+        <!-- Midground Right Lagoon — Nested behind Foreground Right Dune -->
+        <g>
+            <path d="M332,194 C350,183 392,179 432,182 C464,184 484,192 486,204 C488,216 464,228 426,230 C388,232 346,227 330,216 C318,208 318,202 332,194 Z" fill="#cbb68c"/>
+            <path d="M336,196 C354,185.5 394,181.5 432,184.5 C462,186.5 480,194 482,205 C484,216 461,226.5 424,228.5 C387,230.5 348,225.5 334,215 C323,207.5 323,203.5 336,196 Z" fill="url(#lencois-lag-turq)"/>
+            <path d="M362,194 C394,189 436,191 458,200 C470,205 456,217 424,220 C392,223 356,218 346,209 C340,203 344,197 362,194 Z" fill="#044258" opacity="0.38"/>
+            <path d="M338,195 C364,185 408,182 452,187" stroke="#d0fcf8" stroke-width="1" fill="none" opacity="0.78"/>
+            <path d="M364,199 Q386,197.5 408,199 M414,204 Q436,202.5 458,204 M356,208 Q378,206.5 400,208" stroke="#ffffff" stroke-width="0.85" fill="none" opacity="0.6" stroke-linecap="round"/>
+        </g>
+
+        <!-- ============================================================== -->
+        <!-- TIER 3: Monumental Foreground Dunes Occluding Mid Lagoons      -->
+        <!--         & Framing the Grand Foreground Lagoa Azul              -->
+        <!-- ============================================================== -->
+        <!-- Foreground Left Sweeping Barchan Dune (rises in front of Lagoa Bonita, naturally occluding its lower left shore!) -->
+        <path d="M-15,248 C32,236 82,192 126,186 C156,208 142,248 182,304 L-15,304 Z" fill="url(#lencois-dune-lit-3)"/>
+        <path d="M126,186 C194,193 254,242 292,304 L182,304 C142,248 156,208 126,186 Z" fill="url(#lencois-dune-shd-3)"/>
+        <path d="M126,186 C156,208 142,248 182,304" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.96"/>
+
+        <!-- Wind-sculpted aeolian ripples on Foreground Left sunlit slope -->
+        <g stroke="#ded0b2" stroke-width="0.95" fill="none" opacity="0.8" stroke-linecap="round">
+            <path d="M4,254 C28,248 54,249 78,255"/>
+            <path d="M14,245 C40,239 66,240 90,246"/>
+            <path d="M26,236 C52,230 78,231 102,237"/>
+            <path d="M38,227 C64,221 90,222 112,228"/>
+            <path d="M52,218 C76,213 100,214 120,219"/>
+            <path d="M68,209 C88,205 108,206 126,210"/>
+            <path d="M84,200 C102,197 118,198 132,201"/>
+            <path d="M0,264 C30,258 62,260 92,266"/>
+            <path d="M8,275 C42,268 76,270 108,277"/>
+            <path d="M18,286 C54,279 92,281 128,289"/>
+            <path d="M30,296 C68,290 108,292 146,299"/>
+        </g>
+        <g stroke="#ffffff" stroke-width="0.7" fill="none" opacity="0.72" stroke-linecap="round">
+            <path d="M4,253 C28,247 54,248 78,254"/>
+            <path d="M14,244 C40,238 66,239 90,245"/>
+            <path d="M26,235 C52,229 78,230 102,236"/>
+            <path d="M38,226 C64,220 90,221 112,227"/>
+            <path d="M52,217 C76,212 100,213 120,218"/>
+            <path d="M0,263 C30,257 62,259 92,265"/>
+            <path d="M8,274 C42,267 76,269 108,276"/>
+        </g>
+
+        <!-- Foreground Center-Right Dune Ridge (separating Midground Lagoons from Grand Foreground Lagoon) -->
+        <path d="M196,244 C248,232 296,196 338,190 C364,208 354,240 388,284 L196,284 Z" fill="url(#lencois-dune-lit-2)"/>
+        <path d="M338,190 C394,196 446,234 478,284 L388,284 C354,240 364,208 338,190 Z" fill="url(#lencois-dune-shd-2)"/>
+        <path d="M338,190 C364,208 354,240 388,284" stroke="#ffffff" stroke-width="1.3" fill="none" opacity="0.92"/>
+
+        <!-- Grand Foreground Lagoon (Lagoa Azul) — Sinuous Lunate Basin Nested in Foreground Trough -->
+        <g>
+            <!-- Damp dark-sand shoreline bevel -->
+            <path d="M132,250 C156,234 218,226 286,228 C354,230 422,240 448,254 C470,266 462,286 426,294 C390,302 312,304 242,302 C172,300 132,288 120,272 C112,261 114,260 132,250 Z" fill="#c2ab7e"/>
+            <!-- Shallow golden-quartz beach shelf -->
+            <path d="M136,252 C160,236.5 220,229 286,231 C352,233 418,242.5 443,256 C464,267 456,285 422,292.5 C388,300 310,302 242,300 C174,298 136,286.5 125,271.5 C117,261 119,261 136,252 Z" fill="#e8d6a6"/>
+            <!-- Luminous turquoise-to-sapphire water body -->
+            <path d="M141,254 C165,239.5 223,232 286,234 C349,236 413,245 437,258 C457,268.5 450,284 417,291 C384,298 308,300 242,298 C176,296 140,285 130,271 C122,261 124,262 141,254 Z" fill="url(#lencois-lag-fg)"/>
+
+            <!-- Shallow turquoise sandbars extending from dune bases into the crystal water -->
+            <path d="M148,255 C182,243 238,239 272,246 C298,251 286,264 248,268 C210,272 162,269 144,262 C136,258 138,258 148,255 Z" fill="#82faef" opacity="0.54"/>
+            <path d="M336,246 C374,245 414,251 430,260 C442,267 428,276 396,277 C364,278 328,271 320,262 C314,255 318,247 336,246 Z" fill="#82faef" opacity="0.44"/>
+
+            <!-- Deep sapphire trench in heart of lagoon -->
+            <path d="M216,252 C272,247 346,251 388,262 C418,270 410,284 366,289 C322,294 238,293 192,284 C156,277 170,256 216,252 Z" fill="#02344d" opacity="0.48"/>
+
+            <!-- Sub-surface Caustic Light Mesh & Submerged Sand Ripples -->
+            <g stroke="#74f6ec" stroke-width="0.9" fill="none" opacity="0.45" stroke-linecap="round">
+                <path d="M166,258 C192,254 220,255 246,259 C272,255 298,256 324,260"/>
+                <path d="M182,265 C210,261 240,262 268,266 C296,262 324,263 352,267"/>
+                <path d="M156,272 C188,268 222,269 254,273 C286,269 318,270 350,274"/>
+                <path d="M204,279 C240,275 276,276 312,280 C344,276 376,277 406,281"/>
+                <path d="M238,286 C274,282 312,283 348,287"/>
+            </g>
+
+            <!-- Crisp White Foam Waterline Along Upper Shore -->
+            <path d="M142,253.5 C172,238.5 234,231.5 302,234.5 C364,237 416,246 439,258.5" stroke="#e8fffb" stroke-width="1.25" fill="none" opacity="0.88"/>
+
+            <!-- Specular Sun Glints & Wind Ripples -->
+            <g stroke="#ffffff" stroke-width="1" fill="none" opacity="0.78" stroke-linecap="round">
+                <path d="M174,250 q9,-1 18,0 t18,0"/>
+                <path d="M226,246 q12,-1 24,0 t24,0"/>
+                <path d="M292,248 q10,-1 20,0 t20,0"/>
+                <path d="M192,258 q13,-1 26,0 t26,0"/>
+                <path d="M266,257 q15,-1 30,0 t30,0"/>
+                <path d="M348,256 q11,-1 22,0 t22,0"/>
+                <path d="M162,266 q10,-1 20,0 t20,0"/>
+                <path d="M232,267 q16,-1 32,0 t32,0"/>
+                <path d="M320,265 q13,-1 26,0 t26,0"/>
+                <path d="M388,265 q9,-1 18,0 t18,0"/>
+                <path d="M202,275 q12,-1 24,0 t24,0"/>
+                <path d="M278,276 q17,-1 34,0 t34,0"/>
+                <path d="M362,274 q12,-1 24,0 t24,0"/>
+                <path d="M242,284 q14,-1 28,0 t28,0"/>
+                <path d="M326,283 q11,-1 22,0 t22,0"/>
+            </g>
+        </g>
+
+        <!-- Foreground Bottom-Left & Bottom-Right Dune Ridges Partially Occluding Front of Lagoa Azul -->
+        <path d="M72,304 C112,292 148,276 176,274 C196,282 208,292 224,304 Z" fill="url(#lencois-dune-lit-3)"/>
+        <path d="M176,274 C196,282 208,292 224,304" stroke="#ffffff" stroke-width="1.2" fill="none" opacity="0.9"/>
+
+        <path d="M298,304 C354,288 404,238 442,230 C462,250 454,278 476,304 L298,304 Z" fill="url(#lencois-dune-lit-3)"/>
+        <path d="M442,230 C468,235 484,258 492,304 L476,304 C454,278 462,250 442,230 Z" fill="url(#lencois-dune-shd-3)"/>
+        <path d="M442,230 C462,250 454,278 476,304" stroke="#ffffff" stroke-width="1.4" fill="none" opacity="0.95"/>
+
+        <!-- Wind ripples on Foreground Right Dune -->
+        <g stroke="#ded0b2" stroke-width="0.9" fill="none" opacity="0.8" stroke-linecap="round">
+            <path d="M336,294 C362,287 388,288 414,294"/>
+            <path d="M354,283 C378,276 404,277 426,283"/>
+            <path d="M372,272 C394,265 418,266 438,272"/>
+            <path d="M390,261 C410,255 430,256 446,261"/>
+            <path d="M408,250 C424,245 438,246 452,250"/>
+        </g>
+
+        <!-- Coastal Sedge & Buriti Grass Tufts at Left Lagoon Margin -->
+        <g stroke="#4e7342" stroke-width="1.15" fill="none" stroke-linecap="round">
+            <path d="M118,274 Q111,262 104,257 M119,274 Q118,260 115,253 M120,274 Q125,262 131,257 M118,274 Q108,267 100,265"/>
+            <path d="M128,281 Q122,271 116,267 M129,281 Q129,269 128,263 M130,281 Q136,272 142,267"/>
+            <path d="M96,285 Q89,275 82,270 M97,285 Q96,273 94,267 M98,285 Q104,275 110,270"/>
+        </g>
+
+        <!-- Flock of Scarlet Ibis (Eudocimus ruber) Gliding Across the Sky -->
+        <g fill="#d82e3f">
+            <path d="M196,82 C200,77.5 205,78.5 208.5,83 C212,78.5 217,77.5 221,82 C216.5,80.2 212,81.2 208.5,85.2 C205,81.2 200.5,80.2 196,82 Z"/>
+            <path d="M222,74 C225.5,70 230,71 233,75 C236,71 240.5,70 244,74 C240,72.5 236,73.3 233,76.8 C230,73.3 226,72.5 222,74 Z"/>
+            <path d="M246,81 C249,77.5 253,78.5 255.5,81.8 C258,78.5 262,77.5 265,81 C261.5,79.7 258,80.5 255.5,83.5 C253,80.5 249.5,79.7 246,81 Z"/>
+            <path d="M268,71 C270.8,68 274,68.8 276.5,71.6 C279,68.8 282.2,68 285,71 C282,69.8 279,70.5 276.5,73.2 C274,70.5 271,69.8 268,71 Z"/>
+            <path d="M289,77 C291.5,74.5 294.2,75.2 296.2,77.5 C298.2,75.2 301,74.5 303.5,77 C300.8,76 298.2,76.6 296.2,78.8 C294.2,76.6 291.6,76 289,77 Z"/>
+        </g>
+    </g>
 </svg>
