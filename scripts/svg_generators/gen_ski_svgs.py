@@ -34,20 +34,20 @@ def build_ski_height_chart(lang: str) -> str:
     )
     peaks_meta = (
         [
-            (145, 58, "4,850 m", 40, "Pico Soberano", "Waikiki Andes", False),
-            (295, 82, "4,420 m", 68, "Condor Glacier", "Waikiki Andes", False),
-            (445, 112, "3,883 m", 98, "Zermatt Glacier", "Switzerland (Ref.)", True),
-            (595, 150, "3,200 m", 130, "Monte Rosa Dome", "Waikiki Andes", False),
-            (745, 152, "3,180 m", 136, "Haiti Glacier Crown", "Haiti Island", False),
+            (145, 58, "4,850 m", 40, "Pico Soberano", "Grand Andes", False),
+            (295, 82, "4,420 m", 68, "Condor Glacier", "Grand Andes", False),
+            (445, 86, "4,360 m", 72, "Cerro Cristal", "Nevado Cirque", False),
+            (595, 112, "3,883 m", 98, "Zermatt Glacier", "Switzerland (Ref.)", True),
+            (745, 152, "3,180 m", 136, "Haiti Glacier Crown", "Haiti Highlands", False),
             (870, 176, "2,738 m", 162, "Courchevel", "France (Ref.)", True),
         ]
         if lang == "en"
         else [
-            (145, 58, "4850 m", 40, "Pico Soberano", "Waikiki Andok", False),
-            (295, 82, "4420 m", 68, "Condor Gleccser", "Waikiki Andok", False),
-            (445, 112, "3883 m", 98, "Zermatt Gleccser", "Svájc (Ref.)", True),
-            (595, 150, "3200 m", 130, "Monte Rosa Kupola", "Waikiki Andok", False),
-            (745, 152, "3180 m", 136, "Haiti Gleccserkorona", "Haiti-sziget", False),
+            (145, 58, "4850 m", 40, "Pico Soberano", "Magas-Andok", False),
+            (295, 82, "4420 m", 68, "Condor Gleccser", "Magas-Andok", False),
+            (445, 86, "4360 m", 72, "Cerro Cristal", "Nevado Katlan", False),
+            (595, 112, "3883 m", 98, "Zermatt Gleccser", "Svájc (Ref.)", True),
+            (745, 152, "3180 m", 136, "Haiti Gleccserkorona", "Haiti Magasföld", False),
             (870, 176, "2738 m", 162, "Courchevel", "Franciaország (Ref.)", True),
         ]
     )
@@ -109,7 +109,7 @@ def build_ski_height_chart(lang: str) -> str:
                 o.append(f'<circle cx="{cx}" cy="{py - 6}" r="4" class="f-coral pulse" />')
             elif idx == 1:
                 o.append(f'<rect x="{cx - 9}" y="{py - 3}" width="18" height="3.5" rx="1" fill="#fbbf24" />')
-            elif idx == 3:
+            elif idx == 2:
                 o.append(f'<ellipse cx="{cx}" cy="{py}" rx="12" ry="3.5" fill="#0f172a" />')
                 o.append(f'<path d="M{cx - 10},{py} A10,9 0 0,1 {cx + 10},{py} Z" fill="#38bdf8" stroke="#fde68a" stroke-width="1.2" />')
         o.append("</g>")
