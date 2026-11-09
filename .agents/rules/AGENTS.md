@@ -5,6 +5,7 @@
 1. **Prefer "and" / "és" over ampersand ("&")**: Use the word "and" (in English) and "és" (in Hungarian) instead of the "&" symbol in titles, section headings, card headers, labels, and copy.
 2. **Alternating Section Styles**: Top-level page sections must alternate between normal and `light-bg` styles.
 3. **Realistic Worldbuilding and Plausible Technology (No Too Many Sci-Fi Elements)**: Ground worldbuilding, institutions, defense, infrastructure, and aerospace in realistic, plausible science and engineering. Avoid far-fetched or fantasy tropes across all pages (e.g. no anti-gravity, flying stratospheric airborne supercarriers, or "Skynet" references; avoid interstellar claims for current spaceflight). **Canonical Lore Exceptions**: Retain the canonical Waikiki technologies: the **Intermedic Elixir** (life-extension elixir), **Palladium robots** (and miniature palladium reactors), and **Fusion reactors** (fusion energy grid and facilities).
+4. **Locale Synchronization Precedence**: For locale synchronization (`locale-sync`), keep currently staged/active changes as the source of truth. If a factual difference (e.g., metrics, numbers, dates, technical specifications, or lore facts) between the languages has no staged change, treat the Hungarian (`hu/`) version as the source of truth.
 
 ## Graphics, SVGs and Icon Guidelines
 

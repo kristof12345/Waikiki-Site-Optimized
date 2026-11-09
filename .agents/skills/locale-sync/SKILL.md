@@ -68,6 +68,9 @@ Review the reported diff chunks, modified cards, and any flagged discrepancies.
 
 ### Step 2: Synchronize Counterpart HTML Content
 Open the counterpart file and apply the corresponding additions, updates, or removals:
+- **Source of Truth Precedence**:
+  1. Currently staged (or active uncommitted) changes serve as the primary source of truth.
+  2. If a factual difference (metrics, numbers, dates, technical specifications, or lore facts) exists between the languages without a staged change on either side, treat the Hungarian (`hu/`) version as the source of truth.
 - **Prose & Messaging**: Translate contextually and idiomatically to preserve tone, nuance, and dignified state register, avoiding robotic or literal word-for-word translation.
 - **Titles & Headings**:
   - Hungarian: Sentence case (capitalizing only the first word and proper nouns).
