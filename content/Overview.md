@@ -1185,8 +1185,8 @@ A sűrű állami teendők mellett Raimondo és Selena szakít időt a személyes
 
 2016. szeptember 1-jén Raimondo, Bailey és Selena megnyitották Waikiki első vállalati egyetemét, az Apple által finanszírozott **Advanced Programming University**-t. Ugyanebben az évben Selena bejelentette saját jótékonysági bolthálózatának, a **Selena Gomez Stores**-nak az elindítását, amelynek első üzlete Nova Aurelia belvárosában nyílt meg.
 
-### Védelmi fejlesztések: Skynet és TBMDS
-Raimondo vezetése alatt a szenátus megszavazta a védelmi költségvetés emelését a fejlett **Skynet** védelmi rendszer és a **Transborder Missile Defense System (TBMDS)** megvalósítására. Ez a korszerű rendszer képes az interkontinentális rakéták elfogására a Föld szinte bármely pontján.
+### Védelmi fejlesztések: SkyGuard és TBMDS
+Raimondo vezetése alatt a szenátus megszavazta a védelmi költségvetés emelését a fejlett **SkyGuard** integrált légvédelmi rendszer és a **Transborder Missile Defense System (TBMDS)** megvalósítására. Ez a korszerű rendszer képes az interkontinentális rakéták korai észlelésére és elfogására.
 
 ## Selena családja és Gregg Sulkin
 

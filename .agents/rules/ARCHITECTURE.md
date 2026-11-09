@@ -139,7 +139,7 @@ The front-end engine is built in native vanilla ES6+, completely event-driven an
 ## 5. Performance, Accessibility & SEO
 
 - **CSS Bundling**: Core design system consolidated in `css/common.css` with page-specific modular sheets (`css/society.css`, `css/economy.css`, etc.) for optimal browser caching.
-- **Resource Hints**: Google Fonts preconnected with `crossorigin`; hero imagery loaded with `fetchpriority="high"` and below-the-fold media tagged with `loading="lazy"`.
+- **Resource Hints**: Google Fonts preconnected with `crossorigin`; hero imagery loaded with `fetchpriority="high"`; all brand marks and media retain the browser empty default (no explicit `loading` attribute).
 - **Search Engine Optimization**: Every page features localized metadata (`og:title`, `og:description`, `og:locale`, `canonical`, and `hreflang` alternates).
 - **Reduced Motion Support**: Fully respects `@media (prefers-reduced-motion: reduce)` by immediately rendering all split-word, curtain, and counter states in their completed positions.
 
