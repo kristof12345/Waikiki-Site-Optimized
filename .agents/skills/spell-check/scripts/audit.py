@@ -156,6 +156,8 @@ WHITELIST = {
     "soberano", "pininfarina", "pérignon", "cryo-grid", "cryo-glacier", "cryo-dome",
     "cryo-recovery", "cryo-cooled", "cryo-cooling", "tiltrotor", "tiltrotors", "heli-hub",
     "heliski", "snowpark", "superpipe", "microgrid", "microgrids",
+    "nevado", "cerro", "pinos", "cristal-blanco", "aguja", "blanco", "espejo",
+    "termas", "bosque", "azuei", "slopestyle", "pistenbully", "tricable", "geotextile", "gazex",
 
     # Space & Advanced Aeronautics
     "wsa", "its", "nrho", "retropropulsion", "aerospike", "skyport",

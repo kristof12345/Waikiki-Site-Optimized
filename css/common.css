@@ -2357,7 +2357,7 @@ html.header-hidden .subnav {
 .site-footer {
   position: relative;
   margin-top: 90px;
-  padding: clamp(4rem, 8vw, 6rem) var(--gutter) 2rem;
+  padding: clamp(2rem, 8vw, 4rem) var(--gutter) 2rem;
   background: var(--primary-dark);
   color: rgba(251, 247, 240, 0.72);
   font-size: 0.95rem;

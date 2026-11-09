@@ -262,8 +262,7 @@ class Page:
     def brand_mark(self, curtain: bool = False, footer: bool = False) -> str:
         src = self.asset("icons/logo.svg")
         size = 64 if curtain else 44
-        loading = "lazy" if footer else "eager"
-        return f'<img class="brand-mark" src="{src}" alt="Waikiki" width="{size}" height="{size}" loading="{loading}" />'
+        return f'<img class="brand-mark" src="{src}" alt="Waikiki" width="{size}" height="{size}" />'
 
 # --------------------------------------------------------------------------- #
 # Chrome builders
