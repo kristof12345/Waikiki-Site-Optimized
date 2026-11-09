@@ -163,7 +163,7 @@ WHITELIST = {
     "wsa", "its", "nrho", "retropropulsion", "aerospike", "skyport",
 
     # Antiquity & Regional Lore Additions
-    "portus", "mesoamerican"
+    "portus", "mesoamerican", "gaianova", "gaianova's", "staystrongwaikiki", "casa", "attunement"
 }
 
 # --------------------------------------------------------------------------- #

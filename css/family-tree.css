@@ -297,11 +297,6 @@
     font-size: 1.25rem;
 }
 
-.tree-node-dates {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-}
-
 .tree-node-office {
     font-size: 0.78rem;
     color: var(--text);
@@ -795,7 +790,6 @@
     color: var(--dark-heading);
 }
 
-.body-dark .tree-node-dates,
 .body-dark .tree-node-office,
 .body-dark .heirs-body p,
 .body-dark .pillar-card p,
@@ -1075,10 +1069,6 @@
 
     .tree-node-role {
         font-size: 0.68rem;
-    }
-
-    .tree-node-dates {
-        font-size: 0.75rem;
     }
 
     .tree-node-office {
