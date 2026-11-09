@@ -487,14 +487,16 @@ def draw_funicular(a, b, dur=9.0):
 
 
 # ==============================================================================
-# LABELS, PINS AND COMPASS
+# LABELS AND HOTSPOT PINS
 # ==============================================================================
 def peak_label(x, y, en_name, hu_name, accent="#dfba76"):
     """Peak name pill (the only text on the maps). Width fits EN and HU."""
     w = max(len(en_name), len(hu_name)) * 6.4 + 30
     return [
+        f'<g class="peak-label">',
         f'<rect x="{n(x - w / 2)}" y="{n(y - 9)}" width="{n(w)}" height="18" rx="9" fill="#071930" opacity="0.88" stroke="{accent}" stroke-width="1" />',
-        f'<text x="{n(x)}" y="{n(y + 3.3)}" fill="#fcedc7" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">▲ {en_name}</text>',
+        f'<text class="peak-label-text" x="{n(x)}" y="{n(y + 3.3)}" fill="#fcedc7" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">▲ {en_name}</text>',
+        f'</g>',
     ]
 
 
@@ -512,17 +514,6 @@ def hotspot_pin(idx, x, y, pin_dx=0, pin_dy=-26, active=False):
         f'<text fill="#ffffff" font-family="sans-serif" font-size="9.5" font-weight="800" text-anchor="middle" dominant-baseline="central">{idx}</text>',
         "</g>",
     ]
-
-
-COMPASS = [
-    '<g transform="translate(1158, 42)">',
-    '<circle r="20" fill="#071930" opacity="0.8" stroke="#dfba76" stroke-width="1" />',
-    '<polygon points="0,-15 3.5,-3 0,-6 -3.5,-3" fill="#e3735a" />',
-    '<polygon points="0,15 3.5,3 0,6 -3.5,3" fill="#93c5fd" />',
-    '<polygon points="-15,0 -3,-3.5 -6,0 -3,3.5" fill="#93c5fd" />',
-    '<polygon points="15,0 3,-3.5 6,0 3,3.5" fill="#93c5fd" />',
-    "</g>",
-]
 
 
 def place(x, y, scale, inner, comment):
@@ -953,7 +944,6 @@ def build_andes_svg() -> str:
     o += peak_label(pico[0], 92, "PICO SOBERANO", "PICO SOBERANO")
     o += peak_label(condor[0], 127, "CONDOR PEAK", "CONDOR-CSÚCS", "#5ce1cf")
     o += peak_label(rosa[0], 122, "MONTE ROSA", "MONTE ROSA")
-    o += COMPASS
     spots = [
         (1, pico, 40, -14, True),
         (2, rosa, 44, -8, False),
@@ -1181,7 +1171,6 @@ def build_nevado_svg() -> str:
     o += peak_label(cristal[0], 90, "CERRO CRISTAL", "CERRO CRISTAL")
     o += peak_label(aguja[0], 130, "AGUJA REAL", "AGUJA REAL", "#5ce1cf")
     o += peak_label(blanco[0], 116, "NEVADO BLANCO", "NEVADO BLANCO")
-    o += COMPASS
     spots = [
         (1, cristal, 42, -14, True),
         (2, blanco, 44, -10, False),
@@ -1494,7 +1483,6 @@ def build_haiti_svg() -> str:
     o += cloud(320, 330, 0.9, 45, "44s") + cloud(760, 300, 1.0, -40, "50s") + cloud(1080, 350, 0.8, 35, "38s")
     o += peak_label(crown[0], 120, "GLACIER CROWN", "GLECCSERKORONA")
     o += peak_label(dome[0], 146, "LOMA ESMERALDA", "ESMERALDA-CSÚCS", "#5ce1cf")
-    o += COMPASS
     spots = [
         (1, crown, -50, -6, True),
         (2, dome, 52, -6, False),

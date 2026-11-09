@@ -1183,7 +1183,8 @@
             chips.forEach((other) => other.setAttribute('aria-pressed', String(other === chip)));
 
             items.forEach((item, index) => {
-                const match = key === 'all' || (item.dataset.cat || '').split(/\s+/).includes(key);
+                const cat = item.dataset.cat || item.dataset.category || '';
+                const match = key === 'all' || cat.split(/\s+/).includes(key);
                 item.classList.remove('is-filtering-in');
                 item.hidden = !match;
                 if (match) {

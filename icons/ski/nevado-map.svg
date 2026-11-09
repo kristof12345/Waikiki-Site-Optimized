@@ -2958,18 +2958,17 @@
 <ellipse cx="10" cy="-6" rx="18" ry="8" />
 </g>
 </g>
+<g class="peak-label">
 <rect x="488.4" y="81" width="113.2" height="18" rx="9" fill="#071930" opacity="0.88" stroke="#dfba76" stroke-width="1" />
-<text x="545" y="93.3" fill="#fcedc7" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">▲ CERRO CRISTAL</text>
+<text class="peak-label-text" x="545" y="93.3" fill="#fcedc7" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">▲ CERRO CRISTAL</text>
+</g>
+<g class="peak-label">
 <rect x="183" y="121" width="94" height="18" rx="9" fill="#071930" opacity="0.88" stroke="#5ce1cf" stroke-width="1" />
-<text x="230" y="133.3" fill="#fcedc7" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">▲ AGUJA REAL</text>
+<text class="peak-label-text" x="230" y="133.3" fill="#fcedc7" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">▲ AGUJA REAL</text>
+</g>
+<g class="peak-label">
 <rect x="808.4" y="107" width="113.2" height="18" rx="9" fill="#071930" opacity="0.88" stroke="#dfba76" stroke-width="1" />
-<text x="865" y="119.3" fill="#fcedc7" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">▲ NEVADO BLANCO</text>
-<g transform="translate(1158, 42)">
-<circle r="20" fill="#071930" opacity="0.8" stroke="#dfba76" stroke-width="1" />
-<polygon points="0,-15 3.5,-3 0,-6 -3.5,-3" fill="#e3735a" />
-<polygon points="0,15 3.5,3 0,6 -3.5,3" fill="#93c5fd" />
-<polygon points="-15,0 -3,-3.5 -6,0 -3,3.5" fill="#93c5fd" />
-<polygon points="15,0 3,-3.5 6,0 3,3.5" fill="#93c5fd" />
+<text class="peak-label-text" x="865" y="119.3" fill="#fcedc7" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">▲ NEVADO BLANCO</text>
 </g>
 <!-- Interactive hotspot pins -->
 <line x1="545" y1="134" x2="587" y2="120" stroke="#fcedc7" stroke-width="1.2" stroke-dasharray="2 2" opacity="0.85" />

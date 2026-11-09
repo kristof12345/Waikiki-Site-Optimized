@@ -221,10 +221,10 @@ def replace_svgs_in_ski_paradise(path: Path):
     tab_map = [
         (r'(<button [^>]*id="tab-andes"[^>]*>)\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/image-filter-hdr\.svg[^>]*>)\s*',
          r'\1<img src="../icons/mdi/image-filter-hdr.svg" alt="" />\n                    '),
+        (r'(<button [^>]*id="tab-nevado"[^>]*>)\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/ski\.svg[^>]*>)\s*',
+         r'\1<img src="../icons/mdi/ski.svg" alt="" />\n                    '),
         (r'(<button [^>]*id="tab-haiti"[^>]*>)\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/snowflake\.svg[^>]*>)\s*',
          r'\1<img src="../icons/mdi/snowflake.svg" alt="" />\n                    '),
-        (r'(<button [^>]*id="tab-telemetry"[^>]*>)\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/chart-line\.svg[^>]*>)\s*',
-         r'\1<img src="../icons/mdi/chart-line.svg" alt="" />\n                    '),
     ]
     for pattern, repl in tab_map:
         text, n = re.subn(pattern, repl, text)

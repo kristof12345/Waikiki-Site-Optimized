@@ -2638,18 +2638,17 @@
 <ellipse cx="10" cy="-6" rx="18" ry="8" />
 </g>
 </g>
+<g class="peak-label">
 <rect x="503.4" y="83" width="113.2" height="18" rx="9" fill="#071930" opacity="0.88" stroke="#dfba76" stroke-width="1" />
-<text x="560" y="95.3" fill="#fcedc7" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">▲ PICO SOBERANO</text>
+<text class="peak-label-text" x="560" y="95.3" fill="#fcedc7" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">▲ PICO SOBERANO</text>
+</g>
+<g class="peak-label">
 <rect x="186.6" y="118" width="106.8" height="18" rx="9" fill="#071930" opacity="0.88" stroke="#5ce1cf" stroke-width="1" />
-<text x="240" y="130.3" fill="#fcedc7" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">▲ CONDOR PEAK</text>
+<text class="peak-label-text" x="240" y="130.3" fill="#fcedc7" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">▲ CONDOR PEAK</text>
+</g>
+<g class="peak-label">
 <rect x="823" y="113" width="94" height="18" rx="9" fill="#071930" opacity="0.88" stroke="#dfba76" stroke-width="1" />
-<text x="870" y="125.3" fill="#fcedc7" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">▲ MONTE ROSA</text>
-<g transform="translate(1158, 42)">
-<circle r="20" fill="#071930" opacity="0.8" stroke="#dfba76" stroke-width="1" />
-<polygon points="0,-15 3.5,-3 0,-6 -3.5,-3" fill="#e3735a" />
-<polygon points="0,15 3.5,3 0,6 -3.5,3" fill="#93c5fd" />
-<polygon points="-15,0 -3,-3.5 -6,0 -3,3.5" fill="#93c5fd" />
-<polygon points="15,0 3,-3.5 6,0 3,3.5" fill="#93c5fd" />
+<text class="peak-label-text" x="870" y="125.3" fill="#fcedc7" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">▲ MONTE ROSA</text>
 </g>
 <!-- Interactive hotspot pins -->
 <line x1="560" y1="137" x2="600" y2="123" stroke="#fcedc7" stroke-width="1.2" stroke-dasharray="2 2" opacity="0.85" />
