@@ -1,0 +1,166 @@
+/* Amethyst Orchid Theme Stylesheet */
+
+:root {
+  /* Primary — Imperial Velvet Amethyst */
+  --primary: #4c1d6e;
+  --primary-hover: #381254;
+  --primary-light: #6d2899;
+  --primary-dark: #250a37;
+  --primary-subtle: rgba(76, 29, 110, 0.12);
+
+  /* Secondary — Deep Orchid Plum */
+  --secondary: #320e4b;
+  --secondary-hover: #220734;
+  --secondary-light: #4f1873;
+  --secondary-dark: #150322;
+  --secondary-subtle: rgba(50, 14, 75, 0.12);
+
+  /* Tertiary — Radiant Lavender Violet */
+  --tertiary: #9333ea;
+  --tertiary-hover: #7e22ce;
+  --tertiary-light: #e9d5ff;
+  --tertiary-dark: #6b21a8;
+  --tertiary-subtle: rgba(147, 51, 234, 0.16);
+
+  /* Accent — Luminous Orchid Rose */
+  --accent: #d45d8b;
+  --accent-hover: #be4474;
+  --accent-light: #fbcfe8;
+  --accent-dark: #9d2958;
+  --accent-subtle: rgba(212, 93, 139, 0.14);
+
+  /* Neutrals — Soft Lilac Mist and Velvet Obsidian */
+  --neutral-50: #ffffff;
+  --neutral-100: #fdfafc;
+  --neutral-150: #faf4fa;
+  --neutral-200: #f3e8f4;
+  --neutral-300: #e7d5ea;
+  --neutral-400: #d4b8d8;
+  --neutral-500: #99759e;
+  --neutral-600: #735277;
+  --neutral-700: #4f3254;
+  --neutral-800: #2a142e;
+  --neutral-900: #130616;
+
+  /* Semantic Theme Tokens */
+  --surface: #ffffff;
+  --line: rgba(42, 20, 46, 0.1);
+  --line-strong: rgba(42, 20, 46, 0.18);
+  --glass: rgba(250, 244, 250, 0.78);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(37, 10, 55, 0.06), 0 8px 24px -16px rgba(37, 10, 55, 0.25);
+  --shadow-md: 0 2px 6px rgba(37, 10, 55, 0.06), 0 24px 48px -28px rgba(37, 10, 55, 0.38);
+  --shadow-lg: 0 4px 12px rgba(37, 10, 55, 0.08), 0 40px 80px -36px rgba(37, 10, 55, 0.5);
+  --shadow-btn: 0 12px 30px -16px rgba(37, 10, 55, 0.7);
+  --shadow-btn-hover: 0 18px 40px -16px rgba(212, 93, 139, 0.7);
+  --shadow-xl: 0 8px 24px rgba(37, 10, 55, 0.12), 0 60px 100px -40px rgba(37, 10, 55, 0.6);
+
+  /* Illustrations and Accents */
+  --ill-sky: #f8edf8;
+  --ill-sun: #d45d8b;
+  --ill-sun-2: #fbcfe8;
+  --ill-sea: #4c1d6e;
+  --ill-sea-2: #6d2899;
+  --ill-sea-3: #e9d5ff;
+  --ill-sand: #eed8ef;
+  --ill-ink: #320e4b;
+  --ill-ink-2: #4c1d6e;
+  --ill-ink-3: #6d2899;
+  --ill-gold: #c084fc;
+  --ill-coral: #d45d8b;
+  --ill-glass: #f5e3f6;
+}
+
+.light-bg {
+  background:
+    radial-gradient(1100px 420px at 8% 0%, rgba(147, 51, 234, 0.15), transparent 60%),
+    radial-gradient(900px 420px at 100% 100%, rgba(212, 93, 139, 0.12), transparent 60%),
+    var(--surface-2);
+}
+
+.site-footer {
+  background: var(--primary-dark);
+}
+
+.footer-wave {
+  fill: var(--primary-dark);
+}
+
+.page-curtain {
+  background: var(--primary-dark);
+}
+
+.page-curtain::after,
+.scroll-progress {
+  background: linear-gradient(90deg, var(--tertiary), var(--accent));
+}
+
+.hero--compact::before {
+  background: radial-gradient(circle at 35% 35%, var(--accent-light), var(--accent) 70%);
+}
+
+.hero-veil {
+  background:
+    radial-gradient(1200px 600px at 85% 0%, rgba(251, 207, 232, 0.1), transparent 70%),
+    linear-gradient(180deg, rgba(37, 10, 55, 0.4) 0%, rgba(37, 10, 55, 0.08) 28%, rgba(37, 10, 55, 0.3) 58%, rgba(37, 10, 55, 0.94) 100%),
+    linear-gradient(90deg, rgba(37, 10, 55, 0.5) 0%, rgba(37, 10, 55, 0.2) 55%, rgba(37, 10, 55, 0) 85%);
+}
+
+.gallery-toolbar {
+  background: rgba(37, 10, 55, 0.95);
+}
+
+.to-top .ring {
+  stroke: var(--tertiary);
+}
+
+.card-icon img {
+  filter: brightness(0) saturate(100%) invert(17%) sepia(18%) saturate(6397%) hue-rotate(255deg) brightness(90%) contrast(101%);
+}
+
+/* Dark Mode */
+.body-dark {
+  --bg: #0c0613;
+  --dark-surface: #180d24;
+  --dark-surface-2: #11081a;
+  --dark-surface-3: #241434;
+  --dark-heading: #f8f0fc;
+  --dark-text: #d8c4e0;
+  --dark-moon: #c3a3cd;
+  --surface: var(--dark-surface);
+  --surface-2: var(--dark-surface-2);
+  --heading: var(--dark-heading);
+  --text: var(--dark-text);
+  --muted: #91729b;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --glass: rgba(12, 6, 19, 0.78);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 30px -18px rgba(0, 0, 0, 0.75);
+  --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.35), 0 24px 48px -28px rgba(0, 0, 0, 0.88);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.4), 0 40px 80px -36px rgba(0, 0, 0, 0.95);
+  --shadow-btn-hover: 0 18px 40px -16px rgba(212, 93, 139, 0.5);
+}
+
+.body-dark .hero--compact::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120' preserveAspectRatio='none'%3E%3Cpath d='M0 60c120 0 120-30 240-30s120 30 240 30 120-30 240-30 120 30 240 30 120-30 240-30 120 30 240 30v60H0z' fill='%230c0613'/%3E%3C/svg%3E");
+}
+
+.body-dark .table thead th {
+  background: var(--dark-surface-3);
+}
+
+.body-dark .card-icon img {
+  filter: brightness(0) saturate(100%) invert(83%) sepia(52%) saturate(7497%) hue-rotate(223deg) brightness(106%) contrast(110%);
+}
+
+.body-dark .faq-item:hover {
+  border-color: rgba(192, 132, 252, 0.55);
+  box-shadow: 0 0 0 1px rgba(192, 132, 252, 0.25), var(--shadow-md);
+}
+
+.body-dark .faq-item[open] {
+  border-color: rgba(212, 93, 139, 0.6);
+  box-shadow: 0 0 0 1px rgba(212, 93, 139, 0.25), var(--shadow-md);
+}

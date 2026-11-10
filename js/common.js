@@ -126,6 +126,20 @@
             desc: { en: 'High-Tech · Titanium and Cobalt', hu: 'Cs\u00facstechnika \u00b7 Tit\u00e1n \u00e9s kobalt' },
             file: 'themes/style-slate.css',
             colors: ['#1e293b', '#06b6d4', '#f1f5f9']
+        },
+        {
+            id: 'amethyst',
+            name: { en: 'Amethyst', hu: 'Ametiszt' },
+            desc: { en: 'Orchid Isle · Imperial Amethyst', hu: 'Orchidea-sziget \u00b7 Birodalmi ametiszt' },
+            file: 'themes/style-amethyst.css',
+            colors: ['#4c1d6e', '#d45d8b', '#faf4fa']
+        },
+        {
+            id: 'glacier',
+            name: { en: 'Glacier', hu: 'Gleccser' },
+            desc: { en: 'Alpine Summit · Glacial Sapphire and Ice', hu: 'Alpesi cs\u00facsok \u00b7 Gleccserzaf\u00edr \u00e9s j\u00e9g' },
+            file: 'themes/style-glacier.css',
+            colors: ['#0f3b5f', '#38bdf8', '#eff6fb']
         }
     ];
 
@@ -309,7 +323,7 @@
                 display: flex;
                 flex-direction: column;
                 gap: 0.45rem;
-                max-height: 380px;
+                max-height: min(520px, calc(100vh - 160px));
                 overscroll-behavior: contain;
                 padding-right: 2px;
             }
