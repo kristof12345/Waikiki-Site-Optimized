@@ -43,7 +43,7 @@ def replace_svgs_in_sights(path: Path):
         idx += 1
         if "<svg" in m.group(0):
             converted += 1
-        return f'<span class="card-icon"><img src="../icons/mdi/{icon}" alt="" /></span>'
+        return f'<span class="card-icon"><img src="../icons/mdi/{icon}" /></span>'
 
     text, n = re.subn(r'<span class="card-icon">\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/[^>]*>)\s*</span>', repl, text)
     if n != len(icons):
@@ -74,7 +74,7 @@ def replace_svgs_in_infrastructure(path: Path):
         nonlocal idx
         icon = card_icons[idx]
         idx += 1
-        return f'<span class="card-icon"><img src="../icons/mdi/{icon}" alt="" /></span>'
+        return f'<span class="card-icon"><img src="../icons/mdi/{icon}" /></span>'
 
     text, n_cards = re.subn(r'<span class="card-icon">\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/[^>]*>)\s*</span>', repl_card, text)
     if n_cards != len(card_icons):
@@ -82,7 +82,7 @@ def replace_svgs_in_infrastructure(path: Path):
 
     # 10 building-loc icons
     text, n_locs = re.subn(r'<span class="building-loc">\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/map-marker\.svg[^>]*>)\s*',
-                           r'<span class="building-loc"><img src="../icons/mdi/map-marker.svg" alt="" />',
+                           r'<span class="building-loc"><img src="../icons/mdi/map-marker.svg" />',
                            text)
     if n_locs != 10:
         raise ValueError(f"{path}: Expected 10 building-loc icons, found {n_locs}")
@@ -90,11 +90,11 @@ def replace_svgs_in_infrastructure(path: Path):
     # 3 island tabs
     tab_map = [
         (r'(<button class="island-tab-btn[^"]*" id="tab-btn-palm"[^>]*>)\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/palm-tree\.svg[^>]*>)\s*',
-         r'\1<img src="../icons/mdi/palm-tree.svg" alt="" />\n                    '),
+         r'\1<img src="../icons/mdi/palm-tree.svg" />\n                    '),
         (r'(<button class="island-tab-btn[^"]*" id="tab-btn-world"[^>]*>)\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/earth\.svg[^>]*>)\s*',
-         r'\1<img src="../icons/mdi/earth.svg" alt="" />\n                    '),
+         r'\1<img src="../icons/mdi/earth.svg" />\n                    '),
         (r'(<button class="island-tab-btn[^"]*" id="tab-btn-chameleon"[^>]*>)\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/chameleon\.svg[^>]*>)\s*',
-         r'\1<img src="../icons/mdi/chameleon.svg" alt="" />\n                    '),
+         r'\1<img src="../icons/mdi/chameleon.svg" />\n                    '),
     ]
     for pattern, repl in tab_map:
         text, n = re.subn(pattern, repl, text)
@@ -120,7 +120,7 @@ def replace_svgs_in_visa(path: Path):
         nonlocal idx
         icon = customs_icons[idx]
         idx += 1
-        return f'<div class="customs-icon"><img src="../icons/mdi/{icon}" alt="" /></div>'
+        return f'<div class="customs-icon"><img src="../icons/mdi/{icon}" /></div>'
 
     text, n = re.subn(r'<div class="customs-icon">\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/[^>]*>)\s*</div>', repl_customs, text)
     if n != len(customs_icons):
@@ -144,7 +144,7 @@ def replace_svgs_in_nova_aurelia(path: Path):
         nonlocal idx
         icon = pillar_icons[idx]
         idx += 1
-        return f'<div class="city-pillar-badge"><img src="../icons/mdi/{icon}" alt="" /></div>'
+        return f'<div class="city-pillar-badge"><img src="../icons/mdi/{icon}" /></div>'
 
     text, n = re.subn(r'<div class="city-pillar-badge">\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/[^>]*>)\s*</div>', repl_pillar, text)
     if n != len(pillar_icons):
@@ -160,7 +160,7 @@ def replace_svgs_in_family_tree(path: Path):
     orig_text = text
     # 1 heirs icon
     text, n_heirs = re.subn(r'<span class="heirs-icon" aria-hidden="true">\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/crown\.svg[^>]*>)\s*</span>',
-                            r'<span class="heirs-icon" aria-hidden="true"><img src="../icons/mdi/crown.svg" alt="" /></span>',
+                            r'<span class="heirs-icon" aria-hidden="true"><img src="../icons/mdi/crown.svg" /></span>',
                             text)
     if n_heirs != 1:
         raise ValueError(f"{path}: Expected 1 heirs icon, found {n_heirs}")
@@ -178,7 +178,7 @@ def replace_svgs_in_family_tree(path: Path):
         nonlocal idx
         icon = matrix_icons[idx]
         idx += 1
-        return f'<div class="matrix-icon-wrap" aria-hidden="true"><img src="../icons/mdi/{icon}" alt="" /></div>'
+        return f'<div class="matrix-icon-wrap" aria-hidden="true"><img src="../icons/mdi/{icon}" /></div>'
 
     text, n_matrix = re.subn(r'<div class="matrix-icon-wrap" aria-hidden="true">\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/[^>]*>)\s*</div>', repl_matrix, text)
     if n_matrix != len(matrix_icons):
@@ -211,7 +211,7 @@ def replace_svgs_in_ski_paradise(path: Path):
         nonlocal idx_fact
         icon = fact_icons[idx_fact]
         idx_fact += 1
-        return f'<div class="fact">\n                    <img src="../icons/mdi/{icon}" alt="" />'
+        return f'<div class="fact">\n                    <img src="../icons/mdi/{icon}" />'
 
     text, n_facts = re.subn(r'<div class="fact">\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/[^>]*>)', repl_fact, text)
     if n_facts != len(fact_icons):
@@ -220,11 +220,11 @@ def replace_svgs_in_ski_paradise(path: Path):
     # 3 tabs
     tab_map = [
         (r'(<button [^>]*id="tab-andes"[^>]*>)\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/image-filter-hdr\.svg[^>]*>)\s*',
-         r'\1<img src="../icons/mdi/image-filter-hdr.svg" alt="" />\n                    '),
+         r'\1<img src="../icons/mdi/image-filter-hdr.svg" />\n                    '),
         (r'(<button [^>]*id="tab-nevado"[^>]*>)\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/ski\.svg[^>]*>)\s*',
-         r'\1<img src="../icons/mdi/ski.svg" alt="" />\n                    '),
+         r'\1<img src="../icons/mdi/ski.svg" />\n                    '),
         (r'(<button [^>]*id="tab-haiti"[^>]*>)\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/snowflake\.svg[^>]*>)\s*',
-         r'\1<img src="../icons/mdi/snowflake.svg" alt="" />\n                    '),
+         r'\1<img src="../icons/mdi/snowflake.svg" />\n                    '),
     ]
     for pattern, repl in tab_map:
         text, n = re.subn(pattern, repl, text)
@@ -233,7 +233,7 @@ def replace_svgs_in_ski_paradise(path: Path):
 
     # 5 hotel locs
     text, n_locs = re.subn(r'<p class="hotel-loc">\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/map-marker\.svg[^>]*>)\s*',
-                           r'<p class="hotel-loc"><img src="../icons/mdi/map-marker.svg" alt="" />',
+                           r'<p class="hotel-loc"><img src="../icons/mdi/map-marker.svg" />',
                            text)
     if n_locs != 5:
         raise ValueError(f"{path}: Expected 5 hotel-loc icons, found {n_locs}")
@@ -252,7 +252,7 @@ def replace_svgs_in_ski_paradise(path: Path):
         nonlocal idx_exp
         icon = exp_icons[idx_exp]
         idx_exp += 1
-        return f'<div class="card-icon"><img src="../icons/mdi/{icon}" alt="" /></div>'
+        return f'<div class="card-icon"><img src="../icons/mdi/{icon}" /></div>'
 
     text, n_exp = re.subn(r'<div class="card-icon">\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/[^>]*>)\s*</div>', repl_exp, text)
     if n_exp != len(exp_icons):
@@ -260,7 +260,7 @@ def replace_svgs_in_ski_paradise(path: Path):
 
     # 1 travel callout
     text, n_callout = re.subn(r'<div class="travel-callout-icon" aria-hidden="true">\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/crown\.svg[^>]*>)\s*</div>',
-                             r'<div class="travel-callout-icon" aria-hidden="true"><img src="../icons/mdi/crown.svg" alt="" /></div>',
+                             r'<div class="travel-callout-icon" aria-hidden="true"><img src="../icons/mdi/crown.svg" /></div>',
                              text)
     if n_callout != 1:
         raise ValueError(f"{path}: Expected 1 travel callout icon, found {n_callout}")
@@ -292,7 +292,7 @@ def replace_svgs_in_travel_guide(path: Path):
         nonlocal idx_fact
         icon = fact_icons[idx_fact]
         idx_fact += 1
-        return f'<div class="fact">\n                    <img src="../icons/mdi/{icon}" alt="" />'
+        return f'<div class="fact">\n                    <img src="../icons/mdi/{icon}" />'
 
     text, n_facts = re.subn(r'<div class="fact">\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/[^>]*>)', repl_fact, text)
     if n_facts != len(fact_icons):
@@ -327,7 +327,7 @@ def replace_svgs_in_travel_guide(path: Path):
         nonlocal idx_tt
         icon = transit_tips_icons[idx_tt]
         idx_tt += 1
-        return f'<span class="card-icon"><img src="../icons/mdi/{icon}" alt="" /></span>'
+        return f'<span class="card-icon"><img src="../icons/mdi/{icon}" /></span>'
 
     text, n_tt = re.subn(r'<span class="card-icon">\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/[^>]*>)\s*</span>', repl_tt, text)
     if n_tt != len(transit_tips_icons):
@@ -335,14 +335,14 @@ def replace_svgs_in_travel_guide(path: Path):
 
     # 1 travel callout
     text, n_callout = re.subn(r'<div class="travel-callout-icon">\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/passport\.svg[^>]*>)\s*</div>',
-                             r'<div class="travel-callout-icon"><img src="../icons/mdi/passport.svg" alt="" /></div>',
+                             r'<div class="travel-callout-icon"><img src="../icons/mdi/passport.svg" /></div>',
                              text)
     if n_callout != 1:
         raise ValueError(f"{path}: Expected 1 travel callout, found {n_callout}")
 
     # 15 hotel locs
     text, n_locs = re.subn(r'<span class="hotel-loc">\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/map-marker\.svg[^>]*>)\s*',
-                           r'<span class="hotel-loc"><img src="../icons/mdi/map-marker.svg" alt="" />',
+                           r'<span class="hotel-loc"><img src="../icons/mdi/map-marker.svg" />',
                            text)
     if n_locs != 15:
         raise ValueError(f"{path}: Expected 15 hotel locs, found {n_locs}")
@@ -360,11 +360,11 @@ def replace_svgs_in_gallery(path: Path):
     # 3 view buttons
     btn_map = [
         (r'(<button id="btn-grid-mini" class="view-btn[^"]*">\s*)(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/view-compact\.svg[^>]*>)\s*',
-         r'\1<img src="../icons/mdi/view-compact.svg" alt="" /> '),
+         r'\1<img src="../icons/mdi/view-compact.svg" /> '),
         (r'(<button id="btn-grid-small" class="view-btn[^"]*">\s*)(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/view-grid\.svg[^>]*>)\s*',
-         r'\1<img src="../icons/mdi/view-grid.svg" alt="" /> '),
+         r'\1<img src="../icons/mdi/view-grid.svg" /> '),
         (r'(<button id="btn-grid-large" class="view-btn[^"]*">\s*)(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/view-module\.svg[^>]*>)\s*',
-         r'\1<img src="../icons/mdi/view-module.svg" alt="" /> '),
+         r'\1<img src="../icons/mdi/view-module.svg" /> '),
     ]
     for pattern, repl in btn_map:
         text, n = re.subn(pattern, repl, text)

@@ -98,7 +98,7 @@ COUPLE_TABS = [
     ("-private", {"en": "Private Life", "hu": "Magánélet"}),
 ]
 
-BIOS = ["bio/raimondo", "bio/selena", "bio/angelina", "bio/taylor"]
+BIOS = ["bio/chease", "bio/jessica", "bio/raimondo", "bio/selena", "bio/angelina", "bio/taylor"]
 
 # Reading order used for the "next chapter" banner.
 SEQUENCE: list[str] = []
@@ -434,7 +434,7 @@ def build_next(page: Page, meta: dict[str, dict]) -> str:
 
     title = label_for(target, page.locale) or info["title"]
     image = info.get("image") or TARGET_NEXT_IMAGES.get(target) or meta.get(f"{page.locale}/index", {}).get("image")
-    img_html = f'<div class="next-media"><img src="{page.asset("images/" + image)}" alt="" /></div>' if image else ""
+    img_html = f'<div class="next-media"><img src="{page.asset("images/" + image)}" /></div>' if image else ""
     eyebrow = f'{T["continue"][page.locale]} · {group_label(group_for(target), page.locale)}'
     return f"""<!-- @chrome:next -->
     <section class="next-chapter">

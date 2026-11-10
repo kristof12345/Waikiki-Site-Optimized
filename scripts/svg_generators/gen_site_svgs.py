@@ -64,12 +64,14 @@ def run_maps() -> None:
 def run_other() -> None:
     """Generate other procedural SVGs."""
     import gen_banking_svgs
+    import gen_military_svgs
     import gen_plane
     import gen_space_svgs
 
     print("\n--- Generating Other Localized SVGs ---")
     gen_banking_svgs.main()
     gen_space_svgs.main()
+    gen_military_svgs.main()
     gen_plane.main()
 
 
@@ -92,7 +94,7 @@ def main() -> None:
     parser.add_argument(
         "--include-other",
         action="store_true",
-        help="Also run other procedural SVG generators (banking, space, plane deck)",
+        help="Also run other procedural SVG generators (banking, space, military, plane deck)",
     )
     parser.add_argument(
         "--everything",
