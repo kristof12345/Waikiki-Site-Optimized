@@ -244,7 +244,7 @@
                 top: calc(var(--header-h-compact) + 10px);
                 right: var(--gutter);
                 z-index: calc(var(--z-header) + 20);
-                width: min(340px, calc(100vw - 2rem));
+                width: min(380px, calc(100vw - 2rem));
                 background: var(--surface);
                 border: var(--border-width) solid var(--line-strong);
                 border-radius: var(--radius);
