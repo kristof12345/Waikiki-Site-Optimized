@@ -520,6 +520,7 @@
 }
 
 .dossier-bio-text {
+    text-align: justify;
     font-size: 0.98rem;
     line-height: 1.8;
     color: var(--text-secondary);
