@@ -1,5 +1,5 @@
 /*
-Photo Gallery for Raimondo & Selena
+Photo Gallery
 
 SETUP — Google Drive as image source:
 1. Go to https://script.google.com and create a new project.
@@ -27,7 +27,6 @@ const Gallery = (() => {
 
     let images = [];
     let currentIndex = -1;
-    let gridSize = 'small'; // 'mini' | 'small' | 'large'
 
     let gridEl, countEl, lightbox, lbImg, lbCounter, lbSpinner;
     let lazyObserver;
@@ -172,7 +171,6 @@ const Gallery = (() => {
     }
 
     function setGridSize(size) {
-        gridSize = size;
         gridEl.classList.toggle('mini-grid', size === 'mini');
         gridEl.classList.toggle('large-grid', size === 'large');
         document.getElementById('btn-grid-mini')?.classList.toggle('active', size === 'mini');

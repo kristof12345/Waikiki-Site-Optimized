@@ -1,4 +1,4 @@
-// Wealth Fund Page JavaScript - Waikiki Government Site
+// Wealth Fund Page JavaScript
 
 // Chart.js default configuration
 Chart.defaults.font.family = "'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";

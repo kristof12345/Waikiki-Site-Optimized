@@ -6,28 +6,33 @@
         details: isHu ? 'Részletek' : 'Details'
     };
     function initTabs() {
-        const tabButtons = Array.from(document.querySelectorAll('.island-tab-btn'));
-        const tabPanels = document.querySelectorAll('.island-panel');
-        if (!tabButtons.length) return;
-        const activate = btn => {
-            const island = btn.getAttribute('data-island-tab');
-            tabButtons.forEach(b => {
-                const on = b === btn;
-                b.classList.toggle('is-active', on);
-                b.setAttribute('aria-selected', on ? 'true' : 'false');
-                b.setAttribute('tabindex', on ? '0' : '-1');
+        document.querySelectorAll('.island-tabs-bar').forEach(tabList => {
+            const tabButtons = Array.from(tabList.querySelectorAll('.island-tab-btn'));
+            if (!tabButtons.length) return;
+            const section = tabList.closest('section') || document;
+            const panelIds = new Set(tabButtons.map(b => `tab-panel-${b.getAttribute('data-island-tab')}`));
+            const tabPanels = Array.from(section.querySelectorAll('.island-panel')).filter(p => panelIds.has(p.id));
+            const activate = btn => {
+                const island = btn.getAttribute('data-island-tab');
+                tabButtons.forEach(b => {
+                    const on = b === btn;
+                    b.classList.toggle('is-active', on);
+                    b.setAttribute('aria-selected', on ? 'true' : 'false');
+                    b.setAttribute('tabindex', on ? '0' : '-1');
+                });
+                tabPanels.forEach(panel => {
+                    const on = panel.id === `tab-panel-${island}`;
+                    panel.classList.toggle('is-active', on);
+                    if (on) {
+                        panel.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('is-in'));
+                    }
+                });
+                document.dispatchEvent(new CustomEvent('island:tabchange'));
+            };
+            tabButtons.forEach(btn => {
+                btn.setAttribute('tabindex', btn.classList.contains('is-active') ? '0' : '-1');
+                btn.addEventListener('click', () => activate(btn));
             });
-            tabPanels.forEach(panel => {
-                panel.classList.toggle('is-active', panel.id === `tab-panel-${island}`);
-            });
-            document.dispatchEvent(new CustomEvent('island:tabchange'));
-        };
-        tabButtons.forEach(btn => {
-            btn.setAttribute('tabindex', btn.classList.contains('is-active') ? '0' : '-1');
-            btn.addEventListener('click', () => activate(btn));
-        });
-        const tabList = document.querySelector('.island-tabs-bar');
-        if (tabList) {
             tabList.addEventListener('keydown', e => {
                 const index = tabButtons.indexOf(document.activeElement);
                 if (index === -1) return;
@@ -42,7 +47,7 @@
                     activate(tabButtons[next]);
                 }
             });
-        }
+        });
     }
     function initHotspots(panel) {
         const canvas = panel.querySelector('.island-map-canvas');

@@ -1,7 +1,4 @@
-/**
- * Visa and Entry Requirements — Interactive 6-Tier Checker Logic
- * Sovereign Nation of Waikiki
- */
+/* Visa and Entry Requirements — Interactive Checker Logic */
 (function() {
     'use strict';
 
