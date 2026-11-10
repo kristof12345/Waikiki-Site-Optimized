@@ -778,19 +778,8 @@ def build_lunar_mars_svg(lang="en") -> str:
 def update_space_page(file_path: Path, lang: str = "en") -> None:
     content = file_path.read_text(encoding="utf-8")
 
-    alt_station = (
-        "Waikiki National Space Station Orbital Complex and Telemetry Diagram"
-        if lang == "en"
-        else "Waikiki Nemzeti Űrállomás pályamenti komplexum és telemetriai diagram"
-    )
-    station_img = f'<img class="ill" src="../icons/space/station-{lang}.svg" alt="{alt_station}" width="1160" height="520" />'
-
-    alt_corridor = (
-        "Earth Moon and Mars Interplanetary Transfer Corridor Map"
-        if lang == "en"
-        else "Föld, Hold és Mars bolygóközi transzferfolyosó térkép"
-    )
-    corridor_img = f'<img class="ill" src="../icons/space/corridor-{lang}.svg" alt="{alt_corridor}" width="1160" height="480" />'
+    station_img = f'<img class="ill" src="../icons/space/station-{lang}.svg" width="1160" height="520" />'
+    corridor_img = f'<img class="ill" src="../icons/space/corridor-{lang}.svg" width="1160" height="480" />'
 
     # Replace SVG or existing img in #station section
     station_pattern = re.compile(

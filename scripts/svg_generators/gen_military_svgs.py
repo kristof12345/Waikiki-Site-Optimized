@@ -747,15 +747,13 @@ def update_military_page(file_path: Path, lang: str = "en") -> None:
     content = file_path.read_text(encoding="utf-8")
 
     if lang == "hu":
-        alt = "Határon átívelő rakétavédelmi rendszer többrétegű elfogási diagramja"
         cap_main = "A Határon Átívelő Rakétavédelmi Rendszer többrétegű elfogási architektúrája."
         cap_sub = "Űrszenzorok · Korai előrejelző radarok · Három elfogási réteg"
     else:
-        alt = "Transborder Missile Defense System Layered Intercept Diagram"
         cap_main = "Layered engagement architecture of the Transborder Missile Defense System."
         cap_sub = "Space Sensors · Early Warning Radars · Three Intercept Tiers"
 
-    img = f'<img class="ill" src="../icons/military/missile-defense-{lang}.svg" alt="{alt}" width="{W}" height="{H}" />'
+    img = f'<img class="ill" src="../icons/military/missile-defense-{lang}.svg" width="{W}" height="{H}" />'
     panel = (
         f'<div class="ill-panel">\n{img}\n<div class="ill-caption">\n'
         f"<span>{cap_main}</span>\n<span>{cap_sub}</span>\n</div>\n</div>\n"

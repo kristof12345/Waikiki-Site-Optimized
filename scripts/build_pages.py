@@ -459,7 +459,7 @@ def hero_html(page: Page, *, eyebrow: str, title: str, lead: str | None, image: 
     if image:
         alt = (label_for(page.slug, loc) or strip_tags(title)).replace('"', '&quot;')
         style = f' style="{img_style}"' if img_style else ""
-        parts.append(f'<div class="hero-media"><img src="{image}" alt="{alt}"{style} fetchpriority="high" /></div><div class="hero-veil"></div>')
+        parts.append(f'<div class="hero-media"><img src="{image}" {style} fetchpriority="high" /></div><div class="hero-veil"></div>')
     parts.append('<div class="hero-content">')
     if eyebrow:
         parts.append(f'<span class="hero-eyebrow">{eyebrow}</span>')
