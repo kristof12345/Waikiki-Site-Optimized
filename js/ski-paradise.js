@@ -4,7 +4,7 @@
 
     function initSkiParadise() {
         var tabBtns = document.querySelectorAll('.island-tab-btn');
-        var panels = document.querySelectorAll('.island-panel');
+        var panels = document.querySelectorAll('#alpine-map .island-panel');
         tabBtns.forEach(function(btn) {
             btn.addEventListener('click', function() {
                 var target = btn.getAttribute('data-tab');
@@ -16,6 +16,11 @@
                 panels.forEach(function(panel) {
                     var match = panel.id === 'panel-' + target;
                     panel.classList.toggle('is-active', match);
+                    if (match) {
+                        panel.querySelectorAll('[data-reveal]').forEach(function(el) {
+                            el.classList.add('is-in');
+                        });
+                    }
                 });
             });
         });

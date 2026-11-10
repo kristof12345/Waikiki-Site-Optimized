@@ -4,17 +4,21 @@
 
 1. **Prefer "and" / "és" over ampersand ("&")**: Use the word "and" (in English) and "és" (in Hungarian) instead of the "&" symbol in titles, section headings, card headers, labels, and copy.
 2. **Alternating Section Styles**: Top-level page sections must alternate between normal and `light-bg` styles.
+3. **Realistic Worldbuilding and Plausible Technology (No Too Many Sci-Fi Elements)**: Ground worldbuilding, institutions, defense, infrastructure, and aerospace in realistic, plausible science and engineering. Avoid far-fetched or fantasy tropes across all pages (e.g. no anti-gravity, flying stratospheric airborne supercarriers, or "Skynet" references; avoid interstellar claims for current spaceflight). **Canonical Lore Exceptions**: Retain the canonical Waikiki technologies: the **Intermedic Elixir** (life-extension elixir), **Palladium robots** (and miniature palladium reactors), and **Fusion reactors** (fusion energy grid and facilities).
+4. **Locale Synchronization Precedence**: For locale synchronization (`locale-sync`), keep currently staged/active changes as the source of truth. If a factual difference (e.g., metrics, numbers, dates, technical specifications, or lore facts) between the languages has no staged change, treat the Hungarian (`hu/`) version as the source of truth.
 
 ## Graphics, SVGs and Icon Guidelines
 
 1. **Asset Structure and Generation Classification (All Pages)**:
-   - **Card illustrations**: `inline, generated` (e.g. hotel cards, resort cards, landmark cards, city district cards directly within HTML card grids).
-   - **Maps**: `linked, generated` (e.g. interactive ski trail maps, artificial island maps, infrastructure mobility maps, city archipelago masterplan map).
+   - **Card illustrations**: `inline, generated` (e.g. hotel cards, resort cards, landmark cards directly within HTML card grids).
+   - **Maps**: `linked, generated` (e.g. interactive ski trail maps, artificial island maps, infrastructure maps).
    - **Other localized**: `linked, generated` (e.g. banking tripartite network and rate corridor, space research station and interplanetary corridor — linked via `<img>` tags with `-en.svg` and `-hu.svg` variants).
-   - **Other not localized**: `linked, not generated` (e.g. hero illustrations, nature biomes, Nova Aurelia skyline, rockets, icons/mdi — linked via `<img>` tags to standalone `.svg` files in `icons/`).
+   - **Other not localized**: `linked, not generated` (e.g. hero illustrations, nature biomes, Nova Aurelia large illustrations and skyline, rockets, icons/mdi — linked via `<img>` tags to standalone `.svg` files in `icons/`, edited directly and never generated from Python scripts).
 2. **Pure Vector SVGs (No Rasterized Parts)**:
    - All SVGs must consist purely of native vector elements (`<path>`, `<polygon>`, `<rect>`, `<circle>`, `<ellipse>`, `<line>`, vector gradients, SVG patterns, etc.).
    - SVGs should not contain rasterized parts: never embed `<image>` tags, base64 bitmap data URIs (`data:image/png`, `data:image/jpeg`, etc.), or pixel bitmaps inside SVG files or inline SVG markup.
+3. **No Loading Attribute on Images (Keep Default Eager)**:
+   - Do not use `loading="lazy"` or `loading="eager"` attributes on `<img>` tags across site pages. Retain the browser's empty default (no `loading` attribute) so all imagery renders immediately and cleanly without explicit loading properties.
 
 ## CSS & Media Query Guidelines
 

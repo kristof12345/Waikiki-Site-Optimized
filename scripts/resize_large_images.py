@@ -2,8 +2,8 @@ import os
 import subprocess
 import sys
 
-site_dir = "/Volumes/Samsung X5 SSD/Projektek/Site"
-MAX_SIZE = 5520  # Maximum allowed width or height in pixels
+site_dir = "/Volumes/Samsung X5 SSD/Projektek/Site/images"
+MAX_SIZE = 5120  # Maximum allowed width or height in pixels
 TARGET_SIZE = 5120  # Target size for resizing
 
 # Supported image extensions (case-insensitive)

@@ -240,11 +240,6 @@
 <path d="M847.6,260.2 Q859,266.2 870.4,259.2" />
 <path d="M851.9,276.9 Q859,282.9 866.1,275.9" />
 </g>
-<!-- Sub-surface Cryo-Grid 3.0 cooling matrix -->
-<g stroke="#0ea5e9" stroke-width="0.9" stroke-dasharray="3 3" opacity="0.45" fill="none">
-<path d="M590,300 L690,300 M585,312 L695,312 M580,324 L700,324 M575,336 L705,336" />
-<path d="M605,292 L590,344 M635,292 L628,344 M665,292 L668,344 M690,292 L702,344" />
-</g>
 <rect x="0" y="370" width="1200" height="80" fill="url(#haiti-mist)" />
 <!-- 4. Seamless Montane Cloud Forest and Tropical Rainforest Canopy -->
 <path d="M0,445 L0,413.5 L24,413.9 L48,410.8 L72,407 L96,405.1 L120,405.9 L144,407.8 L168,408.1 L192,404.5 L216,397.2 L240,388.8 L264,382.6 L288,381.1 L312,384 L336,388.8 L360,392.6 L384,393.3 L408,391.5 L432,389.7 L456,390.3 L480,394.4 L504,400.3 L528,404.9 L552,405.4 L576,401.2 L600,394.2 L624,387.6 L648,384.4 L672,385 L696,387.7 L720,389.4 L744,388.5 L768,385.4 L792,382.6 L816,382.9 L840,387.8 L864,396.2 L888,404.7 L912,410.3 L936,411.2 L960,408.8 L984,405.6 L1008,404.5 L1032,406.1 L1056,408.7 L1080,409.7 L1104,406.9 L1128,400.6 L1152,393.3 L1176,388.5 L1200,388.3 L1200,555 L0,555 Z" fill="#134e3a" opacity="0.92" />
@@ -1618,27 +1613,29 @@
 <!-- Hub 1: Haiti Glacier Crown Resort -->
 <g transform="translate(560, 167) scale(0.75)">
 <polygon points="-34,6 34,6 24,18 -24,18" fill="#0f2542" stroke="#dfba76" stroke-width="1.2" />
-<rect x="-28" y="-8" width="56" height="14" rx="7" fill="#1e3a5f" stroke="#fcedc7" stroke-width="1.4" />
+<rect x="-28" y="-8" width="56" height="14" rx="4" fill="#5c3418" stroke="#fcedc7" stroke-width="1.4" />
 <rect x="18" y="-4" width="26" height="6" rx="3" fill="#38bdf8" stroke="#ffffff" stroke-width="1.1" />
-<path d="M-16,-8 A16,12 0 0,1 16,-8 Z" fill="#dfba76" />
+<polygon points="-24,-8 0,-22 24,-8" fill="#1e293b" stroke="#dfba76" stroke-width="1.3" />
 </g>
-<!-- Hub 2: Cryo-Dome Snowsphere -->
+<!-- Hub 2: Loma Esmeralda Summit Rotunda -->
 <g transform="translate(860, 197) scale(0.75)">
-<ellipse cx="0" cy="6" rx="44" ry="11" fill="#0f2542" stroke="#5ce1cf" stroke-width="1.4" />
-<path d="M-38,6 A38,32 0 0,1 38,6 Z" fill="#38bdf8" fill-opacity="0.55" stroke="#ffffff" stroke-width="1.5" />
-<path d="M-22,6 A22,30 0 0,1 22,6 M-38,6 H38 M0,-26 V6" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.8" />
+<ellipse cx="0" cy="6" rx="38" ry="10" fill="#0f2542" stroke="#dfba76" stroke-width="1.3" />
+<rect x="-26" y="-8" width="52" height="14" rx="3" fill="#6b3e1e" stroke="#fcedc7" stroke-width="1.2" />
+<polygon points="-30,-8 0,-24 30,-8" fill="#1e293b" stroke="#ffffff" stroke-width="1.4" />
+<rect x="-16" y="-4" width="32" height="7" rx="1.5" fill="#bae6fd" opacity="0.9" />
 </g>
 <!-- Hub 3: Caribbean Horizon Terrace -->
 <g transform="translate(505, 290) scale(0.75)">
 <ellipse cx="0" cy="2" rx="28" ry="9" fill="#0b2342" stroke="#dfba76" stroke-width="1.4" />
 <ellipse cx="0" cy="0" rx="22" ry="6" fill="#fde68a" />
 </g>
-<!-- Hub 4: Cryo-Grid 3.0 Command Vault -->
+<!-- Hub 4: Lac Azuei Snowmaking Reservoir -->
 <g transform="translate(635, 310) scale(0.75)">
-<rect x="-24" y="-12" width="48" height="18" rx="4" fill="#0f2542" stroke="#5ce1cf" stroke-width="1.5" />
-<circle cx="-12" cy="-3" r="4" fill="#2dd4bf" class="pulse" />
-<circle cx="0" cy="-3" r="4" fill="#2dd4bf" />
-<circle cx="12" cy="-3" r="4" fill="#2dd4bf" />
+<ellipse cx="0" cy="4" rx="34" ry="11" fill="#475569" stroke="#cbd5e1" stroke-width="1.6" />
+<ellipse cx="0" cy="4" rx="28" ry="8" fill="#0284c7" stroke="#bae6fd" stroke-width="1.2" />
+<path d="M-16,3 Q-8,0 0,3 T16,3" fill="none" stroke="#e0f2fe" stroke-width="1.1" opacity="0.8" />
+<rect x="-14" y="-14" width="28" height="11" rx="2" fill="#5c3418" stroke="#fcedc7" stroke-width="1.1" />
+<polygon points="-17,-14 0,-22 17,-14" fill="#c95a41" stroke="#ffffff" stroke-width="1" />
 </g>
 <!-- Hub 5: Royal Halfpipe and Snowpark -->
 <g transform="translate(825, 320) scale(0.75)">
@@ -1669,7 +1666,8 @@
 <polygon points="-12,6 8,6 5,18 -9,18" />
 <polygon points="22,6 42,6 39,18 25,18" />
 </g>
-<path d="M-24,0 A24,16 0 0,1 24,0 Z" fill="#0b2342" stroke="#5ce1cf" stroke-width="1.6" />
+<rect x="-24" y="-12" width="48" height="12" rx="2" fill="#5c3418" stroke="#dfba76" stroke-width="1.4" />
+<polygon points="-28,-12 0,-22 28,-12" fill="#c95a41" stroke="#ffffff" stroke-width="1.1" />
 </g>
 <!-- East Ridge Lodge -->
 <g transform="translate(965, 400) scale(0.7)">
@@ -1739,16 +1737,13 @@
 <ellipse cx="10" cy="-6" rx="18" ry="8" />
 </g>
 </g>
+<g class="peak-label">
 <rect x="500.2" y="111" width="119.6" height="18" rx="9" fill="#071930" opacity="0.88" stroke="#dfba76" stroke-width="1" />
-<text x="560" y="123.3" fill="#fcedc7" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">▲ GLACIER CROWN</text>
-<rect x="790.6" y="137" width="138.8" height="18" rx="9" fill="#071930" opacity="0.88" stroke="#5ce1cf" stroke-width="1" />
-<text x="860" y="149.3" fill="#fcedc7" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">▲ CRYO-DOME PEAK</text>
-<g transform="translate(1158, 42)">
-<circle r="20" fill="#071930" opacity="0.8" stroke="#dfba76" stroke-width="1" />
-<polygon points="0,-15 3.5,-3 0,-6 -3.5,-3" fill="#e3735a" />
-<polygon points="0,15 3.5,3 0,6 -3.5,3" fill="#93c5fd" />
-<polygon points="-15,0 -3,-3.5 -6,0 -3,3.5" fill="#93c5fd" />
-<polygon points="15,0 3,-3.5 6,0 3,3.5" fill="#93c5fd" />
+<text class="peak-label-text" x="560" y="123.3" fill="#fcedc7" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">▲ GLACIER CROWN</text>
+</g>
+<g class="peak-label">
+<rect x="797" y="137" width="126" height="18" rx="9" fill="#071930" opacity="0.88" stroke="#5ce1cf" stroke-width="1" />
+<text class="peak-label-text" x="860" y="149.3" fill="#fcedc7" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">▲ LOMA ESMERALDA</text>
 </g>
 <!-- Interactive hotspot pins -->
 <line x1="560" y1="167" x2="510" y2="161" stroke="#fcedc7" stroke-width="1.2" stroke-dasharray="2 2" opacity="0.85" />

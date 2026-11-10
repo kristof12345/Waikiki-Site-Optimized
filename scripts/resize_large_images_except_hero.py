@@ -2,75 +2,100 @@ import os
 import subprocess
 import sys
 import re
+import urllib.parse
+import argparse
 
-site_dir = "/Volumes/Samsung X5 SSD/Projektek/Site"
-TARGET_WIDTH = 2560
-TARGET_HEIGHT = 1440
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+SITE_DIR = os.path.dirname(SCRIPT_DIR)
+IMAGES_DIR = os.path.join(SITE_DIR, "images")
 
-# Supported image extensions (case-insensitive)
-IMAGE_EXTENSIONS = ('.jpg', '.jpeg')
+MAX_WIDTH = 2560
+MAX_HEIGHT = 1440
+
+IMAGE_EXTENSIONS = ('.jpg', '.jpeg', '.png', '.webp')
 
 def get_excluded_images(site_dir):
-    """Finds all images used in elements with a class containing 'hero' or 'portrait' in HTML files."""
-    excluded_image_paths = set()
+    """
+    Finds all images used in hero sections or portrait containers across all HTML files.
+    Returns a set of normalized absolute file paths and a set of filenames.
+    """
+    excluded_filenames = set()
+    excluded_paths = set()
     
+    html_files = []
     for root, dirs, files in os.walk(site_dir):
-        # Skip hidden directories like .git or .github
-        dirs[:] = [d for d in dirs if not d.startswith('.')]
-        
+        dirs[:] = [d for d in dirs if not d.startswith('.') and d != 'node_modules']
         for file in files:
             if file.endswith('.html'):
-                html_path = os.path.join(root, file)
-                try:
-                    with open(html_path, 'r', encoding='utf-8') as f:
-                        content = f.read()
-                        
-                    # Find all HTML tags to check their attributes
-                    tag_pattern = re.compile(r'<([a-zA-Z0-9\-]+)([^>]*)>')
-                    for match in tag_pattern.finditer(content):
-                        attrs = match.group(2)
-                        # Check if 'hero' is present in the attributes (e.g., class="hero")
-                        if 'hero' in attrs.lower():
-                            # Extract url(...) if present (used in inline styles for backgrounds)
-                            url_match = re.search(r'url\([\'"]?([^\'"\)]+)[\'"]?\)', attrs)
-                            if url_match:
-                                img_url = url_match.group(1)
-                                excluded_image_paths.add((img_url, html_path))
-                                
-                            # Extract src="..." if present (used in <img> tags)
-                            src_match = re.search(r'src=[\'"]([^\'"]+)[\'"]', attrs)
-                            if src_match:
-                                img_url = src_match.group(1)
-                                excluded_image_paths.add((img_url, html_path))
+                html_files.append(os.path.join(root, file))
 
-                    # Also find images within 'portrait' class divs
-                    portrait_pattern = re.compile(r'<div[^>]*class="[^"]*portrait[^"]*"[^>]*>\s*<img[^>]*src=[\'"]([^\'"]+)[\'"]', re.IGNORECASE)
-                    for match in portrait_pattern.finditer(content):
-                        excluded_image_paths.add((match.group(1), html_path))
-
-                except Exception as e:
-                    print(f"Error reading {html_path}: {e}", file=sys.stderr)
-
-    resolved_paths = set()
-    for img_url, html_path in excluded_image_paths:
-        # Ignore data URIs or absolute external URLs
-        if img_url.startswith('data:') or img_url.startswith(('http://', 'https://')):
+    for html_path in html_files:
+        try:
+            with open(html_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+        except Exception as e:
+            print(f"Error reading {html_path}: {e}", file=sys.stderr)
             continue
-            
-        if img_url.startswith('/'):
-            # Absolute path relative to site root
-            abs_path = os.path.join(site_dir, img_url.lstrip('/'))
-        else:
-            # Relative path from the HTML file's directory
-            html_dir = os.path.dirname(html_path)
-            abs_path = os.path.normpath(os.path.join(html_dir, img_url))
-            
-        resolved_paths.add(abs_path)
-        
-    return resolved_paths
+
+        extracted_srcs = set()
+
+        # 1. Match hero sections, hero-media, or [data-hero] blocks
+        hero_patterns = [
+            r'<section[^>]*class=[\'"][^\'\"]*\bhero\b[^\'\"]*[\'\"][^>]*>.*?</section>',
+            r'<div[^>]*class=[\'"][^\'\"]*\bhero-media\b[^\'\"]*[\'\"][^>]*>.*?</div>',
+            r'<[^>]*data-hero\b[^>]*>.*?</[^>]+>'
+        ]
+        for pattern in hero_patterns:
+            for block in re.finditer(pattern, content, re.DOTALL | re.IGNORECASE):
+                block_content = block.group(0)
+                # Find img src
+                for src in re.findall(r'<img[^>]+src=[\'"]([^\'"]+)[\'"]', block_content, re.IGNORECASE):
+                    extracted_srcs.add(src)
+                # Find source srcset
+                for srcset in re.findall(r'srcset=[\'"]([^\'"]+)[\'"]', block_content, re.IGNORECASE):
+                    for part in srcset.split(','):
+                        clean_src = part.strip().split()[0]
+                        extracted_srcs.add(clean_src)
+                # Find inline background url(...)
+                for bg in re.findall(r'url\([\'"]?([^\'\"\)\s]+)[\'"]?\)', block_content, re.IGNORECASE):
+                    extracted_srcs.add(bg)
+
+        # 2. Match preload tags in <head> (hero preloads)
+        head_match = re.search(r'<head>(.*?)</head>', content, re.DOTALL | re.IGNORECASE)
+        if head_match:
+            for preload in re.findall(r'<link[^>]+rel=[\'"]preload[\'"][^>]+href=[\'"]([^\'"]+)[\'"]', head_match.group(1), re.IGNORECASE):
+                extracted_srcs.add(preload)
+
+        # 3. Match portrait containers and pedigree tree thumb cards
+        portrait_patterns = [
+            r'<[^>]*class=[\'"][^\'\"]*\bportrait\b[^\'\"]*[\'\"][^>]*>.*?</[^>]+>',
+            r'<[^>]*class=[\'"][^\'\"]*\b(tree-node-thumb|founder-card|ancestor-card)\b[^\'\"]*[\'\"][^>]*>.*?</[^>]+>'
+        ]
+        for pattern in portrait_patterns:
+            for block in re.finditer(pattern, content, re.DOTALL | re.IGNORECASE):
+                block_content = block.group(0)
+                for src in re.findall(r'<img[^>]+src=[\'"]([^\'"]+)[\'"]', block_content, re.IGNORECASE):
+                    extracted_srcs.add(src)
+
+        # Resolve paths
+        html_dir = os.path.dirname(html_path)
+        for raw_src in extracted_srcs:
+            if raw_src.startswith('data:') or raw_src.startswith(('http://', 'https://')):
+                continue
+            clean_url = urllib.parse.unquote(raw_src)
+            filename = os.path.basename(clean_url)
+            excluded_filenames.add(filename)
+
+            if clean_url.startswith('/'):
+                abs_path = os.path.normpath(os.path.join(SITE_DIR, clean_url.lstrip('/')))
+            else:
+                abs_path = os.path.normpath(os.path.join(html_dir, clean_url))
+            excluded_paths.add(abs_path)
+
+    return excluded_filenames, excluded_paths
 
 def get_image_dimensions(file_path):
-    """Returns (width, height) of an image using 'identify' command, or (None, None) on error."""
+    """Returns (width, height) of an image using 'identify', or (None, None) on error."""
     try:
         result = subprocess.run(
             ['identify', '-format', '%w %h', file_path],
@@ -78,19 +103,29 @@ def get_image_dimensions(file_path):
             text=True,
             check=True
         )
-        output = result.stdout.strip()
-        parts = output.split()
+        parts = result.stdout.strip().split()
         if len(parts) == 2:
             return int(parts[0]), int(parts[1])
     except Exception as e:
         print(f"Error identifying {file_path}: {e}", file=sys.stderr)
     return None, None
 
-def resize_image(file_path):
-    """Resizes and crops the image to exactly {TARGET_WIDTH}x{TARGET_HEIGHT}."""
+def resize_image(file_path, width, height, dry_run=False):
+    """
+    Resizes image to fit within max dimensions while preserving exact aspect ratio.
+    Never upscales, never distorts, and never forcibly crops portrait photos.
+    """
+    if width >= height:
+        target_spec = f"{MAX_WIDTH}x{MAX_HEIGHT}>"
+    else:
+        target_spec = f"{MAX_HEIGHT}x{MAX_WIDTH}>"
+
+    if dry_run:
+        return True
+
     try:
         subprocess.run(
-            ['mogrify', '-resize', f'{TARGET_WIDTH}x{TARGET_HEIGHT}^', '-gravity', 'center', '-extent', f'{TARGET_WIDTH}x{TARGET_HEIGHT}', file_path],
+            ['mogrify', '-resize', target_spec, file_path],
             check=True
         )
         return True
@@ -99,57 +134,69 @@ def resize_image(file_path):
         return False
 
 def main():
-    print(f"Scanning for images in: {site_dir}")
+    parser = argparse.ArgumentParser(description="Resize large non-hero images preserving aspect ratio.")
+    parser.add_argument("--dry-run", action="store_true", help="Scan and report without modifying any files.")
+    parser.add_argument("--all-images", action="store_true", help="Process all images (not just UniversalUpscaler* files).")
+    args = parser.parse_args()
+
+    print(f"Project root directory: {SITE_DIR}")
+    print(f"Images directory: {IMAGES_DIR}")
+    if args.dry_run:
+        print("[DRY RUN MODE ENABLED - No files will be modified]")
     
-    excluded_images = get_excluded_images(site_dir)
-    print(f"Found {len(excluded_images)} excluded images (hero/portrait).")
-    
+    excluded_filenames, excluded_paths = get_excluded_images(SITE_DIR)
+    print(f"Found {len(excluded_filenames)} excluded unique images (heroes & portraits).")
+
     image_paths = []
-    for root, dirs, files in os.walk(site_dir):
-        # Skip hidden directories like .git or .github
+    for root, dirs, files in os.walk(IMAGES_DIR):
         dirs[:] = [d for d in dirs if not d.startswith('.')]
-        
         for file in files:
-            if not file.startswith('UniversalUpscaler'):
+            if not args.all_images and not file.startswith('UniversalUpscaler'):
                 continue
             ext = os.path.splitext(file)[1].lower()
             if ext in IMAGE_EXTENSIONS:
                 abs_path = os.path.join(root, file)
-                if abs_path not in excluded_images:
+                if file not in excluded_filenames and abs_path not in excluded_paths:
                     image_paths.append(abs_path)
 
-    print(f"Found {len(image_paths)} images to process (excluding hero/portrait images).")
-    
-    images_to_resize_count = 0
+    print(f"Found {len(image_paths)} images eligible for processing (excluding heroes & portraits).")
+
+    needs_resize_count = 0
     resized_count = 0
-    
+
     for path in image_paths:
-        rel_path = os.path.relpath(path, site_dir)
+        rel_path = os.path.relpath(path, IMAGES_DIR)
         width, height = get_image_dimensions(path)
-        
         if width is None or height is None:
             continue
-            
-        if width != TARGET_WIDTH or height != TARGET_HEIGHT:
-            images_to_resize_count += 1
-            print(f"Image needs resizing/cropping: {rel_path} ({width}x{height}px)")
-            
-            # Perform resize
-            if resize_image(path):
-                new_width, new_height = get_image_dimensions(path)
-                if new_width and new_height:
-                    print(f"  -> Resized to {new_width}x{new_height}px")
+
+        # Check if resizing is actually needed (downscale only)
+        needs_resize = False
+        if width >= height and (width > MAX_WIDTH or height > MAX_HEIGHT):
+            needs_resize = True
+        elif height > width and (width > MAX_HEIGHT or height > MAX_WIDTH):
+            needs_resize = True
+
+        if needs_resize:
+            needs_resize_count += 1
+            print(f"Needs resize: {rel_path} ({width}x{height}px)")
+            if resize_image(path, width, height, dry_run=args.dry_run):
+                if not args.dry_run:
+                    new_w, new_h = get_image_dimensions(path)
+                    print(f"  -> Resized to {new_w}x{new_h}px")
                 else:
-                    print("  -> Resized successfully")
+                    print(f"  -> [Dry Run] Would resize proportionally")
                 resized_count += 1
             else:
                 print("  -> Failed to resize")
 
-    print("\nSummary:")
-    print(f"Total hero/portrait images excluded: {len(excluded_images)}")
-    print(f"Total images scanned: {len(image_paths)}")
-    print(f"Images needing resize/crop: {images_to_resize_count}")
-    print(f"Successfully resized images: {resized_count}")
+    print("\n" + "=" * 50)
+    print("Summary:")
+    print(f"  Total excluded hero/portrait images: {len(excluded_filenames)}")
+    print(f"  Total scanned eligible images:       {len(image_paths)}")
+    print(f"  Images needing downscale:            {needs_resize_count}")
+    print(f"  Successfully processed:              {resized_count}")
+    print("=" * 50)
 
 if __name__ == '__main__':
     main()

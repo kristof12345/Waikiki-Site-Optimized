@@ -667,45 +667,588 @@ def build_svg(lang="en", cuba_xml=""):
                 </svg>'''
     return svg
 
+def get_brazil_states():
+    """Extract state SVG path data from content/Maps/brazil.svg."""
+    brazil_svg = ROOT / "content" / "Maps" / "brazil.svg"
+    tree = ET.parse(brazil_svg)
+    states = {}
+    for elem in tree.getroot().iter():
+        eid = elem.attrib.get("id", "")
+        if eid.startswith("BR-") and "d" in elem.attrib:
+            states[eid] = elem.attrib["d"]
+    return states
+
+
+AMAZONIA_STATE_IDS = [
+    "BR-AC", "BR-AM", "BR-RR", "BR-RO", "BR-PA", "BR-AP",
+    "BR-MT", "BR-MA", "BR-TO", "BR-PI", "BR-CE",
+]
+
+BRAZILIA_STATE_IDS = [
+    "BR-MG", "BR-MS", "BR-PB", "BR-PE", "BR-RJ", "BR-RN",
+    "BR-RS", "BR-SC", "BR-SE", "BR-SP", "BR-GO", "BR-BA",
+    "BR-PR", "BR-ES", "BR-DF", "BR-AL",
+]
+
+
+def build_legend_xml(lang):
+    is_hu = lang == "hu"
+    lbl_maglev = "MAGLEV"
+    lbl_hyperloop = "HYPERLOOP"
+    lbl_tunnel = "ALAGÚT" if is_hu else "TUNNEL"
+    lbl_mainline = "FŐVONAL" if is_hu else "MAIN LINE"
+    lbl_maritime = "TENGERI ÚTVONAL" if is_hu else "MARITIME ROUTE"
+    return f'''                        <!-- ==================== MAP LEGEND BOX ==================== -->
+                        <g transform="translate(1460 550)" font-size="10">
+                            <rect x="-14" y="-12" width="314" height="70" rx="12" class="f-white" opacity=".92" />
+                            <path d="M0 2h26" class="k-coral" stroke-width="5" stroke-linecap="round" /><text x="34" y="5.5" font-weight="600">{lbl_maglev}</text>
+                            <path d="M125 2h26" class="k-gold" stroke-width="5" stroke-linecap="round" /><text x="159" y="5.5" font-weight="600">{lbl_hyperloop}</text>
+                            <path d="M0 26h26" class="k-ink" stroke-width="4" stroke-dasharray="2 7" stroke-linecap="round" /><text x="34" y="29.5" font-weight="600">{lbl_tunnel}</text>
+                            <path d="M125 26h26" class="k-ink2" stroke-width="4" stroke-linecap="round" /><text x="159" y="29.5" font-weight="600">{lbl_mainline}</text>
+                            <path d="M0 46h26" class="k-sea" stroke-width="3.5" stroke-dasharray="5 3" stroke-linecap="round" /><text x="34" y="49.5" font-weight="600">{lbl_maritime}</text>
+                        </g>'''
+
+
+def build_amazonia_svg(lang, brazil_states):
+    is_hu = lang == "hu"
+    lbl_atlantic = "ATLANTI-ÓCEÁN" if is_hu else "ATLANTIC OCEAN"
+    lbl_basin = "AMAZONAS-MEDENCE" if is_hu else "AMAZON BASIN"
+    lbl_guiana = "GUAYANAI-PAJZS" if is_hu else "GUIANA SHIELD"
+    lbl_brazilia = "BRAZÍLIA TARTOMÁNY" if is_hu else "BRAZILIA PROVINCE"
+    lbl_waikiki_route = "WAIKIKI ÉSZAKI ÚTVONAL" if is_hu else "WAIKIKI NORTH ROUTE"
+
+    neighbor_ids = ["BR-GO", "BR-DF", "BR-MS", "BR-MG", "BR-BA", "BR-PE", "BR-PB", "BR-RN", "BR-AL", "BR-SE"]
+    context_paths = "\n".join(
+        f'                            <path class="f-sand florida-path" vector-effect="non-scaling-stroke" d="{brazil_states[sid]}" />'
+        for sid in neighbor_ids
+        if sid in brazil_states
+    )
+    province_paths = "\n".join(
+        f'                            <path class="f-sand province-path" vector-effect="non-scaling-stroke" d="{brazil_states[sid]}" />'
+        for sid in AMAZONIA_STATE_IDS
+        if sid in brazil_states
+    )
+
+    legend_xml = build_legend_xml(lang)
+
+    return f'''<svg class="ill" viewBox="0 0 1800 650">
+                    <defs>
+                        <clipPath id="amazonia-map-clip">
+                            <rect width="1800" height="650" />
+                        </clipPath>
+                    </defs>
+                    <g clip-path="url(#amazonia-map-clip)">
+                    <rect width="1800" height="650" class="f-sea3" />
+                    <!-- Geographic Coordinate Grid -->
+                    <g class="k-white" stroke-width="1" opacity=".3">
+                        <path d="M0 130h1800M0 260h1800M0 390h1800M0 520h1800M300 0v650M600 0v650M900 0v650M1200 0v650M1500 0v650" />
+                    </g>
+                    <!-- ==================== NEIGHBORING BRAZILIA CONTEXT ==================== -->
+                    <g opacity=".45" transform="translate(210, 20) scale(1.75, 1.62)">
+{context_paths}
+                    </g>
+                    <!-- ==================== AMAZONIA PROVINCE ==================== -->
+                    <g class="amazonia-province" transform="translate(210, 20) scale(1.75, 1.62)">
+{province_paths}
+                    </g>
+                    <!-- ==================== AMAZON RIVER HYDROGRAPHY ==================== -->
+                    <g class="k-sea" fill="none" stroke-linecap="round" opacity=".38">
+                        <path d="M 368 249 Q 465 240 569 227 Q 658 236 746 218 Q 815 186 882 138" stroke-width="4.5" />
+                        <path d="M 465 146 Q 515 186 569 227" stroke-width="3" />
+                        <path d="M 487 383 Q 532 304 596 231" stroke-width="3" />
+                        <path d="M 704 438 Q 726 328 746 218" stroke-width="2.8" />
+                        <path d="M 914 402 Q 890 342 868 282 Q 882 225 896 169" stroke-width="2.8" />
+                    </g>
+                    <!-- ==================== TRANSPORT CORRIDORS & LIVE DOTS ==================== -->
+                    <!-- 1. MARITIME & RIVER ROUTES -->
+                    <g class="k-sea" stroke-width="3.5" stroke-dasharray="5 3" fill="none" opacity=".85">
+                        <!-- Amazon Deep-Water Navigation Spine to North Atlantic / Waikiki -->
+                        <path d="M 569 227 Q 658 234 746 218 Q 812 184 862 142 Q 945 96 1085 42" />
+                        <!-- Belém - Macapá - Equatorial Atlantic Shipping Lane -->
+                        <path d="M 896 169 Q 856 146 814 127 Q 875 82 985 38" />
+                        <!-- Equatorial Coastal Maritime Corridor (Belém - São Luís - Fortaleza - East Atlantic) -->
+                        <path d="M 896 169 Q 946 162 994 201 Q 1082 178 1166 244 Q 1295 256 1430 295" />
+                    </g>
+                    <!-- Maritime Animated Dots -->
+                    <circle r="4" class="f-white" opacity=".9">
+                        <animateMotion dur="11s" repeatCount="indefinite" path="M 569 227 Q 658 234 746 218 Q 812 184 862 142 Q 945 96 1085 42" />
+                    </circle>
+                    <circle r="4" class="f-white" opacity=".9">
+                        <animateMotion dur="7s" repeatCount="indefinite" path="M 896 169 Q 856 146 814 127 Q 875 82 985 38" />
+                    </circle>
+                    <circle r="4" class="f-white" opacity=".9">
+                        <animateMotion dur="10s" repeatCount="indefinite" path="M 896 169 Q 946 162 994 201 Q 1082 178 1166 244 Q 1295 256 1430 295" />
+                    </circle>
+                    <!-- 2. SUB-RIVER & DELTA TUNNELS -->
+                    <g class="k-ink" stroke-width="4" stroke-dasharray="2 7" stroke-linecap="round" fill="none">
+                        <!-- Marajó Delta Undersea Tunnel (Belém - Macapá) -->
+                        <path d="M 896 169 Q 854 150 814 127" />
+                        <!-- Rio Negro - Solimões Sub-River Crossing (Manaus - Amazonia City Approach) -->
+                        <path d="M 569 227 Q 618 252 669 273" />
+                    </g>
+                    <circle r="4" class="f-white">
+                        <animateMotion dur="5s" repeatCount="indefinite" path="M 896 169 Q 854 150 814 127" />
+                    </circle>
+                    <circle r="4" class="f-white">
+                        <animateMotion dur="4.5s" repeatCount="indefinite" path="M 569 227 Q 618 252 669 273" />
+                    </circle>
+                    <!-- 3. MAIN LINES (Regional Rail Corridors) -->
+                    <g class="k-ink2" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <!-- Northern Guiana Shield Trunk (Manaus - Boa Vista) -->
+                        <path d="M 569 227 Q 554 158 546 91" />
+                        <!-- Western Amazon Trunk (Manaus - Porto Velho - Rio Branco) -->
+                        <path d="M 569 227 Q 524 306 487 383 Q 420 392 354 396" />
+                        <!-- Madeira - Mato Grosso Rail Link (Porto Velho - Sinop - Cuiabá) -->
+                        <path d="M 487 383 Q 596 412 704 438 Q 690 486 679 532" />
+                        <!-- Tocantins - Carajás Freight & Passenger Line (Belém - Marabá - Imperatriz - Palmas) -->
+                        <path d="M 896 169 Q 880 226 868 282 L 949 289 Q 930 346 914 402" />
+                        <!-- Parnaíba - Eastern Interior Line (São Luís - Imperatriz - Teresina - Palmas) -->
+                        <path d="M 994 201 Q 970 245 949 289 Q 1010 286 1071 282 Q 992 342 914 402" />
+                    </g>
+                    <!-- Main Line Animated Dots -->
+                    <circle r="4" class="f-white">
+                        <animateMotion dur="6s" repeatCount="indefinite" path="M 569 227 Q 554 158 546 91" />
+                    </circle>
+                    <circle r="4" class="f-white">
+                        <animateMotion dur="8.5s" repeatCount="indefinite" path="M 569 227 Q 524 306 487 383 Q 420 392 354 396" />
+                    </circle>
+                    <circle r="4" class="f-white">
+                        <animateMotion dur="8s" repeatCount="indefinite" path="M 487 383 Q 596 412 704 438 Q 690 486 679 532" />
+                    </circle>
+                    <circle r="4" class="f-white">
+                        <animateMotion dur="7.5s" repeatCount="indefinite" path="M 896 169 Q 880 226 868 282 L 949 289 Q 930 346 914 402" />
+                    </circle>
+                    <circle r="4" class="f-white">
+                        <animateMotion dur="8s" repeatCount="indefinite" path="M 994 201 Q 970 245 949 289 Q 1010 286 1071 282 Q 992 342 914 402" />
+                    </circle>
+                    <!-- 4. MAGLEV LINES (High-Speed Provincial Spines) -->
+                    <g class="k-coral" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <!-- Trans-Amazonian & Equatorial Coastal Maglev Spine (Manaus - Amazonia City - Santarém - Belém - São Luís - Teresina - Fortaleza) -->
+                        <path d="M 569 227 Q 618 252 669 273 Q 708 246 746 218 Q 820 194 896 169 Q 945 184 994 201 Q 1032 242 1071 282 Q 1118 264 1166 244" />
+                        <!-- North-South Central Maglev Spine (Amazonia City - Sinop - Cuiabá - Palmas - Marabá - Belém) -->
+                        <path d="M 669 273 Q 688 355 704 438 Q 692 485 679 532 Q 796 468 914 402 Q 890 342 868 282 Q 882 225 896 169" />
+                    </g>
+                    <!-- Maglev Animated Dots -->
+                    <circle r="5.5" class="f-white">
+                        <animateMotion dur="6.5s" repeatCount="indefinite" path="M 569 227 Q 618 252 669 273 Q 708 246 746 218 Q 820 194 896 169 Q 945 184 994 201 Q 1032 242 1071 282 Q 1118 264 1166 244" />
+                    </circle>
+                    <circle r="5.5" class="f-white">
+                        <animateMotion dur="6.5s" begin="3.2s" repeatCount="indefinite" path="M 1166 244 Q 1118 264 1071 282 Q 1032 242 994 201 Q 945 184 896 169 Q 820 194 746 218 Q 708 246 669 273 Q 618 252 569 227" />
+                    </circle>
+                    <circle r="5.5" class="f-white">
+                        <animateMotion dur="6s" repeatCount="indefinite" path="M 669 273 Q 688 355 704 438 Q 692 485 679 532 Q 796 468 914 402 Q 890 342 868 282 Q 882 225 896 169" />
+                    </circle>
+                    <!-- 5. HYPERLOOP EXPRESS CORRIDOR -->
+                    <g class="k-gold" stroke-width="5" fill="none" stroke-linecap="round">
+                        <!-- Manaus - Amazonia City - Santarém - Belém Express Hyperloop -->
+                        <path d="M 569 227 Q 620 258 669 273 Q 710 250 746 218 Q 822 184 896 169" />
+                    </g>
+                    <circle r="4.5" class="f-white">
+                        <animateMotion dur="2.6s" repeatCount="indefinite" path="M 569 227 Q 620 258 669 273 Q 710 250 746 218 Q 822 184 896 169" />
+                    </circle>
+                    <!-- ==================== CITIES & STATION NODES ==================== -->
+                    <!-- Provincial Hub: MANAUS -->
+                    <g>
+                        <circle cx="569" cy="227" r="22" class="f-coral" opacity=".18">
+                            <animate attributeName="r" values="14;26;14" dur="3s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="569" cy="227" r="10.5" class="f-coral k-white" stroke-width="2.5" />
+                        <g transform="translate(569, 227)">
+                            <polygon points="0,-5 1.5,-1.5 5,-1 2.5,1.5 3,5 0,3 -3,5 -2.5,1.5 -5,-1 -1.5,-1.5" class="f-white" />
+                        </g>
+                    </g>
+                    <!-- Major Provincial Hubs: BELÉM, FORTALEZA, CUIABÁ -->
+                    <g class="f-coral k-white" stroke-width="2.2">
+                        <circle cx="896" cy="169" r="8.5" />
+                        <circle cx="1166" cy="244" r="8.5" />
+                        <circle cx="679" cy="532" r="8.5" />
+                    </g>
+                    <g class="f-white">
+                        <circle cx="896" cy="169" r="3.2" />
+                        <circle cx="1166" cy="244" r="3.2" />
+                        <circle cx="679" cy="532" r="3.2" />
+                    </g>
+                    <!-- Special Eco-Metropolis Hub: AMAZONIA CITY -->
+                    <g transform="translate(669, 273)">
+                        <polygon points="-9,5 0,-11 9,5" class="f-gold k-ink" stroke-width="1.5" stroke-linejoin="round" />
+                        <polygon points="0,-11 9,5 4,5" class="f-ink" opacity=".22" />
+                    </g>
+                    <!-- Large Cities -->
+                    <g class="f-ink k-white" stroke-width="1.8">
+                        <circle cx="746" cy="218" r="7" />
+                        <circle cx="814" cy="127" r="7" />
+                        <circle cx="994" cy="201" r="7" />
+                        <circle cx="1071" cy="282" r="7" />
+                        <circle cx="914" cy="402" r="7" />
+                        <circle cx="487" cy="383" r="7" />
+                        <circle cx="546" cy="91" r="7" />
+                    </g>
+                    <g class="f-gold">
+                        <circle cx="746" cy="218" r="2.8" />
+                        <circle cx="814" cy="127" r="2.8" />
+                        <circle cx="994" cy="201" r="2.8" />
+                        <circle cx="1071" cy="282" r="2.8" />
+                        <circle cx="914" cy="402" r="2.8" />
+                        <circle cx="487" cy="383" r="2.8" />
+                        <circle cx="546" cy="91" r="2.8" />
+                    </g>
+                    <!-- Regional Cities -->
+                    <g class="f-ink k-white" stroke-width="1.5">
+                        <circle cx="354" cy="396" r="5.5" />
+                        <circle cx="704" cy="438" r="5.5" />
+                        <circle cx="868" cy="282" r="5.5" />
+                        <circle cx="949" cy="289" r="5.5" />
+                    </g>
+                    <g class="f-gold">
+                        <circle cx="354" cy="396" r="2.2" />
+                        <circle cx="704" cy="438" r="2.2" />
+                        <circle cx="868" cy="282" r="2.2" />
+                        <circle cx="949" cy="289" r="2.2" />
+                    </g>
+                    <!-- ==================== LABELS ==================== -->
+                    <g font-size="11" letter-spacing=".08em">
+                        <!-- Primary Hub -->
+                        <text x="569" y="206" font-size="14" font-weight="800" text-anchor="middle">MANAUS</text>
+                        <!-- Major Hubs -->
+                        <text x="896" y="150" font-size="12" font-weight="700" text-anchor="middle">BELÉM</text>
+                        <text x="1182" y="248" font-size="12" font-weight="700">FORTALEZA</text>
+                        <text x="679" y="556" font-size="12" font-weight="700" text-anchor="middle">CUIABÁ</text>
+                        <!-- Special Hub -->
+                        <text x="669" y="294" font-size="10.5" font-weight="700" text-anchor="middle">AMAZONIA CITY</text>
+                        <!-- Large Cities -->
+                        <text x="746" y="201" font-size="10.5" text-anchor="middle">SANTARÉM</text>
+                        <text x="800" y="118" font-size="10.5" text-anchor="end">MACAPÁ</text>
+                        <text x="1008" y="195" font-size="10.5">SÃO LUÍS</text>
+                        <text x="1086" y="296" font-size="10.5">TERESINA</text>
+                        <text x="930" y="407" font-size="10.5">PALMAS</text>
+                        <text x="487" y="404" font-size="10.5" text-anchor="middle">PORTO VELHO</text>
+                        <text x="546" y="74" font-size="10.5" text-anchor="middle">BOA VISTA</text>
+                        <!-- Regional Cities -->
+                        <text x="354" y="416" font-size="9" opacity=".88" text-anchor="middle">RIO BRANCO</text>
+                        <text x="720" y="442" font-size="9" opacity=".88">SINOP</text>
+                        <text x="854" y="286" font-size="9" opacity=".88" text-anchor="end">MARABÁ</text>
+                        <text x="955" y="276" font-size="9" opacity=".88">IMPERATRIZ</text>
+                        <!-- Major Territories & Oceans -->
+                        <text x="1280" y="95" font-size="13" font-weight="600" opacity=".6" letter-spacing=".15em">{lbl_atlantic}</text>
+                        <text x="1105" y="34" font-size="10" font-weight="600" opacity=".5" letter-spacing=".14em">{lbl_waikiki_route}</text>
+                        <text x="415" y="195" font-size="11" font-weight="600" opacity=".45" letter-spacing=".15em" text-anchor="middle">{lbl_basin}</text>
+                        <text x="695" y="58" font-size="11" font-weight="600" opacity=".45" letter-spacing=".15em" text-anchor="middle">{lbl_guiana}</text>
+                        <text x="1085" y="495" font-size="11" font-weight="600" opacity=".5" letter-spacing=".15em" text-anchor="middle">{lbl_brazilia}</text>
+                    </g>
+{legend_xml}
+                    </g>
+                </svg>'''
+
+
+def build_brazilia_svg(lang, brazil_states):
+    is_hu = lang == "hu"
+    lbl_atlantic = "ATLANTI-ÓCEÁN" if is_hu else "ATLANTIC OCEAN"
+    lbl_amazonia = "AMAZÓNIA TARTOMÁNY" if is_hu else "AMAZONIA PROVINCE"
+    lbl_highlands = "BRAZIL-FELFÖLD" if is_hu else "BRAZILIAN HIGHLANDS"
+    lbl_santos_basin = "SANTOS-MEDENCE" if is_hu else "SANTOS BASIN"
+    lbl_waikiki_route = "WAIKIKI ÉSZAKI ÚTVONAL" if is_hu else "WAIKIKI NORTH ROUTE"
+
+    neighbor_ids = ["BR-MT", "BR-TO", "BR-PI", "BR-CE", "BR-MA", "BR-PA", "BR-RO"]
+    context_paths = "\n".join(
+        f'                            <path class="f-sand florida-path" vector-effect="non-scaling-stroke" d="{brazil_states[sid]}" />'
+        for sid in neighbor_ids
+        if sid in brazil_states
+    )
+    province_paths = "\n".join(
+        f'                            <path class="f-sand province-path" vector-effect="non-scaling-stroke" d="{brazil_states[sid]}" />'
+        for sid in BRAZILIA_STATE_IDS
+        if sid in brazil_states
+    )
+
+    legend_xml = build_legend_xml(lang)
+
+    return f'''<svg class="ill" viewBox="0 0 1800 650">
+                    <defs>
+                        <clipPath id="brazilia-map-clip">
+                            <rect width="1800" height="650" />
+                        </clipPath>
+                    </defs>
+                    <g clip-path="url(#brazilia-map-clip)">
+                    <rect width="1800" height="650" class="f-sea3" />
+                    <!-- Geographic Coordinate Grid -->
+                    <g class="k-white" stroke-width="1" opacity=".3">
+                        <path d="M0 130h1800M0 260h1800M0 390h1800M0 520h1800M300 0v650M600 0v650M900 0v650M1200 0v650M1500 0v650" />
+                    </g>
+                    <!-- ==================== NEIGHBORING AMAZONIA CONTEXT ==================== -->
+                    <g opacity=".45" transform="translate(180, -182) scale(1.55, 1.28)">
+{context_paths}
+                    </g>
+                    <!-- ==================== BRAZILIA PROVINCE ==================== -->
+                    <g class="brazilia-province" transform="translate(180, -182) scale(1.55, 1.28)">
+{province_paths}
+                    </g>
+                    <!-- ==================== PARANÁ & SÃO FRANCISCO HYDROGRAPHY ==================== -->
+                    <g class="k-sea" fill="none" stroke-linecap="round" opacity=".38">
+                        <path d="M 885 305 Q 925 225 985 150 Q 1040 125 1104 107" stroke-width="3" />
+                        <path d="M 797 302 Q 735 355 702 425" stroke-width="3" />
+                    </g>
+                    <!-- ==================== TRANSPORT CORRIDORS & LIVE DOTS ==================== -->
+                    <!-- 1. MARITIME ROUTES -->
+                    <g class="k-sea" stroke-width="3.5" stroke-dasharray="5 3" fill="none" opacity=".85">
+                        <!-- South Atlantic Deep-Water Coastal Lane (Porto Alegre - Florianópolis - Santos - Rio - Vitória - Salvador - Recife - Natal) -->
+                        <path d="M 723 553 Q 785 535 791 496 Q 825 462 825 427 Q 885 422 918 389 Q 985 365 992 320 Q 1035 255 1020 189 Q 1095 140 1122 77 Q 1125 55 1107 38" />
+                        <!-- Recife Smart Port - Waikiki North Atlantic Trunk -->
+                        <path d="M 1122 77 Q 1245 48 1390 22" />
+                        <!-- Santos & Rio de Janeiro Trans-Atlantic Commercial Corridor -->
+                        <path d="M 825 427 Q 995 442 1190 412 Q 1345 385 1490 340" />
+                    </g>
+                    <!-- Maritime Animated Dots -->
+                    <circle r="4" class="f-white" opacity=".9">
+                        <animateMotion dur="13s" repeatCount="indefinite" path="M 723 553 Q 785 535 791 496 Q 825 462 825 427 Q 885 422 918 389 Q 985 365 992 320 Q 1035 255 1020 189 Q 1095 140 1122 77 Q 1125 55 1107 38" />
+                    </circle>
+                    <circle r="4" class="f-white" opacity=".9">
+                        <animateMotion dur="8s" repeatCount="indefinite" path="M 1122 77 Q 1245 48 1390 22" />
+                    </circle>
+                    <circle r="4" class="f-white" opacity=".9">
+                        <animateMotion dur="10s" repeatCount="indefinite" path="M 825 427 Q 995 442 1190 412 Q 1345 385 1490 340" />
+                    </circle>
+                    <!-- 2. UNDERSEA & MOUNTAIN BASE TUNNELS -->
+                    <g class="k-ink" stroke-width="4" stroke-dasharray="2 7" stroke-linecap="round" fill="none">
+                        <!-- Guanabara Bay Undersea Tunnel (Rio de Janeiro - Miapolis) -->
+                        <path d="M 918 389 L 949 374" />
+                        <!-- Serra do Mar Base Tunnel (São Paulo - Santos) -->
+                        <path d="M 803 402 L 825 427" />
+                        <!-- All Saints' Bay Undersea Crossing (Salvador) -->
+                        <path d="M 992 206 Q 1020 189 1044 170" />
+                    </g>
+                    <circle r="4" class="f-white">
+                        <animateMotion dur="3.5s" repeatCount="indefinite" path="M 918 389 L 949 374" />
+                    </circle>
+                    <circle r="4" class="f-white">
+                        <animateMotion dur="3.5s" repeatCount="indefinite" path="M 803 402 L 825 427" />
+                    </circle>
+                    <!-- 3. MAIN LINES (Interior Rail Corridors) -->
+                    <g class="k-ink2" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <!-- Western Pantanal & Paraná Trunk (São Paulo - Londrina - Campo Grande - Goiânia) -->
+                        <path d="M 803 402 Q 758 406 713 409 Q 682 377 651 345 Q 710 307 769 269" />
+                        <!-- Southern Interior Connector (Curitiba - Londrina) -->
+                        <path d="M 760 448 L 713 409" />
+                        <!-- Central Plateau - Bahia Trunk (Brasília - Salvador) -->
+                        <path d="M 815 240 Q 918 214 1020 189" />
+                        <!-- Minas - Espírito Santo Corridor (Uberlândia - Belo Horizonte - Vitória) -->
+                        <path d="M 797 302 Q 848 308 899 315 Q 946 318 992 320" />
+                    </g>
+                    <!-- Main Line Animated Dots -->
+                    <circle r="4" class="f-white">
+                        <animateMotion dur="8s" repeatCount="indefinite" path="M 803 402 Q 758 406 713 409 Q 682 377 651 345 Q 710 307 769 269" />
+                    </circle>
+                    <circle r="4" class="f-white">
+                        <animateMotion dur="7s" repeatCount="indefinite" path="M 815 240 Q 918 214 1020 189" />
+                    </circle>
+                    <circle r="4" class="f-white">
+                        <animateMotion dur="7.5s" repeatCount="indefinite" path="M 797 302 Q 848 308 899 315 Q 946 318 992 320" />
+                    </circle>
+                    <!-- 4. MAGLEV LINES (High-Speed Provincial Spines) -->
+                    <g class="k-coral" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <!-- Atlantic Coastal Maglev Spine (Porto Alegre - Florianópolis - Curitiba - São Paulo - Rio - Vitória - Salvador - Aracaju - Maceió - Recife - Natal) -->
+                        <path d="M 723 553 Q 757 525 791 496 Q 775 472 760 448 Q 782 425 803 402 Q 860 396 918 389 Q 955 355 992 320 Q 1006 255 1020 189 Q 1046 164 1073 138 L 1104 107 L 1122 77 L 1107 38" />
+                        <!-- Central Plateau Maglev Spine (São Paulo - Uberlândia - Goiânia - Brasília - Belo Horizonte - Rio de Janeiro) -->
+                        <path d="M 803 402 Q 800 352 797 302 L 769 269 L 815 240 Q 857 278 899 315 Q 908 352 918 389" />
+                    </g>
+                    <!-- Maglev Animated Dots -->
+                    <circle r="5.5" class="f-white">
+                        <animateMotion dur="7.5s" repeatCount="indefinite" path="M 723 553 Q 757 525 791 496 Q 775 472 760 448 Q 782 425 803 402 Q 860 396 918 389 Q 955 355 992 320 Q 1006 255 1020 189 Q 1046 164 1073 138 L 1104 107 L 1122 77 L 1107 38" />
+                    </circle>
+                    <circle r="5.5" class="f-white">
+                        <animateMotion dur="7.5s" begin="3.7s" repeatCount="indefinite" path="M 1107 38 L 1122 77 L 1104 107 L 1073 138 Q 1046 164 1020 189 Q 1006 255 992 320 Q 955 355 918 389 Q 860 396 803 402 Q 782 425 760 448 Q 775 472 791 496 Q 757 525 723 553" />
+                    </circle>
+                    <circle r="5.5" class="f-white">
+                        <animateMotion dur="5.5s" repeatCount="indefinite" path="M 803 402 Q 800 352 797 302 L 769 269 L 815 240 Q 857 278 899 315 Q 908 352 918 389" />
+                    </circle>
+                    <!-- 5. HYPERLOOP EXPRESS TRIANGLE -->
+                    <g class="k-gold" stroke-width="5" fill="none" stroke-linecap="round">
+                        <!-- Southeast Megacity Hyperloop Triangle (São Paulo - Rio de Janeiro - Miapolis - Belo Horizonte - Brasília - São Paulo) -->
+                        <path d="M 803 402 Q 860 396 918 389 L 949 374 Q 924 344 899 315 Q 857 278 815 240 Q 809 321 803 402" />
+                    </g>
+                    <circle r="4.5" class="f-white">
+                        <animateMotion dur="3.2s" repeatCount="indefinite" path="M 803 402 Q 860 396 918 389 L 949 374 Q 924 344 899 315 Q 857 278 815 240 Q 809 321 803 402" />
+                    </circle>
+                    <!-- ==================== CITIES & STATION NODES ==================== -->
+                    <!-- Primary Provincial Megahub: SÃO PAULO -->
+                    <g>
+                        <circle cx="803" cy="402" r="22" class="f-coral" opacity=".18">
+                            <animate attributeName="r" values="14;26;14" dur="3s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="803" cy="402" r="10.5" class="f-coral k-white" stroke-width="2.5" />
+                        <g transform="translate(803, 402)">
+                            <polygon points="0,-5 1.5,-1.5 5,-1 2.5,1.5 3,5 0,3 -3,5 -2.5,1.5 -5,-1 -1.5,-1.5" class="f-white" />
+                        </g>
+                    </g>
+                    <!-- Major Provincial Hubs: RIO DE JANEIRO, BRASÍLIA, PORTO ALEGRE, SALVADOR, RECIFE -->
+                    <g class="f-coral k-white" stroke-width="2.2">
+                        <circle cx="918" cy="389" r="8.5" />
+                        <circle cx="815" cy="240" r="8.5" />
+                        <circle cx="723" cy="553" r="8.5" />
+                        <circle cx="1020" cy="189" r="8.5" />
+                        <circle cx="1122" cy="77" r="8.5" />
+                    </g>
+                    <g class="f-white">
+                        <circle cx="918" cy="389" r="3.2" />
+                        <circle cx="815" cy="240" r="3.2" />
+                        <circle cx="723" cy="553" r="3.2" />
+                        <circle cx="1020" cy="189" r="3.2" />
+                        <circle cx="1122" cy="77" r="3.2" />
+                    </g>
+                    <!-- Special Megaproject Landmark: MIAPOLIS -->
+                    <g transform="translate(949, 374)">
+                        <polygon points="-8,5 0,-11 8,5" class="f-gold k-ink" stroke-width="1.5" stroke-linejoin="round" />
+                        <polygon points="0,-11 8,5 3.5,5" class="f-ink" opacity=".22" />
+                    </g>
+                    <!-- Large Cities -->
+                    <g class="f-ink k-white" stroke-width="1.8">
+                        <circle cx="899" cy="315" r="7" />
+                        <circle cx="760" cy="448" r="7" />
+                        <circle cx="769" cy="269" r="7" />
+                        <circle cx="651" cy="345" r="7" />
+                        <circle cx="992" cy="320" r="7" />
+                        <circle cx="791" cy="496" r="7" />
+                        <circle cx="1107" cy="38" r="7" />
+                    </g>
+                    <g class="f-gold">
+                        <circle cx="899" cy="315" r="2.8" />
+                        <circle cx="760" cy="448" r="2.8" />
+                        <circle cx="769" cy="269" r="2.8" />
+                        <circle cx="651" cy="345" r="2.8" />
+                        <circle cx="992" cy="320" r="2.8" />
+                        <circle cx="791" cy="496" r="2.8" />
+                        <circle cx="1107" cy="38" r="2.8" />
+                    </g>
+                    <!-- Regional Cities -->
+                    <g class="f-ink k-white" stroke-width="1.5">
+                        <circle cx="825" cy="427" r="5.5" />
+                        <circle cx="797" cy="302" r="5.5" />
+                        <circle cx="713" cy="409" r="5.5" />
+                        <circle cx="1073" cy="138" r="5.5" />
+                        <circle cx="1104" cy="107" r="5.5" />
+                    </g>
+                    <g class="f-gold">
+                        <circle cx="825" cy="427" r="2.2" />
+                        <circle cx="797" cy="302" r="2.2" />
+                        <circle cx="713" cy="409" r="2.2" />
+                        <circle cx="1073" cy="138" r="2.2" />
+                        <circle cx="1104" cy="107" r="2.2" />
+                    </g>
+                    <!-- ==================== LABELS ==================== -->
+                    <g font-size="11" letter-spacing=".08em">
+                        <!-- Primary Megahub -->
+                        <text x="788" y="388" font-size="14" font-weight="800" text-anchor="end">SÃO PAULO</text>
+                        <!-- Major Hubs -->
+                        <text x="918" y="411" font-size="12" font-weight="700" text-anchor="middle">RIO DE JANEIRO</text>
+                        <text x="815" y="222" font-size="12" font-weight="700" text-anchor="middle">BRASÍLIA</text>
+                        <text x="723" y="576" font-size="12" font-weight="700" text-anchor="middle">PORTO ALEGRE</text>
+                        <text x="1036" y="193" font-size="12" font-weight="700">SALVADOR</text>
+                        <text x="1138" y="81" font-size="12" font-weight="700">RECIFE</text>
+                        <!-- Special Megaproject -->
+                        <text x="963" y="378" font-size="9.5" font-weight="700">MIAPOLIS</text>
+                        <!-- Large Cities -->
+                        <text x="904" y="305" font-size="9.5">BELO HORIZONTE</text>
+                        <text x="746" y="452" font-size="10.5" text-anchor="end">CURITIBA</text>
+                        <text x="755" y="272" font-size="10.5" text-anchor="end">GOIÂNIA</text>
+                        <text x="637" y="349" font-size="10.5" text-anchor="end">CAMPO GRANDE</text>
+                        <text x="1008" y="324" font-size="10.5">VITÓRIA</text>
+                        <text x="807" y="500" font-size="10.5">FLORIANÓPOLIS</text>
+                        <text x="1123" y="42" font-size="10.5">NATAL</text>
+                        <!-- Regional Cities -->
+                        <text x="838" y="434" font-size="9" opacity=".88">SANTOS</text>
+                        <text x="785" y="310" font-size="9" opacity=".88" text-anchor="end">UBERLÂNDIA</text>
+                        <text x="699" y="413" font-size="9" opacity=".88" text-anchor="end">LONDRINA</text>
+                        <text x="1087" y="142" font-size="9" opacity=".88">ARACAJU</text>
+                        <text x="1118" y="111" font-size="9" opacity=".88">MACEIÓ</text>
+                        <!-- Major Territories & Oceans -->
+                        <text x="1320" y="245" font-size="13" font-weight="600" opacity=".6" letter-spacing=".15em">{lbl_atlantic}</text>
+                        <text x="1395" y="42" font-size="10" font-weight="600" opacity=".5" letter-spacing=".14em">{lbl_waikiki_route}</text>
+                        <text x="625" y="105" font-size="11" font-weight="600" opacity=".5" letter-spacing=".15em" text-anchor="middle">{lbl_amazonia}</text>
+                        <text x="655" y="195" font-size="11" font-weight="600" opacity=".45" letter-spacing=".15em" text-anchor="middle">{lbl_highlands}</text>
+                        <text x="1055" y="485" font-size="11" font-weight="600" opacity=".45" letter-spacing=".15em" text-anchor="middle">{lbl_santos_basin}</text>
+                    </g>
+{legend_xml}
+                    </g>
+                </svg>'''
+
+
+def build_mobility_block(lang, cuba_group, brazil_states):
+    is_hu = lang == "hu"
+    tab_waikiki = "Waikiki tartomány" if is_hu else "Waikiki Province"
+    tab_amazonia = "Amazónia tartomány" if is_hu else "Amazonia Province"
+    tab_brazilia = "Brazília tartomány" if is_hu else "Brazilia Province"
+    caption = (
+        "Sematikus ábra, nem méretarányos. A mozgó pontok az egyes folyosók forgalmát jelzik."
+        if is_hu
+        else "Schematic, not to scale. Animated dots show live service on each corridor."
+    )
+
+    waikiki_svg = build_svg(lang, cuba_group)
+    amazonia_svg = build_amazonia_svg(lang, brazil_states)
+    brazilia_svg = build_brazilia_svg(lang, brazil_states)
+
+    for name, s in [("waikiki", waikiki_svg), ("amazonia", amazonia_svg), ("brazilia", brazilia_svg)]:
+        ET.fromstring(s)
+        print(f"[{lang}:{name}] SVG parsed successfully as valid XML!")
+
+    return f'''<div class="island-tabs-bar" role="tablist">
+                <button class="island-tab-btn is-active" id="tab-btn-waikiki" type="button" role="tab" aria-selected="true" aria-controls="tab-panel-waikiki" data-island-tab="waikiki"><img src="../icons/mdi/island.svg" />
+                    <span>{tab_waikiki}</span>
+                </button>
+                <button class="island-tab-btn" id="tab-btn-amazonia" type="button" role="tab" aria-selected="false" aria-controls="tab-panel-amazonia" data-island-tab="amazonia"><img src="../icons/mdi/forest.svg" />
+                    <span>{tab_amazonia}</span>
+                </button>
+                <button class="island-tab-btn" id="tab-btn-brazilia" type="button" role="tab" aria-selected="false" aria-controls="tab-panel-brazilia" data-island-tab="brazilia"><img src="../icons/mdi/city.svg" />
+                    <span>{tab_brazilia}</span>
+                </button>
+            </div>
+            <div class="island-panel is-active" id="tab-panel-waikiki" role="tabpanel" aria-labelledby="tab-btn-waikiki">
+                <figure class="ill-panel" data-reveal="zoom">
+                    {waikiki_svg}
+                    <figcaption class="ill-caption">{caption}</figcaption>
+                </figure>
+            </div>
+            <div class="island-panel" id="tab-panel-amazonia" role="tabpanel" aria-labelledby="tab-btn-amazonia">
+                <figure class="ill-panel" data-reveal="zoom">
+                    {amazonia_svg}
+                    <figcaption class="ill-caption">{caption}</figcaption>
+                </figure>
+            </div>
+            <div class="island-panel" id="tab-panel-brazilia" role="tabpanel" aria-labelledby="tab-btn-brazilia">
+                <figure class="ill-panel" data-reveal="zoom">
+                    {brazilia_svg}
+                    <figcaption class="ill-caption">{caption}</figcaption>
+                </figure>
+            </div>'''
+
+
 def main():
     cuba_group = get_cuba_group()
-    print("Found Cuba group, size:", len(cuba_group))
-    
+    brazil_states = get_brazil_states()
+    print(f"Found Cuba group ({len(cuba_group)} chars) and {len(brazil_states)} Brazil states.")
+
     for lang, rel_path in [("en", "en/infrastructure.html"), ("hu", "hu/infrastructure.html")]:
         filepath = ROOT / rel_path
-        svg_content = build_svg(lang, cuba_group)
-        
-        # Validate XML parsing
-        try:
-            ET.fromstring(svg_content)
-            print(f"[{lang}] SVG parsed successfully as valid XML!")
-        except Exception as e:
-            print(f"[{lang}] XML parse error:", e)
-            sys.exit(1)
-            
+        mobility_block = build_mobility_block(lang, cuba_group, brazil_states)
+
         with open(filepath, 'r', encoding='utf-8') as f:
             content = f.read()
-            
-        # Locate figure inside #mobility
+
         mob_idx = content.find('id="mobility"')
-        fig_str = '<figure class="ill-panel" data-reveal="zoom">'
-        fig_idx = content.find(fig_str, mob_idx)
-        cap_str = '<figcaption class="ill-caption">'
-        cap_idx = content.find(cap_str, fig_idx)
-        
-        if mob_idx == -1 or fig_idx == -1 or cap_idx == -1:
-            raise ValueError(f"Could not locate mobility figure boundaries in {filepath}")
-            
-        # Replace the SVG inside figure
-        before = content[:fig_idx + len(fig_str)]
-        after = content[cap_idx:]
-        
-        new_content = before + "\n                " + svg_content + "\n                " + after
-        
+        intro_end = content.find('</p>', mob_idx)
+        list_idx = content.find('<ol class="feature-list">', mob_idx)
+
+        if mob_idx == -1 or intro_end == -1 or list_idx == -1:
+            raise ValueError(f"Could not locate mobility boundaries in {filepath}")
+
+        before = content[:intro_end + len('</p>')]
+        after = content[list_idx:]
+
+        new_content = before + "\n            " + mobility_block + "\n            " + after
+
         with open(filepath, 'w', encoding='utf-8') as f:
             f.write(new_content)
         print(f"Updated {filepath} successfully!")
-        
+
         subprocess.run(["python3", str(ROOT / "scripts" / "build_pages.py"), "--format", str(filepath)], check=False)
 
 if __name__ == '__main__':

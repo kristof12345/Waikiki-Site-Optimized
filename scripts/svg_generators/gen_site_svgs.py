@@ -6,16 +6,14 @@ Coordinates procedural generation of site illustrations and card artwork across 
   - Ski Paradise (ski-paradise.html): Summit elevation chart and 5 alpine resort cards
   - Travel Guide (travel-guide.html): 15 luxury hotel and sanctuary cards
   - Infrastructure (infrastructure.html): Tallest structures chart and 10 landmark cards
-  - Nova Aurelia (nova-aurelia.html): 4 imperial metropolis district cards
 
-Hero SVGs are canonical standalone files in icons/*/hero-art.svg and are NOT generated here.
+Hero SVGs, nature biome illustrations (icons/nature/*.svg), and Nova Aurelia large illustrations are canonical standalone files in icons/*/ and are NOT generated here.
 
 Usage:
-  python3 scripts/svg_generators/gen_site_svgs.py                 # Generate all 4 page suites
+  python3 scripts/svg_generators/gen_site_svgs.py                 # Generate all 3 page suites
   python3 scripts/svg_generators/gen_site_svgs.py --site ski      # Generate ski paradise only
   python3 scripts/svg_generators/gen_site_svgs.py --site travel   # Generate travel guide only
   python3 scripts/svg_generators/gen_site_svgs.py --site infra    # Generate infrastructure only
-  python3 scripts/svg_generators/gen_site_svgs.py --site nova-aurelia  # Generate Nova Aurelia only
   python3 scripts/svg_generators/gen_site_svgs.py --include-maps  # Also generate linked maps
   python3 scripts/svg_generators/gen_site_svgs.py --everything    # Generate pages, maps, and other SVGs
 """
@@ -31,7 +29,6 @@ ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import gen_infrastructure_svgs
-import gen_nova_aurelia_svgs
 import gen_ski_svgs
 import gen_travel_svgs
 
@@ -39,15 +36,12 @@ PAGE_GENERATORS = {
     "ski": ("Ski Paradise (ski-paradise.html)", gen_ski_svgs.main),
     "travel": ("Travel Guide (travel-guide.html)", gen_travel_svgs.main),
     "infra": ("Infrastructure (infrastructure.html)", gen_infrastructure_svgs.main),
-    "nova-aurelia": ("Nova Aurelia (nova-aurelia.html)", gen_nova_aurelia_svgs.main),
 }
 
 PAGE_ALIASES = {
     "ski-paradise": "ski",
     "travel-guide": "travel",
     "infrastructure": "infra",
-    "nova_aurelia": "nova-aurelia",
-    "nova": "nova-aurelia",
 }
 
 
@@ -70,15 +64,15 @@ def run_maps() -> None:
 def run_other() -> None:
     """Generate other procedural SVGs."""
     import gen_banking_svgs
-    import gen_nature_svgs
+    import gen_military_svgs
     import gen_plane
     import gen_space_svgs
 
-    print("\n--- Generating Other Localized & Nature SVGs ---")
+    print("\n--- Generating Other Localized SVGs ---")
     gen_banking_svgs.main()
     gen_space_svgs.main()
+    gen_military_svgs.main()
     gen_plane.main()
-    gen_nature_svgs.main()
 
 
 def main() -> None:
@@ -90,7 +84,7 @@ def main() -> None:
         "--page",
         dest="target",
         default="all",
-        help="Target site/page to generate: all, ski, travel, infra, nova-aurelia (default: all)",
+        help="Target site/page to generate: all, ski, travel, infra (default: all)",
     )
     parser.add_argument(
         "--include-maps",
@@ -100,7 +94,7 @@ def main() -> None:
     parser.add_argument(
         "--include-other",
         action="store_true",
-        help="Also run other procedural SVG generators (banking, space, plane deck, nature)",
+        help="Also run other procedural SVG generators (banking, space, military, plane deck)",
     )
     parser.add_argument(
         "--everything",
@@ -115,7 +109,7 @@ def main() -> None:
     start_time = time.time()
     print("=" * 65)
     print("Sovereign Nation of Waikiki — SVG Generation Pipeline")
-    print("Note: Hero SVGs are canonical standalone files and are NOT procedurally generated.")
+    print("Note: Hero SVGs and nature biome SVGs are canonical standalone files and are NOT procedurally generated.")
     print("=" * 65)
 
     if target == "all":

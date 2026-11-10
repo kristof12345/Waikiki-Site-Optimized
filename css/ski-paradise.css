@@ -132,6 +132,11 @@
   animation: islandPanelIn 0.5s var(--ease-out) both;
 }
 
+#telemetry .island-panel {
+  display: block;
+  animation: none;
+}
+
 .island-specs-banner {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -268,6 +273,17 @@
   dominant-baseline: central;
   pointer-events: none;
   letter-spacing: 0;
+}
+
+.peak-label text,
+.peak-label-text,
+.ill text.peak-label-text {
+  fill: #fcedc7;
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  pointer-events: none;
 }
 
 .island-hotspots-grid {

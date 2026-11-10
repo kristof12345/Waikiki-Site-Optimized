@@ -408,6 +408,11 @@
   text-align: center;
 }
 
+.ill-panel {
+  max-width: var(--width-l);
+  margin: 0;
+}
+
 .ill text {
   font-family: var(--font-sans);
   font-weight: 700;

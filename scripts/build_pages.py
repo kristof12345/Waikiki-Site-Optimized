@@ -98,7 +98,7 @@ COUPLE_TABS = [
     ("-private", {"en": "Private Life", "hu": "Magánélet"}),
 ]
 
-BIOS = ["bio/raimondo", "bio/selena", "bio/angelina", "bio/taylor"]
+BIOS = ["bio/chease", "bio/jessica", "bio/raimondo", "bio/selena", "bio/angelina", "bio/taylor"]
 
 # Reading order used for the "next chapter" banner.
 SEQUENCE: list[str] = []
@@ -262,8 +262,7 @@ class Page:
     def brand_mark(self, curtain: bool = False, footer: bool = False) -> str:
         src = self.asset("icons/logo.svg")
         size = 64 if curtain else 44
-        loading = "lazy" if footer else "eager"
-        return f'<img class="brand-mark" src="{src}" alt="Waikiki" width="{size}" height="{size}" loading="{loading}" />'
+        return f'<img class="brand-mark" src="{src}" alt="Waikiki" width="{size}" height="{size}" />'
 
 # --------------------------------------------------------------------------- #
 # Chrome builders
@@ -435,7 +434,7 @@ def build_next(page: Page, meta: dict[str, dict]) -> str:
 
     title = label_for(target, page.locale) or info["title"]
     image = info.get("image") or TARGET_NEXT_IMAGES.get(target) or meta.get(f"{page.locale}/index", {}).get("image")
-    img_html = f'<div class="next-media"><img src="{page.asset("images/" + image)}" alt="" /></div>' if image else ""
+    img_html = f'<div class="next-media"><img src="{page.asset("images/" + image)}" /></div>' if image else ""
     eyebrow = f'{T["continue"][page.locale]} · {group_label(group_for(target), page.locale)}'
     return f"""<!-- @chrome:next -->
     <section class="next-chapter">
@@ -460,7 +459,7 @@ def hero_html(page: Page, *, eyebrow: str, title: str, lead: str | None, image: 
     if image:
         alt = (label_for(page.slug, loc) or strip_tags(title)).replace('"', '&quot;')
         style = f' style="{img_style}"' if img_style else ""
-        parts.append(f'<div class="hero-media"><img src="{image}" alt="{alt}"{style} fetchpriority="high" /></div><div class="hero-veil"></div>')
+        parts.append(f'<div class="hero-media"><img src="{image}" {style} fetchpriority="high" /></div><div class="hero-veil"></div>')
     parts.append('<div class="hero-content">')
     if eyebrow:
         parts.append(f'<span class="hero-eyebrow">{eyebrow}</span>')

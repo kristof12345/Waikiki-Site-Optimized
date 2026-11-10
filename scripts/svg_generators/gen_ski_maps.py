@@ -2,7 +2,8 @@
 """
 Procedural generator for Waikiki Ski Paradise realistic 3D panoramic alpine trail maps:
   - Tab 1: Grand Andes Massif (icons/ski/andes-map.svg)
-  - Tab 2: Haiti Highland Glacier (icons/ski/haiti-map.svg)
+  - Tab 2: Nevado del Sur Cirque (icons/ski/nevado-map.svg)
+  - Tab 3: Haiti Highland Peaks (icons/ski/haiti-map.svg)
 
 Generates standalone SVG files in icons/ski/ and injects localized inline SVGs
 into en/ski-paradise.html and hu/ski-paradise.html.
@@ -26,6 +27,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent.parent
 SKI_ICONS_DIR = ROOT / "icons" / "ski"
 ANDES_SVG_PATH = SKI_ICONS_DIR / "andes-map.svg"
+NEVADO_SVG_PATH = SKI_ICONS_DIR / "nevado-map.svg"
 HAITI_SVG_PATH = SKI_ICONS_DIR / "haiti-map.svg"
 
 BLUE = "#2563eb"
@@ -485,14 +487,16 @@ def draw_funicular(a, b, dur=9.0):
 
 
 # ==============================================================================
-# LABELS, PINS AND COMPASS
+# LABELS AND HOTSPOT PINS
 # ==============================================================================
 def peak_label(x, y, en_name, hu_name, accent="#dfba76"):
     """Peak name pill (the only text on the maps). Width fits EN and HU."""
     w = max(len(en_name), len(hu_name)) * 6.4 + 30
     return [
+        f'<g class="peak-label">',
         f'<rect x="{n(x - w / 2)}" y="{n(y - 9)}" width="{n(w)}" height="18" rx="9" fill="#071930" opacity="0.88" stroke="{accent}" stroke-width="1" />',
-        f'<text x="{n(x)}" y="{n(y + 3.3)}" fill="#fcedc7" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">▲ {en_name}</text>',
+        f'<text class="peak-label-text" x="{n(x)}" y="{n(y + 3.3)}" fill="#fcedc7" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">▲ {en_name}</text>',
+        f'</g>',
     ]
 
 
@@ -510,17 +514,6 @@ def hotspot_pin(idx, x, y, pin_dx=0, pin_dy=-26, active=False):
         f'<text fill="#ffffff" font-family="sans-serif" font-size="9.5" font-weight="800" text-anchor="middle" dominant-baseline="central">{idx}</text>',
         "</g>",
     ]
-
-
-COMPASS = [
-    '<g transform="translate(1158, 42)">',
-    '<circle r="20" fill="#071930" opacity="0.8" stroke="#dfba76" stroke-width="1" />',
-    '<polygon points="0,-15 3.5,-3 0,-6 -3.5,-3" fill="#e3735a" />',
-    '<polygon points="0,15 3.5,3 0,6 -3.5,3" fill="#93c5fd" />',
-    '<polygon points="-15,0 -3,-3.5 -6,0 -3,3.5" fill="#93c5fd" />',
-    '<polygon points="15,0 3,-3.5 6,0 3,3.5" fill="#93c5fd" />',
-    "</g>",
-]
 
 
 def place(x, y, scale, inner, comment):
@@ -579,10 +572,14 @@ GRAND_PALACE = [
     '<rect x="35" y="-7" width="5" height="9" rx="1" />',
     "</g>",
 ]
-MAGLEV_TERMINAL = [
-    '<path d="M-40,4 Q0,-24 40,4 Z" fill="#1e3a5f" stroke="#5ce1cf" stroke-width="1.6" />',
-    '<rect x="-36" y="4" width="72" height="12" rx="3" fill="#0b2342" stroke="#dfba76" stroke-width="1.4" />',
-    '<rect x="-24" y="7" width="48" height="5" rx="2" fill="#5ce1cf" />',
+ALPINE_RAIL_TERMINAL = [
+    '<rect x="-38" y="-4" width="76" height="18" rx="2" fill="#5c3418" stroke="#fcedc7" stroke-width="1.3" />',
+    '<polygon points="-42,-4 0,-22 42,-4" fill="#1e293b" stroke="#dfba76" stroke-width="1.4" />',
+    '<rect x="-12" y="-12" width="24" height="26" rx="1.5" fill="#7c4d28" stroke="#fcedc7" stroke-width="1.1" />',
+    '<polygon points="-15,-12 0,-28 15,-12" fill="#c95a41" stroke="#ffffff" stroke-width="1.2" />',
+    '<circle cx="0" cy="-6" r="3.5" fill="#fef08a" stroke="#0b2342" stroke-width="0.9" />',
+    '<rect x="-30" y="2" width="12" height="7" rx="1" fill="#fde68a" />',
+    '<rect x="18" y="2" width="12" height="7" rx="1" fill="#fde68a" />',
 ]
 OLYMPIC_ARENA = [
     '<path d="M-30,2 A30,15 0 0,0 30,2 L22,12 A22,10 0 0,1 -22,12 Z" fill="#1e293b" stroke="#dfba76" stroke-width="1.4" />',
@@ -601,24 +598,26 @@ EDELWEISS_VILLAGE = [
 ]
 CROWN_RESORT = [
     '<polygon points="-34,6 34,6 24,18 -24,18" fill="#0f2542" stroke="#dfba76" stroke-width="1.2" />',
-    '<rect x="-28" y="-8" width="56" height="14" rx="7" fill="#1e3a5f" stroke="#fcedc7" stroke-width="1.4" />',
+    '<rect x="-28" y="-8" width="56" height="14" rx="4" fill="#5c3418" stroke="#fcedc7" stroke-width="1.4" />',
     '<rect x="18" y="-4" width="26" height="6" rx="3" fill="#38bdf8" stroke="#ffffff" stroke-width="1.1" />',
-    '<path d="M-16,-8 A16,12 0 0,1 16,-8 Z" fill="#dfba76" />',
+    '<polygon points="-24,-8 0,-22 24,-8" fill="#1e293b" stroke="#dfba76" stroke-width="1.3" />',
 ]
-CRYO_DOME = [
-    '<ellipse cx="0" cy="6" rx="44" ry="11" fill="#0f2542" stroke="#5ce1cf" stroke-width="1.4" />',
-    '<path d="M-38,6 A38,32 0 0,1 38,6 Z" fill="#38bdf8" fill-opacity="0.55" stroke="#ffffff" stroke-width="1.5" />',
-    '<path d="M-22,6 A22,30 0 0,1 22,6 M-38,6 H38 M0,-26 V6" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.8" />',
+ESMERALDA_LODGE = [
+    '<ellipse cx="0" cy="6" rx="38" ry="10" fill="#0f2542" stroke="#dfba76" stroke-width="1.3" />',
+    '<rect x="-26" y="-8" width="52" height="14" rx="3" fill="#6b3e1e" stroke="#fcedc7" stroke-width="1.2" />',
+    '<polygon points="-30,-8 0,-24 30,-8" fill="#1e293b" stroke="#ffffff" stroke-width="1.4" />',
+    '<rect x="-16" y="-4" width="32" height="7" rx="1.5" fill="#bae6fd" opacity="0.9" />',
 ]
 HORIZON_TERRACE = [
     '<ellipse cx="0" cy="2" rx="28" ry="9" fill="#0b2342" stroke="#dfba76" stroke-width="1.4" />',
     '<ellipse cx="0" cy="0" rx="22" ry="6" fill="#fde68a" />',
 ]
-CRYO_VAULT = [
-    '<rect x="-24" y="-12" width="48" height="18" rx="4" fill="#0f2542" stroke="#5ce1cf" stroke-width="1.5" />',
-    '<circle cx="-12" cy="-3" r="4" fill="#2dd4bf" class="pulse" />',
-    '<circle cx="0" cy="-3" r="4" fill="#2dd4bf" />',
-    '<circle cx="12" cy="-3" r="4" fill="#2dd4bf" />',
+SNOWMAKING_RESERVOIR = [
+    '<ellipse cx="0" cy="4" rx="34" ry="11" fill="#475569" stroke="#cbd5e1" stroke-width="1.6" />',
+    '<ellipse cx="0" cy="4" rx="28" ry="8" fill="#0284c7" stroke="#bae6fd" stroke-width="1.2" />',
+    '<path d="M-16,3 Q-8,0 0,3 T16,3" fill="none" stroke="#e0f2fe" stroke-width="1.1" opacity="0.8" />',
+    '<rect x="-14" y="-14" width="28" height="11" rx="2" fill="#5c3418" stroke="#fcedc7" stroke-width="1.1" />',
+    '<polygon points="-17,-14 0,-22 17,-14" fill="#c95a41" stroke="#ffffff" stroke-width="1" />',
 ]
 SNOWPARK = [
     '<path d="M-26,-10 L-14,8 L18,8 L28,-10 Z" fill="#bae6fd" stroke="#0284c7" stroke-width="1.5" />',
@@ -645,12 +644,77 @@ CORAL_MARINA = [
     '<polygon points="-12,6 8,6 5,18 -9,18" />',
     '<polygon points="22,6 42,6 39,18 25,18" />',
     "</g>",
-    '<path d="M-24,0 A24,16 0 0,1 24,0 Z" fill="#0b2342" stroke="#5ce1cf" stroke-width="1.6" />',
+    '<rect x="-24" y="-12" width="48" height="12" rx="2" fill="#5c3418" stroke="#dfba76" stroke-width="1.4" />',
+    '<polygon points="-28,-12 0,-22 28,-12" fill="#c95a41" stroke="#ffffff" stroke-width="1.1" />',
 ]
 SMALL_LODGE = [
     '<rect x="-12" y="-8" width="24" height="10" rx="1.5" fill="#5c2d0c" stroke="#fcedc7" stroke-width="1" />',
     '<polygon points="-15,-8 0,-18 15,-8" fill="#c95a41" stroke="#ffffff" stroke-width="1.2" />',
     '<rect x="-3" y="-5" width="6" height="4" fill="#fde68a" />',
+]
+CRISTAL_TERMINAL = [
+    '<polygon points="-32,6 32,6 24,16 -24,16" fill="#1e293b" stroke="#dfba76" stroke-width="1.2" />',
+    '<rect x="-26" y="-8" width="52" height="14" rx="3" fill="#475569" stroke="#fcedc7" stroke-width="1.3" />',
+    '<rect x="-20" y="-5" width="40" height="7" rx="1.5" fill="#bae6fd" />',
+    '<polygon points="-28,-8 0,-20 28,-8" fill="#0f172a" stroke="#dfba76" stroke-width="1.3" />',
+]
+STONE_REFUGE = [
+    '<rect x="-24" y="-8" width="48" height="16" rx="2" fill="#64748b" stroke="#fcedc7" stroke-width="1.2" />',
+    '<polygon points="-28,-8 0,-23 28,-8" fill="#991b1b" stroke="#ffffff" stroke-width="1.3" />',
+    '<rect x="10" y="-22" width="5" height="10" fill="#334155" />',
+    '<rect x="-16" y="-3" width="9" height="6" fill="#fde68a" />',
+    '<rect x="-3" y="-3" width="9" height="6" fill="#fde68a" />',
+    '<rect x="10" y="-3" width="8" height="6" fill="#fde68a" />',
+]
+FREERIDE_GATE = [
+    '<ellipse cx="0" cy="4" rx="26" ry="8" fill="#1e293b" stroke="#dfba76" stroke-width="1.4" />',
+    '<line x1="-14" y1="4" x2="-14" y2="-16" stroke="#fcedc7" stroke-width="2" />',
+    '<line x1="14" y1="4" x2="14" y2="-16" stroke="#fcedc7" stroke-width="2" />',
+    '<rect x="-18" y="-20" width="36" height="7" rx="2" fill="#c95a41" stroke="#ffffff" stroke-width="1.1" />',
+]
+WEATHER_RADAR_STATION = [
+    '<rect x="-22" y="-6" width="44" height="14" rx="2" fill="#334155" stroke="#dfba76" stroke-width="1.2" />',
+    '<line x1="-10" y1="-6" x2="-10" y2="-22" stroke="#e2e8f0" stroke-width="1.8" />',
+    '<circle cx="-10" cy="-24" r="6" fill="#f8fafc" stroke="#0284c7" stroke-width="1.2" />',
+    '<path d="M8,-6 A10,10 0 0,1 20,-6 Z" fill="#bae6fd" stroke="#ffffff" stroke-width="1.1" />',
+    '<rect x="-16" y="-2" width="12" height="5" fill="#fde68a" />',
+]
+MIRADOR_LODGE = [
+    '<ellipse cx="0" cy="8" rx="40" ry="10" fill="#fde68a" stroke="#d97706" stroke-width="1.2" />',
+    '<rect x="-30" y="-10" width="60" height="16" rx="2" fill="#6b3e1e" stroke="#fcedc7" stroke-width="1.2" />',
+    '<polygon points="-34,-10 0,-26 34,-10" fill="#1e293b" stroke="#ffffff" stroke-width="1.4" />',
+    '<rect x="-22" y="-5" width="12" height="7" fill="#fef08a" />',
+    '<rect x="-5" y="-5" width="12" height="7" fill="#fef08a" />',
+    '<rect x="12" y="-5" width="12" height="7" fill="#fef08a" />',
+]
+VILLA_NEVADO = [
+    '<rect x="-44" y="-12" width="88" height="22" rx="3" fill="#5c3418" stroke="#dfba76" stroke-width="1.5" />',
+    '<polygon points="-48,-12 -18,-26 12,-12" fill="#1e293b" stroke="#ffffff" stroke-width="1.3" />',
+    '<polygon points="-8,-12 20,-28 48,-12" fill="#c95a41" stroke="#ffffff" stroke-width="1.3" />',
+    '<rect x="-6" y="-32" width="12" height="20" fill="#7c4d28" stroke="#fcedc7" stroke-width="1.1" />',
+    '<polygon points="-8,-32 0,-42 8,-32" fill="#0f172a" stroke="#dfba76" stroke-width="1.1" />',
+    '<g fill="#fde68a">',
+    '<rect x="-36" y="-5" width="7" height="8" rx="1" />',
+    '<rect x="-24" y="-5" width="7" height="8" rx="1" />',
+    '<rect x="-4" y="-4" width="8" height="12" rx="1" />',
+    '<rect x="14" y="-5" width="7" height="8" rx="1" />',
+    '<rect x="26" y="-5" width="7" height="8" rx="1" />',
+    "</g>",
+]
+HYDRO_DAM_LODGE = [
+    '<path d="M-32,-6 Q0,6 32,-6 L26,12 Q0,22 -26,12 Z" fill="#94a3b8" stroke="#1e293b" stroke-width="1.4" />',
+    '<path d="M-12,0 L-10,12 M0,2 L0,14 M12,0 L10,12" stroke="#bae6fd" stroke-width="1.8" />',
+    '<rect x="-20" y="-18" width="40" height="12" rx="2" fill="#5c3418" stroke="#dfba76" stroke-width="1.2" />',
+    '<polygon points="-23,-18 0,-28 23,-18" fill="#1e293b" stroke="#ffffff" stroke-width="1.1" />',
+]
+NORDIC_ARENA = [
+    '<ellipse cx="0" cy="6" rx="42" ry="12" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="5 3" />',
+    '<rect x="-28" y="-10" width="56" height="14" rx="3" fill="#1e3a5f" stroke="#dfba76" stroke-width="1.3" />',
+    '<polygon points="-32,-10 0,-22 32,-10" fill="#c95a41" stroke="#ffffff" stroke-width="1.2" />',
+    '<circle cx="-12" cy="8" r="2.2" fill="#0f172a" stroke="#ffffff" stroke-width="0.8" />',
+    '<circle cx="-4" cy="8" r="2.2" fill="#0f172a" stroke="#ffffff" stroke-width="0.8" />',
+    '<circle cx="4" cy="8" r="2.2" fill="#0f172a" stroke="#ffffff" stroke-width="0.8" />',
+    '<circle cx="12" cy="8" r="2.2" fill="#0f172a" stroke="#ffffff" stroke-width="0.8" />',
 ]
 
 
@@ -843,31 +907,34 @@ def build_andes_svg() -> str:
     o += draw_span([(condor[0], condor[1] - 8), (pico[0], pico[1] - 8)], dur=13)
     o += draw_span([(pico[0], pico[1] - 8), (rosa[0], rosa[1] - 8)], colors=("#0b2342", "#c95a41"), dur=14)
 
-    # 8. Maglev viaduct
+    # 8. Alpine Express stone-arch railway viaduct
     o += ['<g fill="#64748b" stroke="#1e293b" stroke-width="1">']
     for vx in range(30, 1200, 50):
         o.append(f'<rect x="{vx - 3}" y="655" width="6" height="45" rx="1.5" />')
     o += [
         "</g>",
-        '<path d="M0,655 L1200,655" stroke="#0f172a" stroke-width="7" />',
-        '<path d="M0,655 L1200,655" stroke="#5ce1cf" stroke-width="1.6" stroke-dasharray="12 8" class="dash" />',
+        '<path d="M0,655 L1200,655" stroke="#1e293b" stroke-width="7" />',
+        '<path d="M0,655 L1200,655" stroke="#dfba76" stroke-width="1.4" stroke-dasharray="10 6" />',
         "<g>",
-        '<animateMotion dur="11s" repeatCount="indefinite" path="M-140,655 L1340,655" />',
-        '<rect x="-60" y="-6" width="120" height="10" rx="5" fill="#0b2342" stroke="#dfba76" stroke-width="1.3" />',
-        '<path d="M50,-6 L68,-1 L50,4 Z" fill="#c95a41" />',
-        '<rect x="-48" y="-3.5" width="92" height="3.5" rx="1.75" fill="#5ce1cf" />',
+        '<animateMotion dur="14s" repeatCount="indefinite" path="M-140,655 L1340,655" />',
+        '<rect x="-56" y="-6.5" width="34" height="10" rx="2.5" fill="#991b1b" stroke="#fcedc7" stroke-width="1.1" />',
+        '<rect x="-18" y="-6.5" width="34" height="10" rx="2.5" fill="#991b1b" stroke="#fcedc7" stroke-width="1.1" />',
+        '<rect x="20" y="-6.5" width="36" height="10" rx="3" fill="#0b2342" stroke="#dfba76" stroke-width="1.2" />',
+        '<rect x="-50" y="-4" width="22" height="3.5" rx="1" fill="#fef08a" />',
+        '<rect x="-12" y="-4" width="22" height="3.5" rx="1" fill="#fef08a" />',
+        '<rect x="26" y="-4" width="24" height="3.5" rx="1" fill="#bae6fd" />',
         "</g>",
     ]
 
     # 9. Landmarks and hamlets
-    o += place(*pico, 0.72, PICO_STATION, "Hub 1: Pico Soberano Crown Station")
-    o += place(*rosa, 0.72, ROSA_OBSERVATORY, "Hub 2: Monte Rosa Sky Observatory")
-    o += place(*condor, 0.72, CONDOR_HELIPORT, "Hub 3: Condor Royal Heliport")
+    o += place(*pico, 0.72, PICO_STATION, "Hub 1: Pico Soberano Summit Rotunda")
+    o += place(*rosa, 0.72, ROSA_OBSERVATORY, "Hub 2: Monte Rosa High-Altitude Observatory")
+    o += place(*condor, 0.72, CONDOR_HELIPORT, "Hub 3: Condor Alpine Heliport")
     o += place(*chalets, 0.72, CHALETS, "Hub 4: Royal Chalets Hamlet")
     o += place(*palace, 0.72, GRAND_PALACE, "Hub 5: Grand Palace Val d'Aurelia")
-    o += place(*maglev, 0.72, MAGLEV_TERMINAL, "Hub 6: Andes Maglev Grand Terminal")
+    o += place(*maglev, 0.72, ALPINE_RAIL_TERMINAL, "Hub 6: Andes Alpine Express Terminal")
     o += place(*olympic, 0.72, OLYMPIC_ARENA, "Hub 7: Olympic Downhill Finish Arena")
-    o += place(*village, 0.72, EDELWEISS_VILLAGE, "Hub 8: Edelweiss Thermal Grotto Village")
+    o += place(*village, 0.72, EDELWEISS_VILLAGE, "Hub 8: Edelweiss Thermal Village")
     for i, (sx, sy) in enumerate((p1, p3, p5, p7, p8)):
         o += place(sx, sy, 0.6, SMALL_LODGE, f"Summit hut {i + 1}")
     o += hamlet(330, 585, 5, 1) + hamlet(470, 580, 4, 2) + hamlet(1090, 585, 5, 3) + hamlet(760, 590, 4, 4)
@@ -877,7 +944,6 @@ def build_andes_svg() -> str:
     o += peak_label(pico[0], 92, "PICO SOBERANO", "PICO SOBERANO")
     o += peak_label(condor[0], 127, "CONDOR PEAK", "CONDOR-CSÚCS", "#5ce1cf")
     o += peak_label(rosa[0], 122, "MONTE ROSA", "MONTE ROSA")
-    o += COMPASS
     spots = [
         (1, pico, 40, -14, True),
         (2, rosa, 44, -8, False),
@@ -896,7 +962,234 @@ def build_andes_svg() -> str:
 
 
 # ==============================================================================
-# MAP 2: HAITI HIGHLAND GLACIER (1200 x 700)
+# MAP 2: NEVADO DEL SUR CIRQUE (1200 x 700)
+# ==============================================================================
+def build_nevado_svg() -> str:
+    o = [
+        '<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 1200 700">',
+        "<defs>",
+        '<linearGradient id="nevado-sky" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="420">',
+        '<stop offset="0" stop-color="#081a33" />',
+        '<stop offset="0.48" stop-color="#1c4a7e" />',
+        '<stop offset="0.82" stop-color="#6196c9" />',
+        '<stop offset="1" stop-color="#f7d69e" />',
+        "</linearGradient>",
+        '<linearGradient id="nevado-snow-lit" gradientUnits="userSpaceOnUse" x1="0" y1="120" x2="0" y2="480">',
+        '<stop offset="0" stop-color="#ffffff" />',
+        '<stop offset="0.6" stop-color="#ebf4fc" />',
+        '<stop offset="1" stop-color="#c9def2" />',
+        "</linearGradient>",
+        '<linearGradient id="nevado-snow-shade" gradientUnits="userSpaceOnUse" x1="0" y1="120" x2="0" y2="480">',
+        '<stop offset="0" stop-color="#b9d0ea" />',
+        '<stop offset="0.6" stop-color="#8eb0d6" />',
+        '<stop offset="1" stop-color="#6d92be" />',
+        "</linearGradient>",
+        '<linearGradient id="nevado-glacier-ice" x1="0" y1="0" x2="0" y2="1">',
+        '<stop offset="0" stop-color="#e0f7fe" />',
+        '<stop offset="0.55" stop-color="#7dd3fc" />',
+        '<stop offset="1" stop-color="#0284c7" />',
+        "</linearGradient>",
+        '<linearGradient id="nevado-valley" gradientUnits="userSpaceOnUse" x1="0" y1="440" x2="0" y2="700">',
+        '<stop offset="0" stop-color="#f0f7fe" />',
+        '<stop offset="0.5" stop-color="#dfecf9" />',
+        '<stop offset="1" stop-color="#bed7ef" />',
+        "</linearGradient>",
+        '<linearGradient id="nevado-lake" gradientUnits="userSpaceOnUse" x1="150" y1="560" x2="430" y2="645">',
+        '<stop offset="0" stop-color="#38bdf8" />',
+        '<stop offset="0.55" stop-color="#0284c7" />',
+        '<stop offset="1" stop-color="#0f3e66" />',
+        "</linearGradient>",
+        '<linearGradient id="nevado-mist" x1="0" y1="0" x2="0" y2="1">',
+        '<stop offset="0" stop-color="#ffffff" stop-opacity="0" />',
+        '<stop offset="0.7" stop-color="#e8f2fb" stop-opacity="0.58" />',
+        '<stop offset="1" stop-color="#e8f2fb" stop-opacity="0.14" />',
+        "</linearGradient>",
+        "</defs>",
+        "<!-- 1. Sky and morning alpenglow sun -->",
+        '<rect width="1200" height="700" fill="url(#nevado-sky)" />',
+        '<g transform="translate(210, 118)">',
+        '<circle r="68" fill="#fef3c7" opacity="0.22" />',
+        '<circle r="40" fill="#fde68a" opacity="0.38" />',
+        '<circle r="21" fill="#fffbeb" opacity="0.94" />',
+        "</g>",
+    ]
+
+    # 2. Distant horizon range
+    far_c = dict(lit="#9ab8d7", shade="#7193b8", snow_lit="#f1f7fd", snow_shade="#c5d9ed")
+    far_peaks = [
+        ((130, 192), 140, 420),
+        ((315, 165), 160, 420),
+        ((485, 148), 165, 420),
+        ((670, 158), 155, 420),
+        ((850, 142), 170, 420),
+        ((1065, 172), 155, 420),
+    ]
+    o.append("<!-- 2. Distant background range -->")
+    o += draw_range(far_peaks, far_c, 268, 70)
+    o += mist_band(262, 115, "nevado-mist")
+
+    # 3. Midground range
+    mid_c = dict(lit="#6589b2", shade="#40638c", snow_lit="#f5f9fe", snow_shade="#b9d1ea", rock="#2f4d73")
+    mid_peaks = [
+        ((60, 224), 140, 460),
+        ((205, 198), 155, 460),
+        ((395, 178), 165, 460),
+        ((620, 172), 175, 460),
+        ((790, 184), 160, 460),
+        ((985, 188), 165, 460),
+    ]
+    o.append("<!-- 3. Midground range -->")
+    o += draw_range(mid_peaks, mid_c, 322, 80)
+    o += mist_band(325, 115, "nevado-mist")
+
+    # 4. Hero ski massif: Nevado del Sur Cirque
+    main_c = dict(
+        lit="#3b6391", shade="#1d3b61", snow_lit="url(#nevado-snow-lit)", snow_shade="url(#nevado-snow-shade)", rock="#162d4c"
+    )
+    main_peaks = [
+        ((95, 225), 145, 500),
+        ((380, 208), 165, 510),
+        ((700, 202), 165, 510),
+        ((1015, 212), 165, 510),
+        ((1145, 192), 145, 500),
+        ((230, 168), 215, 520),  # Aguja Real (3,890 m)
+        ((865, 152), 225, 525),  # Nevado Blanco (4,120 m)
+        ((545, 126), 255, 535),  # Cerro Cristal (4,360 m)
+    ]
+    o.append("<!-- 4. Main ski massif -->")
+    for i, (apex, w, base) in enumerate(main_peaks):
+        o += draw_peak(apex, w, base, main_c, 455, seed=31 + i * 5, detail=True)
+    o += draw_glacier_bowl([(230, 192), (204, 262), (208, 355), (246, 360), (254, 265)], "url(#nevado-glacier-ice)")
+    o += draw_glacier_bowl([(545, 150), (512, 232), (518, 362), (566, 366), (576, 238)], "url(#nevado-glacier-ice)")
+    o += draw_glacier_bowl([(865, 174), (836, 248), (842, 358), (882, 362), (890, 252)], "url(#nevado-glacier-ice)")
+
+    # 5. Mid-mountain ridge, alpine valley floor, Laguna Espejo reservoir, and conifer forests
+    o += [
+        "<!-- 5. Alpine valley floor, Laguna Espejo reservoir and conifer forests -->",
+        '<path d="M0,445 Q190,412 390,432 Q600,452 820,425 Q1020,404 1200,434 L1200,700 L0,700 Z" fill="url(#nevado-valley)" />',
+        '<path d="M0,518 Q250,492 510,512 T1010,502 L1200,516 L1200,700 L0,700 Z" fill="#d5e6f7" opacity="0.65" />',
+        '<path d="M0,572 Q310,552 630,568 T1200,560 L1200,700 L0,700 Z" fill="#c3daf0" opacity="0.78" />',
+        # Laguna Espejo alpine reservoir lake (left valley) and tailrace river
+        '<path d="M125,606 Q180,582 285,586 Q375,588 432,602 Q390,636 275,638 Q165,636 125,606 Z" fill="url(#nevado-lake)" stroke="#bae6fd" stroke-width="2" />',
+        '<path d="M165,604 Q245,596 345,602 M195,618 Q275,612 375,618" fill="none" stroke="#e0f2fe" stroke-width="1.2" opacity="0.65" stroke-linecap="round" />',
+        '<path d="M432,612 C515,624 585,642 665,662 C730,678 790,690 845,700" fill="none" stroke="#93c5fd" stroke-width="9" stroke-linecap="round" opacity="0.55" />',
+        '<path d="M432,612 C515,624 585,642 665,662 C730,678 790,690 845,700" fill="none" stroke="#0284c7" stroke-width="4.5" stroke-linecap="round" opacity="0.78" />',
+        # Groomed Nordic & Biathlon loop on eastern valley meadow
+        '<ellipse cx="985" cy="596" rx="88" ry="22" fill="none" stroke="#ffffff" stroke-width="5" opacity="0.85" />',
+        '<ellipse cx="985" cy="596" rx="88" ry="22" fill="none" stroke="#2563eb" stroke-width="1.6" stroke-dasharray="6 4" opacity="0.85" />',
+    ]
+    forests = [
+        (35, 515, 16, 45, 11, 0.58, 1),
+        (145, 510, 18, 48, 12, 0.58, 2),
+        (305, 495, 18, 50, 12, 0.58, 3),
+        (465, 502, 16, 45, 11, 0.58, 4),
+        (635, 498, 20, 52, 12, 0.58, 5),
+        (785, 494, 18, 48, 12, 0.58, 6),
+        (930, 505, 18, 48, 12, 0.58, 7),
+        (1085, 500, 18, 50, 12, 0.58, 8),
+        (65, 595, 20, 54, 13, 0.72, 9),
+        (485, 592, 22, 58, 14, 0.74, 10),
+        (745, 596, 22, 58, 14, 0.74, 11),
+        (855, 588, 20, 54, 13, 0.72, 12),
+        (1125, 596, 22, 56, 14, 0.74, 13),
+        (245, 652, 20, 52, 14, 0.80, 14),
+        (560, 646, 20, 52, 14, 0.80, 15),
+    ]
+    o += draw_conifer_forest(forests)
+
+    # 6. Piste network
+    n1, aguja, n3, cristal, n5, blanco, n7, n8 = (
+        (95, 232),
+        (230, 176),
+        (380, 215),
+        (545, 134),
+        (700, 209),
+        (865, 160),
+        (1015, 219),
+        (1145, 199),
+    )
+    weather, mirador = (395, 378), (725, 388)
+    hydro, villa, nordic = (425, 596), (635, 572), (960, 568)
+    specs = [
+        (n1, hydro, 14, 0.5, BLACK), (n1, hydro, 26, 2.2, BLUE),
+        (aguja, hydro, 12, 0.2, HELI), (aguja, hydro, 24, 1.5, RED), (aguja, weather, 20, 0.0, BLACK),
+        (aguja, weather, 28, 2.4, BLUE),
+        (n3, weather, 16, 0.4, RED), (n3, hydro, 26, 2.0, BLUE),
+        (cristal, weather, 22, 0.0, RED), (cristal, weather, 12, 2.1, BLACK),
+        (cristal, villa, 36, 0.5, RED), (cristal, villa, 46, 3.2, BLUE), (cristal, villa, 14, 1.8, BLACK),
+        (cristal, mirador, 26, 0.0, BLUE), (cristal, mirador, 14, 2.5, BLACK),
+        (n5, villa, 24, 0.3, RED), (n5, mirador, 20, 1.6, BLUE),
+        (blanco, mirador, 22, 0.0, RED), (blanco, mirador, 12, 2.0, HELI),
+        (blanco, villa, 32, 1.1, BLUE), (blanco, nordic, 34, 0.4, RED), (blanco, nordic, 28, 2.8, BLUE),
+        (n7, nordic, 20, 0.0, RED), (n7, nordic, 28, 2.0, BLUE),
+        (n8, nordic, 14, 0.6, BLACK), (n8, nordic, 24, 2.2, BLUE),
+        (weather, hydro, 28, 0.0, BLUE), (weather, villa, 24, 1.4, RED),
+        (mirador, villa, 26, 0.0, BLUE), (mirador, nordic, 22, 1.5, RED),
+    ]
+    piste_svg, _ = draw_pistes(specs)
+    o.append("<!-- 6. Piste network -->")
+    o += piste_svg
+
+    # 7. Grounded lift network, cogwheel railway, and peak-to-peak spans
+    o.append("<!-- 7. Lift network -->")
+    o += draw_funicular(villa, mirador, dur=10.0)
+    lifts = [
+        (hydro, aguja, "gondola", 12),
+        (hydro, weather, "chair", 9),
+        (hydro, n1, "chair", 11),
+        (weather, cristal, "gondola", 11),
+        (weather, n3, "chair", 8),
+        (villa, cristal, "gondola", 12),
+        (villa, weather, "chair", 9),
+        (villa, n5, "chair", 11),
+        (mirador, blanco, "gondola", 10),
+        (nordic, blanco, "gondola", 12),
+        (nordic, n7, "chair", 10),
+        (nordic, n8, "chair", 11),
+    ]
+    for i, (a, b, kind, dur) in enumerate(lifts):
+        colors = ("#c95a41", "#0b2342") if i % 2 == 0 else ("#165953", "#dfba76")
+        o += draw_lift(a, b, kind=kind, colors=colors, dur=dur)
+    o += draw_span([(aguja[0], aguja[1] - 8), (cristal[0], cristal[1] - 8)], dur=13)
+    o += draw_span([(cristal[0], cristal[1] - 8), (blanco[0], blanco[1] - 8)], colors=("#0b2342", "#c95a41"), dur=14)
+
+    # 8. Landmarks and alpine hamlets
+    o += place(*cristal, 0.72, CRISTAL_TERMINAL, "Hub 1: Cerro Cristal Glacier Station")
+    o += place(*blanco, 0.72, STONE_REFUGE, "Hub 2: Nevado Blanco Ridge Refuge")
+    o += place(*aguja, 0.72, FREERIDE_GATE, "Hub 3: Aguja Real Freeride Gate")
+    o += place(*weather, 0.72, WEATHER_RADAR_STATION, "Hub 4: Col de los Vientos Weather and Avalanche Center")
+    o += place(*mirador, 0.72, MIRADOR_LODGE, "Hub 5: Refugio Mirador Sun Terrace")
+    o += place(*villa, 0.72, VILLA_NEVADO, "Hub 6: Villa Nevado Grand Base Lodge")
+    o += place(*hydro, 0.72, HYDRO_DAM_LODGE, "Hub 7: Laguna Espejo Hydroelectric Dam and Lodge")
+    o += place(*nordic, 0.72, NORDIC_ARENA, "Hub 8: Santa Clara Nordic and Biathlon Arena")
+    for i, (sx, sy) in enumerate((n1, n3, n5, n7, n8)):
+        o += place(sx, sy, 0.6, SMALL_LODGE, f"Summit hut {i + 1}")
+    o += hamlet(525, 582, 5, 5) + hamlet(790, 580, 4, 6) + hamlet(1075, 584, 4, 7)
+
+    # 9. Drifting clouds, peak names, compass, hotspots
+    o += cloud(150, 295, 0.95, 45, "42s") + cloud(675, 265, 0.85, -38, "48s") + cloud(1040, 310, 1.05, 42, "50s")
+    o += peak_label(cristal[0], 90, "CERRO CRISTAL", "CERRO CRISTAL")
+    o += peak_label(aguja[0], 130, "AGUJA REAL", "AGUJA REAL", "#5ce1cf")
+    o += peak_label(blanco[0], 116, "NEVADO BLANCO", "NEVADO BLANCO")
+    spots = [
+        (1, cristal, 42, -14, True),
+        (2, blanco, 44, -10, False),
+        (3, aguja, -44, -10, False),
+        (4, weather, -44, -16, False),
+        (5, mirador, 44, -16, False),
+        (6, villa, 54, -20, False),
+        (7, hydro, -48, -18, False),
+        (8, nordic, 46, -18, False),
+    ]
+    o.append("<!-- Interactive hotspot pins -->")
+    for idx, (sx, sy), dx, dy, act in spots:
+        o += hotspot_pin(idx, sx, sy, pin_dx=dx, pin_dy=dy, active=act)
+    o.append("</svg>")
+    return "\n".join(o)
+
+
+# ==============================================================================
+# MAP 3: HAITI HIGHLAND PEAKS (1200 x 700)
 # ==============================================================================
 def build_haiti_svg() -> str:
     o = [
@@ -966,7 +1259,7 @@ def build_haiti_svg() -> str:
     )
     o += mist_band(300, 120, "haiti-mist")
 
-    # 3. Main island massif: jungle-clad lower slopes, glacier summits
+    # 3. Main island massif: jungle-clad lower slopes, high-altitude snowfields
     main_c = dict(
         lit="#2e8a63", shade="#175a43", snow_lit="url(#haiti-snow-lit)", snow_shade="url(#haiti-snow-shade)", rock="#0f3f2e"
     )
@@ -985,13 +1278,6 @@ def build_haiti_svg() -> str:
         o += draw_peak(apex, w, base, main_c, 370, seed=5 + i * 4, detail=True)
     o += draw_glacier_bowl([(560, 180), (535, 230), (538, 290), (570, 292), (580, 235)], "url(#haiti-glacier-ice)")
     o += draw_glacier_bowl([(860, 210), (840, 250), (843, 300), (872, 302), (880, 255)], "url(#haiti-glacier-ice)")
-    o += [
-        "<!-- Sub-surface Cryo-Grid 3.0 cooling matrix -->",
-        '<g stroke="#0ea5e9" stroke-width="0.9" stroke-dasharray="3 3" opacity="0.45" fill="none">',
-        '<path d="M590,300 L690,300 M585,312 L695,312 M580,324 L700,324 M575,336 L705,336" />',
-        '<path d="M605,292 L590,344 M635,292 L628,344 M665,292 L668,344 M690,292 L702,344" />',
-        "</g>",
-    ]
     o += mist_band(370, 80, "haiti-mist")
 
     # 4. Seamless Montane Cloud Forest & Tropical Rainforest Canopy Belt
@@ -999,7 +1285,6 @@ def build_haiti_svg() -> str:
         return 542 + 5 * math.sin(x / 90)
 
     o.append("<!-- 4. Seamless Montane Cloud Forest and Tropical Rainforest Canopy -->")
-    # Sub-alpine krummholz / montane transition ridge (y ~ 396..445)
     montane_pts = [
         (0, 445),
         *[
@@ -1017,7 +1302,6 @@ def build_haiti_svg() -> str:
     ]
     o.append(f'<path d="{poly(montane_pts)}" fill="#134e3a" opacity="0.92" />')
 
-    # 5 layered scalloped organic rainforest canopy waves (back-to-front from y=418 to y=536)
     canopy_tiers = [
         (422, 9.0, 26, "#165b41", "#227a56", 11),
         (444, 10.5, 24, "#1b6b4c", "#298f63", 23),
@@ -1046,7 +1330,6 @@ def build_haiti_svg() -> str:
             f'<path d="{" ".join(rim_parts)}" fill="none" stroke="{rim_col}" stroke-width="1.4" stroke-linecap="round" opacity="0.65" />'
         )
 
-    # Emergent ceiba & mahogany tree crowns rising out of the rainforest canopy
     o.append('<g class="emergent-crowns">')
     for ex, ey, erx, ery, ecol, elcol in [
         (145, 452, 22, 11, "#166534", "#4ade80"),
@@ -1064,7 +1347,6 @@ def build_haiti_svg() -> str:
         o.append(f'<ellipse cx="{ex - 4}" cy="{ey - 3}" rx="{erx * 0.65:.1f}" ry="{ery * 0.6:.1f}" fill="{elcol}" opacity="0.45" />')
     o.append("</g>")
 
-    # Glacial meltwater rivers & multi-tier jungle waterfalls with misty plunge pools
     o += [
         '<path d="M454,368 C452,398 446,422 444,448 C442,478 441,504 438,536" fill="none" stroke="#0f3f2e" stroke-width="6.5" stroke-linecap="round" opacity="0.55" />',
         '<path d="M454,368 C452,398 446,422 444,448 C442,478 441,504 438,536" fill="none" stroke="#7dd3fc" stroke-width="3.4" stroke-linecap="round" opacity="0.92" />',
@@ -1079,7 +1361,6 @@ def build_haiti_svg() -> str:
         '<ellipse cx="808" cy="538" rx="13" ry="4.0" fill="#38bdf8" opacity="0.85" />',
         '<ellipse cx="808" cy="538" rx="7.5" ry="2.0" fill="#ffffff" opacity="0.75" />',
     ]
-    # Sub-alpine spruce & cloud-forest pine clusters along the snowline ecotone (y ~ 368..412)
     o += draw_conifer_forest(
         [
             (195, 396, 14, 38, 12, 0.52, 10),
@@ -1104,7 +1385,6 @@ def build_haiti_svg() -> str:
         f'<path d="{poly(wet_sand)}" fill="#dfbe82" opacity="0.7" />',
         f'<path d="{poly(sea)}" fill="url(#haiti-carib-sea)" />',
         '<path d="M0,564 Q300,578 600,568 T1200,573 L1200,618 Q900,606 600,616 T0,608 Z" fill="#2dd4bf" opacity="0.38" />',
-        # Submerged coral reef heads & turquoise sandbars
         '<g opacity="0.48">',
         '<ellipse cx="140" cy="592" rx="46" ry="9" fill="#0d9488" />',
         '<ellipse cx="145" cy="590" rx="28" ry="5" fill="#5eead4" />',
@@ -1128,7 +1408,7 @@ def build_haiti_svg() -> str:
     ]:
         o += draw_palm_tree(px, py, scale=psc, tilt=ptilt)
 
-    # 6. Pistes on the glacier zone
+    # 6. Pistes on the highland snowfields
     h2, h3, crown, h5, dome, h7 = (235, 257), (385, 222), (560, 167), (710, 232), (860, 197), (1010, 252)
     terrace, vault, snowpark = (505, 290), (635, 310), (825, 320)
     lodge, founders, east, marina = (330, 405), (700, 410), (965, 400), (215, 592)
@@ -1149,7 +1429,7 @@ def build_haiti_svg() -> str:
     o.append("<!-- 6. Piste network -->")
     o += piste_svg
 
-    # 7. Funicular, lifts and skylink
+    # 7. Cogwheel mountain railway, lifts and skylink
     o.append("<!-- 7. Lift network -->")
     o += draw_funicular(marina, lodge)
     lifts = [
@@ -1172,9 +1452,9 @@ def build_haiti_svg() -> str:
 
     # 8. Landmarks and boats
     o += place(*crown, 0.75, CROWN_RESORT, "Hub 1: Haiti Glacier Crown Resort")
-    o += place(*dome, 0.75, CRYO_DOME, "Hub 2: Cryo-Dome Snowsphere")
+    o += place(*dome, 0.75, ESMERALDA_LODGE, "Hub 2: Loma Esmeralda Summit Rotunda")
     o += place(*terrace, 0.75, HORIZON_TERRACE, "Hub 3: Caribbean Horizon Terrace")
-    o += place(*vault, 0.75, CRYO_VAULT, "Hub 4: Cryo-Grid 3.0 Command Vault")
+    o += place(*vault, 0.75, SNOWMAKING_RESERVOIR, "Hub 4: Lac Azuei Snowmaking Reservoir")
     o += place(*snowpark, 0.75, SNOWPARK, "Hub 5: Royal Halfpipe and Snowpark")
     o += place(*lodge, 0.75, FOREST_LODGE, "Hub 6: Cloud Forest Transition Lodge")
     o += place(*founders, 0.75, FOUNDERS_PAVILION, "Hub 7: 2011 Founders Pavilion")
@@ -1202,8 +1482,7 @@ def build_haiti_svg() -> str:
     # 9. Clouds, peak names, compass, hotspots
     o += cloud(320, 330, 0.9, 45, "44s") + cloud(760, 300, 1.0, -40, "50s") + cloud(1080, 350, 0.8, 35, "38s")
     o += peak_label(crown[0], 120, "GLACIER CROWN", "GLECCSERKORONA")
-    o += peak_label(dome[0], 146, "CRYO-DOME PEAK", "KRIO-KUPOLA CSÚCS", "#5ce1cf")
-    o += COMPASS
+    o += peak_label(dome[0], 146, "LOMA ESMERALDA", "ESMERALDA-CSÚCS", "#5ce1cf")
     spots = [
         (1, crown, -50, -6, True),
         (2, dome, 52, -6, False),
@@ -1227,7 +1506,7 @@ def build_haiti_svg() -> str:
 EN_TO_HU = [
     (">▲ CONDOR PEAK<", ">▲ CONDOR-CSÚCS<"),
     (">▲ GLACIER CROWN<", ">▲ GLECCSERKORONA<"),
-    (">▲ CRYO-DOME PEAK<", ">▲ KRIO-KUPOLA CSÚCS<"),
+    (">▲ LOMA ESMERALDA<", ">▲ ESMERALDA-CSÚCS<"),
 ]
 
 
@@ -1251,7 +1530,7 @@ PANEL_SVG_RE_TEMPLATE = (
 )
 
 
-def update_ski_pages(andes_raw: str, haiti_raw: str) -> None:
+def update_ski_pages(andes_raw: str, nevado_raw: str, haiti_raw: str) -> None:
     try:
         from build_pages import format_and_remove_empty_lines
     except ImportError:
@@ -1262,9 +1541,13 @@ def update_ski_pages(andes_raw: str, haiti_raw: str) -> None:
         html_path = ROOT / lang / "ski-paradise.html"
         html = html_path.read_text(encoding="utf-8")
 
-        html = re.sub(r'data-spot="(?:andes|haiti)-(\d+)"', r'data-spot="\1"', html)
+        html = re.sub(r'data-spot="(?:andes|nevado|haiti)-(\d+)"', r'data-spot="\1"', html)
 
-        for panel_id, raw_svg in (("panel-andes", andes_raw), ("panel-haiti", haiti_raw)):
+        for panel_id, raw_svg in (
+            ("panel-andes", andes_raw),
+            ("panel-nevado", nevado_raw),
+            ("panel-haiti", haiti_raw),
+        ):
             pattern = re.compile(PANEL_SVG_RE_TEMPLATE.format(panel_id=panel_id), re.S)
             match = pattern.search(html)
             if not match:
@@ -1274,20 +1557,23 @@ def update_ski_pages(andes_raw: str, haiti_raw: str) -> None:
 
         cleaned = format_and_remove_empty_lines(html)
         html_path.write_text(cleaned, encoding="utf-8")
-        print(f"Updated {html_path.relative_to(ROOT)} with realistic Andes and Haiti SVG maps")
+        print(f"Updated {html_path.relative_to(ROOT)} with realistic Andes, Nevado, and Haiti SVG maps")
 
 
 def main() -> None:
     SKI_ICONS_DIR.mkdir(parents=True, exist_ok=True)
     andes_svg = build_andes_svg()
+    nevado_svg = build_nevado_svg()
     haiti_svg = build_haiti_svg()
 
     ANDES_SVG_PATH.write_text(andes_svg + "\n", encoding="utf-8")
+    NEVADO_SVG_PATH.write_text(nevado_svg + "\n", encoding="utf-8")
     HAITI_SVG_PATH.write_text(haiti_svg + "\n", encoding="utf-8")
     print(f"Generated {ANDES_SVG_PATH.relative_to(ROOT)} ({len(andes_svg) / 1024:.1f} KB)")
+    print(f"Generated {NEVADO_SVG_PATH.relative_to(ROOT)} ({len(nevado_svg) / 1024:.1f} KB)")
     print(f"Generated {HAITI_SVG_PATH.relative_to(ROOT)} ({len(haiti_svg) / 1024:.1f} KB)")
 
-    update_ski_pages(andes_svg, haiti_svg)
+    update_ski_pages(andes_svg, nevado_svg, haiti_svg)
 
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-/* Economy Page Interactive Charts - Waikiki Government Site */
+/* Economy Page Interactive Charts */
 
 // Chart.js default configuration
 Chart.defaults.font.family = "'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
@@ -119,12 +119,6 @@ function initEconomyCharts() {
             },
             options: {
                 ...commonOptions,
-                plugins: {
-                    ...commonOptions.plugins,
-                    title: {
-                        display: false
-                    }
-                },
                 scales: {
                     ...commonOptions.scales,
                     y: {
@@ -160,12 +154,6 @@ function initEconomyCharts() {
             },
             options: {
                 ...commonOptions,
-                plugins: {
-                    ...commonOptions.plugins,
-                    title: {
-                        display: false
-                    }
-                },
                 scales: {
                     ...commonOptions.scales,
                     y: {
@@ -210,12 +198,6 @@ function initEconomyCharts() {
             },
             options: {
                 ...commonOptions,
-                plugins: {
-                    ...commonOptions.plugins,
-                    title: {
-                        display: false
-                    }
-                },
                 scales: {
                     ...commonOptions.scales,
                     y: {
@@ -297,12 +279,6 @@ function initEconomyCharts() {
             },
             options: {
                 ...commonOptions,
-                plugins: {
-                    ...commonOptions.plugins,
-                    title: {
-                        display: false
-                    }
-                },
                 scales: {
                     ...commonOptions.scales,
                     y: {
@@ -345,12 +321,6 @@ function initEconomyCharts() {
             },
             options: {
                 ...commonOptions,
-                plugins: {
-                    ...commonOptions.plugins,
-                    title: {
-                        display: false
-                    }
-                },
                 scales: {
                     ...commonOptions.scales,
                     y: {
@@ -740,12 +710,6 @@ function initEconomyCharts() {
             },
             options: {
                 ...commonOptions,
-                plugins: {
-                    ...commonOptions.plugins,
-                    title: {
-                        display: false
-                    }
-                },
                 scales: {
                     ...commonOptions.scales,
                     y: {
@@ -757,9 +721,6 @@ function initEconomyCharts() {
             }
         });
     }
-
-    // Initialize charts when DOM is ready
-    console.log('Economy charts initialized successfully');
 }
 
 // Initialize charts when DOM is ready

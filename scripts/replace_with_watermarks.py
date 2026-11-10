@@ -40,7 +40,7 @@ def repl_card(m):
 
     return (
         f'{card_body}\n'
-        f'                    <img src="../icons/rockets/{matched_svg}" alt="" class="aircraft-watermark aircraft-watermark--plane" aria-hidden="true" />\n'
+        f'                    <img src="../icons/rockets/{matched_svg}" class="aircraft-watermark aircraft-watermark--plane" aria-hidden="true" />\n'
         f'                </div>'
     )
 

@@ -11,8 +11,8 @@
      menu         Full-screen overlay menu + live capital clock
      reveal       Scroll-triggered reveal + word-split headlines
      counters     Count-up animation for statistics
-     parallax     Hero parallax and [data-parallax] layers
-     pointer      Card spotlight and magnetic buttons
+     parallax     Hero parallax
+     pointer      Card spotlight
      rail         Auto-generated section navigation rail
      progress     Scroll progress bar + back-to-top ring
      timeline     Scroll-drawn timeline line
@@ -53,7 +53,6 @@
 
     function applyTheme(dark) {
         root.classList.toggle(DARK_CLASS, dark);
-        document.body.classList.remove(DARK_CLASS, 'body-light');
         try {
             localStorage.setItem(DARK_STORAGE_KEY, String(dark));
         } catch (e) { /* storage unavailable */ }
@@ -68,13 +67,7 @@
             const bg = getComputedStyle(root).getPropertyValue('--bg').trim();
             if (bg) meta.setAttribute('content', bg);
         }
-        document.dispatchEvent(new CustomEvent('themechange', { detail: { dark } }));
     }
-
-    /* Global for backwards compatibility with inline onclick handlers. */
-    window.setTheme = function () {
-        applyTheme(!isDark());
-    };
 
     function initTheme() {
         let stored = null;
@@ -84,8 +77,7 @@
         applyTheme(stored === 'true');
         $$('[data-theme-toggle]').forEach((button) => {
             button.addEventListener('click', () => {
-                root.classList.add('theme-transition');
-                window.setTheme();
+                applyTheme(!isDark());
             });
         });
     }
@@ -134,6 +126,20 @@
             desc: { en: 'High-Tech · Titanium and Cobalt', hu: 'Cs\u00facstechnika \u00b7 Tit\u00e1n \u00e9s kobalt' },
             file: 'themes/style-slate.css',
             colors: ['#1e293b', '#06b6d4', '#f1f5f9']
+        },
+        {
+            id: 'amethyst',
+            name: { en: 'Amethyst', hu: 'Ametiszt' },
+            desc: { en: 'Orchid Isle · Imperial Amethyst', hu: 'Orchidea-sziget \u00b7 Birodalmi ametiszt' },
+            file: 'themes/style-amethyst.css',
+            colors: ['#4c1d6e', '#d45d8b', '#faf4fa']
+        },
+        {
+            id: 'glacier',
+            name: { en: 'Glacier', hu: 'Gleccser' },
+            desc: { en: 'Alpine Summit · Glacial Sapphire and Ice', hu: 'Alpesi cs\u00facsok \u00b7 Gleccserzaf\u00edr \u00e9s j\u00e9g' },
+            file: 'themes/style-glacier.css',
+            colors: ['#0f3b5f', '#38bdf8', '#eff6fb']
         }
     ];
 
@@ -162,13 +168,9 @@
         return root.getAttribute('data-site-style') || 'default';
     }
 
-    function applyStyle(styleId, animate = false) {
+    function applyStyle(styleId) {
         const target = STYLES.some((s) => s.id === styleId) ? styleId : 'default';
         const styleDef = STYLES.find((s) => s.id === target);
-
-        if (animate) {
-            root.classList.add('theme-transition');
-        }
 
         let link = document.getElementById(STYLE_LINK_ID);
 
@@ -203,14 +205,7 @@
         }
 
         updateStyleSwitcherUI(target);
-        document.dispatchEvent(new CustomEvent('stylechange', { detail: { style: target } }));
     }
-
-    window.setStyle = function (styleId) {
-        applyStyle(styleId, true);
-    };
-
-    window.getStyle = getActiveStyle;
 
     function updateStyleSwitcherUI(activeId) {
         const loc = getLocale();
@@ -235,7 +230,7 @@
         try {
             stored = localStorage.getItem(STYLE_STORAGE_KEY);
         } catch (e) { /* storage unavailable */ }
-        applyStyle(stored || 'default', false);
+        applyStyle(stored || 'default');
     }
 
     function injectStyleSwitcherStyles() {
@@ -263,7 +258,7 @@
                 top: calc(var(--header-h-compact) + 10px);
                 right: var(--gutter);
                 z-index: calc(var(--z-header) + 20);
-                width: min(340px, calc(100vw - 2rem));
+                width: min(380px, calc(100vw - 2rem));
                 background: var(--surface);
                 border: var(--border-width) solid var(--line-strong);
                 border-radius: var(--radius);
@@ -328,7 +323,7 @@
                 display: flex;
                 flex-direction: column;
                 gap: 0.45rem;
-                max-height: 380px;
+                max-height: min(520px, calc(100vh - 160px));
                 overscroll-behavior: contain;
                 padding-right: 2px;
             }
@@ -485,7 +480,7 @@
             popover.querySelectorAll('[data-style-select]').forEach((button) => {
                 button.addEventListener('click', () => {
                     const sid = button.getAttribute('data-style-select');
-                    applyStyle(sid, true);
+                    applyStyle(sid);
                     setTimeout(() => {
                         popover.classList.remove('is-open');
                         if (styleBtn) {
@@ -593,13 +588,7 @@
                 }
             });
         }
-
-        document.dispatchEvent(new CustomEvent('animatechange', { detail: { enabled } }));
     }
-
-    window.toggleAnimate = function () {
-        applyAnimate(!isAnimate());
-    };
 
     function initAnimate() {
         let disabled = false;
@@ -609,7 +598,7 @@
         applyAnimate(!disabled);
         $$('[data-animate-toggle]').forEach((button) => {
             button.addEventListener('click', () => {
-                window.toggleAnimate();
+                applyAnimate(!isAnimate());
             });
         });
     }
@@ -646,7 +635,7 @@
         const header = $('.site-header');
         if (!header) return;
 
-        const hero = $('main > .hero:not(.hero--compact), main > .min-h-screen:first-child');
+        const hero = $('main > .hero:not(.hero--compact)');
         let lastY = window.scrollY;
 
         const update = () => {
@@ -801,7 +790,7 @@
     const REVEAL_GROUPS = [
         // [selector, variant]
         ['.section-intro, .narrative-text, .narrative-content > h3, .narrative-content > ol, .narrative-section-title', ''],
-        ['.card, .stat-card, .economy-stat, .faq-item, .reference-card, .admin-card, .stat-box, .content-block, .timeline-event, .timeline-period, .timeline-item, .data-viz-container, .data-viz-container-half, .info-stat, .member-card', ''],
+        ['.card, .stat-card, .economy-stat, .faq-item, .reference-card, .admin-card, .stat-box, .content-block, .timeline-event, .timeline-period, .timeline-item, .data-viz-container, .data-viz-container-half, .info-stat', ''],
         ['.table, .map-container, .video-wrapper, .comparison-item, .faq-section-title, .private-intro, .next-card, .section-link-wrapper, .faq-cta', ''],
         ['.gallery-item, .sight-image', 'image'],
         ['[data-reveal]', null]
@@ -815,14 +804,14 @@
 
         REVEAL_GROUPS.forEach(([selector, variant]) => {
             $$(selector).forEach((element) => {
-                if (element.closest('.hero, .site-menu, .site-header, .site-footer, .lightbox, #root')) return;
+                if (element.closest('.hero, .site-menu, .site-header, .site-footer, .lightbox')) return;
                 if (variant !== null && !element.hasAttribute('data-reveal')) element.setAttribute('data-reveal', variant);
                 targets.add(element);
             });
         });
 
         // Section headings reveal word-by-word.
-        $$('.section-title, .display, [data-split]').forEach((heading) => {
+        $$('.section-title, .display').forEach((heading) => {
             if (heading.closest('.hero')) return;
             splitWords(heading);
             heading.setAttribute('data-reveal', 'split');
@@ -852,9 +841,6 @@
             window._revealObserver = observer;
             targets.forEach((element) => observer.observe(element));
         }
-
-        // Legacy `.fade-in` hooks used by older page scripts.
-        $$('.fade-in').forEach((element) => element.classList.add('visible'));
 
         // Hero headline plays immediately after the curtain lifts.
         const heroTitle = $('.hero .hero-title');
@@ -902,7 +888,7 @@
     }
 
     function initCounters() {
-        const elements = $$('.stat-number, .economy-number, .stat-big, .stat-value, [data-count]');
+        const elements = $$('.stat-number, .stat-value, [data-count]');
         if (!elements.length) return;
 
         const animate = (element) => {
@@ -940,22 +926,14 @@
     function initParallax() {
         if (prefersReducedMotion) return;
         const heroMedia = $('.hero .hero-media');
-        const layers = $$('[data-parallax]');
-        if (!heroMedia && !layers.length) return;
+        if (!heroMedia) return;
 
         const update = () => {
             const y = window.scrollY;
             const vh = window.innerHeight;
-            if (heroMedia && y < vh * 1.2) {
+            if (y < vh * 1.2) {
                 heroMedia.style.setProperty('--hero-shift', `${y * 0.28}px`);
             }
-            layers.forEach((layer) => {
-                const rect = layer.getBoundingClientRect();
-                if (rect.bottom < -200 || rect.top > vh + 200) return;
-                const speed = parseFloat(layer.dataset.parallax) || 0.15;
-                const offset = (rect.top + rect.height / 2 - vh / 2) * -speed;
-                layer.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0)`;
-            });
         };
 
         update();
@@ -969,7 +947,7 @@
 
         // Spotlight that follows the cursor across cards.
         document.addEventListener('pointermove', rafThrottle((event) => {
-            const card = event.target.closest && event.target.closest('.card, .stat-card, .tile, .province-card, .sanctuary-item, .charter-rule-card, .hover-card');
+            const card = event.target.closest && event.target.closest('.card, .stat-card, .tile, .province-card, .sanctuary-item, .charter-rule-card');
             if (!card) return;
             const rect = card.getBoundingClientRect();
             card.style.setProperty('--mx', `${event.clientX - rect.left}px`);
@@ -1057,19 +1035,6 @@
 
         update();
         window.addEventListener('scroll', rafThrottle(update), { passive: true });
-    }
-
-    /* marquee */
-    function initMarquees() {
-        $$('.marquee-track').forEach((track) => {
-            if (track.dataset.cloned) return;
-            Array.from(track.children).forEach((item) => {
-                const clone = item.cloneNode(true);
-                clone.setAttribute('aria-hidden', 'true');
-                track.appendChild(clone);
-            });
-            track.dataset.cloned = 'true';
-        });
     }
 
     /* faq */
@@ -1183,7 +1148,8 @@
             chips.forEach((other) => other.setAttribute('aria-pressed', String(other === chip)));
 
             items.forEach((item, index) => {
-                const match = key === 'all' || (item.dataset.cat || '').split(/\s+/).includes(key);
+                const cat = item.dataset.cat || '';
+                const match = key === 'all' || cat.split(/\s+/).includes(key);
                 item.classList.remove('is-filtering-in');
                 item.hidden = !match;
                 if (match) {
@@ -1197,8 +1163,6 @@
         });
     }
 
-    window.initFilterBar = initFilterBar;
-
     function initFilterBars() {
         $$('.filter-bar[data-filter-for]').forEach(initFilterBar);
     }
@@ -1211,7 +1175,6 @@
         initCurtain();
         initHeader();
         initMenu();
-        initMarquees();
         initReveal();
         initCounters();
         initParallax();
