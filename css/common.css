@@ -2058,6 +2058,13 @@ video {
   overflow: visible;
 }
 
+.ill-panel > img.ill {
+  background:
+    radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.16), transparent 46%),
+    linear-gradient(145deg, rgba(107, 164, 217, 0.12), rgba(0, 34, 68, 0.1));
+  isolation: isolate;
+}
+
 .ill .f-sky {
   fill: var(--ill-sky);
 }

@@ -21,6 +21,7 @@
             .flicker { animation: flicker 0.18s linear infinite; }
             .blink { animation: blink 2.2s linear infinite; }
             text { font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+            @media (prefers-reduced-motion: reduce) { .twinkle, .dash, .dash-slow, .pulse, .cone, .flicker, .blink, animate, animateMotion, animateTransform { animation: none !important; } }
         </style>
         <linearGradient id="md-sky" x1="0%" y1="0%" x2="0%" y2="100%">
             <stop offset="0%" stop-color="#01050b" />
@@ -35,6 +36,7 @@
             <stop offset="70%" stop-color="#6BA4D9" stop-opacity="0.08" />
             <stop offset="100%" stop-color="#9fd8ff" stop-opacity="0.2" />
         </linearGradient>
+        <radialGradient id="md-moon-haze" cx="70%" cy="24%" r="48%"><stop offset="0" stop-color="#9ad7ff" stop-opacity=".18"/><stop offset=".4" stop-color="#3b729a" stop-opacity=".08"/><stop offset="1" stop-color="#06111d" stop-opacity="0"/></radialGradient>
         <linearGradient id="md-hostile-ground" x1="0%" y1="0%" x2="0%" y2="100%">
             <stop offset="0%" stop-color="#2a1a1a" />
             <stop offset="100%" stop-color="#0c0808" />
@@ -93,6 +95,7 @@
     </defs>
     <g clip-path="url(#md-clip)">
 <rect width="1160" height="520" fill="url(#md-sky)" />
+<rect width="1160" height="520" fill="url(#md-moon-haze)" />
 <rect x="0" y="140" width="1160" height="270" fill="url(#md-airglow)" />
 <g fill="#ffffff" opacity="0.55">
 <circle cx="479.8" cy="70" r="0.9" />
