@@ -102,9 +102,9 @@
 
 .hero-veil {
   background:
-    radial-gradient(1200px 600px at 85% 0%, rgba(251, 207, 232, 0.1), transparent 70%),
-    linear-gradient(180deg, rgba(37, 10, 55, 0.4) 0%, rgba(37, 10, 55, 0.08) 28%, rgba(37, 10, 55, 0.3) 58%, rgba(37, 10, 55, 0.94) 100%),
-    linear-gradient(90deg, rgba(37, 10, 55, 0.5) 0%, rgba(37, 10, 55, 0.2) 55%, rgba(37, 10, 55, 0) 85%);
+    radial-gradient(1200px 600px at 85% 0%, rgba(251, 207, 232, 0.05), transparent 70%),
+    linear-gradient(180deg, rgba(37, 10, 55, 0.3) 0%, rgba(37, 10, 55, 0.05) 28%, rgba(37, 10, 55, 0.2) 58%, rgba(37, 10, 55, 0.8) 100%),
+    linear-gradient(90deg, rgba(37, 10, 55, 0.4) 0%, rgba(37, 10, 55, 0.1) 55%, rgba(37, 10, 55, 0) 85%);
 }
 
 .gallery-toolbar {
