@@ -64,6 +64,7 @@ def run_maps() -> None:
 def run_other() -> None:
     """Generate other procedural SVGs."""
     import gen_banking_svgs
+    import gen_constitution_svgs
     import gen_fusion_svgs
     import gen_military_svgs
     import gen_plane
@@ -71,6 +72,7 @@ def run_other() -> None:
 
     print("\n--- Generating Other Localized SVGs ---")
     gen_banking_svgs.main()
+    gen_constitution_svgs.main()
     gen_space_svgs.main()
     gen_military_svgs.main()
     gen_fusion_svgs.main()
