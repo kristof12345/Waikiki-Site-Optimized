@@ -2157,6 +2157,7 @@ video {
   transform-box: fill-box;
   transform-origin: center;
   animation: illSpin 6s linear infinite;
+  animation-play-state: paused;
 }
 
 .ill .spin.slow {
@@ -2165,25 +2166,43 @@ video {
 
 .ill .bob {
   animation: illBob 5s var(--ease-in-out) infinite;
+  animation-play-state: paused;
 }
 
 .ill .drift {
   animation: illDrift 14s var(--ease-in-out) infinite alternate;
+  animation-play-state: paused;
 }
 
 .ill .dash {
   stroke-dasharray: 6 8;
   animation: illDash 2.4s linear infinite;
+  animation-play-state: paused;
 }
 
 .ill .pulse {
   transform-box: fill-box;
   transform-origin: center;
   animation: illPulse 2.6s var(--ease-out) infinite;
+  animation-play-state: paused;
 }
 
 .ill .twinkle {
   animation: illTwinkle 3.2s var(--ease-in-out) infinite;
+  animation-play-state: paused;
+}
+
+.ill.is-in-view .spin,
+.ill.is-in-view .bob,
+.ill.is-in-view .drift,
+.ill.is-in-view .dash,
+.ill.is-in-view .pulse,
+.ill.is-in-view .twinkle {
+  animation-play-state: running;
+}
+
+.page-is-hidden .ill * {
+  animation-play-state: paused !important;
 }
 
 .ill .twinkle:nth-of-type(2n) {

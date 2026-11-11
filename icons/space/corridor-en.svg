@@ -27,6 +27,8 @@
             <stop offset="85%" stop-color="#02080e" />
             <stop offset="100%" stop-color="#010408" />
         </radialGradient>
+        <radialGradient id="sr-nebula" cx="50%" cy="32%" r="64%"><stop offset="0" stop-color="#1c6674" stop-opacity=".28"/><stop offset=".44" stop-color="#173f68" stop-opacity=".16"/><stop offset="1" stop-color="#02080e" stop-opacity="0"/></radialGradient>
+        <radialGradient id="sr-vignette" cx="50%" cy="50%" r="72%"><stop offset=".62" stop-color="#02080e" stop-opacity="0"/><stop offset="1" stop-color="#010408" stop-opacity=".72"/></radialGradient>
         <radialGradient id="sr-earth-ocean-rad" cx="32%" cy="28%" r="68%">
             <stop offset="0%" stop-color="#38bdf8" />
             <stop offset="30%" stop-color="#0284c7" />
@@ -59,6 +61,8 @@
     </defs>
     <g clip-path="url(#sr-clip2)">
 <rect width="1160" height="480" fill="url(#sr-deep-space)" />
+<ellipse cx="570" cy="168" rx="570" ry="254" fill="url(#sr-nebula)" />
+<rect width="1160" height="480" fill="url(#sr-vignette)" />
 <g>
 <line x1="40" y1="120" x2="1120" y2="120" stroke="#1e405a" stroke-width="0.8" stroke-dasharray="4 8" opacity="0.35" />
 <line x1="40" y1="240" x2="1120" y2="240" stroke="#1e405a" stroke-width="0.8" stroke-dasharray="4 8" opacity="0.35" />

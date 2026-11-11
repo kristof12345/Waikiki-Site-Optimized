@@ -58,18 +58,22 @@
                             <rect width="640" height="480" rx="40" />
                         </clipPath>
                         <linearGradient id="ih-sky" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0" stop-color="#fbf1e4" style="stop-color:var(--ill-sky-2, #fbf1e4)" />
-                            <stop offset="1" stop-color="#f6e7d3" style="stop-color:var(--ill-sky, #f6e7d3)" />
+                            <stop offset="0" stop-color="#b9dbea" />
+                            <stop offset=".58" stop-color="#f7d9aa" />
+                            <stop offset="1" stop-color="#e99b64" />
                         </linearGradient>
                         <linearGradient id="ih-sea" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0" stop-color="#6ba4d9" style="stop-color:var(--ill-sea-2, #6ba4d9)" />
-                            <stop offset="1" stop-color="#1a528f" style="stop-color:var(--ill-sea, #1a528f)" />
+                            <stop offset="0" stop-color="#70c2d1" />
+                            <stop offset=".4" stop-color="#257aa0" />
+                            <stop offset="1" stop-color="#063760" />
                         </linearGradient>
+                        <linearGradient id="ih-glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#effcff" stop-opacity=".9"/><stop offset=".45" stop-color="#73c0dd" stop-opacity=".78"/><stop offset="1" stop-color="#164c78" stop-opacity=".85"/></linearGradient>
+                        <filter id="ih-depth" x="-20%" y="-20%" width="140%" height="145%"><feDropShadow dx="0" dy="7" stdDeviation="6" flood-color="#002244" flood-opacity=".25"/></filter>
     </defs>
     <g clip-path="url(#ih-clip)">
                         <rect width="640" height="480" fill="url(#ih-sky)" />
-                        <circle cx="500" cy="118" r="78" class="f-sun2" opacity=".35" />
-                        <circle cx="500" cy="118" r="50" class="f-sun" />
+                        <circle cx="500" cy="118" r="90" fill="#ffe0a1" opacity=".23" />
+                        <circle cx="500" cy="118" r="50" fill="#ef9560" />
                         <g class="drift">
                             <ellipse cx="150" cy="96" rx="54" ry="12" class="f-white" opacity=".85" />
                             <ellipse cx="182" cy="84" rx="32" ry="13" class="f-white" opacity=".85" />
@@ -105,7 +109,7 @@
                         <rect x="166" y="214" width="26" height="86" class="f-ink3" />
                         <rect x="196" y="178" width="22" height="122" class="f-ink2" />
                         <rect x="222" y="232" width="30" height="68" class="f-ink3" />
-                        <polygon points="248,300 330,172 412,300" class="f-glass" />
+                        <polygon points="248,300 330,172 412,300" fill="url(#ih-glass)" />
                         <polygon points="248,300 330,172 412,300" class="k-gold" stroke-width="2.2" stroke-linejoin="round" />
                         <path d="M330 172 L312 300M330 172 L352 300M298 222H362M282 248H378M266 274H394" class="k-gold" stroke-width="1" opacity=".75" />
                         <polygon points="321,186 330,172 339,186" class="f-gold" />
@@ -126,6 +130,7 @@
                             <rect class="twinkle" x="480" y="244" width="4" height="4" />
                         </g>
                         <rect y="300" width="640" height="180" fill="url(#ih-sea)" />
+                        <g fill="none" stroke="#d7f5f2" stroke-linecap="round" opacity=".42"><path d="M-20 332 C72 323 158 337 245 330 S432 326 520 334 S602 339 670 330" stroke-width="2"/><path d="M-12 370 C71 360 152 376 239 369 S436 364 531 373 S609 378 674 368" stroke-width="1.5"/><path d="M-10 416 C84 406 168 423 264 414 S452 409 548 418 S615 423 680 412" stroke-width="1.4"/></g>
                         <rect y="300" width="640" height="6" class="f-sea3" opacity=".7" />
                         <rect x="526" y="296" width="114" height="12" class="f-sand" />
                         <path d="M566 296V236h44M566 248l26-12M604 236v18" class="k-ink" stroke-width="3" stroke-linecap="round" />
@@ -133,7 +138,7 @@
                         <rect x="536" y="284" width="18" height="12" class="f-coral" />
                         <rect x="580" y="286" width="18" height="10" class="f-gold" />
                         <rect x="580" y="276" width="18" height="10" class="f-sea2" />
-                        <g class="bob">
+                        <g class="bob" filter="url(#ih-depth)">
                             <path d="M540 330h86l-10 14h-68z" class="f-ink" />
                             <rect x="552" y="320" width="14" height="10" class="f-coral" />
                             <rect x="568" y="320" width="14" height="10" class="f-gold" />

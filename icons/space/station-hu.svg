@@ -16,6 +16,7 @@
             .pulse-glow { animation: pulse-glow 4s ease-in-out infinite; }
             .dash { animation: dash 2.5s linear infinite; }
             text { font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+            @media (prefers-reduced-motion: reduce) { .twinkle, .pulse-glow, .dash, animateMotion, animateTransform, animate { animation: none !important; } }
         </style>
         <radialGradient id="sr-space-bg" cx="50%" cy="25%" r="75%">
             <stop offset="0%" stop-color="#0a1d2e" />
