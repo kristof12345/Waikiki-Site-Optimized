@@ -4,7 +4,7 @@ A nemzet egy szent közösség, amelyet meg kell védeni a globális káosztól 
 
 ## Történelmi küldetés
 
-Waikiki Nemzete a 21. század viharos geopolitikai környezetében az emberi civilizáció új csúcsát képviseli. Modellünk nem kísérlet, hanem bizonyíték arra, hogy a rend, a hagyomány, a szakértelem és a technológiai innováció szimbiózisa képes megteremteni a tartós jólétet. Elutasítjuk a hanyatló nyugati demokráciák bénultságát és a keleti autokráciák elnyomását. Waikiki a Harmadik Út, a cselekvő erő és a szabadság szövetsége.
+Waikiki Nemzete a 21. század viharos geopolitikai környezetében az emberi civilizáció új csúcsát képviseli. Modellünk nem kísérlet, hanem bizonyíték arra, hogy a rend, a hagyomány, a szakértelem és a technológiai innováció szimbiózisa képes megteremteni a tartós jólétet. Elutasítjuk a hanyatló nyugati demokráciák bénultságát és a keleti autokráciák elnyomását. Waikiki a Harmadik Út, a cselekvő erő és a szabadság szövetsége.
 
 ## Államszervezet és kormányzás
 
@@ -21,9 +21,9 @@ Lojalitás és Teljesítmény: Minden közszolga, a minisztertől a rendőrig, a
 ## Gazdasági szuperhatalom - hazafias kapitalizmus
 
 ### Stratégiai Önellátás
-Waikiki gazdasága a nemzeti nagyság és a piaci szabadság fúziója.
+Waikiki gazdasága a nemzeti nagyság és a piaci szabadság fúziója.
 A globális ellátási láncok sebezhetők. Célunk a teljes függetlenség a kritikus szektorokban.
-Energia: Használjuk a napot, a szelet, az atomot és az olajat is. Nem kérünk bocsánatot a fosszilis energiahordozók kitermeléséért, ha az a nemzeti vagyont gyarapítja.
+Energia: Használjuk a napot, a szelet, az atomot és az olajat is. Nem kérünk bocsánatot a fosszilis energiahordozók kitermeléséért, ha az a nemzeti vagyont gyarapítja.
 Ipar: A „Made in Waikiki” nemcsak címke, hanem minőségi garancia. Protekcionista vámokkal védjük a hazai termelést, és állami tőkével támogatjuk a technológiai bajnokokat.
 
 ### A Munka Becsülete
@@ -53,7 +53,7 @@ Tiszta Utcák: A koldulás, a közterületi sátrazás és a drogfogyasztás bű
 Gyors Büntetés: Az igazságszolgáltatás nem rehabilitációs központ. A bűnösnek bűnhődnie kell, a sértettnek kártérítést kell kapnia. Azonnal.
 
 ### Technológiai Pajzs
-Panoptikum: A közbiztonsági kamerarendszer és az arcfelismerés garantálja, hogy a bűnözőknek nincs hova bújniuk. A tisztességes polgárnak nincs félnivalója.
+Panoptikum: A közbiztonsági kamerarendszer és az arcfelismerés garantálja, hogy a bűnözőknek nincs hova bújniuk. A tisztességes polgárnak nincs félnivalója.
 
 ## Külpolitika - a realizmus doktrínája
 
