@@ -81,7 +81,6 @@ def build_fusion_grid_svg(lang: str = "en") -> str:
 
     if is_hu:
         hud_title = "KERESKEDELMI HIDROGÉNFÚZIÓS KOMPLEXUM ÉS INTELLIGENS HÁLÓZAT"
-        hud_status = "5 REAKTOR AKTÍV · 12,8 GW"
         zone1_hdr = "01 // TOKAMAK-SZTELLARÁTOR MÁGNESES ÖSSZETARTÁSÚ REAKTORMAG"
         zone2_hdr = "02 // ±800 KV HVDC INTELLIGENS HÁLÓZAT ÉS ÉLŐ TELEMETRIA"
 
@@ -148,8 +147,7 @@ def build_fusion_grid_svg(lang: str = "en") -> str:
             ("±800 kV HVDC átvitel", "grid"),
         ]
     else:
-        hud_title = "COMMERCIAL HYDROGEN FUSION COMPLEX AND INTELLIGENT GRID"
-        hud_status = "5 REACTORS ONLINE · 12.8 GW"
+        hud_title = "COMMERCIAL HYDROGEN FUSION COMPLEX AND INTELLIGENT POWER GRID"
         zone1_hdr = "01 // TOKAMAK-STELLARATOR MAGNETIC CONFINEMENT CORE"
         zone2_hdr = "02 // ±800 KV HVDC INTELLIGENT GRID AND LIVE TELEMETRY"
 
@@ -774,7 +772,7 @@ def build_fusion_grid_svg(lang: str = "en") -> str:
             <circle cx="858" cy="256" r="5" />
             <circle cx="858" cy="370" r="5" />
         </g>
-        <circle r="3.5" fill="#ffffff" filter="url(#fg-glow)">
+        <circle r="3.5" fill="#ffffff">
             <animateMotion dur="3.6s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;0.5;1" calcMode="linear">
                 <mpath href="#fg-tie-bus-{lang}" />
             </animateMotion>
@@ -787,7 +785,7 @@ def build_fusion_grid_svg(lang: str = "en") -> str:
     <g>
         <path id="{pid}" d="{cpath}" fill="none" stroke="{ccol}" stroke-width="5" opacity="0.25" filter="url(#fg-glow)" />
         <path d="{cpath}" fill="none" stroke="{ccol}" stroke-width="2.4" class="grid-flow" />
-        <circle r="4" fill="#ffffff" stroke="{ccol}" stroke-width="1.5" filter="url(#fg-glow)">
+        <circle r="4" fill="#ffffff" stroke="{ccol}" stroke-width="1.5">
             <animateMotion dur="{cdur}" repeatCount="indefinite">
                 <mpath href="#{pid}" />
             </animateMotion>
@@ -835,14 +833,11 @@ def build_fusion_grid_svg(lang: str = "en") -> str:
     # ==========================================================================
     # 7. TOP & BOTTOM HUD OVERLAYS (Consistent with station & missile-defense SVGs)
     # ==========================================================================
-    status_dot_x = 768 if is_hu else 752
+    hud_title_x = 348 if is_hu else 344
     body.append(f"""    <!-- TOP HUD STATUS BAR -->
     <g font-size="10.2" font-weight="800" letter-spacing="1.0">
-        <rect x="176" y="16" width="808" height="32" rx="16" fill="{INK}" stroke="{GOLD}" stroke-width="1.2" opacity="0.95" />
-        <text x="200" y="36.5" fill="#fbf7f0">{hud_title}</text>
-        <circle cx="{n(status_dot_x)}" cy="32" r="4" fill="{GREEN}" class="beacon" />
-        <circle cx="{n(status_dot_x)}" cy="32" r="2.8" fill="{GREEN}" />
-        <text x="960" y="36.5" fill="{GREEN}" text-anchor="end">{hud_status}</text>
+        <rect x="328" y="16" width="500" height="32" rx="16" fill="{INK}" stroke="{GOLD}" stroke-width="1.2" opacity="0.95" />
+        <text x="{hud_title_x}" y="36.5" fill="#fbf7f0">{hud_title}</text>
     </g>""")
 
     # Bottom Center Legend Pill

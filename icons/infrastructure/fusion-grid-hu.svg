@@ -491,7 +491,7 @@
             <circle cx="858" cy="256" r="5" />
             <circle cx="858" cy="370" r="5" />
         </g>
-        <circle r="3.5" fill="#ffffff" filter="url(#fg-glow)">
+        <circle r="3.5" fill="#ffffff">
             <animateMotion dur="3.6s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;0.5;1" calcMode="linear">
                 <mpath href="#fg-tie-bus-hu" />
             </animateMotion>
@@ -501,7 +501,7 @@
     <g>
         <path id="fg-corr-waikiki-hu" d="M834,142 C852,142 862,142 884,142" fill="none" stroke="#f5c46e" stroke-width="5" opacity="0.25" filter="url(#fg-glow)" />
         <path d="M834,142 C852,142 862,142 884,142" fill="none" stroke="#f5c46e" stroke-width="2.4" class="grid-flow" />
-        <circle r="4" fill="#ffffff" stroke="#f5c46e" stroke-width="1.5" filter="url(#fg-glow)">
+        <circle r="4" fill="#ffffff" stroke="#f5c46e" stroke-width="1.5">
             <animateMotion dur="2.2s" repeatCount="indefinite">
                 <mpath href="#fg-corr-waikiki-hu" />
             </animateMotion>
@@ -511,7 +511,7 @@
     <g>
         <path id="fg-corr-amazonia-hu" d="M834,256 C852,256 862,256 884,256" fill="none" stroke="#2ecc71" stroke-width="5" opacity="0.25" filter="url(#fg-glow)" />
         <path d="M834,256 C852,256 862,256 884,256" fill="none" stroke="#2ecc71" stroke-width="2.4" class="grid-flow" />
-        <circle r="4" fill="#ffffff" stroke="#2ecc71" stroke-width="1.5" filter="url(#fg-glow)">
+        <circle r="4" fill="#ffffff" stroke="#2ecc71" stroke-width="1.5">
             <animateMotion dur="2.5s" repeatCount="indefinite">
                 <mpath href="#fg-corr-amazonia-hu" />
             </animateMotion>
@@ -521,7 +521,7 @@
     <g>
         <path id="fg-corr-brazilia-hu" d="M834,370 C852,370 862,370 884,370" fill="none" stroke="#38bdf8" stroke-width="5" opacity="0.25" filter="url(#fg-glow)" />
         <path d="M834,370 C852,370 862,370 884,370" fill="none" stroke="#38bdf8" stroke-width="2.4" class="grid-flow" />
-        <circle r="4" fill="#ffffff" stroke="#38bdf8" stroke-width="1.5" filter="url(#fg-glow)">
+        <circle r="4" fill="#ffffff" stroke="#38bdf8" stroke-width="1.5">
             <animateMotion dur="2.0s" repeatCount="indefinite">
                 <mpath href="#fg-corr-brazilia-hu" />
             </animateMotion>
@@ -595,11 +595,8 @@
     </g>
     <!-- TOP HUD STATUS BAR -->
     <g font-size="10.2" font-weight="800" letter-spacing="1.0">
-        <rect x="176" y="16" width="808" height="32" rx="16" fill="#04121c" stroke="#f5c46e" stroke-width="1.2" opacity="0.95" />
-        <text x="200" y="36.5" fill="#fbf7f0">KERESKEDELMI HIDROGÉNFÚZIÓS KOMPLEXUM ÉS INTELLIGENS HÁLÓZAT</text>
-        <circle cx="768" cy="32" r="4" fill="#2ecc71" class="beacon" />
-        <circle cx="768" cy="32" r="2.8" fill="#2ecc71" />
-        <text x="960" y="36.5" fill="#2ecc71" text-anchor="end">5 REAKTOR AKTÍV · 12,8 GW</text>
+        <rect x="328" y="16" width="500" height="32" rx="16" fill="#04121c" stroke="#f5c46e" stroke-width="1.2" opacity="0.95" />
+        <text x="348" y="36.5" fill="#fbf7f0">KERESKEDELMI HIDROGÉNFÚZIÓS KOMPLEXUM ÉS INTELLIGENS HÁLÓZAT</text>
     </g>
     <!-- Bottom Legend Pill -->
     <g transform="translate(2, 0)" font-size="8.8" font-weight="700" letter-spacing="0.5">
