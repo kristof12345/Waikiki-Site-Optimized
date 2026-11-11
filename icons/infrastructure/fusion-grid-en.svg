@@ -595,7 +595,7 @@
     </g>
     <!-- TOP HUD STATUS BAR -->
     <g font-size="10.2" font-weight="800" letter-spacing="1.0">
-        <rect x="328" y="16" width="500" height="32" rx="16" fill="#04121c" stroke="#f5c46e" stroke-width="1.2" opacity="0.95" />
+        <rect x="328" y="16" width="482" height="32" rx="16" fill="#04121c" stroke="#f5c46e" stroke-width="1.2" opacity="0.95" />
         <text x="344" y="36.5" fill="#fbf7f0">COMMERCIAL HYDROGEN FUSION COMPLEX AND INTELLIGENT POWER GRID</text>
     </g>
     <!-- Bottom Legend Pill -->

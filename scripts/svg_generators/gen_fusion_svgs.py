@@ -836,7 +836,7 @@ def build_fusion_grid_svg(lang: str = "en") -> str:
     hud_title_x = 348 if is_hu else 344
     body.append(f"""    <!-- TOP HUD STATUS BAR -->
     <g font-size="10.2" font-weight="800" letter-spacing="1.0">
-        <rect x="328" y="16" width="500" height="32" rx="16" fill="{INK}" stroke="{GOLD}" stroke-width="1.2" opacity="0.95" />
+        <rect x="328" y="16" width="482" height="32" rx="16" fill="{INK}" stroke="{GOLD}" stroke-width="1.2" opacity="0.95" />
         <text x="{hud_title_x}" y="36.5" fill="#fbf7f0">{hud_title}</text>
     </g>""")
 
