@@ -178,7 +178,7 @@ TARGET_NEXT_IMAGES = {
     "faq": "UniversalUpscaler_82625004-8a28-4ed6-9515-e204957d9457.jpg",
 }
 
-FALLBACK_IMAGE = "UniversalUpscaler_93281a3c-f408-4f55-b29b-e8a6b87ab85d-U.jpg"
+FALLBACK_IMAGE = "TODO.jpg"
 
 # --------------------------------------------------------------------------- #
 # Helpers
