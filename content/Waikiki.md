@@ -60,36 +60,36 @@ Waikiki három tartományból áll. A tartományok élén a diktátor által kin
 
 |          | Terület   | Népsűrűség | GDP    | GDP/fő      |
 | -------- | --------- | ---------- | ------ | ----------- |
-| Összesen | 8 840 000 | 23         | 100,0% | 143 000 USD |
-| Waikiki  | 293 000   | 41         | 7,4%   | 183 566 USD |
-| Brazília | 4 242 000 | 25         | 47,7%  | 135 632 USD |
-| Amazónia | 4 305 000 | 21         | 44,9%  | 146 072 USD |
+| Összesen | 8 840 000 | 23         | 100,0% | 143 000 USD |
+| Waikiki  | 293 000   | 41         | 7,4%   | 183 566 USD |
+| Brazília | 4 242 000 | 25         | 47,7%  | 135 632 USD |
+| Amazónia | 4 305 000 | 21         | 44,9%  | 146 072 USD |
 
 ## Lakosság megoszlása tartományonként (2018)
 
 |          | Népesség    | Állampolgárok | Állandó lakosok | Ideiglenes munkavállalók |
 | -------- | ----------- | ------------- | --------------- | ------------------------ |
-| Összesen | 210 000 000 | 62%           | 33%             | 5%                       |
-| Waikiki  | 13 000 000  | 72%           | 10%             | 18%                      |
-| Brazília | 105 000 000 | 58%           | 39%             | 3%                       |
-| Amazónia | 92 000 000  | 65%           | 30%             | 5%                       |
+| Összesen | 210 000 000 | 62%           | 33%             | 5%                       |
+| Waikiki  | 13 000 000  | 72%           | 10%             | 18%                      |
+| Brazília | 105 000 000 | 58%           | 39%             | 3%                       |
+| Amazónia | 92 000 000  | 65%           | 30%             | 5%                       |
 
 ## Jövedelem megoszlása tartományonként (2021)
 
 |                               | Összesen        | Waikiki        | Brazília        | Amazónia        |
 | ----------------------------- | --------------- | -------------- | --------------- | --------------- |
-| Népesség (fő)                 | 212 000 000     | 13 500 000     | 106 200 000     | 92 300 000      |
+| Népesség (fő)                 | 212 000 000     | 13 500 000     | 106 200 000     | 92 300 000      |
 | Állampolgárok (%)             | 61%             | 69%            | 58%             | 65%             |
 | Állandó lakosok (%)           | 34%             | 17%            | 40%             | 30%             |
 | Ideiglenes munkavállalók (%)  | 4%              | 14%            | 3%              | 5%              |
-| Állampolgárok (fő)            | 130 300 000     | 9 300 000      | 61 200 000      | 59 800 000      |
-| Állandó lakosok (fő)          | 72 300 000      | 2 300 000      | 42 100 000      | 27 900 000      |
-| Ideiglenes munkavállalók (fő) | 9 400 000       | 1 900 000      | 2 900 000       | 4 600 000       |
-| Terület (km^2^)               | 8 840 000       | 293 000        | 4 242 000       | 4 305 000       |
+| Állampolgárok (fő)            | 130 300 000     | 9 300 000      | 61 200 000      | 59 800 000      |
+| Állandó lakosok (fő)          | 72 300 000      | 2 300 000      | 42 100 000      | 27 900 000      |
+| Ideiglenes munkavállalók (fő) | 9 400 000       | 1 900 000      | 2 900 000       | 4 600 000       |
+| Terület (km^2^)               | 8 840 000       | 293 000        | 4 242 000       | 4 305 000       |
 | Népsűrűség                    | 24              | 46             | 25              | 21              |
-| Teljes GDP (USD)              | 39 818 milliárd | 2 963 milliárd | 18 974 milliárd | 17 880 milliárd |
+| Teljes GDP (USD)              | 39 818 milliárd | 2 963 milliárd | 18 974 milliárd | 17 880 milliárd |
 | GDP %                         | 100,0%          | 7,4%           | 47,7%           | 44,9%           |
-| Egy főre jutó GDP             | 187 821 USD     | 219 489 USD    | 178 667 USD     | 193 722 USD     |
+| Egy főre jutó GDP             | 187 821 USD     | 219 489 USD    | 178 667 USD     | 193 722 USD     |
 
 # Államszervezet
 
