@@ -263,7 +263,8 @@
         "../generated/chease-jessica-detailed/p015-2.png"
       ],
       "target_images": 2,
-      "status": "complete"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p015.prompts.json"
     },
     {
       "paragraph": 16,
@@ -271,10 +272,17 @@
       "text": "Az eseményen számos európai uralkodóház képviselői is jelen voltak, többek között a brit, a belga és a svéd királyi család küldöttei, ami nemzetközi szinten is elismerte Waikiki új politikai és társadalmi berendezkedését. A koronázás mérföldkőnek bizonyult az ország történetében, egyszerre jelentette az addigi gazdasági sikerek megkoronázását, valamint egy új korszak kezdetét, amelyben Waikiki a monarchikus hagyományokat a modern államépítéssel ötvözte. Habár a királyi tisztség nem jár közvetlen politikai hatalommal, mégis hatalmas jelentőséggel bír, hogy Chease Young Waikiki királya lett, hiszen ezzel az állampolgárok döntő többsége támogatta abban, hogy az ország élén maradjon. Az öröklési rendet meghatározó törvény szerint a királyi trónt az elsőszülött fiú gyermek, azaz Raimondo fogja örökölni, aki ennek tiszteletére a koronahercegi címet viseli. A trónörökösök sorában őt követi Chease két lánya, Angelina utána pedig Jennifer. A ceremónia utáni első ülésen a parlament úgy döntött, hogy a koronázás napját, augusztus 4-ét nemzeti ünneppé nyilvánítják.",
       "sha256": "6a73fc7bbc6aec96b29622da7ef850045b4c73c41548489a18a256f9a4c81998",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p016-1.png",
+        "../generated/chease-jessica-detailed/p016-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p016-1.png",
+        "../generated/chease-jessica-detailed/p016-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p016.prompts.json"
     },
     {
       "paragraph": 17,
@@ -282,10 +290,17 @@
       "text": "Chease Young vezetése alatt Waikiki rendkívül gyors ütemben fejlődött és rövid időn belül a nemzetközi közösség egyik meghatározó szereplőjévé vált. Az általa bevezetett kedvező és átlátható adórendszer következtében számos multinacionális vállalat helyezte át székhelyét az országba, ezzel erősítve a gazdasági aktivitást és a befektetési hajlandóságot. Az ország stratégiai jelentőségét tovább növelte a Kubai-öböl térségében feltárt, hatalmas mennyiségű kőolaj, amely Waikikit rövid idő alatt a világ egyik legfontosabb energiatermelő és exportáló államává emelte. A háború időszakában Waikiki jelentős bevételhez jutott a fosszilis energiahordozók exportja, valamint a New York-i békeszerződés keretében megítélt jóvátételi összegek révén. Ezen források lehetővé tették, hogy az ország gazdasága felzárkózzon az Egyesült Államokéhoz, 2006-ra pedig azt meghaladva a globális gazdasági és politikai erőtér egyik vezető hatalmává váljon.",
       "sha256": "22902309634d101d720e2cfbc7b712f5956abc16119d3a4fe075889601dafad1",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p017-1.png",
+        "../generated/chease-jessica-detailed/p017-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p017-1.png",
+        "../generated/chease-jessica-detailed/p017-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p017.prompts.json"
     },
     {
       "paragraph": 18,
