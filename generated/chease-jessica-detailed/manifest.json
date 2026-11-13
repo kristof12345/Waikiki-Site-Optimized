@@ -308,10 +308,17 @@
       "text": "Waikiki kormánya a rendkívüli gazdasági növekedésnek köszönhetően rövid időn belül hatalmas vagyonra tett szert, amely előtérbe helyezte a területi bővülés szükségességét is. Ezzel egy időben Brazília súlyos pénzügyi válságba került, az állam a csőd szélére sodródott és külföldi partnereihez fordult segítségért. Chease Young, felismerve a helyzet geopolitikai jelentőségét, az IMF és a Federal Reserve támogatásával átfogó gazdasági mentőcsomagot ajánlott fel, amely magában foglalta Brazília államadósságának teljes átvállalását. Az ajánlat fő feltétele az volt, hogy Brazília hivatalosan is csatlakozzon Waikiki államalakulatához. 2006 júniusában Brazíliában országos népszavazást tartottak a csatlakozás kérdéséről, amelyen az állampolgárok döntő többsége támogatta az egyesülést. Ennek nyomán még ugyanazon év szeptemberében sor került a hivatalos integrációra, amelynek eredményeként az ország elnyerte jelenlegi formáját, Waikiki, Amazónia és Brazília tartományokkal egy gazdasági, politikai és katonai egységet alkotva.",
       "sha256": "3df82f39f4f754a46a34c2e2f6ba04a38838d3649dae5c5804b3455689f4ddc9",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p018-1.png",
+        "../generated/chease-jessica-detailed/p018-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p018-1.png",
+        "../generated/chease-jessica-detailed/p018-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p018.prompts.json"
     },
     {
       "paragraph": 19,
