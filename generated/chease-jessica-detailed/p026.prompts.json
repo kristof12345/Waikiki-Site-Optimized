@@ -1,0 +1,22 @@
+{
+  "paragraph": 26,
+  "tool": "built-in image_gen",
+  "references": [
+    "references/chease-and-jessica-1.jpg"
+  ],
+  "reused": [],
+  "images": [
+    {
+      "variant": 1,
+      "file": "generated/chease-jessica-detailed/p026-1.png",
+      "prompt": "Use case: photorealistic-natural. High-resolution landscape editorial photography for a fictional alternate-history biography. Reference defines exact facial identity: Chease is the dark-haired man and Jessica is the blonde woman; preserve their faces, eyes, noses, smiles, hair and skin tone. Jessica looks slightly younger, naturally adult. Scene timeframe 2008. The couple are outside observers assessing the American mortgage and banking crisis from their own office, not executives responsible for US mortgage lending. Chease wears a dark suit, Jessica an elegant gray jacket and cream blouse. Serious thoughtful but natural expressions, realistic period equipment, beautiful soft photographic light. No readable text, company logos, flags or watermark. Chease and Jessica review American housing-risk reports with a financial analyst at a refined private-office table. Simple abstract charts, photographs of suburban houses and paper financial reports are on the table. A close candid three-quarter view emphasizes the couple's attentive discussion and recognizable faces, warm wood and soft daylight in the background.",
+      "status": "generated"
+    },
+    {
+      "variant": 2,
+      "file": "generated/chease-jessica-detailed/p026-2.png",
+      "prompt": "Use case: photorealistic-natural. High-resolution landscape editorial photography for a fictional alternate-history biography. Reference defines exact facial identity: Chease is the dark-haired man and Jessica is the blonde woman; preserve their faces, eyes, noses, smiles, hair and skin tone. Jessica looks slightly younger, naturally adult. Scene timeframe 2008. The couple are outside observers assessing the American mortgage and banking crisis from their own office, not executives responsible for US mortgage lending. Chease wears a dark suit, Jessica an elegant gray jacket and cream blouse. Serious thoughtful but natural expressions, realistic period equipment, beautiful soft photographic light. No readable text, company logos, flags or watermark. Chease and Jessica stand together in their quiet office watching an unbranded television financial-news report showing a distant Wall Street building and abstract falling market graphics, all text unreadable. A wider documentary view includes the couple's clear faces in three-quarter profile and the screen in context, restrained concern, soft late-afternoon window light.",
+      "status": "generated"
+    }
+  ]
+}
