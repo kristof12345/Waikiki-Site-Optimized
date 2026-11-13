@@ -1156,7 +1156,7 @@ html.menu-open .menu-aside {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   width: 100%;
-  max-width: 1080px;
+  max-width: var(--width-xs);
   margin-top: 1rem;
   border-top: 1px solid var(--white-alpha-20);
 }
@@ -1547,6 +1547,15 @@ html.no-reveal .illustration-frame--zoom:hover img {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
   gap: var(--card-gap);
   max-width: var(--width-full);
+  width: 100%;
+  margin: 2.5rem auto 0;
+}
+
+.landmark-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: var(--card-gap);
+  max-width: var(--width-l);
   width: 100%;
   margin: 2.5rem auto 0;
 }

@@ -237,14 +237,6 @@
   padding-right: clamp(1rem, 2.5vw, 3rem);
 }
 
-.hotel-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
-  gap: clamp(1rem, 1.25vw, 1.35rem);
-  max-width: var(--width-l);
-  margin: 0 auto;
-}
-
 .hotel {
   padding: 0;
   display: flex;

@@ -409,7 +409,7 @@
     grid-template-columns: repeat(2, minmax(0, 800px));
     justify-content: center;
     gap: clamp(1.5rem, 3vw, 2.5rem);
-    max-width: calc(800px * 2 + clamp(1.5rem, 3vw, 2.5rem));
+    max-width: var(--width-l);
     margin: 2rem auto 0;
 }
 
@@ -840,7 +840,7 @@
 
     .dossiers-grid {
         grid-template-columns: 1fr;
-        max-width: 800px;
+        max-width: var(--width-xs);
         margin-left: auto;
         margin-right: auto;
     }
