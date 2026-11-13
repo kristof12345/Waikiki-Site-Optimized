@@ -57,7 +57,7 @@ def scene(kind):
     p = 'na-' + kind + '-'
     night = kind == 'night-lagoon'
     sky = ['#07182f', '#244966', '#786c83'] if night else (['#4c8a9d', '#b5d5cd', '#f5dbb4'] if kind == 'aerotropolis' else ['#6f9da4', '#e6c9ae', '#ffdfaa'])
-    o = ['<svg class="city-ill" viewBox="0 0 800 560" aria-hidden="true" focusable="false">', '<defs>']
+    o = ['<svg class="illustration" viewBox="0 0 800 560" aria-hidden="true" focusable="false">', '<defs>']
     for name, colors in [('sky', sky), ('water', ['#347e87', '#125362', '#072f43'] if not night else ['#16394e', '#08606a', '#071d36']), ('stone', ['#fff1d2', '#d5b585', '#8e7254']), ('glass', ['#c9ded7', '#659aa2', '#244a62'])]:
         o.append(f'<linearGradient id="{p}{name}" x2="0" y2="1">' + ''.join(f'<stop offset="{i/(len(colors)-1)}" stop-color="{c}"/>' for i,c in enumerate(colors)) + '</linearGradient>')
     o += [f'<radialGradient id="{p}haze"><stop stop-color="#ffdca2" stop-opacity=".65"/><stop offset="1" stop-color="#ffdca2" stop-opacity="0"/></radialGradient>', f'<radialGradient id="{p}glow"><stop stop-color="#70fff0" stop-opacity=".55"/><stop offset="1" stop-color="#23d5da" stop-opacity="0"/></radialGradient>', '</defs>', rect(0,0,800,560,f'url(#{p}sky)')]
