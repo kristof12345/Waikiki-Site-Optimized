@@ -302,17 +302,49 @@
 /* Sanctuaries Grid (Filtered) */
 .sanctuaries-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
     gap: var(--card-gap);
     margin-top: 2rem;
 }
 
 .sanctuary-item {
+    min-width: 0;
     border-radius: var(--radius-lg);
     padding: clamp(1.5rem, 2.5vw, 2rem);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.sanctuary-item .province-card-top {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sanctuary-item .province-card-stats {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.65rem;
+}
+
+.sanctuary-item .province-card-stats>div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.sanctuary-item .province-card-stats .province-stat-lbl {
+    text-align: right;
+}
+
+.sanctuary-item .province-stat-num {
+    white-space: normal;
+    overflow: visible;
+    overflow-wrap: anywhere;
+}
+
+.sanctuary-item p {
+    text-align: left;
 }
 
 .sanctuary-badge-prov {
