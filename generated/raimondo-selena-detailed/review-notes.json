@@ -1,7 +1,13 @@
 {
-  "needs_identity_correction": [
+  "corrected_paragraphs": [
+    3,
     34,
-    35
+    35,
+    48,
+    51,
+    63,
+    79
   ],
-  "reason": "Supporting female characters resemble Selena too closely; regenerate with explicit distinct cast references."
+  "needs_identity_correction": [],
+  "note": "Corrected alternatives are selected in manifest.json; original versions retained. Supporting cast identity was not exhaustively verified."
 }
