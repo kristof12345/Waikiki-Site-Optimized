@@ -431,7 +431,7 @@
 .feature-list {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 540px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr));
   gap: 1.1rem;
   max-width: var(--width-l);
   margin: 0 auto;
