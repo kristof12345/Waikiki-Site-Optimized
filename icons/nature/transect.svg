@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="nature-ill" viewBox="0 0 1600 600">
+<svg xmlns="http://www.w3.org/2000/svg" class="illustration" viewBox="0 0 1600 600">
 <defs>
 <filter id="nt-transect-mist" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>
 <filter id="nt-transect-soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
