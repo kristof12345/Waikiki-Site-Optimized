@@ -1,0 +1,22 @@
+{
+  "paragraph": 31,
+  "tool": "built-in image_gen",
+  "references": [
+    "references/chease-and-jessica-1.jpg"
+  ],
+  "reused": [],
+  "images": [
+    {
+      "variant": 1,
+      "file": "generated/chease-jessica-detailed/p031-1.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial photograph for a fictional royal-history website. Reference defines Chease (dark-haired man) and Jessica (blonde woman): preserve their exact facial structure, eyes, noses, smiles, skin tone and hair. Jessica appears slightly younger, naturally adult. Scene timeframe March 2009, Waikiki's tenth founding anniversary and Nova Aurelia's new developments. Realistic skin, elegant clothing, natural proportions and rich photographic detail. No readable text, flags, logos or watermark. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. Chease and Jessica inspect a large exquisite architectural scale model of Nova Aurelia's offshore World Islands with a city planner at a sunlit development exhibition. The model shows separate sand-and-greenery artificial islands arranged into recognizable continent shapes in a blue Caribbean lagoon, with small resort pavilions and marinas. Chease wears a navy business suit, Jessica a refined champagne tailored jacket. A candid three-quarter view keeps their faces clear while showing the model's distinctive layout.",
+      "status": "generated"
+    },
+    {
+      "variant": 2,
+      "file": "generated/chease-jessica-detailed/p031-2.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial photograph for a fictional royal-history website. Reference defines Chease (dark-haired man) and Jessica (blonde woman): preserve their exact facial structure, eyes, noses, smiles, skin tone and hair. Jessica appears slightly younger, naturally adult. Scene timeframe March 2009, Waikiki's tenth founding anniversary and Nova Aurelia's new developments. Realistic skin, elegant clothing, natural proportions and rich photographic detail. No readable text, flags, logos or watermark. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. Chease and Jessica enjoy the tenth-anniversary fireworks from an elegant waterfront reception terrace in Nova Aurelia. Chease wears a black tuxedo, Jessica an elegant emerald evening gown. The believable modern Caribbean skyline includes an exceptionally tall slender glass spire, Sky City, and a twisting glass tower, Infinity Tower. Colorful fireworks reflect in the calm bay, while warm practical terrace lighting softly illuminates their recognizable faces. Beautiful celebratory evening photography, realistic scale and atmosphere, low coastline.",
+      "status": "generated"
+    }
+  ]
+}

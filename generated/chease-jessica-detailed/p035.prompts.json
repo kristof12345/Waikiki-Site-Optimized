@@ -1,0 +1,22 @@
+{
+  "paragraph": 35,
+  "tool": "built-in image_gen",
+  "references": [
+    "references/chease-and-jessica-1.jpg"
+  ],
+  "reused": [],
+  "images": [
+    {
+      "variant": 1,
+      "file": "generated/chease-jessica-detailed/p035-1.png",
+      "prompt": "Use case: photorealistic-natural. High-resolution landscape documentary photography illustrating a fictional alternate-history biography. The reference defines Chease, the dark-haired man: preserve his exact facial structure, eyes, nose, smile, skin tone and hair. Only Chease from the couple is present in these scenes; Jessica is not on this visit in the paragraph. Scene timeframe spring 2012, a peaceful diplomatic visit to Pyongyang. Chease wears a refined navy business suit and burgundy tie. Neutral dignified expressions, realistic period styling, natural photographic light, no readable text, slogans, flags, leader portraits, logos or watermark. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. Chease arrives for his fictional diplomatic visit and exchanges a formal greeting with Kim Jong Un as he appeared in 2012, accompanied by a small number of civilian foreign-ministry officials. A restrained medium-wide press photograph at a formal Pyongyang arrival venue, both main faces clearly visible, no military hardware or propagandistic spectacle.",
+      "status": "generated"
+    },
+    {
+      "variant": 2,
+      "file": "generated/chease-jessica-detailed/p035-2.png",
+      "prompt": "Use case: photorealistic-natural. High-resolution landscape documentary photography illustrating a fictional alternate-history biography. The reference defines Chease, the dark-haired man: preserve his exact facial structure, eyes, nose, smile, skin tone and hair. Only Chease from the couple is present in these scenes; Jessica is not on this visit in the paragraph. Scene timeframe spring 2012, a peaceful diplomatic visit to Pyongyang. Chease wears a refined navy business suit and burgundy tie. Neutral dignified expressions, realistic period styling, natural photographic light, no readable text, slogans, flags, leader portraits, logos or watermark. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. At the end of the visit, Chease walks with civilian North Korean diplomatic officials through the courtyard of the Kumsusan Palace of the Sun for a formal farewell. Elegant symmetrical pale-stone architecture and carefully maintained gardens in spring daylight, a natural three-quarter documentary view with Chease's recognizable face clear, quiet diplomatic atmosphere.",
+      "status": "generated"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "paragraph": 33,
+  "tool": "built-in image_gen",
+  "references": [
+    "references/chease-and-jessica-1.jpg"
+  ],
+  "reused": [],
+  "images": [
+    {
+      "variant": 1,
+      "file": "generated/chease-jessica-detailed/p033-1.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape documentary photography for a fictional alternate-history biography. Reference defines exact facial identity: Chease is the dark-haired man and Jessica is the blonde woman. Preserve facial structure, eyes, noses, smiles, hair and skin tone; Jessica appears slightly younger, naturally adult. Scene timeframe 2010, the couple's journey to the WSA orbital station and planned Pacific splashdown. Both wear technically plausible white pressure suits with restrained blue accents, without text or insignia. Their helmets are off so their faces remain fully visible. Realistic engineering, natural light, lifelike skin and fabric, no logos, readable text or watermark. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. Before launch, Chease and Jessica stand with a small adult support crew in a clean astronaut-preparation facility near Nova Aurelia's space center. They hold their helmets and listen to a final briefing. Through a large window, a conventional crew-carrying multistage rocket stands vertically at a distant launch pad. A medium-wide candid photograph, calm purposeful expressions, believable 2010 equipment and bright morning light.",
+      "status": "generated"
+    },
+    {
+      "variant": 2,
+      "file": "generated/chease-jessica-detailed/p033-2.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape documentary photography for a fictional alternate-history biography. Reference defines exact facial identity: Chease is the dark-haired man and Jessica is the blonde woman. Preserve facial structure, eyes, noses, smiles, hair and skin tone; Jessica appears slightly younger, naturally adult. Scene timeframe 2010, the couple's journey to the WSA orbital station and planned Pacific splashdown. Both wear technically plausible white pressure suits with restrained blue accents, without text or insignia. Their helmets are off so their faces remain fully visible. Realistic engineering, natural light, lifelike skin and fabric, no logos, readable text or watermark. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. After their planned Pacific splashdown, Chease and Jessica stand safely aboard a WSA recovery ship beside the secured return capsule, with a few recovery crew nearby. They wear flotation vests over the same white-and-blue pressure suits, helmets removed, natural relieved smiles. Calm open Pacific water and ship equipment in the background, a distinct documentary composition with both recognizable faces clearly visible.",
+      "status": "generated"
+    }
+  ]
+}

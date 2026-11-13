@@ -1,0 +1,22 @@
+{
+  "paragraph": 37,
+  "tool": "built-in image_gen",
+  "references": [
+    "references/chease-and-jessica-1.jpg"
+  ],
+  "reused": [],
+  "images": [
+    {
+      "variant": 1,
+      "file": "generated/chease-jessica-detailed/p037-1.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial photography illustrating a fictional alternate-history biography. Reference defines exact facial identity: Chease is the dark-haired man and Jessica is the blonde woman. Preserve facial structure, eyes, noses, smiles, hair and skin tone; Jessica appears slightly younger, naturally adult. Scene timeframe 2014, international peacebuilding and the fictional formation of the United African Nations. Jessica wears a refined teal tailored suit, Chease a charcoal business suit. Dignified engaged expressions, realistic skin, credible diplomatic settings and natural professional event lighting. No readable text, flags, logos, slogans or watermark. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. Jessica speaks in her fictional role as a UN deputy secretary-general during a diplomatic session on African peace and humanitarian cooperation. Chease sits nearby as a national leader and collaborator, listening attentively. An iconic international assembly-hall setting in New York with green marble, warm wood and rows of adult delegates, a balanced documentary photograph showing both recognizable faces clearly.",
+      "status": "generated"
+    },
+    {
+      "variant": 2,
+      "file": "generated/chease-jessica-detailed/p037-2.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial photography illustrating a fictional alternate-history biography. Reference defines exact facial identity: Chease is the dark-haired man and Jessica is the blonde woman. Preserve facial structure, eyes, noses, smiles, hair and skin tone; Jessica appears slightly younger, naturally adult. Scene timeframe 2014, international peacebuilding and the fictional formation of the United African Nations. Jessica wears a refined teal tailored suit, Chease a charcoal business suit. Dignified engaged expressions, realistic skin, credible diplomatic settings and natural professional event lighting. No readable text, flags, logos, slogans or watermark. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. Chease and Jessica attend the charter conference in Addis Ababa establishing the fictional United African Nations. Chease signs a formal unmarked document while Jessica stands beside him and a diverse group of African civilian delegates observe. A refined contemporary Ethiopian conference hall with graceful modern African architectural details, respectful professional attire, warm natural daylight and a clear view of the couple's faces.",
+      "status": "generated"
+    }
+  ]
+}
