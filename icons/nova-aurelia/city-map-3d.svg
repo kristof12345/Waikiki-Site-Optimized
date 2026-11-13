@@ -282,3 +282,373 @@
     <path d="M-39 7C-65-88 33-171-18-284M-23 14C-49-85 49-177-6-290M-7 21C-33-82 65-183 6-296M34 23C-13-103 89-184 31-294M48 16C0-100 102-177 47-287" stroke="#eff0d9" stroke-width="1.2" opacity=".6"/>
     <path d="M-52 4Q1 44 62 13" stroke="#dfd8b6" stroke-width="7"/>
   </g>
+
+  <!-- Spaceport: paired runways, ribbed terminal, orbital hangars and hydrogen apron. -->
+  <g transform="translate(2420 765)">
+    <path d="m-245 45 167-232 421 171-165 235Z" fill="#b9bfac" stroke="#e4dabe" stroke-width="6"/>
+    <path d="m-195 27 119-167 32 13-120 168Z" fill="#677e7d" stroke="#d5d4b8" stroke-width="3"/>
+    <path d="m-155 44 116-166M-186 19l18 7m-14-13 18 7m-14-13 18 7m-14-13 18 7m79-125 18 7m-22-1 18 7m-22-1 18 7m-22-1 18 7" stroke="#f2ecd4" stroke-width="2"/>
+    <path d="m-163 24 100-139" stroke="#f8efd1" stroke-width="2" stroke-dasharray="10 12"/>
+    <path d="m-21 118 119-167 32 13L10 132Z" fill="#677e7d" stroke="#d5d4b8" stroke-width="3"/>
+    <path d="M-4 115 113-40" stroke="#f7efd5" stroke-width="2" stroke-dasharray="10 12"/>
+    <path d="m-128 57 80-112 136 56M38 139 155-23" stroke="#dfd7b7" stroke-width="4"/>
+    <!-- Terminal shell. -->
+    <path d="M-47 27V-20L76 31V77Z" fill="url(#glass-dark)"/><path d="M76 77V31L111 14V60Z" fill="#60858a"/>
+    <path d="M-47-20Q-41-65-5-48L111 0V14L76 31Z" fill="url(#roof)" stroke="#e6e7d0" stroke-width="2"/>
+    <path d="M-32-14Q-27-57 9-42M-15-7Q-10-50 26-35M2 0Q7-43 43-28M19 7Q24-36 60-21M36 14Q41-29 77-14M53 21Q58-22 94-7M70 28Q75-15 111 0" stroke="#f1eed7" stroke-width="2"/>
+    <path d="M-47 27V-20L76 31V77Z" fill="url(#curtain)"/>
+    <path d="m-32 34-24 11m52 0-24 11m52 0-24 11m52 0-24 11" stroke="#d4d7c4" stroke-width="6"/>
+    <!-- Aircraft silhouettes: wings, fuselage, tail, engines. -->
+    <g fill="#f2f1df" stroke="#78949a" stroke-width=".8">
+      <path d="m-68 48 8-19 6 3-4 23 31 1 5 6-38 3-12 25-6-2 5-26-16-5 4-4Z"/>
+      <path d="m-12 72 8-19 6 3-4 23 31 1 5 6-38 3-12 25-6-2 5-26-16-5 4-4Z"/>
+      <path d="m55 107 8-19 6 3-4 23 31 1 5 6-38 3-12 25-6-2 5-26-16-5 4-4Z"/>
+    </g>
+    <path d="m-61 35 4 2m52 23 4 2m63 32 4 2" stroke="#315967" stroke-width="3"/>
+    <!-- Orbital vehicle hangars. -->
+    <path d="M143 73V23Q168-22 207 9L235 33V96L188 116Z" fill="url(#roof)" stroke="#e0dfc6" stroke-width="2"/>
+    <path d="M188 116V63Q205 23 235 33V96Z" fill="#315b68"/>
+    <path d="M153 77V28Q175-12 217 18M164 82V35Q185-4 226 25M175 88V42Q197 5 235 33" stroke="#eaf0da" stroke-width="2"/>
+    <path d="m192 107 10-39 7-3 8 34 18 2-2 6-20 3-8 14-6-2 1-13Z" fill="#edeedb" stroke="#859f9b"/>
+    <path d="M-84 65V-9L-70-3V71Z" fill="url(#stone)"/><path d="M-70 71V-3L-57-9V65Z" fill="#7e9c94"/>
+    <path d="m-92-14 23-11 22 10-23 11Z" fill="#ccdbce"/><path d="M-92-14V-3L-70 7-47-4V-15L-70-4Z" fill="url(#glass-dark)" stroke="#d9e4cf"/>
+    <path d="M-70-25V-42" stroke="#e5ddbe" stroke-width="2"/><circle cx="-70" cy="-43" r="2" fill="#ffdc9c" class="beacon"/>
+  </g>
+
+  <!-- Ceremonial avenue: generous stone paving, parterres and colonnades. -->
+  <path d="m856 712 121-57 700 297-123 56Z" fill="#e8dcc0" stroke="#f4e9cf" stroke-width="6"/>
+  <path d="m856 712 121-57 700 297-123 56Z" fill="url(#paving)"/>
+  <path d="m899 706 35-16 700 297-35 16Z" fill="#7d9d7e"/>
+  <path d="m913 706 7-3 700 297-7 3Z" fill="#c8ccb0"/>
+  <g>
+    <use xlink:href="#palm" transform="translate(887 742)"/><use xlink:href="#palm" transform="translate(947 767)"/><use xlink:href="#palm" transform="translate(1007 793)"/>
+    <use xlink:href="#palm" transform="translate(1067 818)"/><use xlink:href="#palm" transform="translate(1127 844)"/><use xlink:href="#palm" transform="translate(1187 869)"/>
+    <use xlink:href="#palm" transform="translate(1247 895)"/><use xlink:href="#palm" transform="translate(1307 920)"/><use xlink:href="#palm" transform="translate(1367 946)"/>
+    <use xlink:href="#palm" transform="translate(1427 971)"/><use xlink:href="#palm" transform="translate(1487 997)"/><use xlink:href="#palm" transform="translate(1547 1022)"/>
+    <use xlink:href="#palm" transform="translate(1001 690)"/><use xlink:href="#palm" transform="translate(1061 715)"/><use xlink:href="#palm" transform="translate(1121 741)"/>
+    <use xlink:href="#palm" transform="translate(1181 766)"/><use xlink:href="#palm" transform="translate(1241 792)"/><use xlink:href="#palm" transform="translate(1301 817)"/>
+    <use xlink:href="#palm" transform="translate(1361 843)"/><use xlink:href="#palm" transform="translate(1421 868)"/><use xlink:href="#palm" transform="translate(1481 894)"/>
+    <use xlink:href="#palm" transform="translate(1541 919)"/><use xlink:href="#palm" transform="translate(1601 945)"/>
+  </g>
+  <use xlink:href="#fountain-basin" transform="translate(980 736) scale(.6)"/>
+  <use xlink:href="#fountain-basin" transform="translate(1170 816) scale(.6)"/>
+  <use xlink:href="#fountain-basin" transform="translate(1550 978) scale(.6)"/>
+  <path d="M891 731 1541 1007" stroke="#e8c87a" stroke-width="2"/>
+  <path d="M891 731 1541 1007" stroke="#fffbe0" stroke-width="5" class="train"/>
+
+  <!-- Royal Clock Tower and the colonial customs quarter. -->
+  <use xlink:href="#residential-block" transform="translate(520 869) scale(1.1)"/>
+  <use xlink:href="#residential-block" transform="translate(300 911) scale(.9)"/>
+  <g transform="translate(835 898)">
+    <path d="m-65 9 78 37 122-18-89-49Z" fill="#315d55" opacity=".19"/>
+    <path d="M-52 8V-32L8-5V35Z" fill="url(#stone)"/><path d="M8 35V-5L63-31V9Z" fill="url(#stone-side)"/>
+    <path d="m-58-34 57-26 68 28L8-5Z" fill="#d8ceab" stroke="#f5e6c0" stroke-width="3"/>
+    <path d="M-30 5V-166L7-150V21Z" fill="url(#stone)"/><path d="M7 21V-150L42-167V4Z" fill="url(#stone-side)"/>
+    <path d="M-30 5V-166L7-150V21ZM7 21V-150L42-167V4Z" fill="url(#limestone)"/>
+    <path d="m-35-164 42 18 41-19V-174L7-155-35-173Z" fill="#dcd0ad"/>
+    <path d="M-25-170V-210L7-196V-155Z" fill="#ecdbb5"/><path d="M7-155V-196L37-210V-169Z" fill="#a3a58c"/>
+    <path d="M-16-178V-195Q-9-207-2-188V-172ZM15-172V-190Q23-208 30-196V-179Z" fill="#436365"/>
+    <path d="M-31-212 5-228 43-212 7-195Z" fill="#d8ceab" stroke="#e8ddbc" stroke-width="2"/>
+    <path d="M-27-213Q-27-246 7-253Q40-244 40-213L7-197Z" fill="url(#copper)"/>
+    <path d="M7-253V-197M-14-238Q-3-220 7-197M27-238Q16-220 7-197" stroke="#acbb91" stroke-width="1.5"/>
+    <path d="M7-253V-270" stroke="#d6bd77" stroke-width="2"/><circle cx="7" cy="-270" r="3" fill="#f2d487"/>
+    <!-- Unnumbered gold clock faces. -->
+    <ellipse cx="-11" cy="-126" rx="13" ry="17" transform="rotate(-17 -11 -126)" fill="#f3e0a0" stroke="#9c824b" stroke-width="2"/>
+    <ellipse cx="24" cy="-126" rx="12" ry="17" transform="rotate(17 24 -126)" fill="#e9d799" stroke="#8e7c51" stroke-width="2"/>
+    <path d="M-11-126v-11m0 11 8 7M24-126v-11m0 11 7 3" stroke="#39575b" stroke-width="1.7"/>
+    <path d="M-12-140v3m1 22v3m-10-17 3 1m14 5 3 1M24-140v3m0 22v3m-9-12 3-1m13-5 3-1" stroke="#7c704b" stroke-width="1"/>
+    <path d="M-19-94v17l9 4v-17ZM-19-55v17l9 4v-17ZM17-73v-17l9-4v17ZM17-34v-17l9-4v17Z" fill="#527472"/>
+    <path d="M-17 9V-14Q-8-27 1-6V17Z" fill="#516763"/>
+    <path d="m-30-65 37 16 35-17m-72 42L7-8 35-17" stroke="#e5d8b5" stroke-width="3"/>
+  </g>
+
+  <!-- Portus Aurelius sun temple, columned perimeter and copper dome. -->
+  <g transform="translate(395 1010)">
+    <path d="m-133 5 153 69 177-71-155-65Z" fill="#305a54" opacity=".18"/>
+    <path d="m-144 0 143-65 165 70L19 72Z" fill="#cdc1a0" stroke="#eee1bf" stroke-width="6"/>
+    <path d="m-132-9 132-60 152 65L19 58Z" fill="#e9dbb8" stroke="#f8ebcb" stroke-width="3"/>
+    <path d="m-114-23 113-51 134 57L20 35Z" fill="#c6c8a9"/>
+    <g>
+      <use xlink:href="#column" transform="translate(-111 -20)"/><use xlink:href="#column" transform="translate(-90 -10)"/><use xlink:href="#column" transform="translate(-69 0)"/><use xlink:href="#column" transform="translate(-48 10)"/><use xlink:href="#column" transform="translate(-27 20)"/><use xlink:href="#column" transform="translate(-6 30)"/><use xlink:href="#column" transform="translate(15 40)"/>
+      <use xlink:href="#column" transform="translate(35 30)"/><use xlink:href="#column" transform="translate(55 21)"/><use xlink:href="#column" transform="translate(75 12)"/><use xlink:href="#column" transform="translate(95 3)"/><use xlink:href="#column" transform="translate(115 -6)"/><use xlink:href="#column" transform="translate(135 -15)"/>
+    </g>
+    <path d="M-122-68 14-8 144-66V-56L14 3-122-57Z" fill="#e4d4ae" stroke="#f2e3be"/>
+    <path d="m-122-68 121-57 145 59L14-8Z" fill="#ebddbc"/>
+    <path d="m-122-68 61-47 75 107Z" fill="#f8e9c7"/><path d="m-105-66 44-32L-7-24Z" fill="#c4bb9e"/>
+    <path d="M-57-71Q-58-135 10-150Q77-135 76-71L10-42Z" fill="url(#copper)" stroke="#c7c9a6" stroke-width="2"/>
+    <path d="M10-150V-42M-34-120Q-23-76 10-42M55-120Q43-76 10-42M-3-144Q-2-85 10-42M24-145Q22-85 10-42" stroke="#b3c3a0" stroke-width="1.4"/>
+    <ellipse cx="10" cy="-150" rx="7" ry="3" fill="url(#gold)"/><path d="M10-151V-162" stroke="#e8cc83" stroke-width="2"/>
+    <path d="m-102 6 122 55 129-57m-120 63 129-57m-117 63 129-57" stroke="#f7e8c7" stroke-width="2"/>
+  </g>
+
+  <!-- Sovereign Pyramid: four garden terraces, crystalline summit and broad state staircase. -->
+  <g transform="translate(1295 1018)">
+    <path d="m-258 5 257 125 352-101-284-145Z" fill="#2a5351" opacity=".21" filter="url(#soft-shadow)"/>
+    <path d="m-290-5 267-125 305 129L16 126Z" fill="#d6c7a6" stroke="#f3e4c3" stroke-width="6"/>
+    <path d="m-290-5 267-125 305 129L16 126Z" fill="url(#paving)"/>
+    <!-- Reflecting basins on the ceremonial platform. -->
+    <path d="m-259-1 50-23 223 94-50 24Z" fill="#5eafb0" stroke="#f0e1bb" stroke-width="4"/>
+    <path d="m73 69 169-80 27 12-169 80Z" fill="#5eafb0" stroke="#f0e1bb" stroke-width="4"/>
+    <path d="m-241 0 201 85M95 69 245-2" stroke="#c6ece0" stroke-width="1.5" class="water-shimmer"/>
+    <!-- Lower terrace. -->
+    <path d="M-221-31V-61L0 34V64Z" fill="url(#stone)"/><path d="M0 64V34L208-63V-33Z" fill="url(#stone-side)"/>
+    <path d="m-221-61 209-98 220 96L0 34Z" fill="#809a76" stroke="#dfd0a9" stroke-width="6"/>
+    <path d="M-221-31V-61L0 34V64ZM0 64V34L208-63V-33Z" fill="url(#limestone)"/>
+    <!-- Second terrace. -->
+    <path d="M-176-76V-106L0-30V0Z" fill="url(#stone)"/><path d="M0 0V-30L165-107V-77Z" fill="url(#stone-side)"/>
+    <path d="m-176-106 164-77 177 76L0-30Z" fill="#799972" stroke="#e9d9b3" stroke-width="5"/>
+    <path d="M-176-76V-106L0-30V0ZM0 0V-30L165-107V-77Z" fill="url(#limestone)"/>
+    <!-- Third terrace. -->
+    <path d="M-132-121V-151L0-94V-64Z" fill="url(#stone)"/><path d="M0-64V-94L122-152V-122Z" fill="url(#stone-side)"/>
+    <path d="m-132-151 121-57 133 56L0-94Z" fill="#77936b" stroke="#ead9ae" stroke-width="5"/>
+    <path d="M-132-121V-151L0-94V-64ZM0-64V-94L122-152V-122Z" fill="url(#limestone)"/>
+    <!-- Fourth terrace. -->
+    <path d="M-88-166V-196L0-158V-128Z" fill="url(#stone)"/><path d="M0-128V-158L79-197V-167Z" fill="url(#stone-side)"/>
+    <path d="m-88-196 77-36 90 35L0-158Z" fill="#79996e" stroke="#e7d7ad" stroke-width="4"/>
+    <!-- Photovoltaic pyramid, triangulated glass. -->
+    <path d="M-66-212 0-353 62-212 0-183Z" fill="url(#glass)" stroke="#e6d8ae" stroke-width="2"/>
+    <path d="M0-353 62-212 0-183Z" fill="url(#glass-dark)"/>
+    <path d="M0-353V-183M-52-241 0-218 49-241M-39-269 0-251 37-269M-26-297 0-285 24-297M-13-325 0-319 12-325M-66-212 0-251 62-212M-52-241 0-285 49-241M-39-269 0-319 37-269M-33-226 0-353 31-226" stroke="#c7d6bf" stroke-width="1" opacity=".8"/>
+    <path d="m0-353-15 33 15 7 14-7Z" fill="url(#gold)" stroke="#ffe9af"/>
+    <path d="M0-353V-379" stroke="#ffe5a4" stroke-width="2" class="beacon"/>
+    <circle cy="-354" r="7" fill="#ffdf8e" filter="url(#halo)" class="beacon"/>
+    <!-- Broad continuous central ceremonial stair, individual treads. -->
+    <path d="M-26-171 0-158 23-169 28 74 0 87-29 74Z" fill="#e1d0a7"/>
+    <path d="M-26-157 0-145 23-156M-26-145 0-133 23-144M-26-133 0-121 24-132M-27-121 0-109 24-120M-27-109 0-97 24-108M-27-97 0-85 24-96M-27-85 0-73 25-84M-27-73 0-61 25-72M-27-61 0-49 25-60M-28-49 0-37 25-48M-28-37 0-25 26-36M-28-25 0-13 26-24M-28-13 0-1 26-12M-28-1 0 11 26 0M-28 11 0 23 27 12M-29 23 0 35 27 24M-29 35 0 47 27 36M-29 47 0 59 28 48M-29 59 0 71 28 60M-29 71 0 83 28 72" stroke="#fff0c8" stroke-width="2"/>
+    <path d="M-26-171-31 76M23-169 30 76" stroke="#f5e4b8" stroke-width="3"/>
+    <!-- Hanging garden shrubs and cascading water. -->
+    <g fill="#42795e">
+      <path d="m-210-62 163 70-4 7-163-70Zm-166-44 125 53-4 7-125-53Zm44-45 83 35-4 7-83-35Zm45-45 40 17-4 7-40-17Z"/>
+      <path d="m45 9 151-71 4 7L49 16Zm0-62 107-50 4 7L49-46Zm0-63 65-31 4 7-65 31Zm0-63 25-12 4 7-25 12Z"/>
+    </g>
+    <path d="m-155-38 10 4v30l43-18v-28l42-18v-27M142-31l10-5v-30l-42-18v-28l-43-18v-27" stroke="#9bd8cd" stroke-width="5" opacity=".75"/>
+    <path d="m-155-38 10 4v30M142-31l10-5v-30" stroke="#e1f2d8" stroke-width="1.5" class="fountain"/>
+    <!-- Court colonnades. -->
+    <use xlink:href="#column" transform="translate(-262 -4) scale(.85)"/><use xlink:href="#column" transform="translate(-234 8) scale(.85)"/><use xlink:href="#column" transform="translate(-206 20) scale(.85)"/><use xlink:href="#column" transform="translate(-178 32) scale(.85)"/><use xlink:href="#column" transform="translate(-150 44) scale(.85)"/><use xlink:href="#column" transform="translate(-122 56) scale(.85)"/><use xlink:href="#column" transform="translate(-94 68) scale(.85)"/>
+    <path d="m-269-43 185 80v7l-185-80Z" fill="#e9d9b2" stroke="#f6e8c6"/>
+    <use xlink:href="#column" transform="translate(90 76) scale(.85)"/><use xlink:href="#column" transform="translate(118 63) scale(.85)"/><use xlink:href="#column" transform="translate(146 50) scale(.85)"/><use xlink:href="#column" transform="translate(174 37) scale(.85)"/><use xlink:href="#column" transform="translate(202 24) scale(.85)"/><use xlink:href="#column" transform="translate(230 11) scale(.85)"/><use xlink:href="#column" transform="translate(258 -2) scale(.85)"/>
+    <path d="m84 36 185-86v7L84 43Z" fill="#cfc5a3" stroke="#efe2be"/>
+  </g>
+
+  <!-- Seafront gardens and inhabited foreground blocks. -->
+  <use xlink:href="#midrise" transform="translate(2045 926) scale(1 .85)"/>
+  <use xlink:href="#midrise" transform="translate(2150 959) scale(.9 .7)"/>
+  <use xlink:href="#townhouse" transform="translate(1815 1011) scale(1.2)"/>
+  <use xlink:href="#townhouse" transform="translate(1888 985) scale(1.2)"/>
+  <use xlink:href="#townhouse" transform="translate(1980 1005) scale(1.1)"/>
+  <g>
+    <use xlink:href="#palm" transform="translate(160 989)"/><use xlink:href="#palm" transform="translate(218 980)"/>
+    <use xlink:href="#palm" transform="translate(508 1070)"/><use xlink:href="#palm" transform="translate(563 1052)"/><use xlink:href="#palm" transform="translate(618 1036)"/>
+    <use xlink:href="#palm" transform="translate(703 1053)"/><use xlink:href="#palm" transform="translate(758 1070)"/>
+    <use xlink:href="#palm" transform="translate(871 1067)"/><use xlink:href="#palm" transform="translate(927 1043)"/>
+    <use xlink:href="#tree" transform="translate(1655 1055)"/><use xlink:href="#tree" transform="translate(1705 1069)"/>
+    <use xlink:href="#palm" transform="translate(1786 1054)"/><use xlink:href="#palm" transform="translate(1840 1031)"/>
+    <use xlink:href="#palm" transform="translate(2045 1037)"/><use xlink:href="#palm" transform="translate(2100 1051)"/>
+    <use xlink:href="#palm" transform="translate(2247 994)"/><use xlink:href="#palm" transform="translate(2303 1006)"/><use xlink:href="#palm" transform="translate(2360 1021)"/>
+  </g>
+
+  <!-- Marina Aurelia: quays, yacht fingers, sailing basin and spiral lighthouse. -->
+  <path d="M445 1110 347 1165 614 1279 877 1158 831 1135 618 1233 402 1141" fill="#315957" opacity=".25" transform="translate(4 12)"/>
+  <path d="M445 1102 347 1157 614 1271 877 1150 831 1127 618 1225 402 1133Z" fill="#c3c1a5" stroke="#f5e5bf" stroke-width="5"/>
+  <path d="m363 1155 252 107 242-111" stroke="#e3d4b0" stroke-width="3"/>
+  <use xlink:href="#dock" transform="translate(469 1102)"/><use xlink:href="#dock" transform="translate(536 1128)"/><use xlink:href="#dock" transform="translate(603 1155)"/>
+  <use xlink:href="#dock" transform="translate(703 1178) scale(-.85 .85)"/><use xlink:href="#dock" transform="translate(771 1147) scale(-.85 .85)"/>
+  <use xlink:href="#moored-yacht" transform="translate(470 1181) scale(1.3)"/><use xlink:href="#moored-yacht" transform="translate(536 1209) scale(1.3)"/>
+  <g transform="translate(868 1153)">
+    <ellipse cy="6" rx="45" ry="21" fill="#25565b" opacity=".24"/>
+    <ellipse rx="39" ry="17" fill="#e8d9b3" stroke="#fff0cd" stroke-width="2"/>
+    <path d="M-16 0 16 0 10-106-10-106Z" fill="url(#stone)"/>
+    <path d="M-16 0Q34-14 1-38T1-77Q-21-90 10-104" stroke="#cad9cc" stroke-width="9"/>
+    <path d="M-16-3Q34-17 1-41T1-80Q-21-93 10-107" stroke="#fcf0cd" stroke-width="3"/>
+    <ellipse cy="-106" rx="20" ry="9" fill="#e1d3ae"/><path d="M-13-108V-130Q0-141 13-130V-108Z" fill="url(#glass-light)" stroke="#e5dec0" stroke-width="2"/>
+    <path d="M-19-131 0-148 19-131Z" fill="url(#copper)"/>
+    <circle cy="-120" r="5" fill="#fff1b4" class="beacon"/><circle cy="-120" r="12" fill="#ffe5a3" filter="url(#halo)" class="beacon"/>
+  </g>
+
+  <!-- Undersea vacuum maglev: visible through the shallows, with illuminated moving pods. -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1514 1110Q1500 1190 1645 1235T1978 1307M1510 1160Q1330 1180 1224 1303T980 1430M1645 1235Q1650 1430 1470 1510" stroke="#255d6d" stroke-width="19" opacity=".18"/>
+    <path d="M1514 1110Q1500 1190 1645 1235T1978 1307M1510 1160Q1330 1180 1224 1303T980 1430M1645 1235Q1650 1430 1470 1510" stroke="#b0e1d1" stroke-width="9" opacity=".4"/>
+    <path d="M1514 1110Q1500 1190 1645 1235T1978 1307M1510 1160Q1330 1180 1224 1303T980 1430M1645 1235Q1650 1430 1470 1510" stroke="#e0eee0" stroke-width="1" opacity=".7"/>
+    <path d="M1514 1110Q1500 1190 1645 1235T1978 1307" stroke="#fff2ba" stroke-width="5" class="train"/>
+    <path d="M1510 1160Q1330 1180 1224 1303T980 1430" stroke="#e5fff0" stroke-width="5" class="train train-alt"/>
+    <path d="M1645 1235Q1650 1430 1470 1510" stroke="#e5fff0" stroke-width="4" class="train"/>
+  </g>
+  <g transform="translate(1626 1230)">
+    <ellipse cy="7" rx="69" ry="28" fill="#2e7079" opacity=".3"/>
+    <path d="M-60 0Q-49-64 0-69Q49-64 60 0Q0 40-60 0Z" fill="url(#dome)" stroke="#d5e4cc" stroke-width="2"/>
+    <path d="M0-69V22M-60 0Q0 30 60 0M-47-28Q0-8 47-28M-29-52Q0-37 29-52M0-69Q-44-37-31 15M0-69Q44-37 31 15" stroke="#d0e8d6" stroke-width="1" opacity=".8"/>
+    <ellipse cy="2" rx="62" ry="23" stroke="#b7d8c5" stroke-width="4"/>
+  </g>
+
+  <!-- World Isles: hand-placed clusters suggest continental silhouettes. -->
+  <g>
+    <!-- North America and Greenland. -->
+    <use xlink:href="#islet" transform="translate(842 1260) scale(.8)"/><use xlink:href="#islet" transform="translate(883 1245) scale(.9)"/>
+    <use xlink:href="#islet" transform="translate(922 1230) scale(.65)"/><use xlink:href="#islet" transform="translate(926 1275) scale(.9)"/>
+    <use xlink:href="#islet" transform="translate(875 1287) scale(.8)"/><use xlink:href="#islet" transform="translate(918 1312) scale(.75)"/>
+    <use xlink:href="#islet" transform="translate(967 1303) scale(.8)"/><use xlink:href="#islet" transform="translate(962 1341) scale(.6)"/>
+    <use xlink:href="#islet" transform="translate(997 1360) scale(.45)"/><use xlink:href="#islet" transform="translate(1040 1228) scale(.8 1.2)"/>
+    <!-- South America. -->
+    <use xlink:href="#islet" transform="translate(1024 1392) scale(.7)"/><use xlink:href="#islet" transform="translate(1063 1402) scale(.8)"/>
+    <use xlink:href="#islet" transform="translate(1096 1428) scale(.7)"/><use xlink:href="#islet" transform="translate(1055 1444) scale(.7)"/>
+    <use xlink:href="#islet" transform="translate(1073 1473) scale(.7)"/><use xlink:href="#islet" transform="translate(1060 1503) scale(.55)"/><use xlink:href="#islet" transform="translate(1038 1530) scale(.4)"/>
+    <!-- Europe and Africa. -->
+    <use xlink:href="#islet" transform="translate(1160 1280) scale(.5)"/><use xlink:href="#islet" transform="translate(1197 1262) scale(.5)"/>
+    <use xlink:href="#islet" transform="translate(1231 1280) scale(.65)"/><use xlink:href="#islet" transform="translate(1190 1310) scale(.7)"/>
+    <use xlink:href="#islet" transform="translate(1244 1318) scale(.7)"/><use xlink:href="#islet" transform="translate(1160 1351) scale(.8)"/>
+    <use xlink:href="#islet" transform="translate(1208 1364) scale(.85)"/><use xlink:href="#islet" transform="translate(1258 1372) scale(.7)"/>
+    <use xlink:href="#islet" transform="translate(1216 1403) scale(.8)"/><use xlink:href="#islet" transform="translate(1255 1425) scale(.65)"/>
+    <use xlink:href="#islet" transform="translate(1238 1455) scale(.55)"/><use xlink:href="#islet" transform="translate(1306 1462) scale(.35 .8)"/>
+    <!-- Asia and Pacific. -->
+    <use xlink:href="#islet" transform="translate(1292 1251) scale(.65)"/><use xlink:href="#islet" transform="translate(1338 1243) scale(.75)"/>
+    <use xlink:href="#islet" transform="translate(1391 1258) scale(.75)"/><use xlink:href="#islet" transform="translate(1441 1278) scale(.7)"/>
+    <use xlink:href="#islet" transform="translate(1293 1294) scale(.75)"/><use xlink:href="#islet" transform="translate(1343 1282) scale(.7)"/>
+    <use xlink:href="#islet" transform="translate(1381 1310) scale(.8)"/><use xlink:href="#islet" transform="translate(1437 1323) scale(.7)"/>
+    <use xlink:href="#islet" transform="translate(1307 1340) scale(.55)"/><use xlink:href="#islet" transform="translate(1340 1370) scale(.45)"/>
+    <use xlink:href="#islet" transform="translate(1402 1360) scale(.6)"/><use xlink:href="#islet" transform="translate(1434 1395) scale(.4)"/>
+    <use xlink:href="#islet" transform="translate(1501 1328) scale(.35 .7)"/><use xlink:href="#islet" transform="translate(1489 1365) scale(.3 .6)"/>
+    <use xlink:href="#islet" transform="translate(1423 1432) scale(.45)"/><use xlink:href="#islet" transform="translate(1460 1446) scale(.4)"/>
+    <use xlink:href="#islet" transform="translate(1500 1455) scale(.4)"/><use xlink:href="#islet" transform="translate(1495 1502) scale(.8)"/>
+    <use xlink:href="#islet" transform="translate(1546 1515) scale(.8)"/><use xlink:href="#islet" transform="translate(1517 1541) scale(.7)"/>
+    <use xlink:href="#islet" transform="translate(1612 1550) scale(.3 .6)"/>
+  </g>
+
+  <!-- Palm Island: sculpted sand, planted median, private villas and an outer crescent. -->
+  <g transform="translate(2140 1340)">
+    <ellipse cy="38" rx="437" ry="236" fill="url(#shoal)"/>
+    <path d="M-330-42C-386 30-321 150-119 200C65 249 312 180 361 69C393-4 307-101 183-130" stroke="#215e6b" stroke-width="42" opacity=".2" transform="translate(5 13)"/>
+    <path d="M-330-42C-386 30-321 150-119 200C65 249 312 180 361 69C393-4 307-101 183-130" stroke="url(#sand)" stroke-width="31" stroke-linecap="round"/>
+    <path d="M-330-42C-386 30-321 150-119 200C65 249 312 180 361 69C393-4 307-101 183-130" stroke="#8ca680" stroke-width="15" stroke-linecap="round"/>
+    <path d="M-330-42C-386 30-321 150-119 200C65 249 312 180 361 69C393-4 307-101 183-130" stroke="#e0d8b9" stroke-width="4"/>
+    <path d="M-355-48C-419 42-335 172-123 224C71 275 334 200 386 78C427-17 329-123 189-155" stroke="#c7e8d2" stroke-width="2" opacity=".6" class="sea-flow"/>
+    <!-- Curved fronds have broad sandy margins and planted centers. -->
+    <g stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-133 126Q-198 101-264 35M-97 107Q-197 65-279-12M-61 88Q-161 26-261-50M-25 69Q-105-12-220-83M11 50Q-37-29-166-104M47 31Q20-49-104-116M83 12Q84-62-38-114M119-7Q142-74 29-104" stroke="#245e66" stroke-width="25" opacity=".22" transform="translate(3 10)"/>
+      <path d="M-133 126Q-198 101-264 35M-97 107Q-197 65-279-12M-61 88Q-161 26-261-50M-25 69Q-105-12-220-83M11 50Q-37-29-166-104M47 31Q20-49-104-116M83 12Q84-62-38-114M119-7Q142-74 29-104" stroke="url(#sand)" stroke-width="23"/>
+      <path d="M-133 126Q-198 101-264 35M-97 107Q-197 65-279-12M-61 88Q-161 26-261-50M-25 69Q-105-12-220-83M11 50Q-37-29-166-104M47 31Q20-49-104-116M83 12Q84-62-38-114M119-7Q142-74 29-104" stroke="#729c79" stroke-width="11"/>
+      <path d="M-133 126Q-198 101-264 35M-97 107Q-197 65-279-12M-61 88Q-161 26-261-50M-25 69Q-105-12-220-83M11 50Q-37-29-166-104M47 31Q20-49-104-116M83 12Q84-62-38-114M119-7Q142-74 29-104" stroke="#c9c9a9" stroke-width="2.5"/>
+      <path d="M-133 126Q-55 155 30 146M-97 107Q25 151 104 124M-61 88Q82 132 167 91M-25 69Q129 111 215 52M11 50Q180 83 249 11M47 31Q206 51 264-32M83 12Q228 15 257-70M119-7Q222-21 222-100" stroke="#245e66" stroke-width="25" opacity=".22" transform="translate(3 10)"/>
+      <path d="M-133 126Q-55 155 30 146M-97 107Q25 151 104 124M-61 88Q82 132 167 91M-25 69Q129 111 215 52M11 50Q180 83 249 11M47 31Q206 51 264-32M83 12Q228 15 257-70M119-7Q222-21 222-100" stroke="url(#sand)" stroke-width="23"/>
+      <path d="M-133 126Q-55 155 30 146M-97 107Q25 151 104 124M-61 88Q82 132 167 91M-25 69Q129 111 215 52M11 50Q180 83 249 11M47 31Q206 51 264-32M83 12Q228 15 257-70M119-7Q222-21 222-100" stroke="#729c79" stroke-width="11"/>
+      <path d="M-133 126Q-55 155 30 146M-97 107Q25 151 104 124M-61 88Q82 132 167 91M-25 69Q129 111 215 52M11 50Q180 83 249 11M47 31Q206 51 264-32M83 12Q228 15 257-70M119-7Q222-21 222-100" stroke="#c9c9a9" stroke-width="2.5"/>
+      <!-- Central trunk and axial boulevard. -->
+      <path d="M-192 162 167-36" stroke="#dac9a2" stroke-width="44"/>
+      <path d="M-192 162 167-36" stroke="#e9dfc0" stroke-width="37"/>
+      <path d="M-192 162 167-36" stroke="#8ba184" stroke-width="24"/>
+      <path d="M-192 162 167-36" stroke="#d7d2b2" stroke-width="10"/>
+      <path d="M-192 162 167-36" stroke="#eff0d4" stroke-width="1" stroke-dasharray="5 6"/>
+    </g>
+    <!-- Individually positioned residences follow each curved shoreline. -->
+    <g>
+      <use xlink:href="#villa" transform="translate(-42 -112) scale(.44)"/><use xlink:href="#villa" transform="translate(-7 -94) scale(.44)"/><use xlink:href="#villa" transform="translate(30 -69) scale(.44)"/>
+      <use xlink:href="#villa" transform="translate(-109 -116) scale(.44)"/><use xlink:href="#villa" transform="translate(-70 -94) scale(.44)"/><use xlink:href="#villa" transform="translate(-31 -65) scale(.44)"/>
+      <use xlink:href="#villa" transform="translate(-169 -104) scale(.44)"/><use xlink:href="#villa" transform="translate(-130 -79) scale(.44)"/><use xlink:href="#villa" transform="translate(-90 -52) scale(.44)"/><use xlink:href="#villa" transform="translate(-49 -21) scale(.44)"/>
+      <use xlink:href="#villa" transform="translate(-223 -83) scale(.44)"/><use xlink:href="#villa" transform="translate(-182 -57) scale(.44)"/><use xlink:href="#villa" transform="translate(-142 -28) scale(.44)"/><use xlink:href="#villa" transform="translate(-101 3) scale(.44)"/>
+      <use xlink:href="#villa" transform="translate(-264 -50) scale(.44)"/><use xlink:href="#villa" transform="translate(-224 -20) scale(.44)"/><use xlink:href="#villa" transform="translate(-185 7) scale(.44)"/><use xlink:href="#villa" transform="translate(-146 34) scale(.44)"/>
+      <use xlink:href="#villa" transform="translate(-282 -12) scale(.44)"/><use xlink:href="#villa" transform="translate(-245 17) scale(.44)"/><use xlink:href="#villa" transform="translate(-204 48) scale(.44)"/><use xlink:href="#villa" transform="translate(-164 73) scale(.44)"/>
+      <use xlink:href="#villa" transform="translate(-266 35) scale(.44)"/><use xlink:href="#villa" transform="translate(-230 65) scale(.44)"/><use xlink:href="#villa" transform="translate(-192 94) scale(.44)"/>
+      <use xlink:href="#villa" transform="translate(227 -94) scale(.44)"/><use xlink:href="#villa" transform="translate(211 -60) scale(.44)"/><use xlink:href="#villa" transform="translate(180 -34) scale(.44)"/>
+      <use xlink:href="#villa" transform="translate(259 -65) scale(.44)"/><use xlink:href="#villa" transform="translate(236 -30) scale(.44)"/><use xlink:href="#villa" transform="translate(202 -7) scale(.44)"/>
+      <use xlink:href="#villa" transform="translate(265 -26) scale(.44)"/><use xlink:href="#villa" transform="translate(239 7) scale(.44)"/><use xlink:href="#villa" transform="translate(205 29) scale(.44)"/><use xlink:href="#villa" transform="translate(162 37) scale(.44)"/>
+      <use xlink:href="#villa" transform="translate(249 17) scale(.44)"/><use xlink:href="#villa" transform="translate(220 45) scale(.44)"/><use xlink:href="#villa" transform="translate(180 64) scale(.44)"/><use xlink:href="#villa" transform="translate(136 67) scale(.44)"/>
+      <use xlink:href="#villa" transform="translate(214 58) scale(.44)"/><use xlink:href="#villa" transform="translate(174 82) scale(.44)"/><use xlink:href="#villa" transform="translate(129 90) scale(.44)"/><use xlink:href="#villa" transform="translate(83 90) scale(.44)"/>
+      <use xlink:href="#villa" transform="translate(166 96) scale(.44)"/><use xlink:href="#villa" transform="translate(125 114) scale(.44)"/><use xlink:href="#villa" transform="translate(81 117) scale(.44)"/><use xlink:href="#villa" transform="translate(38 110) scale(.44)"/>
+      <use xlink:href="#villa" transform="translate(101 129) scale(.44)"/><use xlink:href="#villa" transform="translate(58 138) scale(.44)"/><use xlink:href="#villa" transform="translate(15 136) scale(.44)"/>
+      <use xlink:href="#villa" transform="translate(26 151) scale(.44)"/><use xlink:href="#villa" transform="translate(-17 151) scale(.44)"/><use xlink:href="#villa" transform="translate(-60 144) scale(.44)"/>
+    </g>
+    <g>
+      <use xlink:href="#palm" transform="translate(-152 133) scale(.55)"/><use xlink:href="#palm" transform="translate(-110 110) scale(.55)"/>
+      <use xlink:href="#palm" transform="translate(-68 87) scale(.55)"/><use xlink:href="#palm" transform="translate(-26 64) scale(.55)"/>
+      <use xlink:href="#palm" transform="translate(16 41) scale(.55)"/><use xlink:href="#palm" transform="translate(58 18) scale(.55)"/><use xlink:href="#palm" transform="translate(100 -5) scale(.55)"/>
+      <use xlink:href="#palm" transform="translate(-325 16) scale(.7)"/><use xlink:href="#palm" transform="translate(-301 84) scale(.7)"/><use xlink:href="#palm" transform="translate(-250 138) scale(.7)"/>
+      <use xlink:href="#palm" transform="translate(-78 205) scale(.7)"/><use xlink:href="#palm" transform="translate(10 208) scale(.7)"/><use xlink:href="#palm" transform="translate(100 192) scale(.7)"/>
+      <use xlink:href="#palm" transform="translate(184 161) scale(.7)"/><use xlink:href="#palm" transform="translate(264 118) scale(.7)"/><use xlink:href="#palm" transform="translate(323 61) scale(.7)"/>
+    </g>
+    <!-- Hotel Khalifa at the crown: paired terraced wings, central arch and copper cupolas. -->
+    <g transform="translate(156 -32)">
+      <path d="m-73 12 104 46 95-40-102-44Z" fill="#9fae91" stroke="#e9d9b6" stroke-width="5"/>
+      <path d="M-64 7V-90L-10-65V32Z" fill="url(#stone)"/><path d="M-10 32V-65L13-77V20Z" fill="#9fa891"/>
+      <path d="M41 28V-69L93-45V52Z" fill="url(#stone)"/><path d="M93 52V-45L115-57V41Z" fill="#9fa891"/>
+      <path d="M-10-66 41-44V-13Q17-59-10-37Z" fill="#e0cba2"/>
+      <path d="m-10-66 22-11 51 22-22 11Z" fill="#f3dfb8"/>
+      <path d="m-70-92 25-13 64 29-27 13Z" fill="#d6c3a0" stroke="#f2e0b9" stroke-width="2"/>
+      <path d="m35-71 25-13 62 28-27 13Z" fill="#d6c3a0" stroke="#f2e0b9" stroke-width="2"/>
+      <path d="M-52-97Q-54-136-27-142Q0-129 0-73Z" fill="url(#copper)"/><path d="M53-76Q51-115 78-121Q105-108 105-52Z" fill="url(#copper)"/>
+      <path d="M-27-142V-154M78-121V-133" stroke="#dbc17c" stroke-width="2"/>
+      <path d="M-56-77v11l8 4v-11Zm17 8v11l8 4v-11Zm17 8v11l7 3v-11ZM-56-53v11l8 4v-11Zm17 8v11l8 4v-11Zm17 8v11l7 3v-11ZM-56-29v11l8 4v-11Zm17 8v11l8 4v-11Zm17 8v11l7 3v-11ZM49-56v11l8 4v-11Zm17 8v11l8 4v-11Zm17 8v11l7 3v-11ZM49-32v11l8 4v-11Zm17 8v11l8 4v-11Zm17 8v11l7 3v-11ZM49-8V3l8 4V-4Zm17 8v11l8 4V4Zm17 8v11l7 3V11Z" fill="#4a7277"/>
+      <path d="m-64-58 54 25m-54-1 54 25m-54-1 54 25m51-54 52 24m-52 0 52 24m-52 0 52 24" stroke="#f2e4c4" stroke-width="2"/>
+      <path d="m-5 28 19-9 30 13-19 9Z" fill="#6ab4b5" stroke="#f1dfb8" stroke-width="3"/>
+    </g>
+  </g>
+
+  <!-- Chameleon Atolls: floating gardens, low-rise residences and transparent marine observatories. -->
+  <g transform="translate(406 1395)">
+    <ellipse cy="15" rx="160" ry="78" fill="url(#shoal)"/>
+    <path d="M-130 0C-130-80 130-80 130 0S-130 80-130 0ZM-85 0C-85 42 85 42 85 0S-85-42-85 0Z" fill="#4d7e75" fill-rule="evenodd" transform="translate(0 9)"/>
+    <path d="M-130 0C-130-80 130-80 130 0S-130 80-130 0ZM-85 0C-85 42 85 42 85 0S-85-42-85 0Z" fill="#b8c3a0" stroke="#e9ddbb" stroke-width="3" fill-rule="evenodd"/>
+    <ellipse rx="108" ry="46" stroke="#739e7d" stroke-width="12"/>
+    <ellipse rx="108" ry="46" stroke="#e1d4ac" stroke-width="2"/>
+    <use xlink:href="#villa" transform="translate(-42 -46) scale(.8)"/><use xlink:href="#villa" transform="translate(34 -39) scale(.8)"/>
+    <use xlink:href="#villa" transform="translate(87 -9) scale(.8)"/><use xlink:href="#villa" transform="translate(59 30) scale(.8)"/>
+    <use xlink:href="#villa" transform="translate(-25 43) scale(.8)"/><use xlink:href="#villa" transform="translate(-99 17) scale(.8)"/>
+    <use xlink:href="#palm" transform="translate(-89 -24) scale(.65)"/><use xlink:href="#palm" transform="translate(22 48) scale(.65)"/>
+    <path d="M-50 0Q-40-48 0-52Q40-48 50 0Q0 29-50 0Z" fill="url(#dome)" stroke="#c7e3d3"/>
+    <path d="M0-52V17M0-52Q-35-22-25 11M0-52Q35-22 25 11M-39-21Q0-7 39-21" stroke="#d4ead8"/>
+  </g>
+  <g transform="translate(650 1480)">
+    <ellipse cy="14" rx="145" ry="70" fill="url(#shoal)"/>
+    <path d="M-111 0C-111-65 111-65 111 0S-111 65-111 0ZM-72 0C-72 37 72 37 72 0S-72-37-72 0Z" fill="#527d73" fill-rule="evenodd" transform="translate(0 8)"/>
+    <path d="M-111 0C-111-65 111-65 111 0S-111 65-111 0ZM-72 0C-72 37 72 37 72 0S-72-37-72 0Z" fill="#afbd9b" stroke="#e5dab9" stroke-width="3" fill-rule="evenodd"/>
+    <ellipse rx="92" ry="38" stroke="#e3d9b8" stroke-width="2"/>
+    <use xlink:href="#villa" transform="translate(-37 -38) scale(.7)"/><use xlink:href="#villa" transform="translate(32 -29) scale(.7)"/>
+    <use xlink:href="#villa" transform="translate(77 -1) scale(.7)"/><use xlink:href="#villa" transform="translate(30 32) scale(.7)"/><use xlink:href="#villa" transform="translate(-55 30) scale(.7)"/>
+    <use xlink:href="#palm" transform="translate(-90 -9) scale(.65)"/><use xlink:href="#palm" transform="translate(-8 38) scale(.65)"/>
+    <path d="M-46 0Q-30-16 0-11T46 0M-36 9Q0-2 36 9" stroke="#afe0cd" stroke-width="1.5" class="water-shimmer"/>
+  </g>
+  <g transform="translate(330 1580)">
+    <ellipse cy="9" rx="117" ry="55" fill="url(#shoal)"/>
+    <path d="M-91 0C-91-56 91-56 91 0S-91 56-91 0ZM-56 0C-56 26 56 26 56 0S-56-26-56 0Z" fill="#a4b797" stroke="#e6dcb8" stroke-width="3" fill-rule="evenodd"/>
+    <use xlink:href="#villa" transform="translate(-36 -31) scale(.65)"/><use xlink:href="#villa" transform="translate(38 -19) scale(.65)"/>
+    <use xlink:href="#villa" transform="translate(38 21) scale(.65)"/><use xlink:href="#villa" transform="translate(-46 26) scale(.65)"/>
+    <use xlink:href="#palm" transform="translate(-74 -1) scale(.55)"/>
+  </g>
+  <path d="M510 1432 554 1450M354 1451 336 1537" stroke="#cbcfad" stroke-width="5"/>
+  <path d="M510 1432 554 1450M354 1451 336 1537" stroke="#f4e7c3" stroke-width="1"/>
+
+  <!-- Bio-calcified reef barrier with navigation gaps and low tidal filtration structures. -->
+  <path d="M70 1265Q45 1508 195 1619M241 1640Q480 1710 793 1669M845 1665Q1110 1640 1330 1673M1380 1678Q1770 1740 2010 1691M2057 1683Q2440 1619 2638 1430M2670 1390Q2760 1265 2720 1110" stroke="#5aa698" stroke-width="37" opacity=".24"/>
+  <path d="M70 1265Q45 1508 195 1619M241 1640Q480 1710 793 1669M845 1665Q1110 1640 1330 1673M1380 1678Q1770 1740 2010 1691M2057 1683Q2440 1619 2638 1430M2670 1390Q2760 1265 2720 1110" stroke="#89b5a1" stroke-width="12" stroke-linecap="round"/>
+  <path d="M70 1265Q45 1508 195 1619M241 1640Q480 1710 793 1669M845 1665Q1110 1640 1330 1673M1380 1678Q1770 1740 2010 1691M2057 1683Q2440 1619 2638 1430M2670 1390Q2760 1265 2720 1110" stroke="#dbddbb" stroke-width="3" stroke-dasharray="7 5 11 4"/>
+  <path d="M42 1260Q10 1510 175 1641M230 1660Q480 1738 800 1694M1390 1700Q1770 1765 2020 1717M2070 1707Q2470 1645 2660 1445M2690 1400Q2790 1260 2743 1100" stroke="#d5e9cf" stroke-width="2" opacity=".6" class="sea-flow"/>
+  <g fill="#f0dfb6" stroke="#b6c7ad" stroke-width="2">
+    <path d="m187 1618 9-5 12 6-9 5Z"/><path d="m235 1638 9-5 12 6-9 5Z"/>
+    <path d="m786 1669 9-5 12 6-9 5Z"/><path d="m838 1666 9-5 12 6-9 5Z"/>
+    <path d="m2004 1691 9-5 12 6-9 5Z"/><path d="m2050 1684 9-5 12 6-9 5Z"/>
+    <path d="m2631 1430 9-5 12 6-9 5Z"/><path d="m2663 1390 9-5 12 6-9 5Z"/>
+  </g>
+  <g stroke="#d7dec0" stroke-width="2">
+    <path d="M197 1619V1607M245 1639V1627M796 1670V1658M848 1667V1655M2014 1692V1680M2060 1685V1673M2641 1431V1419M2673 1391V1379"/>
+  </g>
+  <g class="beacon">
+    <g fill="#b7f1d3"><circle cx="197" cy="1607" r="2.5"/><circle cx="796" cy="1658" r="2.5"/><circle cx="2014" cy="1680" r="2.5"/><circle cx="2641" cy="1419" r="2.5"/></g>
+    <g fill="#f4c4a0"><circle cx="245" cy="1627" r="2.5"/><circle cx="848" cy="1655" r="2.5"/><circle cx="2060" cy="1673" r="2.5"/><circle cx="2673" cy="1379" r="2.5"/></g>
+  </g>
+
+  <!-- Slow harbor traffic; transform animation is internal and works without JavaScript. -->
+  <g class="yacht-east"><use xlink:href="#yacht" transform="translate(703 1335) scale(.85)"/></g>
+  <g class="yacht-west"><use xlink:href="#yacht" transform="translate(1800 1560) scale(-1 1)"/></g>
+  <use xlink:href="#yacht" transform="translate(2525 1170) scale(.7)"/>
+  <use xlink:href="#yacht" transform="translate(910 1590) scale(.65)"/>
+  <use xlink:href="#yacht" transform="translate(185 1183) scale(-.8 .8)"/>
+  <!-- Hydrogen cruise dirigible; subtle drift over the outer harbor. -->
+  <g class="airship">
+    <g transform="translate(2520 362) rotate(14)">
+      <path d="M-108 0Q-75-42 10-35Q87-30 119 0Q88 30 10 35Q-75 42-108 0Z" fill="url(#roof)" stroke="#e0e6d4" stroke-width="1.2"/>
+      <path d="M-108 0Q-30-16 119 0M-108 0Q-30 16 119 0M-85-17Q-18-37 85-15M-85 17Q-18 37 85 15" stroke="#9bb8b8" stroke-width="1"/>
+      <path d="M-75-22-100-44-100-5M-77 22-101 43-100 6" fill="#d4e0d4" stroke="#8aa9ad"/>
+      <path d="M-12 34 27 32 18 45-9 45Z" fill="#477080" stroke="#c8d9cb"/>
+      <path d="m-5 36 20-1-2 5H-5Z" fill="#a2c6c8"/>
+    </g>
+  </g>
+</svg>
