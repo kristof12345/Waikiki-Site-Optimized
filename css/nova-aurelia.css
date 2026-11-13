@@ -56,17 +56,6 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    .city-anim-beacon {
-        animation: beaconPulse 2.8s ease-in-out infinite;
-    }
-
-    .city-anim-cloud {
-        animation: cloudDrift 18s ease-in-out infinite;
-    }
-
-    .city-anim-biolum {
-        animation: biolumPulse 3.5s ease-in-out infinite;
-    }
 
     .illustration .flow {
         animation: cityFlowDash 2.6s linear infinite;
@@ -78,45 +67,6 @@
 }
 
 /* Animations */
-@keyframes beaconPulse {
-
-    0%,
-    100% {
-        opacity: 0.35;
-    }
-
-    50% {
-        opacity: 1;
-    }
-}
-
-@keyframes cloudDrift {
-    0% {
-        transform: translateX(0);
-    }
-
-    50% {
-        transform: translateX(12px);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes biolumPulse {
-
-    0%,
-    100% {
-        opacity: 0.55;
-        filter: drop-shadow(0 0 4px #00ffff);
-    }
-
-    50% {
-        opacity: 0.95;
-        filter: drop-shadow(0 0 10px #00ffff);
-    }
-}
 
 @keyframes cityFlowDash {
     to {

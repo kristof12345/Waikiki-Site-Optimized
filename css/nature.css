@@ -5,14 +5,6 @@
 }
 
 /* Interactive SVG Hotspots */
-.nat-realm-zone {
-    cursor: pointer;
-    transition: opacity 0.3s var(--ease-out), filter 0.3s var(--ease-out);
-}
-
-.nat-realm-zone:hover {
-    filter: drop-shadow(0 0 10px rgba(245, 196, 110, 0.5));
-}
 
 /* Interactive Province Selector Tabs */
 .province-filter-nav {
@@ -293,12 +285,6 @@
 }
 
 /* Sovereign Green Charter Banner and Cards */
-.charter-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
-    gap: var(--card-gap);
-    margin: 2rem 0 3rem;
-}
 
 .charter-rule-card {
     border-radius: var(--radius-lg);
@@ -307,33 +293,6 @@
 
 .charter-rule-card::after {
     background: linear-gradient(90deg, #2e7d47, var(--amazonia-light) 45%, var(--accent));
-}
-
-.charter-index-num {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, rgba(78, 139, 90, 0.15), rgba(78, 139, 90, 0.05));
-    border: 1px solid rgba(78, 139, 90, 0.25);
-    color: var(--amazonia);
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 12px rgba(78, 139, 90, 0.08);
-    transition:
-        transform 0.8s var(--ease-spring),
-        background-color 0.4s,
-        border-color 0.4s,
-        box-shadow 0.4s;
-}
-
-.charter-rule-card:hover .charter-index-num {
-    transform: rotate(-8deg) scale(1.08);
-    box-shadow: 0 6px 16px rgba(78, 139, 90, 0.2);
 }
 
 .charter-rule-card h3 {
@@ -350,8 +309,7 @@
     margin: 0;
 }
 
-html.no-reveal .sanctuary-item:hover .sanctuary-art .illustration,
-html.no-reveal .charter-rule-card:hover .charter-index-num {
+html.no-reveal .sanctuary-item:hover .sanctuary-art .illustration {
     transform: none !important;
 }
 
@@ -430,18 +388,6 @@ html.no-reveal .charter-rule-card:hover .charter-index-num {
     color: var(--accent-light);
 }
 
-.body-dark .charter-index-num {
-    background: linear-gradient(135deg, rgba(78, 139, 90, 0.3), rgba(78, 139, 90, 0.1));
-    border-color: rgba(136, 212, 158, 0.35);
-    color: var(--amazonia-light);
-    box-shadow: 0 4px 14px var(--black-alpha-40);
-}
-
-.body-dark .charter-rule-card:hover .charter-index-num {
-    border-color: var(--amazonia-light);
-    box-shadow: 0 6px 18px var(--black-alpha-50);
-}
-
 .body-dark .charter-rule-card p {
     color: var(--text-secondary);
 }
@@ -462,8 +408,7 @@ html.no-reveal .charter-rule-card:hover .charter-index-num {
 
 @media (prefers-reduced-motion: reduce) {
 
-    .sanctuary-item:hover .sanctuary-art .illustration,
-    .charter-rule-card:hover .charter-index-num {
+    .sanctuary-item:hover .sanctuary-art .illustration {
         transform: none !important;
     }
 }
