@@ -115,7 +115,7 @@
 .feature-list {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 680px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 620px), 1fr));
   gap: 1.1rem;
   max-width: var(--width-l);
   margin: 0 auto;
@@ -350,7 +350,7 @@
 /* Island Specs Banner */
 .island-specs-banner {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.1rem;
   margin-bottom: 1.8rem;
 }
