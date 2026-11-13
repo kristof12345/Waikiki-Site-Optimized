@@ -263,7 +263,8 @@
         "../generated/chease-jessica-detailed/p015-2.png"
       ],
       "target_images": 2,
-      "status": "complete"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p015.prompts.json"
     },
     {
       "paragraph": 16,
@@ -271,10 +272,17 @@
       "text": "Az eseményen számos európai uralkodóház képviselői is jelen voltak, többek között a brit, a belga és a svéd királyi család küldöttei, ami nemzetközi szinten is elismerte Waikiki új politikai és társadalmi berendezkedését. A koronázás mérföldkőnek bizonyult az ország történetében, egyszerre jelentette az addigi gazdasági sikerek megkoronázását, valamint egy új korszak kezdetét, amelyben Waikiki a monarchikus hagyományokat a modern államépítéssel ötvözte. Habár a királyi tisztség nem jár közvetlen politikai hatalommal, mégis hatalmas jelentőséggel bír, hogy Chease Young Waikiki királya lett, hiszen ezzel az állampolgárok döntő többsége támogatta abban, hogy az ország élén maradjon. Az öröklési rendet meghatározó törvény szerint a királyi trónt az elsőszülött fiú gyermek, azaz Raimondo fogja örökölni, aki ennek tiszteletére a koronahercegi címet viseli. A trónörökösök sorában őt követi Chease két lánya, Angelina utána pedig Jennifer. A ceremónia utáni első ülésen a parlament úgy döntött, hogy a koronázás napját, augusztus 4-ét nemzeti ünneppé nyilvánítják.",
       "sha256": "6a73fc7bbc6aec96b29622da7ef850045b4c73c41548489a18a256f9a4c81998",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p016-1.png",
+        "../generated/chease-jessica-detailed/p016-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p016-1.png",
+        "../generated/chease-jessica-detailed/p016-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p016.prompts.json"
     },
     {
       "paragraph": 17,
@@ -282,10 +290,17 @@
       "text": "Chease Young vezetése alatt Waikiki rendkívül gyors ütemben fejlődött és rövid időn belül a nemzetközi közösség egyik meghatározó szereplőjévé vált. Az általa bevezetett kedvező és átlátható adórendszer következtében számos multinacionális vállalat helyezte át székhelyét az országba, ezzel erősítve a gazdasági aktivitást és a befektetési hajlandóságot. Az ország stratégiai jelentőségét tovább növelte a Kubai-öböl térségében feltárt, hatalmas mennyiségű kőolaj, amely Waikikit rövid idő alatt a világ egyik legfontosabb energiatermelő és exportáló államává emelte. A háború időszakában Waikiki jelentős bevételhez jutott a fosszilis energiahordozók exportja, valamint a New York-i békeszerződés keretében megítélt jóvátételi összegek révén. Ezen források lehetővé tették, hogy az ország gazdasága felzárkózzon az Egyesült Államokéhoz, 2006-ra pedig azt meghaladva a globális gazdasági és politikai erőtér egyik vezető hatalmává váljon.",
       "sha256": "22902309634d101d720e2cfbc7b712f5956abc16119d3a4fe075889601dafad1",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p017-1.png",
+        "../generated/chease-jessica-detailed/p017-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p017-1.png",
+        "../generated/chease-jessica-detailed/p017-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p017.prompts.json"
     },
     {
       "paragraph": 18,
@@ -293,10 +308,17 @@
       "text": "Waikiki kormánya a rendkívüli gazdasági növekedésnek köszönhetően rövid időn belül hatalmas vagyonra tett szert, amely előtérbe helyezte a területi bővülés szükségességét is. Ezzel egy időben Brazília súlyos pénzügyi válságba került, az állam a csőd szélére sodródott és külföldi partnereihez fordult segítségért. Chease Young, felismerve a helyzet geopolitikai jelentőségét, az IMF és a Federal Reserve támogatásával átfogó gazdasági mentőcsomagot ajánlott fel, amely magában foglalta Brazília államadósságának teljes átvállalását. Az ajánlat fő feltétele az volt, hogy Brazília hivatalosan is csatlakozzon Waikiki államalakulatához. 2006 júniusában Brazíliában országos népszavazást tartottak a csatlakozás kérdéséről, amelyen az állampolgárok döntő többsége támogatta az egyesülést. Ennek nyomán még ugyanazon év szeptemberében sor került a hivatalos integrációra, amelynek eredményeként az ország elnyerte jelenlegi formáját, Waikiki, Amazónia és Brazília tartományokkal egy gazdasági, politikai és katonai egységet alkotva.",
       "sha256": "3df82f39f4f754a46a34c2e2f6ba04a38838d3649dae5c5804b3455689f4ddc9",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p018-1.png",
+        "../generated/chease-jessica-detailed/p018-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p018-1.png",
+        "../generated/chease-jessica-detailed/p018-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p018.prompts.json"
     },
     {
       "paragraph": 19,
@@ -304,10 +326,17 @@
       "text": "A Csendes-óceáni háború utáni geopolitikai változások nyomán egyre erősebben körvonalazódott az igény az amerikai kontinens államai közötti szorosabb koordinációra. A folyamat élére Chease Young, Waikiki vezetője, valamint George Bush és az Egyesült Államok kormánya állt. 2006 végén New Yorkban és Washingtonban kezdetét vették az előkészítő tárgyalások, Kanada, Mexikó és Argentína részvételével. A tárgyalások célja egy olyan gazdasági szövetség létrehozása volt, amely laza keretek között hangolja össze a kontinens országainak érdekeit és közös platformot biztosít számukra. 2007. március 15-én Washingtonban írták alá az Amerikai Unió Alapokmányát, amelyben az alapító tagállamok rögzítették a közös céljaikat és együttműködésük kereteit. A gazdasági területen a tagállamok kölcsönösen kedvezményes kereskedelmi megállapodásokat írtak alá, amelyek erősítették a kontinensen belüli áruforgalmat és a befektetéseket. Különös hangsúlyt kapott a határokon átnyúló infrastrukturális hálózat fejlesztése, elősegítve a kontinens szorosabb belső integrációját.",
       "sha256": "72d55da2ff5c011d615ba5c923f353fbc55e7ef5038b62e2365d9223dcb23f31",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-hu-019-1.png",
+        "../generated/chease-jessica-detailed/p019-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-hu-019-1.png",
+        "../generated/chease-jessica-detailed/p019-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p019.prompts.json"
     },
     {
       "paragraph": 20,
@@ -315,10 +344,17 @@
       "text": "Chease Young vagyonát nem csupán személyes vagy állami gazdasági célokra fordította, hanem tudatosan olyan kutatási és fejlesztési programok finanszírozásába irányította, amelyek hosszú távon az egész emberiség életét alapvetően formálták át. Az általa kezdeményezett beruházások és tudományos projektek Waikikit a világ egyik vezető innovációs központjává emelték. Jelentős forrásokat allokált mesterséges intelligencia és informatikai fejlesztésekre, amelyek új alapokra helyezték a digitális gazdaság működését. A gyógyászatban Waikiki kutatói áttörést értek el a génterápia, a személyre szabott orvoslás és a korszerű vakcinák területén, amivel nemzetközi szinten is meghatározó szereplővé váltak. 2007-ben megkezdődött az ország saját űrállomásának építése, amely a nemzetközi űrtevékenységekben is új korszakot nyitott. 2010-ben Brazília tartományban megépült a világ legnagyobb hadronütköztetője, 2017-ben pedig üzembe helyezték Waikiki első hidrogénfúziós erőművét, amely a fenntartható energiatermelés globális mérföldkövévé vált.",
       "sha256": "cc31fcec774cf5de51692c6a8d8a3247a803435f6c985d8a05d88e58c5eb5c29",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p020-1.png",
+        "../generated/chease-jessica-detailed/p020-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p020-1.png",
+        "../generated/chease-jessica-detailed/p020-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p020.prompts.json"
     },
     {
       "paragraph": 21,
@@ -326,10 +362,17 @@
       "text": "Chease irányítása alatt az állam átfogó befektetési programot indított, amelynek eredményeként olyan globálisan ismert és piacvezető társaságok kerültek részben vagy teljes egészében Waikiki állami érdekeltségébe, mint az Apple, a Coca-Cola, az Intel, a General Motors, a LEGO, a T-Mobile, a Disney, a Universal Pictures, a Samsung és a Walmart Stores. A felvásárlások révén Waikiki jelentős piaci részesedést szerzett több stratégiai ágazatban, különösen a filmiparban, az információs technológiák területén, valamint az autógyártásban. A megszerzett vállalatok nyeresége hozzájárult az ország gazdasági stabilitásához, lehetővé téve az életszínvonal folyamatos emelését, az egészségügyi ellátórendszer korszerűsítését, valamint további befektetések megvalósítását. Waikiki gazdaságpolitikájának részeként aktívan növelte jelenlétét a pénzügyi és a bankszektorban is, ahol szintén jelentős részesedést szerzett több vezető nemzetközi intézményben.",
       "sha256": "b2428caef379c5f1368d7f0baef2ebc118b1aba3bcdd58bb107bee12980b9334",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p021-1.png",
+        "../generated/chease-jessica-detailed/p021-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p021-1.png",
+        "../generated/chease-jessica-detailed/p021-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p021.prompts.json"
     },
     {
       "paragraph": 22,
@@ -337,10 +380,17 @@
       "text": "A WSA saját űrállomás építésébe kezd, amely egyszerre 12 asztronautának nyújt otthont. Az emberi DNS megfejtése segíthet a rák és az örökletes betegségek gyógyításában. A NASA mintájára Waikiki is saját űrsiklókat fejleszt, melyek az űrállomást fogják építeni. Waikiki műholdak segítségével követi a klímaváltozást és próbálja megállítani azt. Megkezdődik a kísérleti hidrogénfúziós technológia kutatása, amely megalapozza az első kereskedelmi erőmű 2017-es üzembe helyezését. Waikiki tudósai nagy távolságú kommunikációs szabványok kifejlesztésén dolgoznak. A mesterséges intelligencia és gépi tanulás kutatásához a WNS 3 szuperszámítógépet vesz. A szupravezetők lényegében veszteség nélkül lennének képesek az áram továbbítására. Waikiki részecskegyorsítójában a tudósok a húrelméletet és az antianyag létezését kutatják. A génmódosítással ellenállóbb, finomabb és egészségesebb növényeket termeszthetünk. A biokémia az élő szervezetek kémiai felépítését és folyamatait tanulmányozza. A WSA távcsövei földönkívüli élet nyomai és lakható bolygók után kutatnak.",
       "sha256": "872fba09d9a40f9e68b83cf36c466375ab4b93e14040e43b94ccebcfd63a7d62",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p022-1.png",
+        "../generated/chease-jessica-detailed/p022-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p022-1.png",
+        "../generated/chease-jessica-detailed/p022-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p022.prompts.json"
     },
     {
       "paragraph": 23,
@@ -348,10 +398,17 @@
       "text": "Waikiki Nemzeti Űrállomása a világ legnagyobb, ember által épített, Föld körül keringő mesterséges objektuma. Építése 2007 és 2016 között zajlott, a projekt során Waikiki négy űrsiklója összesen 136 sikeres küldetést hajtott végre a szerkezeti modulok szállítására és összeszerelésére. Az űrállomáson 2008 óta folyamatosan tartózkodik állandó legénység, amelynek létszáma a kezdeti négy főről előbb nyolcra, majd tizenkettőre emelkedett, ezzel lehetővé téve a tudományos és technológiai kutatások széles körű bővítését. Az energiaellátásról napelemek gondoskodnak, melyek felülete meghaladja a 4000 négyzetmétert, energiatermelése pedig eléri a 240 kilowattot is. Az asztronauták és ellátmányok szállításáról azóta is az űrsiklók gondoskodnak, így az állomást 3 dokkolóval is felszerelték, habár ennyi űrhajó egyidejűleg még sosem volt csatlakozva hozzá. Az űrállomáson egy átlagos küldetés hossza 6 hónap, és eddig 244 asztronauta járt a fedélzetén. A különleges látogatók között szerepel Chease Young, aki 2010-ben feleségével, Jessicával együtt személyesen is meglátogatta az akkor még épülő űrállomást és 12 napot töltött a világűrben.",
       "sha256": "0ba50d6b7b5d99f626aab4a00473fe435f93dee7415cae0b06e37801704be615",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p023-1.png",
+        "../generated/chease-jessica-detailed/p023-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p023-1.png",
+        "../generated/chease-jessica-detailed/p023-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p023.prompts.json"
     },
     {
       "paragraph": 24,
@@ -359,10 +416,17 @@
       "text": "Habár Jessica Walker a kormányzati tanácsadói feladatokra fordított figyelem miatt háttérbe szorította színészi pályafutását, ennek ellenére 2007-ben elhatározta, hogy visszatér régi hobbijához, és jelentkezett a Chuck című sorozat egyik főszerepére. Az NBC csatorna akció-vígjáték sorozata egy átlagos számítógép-szerelő, Chuck Bartowski (Zachary Levi) történetét meséli el, akinek életét gyökeresen megváltoztatja, amikor egy kódolt üzenet révén a világ legnagyobb kém titkai az agyába kerülnek. Innentől kezdve a CIA és az NSA ügynökei, Sarah Walker (Jessica Walker) és John Casey (Adam Baldwin) védelme alatt áll, miközben együtt számos veszélyes küldetést teljesítenek. A széria öt évadot ért meg, több rangos díjra jelölték és 2010-ben Jessica Walker és Zachary Levi Golden Globe-díjat nyertek.",
       "sha256": "88e9416eacdbaebcbf12233b5b0d64c2f09b2d00adbb408f09f063a29f4906b9",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p024-1.png",
+        "../generated/chease-jessica-detailed/p024-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p024-1.png",
+        "../generated/chease-jessica-detailed/p024-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p024.prompts.json"
     },
     {
       "paragraph": 25,
@@ -370,10 +434,17 @@
       "text": "A 2008-as globális pénzügyi válságból Waikiki Chease Young és Jessica Walker intézkedéseinek köszönhetően nyertes országként került ki. Míg a világ számos gazdaságát recesszió, növekvő államadósság és magas munkanélküliség sújtotta, addig Waikikin 20%-kal nőtt a GDP, az állami tartalék meghaladta a 4 trillió dollárt, a foglalkoztatottsági ráta pedig elérte a 84%-ot. A királyi család vagyona több mint 1.300 milliárd dollárra emelkedett és az állam fokozatosan a globális pénzügyi, valamint kereskedelmi hálózat egyik központjává vált. A válság idején az infláció 0% maradt, Jessica Walker pedig új banktörvényekkel megteremtette a stabil és prudens bankrendszer kereteit.",
       "sha256": "d4794e2cc73b3333917359367731a94d1f94da622774cd49d13114248569f230",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p025-1.png",
+        "../generated/chease-jessica-detailed/p025-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p025-1.png",
+        "../generated/chease-jessica-detailed/p025-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p025.prompts.json"
     },
     {
       "paragraph": 26,
@@ -381,10 +452,17 @@
       "text": "A 2008-as válság közvetlen előzménye az amerikai subprime-válság, ami az ingatlan- és bankszektorából 2006 végén indult ki, mivel a bankok komolyabb hitelbírálat nélkül nyújtottak jelzálogkölcsönöket magánszemélyeknek, majd ezeket CDO-k formájában adták tovább. Mivel a polgárok nem tudták fizetni a hiteleiket, a házaik a bankokhoz kerültek és az ingatlanárak zuhanni kezdtek az Egyesült Államokban. Az ingatlanpiac összeomlásával ezek a CDO-k teljesen elértéktelenedtek, a rájuk kötött biztosítások és CDS-ek értéke pedig hatalmasat ugrott, így a biztosítók is csődközelbe kerültek.",
       "sha256": "e38c57ed895d85acda8b5ea88fd4bd72d39fef683afdf54cdfbb9f51d0a2705b",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p026-1.png",
+        "../generated/chease-jessica-detailed/p026-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p026-1.png",
+        "../generated/chease-jessica-detailed/p026-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p026.prompts.json"
     },
     {
       "paragraph": 27,
@@ -392,10 +470,17 @@
       "text": "Miután az USA 4. legnagyobb bankja, a Lehman Brothers 2008. szeptember 15-én csődöt jelentett, a FED vezetése rendkívüli állami támogatást biztosított a pénzügyi szektornak. Ennek keretében amerikai adófizetők dollármilliárdjaiból fizették ki az AIG, a Citigroup, a Morgan Stanley és a Goldman Sachs adósságait. Mivel az USA-val ellentétben Waikiki gazdasága nem hitelalapú szerkezetre épült, így nem érintették negatívan az amerikai bankcsődök. Chease pedig több megmentett bank részvényeibe is befektetett, amelyek a válság lecsengésével jelentős hozamot termeltek.",
       "sha256": "b732d4076f00480a7cc03911ce59f73c6f586be8e774adc1808676e172ce8266",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p027-1-v2.png",
+        "../generated/chease-jessica-detailed/p027-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p027-1-v2.png",
+        "../generated/chease-jessica-detailed/p027-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p027.prompts.json"
     },
     {
       "paragraph": 28,
@@ -403,10 +488,17 @@
       "text": "A jövőbeni válságok megelőzésének érdekében Jessica Walker a pénzintézetek ellenőrzésének szigorítását javasolta és kidolgozott egy új banktörvényt, melyet Waikiki parlamentje 2009-ben fogadott el. A Waikiki Nemzeti Bank a FED gyakorlatától eltérően kamatemelést hajtott végre, ezzel növelve bevételeit, miközben biztosította a prudens hitelezést és erősítette a WUD értékét. A válság óta Waikiki bankszektorában meghatározó szerepet töltenek be az olyan állami tulajdonú intézmények, mint a Bank of Waikiki, a Nova Aurelia Central Bank és az International Credit Bank.",
       "sha256": "22997f5e49129af2f47bc75ff73e3c593878c60f6c5789517422c1f487e00e81",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p028-1.png",
+        "../generated/chease-jessica-detailed/p028-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p028-1.png",
+        "../generated/chease-jessica-detailed/p028-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p028.prompts.json"
     },
     {
       "paragraph": 29,
@@ -414,10 +506,17 @@
       "text": "2009-ben Chease Young és felesége, Jessica Walker a globális pénzügyi válság idején kidolgozott és sikeresen megvalósított válságkezelési programjukért közösen részesültek a Közgazdasági Nobel-emlékdíjban, amelyet Stockholmban vehettek át. A díj indoklása szerint a házaspár innovatív gazdasági stabilizációs modellje hozzájárult a nemzetközi pénzügyi rendszer egyensúlyának helyreállításához, és példát mutatott a fenntartható növekedés új alapelveinek kialakításában. A kitüntetést követően a Nemzetközi Monetáris Alap (IMF) meghívására vendégelőadóként vettek részt az IMF éves közgyűlésén Párizsban, ahol Chease és Jessica közösen tartottak előadást a modern pénzügyi termékek kockázatainak és a globális piacok jövőjének témájában. Előadásukban kiemelték, hogy a rövid távú spekuláció és a fedezetlen derivatív ügyletek világgazdasági szinten is destabilizáló hatással bírnak, ezért a nemzetközi szabályozási rendszerek megerősítésére van szükség. A konferenciát követően Chease Young a fenntartható pénzügyi növekedés és az etikus bankrendszer működését elősegítő modell alapelveit ismertette, amely később több ország gazdaságpolitikai reformjában is hivatkozási alapként szolgált. Jessica Walker a társadalmi felelősségvállalás és a pénzügyi oktatás fontosságát hangsúlyozta, kiemelve, hogy a pénzügyi ismeretek széleskörű elterjesztése a válságok megelőzésének egyik legfontosabb eszköze.",
       "sha256": "b7889c6a272b3c3f970939d6378cc78d99b649518f393236b0f28c601e83cad0",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-economics-prize-2009.png",
+        "../generated/chease-jessica-detailed/p029-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-economics-prize-2009.png",
+        "../generated/chease-jessica-detailed/p029-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p029.prompts.json"
     },
     {
       "paragraph": 30,
@@ -425,10 +524,17 @@
       "text": "A 2010-es évektől kezdődően Chease és Jessica a nemzetközi közélet egyik legismertebb és legbefolyásosabb házaspárjaként váltak ismertté, akik hivatalos kötelezettségeik mellett rendszeresen tettek magánutazásokat a világ különböző pontjaira. Ezek az utazások egyrészt pihenést szolgáltak a megterhelő politikai és gazdasági tevékenység mellett, másrészt számos alkalommal diplomáciai vagy kulturális jelentőséggel is bírtak. A házaspár rendszerint Waikiki állami repülőflottájának legmodernebb gépeivel utazott, köztük a személyre szabott Aurum One nevű luxusrepülőgéppel, amely a Waikiki hadsereg mérnökei által átalakított Boeing 747-es. Chease és Jessica évente több alkalommal látogattak el európai és ázsiai úti célokra, ahol a kulturális örökségek és történelmi helyszínek megismerése mellett jótékonysági és oktatási programokban is részt vettek. Franciaországban a Loire menti kastélyok környékén pihentek, Olaszországban Toszkána borvidékein töltöttek néhány hetet, míg Japánban a Kiotó környéki templomokat keresték fel. Minden útjukat szigorú biztonsági és diplomáciai protokoll mellett bonyolították, de a házaspár mindig törekedett arra, hogy az utazások személyes és kulturális élményként is szolgáljanak.",
       "sha256": "8bb5a609c72db797679964f9e41e3bbdfbf52683c518ce5e2659b5f134445550",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p030-1.png",
+        "../generated/chease-jessica-detailed/p030-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p030-1.png",
+        "../generated/chease-jessica-detailed/p030-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p030.prompts.json"
     },
     {
       "paragraph": 31,
@@ -436,10 +542,17 @@
       "text": "Nova Aurelia partjához a Föld kontinenseit megformáló szigetcsoportot építenek. A Nova Aureliában épülő park a hetedik Disneyland a világon. A 956 méter magas Sky City a világ legmagasabb felhőkarcolója lesz. Nova Aureliában 3 új metróvonalat, 4 villamos és 5 magasvasút pályát építenek. Az Infinity Tower a világ egyetlen csavart toronyháza és Waikiki egyik jelképe. Nova Aureliát forradalmi gáttal veszik körül, amely erőmű és autópálya is egyben. Waikiki Nemzeti Múzeuma a világ legnagyobb régészeti gyűjteményének ad otthont. Az egyhetes ünnepségsorozatra 2 millió turista érkezett szerte a világból. A tengerpartra épült ötcsillagos szálloda egy hullám alakját idézi fel az odalátogatókban. Waikiki diktátora a nemzet által elért eredményekről és a jövőbeli terveiről beszélt. A világ legnagyobb űrparkja az amazóniai Manaus mellett várja a látogatókat. Az 5 millió dolláros tűzijáték során több mint 500000 rakétát lőttek fel 25 különböző színben.",
       "sha256": "3008b97887d16edce29829a8c45e55966dbbeefe5848e46eaf24d6fe6f1a24b7",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p031-1.png",
+        "../generated/chease-jessica-detailed/p031-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p031-1.png",
+        "../generated/chease-jessica-detailed/p031-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p031.prompts.json"
     },
     {
       "paragraph": 32,
@@ -447,10 +560,17 @@
       "text": "A kormány nagyszabású ünnepségsorozattal és monumentális építkezésekkel készült az államalapítás tizedik évfordulójára. Chease Young 1999. március 10-én vette át az ország irányítását és nevezte át Waikikire. Az első évtizedben a világ legnagyobb olajmezőinek feltárása, a Csendes-óceáni háború megnyerése az Atomhatalmak élén, a kereskedelmi, pénzügyi és turisztikai szektor dinamikus bővülése, valamint a nemzeti űrállomás építésének megkezdése határozták meg Waikiki fejlődését. A 2009-es program keretében pedig Chease Young még tovább fejlesztette az ország fővárosát, Nova Aureliát. A kormányzat a világ legmagasabb toronyházával, új Nemzeti Múzeummal és a világ kontinenseit ábrázoló mesterséges szigetcsoporttal tette a turisták számára még vonzóbbá a várost. A közlekedési infrastruktúrát új villamos és metróvonalakkal, valamint egy víz alatti autópálya körgyűrűvel bővítették. Ünnepi beszédében a jövőről szóló terveiben Chease Young kiemelte, hogy célja Waikikit a világ legfejlettebb és leggazdagabb országává tenni.",
       "sha256": "0f0a1f0f890361a0f56219be7bd417ed3d43847541d024187f11f501543b4e33",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p032-1.png",
+        "../generated/chease-jessica-detailed/p032-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p032-1.png",
+        "../generated/chease-jessica-detailed/p032-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p032.prompts.json"
     },
     {
       "paragraph": 33,
@@ -458,10 +578,17 @@
       "text": "2010-ben került sor Chease Young és felesége, Jessica Walker történelmi jelentőségű űrutazására. A küldetés célja az volt, hogy a vezető házaspár személyesen is felkeresse a Waikiki Űrügynökség (WSA) által üzemeltetett, akkoriban újonnan átadott, teljes mértékben hazai fejlesztésű és irányítású űrállomást. A többhetes kiképzést és biztonsági felkészülést követően az utazás egy korszerű, a WSA és a NASA együttműködéseként fejlesztett Delta III B rakéta kilövésével indult a Nova Aurelia közelében található űrközpontból. A kéthetes űrbeli tartózkodás során Chease és Jessica megismerték Waikiki Nemzeti Űrállomását, amely kutatási, technológiai és kísérleti célokat egyaránt szolgál. Az űrutazás során Chease és Jessica több alkalommal is beszédet intézett Waikiki lakosaihoz, és interaktív módon vonta be őket az űrállomáson végzett tevékenységekbe. A küldetés végeztével a Földre való visszatérés a terveknek megfelelően zajlott. A landolómodul a Csendes-óceánban szállt le, ahonnan a WSA egy hajója szállította partra a küldetés résztvevőit.",
       "sha256": "dfa6824379c458f35ed0dacc66050432c090d253ebbf69c6242fd756873f1a3f",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p033-1.png",
+        "../generated/chease-jessica-detailed/p033-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p033-1.png",
+        "../generated/chease-jessica-detailed/p033-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p033.prompts.json"
     },
     {
       "paragraph": 34,
@@ -469,10 +596,17 @@
       "text": "A küldetés során Chease és Jessica nem csupán díszvendégként vettek részt az űrállomás programjaiban, hanem aktív szerepet vállaltak a tudományos kísérletekben is. A laboratóriumi modulban a súlytalanság emberi szervezetre gyakorolt hatásának, valamint új anyagok és precíziós berendezések űrbeli viselkedésének tanulmányozásában segédkeztek. Az űrállomás megfigyelőmoduljából először pillanthatták meg a Földet teljes egészében, ami mindkettőjük számára felejthetetlen tapasztalatot jelentett. Elmondásuk szerint a bolygó látványa, a kék óceánok, a hófödte hegycsúcsok, a naplementék és napfelkelték valamint a sötétségből kiragyogó nagyvárosok fényei különös békességet és egyben felelősségérzetet is ébresztettek bennük. A küldetés bizonyította, hogy Waikiki nem csupán gazdasági és politikai téren, hanem az űrkutatás és a tudományos innováció területén is képes önálló eredményeket felmutatni. Az állomásról sugárzott élő közvetítés során Chease hangsúlyozta, hogy az űr az emberiség közös öröksége, és Waikiki elkötelezett abban, hogy a kutatás és a nemzetközi együttműködés élvonalában maradjon.",
       "sha256": "37b5e88d48260763780aecbdd3114e85933aeb692e30095d8bafb01a63188174",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p034-1.png",
+        "../generated/chease-jessica-detailed/p034-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p034-1.png",
+        "../generated/chease-jessica-detailed/p034-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p034.prompts.json"
     },
     {
       "paragraph": 35,
@@ -480,10 +614,17 @@
       "text": "2012 tavaszán Chease Young történelmi jelentőségű látogatást tett Észak-Koreában, amely az addigi legmagasabb szintű diplomáciai küldöttségének számított a két ország között. Az utazás célja a Koreai-félsziget stabilitásának előmozdítása, a humanitárius együttműködés bővítése és a hosszú távú bizalomépítés elindítása volt. Phenjanba érkezésekor Chease Youngot az észak-koreai külügyminisztérium magas rangú tisztviselői és Kim Dzsongun személyesen fogadták. A hivatalos tárgyalásokra a Külügyminisztérium Központi Konferenciatermében került sor, ahol Chease Young kétoldalú megbeszéléseket folytatott a minisztérium és a Népi Hadsereg képviselőivel. Az egyeztetések fő témái között szerepelt a fegyverkezési feszültségek mérséklése, a nukleáris program nagyobb átláthatósága, a humanitárius segélyek biztonságos eljuttatásának kérdése, valamint a gazdasági együttműködés lehetőségei. Chease Young tárgyalási stílusát a békés kompromisszumkeresés és a pragmatikus megközelítés jellemezte, hangsúlyozta, hogy Waikiki nem kíván beavatkozni a félsziget belügyeibe, ugyanakkor kész közvetítői szerepet vállalni minden olyan folyamatban, amely a stabilitást és a párbeszédet szolgálja. Az egynapos látogatás a Kumszuszan Nap-palota udvarán tartott hivatalos búcsúünnepséggel zárult. Bár az út nem hozott azonnali áttörést a nukleáris kérdésekben, a nemzetközi sajtó Chease Young phenjani útját Waikiki egyik legpéldamutatóbb békemissziójaként értékelte.",
       "sha256": "1582390b3c512a75d73e2ef6a8a282386da708f86d3c5effeb1d763ce31821bb",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p035-1.png",
+        "../generated/chease-jessica-detailed/p035-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p035-1.png",
+        "../generated/chease-jessica-detailed/p035-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p035.prompts.json"
     },
     {
       "paragraph": 36,
@@ -491,10 +632,17 @@
       "text": "Chease Young vezetésével az ország politikai berendezkedése mélyreható reformon ment keresztül, amelynek célja egy hatékonyabb, decentralizált kormányzati struktúra létrehozása volt, amelyben a tartományok nagyobb önállóságot kaptak, miközben a központi hatalom továbbra is egységes stratégiai irányítást biztosít. A változások részeként a Királyság ünnepén Chease Young három tartományi helytartót nevezett ki, valamint létrehozta a kormányzói tisztséget, amely a nemzeti közigazgatás egyik legfőbb végrehajtó szerveként kezdte meg működését. A kormányzói pozíciót Smith Edward kapta meg, aki korábban Waikiki hadseregének logisztikai igazgatójaként dolgozott és fontos szerepet vállalt az afrikai műveletekben. Kormányzóként Edward feladata lett a három tartomány munkájának összehangolása, a nemzeti fejlesztési források elosztása, valamint a központi költségvetés felügyelete. A kinevezett helytartók a fiatal generáció tagjai, akik feladatot kaptak abban, hogy Waikiki gazdasági és társadalmi fejlődését regionális szinten is összehangolják. Kate Beckinsale, Waikiki tartomány új helytartója, a külügyi és kereskedelmi szférából érkezett a politikába. Colin Farrell, korábban színészként szerzett elismertséget, most pedig Amazónia tartomány helytartója lett. Vincent Kartheiser, akit Brazília tartomány helytartójának neveztek ki, jogi és pénzügyi területen szerzett tapasztalatokat.",
       "sha256": "bd6dd0002e98f626a1b45f28d40a31035b40656f9a80bc997bab749af9bc4f23",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p036-1.png",
+        "../generated/chease-jessica-detailed/p036-2-v2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p036-1.png",
+        "../generated/chease-jessica-detailed/p036-2-v2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p036.prompts.json"
     },
     {
       "paragraph": 37,
@@ -502,10 +650,17 @@
       "text": "Az Egyesült Afrikai Nemzetek megalakulása a 21. század egyik legfontosabb geopolitikai fordulópontjának bizonyult, amelyben Waikiki és annak vezetői, élükön Chease Younggal, kulcsszerepet játszottak. A 2010-es évek elején Afrika számos országában súlyos politikai válságok és fegyveres felkelések törtek ki az elnyomó rezsimek ellen. Chease Young kezdeményezésére Waikiki az ENSZ Közgyűléséhez fordult, javasolva egy nemzetközi békefenntartó koalíció létrehozását. Az indítványt, amelyet Jessica Walker, ENSZ főtitkár-helyettesként aktívan támogatott, végül 2014-ben elfogadták, lehetővé téve az afrikai béke és helyreállítási műveletek megindítását. A döntés után Waikiki hadsereg mintegy 120 000 katonát és több ezer humanitárius szakembert vezényelt Afrikába, miközben a logisztikai hátteret és a technikai eszközöket is teljes egészében biztosította. A hadműveletek civil koordinációjáért Smith Edward logisztikai igazgató felelt. A hadjáratok sikerét követően Addisz-Abebában nemzetközi konferenciát hívtak össze, ahol több mint negyven afrikai állam képviselője aláírta az Afrikai Egység Chartáját. A történelmi dokumentum kimondta az Egyesült Afrikai Nemzetek (EAN) megalakulását, egy föderatív államszövetségét, amely közös irányítás, biztonsági együttműködés és kormányzás alatt egyesíti a kontinens országait.",
       "sha256": "95a571809d85e7308cc08fd0d1c620e045f817bc617aff71d1a1c7d12deb4992",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p037-1.png",
+        "../generated/chease-jessica-detailed/p037-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p037-1.png",
+        "../generated/chease-jessica-detailed/p037-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p037.prompts.json"
     },
     {
       "paragraph": 38,
@@ -513,10 +668,17 @@
       "text": "Chease és Jessica szabadidejükben gyakran utaznak egzotikus tengerparti helyszínekre vagy kulturális örökségekben gazdag városokba, ahol gyakran vesznek részt nemzetközi eseményeken és jótékonysági gálákon. 2014-ben Chease és felesége egy hónapos világkörüli úton vettek részt, melynek során a házaspár hivatalos és magánjellegű látogatásokat tett a világ meghatározó királyi udvaraiban. Az út első állomása Abu Dhabi volt, ahol egy hetet töltöttek az Egyesült Arab Emírségek kalifájának, Őfelsége Zayed Al Nahayan sejknek családjánál. A Young-házaspár részt vett több hagyományos emírségi ünnepségen, valamint meglátogatta az Abu Dhabi Nemzeti Múzeum újonnan megnyílt kiállítókomplexumát. A körút következő állomása London volt, ahol Vilmos herceg és Katalin hercegné látták vendégül őket a Buckingham-palotában. A waikiki uralkodói pár néhány napig a palota vendégeként tartózkodott Londonban, ahol részt vettek a brit királyi gálaest egyik díszvacsoráján is. Ezt követően Svédországba utaztak, ahol Chease és Jessica látogatást tettek XVI. Károly Gusztáv király és Szilvia királyné rezidenciáján.",
       "sha256": "0a0c8a667ba53975488802f9734ef41c98a49b13130f2445005880e851b333dd",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p038-1.png",
+        "../generated/chease-jessica-detailed/p038-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p038-1.png",
+        "../generated/chease-jessica-detailed/p038-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p038.prompts.json"
     },
     {
       "paragraph": 39,
@@ -524,10 +686,17 @@
       "text": "Chease és Jessica a politikai élet mellett nagy hangsúlyt fektetnek a kultúra és a művészetek támogatására, amelynek keretében rendszeresen vesznek részt klasszikus zenei koncerteken, operabemutatókon, színházi premiereken és kortárs képzőművészeti kiállításokon. 2014-ben Chease Young új, ultramodern luxusvilla építését indította el a Nova Aurelia tengerpartján, a Hercegi Palota közvetlen szomszédságában. Az ingatlan alapterülete meghaladja az 1 500 négyzetmétert, becsült értéke több mint 800 millió dollár. Chease és Jessica több alkalommal szerepeltek együtt mozifilmekben. Közös filmes pályafutásuk 2008-ban kezdődött a Sziget című produkcióval, amelyet a Kéjjel-nappal követett. 2015-ben pedig ismét együtt tűntek fel a Chuck című televíziós sorozatból készült nagyfilmben.",
       "sha256": "6888f4a63ae6ce0e9f3ba48aac61b7856b44fcc73f4de90dca674aac00eb91d0",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p039-1.png",
+        "../generated/chease-jessica-detailed/p039-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p039-1.png",
+        "../generated/chease-jessica-detailed/p039-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p039.prompts.json"
     },
     {
       "paragraph": 40,
@@ -535,10 +704,17 @@
       "text": "2015. március 19-én világszerte élőben közvetített eseményen mutatták be az orvostudomány egyik legnagyobb áttörését, az élettartam-hosszabbító elixírt, amelyet az Inter Medic biotechnológiai vállalat fejlesztett ki. Az ünnepélyes bejelentést a Waikiki Nemzeti Tudományos Akadémián tartották, a világ vezető politikusainak, tudósainak és befektetőinek jelenlétében. A programot Chease Young, Waikiki vezetője és az Inter Medic tulajdonosa nyitotta meg, hangsúlyozva, hogy az emberi élet meghosszabbítása immár tudományos valósággá vált. A vállalat vezérigazgatója, Smith Edward ismertette a több mint egy évtizedes fejlesztési folyamatot, amely 2010-ben indult, és 2014-ben lépett a klinikai tesztelés szakaszába. A programban több mint négyszáz önkéntes vett részt, köztük olyan nemzetközi ismertségű személyek, mint Selena Gomez és Oprah Winfrey. A tesztek kiemelkedően pozitív eredményeket hoztak: az elixír nem csupán lassította az öregedést, hanem elősegítette a sejtek regenerációját is, új korszakot nyitva a regeneratív orvoslásban. A bejelentést követő exkluzív aukción az első, kísérleti adagot Bill Gates vásárolta meg, ezzel ismerve el a fejlesztés történelmi jelentőségét. A projekt megvalósításában Waikiki kulcsszerepet játszott, Chease Young irányítása alatt az ország olyan kutatási és gazdasági környezetet teremtett, amely világszínvonalú tudományos és technológiai innovációkat tett lehetővé.",
       "sha256": "7ab1c078208375d39e03437da16738562b3e805e3997cc3fb6235f38a6f90fec",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p040-1.png",
+        "../generated/chease-jessica-detailed/p040-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p040-1.png",
+        "../generated/chease-jessica-detailed/p040-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p040.prompts.json"
     },
     {
       "paragraph": 41,
@@ -546,10 +722,17 @@
       "text": "2015. május 18-án Chease Young a parlament támogatásával jelentős alkotmánymódosítást vezetett be. Az új törvény értelmében a parlament a szenátus intézményével egészül ki, melynek tagjait a diktátor nevezi ki. Az első kinevezettek között szerepel Raimondo Chease, továbbá Chease Young két lánya, Angelina és Jennifer. Szenátori rangot kapott még Raimondo barátnője, Bailey Pickett, a híres énekesnő, Selena Gomez, valamint Taylor Lautner és Tyler Posey is.",
       "sha256": "36f64203d89579e6c686d0794d95955b9103f2668eb9b32f3147707d6e588d9e",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p041-1.png",
+        "../generated/chease-jessica-detailed/p041-2-v2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p041-1.png",
+        "../generated/chease-jessica-detailed/p041-2-v2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p041.prompts.json"
     },
     {
       "paragraph": 42,
@@ -557,10 +740,17 @@
       "text": "A 2016-ban Brazíliaváros által rendezett világkiállításon 4000 előadó vett részt. A kormány Waikiki szigetei és Florida között több alagút építését jelentette be. Tim Cook irányítása alatt az Apple egy új központ építésébe kezd az Infinite sugárúton. A kormány az ecuadori államadósság jelentős részéért vásárolta a 20 szigetet az országtól. A Concorde mintájára a Quantum Airlines ultraszónikus utasszállítókat állít forgalomba. Az MSC flottájának legújabb tagja 500 méteres hosszával a legnagyobb óceánjáró lesz. A WWF és az UNESCO által szervezett eseményen több mint 270 ország vett részt. Az EAN számára elengedhetetlen egy modern és egységes főváros létrehozása. Raimondo négy ikonikus középület építését jelentette be a parlament számára. Waikiki csatlakozott a 8 legfejlettebb ország közösségéhez, melyet G9-re neveztek át. Nemzetközi kutatók csoportja bebizonyította az Einstein által megjósolt gravitációs hullámokat.",
       "sha256": "133df033b4853548a5a322376d6207e341504881433047f3fdfe2a2529371e46",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p042-1.png",
+        "../generated/chease-jessica-detailed/p042-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p042-1.png",
+        "../generated/chease-jessica-detailed/p042-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p042.prompts.json"
     },
     {
       "paragraph": 43,
@@ -568,10 +758,17 @@
       "text": "Miután elkészült az MSC legújabb zászlóshajója, az Atlantica, Waikiki kormányának tagjai a világ vezető üzletembereinek társaságában részt vettek a luxushajó hivatalos próbaútján. Az MSC Atlantica a világ legnagyobb és legfejlettebb óceánjárója, 500 méter hosszúságával, 70 méteres szélességével és 20 fedélzeti szintjével új mércét állított a nemzetközi hajózási iparban. A Chease család tulajdonában álló MSC-csoport, amelyhez a Celebrity Cruises és a Quantum Cruises társaságok is tartoznak, jelenleg a világ legnagyobb tengeri személyszállító hálózatát működteti. A fedélzeten Raimondo találkozott régi ismerősével, Julie Starkkal, Sebastian Stark főbíró lányával. Julie a Waikiki Jogi Egyetemen szerzett diplomát, majd tanulmányait a Yale University jogi karán folytatta. A hajóút során Raimondo és Julie számos alkalommal töltöttek együtt időt, teniszeztek, pókereztek és élvezték a hajó fedélzeti medencéinek szolgáltatásait, miközben az esemény baráti, mégis reprezentatív hangulatban zajlott. Chease Young, Waikiki vezetője, az esemény zárásaként felkérte Julie Starkot, hogy a közeljövőben tartson előadást az amerikai jogrendszerről és annak nemzetközi hatásairól, ezzel is elősegítve a Waikiki és az Egyesült Államok közötti jogi és oktatási együttműködés elmélyítését.",
       "sha256": "6686c318c5e1260de65d4ac0bf287c75cc155b62890457d1990dcbdaec02d198",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p043-1.png",
+        "../generated/chease-jessica-detailed/p043-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p043-1.png",
+        "../generated/chease-jessica-detailed/p043-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p043.prompts.json"
     },
     {
       "paragraph": 44,
@@ -579,10 +776,15 @@
       "text": "2016 a társadalmi reformok és gazdasági modernizáció éveként vonult be Waikiki történetébe. A Demokratikus Párt kezdeményezésére a parlament országos népszavazást írt ki három, az állampolgárok mindennapjait közvetlenül érintő kérdésben: az ingyenes egészségügyi szolgáltatások bővítéséről, a közbiztonság megerősítéséről, valamint az oktatási rendszer átfogó reformjáról. A referendumot széles körű társadalmi érdeklődés kísérte. A szavazásra 2016. augusztus 1-jén került sor, és mindhárom kérdés döntő többségű igen szavazatot kapott. Az eredmény országos konszenzust tükrözött, amely mögött Chease Young és kormánya határozott társadalompolitikai víziója állt. A népszavazás mellett a parlament egy további, történelmi jelentőségű döntést is elfogadott, amely alapján 2018. január 1-jétől Waikikin megszűnt a készpénzforgalom és az ország hivatalosan áttért a kizárólag bankkártyás és elektronikus fizetési rendszerre. A pénzügyi reform célja a feketegazdaság visszaszorítása, a pénzmosás megelőzése, valamint az átlátható, hatékony és modern gazdasági környezet megteremtése volt.",
       "sha256": "fb0396a2dcf4f6f9b5c5eccaae54d7b49919256bc73e4ed439e835b7b1a3adf8",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p044-1.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p044-1.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "partial",
+      "prompt_file": "generated/chease-jessica-detailed/p044.prompts.json"
     },
     {
       "paragraph": 45,
