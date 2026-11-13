@@ -263,8 +263,7 @@
         "../generated/chease-jessica-detailed/p015-2.png"
       ],
       "target_images": 2,
-      "status": "complete",
-      "prompt_file": "generated/chease-jessica-detailed/p015.prompts.json"
+      "status": "complete"
     },
     {
       "paragraph": 16,
@@ -272,17 +271,10 @@
       "text": "Az eseményen számos európai uralkodóház képviselői is jelen voltak, többek között a brit, a belga és a svéd királyi család küldöttei, ami nemzetközi szinten is elismerte Waikiki új politikai és társadalmi berendezkedését. A koronázás mérföldkőnek bizonyult az ország történetében, egyszerre jelentette az addigi gazdasági sikerek megkoronázását, valamint egy új korszak kezdetét, amelyben Waikiki a monarchikus hagyományokat a modern államépítéssel ötvözte. Habár a királyi tisztség nem jár közvetlen politikai hatalommal, mégis hatalmas jelentőséggel bír, hogy Chease Young Waikiki királya lett, hiszen ezzel az állampolgárok döntő többsége támogatta abban, hogy az ország élén maradjon. Az öröklési rendet meghatározó törvény szerint a királyi trónt az elsőszülött fiú gyermek, azaz Raimondo fogja örökölni, aki ennek tiszteletére a koronahercegi címet viseli. A trónörökösök sorában őt követi Chease két lánya, Angelina utána pedig Jennifer. A ceremónia utáni első ülésen a parlament úgy döntött, hogy a koronázás napját, augusztus 4-ét nemzeti ünneppé nyilvánítják.",
       "sha256": "6a73fc7bbc6aec96b29622da7ef850045b4c73c41548489a18a256f9a4c81998",
       "is_label": false,
-      "images": [
-        "../generated/chease-jessica-detailed/p016-1.png",
-        "../generated/chease-jessica-detailed/p016-2.png"
-      ],
-      "generated_images": [
-        "../generated/chease-jessica-detailed/p016-1.png",
-        "../generated/chease-jessica-detailed/p016-2.png"
-      ],
+      "images": [],
+      "generated_images": [],
       "target_images": 2,
-      "status": "complete",
-      "prompt_file": "generated/chease-jessica-detailed/p016.prompts.json"
+      "status": "pending"
     },
     {
       "paragraph": 17,
@@ -290,17 +282,10 @@
       "text": "Chease Young vezetése alatt Waikiki rendkívül gyors ütemben fejlődött és rövid időn belül a nemzetközi közösség egyik meghatározó szereplőjévé vált. Az általa bevezetett kedvező és átlátható adórendszer következtében számos multinacionális vállalat helyezte át székhelyét az országba, ezzel erősítve a gazdasági aktivitást és a befektetési hajlandóságot. Az ország stratégiai jelentőségét tovább növelte a Kubai-öböl térségében feltárt, hatalmas mennyiségű kőolaj, amely Waikikit rövid idő alatt a világ egyik legfontosabb energiatermelő és exportáló államává emelte. A háború időszakában Waikiki jelentős bevételhez jutott a fosszilis energiahordozók exportja, valamint a New York-i békeszerződés keretében megítélt jóvátételi összegek révén. Ezen források lehetővé tették, hogy az ország gazdasága felzárkózzon az Egyesült Államokéhoz, 2006-ra pedig azt meghaladva a globális gazdasági és politikai erőtér egyik vezető hatalmává váljon.",
       "sha256": "22902309634d101d720e2cfbc7b712f5956abc16119d3a4fe075889601dafad1",
       "is_label": false,
-      "images": [
-        "../generated/chease-jessica-detailed/p017-1.png",
-        "../generated/chease-jessica-detailed/p017-2.png"
-      ],
-      "generated_images": [
-        "../generated/chease-jessica-detailed/p017-1.png",
-        "../generated/chease-jessica-detailed/p017-2.png"
-      ],
+      "images": [],
+      "generated_images": [],
       "target_images": 2,
-      "status": "complete",
-      "prompt_file": "generated/chease-jessica-detailed/p017.prompts.json"
+      "status": "pending"
     },
     {
       "paragraph": 18,
@@ -308,17 +293,10 @@
       "text": "Waikiki kormánya a rendkívüli gazdasági növekedésnek köszönhetően rövid időn belül hatalmas vagyonra tett szert, amely előtérbe helyezte a területi bővülés szükségességét is. Ezzel egy időben Brazília súlyos pénzügyi válságba került, az állam a csőd szélére sodródott és külföldi partnereihez fordult segítségért. Chease Young, felismerve a helyzet geopolitikai jelentőségét, az IMF és a Federal Reserve támogatásával átfogó gazdasági mentőcsomagot ajánlott fel, amely magában foglalta Brazília államadósságának teljes átvállalását. Az ajánlat fő feltétele az volt, hogy Brazília hivatalosan is csatlakozzon Waikiki államalakulatához. 2006 júniusában Brazíliában országos népszavazást tartottak a csatlakozás kérdéséről, amelyen az állampolgárok döntő többsége támogatta az egyesülést. Ennek nyomán még ugyanazon év szeptemberében sor került a hivatalos integrációra, amelynek eredményeként az ország elnyerte jelenlegi formáját, Waikiki, Amazónia és Brazília tartományokkal egy gazdasági, politikai és katonai egységet alkotva.",
       "sha256": "3df82f39f4f754a46a34c2e2f6ba04a38838d3649dae5c5804b3455689f4ddc9",
       "is_label": false,
-      "images": [
-        "../generated/chease-jessica-detailed/p018-1.png",
-        "../generated/chease-jessica-detailed/p018-2.png"
-      ],
-      "generated_images": [
-        "../generated/chease-jessica-detailed/p018-1.png",
-        "../generated/chease-jessica-detailed/p018-2.png"
-      ],
+      "images": [],
+      "generated_images": [],
       "target_images": 2,
-      "status": "complete",
-      "prompt_file": "generated/chease-jessica-detailed/p018.prompts.json"
+      "status": "pending"
     },
     {
       "paragraph": 19,
