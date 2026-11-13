@@ -254,10 +254,16 @@
       "text": "A Csendes-óceáni háborúban aratott győzelmek, valamint az ország gazdasági és társadalmi újjáépítése érdekében végzett kimagasló munkája elismeréseként Waikiki állampolgárai népszavazás útján döntöttek arról, hogy Chease Youngot és családját a nemzet uralkodóházává emelik. A dinasztia alapítását támogató parlamenti határozatot követően az országos referendum is megerősítette a döntést, így 2005. augusztus 4-én Chease Youngot hivatalosan Waikiki királyává választották. A koronázási ünnepségre a fővárosban, a Parlament előtti főtéren került sor, amelyet erre az alkalomra nemzeti színekbe öltöztettek. Az esemény nem csupán belpolitikai jelentőséggel bírt, hanem világméretű figyelmet keltett. Az ünnepélyes szertartás egyik történelmi pillanatát jelentette, hogy a királyi koronát maga II. János Pál pápa helyezte Chease Young fejére, ezzel is szimbolizálva a hagyomány és a modernitás összekapcsolódását. A szertartás során Jessica Walker hivatalosan Waikiki királynője lett, Raimondo a hercegi, míg Angelina és Jennifer a hercegnői címet kapta meg.",
       "sha256": "f8439a740b2300bc9b76d8890942ebe10104a6c16e13c1d2a75c33b162a0132f",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p015-1.png",
+        "../generated/chease-jessica-detailed/p015-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p015-1.png",
+        "../generated/chease-jessica-detailed/p015-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete"
     },
     {
       "paragraph": 16,
