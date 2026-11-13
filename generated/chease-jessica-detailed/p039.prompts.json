@@ -1,0 +1,22 @@
+{
+  "paragraph": 39,
+  "tool": "built-in image_gen",
+  "references": [
+    "references/chease-and-jessica-1.jpg"
+  ],
+  "reused": [],
+  "images": [
+    {
+      "variant": 1,
+      "file": "generated/chease-jessica-detailed/p039-1.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial photography for a fictional royal biography. Reference defines exact facial identity: Chease is the dark-haired man and Jessica is the blonde woman. Preserve their facial structure, eyes, noses, smiles, skin tone and hair; Jessica appears slightly younger, naturally adult. Scene timeframe around 2014, cultural patronage and the planning of their new Nova Aurelia waterfront villa. Realistic skin, fabric and architecture, refined candid composition and beautiful natural photographic light. No readable text, flags, logos or watermark. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. Chease and Jessica attend an opera premiere in an established European opera house, seated together in an elegant royal box with red velvet, gilded details and a softly visible stage below. Chease wears a black tuxedo, Jessica a tasteful burgundy evening gown. A graceful three-quarter photograph shows their recognizable faces as they enjoy the performance, warm theater light and a genuine cultured atmosphere.",
+      "status": "generated"
+    },
+    {
+      "variant": 2,
+      "file": "generated/chease-jessica-detailed/p039-2.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial photography for a fictional royal biography. Reference defines exact facial identity: Chease is the dark-haired man and Jessica is the blonde woman. Preserve their facial structure, eyes, noses, smiles, skin tone and hair; Jessica appears slightly younger, naturally adult. Scene timeframe around 2014, cultural patronage and the planning of their new Nova Aurelia waterfront villa. Realistic skin, fabric and architecture, refined candid composition and beautiful natural photographic light. No readable text, flags, logos or watermark. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. Chease and Jessica meet an architect at the safe observation terrace beside the early construction site of their new ultramodern waterfront villa in Nova Aurelia. A small refined architectural model and unmarked plans show a contemporary glass-and-stone house; a partially built structure is visible at a distance near a low Caribbean coastline. Chease wears a linen blazer, Jessica an elegant cream blouse and tailored trousers. A bright beautiful candid view with both faces clear, no implausible completed mansion.",
+      "status": "generated"
+    }
+  ]
+}

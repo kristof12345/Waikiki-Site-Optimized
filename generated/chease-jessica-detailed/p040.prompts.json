@@ -1,0 +1,22 @@
+{
+  "paragraph": 40,
+  "tool": "built-in image_gen",
+  "references": [
+    "references/chease-and-jessica-1.jpg"
+  ],
+  "reused": [],
+  "images": [
+    {
+      "variant": 1,
+      "file": "generated/chease-jessica-detailed/p040-1.png",
+      "prompt": "Use case: photorealistic-natural. High-resolution landscape editorial photography illustrating an explicitly fictional alternate-history biography, not a real medical product advertisement. Reference defines exact facial identity: Chease is the dark-haired man and Jessica is the blonde woman. Preserve facial structure, eyes, noses, smiles, hair and skin tone; Jessica appears slightly younger, naturally adult. Scene timeframe March 2015, the fictional Inter Medic research presentation at Waikiki's National Scientific Academy. The couple wear refined formal business attire, Chease a charcoal suit and Jessica an elegant dark-blue suit. Realistic skin, believable event staging and beautiful photographic light. No written medical claims, readable text, company logos, flags, watermark, injections or treatment administration. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. Chease opens the fictional biotechnology research presentation at a dignified scientific academy auditorium, speaking at a simple unbranded lectern while Jessica stands nearby as his partner. A small sealed unlabeled glass vial is displayed discreetly in a glass case, with adult scientists and guests softly visible behind them. Balanced documentary event framing with both recognizable faces clear and restrained scientific-conference atmosphere.",
+      "status": "generated"
+    },
+    {
+      "variant": 2,
+      "file": "generated/chease-jessica-detailed/p040-2.png",
+      "prompt": "Use case: photorealistic-natural. High-resolution landscape editorial photography illustrating an explicitly fictional alternate-history biography, not a real medical product advertisement. Reference defines exact facial identity: Chease is the dark-haired man and Jessica is the blonde woman. Preserve facial structure, eyes, noses, smiles, hair and skin tone; Jessica appears slightly younger, naturally adult. Scene timeframe March 2015, the fictional Inter Medic research presentation at Waikiki's National Scientific Academy. The couple wear refined formal business attire, Chease a charcoal suit and Jessica an elegant dark-blue suit. Realistic skin, believable event staging and beautiful photographic light. No written medical claims, readable text, company logos, flags, watermark, injections or treatment administration. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. At the exclusive auction following the fictional presentation, Chease and Jessica converse with Bill Gates as he appeared in the mid-2010s beside a refined glass display containing a small sealed unlabelled vial representing the story's experimental elixir. A candid three-quarter photograph in an elegant reception hall, all three adult faces clear, tasteful formal clothes and warm evening light. No consumption, commercial slogans or promotional branding.",
+      "status": "generated"
+    }
+  ]
+}

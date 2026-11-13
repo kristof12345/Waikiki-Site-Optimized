@@ -1,0 +1,23 @@
+{
+  "paragraph": 43,
+  "tool": "built-in image_gen",
+  "references": [
+    "references/chease-and-jessica-1.jpg",
+    "images/julie-stark.jpg"
+  ],
+  "reused": [],
+  "images": [
+    {
+      "variant": 1,
+      "file": "generated/chease-jessica-detailed/p043-1.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial photography for a fictional royal-history website. Reference 1 defines the exact faces of Chease the dark-haired man and Jessica the blonde adult woman. Preserve their facial features and identity precisely; Jessica slightly younger while naturally adult. Reference 2 defines Julie Stark, an adult brunette lawyer, only for scene 2. No facial blending. 2016 official trial voyage of MSC Atlantica, a fictional enormous luxury cruise ship in the Caribbean. Elegant natural photography, realistic faces, skin and anatomy, beautiful maritime light. No readable text, logos, watermarks or flags. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. Chease and Jessica standing on an upper promenade of the vast luxury cruise ship during its official trial voyage. Couple in foreground with clearly visible faces, Chease in a navy blazer and white open-collar shirt, Jessica in a refined ivory linen dress. Sweeping glass balustrades and white terraced decks with the ocean wake stretch into the background, sparkling deep-blue Caribbean water, warm late-afternoon light, graceful candid interaction.",
+      "status": "generated"
+    },
+    {
+      "variant": 2,
+      "file": "generated/chease-jessica-detailed/p043-2.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial photography for a fictional royal-history website. Reference 1 defines the exact faces of Chease the dark-haired man and Jessica the blonde adult woman. Preserve their facial features and identity precisely; Jessica slightly younger while naturally adult. Reference 2 defines Julie Stark, an adult brunette lawyer, only for scene 2. No facial blending. 2016 official trial voyage of MSC Atlantica, a fictional enormous luxury cruise ship in the Caribbean. Elegant natural photography, realistic faces, skin and anatomy, beautiful maritime light. No readable text, logos, watermarks or flags. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. At the ship's refined indoor reception with panoramic ocean windows, Chease and Jessica have a friendly professional discussion with Julie Stark about her future lecture on the American legal system. Three clearly distinct recognizable faces, Chease in dark evening suit, Jessica in elegant emerald evening dress, Julie in a modest tailored plum dress holding an unmarked lecture folder. Warm light, crystal and wood interior, a few softly blurred business guests, medium-wide candid editorial composition.",
+      "status": "generated"
+    }
+  ]
+}

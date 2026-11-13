@@ -1,0 +1,22 @@
+{
+  "paragraph": 42,
+  "tool": "built-in image_gen",
+  "references": [
+    "references/chease-and-jessica-1.jpg"
+  ],
+  "reused": [],
+  "images": [
+    {
+      "variant": 1,
+      "file": "generated/chease-jessica-detailed/p042-1.png",
+      "prompt": "Use case: photorealistic-natural. High-resolution landscape editorial photos illustrating a fictional royal history website. The reference defines exact Chease and Jessica faces: preserve facial structure, eyes, noses, smiles and hair with strict consistency. Jessica slightly younger but clearly adult. Beautiful polished natural photography, realistic skin, elegant 2016 business attire. No readable text, logos, watermark or flags. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. Chease and Jessica visit the 2016 world exhibition in Brasília, Brazil. Medium-wide view of the couple with clearly visible faces, walking through a graceful modernist pavilion with curved white concrete architecture and lush Brazilian landscaping; softly blurred international delegates and exhibition structures. Jessica in a light blue tailored dress, Chease navy suit, luminous morning light, vivid yet natural.",
+      "status": "generated"
+    },
+    {
+      "variant": 2,
+      "file": "generated/chease-jessica-detailed/p042-2.png",
+      "prompt": "Use case: photorealistic-natural. High-resolution landscape editorial photos illustrating a fictional royal history website. The reference defines exact Chease and Jessica faces: preserve facial structure, eyes, noses, smiles and hair with strict consistency. Jessica slightly younger but clearly adult. Beautiful polished natural photography, realistic skin, elegant 2016 business attire. No readable text, logos, watermark or flags. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. Chease and Jessica inspect the Quantum Airlines advanced supersonic passenger aircraft in a pristine Nova Aurelia hangar. A beautiful technically plausible long white Concorde-inspired aircraft with pointed nose and delta wings fills the background. An aviation engineer explains a physical wing model beside the couple. Faces clearly visible, sophisticated tailored clothing, bright diffused hangar daylight, close-to-medium documentary framing. No brand marks.",
+      "status": "generated"
+    }
+  ]
+}
