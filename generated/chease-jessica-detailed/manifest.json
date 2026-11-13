@@ -231,10 +231,16 @@
       "text": "A Csendes-óceáni háború 2002. október 5-én robbant ki, amikor Kína területszerzés céljából támadást indított Oroszország ellen, miközben Észak-Korea Dél-Korea ellen vonult, Pakisztán és Mongólia pedig az Internacionális Unióhoz csatlakozott. A konfliktus gyorsan globális méreteket öltött, mivel az Egyesült Államok és európai szövetségesei Oroszország mellett álltak, miközben a közel-keleti fronton Irak, Irán és Afganisztán a nyugati koalíció ellen lépett fel. Waikiki a háborúban közvetítő és stratégiai szereplőként lépett közbe: 2003. április 2-án a NATO oldalán harcolva részt vett a konfliktusban, és Chease Young kezdeményezésére megalakult az Atomhatalmak Szövetsége. A koalíciós erők a keleti fronton és a közel-keleti fronton is előrenyomultak, miközben Waikiki haditengerészete teljes tengeri blokádot hozott létre a Csendes-óceán és az Indiai-óceán mentén. A blokád elvágta az Internacionális Unió utánpótlási vonalait, megbénította hadiiparát és döntő szerepet játszott a keleti front összeomlásában. 2004 tavaszára a megszállt területek nagy része visszafoglalt, Izrael felszabadult, és az ellenfél stratégiai helyzete megroppant. A diplomáciai nyomás és a katonai vereségek hatására Kína és szövetségesei tárgyalóasztalhoz kényszerültek, és 2004. november 24-én a New York-i béke lezárta a háborút. A konfliktus nemcsak a regionális erőviszonyokat formálta át, hanem Waikiki nemzetközi státuszát is megerősítette a győztes koalíció élén.",
       "sha256": "bfea9cf63f2a2ed707ebbe740dbf24241fca8f12ea91245442e3accec043a0ae",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p014-1.png",
+        "../generated/chease-jessica-detailed/p014-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p014-1.png",
+        "../generated/chease-jessica-detailed/p014-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete"
     },
     {
       "paragraph": 15,
