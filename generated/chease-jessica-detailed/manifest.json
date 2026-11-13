@@ -130,13 +130,15 @@
       "sha256": "d89c094832e132af688a7448c8c1eb1b26c1e8f3681727a30b182ca7a916f310",
       "is_label": false,
       "images": [
-        "../generated/chease-jessica-hu-008-1-v2.png"
+        "../generated/chease-jessica-hu-008-1-v2.png",
+        "../generated/chease-jessica-detailed/p008-2.png"
       ],
       "generated_images": [
-        "../generated/chease-jessica-hu-008-1-v2.png"
+        "../generated/chease-jessica-hu-008-1-v2.png",
+        "../generated/chease-jessica-detailed/p008-2.png"
       ],
       "target_images": 2,
-      "status": "partial"
+      "status": "complete"
     },
     {
       "paragraph": 9,
@@ -161,10 +163,16 @@
       "text": "Röviddel megalakulása után Waikiki kormánya jelentős kőolaj és gázmezőkre bukkant a sziget körüli tengerekben. Az exportálásból származó bevétel fedezte az államháztartás első kiadásait, és keresletet generált az újonnan bevezetett WUD iránt. A petrolkémiai iparág gyors fellendülése munkahelyek százezreit teremtette meg, így minden korábbinál alacsonyabb szintre csökkent a munkanélküliség. Hogy a fosszilis energiahordozók az ország vagyonát gyarapítsák, Chease monopóliumot biztosított a kőolajfúrásokhoz a Waikiki Petrol és az OilExp számára, amelyekből később létrejött a mai Royal Oil Group.",
       "sha256": "271fd562950d9e6fc08771125e31c0c351e4f4b71e15527612ab880fe66dc536",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p010-1.png",
+        "../generated/chease-jessica-detailed/p010-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p010-1.png",
+        "../generated/chease-jessica-detailed/p010-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete"
     },
     {
       "paragraph": 11,
@@ -172,10 +180,16 @@
       "text": "Chease Young a korábbinál sokkal nyitottabb kereskedelmi rendszert hozott létre Waikikin, így az ország néhány év alatt becsatlakozott a globalizációba. Korábban nem látott technológiák és termékek váltak elérhetővé, a vállalatok pedig a nemzetközi piacokon is eladhatták termékeiket. Ezzel egy időben Chease fejlett tőkepiacokat hozott létre, állami intézményekkel és digitális infrastruktúrával támogatta az állampolgárok tőzsdei befektetéseit, akik így a legnagyobb vállalatokban maguk is résztulajdonosokká váltak. A jó befektetési lehetőségek külföldi tőkebevonáshoz vezettek, ami tovább növelte a beruházásokat.",
       "sha256": "ca755540af2828619eb65be5d7cfddd1c9d613eafd58cc385c38924cf2d04e14",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p011-1.png",
+        "../generated/chease-jessica-detailed/p011-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p011-1.png",
+        "../generated/chease-jessica-detailed/p011-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete"
     },
     {
       "paragraph": 12,
@@ -200,10 +214,16 @@
       "text": "Waikiki 2003. április 2-án a NATO oldalán lépett be a háborúba. Chease Young vezetésével az ország megalapította az Atomhatalmak Szövetségét, amelynek célja nem a nukleáris fegyverek bevetése, hanem azok elrettentő erejének kihasználása volt. Chease Young kezdeményezése sikerrel járt, a közös nukleáris doktrína révén sikerült megakadályozni, hogy az Internacionális Unió bármilyen atomfegyverrel rendelkező állama eszkalálja a konfliktust. A háború döntő fordulatát 2004-ben a közel-keleti területek felszabadítása, majd Pakisztán elfoglalása és Kína stratégiai veresége jelentette. A Csendes-óceáni front összeomlása nyomán Peking tárgyalóasztalhoz kényszerült, és 2004 végére megkezdődtek a békekötési folyamatok. A fegyverszüneti egyezmény értelmében az Internacionális Unió jogutódjaként létrejött Ázsiai Uniót jelentős hadi jóvátétel fizetésére kötelezték, amelynek összege évtizedes időtávon biztosította a győztes államok gazdasági és katonai megerősödését. A békekötés így nem csupán a háború végét jelentette, hanem egy új nemzetközi rend alapjait is lefektette, amelyben Waikiki kulcsszereplővé vált.",
       "sha256": "804dee1cfa0e73d155753963848f865de84b62ad9abecb1a041a45d74d3399c8",
       "is_label": false,
-      "images": [],
-      "generated_images": [],
+      "images": [
+        "../generated/chease-jessica-detailed/p013-1.png",
+        "../generated/chease-jessica-detailed/p013-2.png"
+      ],
+      "generated_images": [
+        "../generated/chease-jessica-detailed/p013-1.png",
+        "../generated/chease-jessica-detailed/p013-2.png"
+      ],
       "target_images": 2,
-      "status": "pending"
+      "status": "complete"
     },
     {
       "paragraph": 14,
