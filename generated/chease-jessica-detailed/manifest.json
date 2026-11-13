@@ -104,7 +104,8 @@
         "../generated/chease-jessica-detailed/p006-2.png"
       ],
       "target_images": 2,
-      "status": "complete"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/prompt-set.json"
     },
     {
       "paragraph": 7,
@@ -138,7 +139,8 @@
         "../generated/chease-jessica-detailed/p008-2.png"
       ],
       "target_images": 2,
-      "status": "complete"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/prompt-set.json"
     },
     {
       "paragraph": 9,
@@ -172,7 +174,8 @@
         "../generated/chease-jessica-detailed/p010-2.png"
       ],
       "target_images": 2,
-      "status": "complete"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/prompt-set.json"
     },
     {
       "paragraph": 11,
@@ -189,7 +192,8 @@
         "../generated/chease-jessica-detailed/p011-2.png"
       ],
       "target_images": 2,
-      "status": "complete"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/prompt-set.json"
     },
     {
       "paragraph": 12,
@@ -223,7 +227,8 @@
         "../generated/chease-jessica-detailed/p013-2.png"
       ],
       "target_images": 2,
-      "status": "complete"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p013.prompts.json"
     },
     {
       "paragraph": 14,
@@ -240,7 +245,8 @@
         "../generated/chease-jessica-detailed/p014-2.png"
       ],
       "target_images": 2,
-      "status": "complete"
+      "status": "complete",
+      "prompt_file": "generated/chease-jessica-detailed/p014.prompts.json"
     },
     {
       "paragraph": 15,
