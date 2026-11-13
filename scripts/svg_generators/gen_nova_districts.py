@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate Nova Aurelia's four inline, pure-vector district illustrations.
+"""Generate Nova Aurelia's ten inline, pure-vector district illustrations.
 
 Run directly to update both locales. Large standalone city illustrations are untouched.
 """
@@ -123,6 +123,43 @@ def scene(kind):
         o += [ellipse(252,111,95,23,'#e9ead8'),path('M157 111 Q252 137 347 111 Q270 148 190 128Z','#a1bbb6'),path('M164 105 L145 88 L181 94 M169 120 L153 139 L192 129','#cbd8c9'),rect(240,133,29,5,'#547880'),path('M180 107 Q250 93 326 109','none','stroke="#fff7de" stroke-width="2"')]
         o.append(path('M0 520 L180 478 L230 560 H0Z','#224e50'))
         for x in [10,45,80,115]: o.append(palm(x,550-x*.2,.55))
+    elif kind in ('arts', 'exchange', 'academy', 'gardens', 'embassies', 'market'):
+        o += [rect(0,280,800,280,'#c5b38e'), path('M290 560 L390 300 H440 L560 560Z','#eee0bc')]
+        if kind == 'exchange':
+            for x,w,h in [(100,85,180),(220,95,260),(350,100,210),(490,90,300),(620,70,170)]:
+                o.append(tower(x,360,w,h))
+            o += [path('M180 273 H640 V291 H180Z','#e7d4ae'),rect(190,280,440,8,'#8b7457')]
+        elif kind == 'gardens':
+            o += [ellipse(400,382,305,65,'#3f7665'),path('M170 350 V280 A230 180 0 0 1 630 280 V350Z',f'url(#{p}glass)')]
+            for x in range(200,631,45):
+                o.append(path(f'M400 100 Q{x} 160 {x} 350','none','stroke="#e4d7b5" stroke-width="4"'))
+            for y in (210,260,310): o.append(path(f'M180 {y} H620','none','stroke="#e4d7b5" stroke-width="3"'))
+            for x,y in [(240,320),(320,300),(460,305),(550,325)]: o.append(palm(x,y,.85))
+        elif kind == 'academy':
+            for x in (100,530):
+                o += [rect(x,240,170,120,f'url(#{p}glass)'),path(f'M{x-12} 240 Q{x+85} 115 {x+182} 240Z','#ead9b8')]
+                for xx in range(x+15,x+170,30): o.append(rect(xx,250,5,105,'#d5c8a7'))
+            o += [rect(325,240,150,120,'#e6d4b0'),path('M310 240 A90 90 0 0 1 490 240Z','#689398'),path('M400 150 L435 110 L457 122 L419 162Z','#e9dbba')]
+        else:
+            for x in (65,310,555):
+                o += [rect(x,245,180,115,f'url(#{p}stone)'),path(f'M{x-15} 245 L{x+90} 180 L{x+195} 245Z','#ecdcb9')]
+                for xx in range(x+16,x+170,32):
+                    o += [rect(xx,260,17,93,'#f5e4bf'),rect(xx+17,260,9,93,'#967b58')]
+            if kind == 'arts':
+                o += [path('M332 190 Q400 75 468 190Z','#afc6bc'),rect(315,358,175,12,'#f5e5c2')]
+                o += [ellipse(400,425,45,10,'#88775a'),rect(378,391,44,35,'#dfc79e'),path('M395 389 Q350 315 408 301 Q447 315 407 352 Q385 364 416 389Z','#397c80')]
+            elif kind == 'embassies':
+                for x in (95,275,520,700):
+                    o += [path(f'M{x} 390 V205','none','stroke="#f3dfb6" stroke-width="4"'),path(f'M{x+2} 207 q25 -12 49 0 v30 q-24 -12 -49 0Z','#3d8585'),rect(x+3,217,47,8,'#dec18b')]
+            else:
+                for x in (90,240,470,620):
+                    o += [rect(x,360,100,65,'#a8875f'),path(f'M{x-10} 360 l20 -40 h80 l20 40Z','#3c8280')]
+                    for xx in range(x,x+100,25): o.append(path(f'M{xx} 360 l10 -40 h12 l3 40Z','#eed7aa'))
+                    for xx in range(x+12,x+95,19): o.append(ellipse(xx,383,8,7,'#d7a35e'))
+        o += [path('M0 470 Q240 420 400 476 T800 470 V560 H0Z','#214f53'),ellipse(400,494,145,30,f'url(#{p}water)'),ellipse(400,494,145,30,'none','stroke="#dfc99e" stroke-width="7"')]
+        for x,y,scale in [(35,465,1.3),(755,450,1.2),(140,410,.65),(660,410,.65)]: o.append(palm(x,y,scale))
+        for x in range(200,621,70):
+            o += [ellipse(x,435,3,4,'#284b50'),path(f'M{x} 439 v13 m-4 5 l4 -6 l4 6','none','stroke="#284b50" stroke-width="3"')]
     else:
         for x,w,h in [(25,40,97),(83,28,143),(132,43,112),(194,29,176),(247,40,126),(313,34,95),(670,36,124),(728,40,161)]:
             o.append(tower(x,287,w,h,'#284b65'))
@@ -145,7 +182,7 @@ def scene(kind):
 
 
 def main():
-    artworks = {key: scene(key) for key in ('marina','boulevard','aerotropolis','night-lagoon')}
+    artworks = {key: scene(key) for key in ('marina','boulevard','aerotropolis','night-lagoon','arts','exchange','academy','gardens','embassies','market')}
     for locale in ('en','hu'):
         file = ROOT / locale / 'nova-aurelia.html'
         html = file.read_text()
