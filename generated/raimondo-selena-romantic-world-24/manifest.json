@@ -3,8 +3,7 @@
   "method": "built-in image generation",
   "references": [
     "references/raimondo-and-selena-2.jpg",
-    "references/raimondo-and-selena-3.jpg",
-    "references/raimondo-and-selena-4.jpg"
+    "references/raimondo-and-selena-3.jpg"
   ],
   "images": [
     {
@@ -12,7 +11,8 @@
       "location": "Bora Bora, French Polynesia",
       "file": "01-bora-bora.png",
       "prompt": "Use case: photorealistic-natural. Asset type: high-resolution landscape 16:9 website photo, single full-frame image. Create a beautiful exotic romantic travel photograph of Raimondo and Selena. Input images 1 and 2 are strict IDENTITY REFERENCES for the same two adults in every image; do not copy their original setting or clothing. Raimondo is the clean-shaven man with swept light brown/blond hair; Selena is the long dark-haired woman. Match their exact distinctive facial geometry, eyes, nose, mouth, jawline, skin tone, hairline and age from these references. Do not redesign, beautify into different people, age them, merge their features, or substitute generic models. Both faces unobstructed and sharply resolved, mostly front-facing. BOTH are looking directly and naturally into the camera lens with relaxed warm smiles, as if a trusted travel photographer has just caught their attention. Their eyes must meet the camera, never each other or off-frame. Affectionate believable body language, natural hands and anatomy, lifelike skin texture, understated natural makeup, photographic depth and realistic location scale. Romantic but tasteful, no wedding attire. Medium or medium-wide environmental portrait with clearly recognizable landmark. No words, captions, logos, watermark, collage or frame. Scene: Standing close together on the wooden deck of an overwater bungalow, Mount Otemanu and luminous turquoise lagoon behind, her hand resting on his forearm. Cream sundress and pale linen shirt, warm early morning light.",
-      "status": "pending"
+      "status": "complete",
+      "original_generation_path": "/Users/pappkristof/.codex/generated_images/01a1d07a-35ea-7030-8e8f-d3e4fbb6de6b/exec-7345d67e-6713-45fc-aab1-1048e8b21aa8.png"
     },
     {
       "number": 2,
