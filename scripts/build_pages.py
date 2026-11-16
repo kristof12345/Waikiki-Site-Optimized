@@ -433,8 +433,9 @@ def build_next(page: Page, meta: dict[str, dict]) -> str:
         return "<!-- @chrome:next --><!-- /@chrome:next -->"
 
     title = label_for(target, page.locale) or info["title"]
-    image = info.get("image") or TARGET_NEXT_IMAGES.get(target) or meta.get(f"{page.locale}/index", {}).get("image")
-    img_html = f'<div class="next-media"><img src="{page.asset("images/" + image)}" /></div>' if image else ""
+    fallback = TARGET_NEXT_IMAGES.get(target)
+    image = info.get("image") or (f"images/{fallback}" if fallback else meta.get(f"{page.locale}/index", {}).get("image"))
+    img_html = f'<div class="next-media"><img src="{page.asset(image)}" /></div>' if image else ""
     eyebrow = f'{T["continue"][page.locale]} · {group_label(group_for(target), page.locale)}'
     return f"""<!-- @chrome:next -->
     <section class="next-chapter">
@@ -582,10 +583,10 @@ def page_meta(text: str) -> dict:
         content = text
     content = re.sub(r"<!-- @chrome:(subnav|next) -->.*?<!-- /@chrome:\1 -->", "", content, flags=re.S)
     image = (
-        re.search(r'class="hero-media"><img src="[./]*images/([^"]+)"', content)
-        or re.search(r"<section class=\"hero[^>]*?url\('[./]*images/([^']+)'", content)
-        or re.search(r'class="hero-overlay"></div><img src="[./]*images/([^"]+)"', content)
-        or re.search(r'<img src="[./]*images/([^"]+)" class="w-full h-full', content)
+        re.search(r'class="hero-media"><img src="[./]*((?:images|generated)/[^"]+)"', content)
+        or re.search(r"<section class=\"hero[^>]*?url\('[./]*((?:images|generated)/[^']+)'", content)
+        or re.search(r'class="hero-overlay"></div><img src="[./]*((?:images|generated)/[^"]+)"', content)
+        or re.search(r'<img src="[./]*((?:images|generated)/[^"]+)" class="w-full h-full', content)
     )
     lead = (
         re.search(r'<p class="hero-lead">(.*?)</p>', content, re.S)
