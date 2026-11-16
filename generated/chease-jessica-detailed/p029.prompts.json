@@ -1,0 +1,18 @@
+{
+  "paragraph": 29,
+  "tool": "built-in image_gen",
+  "references": [
+    "references/chease-and-jessica-1.jpg"
+  ],
+  "reused": [
+    "generated/chease-jessica-economics-prize-2009.png"
+  ],
+  "images": [
+    {
+      "variant": 2,
+      "file": "generated/chease-jessica-detailed/p029-2.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial photograph for a fictional alternate-history biography. Reference defines exact facial identity: Chease is the dark-haired man and Jessica is the blonde woman. Preserve their facial structure, eyes, noses, smiles, skin tone and hair; Jessica appears slightly younger, naturally adult. This fictional scene follows their shared 2009 economics prize and illustrates the subsequent financial conference described in the biography. Chease wears a refined charcoal suit, Jessica an elegant deep-blue tailored suit. Lifelike skin and textures, dignified engaged expressions, beautiful professional event lighting. No readable text, flags, logos or watermark. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. Chease and Jessica deliver a joint keynote on financial stability at an international financial conference in Paris. They stand together near two simple unbranded lecterns on an elegant stage, with Jessica addressing the audience and Chease listening thoughtfully. A graceful Parisian conference hall, tall windows, restrained abstract economic graphics and an audience of economists softly visible in the foreground. Balanced medium-wide documentary composition with both faces clearly recognizable.",
+      "status": "generated"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "paragraph": 36,
+  "tool": "built-in image_gen",
+  "references": [
+    "references/chease-and-jessica-1.jpg",
+    "images/kate-beckinsale.jpg"
+  ],
+  "reused": [],
+  "images": [
+    {
+      "variant": 1,
+      "file": "generated/chease-jessica-detailed/p036-1.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial photograph for a fictional alternate-history biography. Image 1 defines the exact facial identities of Chease (dark-haired man) and Jessica (blonde woman): preserve their facial structure, eyes, noses, smiles, hair and skin tone; Jessica appears slightly younger, naturally adult. Image 2 defines Kate Beckinsale, the brunette woman appointed a provincial governor in this fictional narrative; preserve her separate facial identity and do not blend the two women. Scene timeframe 2013, Waikiki's administrative reforms. Chease wears a charcoal suit, Jessica an elegant ivory tailored dress, Kate a refined emerald business suit. Realistic skin, beautiful natural light, no flags, readable text, logos or watermark. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. At a dignified appointment ceremony in a stately Nova Aurelia government hall, Chease presents an unmarked appointment folder to Kate Beckinsale while Jessica stands beside him as his senior adviser and partner. A graceful medium-wide documentary composition shows all three recognizable faces clearly, restrained smiles, warm limestone columns, polished wood and a few civilian officials softly behind them.",
+      "status": "generated"
+    },
+    {
+      "variant": 2,
+      "file": "generated/chease-jessica-detailed/p036-2.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial photograph for a fictional alternate-history biography. Image 1 defines the exact facial identities of Chease (dark-haired man) and Jessica (blonde woman): preserve their facial structure, eyes, noses, smiles, hair and skin tone; Jessica appears slightly younger, naturally adult. Image 2 defines Kate Beckinsale, the brunette woman appointed a provincial governor in this fictional narrative; preserve her separate facial identity and do not blend the two women. Scene timeframe 2013, Waikiki's administrative reforms. Chease wears a charcoal suit, Jessica an elegant ivory tailored dress, Kate a refined emerald business suit. Realistic skin, beautiful natural light, no flags, readable text, logos or watermark. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. Chease and Jessica discuss the coordination of the three provinces with Kate Beckinsale and a small group of civilian regional advisers at a government conference table. Three neatly organized sets of development plans and simple abstract charts are on the table. A candid three-quarter view emphasizes thoughtful collaboration and the three distinct recognizable main faces, soft daylight and tasteful neoclassical surroundings.",
+      "status": "generated",
+      "accepted_file": "generated/chease-jessica-detailed/p036-2-v2.png",
+      "revision_prompt": "Use case: precise-object-edit. Edit only the printed documents on the conference table in this image. Remove all readable words and province-name headings from the three report covers, replacing those text areas with clean blank paper and a few simple unlabeled abstract charts. The incorrect Western, Central and Eastern Province labels must disappear. Preserve Chease, Jessica and Kate's exact facial identities, expressions, hair, hands, clothing, positions, all other people, the room, composition, lighting and photographic quality unchanged. No added words, logos or watermark.",
+      "review_note": "Removed incorrect province-name headings from the documents."
+    }
+  ]
+}

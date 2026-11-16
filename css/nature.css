@@ -4,111 +4,7 @@
     max-width: var(--width-l);
 }
 
-.nature-ill-frame {
-    width: 100%;
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-lg);
-    position: relative;
-    margin: 2rem 0;
-}
-
-.nature-feature-media .nature-ill-frame {
-    margin: 0;
-}
-
-.nature-ill {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
 /* Interactive SVG Hotspots */
-.nat-realm-zone {
-    cursor: pointer;
-    transition: opacity 0.3s var(--ease-out), filter 0.3s var(--ease-out);
-}
-
-.nat-realm-zone:hover {
-    filter: drop-shadow(0 0 10px rgba(245, 196, 110, 0.5));
-}
-
-/* Section Feature Split Layout */
-.nature-feature-split {
-    display: flex;
-    flex-wrap: wrap;
-    gap: clamp(2rem, 4vw, 3.5rem);
-    align-items: center;
-    margin: 2.5rem 0;
-}
-
-.nature-feature-split.reverse {
-    flex-direction: row-reverse;
-}
-
-.nature-feature-media {
-    flex: 1.1;
-    min-width: min(100%, 340px);
-}
-
-.nature-feature-text {
-    flex: 0.9;
-    min-width: min(100%, 320px);
-}
-
-.nature-feature-text h3 {
-    font-size: clamp(1.6rem, 2.8vw, 2.4rem);
-    font-weight: 600;
-    margin-bottom: 1rem;
-    position: relative;
-    padding-bottom: 0.8rem;
-    letter-spacing: -0.015em;
-    line-height: 1.25;
-}
-
-.nature-feature-text h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 48px;
-    height: 3px;
-    background: var(--accent);
-    border-radius: var(--radius-3xs);
-}
-
-.nature-feature-text p {
-    color: var(--text);
-    font-size: 1.05rem;
-    line-height: 1.8;
-    margin-bottom: 1.25rem;
-}
-
-.nature-feature-list {
-    list-style: none;
-    margin-top: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.85rem;
-}
-
-.nature-feature-list li {
-    padding-left: 1.75rem;
-    position: relative;
-    font-size: 1rem;
-    line-height: 1.65;
-    color: var(--text);
-}
-
-.nature-feature-list li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--accent);
-    font-weight: 700;
-}
 
 /* Interactive Province Selector Tabs */
 .province-filter-nav {
@@ -300,11 +196,43 @@
 }
 
 .sanctuary-item {
+    min-width: 0;
     border-radius: var(--radius-lg);
     padding: clamp(1.5rem, 2.5vw, 2rem);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.sanctuary-item .province-card-top {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sanctuary-item .province-card-stats {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.65rem;
+}
+
+.sanctuary-item .province-card-stats>div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.sanctuary-item .province-card-stats .province-stat-lbl {
+    text-align: right;
+}
+
+.sanctuary-item .province-stat-num {
+    white-space: normal;
+    overflow: visible;
+    overflow-wrap: anywhere;
+}
+
+.sanctuary-item p {
+    text-align: left;
 }
 
 .sanctuary-badge-prov {
@@ -340,29 +268,23 @@
     line-height: 1.3;
 }
 
-.sanctuary-art.nature-ill-frame {
+.sanctuary-art.illustration-frame {
     margin: 0 0 1.25rem 0;
     border-radius: 14px;
     box-shadow: var(--shadow-xs);
     overflow: hidden;
 }
 
-.sanctuary-art .nature-ill {
+.sanctuary-art .illustration {
     border-radius: 13px;
     transition: transform 1.4s var(--ease-out);
 }
 
-.sanctuary-item:hover .sanctuary-art .nature-ill {
+.sanctuary-item:hover .sanctuary-art .illustration {
     transform: scale(1.05);
 }
 
 /* Sovereign Green Charter Banner and Cards */
-.charter-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
-    gap: var(--card-gap);
-    margin: 2rem 0 3rem;
-}
 
 .charter-rule-card {
     border-radius: var(--radius-lg);
@@ -371,33 +293,6 @@
 
 .charter-rule-card::after {
     background: linear-gradient(90deg, #2e7d47, var(--amazonia-light) 45%, var(--accent));
-}
-
-.charter-index-num {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, rgba(78, 139, 90, 0.15), rgba(78, 139, 90, 0.05));
-    border: 1px solid rgba(78, 139, 90, 0.25);
-    color: var(--amazonia);
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 12px rgba(78, 139, 90, 0.08);
-    transition:
-        transform 0.8s var(--ease-spring),
-        background-color 0.4s,
-        border-color 0.4s,
-        box-shadow 0.4s;
-}
-
-.charter-rule-card:hover .charter-index-num {
-    transform: rotate(-8deg) scale(1.08);
-    box-shadow: 0 6px 16px rgba(78, 139, 90, 0.2);
 }
 
 .charter-rule-card h3 {
@@ -414,23 +309,11 @@
     margin: 0;
 }
 
-html.no-reveal .sanctuary-item:hover .sanctuary-art .nature-ill,
-html.no-reveal .charter-rule-card:hover .charter-index-num {
+html.no-reveal .sanctuary-item:hover .sanctuary-art .illustration {
     transform: none !important;
 }
 
 /* Dark Mode */
-.body-dark .nature-ill-frame {
-    background: var(--surface-card);
-    border-color: var(--tertiary-border);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
-}
-
-.body-dark .nature-feature-text p,
-.body-dark .nature-feature-list li {
-    color: var(--text-secondary);
-}
-
 .body-dark .province-btn {
     background: var(--surface-card);
     border-color: var(--tertiary-border);
@@ -505,18 +388,6 @@ html.no-reveal .charter-rule-card:hover .charter-index-num {
     color: var(--accent-light);
 }
 
-.body-dark .charter-index-num {
-    background: linear-gradient(135deg, rgba(78, 139, 90, 0.3), rgba(78, 139, 90, 0.1));
-    border-color: rgba(136, 212, 158, 0.35);
-    color: var(--amazonia-light);
-    box-shadow: 0 4px 14px var(--black-alpha-40);
-}
-
-.body-dark .charter-rule-card:hover .charter-index-num {
-    border-color: var(--amazonia-light);
-    box-shadow: 0 6px 18px var(--black-alpha-50);
-}
-
 .body-dark .charter-rule-card p {
     color: var(--text-secondary);
 }
@@ -537,8 +408,7 @@ html.no-reveal .charter-rule-card:hover .charter-index-num {
 
 @media (prefers-reduced-motion: reduce) {
 
-    .sanctuary-item:hover .sanctuary-art .nature-ill,
-    .charter-rule-card:hover .charter-index-num {
+    .sanctuary-item:hover .sanctuary-art .illustration {
         transform: none !important;
     }
 }

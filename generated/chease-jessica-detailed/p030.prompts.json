@@ -1,0 +1,22 @@
+{
+  "paragraph": 30,
+  "tool": "built-in image_gen",
+  "references": [
+    "references/chease-and-jessica-1.jpg"
+  ],
+  "reused": [],
+  "images": [
+    {
+      "variant": 1,
+      "file": "generated/chease-jessica-detailed/p030-1.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial travel photograph for a fictional couple's biography. Reference defines exact facial identity: Chease is the dark-haired man, Jessica the blonde woman. Preserve their facial structure, eyes, noses, smiles, skin tone and hair; Jessica appears slightly younger, naturally adult. Scene timeframe early 2010s private cultural journeys. The couple are in the foreground, faces clearly recognizable, with a graceful natural connection and relaxed tasteful clothing. Realistic skin and fabric, beautiful nuanced daylight, refined candid composition. No readable text, logos or watermark. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. Chease and Jessica walk together through the immaculate garden of a Loire Valley Renaissance château in France, pale limestone architecture and a gentle river setting behind them. Chease wears a light linen blazer and open-collar shirt, Jessica a tasteful soft-blue floral day dress. A warm intimate three-quarter view as they talk, elegant flowers, soft late-afternoon light and authentic French cultural atmosphere.",
+      "status": "generated"
+    },
+    {
+      "variant": 2,
+      "file": "generated/chease-jessica-detailed/p030-2.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial travel photograph for a fictional couple's biography. Reference defines exact facial identity: Chease is the dark-haired man, Jessica the blonde woman. Preserve their facial structure, eyes, noses, smiles, skin tone and hair; Jessica appears slightly younger, naturally adult. Scene timeframe early 2010s private cultural journeys. The couple are in the foreground, faces clearly recognizable, with a graceful natural connection and relaxed tasteful clothing. Realistic skin and fabric, beautiful nuanced daylight, refined candid composition. No readable text, logos or watermark. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. Chease and Jessica enjoy a quiet visit to a traditional temple garden in Kyoto, with a graceful wooden pavilion, moss, a reflecting pond and fresh green maple leaves. Chease wears a relaxed navy blazer and light shirt, Jessica a light ivory jacket over a sage dress. A different medium-wide candid composition, both recognizable faces visible as they admire the garden, serene late-spring light and authentic Japanese architectural details.",
+      "status": "generated"
+    }
+  ]
+}

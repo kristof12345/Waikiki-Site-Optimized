@@ -1,0 +1,315 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="ill" viewBox="0 0 1160 520">
+    <defs>
+        <clipPath id="ct-clip">
+            <rect width="1160" height="520" rx="18" />
+        </clipPath>
+        <linearGradient id="ct-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#020b14" />
+            <stop offset="50%" stop-color="#041422" />
+            <stop offset="100%" stop-color="#020912" />
+        </linearGradient>
+        <radialGradient id="ct-ambience" cx="50%" cy="32%" r="65%">
+            <stop offset="0%" stop-color="#1A528F" stop-opacity="0.22" />
+            <stop offset="45%" stop-color="#0c2c4e" stop-opacity="0.08" />
+            <stop offset="100%" stop-color="#020b14" stop-opacity="0" />
+        </radialGradient>
+        <linearGradient id="ct-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fcedc7" />
+            <stop offset="45%" stop-color="#dfba76" />
+            <stop offset="80%" stop-color="#c29a57" />
+            <stop offset="100%" stop-color="#80591f" />
+        </linearGradient>
+        <linearGradient id="ct-sapphire" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#1A528F" />
+            <stop offset="100%" stop-color="#002244" />
+        </linearGradient>
+        <style>
+            @keyframes illPulse { 0% { transform: scale(0.65); opacity: 0.9; } 75% { transform: scale(1.48); opacity: 0; } 100% { opacity: 0; } }
+            @keyframes illPulseSlow { 0% { transform: scale(0.88); opacity: 0.75; } 75% { transform: scale(1.32); opacity: 0; } 100% { opacity: 0; } }
+            @keyframes illDash { to { stroke-dashoffset: -28; } }
+            @keyframes illDashFast { to { stroke-dashoffset: -22; } }
+            @keyframes illDashRev { to { stroke-dashoffset: 28; } }
+            @keyframes illSpin { to { transform: rotate(360deg); } }
+            @keyframes illSpinRev { to { transform: rotate(-360deg); } }
+            @keyframes illRock { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
+            @keyframes illNodeGlow { 0%, 100% { opacity: 0.45; } 50% { opacity: 1; } }
+            .spin { transform-box: fill-box; transform-origin: center; animation: illSpin 14s linear infinite; }
+            .spin-med { transform-box: fill-box; transform-origin: center; animation: illSpin 9s linear infinite; }
+            .spin-rev { transform-box: fill-box; transform-origin: center; animation: illSpinRev 11s linear infinite; }
+            .pulse { transform-box: fill-box; transform-origin: center; animation: illPulse 2.6s ease-out infinite; }
+            .pulse-slow { transform-box: fill-box; transform-origin: center; animation: illPulseSlow 3.8s ease-out infinite; }
+            .dash { stroke-dasharray: 8 6; animation: illDash 2.2s linear infinite; }
+            .dash-fast { stroke-dasharray: 6 5; animation: illDashFast 1.3s linear infinite; }
+            .dash-rev { stroke-dasharray: 8 6; animation: illDashRev 2.2s linear infinite; }
+            .rock { transform-box: fill-box; transform-origin: center; animation: illRock 4.5s ease-in-out infinite; }
+            .ng1 { animation: illNodeGlow 2.4s ease-in-out infinite 0s; }
+            .ng2 { animation: illNodeGlow 2.4s ease-in-out infinite 0.6s; }
+            .ng3 { animation: illNodeGlow 2.4s ease-in-out infinite 1.2s; }
+            .ng4 { animation: illNodeGlow 2.4s ease-in-out infinite 1.8s; }
+            @media (prefers-reduced-motion: reduce) {
+                .spin, .spin-med, .spin-rev, .pulse, .pulse-slow, .dash, .dash-fast, .dash-rev, .rock, .ng1, .ng2, .ng3, .ng4 {
+                    animation: none !important;
+                }
+            }
+            text { font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        </style>
+    </defs>
+    <g clip-path="url(#ct-clip)">
+        <!-- Deep Canvas & Subtle Structural Orbital Rings -->
+        <rect width="1160" height="520" fill="url(#ct-bg)" />
+        <rect width="1160" height="520" fill="url(#ct-ambience)" />
+        <g fill="none" stroke="rgba(107, 164, 217, 0.07)" stroke-width="1">
+            <circle cx="580" cy="240" r="145" />
+            <circle cx="580" cy="240" r="245" stroke-dasharray="4 6" />
+            <circle cx="580" cy="240" r="375" />
+            <line x1="40" y1="240" x2="1120" y2="240" />
+            <line x1="580" y1="40" x2="580" y2="475" />
+        </g>
+        <!-- Corner Reticles -->
+        <g fill="none" stroke="#dfba76" stroke-width="1.6" opacity="0.5">
+            <path d="M24 38 L24 22 L40 22" />
+            <path d="M1136 38 L1136 22 L1120 22" />
+            <path d="M24 482 L24 498 L40 498" />
+            <path d="M1136 482 L1136 498 L1120 498" />
+        </g>
+        <!-- ================================================================= -->
+        <!-- TOP HUD STATUS PILLS -->
+        <!-- ================================================================= -->
+        <g>
+            <rect x="40" y="18" width="290" height="34" rx="17" fill="#041824" stroke="#1A528F" stroke-width="1.4" />
+            <circle cx="62" cy="35" r="5.5" fill="#2ecc71" class="pulse" />
+            <circle cx="62" cy="35" r="3" fill="#2ecc71" />
+            <text x="78" y="39" fill="#fbf7f0" font-size="11.5" font-weight="800" letter-spacing="0.8">ALAPOKMÁNY · 1999–2026</text>
+            <rect x="830" y="18" width="290" height="34" rx="17" fill="#041824" stroke="#c29a57" stroke-width="1.4" />
+            <circle cx="852" cy="35" r="5.5" fill="#f5c46e" class="pulse" />
+            <circle cx="852" cy="35" r="3" fill="#f5c46e" />
+            <text x="868" y="39" fill="#fbf7f0" font-size="11.5" font-weight="800" letter-spacing="0.8">FÉKEK ÉS EGYENSÚLYOK</text>
+        </g>
+        <!-- ================================================================= -->
+        <!-- ANIMATED STRUCTURAL POWER CONDUITS -->
+        <!-- ================================================================= -->
+        <!-- Head of State <-> Dictator (Gold Arc) -->
+        <path id="ct-hos-dic" d="M510 118 C 455 118, 415 128, 360 128" fill="none" stroke="#dfba76" stroke-width="2.2" class="dash" />
+        <!-- Head of State <-> Chancellor (Gold Arc) -->
+        <path id="ct-hos-ch" d="M650 118 C 705 118, 745 128, 800 128" fill="none" stroke="#dfba76" stroke-width="2.2" class="dash" />
+        <!-- Head of State -> President (Gold Vertical) -->
+        <path id="ct-hos-pres" d="M580 198 L580 248" fill="none" stroke="#dfba76" stroke-width="2.4" class="dash" />
+        <!-- Dictator -> Parliament (Crimson Veto Conduit) -->
+        <path id="ct-dic-par" d="M200 180 L200 250" fill="none" stroke="#ff7675" stroke-width="2.6" class="dash-fast" />
+        <!-- Chancellor -> Courts (Amber Fiscal Oversight Conduit) -->
+        <path id="ct-ch-crt" d="M960 180 L960 250" fill="none" stroke="#f39c12" stroke-width="2.6" class="dash-fast" />
+        <!-- Parliament -> President (Emerald/Teal Democratic Mandate) -->
+        <path id="ct-par-pres" d="M360 292 L425 292" fill="none" stroke="#00cec9" stroke-width="2.8" class="dash-fast" />
+        <!-- Parliament -> Ministers (Teal Confirmation & Oversight) -->
+        <path id="ct-par-min" d="M360 410 L425 410" fill="none" stroke="#2ecc71" stroke-width="2.4" class="dash-fast" />
+        <!-- President -> Ministers (Sapphire Execution Transmission) -->
+        <path id="ct-pres-min" d="M580 338 L580 366" fill="none" stroke="#74b9ff" stroke-width="2.8" class="dash-fast" />
+        <!-- Courts -> President (Violet Judicial Arbitration & Appointments) -->
+        <path id="ct-crt-pres" d="M800 292 L735 292" fill="none" stroke="#a29bfe" stroke-width="2.8" class="dash-rev" />
+        <!-- Courts -> Ministers (Violet Constitutional Review) -->
+        <path id="ct-crt-min" d="M800 410 L735 410" fill="none" stroke="#a29bfe" stroke-width="2.4" class="dash-rev" />
+        <!-- Courts -> Parliament Lower Constitutional Review Arc -->
+        <path id="ct-crt-par" d="M830 454 C 700 478, 460 478, 330 454" fill="none" stroke="rgba(162, 155, 254, 0.45)" stroke-width="1.8" class="dash-rev" />
+        <!-- Animated Energy Dots on Conduits -->
+        <circle r="4" fill="#fcedc7"><animateMotion dur="3.0s" repeatCount="indefinite"><mpath href="#ct-hos-dic" /></animateMotion></circle>
+        <circle r="4" fill="#fcedc7"><animateMotion dur="3.0s" repeatCount="indefinite"><mpath href="#ct-hos-ch" /></animateMotion></circle>
+        <circle r="4" fill="#dfba76"><animateMotion dur="2.2s" repeatCount="indefinite"><mpath href="#ct-hos-pres" /></animateMotion></circle>
+        <circle r="4.5" fill="#ff7675"><animateMotion dur="1.8s" repeatCount="indefinite"><mpath href="#ct-dic-par" /></animateMotion></circle>
+        <circle r="4.5" fill="#f39c12"><animateMotion dur="1.8s" repeatCount="indefinite"><mpath href="#ct-ch-crt" /></animateMotion></circle>
+        <circle r="4.5" fill="#00cec9"><animateMotion dur="1.6s" repeatCount="indefinite"><mpath href="#ct-par-pres" /></animateMotion></circle>
+        <circle r="4" fill="#2ecc71"><animateMotion dur="1.9s" repeatCount="indefinite"><mpath href="#ct-par-min" /></animateMotion></circle>
+        <circle r="4" fill="#74b9ff"><animateMotion dur="1.3s" repeatCount="indefinite"><mpath href="#ct-pres-min" /></animateMotion></circle>
+        <circle r="4.5" fill="#a29bfe"><animateMotion dur="1.6s" repeatCount="indefinite"><mpath href="#ct-crt-pres" /></animateMotion></circle>
+        <circle r="4" fill="#a29bfe"><animateMotion dur="1.9s" repeatCount="indefinite"><mpath href="#ct-crt-min" /></animateMotion></circle>
+        <circle r="4" fill="#a29bfe"><animateMotion dur="5.2s" repeatCount="indefinite"><mpath href="#ct-crt-par" /></animateMotion></circle>
+        <!-- ================================================================= -->
+        <!-- 1. APEX CORE: HEAD OF STATE -->
+        <!-- ================================================================= -->
+        <g transform="translate(580, 118)">
+            <!-- Pulsing Sovereign Aura -->
+            <circle class="pulse-slow" cx="0" cy="0" r="68" fill="none" stroke="rgba(223, 186, 118, 0.35)" stroke-width="1.5" />
+            <circle cx="0" cy="0" r="56" fill="url(#ct-sapphire)" stroke="#dfba76" stroke-width="2" />
+            <!-- Counter-Rotating Segmented Rings -->
+            <g class="spin">
+                <circle cx="0" cy="0" r="46" fill="none" stroke="#dfba76" stroke-width="5" stroke-dasharray="14 10" />
+            </g>
+            <g class="spin-rev">
+                <circle cx="0" cy="0" r="36" fill="none" stroke="#6BA4D9" stroke-width="2" stroke-dasharray="6 8" />
+            </g>
+            <!-- Sovereign Seal Core -->
+            <circle cx="0" cy="0" r="28" fill="#031322" stroke="#fcedc7" stroke-width="1.5" />
+            <circle cx="0" cy="0" r="21" fill="url(#ct-gold)" />
+            <!-- National Pyramid Vector Glyph -->
+            <path d="M-10 7 L0 -8 L10 7 Z" fill="#031322" />
+            <path d="M-4 7 L0 0 L4 7 Z" fill="url(#ct-gold)" />
+            <circle cx="0" cy="-10.5" r="1.8" fill="#031322" />
+            <!-- Top & Bottom Clean Pill Badges -->
+            <rect x="-105" y="-90" width="210" height="28" rx="14" fill="#041824" stroke="#dfba76" stroke-width="1.4" />
+            <text x="0" y="-71.5" fill="#fcedc7" font-size="13" font-weight="800" text-anchor="middle" letter-spacing="1.2">ÁLLAMFŐ</text>
+            <rect x="-105" y="60" width="210" height="24" rx="12" fill="#041824" stroke="#6BA4D9" stroke-width="1.3" />
+            <text x="0" y="75.5" fill="#6BA4D9" font-size="11" font-weight="800" text-anchor="middle" letter-spacing="0.8">NEMZETI EGYSÉG</text>
+        </g>
+        <!-- ================================================================= -->
+        <!-- 2. TOP LEFT WING: DICTATOR -->
+        <!-- ================================================================= -->
+        <g transform="translate(200, 128)">
+            <rect x="-160" y="-52" width="320" height="104" rx="16" fill="#061722" stroke="#d63031" stroke-width="2" />
+            <!-- Kinetic Command Rotor -->
+            <g transform="translate(-105, 0)">
+                <circle class="pulse" cx="0" cy="0" r="32" fill="none" stroke="rgba(255, 118, 117, 0.45)" stroke-width="1.4" />
+                <circle cx="0" cy="0" r="28" fill="#1c080a" stroke="#ff7675" stroke-width="1.6" />
+                <g class="spin-med">
+                    <circle cx="0" cy="0" r="20" fill="none" stroke="#dfba76" stroke-width="3.5" stroke-dasharray="7 6" />
+                </g>
+                <path d="M0 -11 L3 -3 L11 0 L3 3 L0 11 L-3 3 L-11 0 L-3 -3 Z" fill="url(#ct-gold)" />
+            </g>
+            <!-- Clean Typography -->
+            <text x="-60" y="-13" fill="#ff7675" font-size="16" font-weight="800" letter-spacing="0.8">DIKTÁTOR</text>
+            <text x="-60" y="8" fill="#fbf7f0" font-size="11.5" font-weight="700">FŐPARANCSNOK · 2/3 VÉTÓ</text>
+            <line x1="-60" y1="20" x2="140" y2="20" stroke="rgba(255, 118, 117, 0.25)" stroke-width="1" />
+            <text x="-60" y="36" fill="#bed5e8" font-size="10.5" font-weight="600">HATÁROZATLAN MANDÁTUM</text>
+        </g>
+        <!-- ================================================================= -->
+        <!-- 3. TOP RIGHT WING: CHANCELLOR -->
+        <!-- ================================================================= -->
+        <g transform="translate(960, 128)">
+            <rect x="-160" y="-52" width="320" height="104" rx="16" fill="#061722" stroke="#f39c12" stroke-width="2" />
+            <!-- Kinetic Fiscal Rotor -->
+            <g transform="translate(-105, 0)">
+                <circle class="pulse" cx="0" cy="0" r="32" fill="none" stroke="rgba(243, 156, 18, 0.45)" stroke-width="1.4" />
+                <circle cx="0" cy="0" r="28" fill="#211504" stroke="#f39c12" stroke-width="1.6" />
+                <g class="spin-rev">
+                    <circle cx="0" cy="0" r="20" fill="none" stroke="#dfba76" stroke-width="3.5" stroke-dasharray="7 6" />
+                </g>
+                <path d="M-6 -5 L0 -10 L6 -5 L6 5 L0 10 L-6 5 Z" fill="none" stroke="#f39c12" stroke-width="1.8" />
+                <line x1="0" y1="-6" x2="0" y2="6" stroke="#fcedc7" stroke-width="2" />
+            </g>
+            <!-- Clean Typography -->
+            <text x="-60" y="-13" fill="#f39c12" font-size="16" font-weight="800" letter-spacing="0.8">KANCELLÁR</text>
+            <text x="-60" y="8" fill="#fbf7f0" font-size="11.5" font-weight="700">KÖLTSÉGVETÉS · RENDELETEK</text>
+            <line x1="-60" y1="20" x2="140" y2="20" stroke="rgba(243, 156, 18, 0.25)" stroke-width="1" />
+            <text x="-60" y="36" fill="#bed5e8" font-size="10.5" font-weight="600">DIKTÁTORI HELYETTES</text>
+        </g>
+        <!-- ================================================================= -->
+        <!-- 4. LOWER LEFT PILLAR: PARLIAMENT (HEMICYCLE CHAMBER DIAGRAM) -->
+        <!-- ================================================================= -->
+        <g transform="translate(200, 352)">
+            <rect x="-160" y="-102" width="320" height="204" rx="16" fill="#051721" stroke="#2ecc71" stroke-width="2" />
+            <!-- Header & Seat Count Pill -->
+            <text x="-136" y="-71" fill="#fbf7f0" font-size="15" font-weight="800" letter-spacing="0.6">PARLAMENT</text>
+            <rect x="26" y="-87" width="114" height="22" rx="11" fill="#092c1c" stroke="#2ecc71" stroke-width="1" />
+            <text x="83" y="-72.5" fill="#a8e6cf" font-size="10" font-weight="800" text-anchor="middle">200 MANDÁTUM</text>
+            <!-- Structural Kinetic Bicameral Hemicycle -->
+            <g transform="translate(0, 24)">
+                <!-- Outer Senate Arc (Gold) -->
+                <path d="M-68 0 A 68 68 0 0 1 68 0" fill="none" stroke="rgba(223, 186, 118, 0.2)" stroke-width="11" />
+                <path d="M-68 0 A 68 68 0 0 1 68 0" fill="none" stroke="#dfba76" stroke-width="8" stroke-dasharray="7 4" class="dash" />
+                <!-- Inner Congress Arc (Emerald) -->
+                <path d="M-47 0 A 47 47 0 0 1 47 0" fill="none" stroke="rgba(46, 204, 113, 0.2)" stroke-width="11" />
+                <path d="M-47 0 A 47 47 0 0 1 47 0" fill="none" stroke="#2ecc71" stroke-width="8" stroke-dasharray="7 4" class="dash-rev" />
+                <!-- Radial Chamber Dividers -->
+                <line x1="-76" y1="0" x2="76" y2="0" stroke="rgba(168, 230, 207, 0.35)" stroke-width="1.2" />
+                <line x1="0" y1="0" x2="0" y2="-74" stroke="rgba(168, 230, 207, 0.25)" stroke-width="1" stroke-dasharray="3 3" />
+                <!-- Center Plenary Hub -->
+                <circle class="pulse" cx="0" cy="0" r="19" fill="none" stroke="#2ecc71" stroke-width="1.2" />
+                <circle cx="0" cy="0" r="12" fill="#092c1c" stroke="#dfba76" stroke-width="1.6" />
+                <circle cx="0" cy="0" r="4.5" fill="#fcedc7" />
+            </g>
+            <line x1="-136" y1="36" x2="136" y2="36" stroke="rgba(46, 204, 113, 0.25)" stroke-width="1" />
+            <line x1="0" y1="42" x2="0" y2="86" stroke="rgba(46, 204, 113, 0.22)" stroke-width="1" />
+            <!-- Congress vs Senate Labels -->
+            <text x="-72" y="61" fill="#2ecc71" font-size="11.5" font-weight="800" text-anchor="middle">KONGRESSZUS · 100</text>
+            <text x="-72" y="79" fill="#bed5e8" font-size="10" font-weight="600" text-anchor="middle">TÖRVÉNYHOZÁS</text>
+            <text x="72" y="61" fill="#dfba76" font-size="11.5" font-weight="800" text-anchor="middle">SZENÁTUS · 100</text>
+            <text x="72" y="79" fill="#bed5e8" font-size="10" font-weight="600" text-anchor="middle">KINEVEZÉS · BÍRÁK</text>
+        </g>
+        <!-- ================================================================= -->
+        <!-- 5 & 6. LOWER CENTER DUAL HUB: PRESIDENT & MINISTERS -->
+        <!-- ================================================================= -->
+        <!-- 5. President Node -->
+        <g transform="translate(580, 294)">
+            <rect x="-155" y="-44" width="310" height="88" rx="16" fill="#061928" stroke="#0984e3" stroke-width="2" />
+            <!-- Kinetic Compass Core -->
+            <g transform="translate(-105, 0)">
+                <circle class="pulse" cx="0" cy="0" r="28" fill="none" stroke="rgba(116, 185, 255, 0.45)" stroke-width="1.3" />
+                <circle cx="0" cy="0" r="24" fill="#082b4a" stroke="#74b9ff" stroke-width="1.6" />
+                <g class="spin">
+                    <circle cx="0" cy="0" r="17" fill="none" stroke="#74b9ff" stroke-width="2.2" stroke-dasharray="5 5" />
+                </g>
+                <polygon points="0,-10 3,-3 10,0 3,3 0,10 -3,3 -10,0 -3,-3" fill="#fcedc7" />
+            </g>
+            <!-- Clean Typography -->
+            <text x="-60" y="-12" fill="#74b9ff" font-size="15.5" font-weight="800" letter-spacing="0.8">ELNÖK</text>
+            <text x="-60" y="9" fill="#fbf7f0" font-size="11" font-weight="700">KORMÁNYFŐ · 5 ÉVES CIKLUS</text>
+            <text x="-60" y="28" fill="#6BA4D9" font-size="10" font-weight="600">KÖZIGAZGATÁS</text>
+        </g>
+        <!-- 6. Ministers (Cabinet) Node -->
+        <g transform="translate(580, 410)">
+            <rect x="-155" y="-44" width="310" height="88" rx="16" fill="#052122" stroke="#00cec9" stroke-width="2" />
+            <!-- Kinetic 4-Node Cabinet Matrix -->
+            <g transform="translate(-105, 0)">
+                <circle cx="0" cy="0" r="24" fill="#023230" stroke="#00cec9" stroke-width="1.5" />
+                <line x1="-10" y1="0" x2="10" y2="0" stroke="rgba(129, 236, 236, 0.4)" stroke-width="1.4" />
+                <line x1="0" y1="-10" x2="0" y2="10" stroke="rgba(129, 236, 236, 0.4)" stroke-width="1.4" />
+                <rect x="-12" y="-12" width="9" height="9" rx="2" fill="#00cec9" class="ng1" />
+                <rect x="3" y="-12" width="9" height="9" rx="2" fill="#74b9ff" class="ng2" />
+                <rect x="-12" y="3" width="9" height="9" rx="2" fill="#dfba76" class="ng3" />
+                <rect x="3" y="3" width="9" height="9" rx="2" fill="#2ecc71" class="ng4" />
+            </g>
+            <!-- Clean Typography -->
+            <text x="-60" y="-12" fill="#00cec9" font-size="15.5" font-weight="800" letter-spacing="0.8">MINISZTEREK</text>
+            <text x="-60" y="9" fill="#fbf7f0" font-size="11" font-weight="700">SZAKMINISZTÉRIUMOK</text>
+            <text x="-60" y="28" fill="#81ecec" font-size="10" font-weight="600">KONGRESSZUSI KONTROLL</text>
+        </g>
+        <!-- ================================================================= -->
+        <!-- 7. LOWER RIGHT PILLAR: COURTS (4-TIER PYRAMID & BALANCE) -->
+        <!-- ================================================================= -->
+        <g transform="translate(960, 352)">
+            <rect x="-160" y="-102" width="320" height="204" rx="16" fill="#0d0e20" stroke="#9b59b6" stroke-width="2" />
+            <!-- Header & Independence Pill -->
+            <text x="-136" y="-71" fill="#fbf7f0" font-size="15" font-weight="800" letter-spacing="0.6">BÍRÓSÁGOK</text>
+            <rect x="32" y="-87" width="108" height="22" rx="11" fill="#251034" stroke="#9b59b6" stroke-width="1" />
+            <text x="86" y="-72.5" fill="#dcdde1" font-size="10" font-weight="800" text-anchor="middle">FÜGGETLEN</text>
+            <!-- Structural 4-Tier Judicial Pyramid + Animated Balance -->
+            <g transform="translate(0, -14)">
+                <!-- Oscillating Scales at Pyramid Apex -->
+                <g transform="translate(0, -30)">
+                    <line x1="0" y1="-2" x2="0" y2="16" stroke="#dfba76" stroke-width="1.8" />
+                    <g class="rock">
+                        <line x1="-22" y1="2" x2="22" y2="2" stroke="#fcedc7" stroke-width="1.8" />
+                        <path d="M-22 2 L-27 11 L-17 11 Z" fill="#dfba76" />
+                        <path d="M22 2 L17 11 L27 11 Z" fill="#dfba76" />
+                    </g>
+                    <circle cx="0" cy="2" r="2.8" fill="#fcedc7" />
+                </g>
+                <!-- 4 Ascending Judicial Tier Bars -->
+                <rect x="-36" y="-8" width="72" height="10" rx="5" fill="#5e2d79" stroke="#fcedc7" stroke-width="1" class="ng1" />
+                <rect x="-58" y="6" width="116" height="10" rx="5" fill="#47215e" stroke="#a29bfe" stroke-width="0.9" class="ng2" />
+                <rect x="-80" y="20" width="160" height="10" rx="5" fill="#321644" stroke="#9b59b6" stroke-width="0.8" class="ng3" />
+                <rect x="-102" y="34" width="204" height="10" rx="5" fill="#200d2e" stroke="#7d3c98" stroke-width="0.8" class="ng4" />
+            </g>
+            <line x1="-136" y1="40" x2="136" y2="40" stroke="rgba(155, 89, 182, 0.28)" stroke-width="1" />
+            <!-- Clean Judicial Summary -->
+            <text x="0" y="63" fill="#fcedc7" font-size="11.5" font-weight="800" text-anchor="middle">LEGFELSŐBB BÍRÓSÁG · 7 ÉV</text>
+            <text x="0" y="82" fill="#bed5e8" font-size="10.5" font-weight="600" text-anchor="middle">4 SZINT · NORMAKONTROLL</text>
+        </g>
+        <!-- ================================================================= -->
+        <!-- BOTTOM CONDUIT LEGEND -->
+        <!-- ================================================================= -->
+        <g transform="translate(40, 480)">
+            <rect x="0" y="0" width="1080" height="28" rx="14" fill="#04121e" stroke="rgba(107, 164, 217, 0.25)" stroke-width="1" />
+            <line x1="36" y1="14" x2="62" y2="14" stroke="#dfba76" stroke-width="2.4" stroke-dasharray="5 3" />
+            <circle cx="62" cy="14" r="3.5" fill="#dfba76" />
+            <text x="72" y="17.5" fill="#fcedc7" font-size="10" font-weight="700">Államfői és kinevezés</text>
+            <line x1="320" y1="14" x2="346" y2="14" stroke="#00cec9" stroke-width="2.4" stroke-dasharray="5 3" />
+            <polygon points="353,14 345,10.5 345,17.5" fill="#00cec9" />
+            <text x="362" y="17.5" fill="#81ecec" font-size="10" font-weight="700">Választás és kontroll</text>
+            <line x1="600" y1="14" x2="626" y2="14" stroke="#ff7675" stroke-width="2.4" stroke-dasharray="5 3" />
+            <polygon points="633,14 625,10.5 625,17.5" fill="#ff7675" />
+            <text x="642" y="17.5" fill="#ff7675" font-size="10" font-weight="700">Stratégiai vétó</text>
+            <line x1="850" y1="14" x2="876" y2="14" stroke="#a29bfe" stroke-width="2.4" stroke-dasharray="5 3" />
+            <polygon points="883,14 875,10.5 875,17.5" fill="#a29bfe" />
+            <text x="892" y="17.5" fill="#dcdde1" font-size="10" font-weight="700">Normakontroll</text>
+        </g>
+    </g>
+</svg>

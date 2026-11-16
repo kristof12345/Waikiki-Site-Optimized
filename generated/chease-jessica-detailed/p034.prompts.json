@@ -1,0 +1,23 @@
+{
+  "paragraph": 34,
+  "tool": "built-in image_gen",
+  "references": [
+    "references/chease-and-jessica-1.jpg",
+    "generated/chease-jessica-detailed/p023-1.png"
+  ],
+  "reused": [],
+  "images": [
+    {
+      "variant": 1,
+      "file": "generated/chease-jessica-detailed/p034-1.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape documentary photography for a fictional alternate-history biography. Image 1 is the exact facial identity reference for Chease (dark-haired man) and Jessica (blonde woman): preserve their facial structure, eyes, noses, smiles, hair and skin tone; Jessica appears slightly younger, naturally adult. Image 2 is the wardrobe and station-interior reference: use the same simple deep-blue flight suits without insignia, credible orbital-module equipment and gentle microgravity, while creating different scenes. Scene timeframe 2010 aboard Waikiki's orbital station. Realistic skin, believable secured instruments and handrails, graceful photographic light, no readable text, logos, watermark or holographic effects. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. Chease and Jessica help an adult astronaut with a modest materials-research experiment at a secured orbital laboratory workstation. A small sealed sample chamber is fixed in place; Jessica handles a tethered sample tool under the astronaut's guidance while Chease reviews an attached tablet. Both hold stable positions using handrails or foot restraints, subtle floating hair, their recognizable faces clearly visible. A candid medium-wide scientific documentary view.",
+      "status": "generated"
+    },
+    {
+      "variant": 2,
+      "file": "generated/chease-jessica-detailed/p034-2.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape documentary photography for a fictional alternate-history biography. Image 1 is the exact facial identity reference for Chease (dark-haired man) and Jessica (blonde woman): preserve their facial structure, eyes, noses, smiles, hair and skin tone; Jessica appears slightly younger, naturally adult. Image 2 is the wardrobe and station-interior reference: use the same simple deep-blue flight suits without insignia, credible orbital-module equipment and gentle microgravity, while creating different scenes. Scene timeframe 2010 aboard Waikiki's orbital station. Realistic skin, believable secured instruments and handrails, graceful photographic light, no readable text, logos, watermark or holographic effects. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. Chease and Jessica deliver a live video address from the station to people on Earth. Chease speaks naturally toward a small fixed broadcast camera, Jessica beside him, both gently anchored at a handrail in the orbital module. A window shows Earth's blue curved horizon, with soft reflected light on their clear recognizable faces. A different intimate three-quarter composition, realistic cameras and secured cabin equipment.",
+      "status": "generated"
+    }
+  ]
+}

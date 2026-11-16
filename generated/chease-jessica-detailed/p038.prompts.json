@@ -1,0 +1,22 @@
+{
+  "paragraph": 38,
+  "tool": "built-in image_gen",
+  "references": [
+    "references/chease-and-jessica-1.jpg"
+  ],
+  "reused": [],
+  "images": [
+    {
+      "variant": 1,
+      "file": "generated/chease-jessica-detailed/p038-1.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial travel photograph for a fictional royal biography. Reference defines exact facial identity: Chease is the dark-haired man and Jessica is the blonde woman. Preserve their facial structure, eyes, noses, smiles, hair and skin tone; Jessica appears slightly younger, naturally adult. Scene timeframe 2014, the couple's world tour combining private cultural visits and royal hospitality. Lifelike skin, elegant tasteful clothing, beautiful photographic light, no readable text, flags, logos or watermark. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. Chease and Jessica visit a newly opened museum exhibition in Abu Dhabi with an Emirati curator. A refined contemporary gallery with graceful geometric architectural details displays historical Emirati art and artifacts; palms and warm Gulf daylight are visible beyond. Chease wears a light-gray suit and Jessica a modest cream tailored jacket over an elegant dress. A warm candid three-quarter view with both recognizable faces clear, authentic respectful cultural atmosphere.",
+      "status": "generated"
+    },
+    {
+      "variant": 2,
+      "file": "generated/chease-jessica-detailed/p038-2.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial travel photograph for a fictional royal biography. Reference defines exact facial identity: Chease is the dark-haired man and Jessica is the blonde woman. Preserve their facial structure, eyes, noses, smiles, hair and skin tone; Jessica appears slightly younger, naturally adult. Scene timeframe 2014, the couple's world tour combining private cultural visits and royal hospitality. Lifelike skin, elegant tasteful clothing, beautiful photographic light, no readable text, flags, logos or watermark. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. Chease and Jessica arrive at a royal gala dinner inside Buckingham Palace in London. Chease wears a classic black tuxedo, Jessica an elegant deep-purple evening gown and discreet diamond jewelry. A beautiful medium-wide editorial portrait at the entrance to a richly decorated state dining room, golden detailing, chandeliers and softly visible formal dinner guests in the background. Warm natural expressions, sophisticated evening light and authentic palace atmosphere.",
+      "status": "generated"
+    }
+  ]
+}

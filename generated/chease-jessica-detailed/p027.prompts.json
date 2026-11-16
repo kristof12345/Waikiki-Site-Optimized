@@ -1,0 +1,25 @@
+{
+  "paragraph": 27,
+  "tool": "built-in image_gen",
+  "references": [
+    "references/chease-and-jessica-1.jpg"
+  ],
+  "reused": [],
+  "images": [
+    {
+      "variant": 1,
+      "file": "generated/chease-jessica-detailed/p027-1.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial photography for a fictional alternate-history biography. Reference defines Chease, the dark-haired man, and Jessica, the blonde woman; preserve their exact facial structure, eyes, noses, smiles, hair and skin tone. Jessica appears slightly younger, naturally adult. The paragraph concerns the 2008 financial rescue measures and Chease's investments in recovering bank shares. The couple are private investors and Waikiki leaders, not US government or central-bank officials. Refined late-2000s business attire, Jessica in a deep-plum tailored suit, Chease in a gray suit. Realistic skin, period technology, natural photographic light, no flags, readable text, company logos or watermark. Chease signs a bank-share investment instruction in his elegant Waikiki investment office, Jessica beside him reviewing the documents with a trusted financial adviser. A medium-close candid view emphasizes the couple's recognizable faces and careful discussion, restrained paper reports and a laptop on a warm wood table, calm purposeful expressions.",
+      "status": "generated",
+      "accepted_file": "generated/chease-jessica-detailed/p027-1-v2.png",
+      "revision_prompt": "Use case: identity-preserve. Edit this photograph with one precise change: replace ONLY the outdoor scenery visible through the office windows. This fictional Waikiki is a Caribbean nation on former Cuban territory, not Hawaii. Remove the recognizable Diamond Head volcanic ridge and Honolulu-style coastal skyline, replacing them with a believable Havana-like Caribbean harbor, low coastline and softly detailed colonial city buildings. Preserve the entire interior, composition, Chease and Jessica's faces and facial features, hair, skin, expressions, clothing, hands, documents, adviser, lighting and photographic quality exactly. No other changes, no text, logos or watermark.",
+      "review_note": "Replaced an incorrect Hawaiian window view with a Havana-like Caribbean harbor."
+    },
+    {
+      "variant": 2,
+      "file": "generated/chease-jessica-detailed/p027-2.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial photography for a fictional alternate-history biography. Reference defines Chease, the dark-haired man, and Jessica, the blonde woman; preserve their exact facial structure, eyes, noses, smiles, hair and skin tone. Jessica appears slightly younger, naturally adult. The paragraph concerns the 2008 financial rescue measures and Chease's investments in recovering bank shares. The couple are private investors and Waikiki leaders, not US government or central-bank officials. Refined late-2000s business attire, Jessica in a deep-plum tailored suit, Chease in a gray suit. Realistic skin, period technology, natural photographic light, no flags, readable text, company logos or watermark. After the crisis has eased, Chease and Jessica review the recovery of their investment portfolio with a small financial team in a modern office. An analyst presents abstract upward-trending performance charts on a large unbranded display, all text unreadable. The couple stand together listening, a wider balanced documentary composition, soft city daylight and modest satisfied expressions.",
+      "status": "generated"
+    }
+  ]
+}

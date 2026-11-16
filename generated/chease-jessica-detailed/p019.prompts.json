@@ -1,0 +1,12 @@
+{
+  "paragraph": 19,
+  "tool": "built-in image_gen",
+  "references": [
+    "references/chease-and-jessica-1.jpg",
+    "generated/chease-jessica-hu-019-1.png"
+  ],
+  "reused_image": "generated/chease-jessica-hu-019-1.png",
+  "prompts": [
+    "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial photograph for a fictional alternate-history website. Reference image 1 defines exact facial identity: Chease is the dark-haired man, Jessica the blonde woman. Preserve their facial structure, eyes, noses, smiles, skin tone and hair; Jessica appears slightly younger, naturally adult. Reference image 2 is an existing illustration of the March 2007 founding of the fictional American Union in Washington; use it for wardrobe continuity, Chease in a navy business suit and Jessica in an elegant deep-green dress, and overall documentary photographic style. Create a distinct companion scene: after the signing, Chease and Jessica converse warmly with a small group of adult Canadian, Mexican and Argentine diplomatic delegates on a graceful Washington government-building terrace, spring flowering trees and a soft view of the US Capitol beyond. Natural three-quarter candid view showing both faces clearly, tasteful period styling and warm spring daylight. No flags, readable text, slogans, logos or watermark."
+  ]
+}

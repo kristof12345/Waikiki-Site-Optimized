@@ -1,0 +1,23 @@
+{
+  "paragraph": 44,
+  "tool": "built-in image_gen",
+  "references": [
+    "references/chease-and-jessica-1.jpg"
+  ],
+  "reused": [],
+  "images": [
+    {
+      "variant": 1,
+      "file": "generated/chease-jessica-detailed/p044-1.png",
+      "prompt": "Use case: photorealistic-natural. High-resolution beautiful landscape editorial photographs for a fictional history website. Image reference supplies exact identities of Chease, dark-haired man, and Jessica, blonde adult woman. Strictly preserve facial structure, eyes, noses, smiles, skin tone and hair. Jessica slightly younger while clearly adult. These scenes illustrate fictional Waikiki's retrospective 2016 referendum and announced electronic-payment reform, with neutral documentary tone. Natural light, realistic anatomy and skin, refined business clothing. No readable text, campaign signs, slogans, logos, flags or watermark. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. On referendum day, August 1 2016, Chease and Jessica stand together beside a sealed transparent ballot box in a spacious Nova Aurelia civic hall, each holding a folded blank ballot ready to cast. Medium-wide view, both faces clearly visible, neutral dignified expressions, Jessica in an elegant pale blue tailored dress and Chease in a navy suit. A few ordinary adult voters and officials softly behind, warm Caribbean daylight through tall windows, polished but authentic documentary photography.",
+      "status": "generated"
+    },
+    {
+      "variant": 2,
+      "file": "generated/chease-jessica-detailed/p044-2.png",
+      "prompt": "Use case: photorealistic-natural. High-resolution beautiful landscape editorial photographs for a fictional history website. Image reference supplies exact identities of Chease, dark-haired man, and Jessica, blonde adult woman. Strictly preserve facial structure, eyes, noses, smiles, skin tone and hair. Jessica slightly younger while clearly adult. These scenes illustrate fictional Waikiki's retrospective 2016 referendum and announced electronic-payment reform, with neutral documentary tone. Natural light, realistic anatomy and skin, refined business clothing. No readable text, campaign signs, slogans, logos, flags or watermark. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. Chease and Jessica attend a demonstration of electronic payments after the reform announcement, before its planned 2018 implementation. At a tasteful Nova Aurelia café counter, Jessica taps a plain unbranded bank card on a small payment terminal while Chease and a friendly adult merchant look on. Medium-close editorial photograph with their exact faces clearly visible, cream blouse and tailored navy skirt for Jessica, open-collar shirt and jacket for Chease, bright soft daylight, natural atmosphere, terminal screen turned away with no readable information.",
+      "status": "failed",
+      "error": "image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1794668917,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":72806}}\")"
+    }
+  ]
+}

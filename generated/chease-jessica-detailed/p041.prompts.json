@@ -1,0 +1,32 @@
+{
+  "paragraph": 41,
+  "tool": "built-in image_gen",
+  "references": [
+    "references/chease-and-jessica-1.jpg",
+    "references/raimondo-and-selena-1.jpg"
+  ],
+  "reused": [],
+  "images": [
+    {
+      "variant": 1,
+      "file": "generated/chease-jessica-detailed/p041-1.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial photography for a fictional royal-history website. Image 1 defines exact identities of Chease (dark-haired man) and Jessica (blonde woman); preserve their facial structure, eyes, noses, smiles, skin tone and hair, with Jessica slightly younger and naturally adult. Image 2 defines Raimondo (young man on the right) and Selena (dark-haired young woman on the left), for the second scene only; preserve their separate faces and plausible young-adult appearance. Do not blend any faces. Scene timeframe May 2015, the creation of Waikiki's Senate. Refined formal business clothing, realistic skin, dignified expressions and beautiful natural light. No readable text, flags, logos or watermark. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. Chease signs the constitutional reform establishing the Senate at an elegant government table, Jessica standing beside him as his adviser and partner. Only Chease and Jessica from the references are present in this first scene; a few civilian parliamentary officials are softly behind them. A balanced documentary view in a stately Nova Aurelia neoclassical hall, unmarked documents and tasteful wood-and-limestone surroundings.",
+      "status": "generated"
+    },
+    {
+      "variant": 2,
+      "file": "generated/chease-jessica-detailed/p041-2.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial photography for a fictional royal-history website. Image 1 defines exact identities of Chease (dark-haired man) and Jessica (blonde woman); preserve their facial structure, eyes, noses, smiles, skin tone and hair, with Jessica slightly younger and naturally adult. Image 2 defines Raimondo (young man on the right) and Selena (dark-haired young woman on the left), for the second scene only; preserve their separate faces and plausible young-adult appearance. Do not blend any faces. Scene timeframe May 2015, the creation of Waikiki's Senate. Refined formal business clothing, realistic skin, dignified expressions and beautiful natural light. No readable text, flags, logos or watermark. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. At the first Senate appointment ceremony, Chease presents an unmarked appointment folder to the adult Raimondo, while Jessica stands beside Chease and the adult Selena holds her own folder nearby. All four distinct recognizable faces are clearly visible in a graceful medium-wide photograph in the new Senate chamber. Raimondo wears a mid-blue suit, Selena a refined charcoal tailored dress; their interaction is strictly professional, with no romantic pose.",
+      "status": "failed",
+      "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 89a1551c-dcf8-4513-ac5b-a91a8820c702. safety_violations=[sexual].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"input\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "accepted_file": "generated/chease-jessica-detailed/p041-2-v2.png",
+      "revision_prompt": "Use case: photorealistic-natural. High-resolution landscape editorial photograph illustrating a fictional story, the first Senate appointments in May 2015. Reference image 1 supplies the exact faces of Chease, dark-haired man, and Jessica, blonde adult woman. Preserve both faces meticulously, Jessica slightly younger while clearly adult. Reference 2 supplies the exact face of adult Raimondo; reference 3 supplies adult Selena. Four distinct people with recognizable separate faces, no blending. At a dignified Senate appointment ceremony in Nova Aurelia, Chease in navy suit presents an unmarked appointment folder to Raimondo in a mid-blue suit. Jessica in an elegant green formal dress stands beside Chease; Selena in a charcoal tailored business dress holds her own folder nearby. Entirely professional civic scene, waist-up medium-wide composition, all four fully clothed, graceful limestone-and-wood chamber, soft warm daylight, realistic skin and anatomy. Waikiki is a fictional Caribbean nation on former Cuban territory, not Hawaii. No flags, no readable text, no logos, no watermark.",
+      "revision_references": [
+        "references/chease-and-jessica-1.jpg",
+        "images/raimondo-chease.jpg",
+        "images/selena-gomez.jpg"
+      ],
+      "review_note": "Replaced beach reference with fully clothed portrait references for professional appointment scene. Revision reviewed and accepted."
+    }
+  ]
+}

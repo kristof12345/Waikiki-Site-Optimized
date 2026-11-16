@@ -1,0 +1,23 @@
+{
+  "paragraph": 32,
+  "tool": "built-in image_gen",
+  "references": [
+    "references/chease-and-jessica-1.jpg",
+    "generated/chease-jessica-detailed/p031-2.png"
+  ],
+  "reused": [],
+  "images": [
+    {
+      "variant": 1,
+      "file": "generated/chease-jessica-detailed/p032-1.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial photography for a fictional royal-history website. Image 1 defines the exact faces of Chease (dark-haired man) and Jessica (blonde woman): preserve facial structure, eyes, noses, smiles, hair and skin tone; Jessica appears slightly younger, naturally adult. Image 2 is a Nova Aurelia skyline reference only, for the outdoor anniversary scene: preserve the slender Sky City spire and twisting Infinity Tower silhouette, while creating a new daytime composition. Scene timeframe March 2009, tenth anniversary of Waikiki. Chease wears a refined navy business suit and Jessica an elegant ivory tailored jacket, not the evening clothes in image 2. Lifelike skin, natural light, no readable text, flags, logos or watermark. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. Chease and Jessica tour the newly opened National Museum with a curator. A bright, beautifully designed archaeological gallery displays an imposing ancient stone relief and carefully lit pottery and sculpture, with warm limestone architecture and modern museum cases. A candid medium-wide photograph keeps both faces recognizable as they listen to the curator, soft daylight and refined cultural atmosphere.",
+      "status": "generated"
+    },
+    {
+      "variant": 2,
+      "file": "generated/chease-jessica-detailed/p032-2.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial photography for a fictional royal-history website. Image 1 defines the exact faces of Chease (dark-haired man) and Jessica (blonde woman): preserve facial structure, eyes, noses, smiles, hair and skin tone; Jessica appears slightly younger, naturally adult. Image 2 is a Nova Aurelia skyline reference only, for the outdoor anniversary scene: preserve the slender Sky City spire and twisting Infinity Tower silhouette, while creating a new daytime composition. Scene timeframe March 2009, tenth anniversary of Waikiki. Chease wears a refined navy business suit and Jessica an elegant ivory tailored jacket, not the evening clothes in image 2. Lifelike skin, natural light, no readable text, flags, logos or watermark. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. Chease gives the tenth-anniversary public address at a simple unbranded lectern on a tasteful outdoor ceremonial dais, Jessica standing nearby as his partner. An appreciative adult audience, the Caribbean waterfront and the distinctive Nova Aurelia skyline from image 2 appear softly behind them in daylight. A balanced documentary event photograph, both faces clear, dignified hopeful expressions and authentic physical scale.",
+      "status": "generated"
+    }
+  ]
+}

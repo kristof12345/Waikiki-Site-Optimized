@@ -1,0 +1,22 @@
+{
+  "paragraph": 28,
+  "tool": "built-in image_gen",
+  "references": [
+    "references/chease-and-jessica-1.jpg"
+  ],
+  "reused": [],
+  "images": [
+    {
+      "variant": 1,
+      "file": "generated/chease-jessica-detailed/p028-1.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial photograph for a fictional alternate-history biography. Reference defines exact facial identity: Chease is the dark-haired man, Jessica the blonde woman. Preserve facial structure, eyes, noses, smiles, hair and skin tone; Jessica appears slightly younger, naturally adult. Scene timeframe 2009, Jessica's new bank law and prudent banking oversight in Waikiki. Jessica wears an elegant ivory tailored jacket, Chease a dark navy suit. Lifelike skin, tasteful period styling and warm natural photographic light. No readable text, flags, logos or watermark. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. Jessica presents proposed banking reforms to a parliamentary committee in an elegant neoclassical chamber, speaking at a simple unbranded lectern. Chease is seated nearby among a small number of civilian officials, listening attentively. A balanced documentary view with both recognizable faces visible, wood furnishings, limestone details and soft daylight, serious constructive atmosphere.",
+      "status": "generated"
+    },
+    {
+      "variant": 2,
+      "file": "generated/chease-jessica-detailed/p028-2.png",
+      "prompt": "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial photograph for a fictional alternate-history biography. Reference defines exact facial identity: Chease is the dark-haired man, Jessica the blonde woman. Preserve facial structure, eyes, noses, smiles, hair and skin tone; Jessica appears slightly younger, naturally adult. Scene timeframe 2009, Jessica's new bank law and prudent banking oversight in Waikiki. Jessica wears an elegant ivory tailored jacket, Chease a dark navy suit. Lifelike skin, tasteful period styling and warm natural photographic light. No readable text, flags, logos or watermark. Geographic constraint: wherever the story is set in Waikiki, this means the fictional Caribbean nation on former Cuban territory, not Hawaii. Use the stated foreign location for scenes abroad. Never introduce Honolulu, Diamond Head or Hawaiian flags. Jessica leads a banking-oversight meeting at the National Bank with Chease beside her and a small group of regulatory specialists. She explains prudential lending and inspection reports, using a few abstract paper charts and documents on the table. A closer candid three-quarter composition emphasizing her leadership and the couple's collaboration, refined modern meeting room with natural light.",
+      "status": "generated"
+    }
+  ]
+}

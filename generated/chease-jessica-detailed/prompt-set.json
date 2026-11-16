@@ -1,0 +1,34 @@
+{
+  "tool": "built-in image_gen",
+  "reference": "references/chease-and-jessica-1.jpg",
+  "paragraphs": [
+    {
+      "paragraph": 6,
+      "scenes": [
+        "March 2000, first parliamentary election: Chease and Jessica with international observers in a sunlit historic Havana civic building; adult citizens peacefully wait to vote.",
+        "March 2000, after the election: Chease and Jessica at a formal reception with civilian parliamentary representatives in a Havana civic hall."
+      ],
+      "constraints": "High-resolution photorealistic editorial landscape; exact reference facial identity; Jessica slightly younger and adult; fictional Caribbean nation based on former Cuba; natural skin and light; period clothing; no Hawaiian scenery, slogans, readable text, logos or watermark."
+    },
+    {
+      "paragraph": 8,
+      "prompts": [
+        "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial photo for a fictional alternate-history website. Reference defines the exact faces of Chease (dark-haired man) and Jessica (blonde woman); preserve facial structure, eyes, nose, smile and hair. Jessica looks slightly younger, naturally adult, wearing an elegant cream tailored business suit. Scene: 2001, early economic reforms in fictional Waikiki, a Caribbean country on former Cuban territory. Chease and Jessica thoughtfully discuss economic reform with three civilian lawyers and economists in a sunlit historic Havana office, reviewing simple paper financial charts, books and documents. Candid documentary three-quarter framing, carved wooden table, colonial shutters, limestone walls, lush courtyard visible. Natural Caribbean light, realistic period styling and skin detail. No maps, Hawaiian landmarks, Hawaiian flags, logos, readable text or watermark."
+      ]
+    },
+    {
+      "paragraph": 10,
+      "prompts": [
+        "Use case: photorealistic-natural. High-resolution landscape editorial photograph for a fictional alternate-history website. Reference defines Chease (dark-haired man) and Jessica (blonde woman): preserve their facial structure, eyes, noses, smiles, hair and identity precisely. Jessica appears slightly younger, naturally adult. Waikiki is a fictional Caribbean nation on former Cuban territory; geography is low Caribbean coastline, never Honolulu, Diamond Head or Hawaiian flags. Realistic natural skin, beautiful nuanced light, credible early-2000s clothing, no readable text, logos or watermark. Scene: early 2000s, Chease and Jessica wearing neat practical clothing and safety vests aboard a modern survey vessel in calm Caribbean waters, discussing newly discovered oil and gas fields with an engineer. An offshore drilling platform lies at a realistic distance behind them. Medium-wide documentary frame, soft morning sun, dignified expressions.",
+        "Use case: photorealistic-natural. High-resolution landscape editorial photograph for a fictional alternate-history website. Reference defines Chease (dark-haired man) and Jessica (blonde woman): preserve their facial structure, eyes, noses, smiles, hair and identity precisely. Jessica appears slightly younger, naturally adult. Waikiki is a fictional Caribbean nation on former Cuban territory; geography is low Caribbean coastline, never Honolulu, Diamond Head or Hawaiian flags. Realistic natural skin, beautiful nuanced light, credible early-2000s clothing, no readable text, logos or watermark. Scene: early 2000s, Chease and Jessica visit a new Caribbean petroleum export terminal with a small team of industrial engineers, viewed from a safe observation terrace. Jessica wears a light tailored trouser suit; Chease a dark business suit. Refined candid composition with refinery tanks, loading pipes and a tanker in the distant background, beautiful late-afternoon light."
+      ]
+    },
+    {
+      "paragraph": 11,
+      "prompts": [
+        "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial photograph for a fictional alternate-history website. The reference defines exact facial identity: Chease is the dark-haired man and Jessica is the blonde woman; preserve their facial structure, eyes, noses, smiles, skin tone and hair. Jessica looks slightly younger, naturally adult. Fictional Waikiki is a Caribbean nation on former Cuban territory. Beautiful natural lighting, believable early-2000s details, realistic skin and textures. No Hawaiian scenery or flags, readable text, logos or watermark. Illustrate trade liberalization: Chease and Jessica walk through a sunlit Caribbean export warehouse with local business owners and logistics staff. Stacked sealed crates, textiles and manufactured goods, large doors opening onto an active cargo port. Jessica wears an elegant pale-blue blouse and tailored trousers; Chease a charcoal suit. A lively, candid wide view focused on productive trade and conversation.",
+        "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial photograph for a fictional alternate-history website. The reference defines exact facial identity: Chease is the dark-haired man and Jessica is the blonde woman; preserve their facial structure, eyes, noses, smiles, skin tone and hair. Jessica looks slightly younger, naturally adult. Fictional Waikiki is a Caribbean nation on former Cuban territory. Beautiful natural lighting, believable early-2000s details, realistic skin and textures. No Hawaiian scenery or flags, readable text, logos or watermark. Illustrate investment and modern capital markets: Chease and Jessica consult investment professionals in a sophisticated financial trading office in Havana. Early-2000s desktop monitors with abstract unreadable charts, glass walls and warm wood, soft city daylight. Jessica wears a refined navy tailored jacket, Chease a charcoal suit. Closer documentary composition, their faces clearly visible as they discuss a paper report. No maps."
+      ]
+    }
+  ]
+}

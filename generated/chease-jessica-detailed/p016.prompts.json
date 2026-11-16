@@ -1,0 +1,12 @@
+{
+  "paragraph": 16,
+  "tool": "built-in image_gen",
+  "references": [
+    "references/chease-and-jessica-1.jpg",
+    "generated/chease-jessica-detailed/p015-1.png"
+  ],
+  "prompts": [
+    "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial photograph for a fictional royal-history website. Image 1 is the definitive facial identity reference for Chease (dark-haired man) and Jessica (blonde woman): preserve facial structure, eyes, noses, smiles, skin tone and hair; Jessica appears slightly younger, naturally adult. Image 2 is the wardrobe reference from their 2005 coronation: preserve Chease's refined navy coat with gold embroidery and crimson sash, Jessica's ivory gold-embroidered silk gown, and the dignified gold crowns with ruby details. This is fictional Waikiki, a Caribbean nation on former Cuban territory. Lifelike detail and beautiful natural lighting, no Hawaiian scenery, flags, readable text, logos or watermark. Scene: the royal reception after the August 2005 coronation. Chease and Jessica warmly greet a small delegation of elegantly dressed European royal guests in a grand Caribbean neoclassical hall with limestone columns, white flowers and tall open shutters. A graceful candid conversation, medium-wide frame, the couple's faces clearly visible, soft afternoon daylight, restrained dignity.",
+    "Use case: photorealistic-natural. Beautiful high-resolution landscape editorial photograph for a fictional royal-history website. Image 1 is the definitive facial identity reference for Chease (dark-haired man) and Jessica (blonde woman): preserve facial structure, eyes, noses, smiles, skin tone and hair; Jessica appears slightly younger, naturally adult. Image 2 is the wardrobe reference from their 2005 coronation: preserve Chease's refined navy coat with gold embroidery and crimson sash, Jessica's ivory gold-embroidered silk gown, and the dignified gold crowns with ruby details. This is fictional Waikiki, a Caribbean nation on former Cuban territory. Lifelike detail and beautiful natural lighting, no Hawaiian scenery, flags, readable text, logos or watermark. Scene: later on coronation day, Chease and Jessica stand together on a parliament balcony acknowledging a joyful public celebration in the main square. A three-quarter view from near the balcony shows both recognizable faces, their regalia and a softly detailed crowd below. Warm early-evening Caribbean light, elegant stone architecture and palms; celebratory but realistic, distinct composition from the reception."
+  ]
+}
