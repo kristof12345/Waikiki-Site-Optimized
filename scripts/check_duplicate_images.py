@@ -22,8 +22,11 @@ for html_file in html_files:
     except Exception:
         continue
 
+    # Skip hero-media and next-media containers
+    filtered_content = re.sub(r'<div[^>]+class="[^"]*\b(?:hero|next)-media\b[^"]*"[^>]*>.*?</div>', "", content, flags=re.S)
+
     # Find all image src attributes ending in .jpg or .jpeg
-    raw_matches = re.findall(r'<img[^>]+src="([^"]+)"', content)
+    raw_matches = re.findall(r'<img[^>]+src="([^"]+)"', filtered_content)
     matches = [src for src in raw_matches if src.lower().split("?")[0].endswith((".jpg", ".jpeg"))]
 
     # Check for duplicates within this specific file
