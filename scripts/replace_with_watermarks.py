@@ -70,7 +70,7 @@ def process_file(filepath: Path):
 
     # Ensure no empty lines
     cleaned_lines = [line for line in new_content.splitlines() if line.strip() or line == ""]
-    final_content = "\n".join(l for l in cleaned_lines if l.strip()) + "\n"
+    final_content = "\n".join(l for l in cleaned_lines if l.strip())
 
     filepath.write_text(final_content, encoding="utf-8")
     print(f"Successfully updated {filepath}: {count} cards processed, 0 empty lines, all watermarks inside cards.")
