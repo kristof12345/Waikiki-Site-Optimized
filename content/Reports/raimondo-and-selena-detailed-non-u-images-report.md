@@ -19,7 +19,7 @@ Audit of image files referenced on `en/raimondo-and-selena-detailed.html` and `h
 
 | # | Filename | Section | EN Line | HU Line | Size (KB) |
 | ---: | :--- | :--- | ---: | ---: | ---: |
-| 1 | `UniversalUpscaler_e38222ed-70b3-4c90-9777-c114aa60d527.jpg` | Childhood and family background | 169 | 169 | 8,715.7 |
+| 1 | `UniversalUpscaler_Pro_Precise_2_1f1e59b3-4f1c-6ef0-b561-8cc93e568f97-U.jpg` | Childhood and family background | 169 | 169 | 8,715.7 |
 | 2 | `image-0.jpg` | Seven Seas High School | 175 | 175 | 1,342.2 |
 | 3 | `image-1.jpg` | Seven Seas High School | 176 | 176 | 1,584.3 |
 | 4 | `image-2.jpg` | Raimondo and Bailey's life on the ocean liner | 181 | 181 | 804.8 |
@@ -138,7 +138,7 @@ Audit of image files referenced on `en/raimondo-and-selena-detailed.html` and `h
 
 ### `UniversalUpscaler_*.jpg` without `-U` (20 files)
 
-- `images/UniversalUpscaler_e38222ed-70b3-4c90-9777-c114aa60d527.jpg`
+- `images/UniversalUpscaler_Pro_Precise_2_1f1e59b3-4f1c-6ef0-b561-8cc93e568f97-U.jpg`
 - `images/UniversalUpscaler_Legacy_Cinematic_2_1f177d54-1ecb-6f90-99cb-1f1c1bbae615.jpg`
 - `images/UniversalUpscaler_Legacy_Cinematic_2_1f177d7b-5b49-6220-b2a3-2814608495fa.jpg`
 - `images/UniversalUpscaler_4beb4d13-35ef-48cf-81e3-b3f5cafec86c.jpg`
