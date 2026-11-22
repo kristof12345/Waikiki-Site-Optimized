@@ -144,26 +144,26 @@ def replace_svgs_in_nova_aurelia(path: Path):
         nonlocal idx
         icon = pillar_icons[idx]
         idx += 1
-        return f'<div class="city-pillar-badge"><img src="../icons/mdi/{icon}" /></div>'
+        return f'<span class="card-icon"><img src="../icons/mdi/{icon}" /></span>'
 
-    text, n = re.subn(r'<div class="city-pillar-badge">\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/[^>]*>)\s*</div>', repl_pillar, text)
+    text, n = re.subn(r'<span class="card-icon">\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/[^>]*>)\s*</span>', repl_pillar, text)
     if n != len(pillar_icons):
-        raise ValueError(f"{path}: Expected {len(pillar_icons)} pillar badges, found {n}")
+        raise ValueError(f"{path}: Expected {len(pillar_icons)} pillar card icons, found {n}")
     if text != orig_text:
         path.write_text(text, encoding="utf-8")
-        print(f"Updated {path}: {n} pillar badges")
+        print(f"Updated {path}: {n} pillar card icons")
     else:
-        print(f"Verified {path}: {n} pillar badges correctly linked to MDI")
+        print(f"Verified {path}: {n} pillar card icons correctly linked to MDI")
 
 def replace_svgs_in_family_tree(path: Path):
     text = path.read_text(encoding="utf-8")
     orig_text = text
-    # 1 heirs icon
+    # 0 or 1 heirs icon (present in en/, omitted in hu/)
     text, n_heirs = re.subn(r'<span class="heirs-icon" aria-hidden="true">\s*(?:<svg\b[^>]*>[\s\S]*?</svg>|<img\b[^>]*\/icons\/mdi\/crown\.svg[^>]*>)\s*</span>',
                             r'<span class="heirs-icon" aria-hidden="true"><img src="../icons/mdi/crown.svg" /></span>',
                             text)
-    if n_heirs != 1:
-        raise ValueError(f"{path}: Expected 1 heirs icon, found {n_heirs}")
+    if n_heirs > 1:
+        raise ValueError(f"{path}: Expected at most 1 heirs icon, found {n_heirs}")
 
     matrix_icons = [
         "shield-check.svg",

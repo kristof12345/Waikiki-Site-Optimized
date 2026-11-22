@@ -2,10 +2,13 @@
 """
 replace_upscaled_images.py
 
-Scans the images directory for upscaled files ending with "-U.jpg",
-identifies their matching original references in HTML files (the same
-filename without the "-U" part), and replaces those references with
-the "-U.jpg" variant.
+Scans the images directory for upscaled/enhanced files ending with "-U.jpg"
+or "-X.jpg", identifies their matching original or lower-priority references
+in HTML files, and replaces those references with the highest-priority variant.
+Any files ending with "-U-X.jpg" or "-X-U.jpg" are first renamed to "-X.jpg"
+and treated as "-X" variants. The "-U" rule is stronger than "-X": if both
+"-U" and "-X" exist for the same base image, "-U.jpg" is used (and any
+"-X.jpg" reference is also upgraded to "-U.jpg").
 
 Usage Examples:
   # Normal execution: scan and update references across all HTML files
@@ -14,7 +17,7 @@ Usage Examples:
   # Dry-run preview: see what will be updated without writing to disk
   python3 scripts/replace_upscaled_images.py --dry-run
 
-  # Also delete the old un-upscaled images from the images/ folder
+  # Also delete the old superseded images from the images/ folder
   python3 scripts/replace_upscaled_images.py --delete-old
 """
 
@@ -28,7 +31,7 @@ from pathlib import Path
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description="Find -U upscaled images and replace their non-U references in HTML files."
+        description="Find -U and -X images and replace their older references in HTML files (-U takes precedence over -X)."
     )
     
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -57,7 +60,7 @@ def parse_args():
     parser.add_argument(
         "--delete-old",
         action="store_true",
-        help="Delete the old non-U image files from disk if they exist",
+        help="Delete the old superseded image files from disk if they exist",
     )
     parser.add_argument(
         "-v",
@@ -68,16 +71,73 @@ def parse_args():
     return parser.parse_args()
 
 
-def get_u_mapping(images_dir: str):
+def normalize_double_suffix_images(images_dir: str, dry_run: bool):
     """
-    Finds all files ending strictly with '-U.jpg' in images_dir.
-    Returns a dict: { original_filename: u_filename }
+    Finds any files ending with '-U-X.jpg' or '-X-U.jpg' in images_dir and
+    renames them to '-X.jpg' so they are treated as plain '-X' variants.
+    Returns: (x_bases_added, double_suffix_by_base)
+    """
+    x_bases_added = set()
+    double_suffix_by_base = {}
+
+    if not os.path.isdir(images_dir):
+        return x_bases_added, double_suffix_by_base
+
+    double_entries = []
+    for entry in sorted(os.listdir(images_dir)):
+        if entry.startswith("."):
+            continue
+        entry_path = os.path.join(images_dir, entry)
+        if not os.path.isfile(entry_path):
+            continue
+        if entry.endswith("-U-X.jpg") or entry.endswith("-X-U.jpg"):
+            double_entries.append(entry)
+
+    if not double_entries:
+        return x_bases_added, double_suffix_by_base
+
+    print(f"Found {len(double_entries)} double-suffix ('-U-X' / '-X-U') image(s) to normalize:")
+    claimed_targets = set()
+
+    for entry in double_entries:
+        base = entry[:-8]
+        new_name = f"{base}-X.jpg"
+        old_path = os.path.join(images_dir, entry)
+        new_path = os.path.join(images_dir, new_name)
+
+        double_suffix_by_base.setdefault(base, []).append(entry)
+        x_bases_added.add(base)
+
+        if os.path.exists(new_path) or new_name in claimed_targets:
+            print(f"  [Skipped rename] {entry} -> {new_name} (target already exists)")
+            continue
+
+        claimed_targets.add(new_name)
+        if dry_run:
+            print(f"  [Would rename] {entry} -> {new_name}")
+        else:
+            try:
+                os.rename(old_path, new_path)
+                print(f"  [Renamed] {entry} -> {new_name}")
+            except Exception as e:
+                print(f"  Error renaming {entry} -> {new_name}: {e}", file=sys.stderr)
+
+    print()
+    return x_bases_added, double_suffix_by_base
+
+
+def get_u_mapping(images_dir: str, extra_x_bases=None, double_suffix_by_base=None):
+    """
+    Finds all files ending with '-U.jpg' or '-X.jpg' in images_dir.
+    '-U.jpg' takes precedence over '-X.jpg'.
+    Returns a dict: { old_filename: target_filename }
     """
     if not os.path.isdir(images_dir):
         print(f"Error: Images directory not found: {images_dir}", file=sys.stderr)
         return {}
 
-    mapping = {}
+    u_bases = set()
+    x_bases = set(extra_x_bases or ())
 
     for entry in sorted(os.listdir(images_dir)):
         if entry.startswith("."):
@@ -86,9 +146,32 @@ def get_u_mapping(images_dir: str):
         if not os.path.isfile(entry_path):
             continue
 
-        if entry.endswith("-U.jpg"):
-            orig_name = entry[:-6] + ".jpg"
-            mapping[orig_name] = entry
+        if entry.endswith("-U-X.jpg") or entry.endswith("-X-U.jpg"):
+            continue
+        elif entry.endswith("-U.jpg"):
+            u_bases.add(entry[:-6])
+        elif entry.endswith("-X.jpg"):
+            x_bases.add(entry[:-6])
+
+    mapping = {}
+
+    # -X rule (applied only when -U does not exist)
+    for base in sorted(x_bases):
+        if base not in u_bases:
+            mapping[f"{base}.jpg"] = f"{base}-X.jpg"
+
+    # -U rule is stronger: overrides base.jpg and also upgrades base-X.jpg -> base-U.jpg
+    for base in sorted(u_bases):
+        target = f"{base}-U.jpg"
+        mapping[f"{base}.jpg"] = target
+        mapping[f"{base}-X.jpg"] = target
+
+    # Map any HTML references to old '-U-X.jpg' / '-X-U.jpg' names to the winning target
+    if double_suffix_by_base:
+        for base, old_names in sorted(double_suffix_by_base.items()):
+            target = f"{base}-U.jpg" if base in u_bases else f"{base}-X.jpg"
+            for old_name in old_names:
+                mapping[old_name] = target
 
     return mapping
 
@@ -152,12 +235,17 @@ def main():
     else:
         print("Mode:             LIVE (files will be updated)\n")
 
-    mapping = get_u_mapping(images_dir)
+    extra_x_bases, double_suffix_by_base = normalize_double_suffix_images(
+        images_dir, args.dry_run
+    )
+
+    mapping = get_u_mapping(images_dir, extra_x_bases, double_suffix_by_base)
     if not mapping:
-        print("No '-U' images found in the images folder.")
+        print("No '-U' or '-X' images found in the images folder.")
         return 0
 
-    print(f"Found {len(mapping)} upscaled '-U' image(s) in images folder:")
+    unique_targets = sorted(set(mapping.values()))
+    print(f"Found {len(unique_targets)} '-U' / '-X' target image(s) ({len(mapping)} replacement rule(s)):")
     for orig_name, u_name in mapping.items():
         orig_exists = os.path.exists(os.path.join(images_dir, orig_name))
         status = "(original exists on disk)" if orig_exists else "(original not on disk)"
@@ -201,7 +289,8 @@ def main():
     print("\n" + "=" * 50)
     print("SUMMARY")
     print("=" * 50)
-    print(f"'-U' images checked:         {len(mapping)}")
+    print(f"'-U'/'-X' target images:     {len(unique_targets)}")
+    print(f"Replacement rules checked:   {len(mapping)}")
     print(f"HTML files scanned:          {len(html_files)}")
     print(f"HTML files with references:  {updated_files_count}")
     print(f"Total references replaced:   {total_replacements}")

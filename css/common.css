@@ -177,6 +177,7 @@
   --width-m: 1400px;
   --width-s: 1200px;
   --width-xs: 1000px;
+  --width-video: 1080px;
 
   /* 1.4 Layout and Sizing */
   --header-h: 84px;
@@ -2174,7 +2175,7 @@ html.no-reveal .illustration-frame--zoom:hover img {
 /* 12. MEDIA */
 .video-wrapper {
   width: calc(100% - 2 * (var(--section-pad) - var(--gutter)));
-  max-width: var(--width-xl);
+  max-width: var(--width-video);
   margin: 3rem auto 0;
   overflow: hidden;
   border-radius: var(--radius-lg);
