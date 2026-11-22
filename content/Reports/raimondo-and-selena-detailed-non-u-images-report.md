@@ -13,7 +13,7 @@ Audit of image files referenced on `en/raimondo-and-selena-detailed.html` and `h
 | — `image-*.jpg` (without `-U`) | 94 |
 | Locale parity (`en/` vs `hu/`) | Identical (same 293 images in identical order) |
 
-> **Note on non-content assets:** Both pages also reference UI/branding icons outside `../images/`: `../icons/logo.svg` (3 `<img>` tags), `../icons/favicon.ico`, and `../icons/logo-blue.png`. All 107 content image files listed below exist on disk in `images/` and none currently have a `-U` counterpart file on disk.
+> **Note on non-content assets:** Both pages also reference UI/branding icons outside `../images/`: `../icons/logo.svg` (3 `<img>` tags), `../icons/favicon.ico`, and `../icons/logo-dark.png`. All 107 content image files listed below exist on disk in `images/` and none currently have a `-U` counterpart file on disk.
 
 ## Complete List (Page Order)
 
