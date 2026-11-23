@@ -156,8 +156,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 2rem;
-    background: linear-gradient(to top, rgba(0, 24, 48, 0.95), transparent);
+    padding: 6rem 2rem 2rem 2rem;
+    background: linear-gradient(to top, rgb(0, 24, 48), transparent);
     transform: translateY(100%);
     transition: transform 0.7s var(--ease-out);
 }
