@@ -69,7 +69,7 @@
   --private: #0a1930;
   --intimate: #3d1520;
   --adventure: #123f43;
-  --milestones: #0b3b3a;
+  --milestones: #010f3a;
 
   /* 1.2 Semantic Theme Tokens (Overridden in Night Mode) */
   --bg: var(--neutral-150);
