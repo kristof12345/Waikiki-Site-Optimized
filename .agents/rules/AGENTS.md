@@ -80,8 +80,8 @@ After building or editing any HTML page:
   `python3 .agents/skills/locale-sync/scripts/sync_check.py`
 - Clean and purge unused CSS (via `clear-css` skill):
   `purgecss --css css/*.css --output css/ --content **/*.html **/*.js --keyframes`
-- Publish to all remotes (via `publish` skill):
-  `python3 .agents/skills/publish/scripts/publish.py`
+- Publish to all remotes (via global `publish` skill):
+  `python3 ~/.gemini/config/skills/publish/scripts/publish.py`
 - Text length and line balance auditor (via `text-balance` skill):
   `python3 .agents/skills/text-balance/scripts/text_balance.py <file.html>`
 - Multi-viewport layout and contrast auditor (via `layout-audit` skill):
